@@ -126,7 +126,7 @@ a {
   font-weight: 600;
 }
 
-.highlight {
+.hero-highlight {
     color: #38bdf8;
 }
 
@@ -144,12 +144,28 @@ pre {
   border: 1px solid #1e293b;
 }
 
+/* Code block container */
+.highlight {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+/* Inline + block code */
 code {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
 }
 
-.highlight .k { color: #7dd3fc; }   /* keywords */
-.highlight .s { color: #86efac; }   /* strings */
-.highlight .nf { color: #fbbf24; }  /* function names */
-.highlight .c { color: #64748b; }   /* comments */
+/* Python syntax colors (Rouge) */
+.highlight .k  { color: #7dd3fc; }  /* keywords */
+.highlight .kn { color: #7dd3fc; }
+.highlight .s  { color: #86efac; }  /* strings */
+.highlight .c  { color: #64748b; }  /* comments */
+.highlight .nf { color: #fbbf24; }  /* functions */
+.highlight .nb { color: #c084fc; }  /* builtins */
+.highlight .mi { color: #fda4af; }  /* numbers */
+
