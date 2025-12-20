@@ -135,3 +135,21 @@ a {
   font-size: 0.9rem;
   margin-top: 0.6rem;
 }
+
+pre {
+  background: #020617;
+  padding: 1.2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #1e293b;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.highlight .k { color: #7dd3fc; }   /* keywords */
+.highlight .s { color: #86efac; }   /* strings */
+.highlight .nf { color: #fbbf24; }  /* function names */
+.highlight .c { color: #64748b; }   /* comments */
