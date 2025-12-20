@@ -23,34 +23,27 @@ title: Blog
 
   <div class="cards">
     {% for post in site.posts %}
-      <div class="card scroll-animate">
-        {% if post.series_image %}
-        <div class="blog-series-image">
-          <img src="{{ post.series_image }}" alt="{{ post.series }}" />
+      <div class="card scroll-animate blog-card" {% if post.series_image %}style="background-image: url('{{ post.series_image }}');"{% endif %}>
+        <div class="blog-card-content">
+          {% if post.series %}
+          <div class="blog-series-badge">
+            <i class="fas fa-book-reader"></i> {{ post.series }}
+          </div>
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+          <p class="muted blog-date">
+            <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
+          </p>
+          {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+          {% endif %}
+          {% if post.series_author %}
+          <p class="blog-series-author">
+            <i class="fas fa-user-edit"></i> {{ post.series_author }}
+          </p>
+          {% endif %}
+          <a href="{{ post.url }}" class="blog-read-link">Read → <i class="fas fa-arrow-right"></i></a>
         </div>
-        {% else %}
-        <div class="blog-icon">
-          <i class="fas fa-book-open"></i>
-        </div>
-        {% endif %}
-        {% if post.series %}
-        <div class="blog-series-badge">
-          <i class="fas fa-book-reader"></i> {{ post.series }}
-        </div>
-        {% endif %}
-        <h3>{{ post.title }}</h3>
-        <p class="muted">
-          <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
-        </p>
-        {% if post.excerpt %}
-        <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-        {% endif %}
-        {% if post.series_author %}
-        <p class="blog-series-author">
-          <i class="fas fa-user-edit"></i> {{ post.series_author }}
-        </p>
-        {% endif %}
-        <a href="{{ post.url }}">Read → <i class="fas fa-arrow-right"></i></a>
       </div>
     {% endfor %}
   </div>
