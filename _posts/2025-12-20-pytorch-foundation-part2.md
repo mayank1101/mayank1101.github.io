@@ -110,12 +110,12 @@ print(y.shape)  # torch.Size([8, 16, 32, 32])
 ```
 
 **Spatial dimension formula:**
-```
+```python
 output_size = floor((input_size + 2*padding - kernel_size) / stride) + 1
 ```
 
 **Example:** Input 32, kernel 3, padding 1, stride 1
-```
+```python
 output = floor((32 + 2*1 - 3) / 1) + 1 = 32
 ```
 
@@ -836,21 +836,21 @@ set_seed(42)
 
 ## 7. Key Takeaways
 
-✅ **`nn.Module`** is the foundation of all PyTorch models
+- **`nn.Module`** is the foundation of all PyTorch models
 
-✅ **`DataLoader`** provides efficient batching and multi-threaded data loading
+- **`DataLoader`** provides efficient batching and multi-threaded data loading
 
-✅ **Optimizers** (`Adam`, `AdamW`) handle parameter updates
+- **Optimizers** (`Adam`, `AdamW`) handle parameter updates
 
-✅ **Training loops** follow a standard pattern: zero grads → forward → backward → step
+- **Training loops** follow a standard pattern: zero grads → forward → backward → step
 
-✅ **Always call** `model.train()` and `model.eval()` appropriately
+- **Always call** `model.train()` and `model.eval()` appropriately
 
-✅ **Use `torch.no_grad()`** during inference
+- **Use `torch.no_grad()`** during inference
 
-✅ **Device management** ensures code works on both CPU and GPU
+- **Device management** ensures code works on both CPU and GPU
 
-✅ **Checkpointing** saves best models during training
+- **Checkpointing** saves best models during training
 
 ---
 

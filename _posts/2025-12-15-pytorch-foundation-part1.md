@@ -4,8 +4,6 @@ title: "Part 1: The PyTorch Foundation"
 date: 2025-12-15
 ---
 
-<!-- # Part 1: The PyTorch Foundation -->
-
 ## Introduction: Why PyTorch?
 
 In the rapidly evolving landscape of deep learning frameworks, PyTorch has emerged as the de facto standard for AI research and increasingly for production systems. But what makes PyTorch special?
@@ -17,14 +15,6 @@ Unlike TensorFlow 1.x, which required defining a static computation graph before
 - **Intuitive**: Write Python code that executes immediately—no session management
 - **Debuggable**: Use standard Python debugging tools (pdb, print statements)
 - **Flexible**: Support for dynamic architectures (varying computational paths)
-
-### PyTorch vs. The Competition
-
-| Framework | Graph Type | Primary Use | Ecosystem Maturity |
-|-----------|-----------|-------------|-------------------|
-| **PyTorch** | Dynamic | Research → Production | Excellent |
-| TensorFlow 2.x | Eager (Dynamic) + Graph | Production-first | Excellent |
-| JAX | Functional transforms | High-performance research | Growing |
 
 **Why researchers choose PyTorch:**
 - 70%+ of papers at NeurIPS, ICML, and ICLR use PyTorch
@@ -657,20 +647,20 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 ### What We've Learned
 
-✅ **Tensors** are the fundamental data structure—understand creation, operations, and attributes
-✅ **Device management** is crucial—write device-agnostic code for portability
-✅ **Autograd** automatically computes gradients through computational graphs
-✅ **`.backward()`** propagates gradients; always zero them between iterations
-✅ **Gradient descent** can be implemented from scratch using only tensors and autograd
+- **Tensors** are the fundamental data structure—understand creation, operations, and attributes
+- **Device management** is crucial—write device-agnostic code for portability
+- **Autograd** automatically computes gradients through computational graphs
+- **`.backward()`** propagates gradients; always zero them between iterations
+- **Gradient descent** can be implemented from scratch using only tensors and autograd
 
 ### Best Practices Checklist
 
-- [ ] Use device-agnostic patterns: `device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')`
-- [ ] Always call `optimizer.zero_grad()` or `tensor.grad.zero_()` before backward pass
-- [ ] Use `torch.no_grad()` for inference to save memory and speed up computation
-- [ ] Prefer `@` operator over `torch.matmul()` for matrix multiplication (cleaner)
-- [ ] Check tensor shapes early and often—shape mismatches are the #1 bug source
-- [ ] Use `tensor.item()` to extract scalar values from single-element tensors
+- Use device-agnostic patterns: `device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')`
+- Always call `optimizer.zero_grad()` or `tensor.grad.zero_()` before backward pass
+- Use `torch.no_grad()` for inference to save memory and speed up computation
+- Prefer `@` operator over `torch.matmul()` for matrix multiplication (cleaner)
+- Check tensor shapes early and often—shape mismatches are the #1 bug source
+- Use `tensor.item()` to extract scalar values from single-element tensors
 
 ---
 
