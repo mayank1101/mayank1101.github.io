@@ -2,6 +2,9 @@
 layout: post
 title: "Part 2: Deep Learning with PyTorch"
 date: 2025-12-20
+series: "NLP Mastery Series"
+series_author: "Tensor Tales"
+series_image: "/assets/tensor_tales_nlp.png"
 ---
 
 <!-- # Part 2: Deep Learning with PyTorch -->

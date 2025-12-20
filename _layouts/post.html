@@ -31,12 +31,46 @@ layout: default
 </nav>
 
 <div class="container section fade-in">
+  {% if page.series %}
+  <div class="series-banner">
+    {% if page.series_image %}
+    <div class="series-image">
+      <img src="{{ page.series_image }}" alt="{{ page.series }}" />
+    </div>
+    {% endif %}
+    <div class="series-info">
+      <span class="series-label">
+        <i class="fas fa-book-reader"></i> Series
+      </span>
+      <h3 class="series-title">{{ page.series }}</h3>
+      {% if page.series_author %}
+      <p class="series-author">by {{ page.series_author }}</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
   <h1>{{ page.title }}</h1>
   <p class="muted">
     <i class="far fa-calendar"></i> {{ page.date | date: "%b %d, %Y" }}
   </p>
 
   {{ content }}
+
+  {% if page.series %}
+  <div class="series-footer">
+    <div class="series-footer-content">
+      <i class="fas fa-bookmark"></i>
+      <p>
+        This article is part of the <strong>{{ page.series }}</strong>
+        {% if page.series_author %}by <strong>{{ page.series_author }}</strong>{% endif %}.
+      </p>
+    </div>
+    <a href="/blog.html" class="cta">
+      <i class="fas fa-list"></i> View All Articles
+    </a>
+  </div>
+  {% endif %}
 </div>
 
 <script>
