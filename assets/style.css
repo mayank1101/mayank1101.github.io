@@ -696,39 +696,142 @@ p {
 
 /* ===== Code Blocks ===== */
 pre {
-  background: #020617;
+  background: #0a0e1a;
   padding: 1.2rem;
   border-radius: 10px;
   overflow-x: auto;
   border: 1px solid #1e293b;
+  margin: 1.5rem 0;
 }
 
 /* Code block container */
 .highlight {
-  background: #020617;
+  background: #0a0e1a;
   border-radius: 14px;
   padding: 1.4rem 1.6rem;
   overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #1e293b;
 }
 
 .highlight pre {
   margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
-/* Inline + block code */
+/* Inline code */
 code {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Menlo", "Monaco", "Courier New", monospace;
   font-size: 0.9rem;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: var(--accent-cyan);
 }
 
-/* Python syntax colors (Rouge) */
-.highlight .k  { color: #7dd3fc; }  /* keywords */
-.highlight .kn { color: #7dd3fc; }
-.highlight .s  { color: #86efac; }  /* strings */
-.highlight .c  { color: #64748b; }  /* comments */
-.highlight .nf { color: #fbbf24; }  /* functions */
-.highlight .nb { color: #c084fc; }  /* builtins */
-.highlight .mi { color: #fda4af; }  /* numbers */
+/* Block code - remove inline code styling */
+pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--text);
+  border-radius: 0;
+}
+
+/* ===== Comprehensive Rouge/Pygments Syntax Highlighting ===== */
+
+/* Keywords */
+.highlight .k   { color: #c792ea; font-weight: 500; }  /* keyword */
+.highlight .kd  { color: #c792ea; font-weight: 500; }  /* keyword declaration */
+.highlight .kn  { color: #89ddff; font-weight: 500; }  /* keyword namespace (import) */
+.highlight .kp  { color: #c792ea; }  /* keyword pseudo */
+.highlight .kr  { color: #c792ea; }  /* keyword reserved */
+.highlight .kt  { color: #ffcb6b; }  /* keyword type */
+
+/* Names */
+.highlight .n   { color: #e5e7eb; }  /* name */
+.highlight .na  { color: #82aaff; }  /* name attribute */
+.highlight .nb  { color: #82aaff; }  /* name builtin (print, len, etc.) */
+.highlight .nc  { color: #ffcb6b; }  /* name class */
+.highlight .nd  { color: #89ddff; }  /* name decorator (@) */
+.highlight .ne  { color: #f07178; }  /* name exception */
+.highlight .nf  { color: #82aaff; }  /* name function */
+.highlight .nl  { color: #82aaff; }  /* name label */
+.highlight .nn  { color: #ffcb6b; }  /* name namespace */
+.highlight .nx  { color: #e5e7eb; }  /* name other */
+.highlight .nv  { color: #f07178; }  /* name variable */
+.highlight .vc  { color: #f07178; }  /* name variable class */
+.highlight .vg  { color: #f07178; }  /* name variable global */
+.highlight .vi  { color: #f07178; }  /* name variable instance */
+
+/* Literals */
+.highlight .s   { color: #c3e88d; }  /* string */
+.highlight .s1  { color: #c3e88d; }  /* string single */
+.highlight .s2  { color: #c3e88d; }  /* string double */
+.highlight .sb  { color: #c3e88d; }  /* string backtick */
+.highlight .sc  { color: #c3e88d; }  /* string char */
+.highlight .sd  { color: #697098; font-style: italic; }  /* string doc */
+.highlight .se  { color: #89ddff; }  /* string escape */
+.highlight .sh  { color: #c3e88d; }  /* string heredoc */
+.highlight .si  { color: #89ddff; }  /* string interpol */
+.highlight .sx  { color: #c3e88d; }  /* string other */
+.highlight .sr  { color: #89ddff; }  /* string regex */
+.highlight .ss  { color: #89ddff; }  /* string symbol */
+
+/* Numbers */
+.highlight .m   { color: #f78c6c; }  /* number */
+.highlight .mf  { color: #f78c6c; }  /* number float */
+.highlight .mh  { color: #f78c6c; }  /* number hex */
+.highlight .mi  { color: #f78c6c; }  /* number integer */
+.highlight .mo  { color: #f78c6c; }  /* number oct */
+.highlight .il  { color: #f78c6c; }  /* number integer long */
+
+/* Operators */
+.highlight .o   { color: #89ddff; }  /* operator */
+.highlight .ow  { color: #89ddff; font-weight: 500; }  /* operator word (and, or, in) */
+
+/* Punctuation */
+.highlight .p   { color: #89ddff; }  /* punctuation */
+
+/* Comments */
+.highlight .c   { color: #697098; font-style: italic; }  /* comment */
+.highlight .c1  { color: #697098; font-style: italic; }  /* comment single */
+.highlight .cm  { color: #697098; font-style: italic; }  /* comment multi */
+.highlight .cp  { color: #89ddff; font-style: italic; }  /* comment preproc */
+.highlight .cs  { color: #697098; font-style: italic; }  /* comment special */
+
+/* Generic */
+.highlight .gd  { color: #f07178; }  /* generic deleted */
+.highlight .ge  { font-style: italic; }  /* generic emph */
+.highlight .gh  { color: #82aaff; font-weight: bold; }  /* generic heading */
+.highlight .gi  { color: #c3e88d; }  /* generic inserted */
+.highlight .gp  { color: #697098; font-weight: bold; }  /* generic prompt */
+.highlight .gs  { font-weight: bold; }  /* generic strong */
+.highlight .gu  { color: #89ddff; font-weight: bold; }  /* generic subheading */
+
+/* Errors */
+.highlight .err { color: #f07178; background-color: rgba(240, 113, 120, 0.1); }  /* error */
+
+/* Others */
+.highlight .w   { color: #e5e7eb; }  /* whitespace */
+
+/* Python-specific improvements */
+.highlight .bp  { color: #82aaff; }  /* builtin pseudo (self, cls) */
+.highlight .fm  { color: #82aaff; }  /* function magic (__init__) */
+.highlight .vm  { color: #f07178; }  /* variable magic */
+
+/* Make True/False/None stand out */
+.highlight .kc  { color: #f78c6c; font-weight: 500; }  /* keyword constant */
+
+/* Line numbers (if enabled) */
+.highlight .lineno {
+  color: #4a5568;
+  user-select: none;
+  padding-right: 1rem;
+  border-right: 1px solid #1e293b;
+  margin-right: 1rem;
+}
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
