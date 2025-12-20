@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 1: The PyTorch Foundation"
-date: 2025-01-10
+date: 2025-12-15
 ---
 
 # Part 1: The PyTorch Foundation

@@ -2,14 +2,12 @@
 ---
 layout: post
 title: "Part 2: Deep Learning with PyTorch"
-date: 2025-12-18
+date: 2025-12-20
 ---
 
 # Part 2: Deep Learning with PyTorch
 
 ## Building Production-Ready Neural Networks
-
----
 
 ## Introduction
 
