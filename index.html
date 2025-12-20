@@ -4,121 +4,195 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mayank Sharma | Applied GenAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+  <!-- Background glow orbs -->
+  <div class="glow-orb glow-orb-1 parallax" data-speed="0.3"></div>
+  <div class="glow-orb glow-orb-2 parallax" data-speed="0.5"></div>
+  <div class="glow-orb glow-orb-3 parallax" data-speed="0.4"></div>
 
-<nav class="nav">
-  <strong>Mayank Sharma</strong>
-  <div class="hero-cta" >
-    <a class="cta" href="blog.html">Blog</a>
-    <a class="cta" href="https://github.com/mayank1101" target="_blank">GitHub</a>
-    <a class="cta" href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank">LinkedIn</a>
+<nav class="nav fade-in">
+  <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
+  <div class="hero-cta">
+    <a class="cta nav-link" href="blog.html">
+      <i class="fas fa-blog"></i> Blog
+    </a>
+    <a class="cta nav-link cta-resume" href="#resume">
+      <i class="fas fa-file-pdf"></i> Resume
+    </a>
+    <a class="cta nav-link" href="https://github.com/mayank1101" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a class="cta nav-link" href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
   </div>
 </nav>
 
 
 <main>
     <div class="container hero fade-in">
-        <h1>
-            I build <span class="hero-highlight">trustworthy</span><br/>
-            Generative AI systems
-        </h1>
-        <p>
-            Senior Data Scientist with 5+ years of experience in
-            Generative AI, LLMs, and multimodal RAG systems.
-            I work at the intersection of applied research and
-            production-scale AI.
-        </p>
+        <div class="hero-content">
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <div class="photo-glow"></div>
+                    <img src="assets/profile.jpg" alt="Mayank Sharma" onerror="this.parentElement.classList.add('no-image')">
+                </div>
+            </div>
 
-        <div class="badges">
-            <span>LLMs</span>
-            <span>RAG & Multimodal RAG</span>
-            <span>Hallucination Reduction</span>
-            <span>Prompt & Instruct Tuning</span>
-            <span>Applied AI Research</span>
+            <div class="hero-text">
+                <h1>
+                    I build <span class="hero-highlight">trustworthy</span><br/>
+                    Generative AI systems
+                </h1>
+                <p>
+                    Senior Data Scientist with 5+ years of experience in
+                    Generative AI, LLMs, and multimodal RAG systems.
+                    I work at the intersection of applied research and
+                    production-scale AI.
+                </p>
+
+                <div class="badges">
+                    <span><i class="fas fa-brain"></i> LLMs</span>
+                    <span><i class="fas fa-database"></i> RAG & Multimodal RAG</span>
+                    <span><i class="fas fa-shield-alt"></i> Hallucination Reduction</span>
+                    <span><i class="fas fa-magic"></i> Prompt & Instruct Tuning</span>
+                    <span><i class="fas fa-flask"></i> Applied AI Research</span>
+                </div>
+            </div>
         </div>
-
     </div>
 
-    <div class="container section fade-in">
-        <h2>What I Do</h2>
+    <div class="container section">
+        <h2 class="scroll-animate slide-in-left">
+            <i class="fas fa-rocket"></i> What I Do
+        </h2>
         <div class="cards">
-            <div class="card">
+            <div class="card scroll-animate card-cyan">
+                <div class="card-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
                 <h3>Build Production-Grade GenAI Systems</h3>
                 <p>
                     I design, evaluate, and deploy LLM and RAG systems that work
                     reliably in real-world environments — not just demos.
                 </p>
                 <p class="muted">
-                    Multimodal RAG · Retrieval Evaluation · Hallucination Control
+                    <i class="fas fa-check-circle"></i> Multimodal RAG · Retrieval Evaluation · Hallucination Control
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card scroll-animate card-purple">
+                <div class="card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
                 <h3>Turn Research into Impact</h3>
                 <p>
                     I translate applied research into scalable AI systems,
                     bridging the gap between academic ideas and production needs.
                 </p>
                 <p class="muted">
-                    AAAI 2024 · Prompt Engineering · Model Efficiency
+                    <i class="fas fa-check-circle"></i> AAAI 2024 · Prompt Engineering · Model Efficiency
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card scroll-animate card-pink">
+                <div class="card-icon">
+                    <i class="fas fa-server"></i>
+                </div>
                 <h3>Engineer Scalable AI Infrastructure</h3>
                 <p>
                     I build end-to-end AI pipelines — from data acquisition
                     and crawling to optimized inference and cloud deployment.
                 </p>
                 <p class="muted">
-                    Crawl4AI · LLMs · Qdrant · MongoDB · AWS · Docker
+                    <i class="fas fa-check-circle"></i> Crawl4AI · LLMs · Qdrant · MongoDB · AWS · Docker
                 </p>
             </div>
         </div>
     </div>
 
-<div class="container section fade-in">
-    <h2>Writing & Research</h2>
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-pen-fancy"></i> Writing & Research</h2>
     <p class="muted">
         I write about Deep Learning, NLP, LLMs, Architectures, RAG systems, and real-world GenAI failures & fixes.
     </p>
 
     <div class="cards">
-        <div class="card">
+        <div class="card scroll-animate">
+            <div class="blog-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
             <h3>Evaluating RAG Beyond Accuracy</h3>
             <p>Precision@k, context relevance, hallucination rate.</p>
-            <a href="posts/rag-evaluation.html">Read →</a>
+            <a href="posts/rag-evaluation.html">Read → <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
+        <div class="card scroll-animate">
+            <div class="blog-icon">
+                <i class="fas fa-microscope"></i>
+            </div>
             <h3>Lessons from OpenMedLM (AAAI 2024)</h3>
             <p>Why prompt engineering beat fine-tuning.</p>
-            <a href="posts/openmedlm.html">Read →</a>
+            <a href="posts/openmedlm.html">Read → <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </div>
 
-    <div class="container section fade-in">
-    <h2>Let’s Build Something Real</h2>
-    <p>
-        If you’re building AI systems that need to work
-        outside demos and benchmarks, I’d love to talk.
-    </p>
-    <a class="cta" href="mailto:sharma.mayank.iitjammu@gmail.com">
-        Get in Touch
-    </a>
+    <!-- Resume Section -->
+    <div id="resume" class="container section resume-section scroll-animate">
+        <div class="resume-card">
+            <div class="resume-icon">
+                <i class="fas fa-file-download"></i>
+            </div>
+            <div class="resume-content">
+                <h2>Resume</h2>
+                <p>
+                    Download my full resume to see my complete work history,
+                    technical skills, publications, and project details.
+                </p>
+                <div class="resume-actions">
+                    <a class="cta cta-large" href="https://drive.google.com/your-resume-link" target="_blank">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a class="cta-secondary" href="https://drive.google.com/your-resume-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section scroll-animate cta-section">
+        <h2>Let's Build Something Real</h2>
+        <p>
+            If you're building AI systems that need to work
+            outside demos and benchmarks, I'd love to talk.
+        </p>
+        <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
+            <i class="fas fa-envelope"></i> Get in Touch
+        </a>
     </div>
 </main>
 
 <div class="footer">
+  <div class="footer-icons">
+    <i class="fas fa-code"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-terminal"></i>
+  </div>
   <p>
-    “My humility isn’t flattery — it’s a value shaped by a humble upbringing.”
+    "My humility isn't flattery — it's a value shaped by a humble upbringing."
   </p>
   <p>© 2025 Mayank Sharma</p>
 </div>
 
+<script src="assets/animations.js"></script>
 </body>
 </html>

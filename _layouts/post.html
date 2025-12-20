@@ -11,18 +11,25 @@ layout: default
 
 <body>
 
-<!-- <nav class="nav">
-  <strong>Mayank Sharma</strong>
+<!-- Scroll progress indicator -->
+<div class="scroll-progress"></div>
+
+<nav class="nav fade-in">
+  <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
   <div>
-    <a href="/blog.html">Blog</a>
-    <a href="/">Home</a>
+    <a href="/" class="nav-link">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="/blog.html" class="nav-link">
+      <i class="fas fa-blog"></i> Blog
+    </a>
   </div>
-</nav> -->
+</nav>
 
 <div class="container section fade-in">
   <h1>{{ page.title }}</h1>
   <p class="muted">
-    {{ page.date | date: "%b %d, %Y" }}
+    <i class="far fa-calendar"></i> {{ page.date | date: "%b %d, %Y" }}
   </p>
 
   {{ content }}
