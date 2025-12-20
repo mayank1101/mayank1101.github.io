@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Part 2: Deep Learning with PyTorch"
