@@ -835,9 +835,9 @@ p {
 }
 
 /* Zoom effect on hover */
-.blog-card:hover {
+/* .blog-card:hover {
   background-size: 110%;
-}
+} */
 
 /* Content positioned above overlay */
 .blog-card-content {
