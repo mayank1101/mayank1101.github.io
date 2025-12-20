@@ -868,4 +868,4 @@ In **Part 3: FeedForward and Backward propagation**, we'll explore:
 
 ---
 
-*Part of the PyTorch Mastery series by TensorTales 🐙*
+*Part of the NLP Mastery series by TensorTales 🐙*

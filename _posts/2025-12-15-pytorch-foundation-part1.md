@@ -679,17 +679,7 @@ In **Part 2: Deep Learning with PyTorch**, we'll build on these fundamentals to:
 - Implement gradient descent from scratch
 - Write device-agnostic code
 
-### Practice Exercises
-
-1. **Tensor Mastery**: Create a 3D tensor of shape (4, 5, 6) and practice reshaping, indexing, and transposing it.
-
-2. **Custom Loss Function**: Implement Mean Absolute Error (MAE) loss and use it for linear regression instead of MSE.
-
-3. **Multivariate Regression**: Extend the linear regression example to multiple input features (X with shape [N, D] where D > 1).
-
-4. **Polynomial Regression**: Fit a polynomial `y = w₂x² + w₁x + w₀` using gradient descent.
-
-5. **GPU Acceleration**: Benchmark matrix multiplication on CPU vs. GPU for different matrix sizes. Plot the speedup factor.
+---
 
 ### Additional Resources
 
@@ -703,4 +693,4 @@ In **Part 2: Deep Learning with PyTorch**, we'll build on these fundamentals to:
 
 ---
 
-*Part of the PyTorch Mastery series by TensorTales 🐙*
+*Part of the NLP Mastery series by TensorTales 🐙*
