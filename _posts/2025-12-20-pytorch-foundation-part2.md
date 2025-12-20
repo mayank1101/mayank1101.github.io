@@ -763,7 +763,7 @@ history = train_model(model, train_loader, test_loader, num_epochs=100)
 
 For hands-on practice, check out the companion notebooks:
 
-1. [Part2: PyTorch Foundation](https://github.com/mayank1101.github.io/notebooks/2025-12-20-pytorch-foundation-part-2/pytorch-foundation-tutorial-part2.ipynb)
+1. [Part2: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-20-pytorch-foundation-part2/pytorch-foundation-tutorial-part2.ipynb)
 
 ## Next Steps
 

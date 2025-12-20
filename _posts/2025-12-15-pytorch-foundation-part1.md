@@ -659,7 +659,7 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 For hands-on practice, check out the companion notebooks:
 
-1. [Part1: PyTorch Foundation](https://github.com/mayank1101.github.io/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)
+1. [Part1: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)
 
 ## Next Steps
 
