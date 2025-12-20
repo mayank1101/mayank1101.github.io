@@ -1,36 +1,49 @@
 // Intersection Observer for scroll-triggered animations
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -80px 0px'
-  };
+  // Check if device is mobile
+  const isMobile = window.innerWidth <= 768;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
+  // Scroll animations (only on desktop or if user allows motion)
+  if (!isMobile && !prefersReducedMotion) {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      observer.observe(el);
     });
-  }, observerOptions);
-
-  // Observe all scroll-animate elements
-  document.querySelectorAll('.scroll-animate').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Parallax effect for glow orbs
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.parallax');
-
-    parallaxElements.forEach(el => {
-      const speed = parseFloat(el.dataset.speed) || 0.5;
-      const yPos = -(scrolled * speed);
-      el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+  } else {
+    // On mobile, show all elements immediately
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      el.classList.add('animate-in');
     });
-  });
+  }
+
+  // Parallax effect for glow orbs (desktop only)
+  if (!isMobile) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.parallax');
+
+      parallaxElements.forEach(el => {
+        const speed = parseFloat(el.dataset.speed) || 0.5;
+        const yPos = -(scrolled * speed);
+        el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+      });
+    });
+  }
 
   // Scroll progress indicator (for blog posts)
   const progressBar = document.querySelector('.scroll-progress');
