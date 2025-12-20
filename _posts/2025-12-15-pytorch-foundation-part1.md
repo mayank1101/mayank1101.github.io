@@ -4,7 +4,7 @@ title: "Part 1: The PyTorch Foundation"
 date: 2025-12-15
 ---
 
-# Part 1: The PyTorch Foundation
+<!-- # Part 1: The PyTorch Foundation -->
 
 ## Introduction: Why PyTorch?
 
