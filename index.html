@@ -130,30 +130,38 @@
 
     <div class="cards">
         {% for post in site.posts limit:4 %}
-        <div class="card scroll-animate">
-            {% if post.series_image %}
-            <div class="blog-series-image">
-                <img src="{{ post.series_image }}" alt="{{ post.series }}">
+        {% if post.series_image %}
+        <div class="card blog-card scroll-animate" style="background-image: url('{{ post.series_image }}');">
+            <div class="blog-card-content">
+                <div>
+                    {% if post.series %}
+                    <div class="blog-series-badge">
+                        <i class="fas fa-book-reader"></i> {{ post.series }}
+                    </div>
+                    {% endif %}
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+                </div>
+                <div>
+                    {% if post.series_author %}
+                    <p class="blog-series-author">
+                        <i class="fas fa-user-edit"></i> {{ post.series_author }}
+                    </p>
+                    {% endif %}
+                    <a href="{{ post.url }}" class="blog-read-link">Read Article → <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            {% else %}
+        </div>
+        {% else %}
+        <div class="card scroll-animate">
             <div class="blog-icon">
                 <i class="fas fa-book-open"></i>
             </div>
-            {% endif %}
-            {% if post.series %}
-            <div class="blog-series-badge">
-                <i class="fas fa-book-reader"></i> {{ post.series }}
-            </div>
-            {% endif %}
             <h3>{{ post.title }}</h3>
             <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-            {% if post.series_author %}
-            <p class="blog-series-author">
-                <i class="fas fa-user-edit"></i> {{ post.series_author }}
-            </p>
-            {% endif %}
             <a href="{{ post.url }}">Read → <i class="fas fa-arrow-right"></i></a>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 
