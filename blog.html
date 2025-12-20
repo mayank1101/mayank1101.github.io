@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blog | Mayank Sharma</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
+---
+layout: default
+title: Blog
+---
 
-<body>
 <nav class="nav">
-  <strong>Blog</strong>
-  <a href="index.html">Home</a>
+  <strong>Writing</strong>
+  <a href="/">Home</a>
 </nav>
 
-<div class="container section">
+<div class="container section fade-in">
   <h1>Writing</h1>
 
   <div class="cards">
-    <div class="card">
-      <h3>Evaluating RAG Beyond Accuracy</h3>
-      <p>Real-world metrics for GenAI systems.</p>
-      <a href="posts/rag-evaluation.html">Read →</a>
-    </div>
+    {% for post in site.posts %}
+      <div class="card">
+        <h3>{{ post.title }}</h3>
+        <p class="muted">{{ post.date | date: "%b %d, %Y" }}</p>
+        <a href="{{ post.url }}">Read →</a>
+      </div>
+    {% endfor %}
   </div>
 </div>
-
-</body>
-</html>

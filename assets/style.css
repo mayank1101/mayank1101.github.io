@@ -44,7 +44,11 @@ a {
 }
 
 .hero {
-  padding: 5rem 0 3rem;
+  background: radial-gradient(
+    80% 60% at 50% 0%,
+    rgba(56, 189, 248, 0.15),
+    transparent 70%
+  );
 }
 
 .hero h1 {
@@ -79,10 +83,13 @@ a {
 }
 
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 1.5rem;
-  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
 }
 
 .card h3 {
@@ -95,4 +102,36 @@ a {
   border-top: 1px solid var(--border);
   text-align: center;
   color: var(--muted);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta {
+  display: inline-block;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
 }
