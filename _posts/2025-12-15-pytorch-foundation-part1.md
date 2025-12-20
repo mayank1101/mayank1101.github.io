@@ -4,7 +4,7 @@ title: "Part 1: The PyTorch Foundation"
 date: 2025-12-15
 series: "NLP Mastery Series"
 series_author: "Tensor Tales"
-series_image: "/assets/tensor_tales_nlp.png"
+series_image: "/assets/blog_images/pytorch-foundation-part1.png"
 ---
 
 ## Introduction: Why PyTorch?

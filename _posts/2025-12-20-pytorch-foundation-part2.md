@@ -4,7 +4,7 @@ title: "Part 2: Deep Learning with PyTorch"
 date: 2025-12-20
 series: "NLP Mastery Series"
 series_author: "Tensor Tales"
-series_image: "/assets/tensor_tales_nlp.png"
+series_image: "/assets/blog_images/pytorch-foundation-part1.png"
 ---
 
 <!-- # Part 2: Deep Learning with PyTorch -->
