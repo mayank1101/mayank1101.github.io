@@ -129,35 +129,38 @@
     </p>
 
     <div class="cards">
+        {% for post in site.posts limit:4 %}
         <div class="card scroll-animate">
+            {% if post.series_image %}
             <div class="blog-series-image">
-                <img src="/assets/blog_images/pytorch-foundation-part1.png" alt="NLP Mastery Series">
+                <img src="{{ post.series_image }}" alt="{{ post.series }}">
             </div>
+            {% else %}
+            <div class="blog-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            {% endif %}
+            {% if post.series %}
             <div class="blog-series-badge">
-                <i class="fas fa-book-reader"></i> NLP Mastery Series
+                <i class="fas fa-book-reader"></i> {{ post.series }}
             </div>
-            <h3>Part 1: The PyTorch Foundation</h3>
-            <p>Master tensors, autograd, and gradient descent from scratch.</p>
+            {% endif %}
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+            {% if post.series_author %}
             <p class="blog-series-author">
-                <i class="fas fa-user-edit"></i> Tensor Tales
+                <i class="fas fa-user-edit"></i> {{ post.series_author }}
             </p>
-            <a href="blog.html">Read → <i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+            <a href="{{ post.url }}">Read → <i class="fas fa-arrow-right"></i></a>
         </div>
+        {% endfor %}
+    </div>
 
-        <div class="card scroll-animate">
-            <div class="blog-series-image">
-                <img src="/assets/blog_images/pytorch-foundation-part2.png" alt="NLP Mastery Series">
-            </div>
-            <div class="blog-series-badge">
-                <i class="fas fa-book-reader"></i> NLP Mastery Series
-            </div>
-            <h3>Part 2: Deep Learning with PyTorch</h3>
-            <p>Build production-ready neural networks with torch.nn and CNNs.</p>
-            <p class="blog-series-author">
-                <i class="fas fa-user-edit"></i> Tensor Tales
-            </p>
-            <a href="blog.html">Read → <i class="fas fa-arrow-right"></i></a>
-        </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="blog.html" class="cta cta-large">
+            <i class="fas fa-book-open"></i> View All Articles
+        </a>
     </div>
 </div>
 

@@ -5,6 +5,7 @@ date: 2025-12-15
 series: "NLP Mastery Series"
 series_author: "Tensor Tales"
 series_image: "/assets/blog_images/pytorch-foundation-part1.png"
+excerpt: "Master PyTorch fundamentals - tensors, autograd, and gradient descent. Learn dynamic computation graphs, GPU acceleration, and build your first neural network from scratch."
 ---
 
 ## Introduction: Why PyTorch?
