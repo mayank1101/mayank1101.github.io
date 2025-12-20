@@ -653,16 +653,13 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 - **`.backward()`** propagates gradients; always zero them between iterations
 - **Gradient descent** can be implemented from scratch using only tensors and autograd
 
-### Best Practices Checklist
-
-- Use device-agnostic patterns: `device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')`
-- Always call `optimizer.zero_grad()` or `tensor.grad.zero_()` before backward pass
-- Use `torch.no_grad()` for inference to save memory and speed up computation
-- Prefer `@` operator over `torch.matmul()` for matrix multiplication (cleaner)
-- Check tensor shapes early and often—shape mismatches are the #1 bug source
-- Use `tensor.item()` to extract scalar values from single-element tensors
-
 ---
+
+## Jupyter Notebook 
+
+For hands-on practice, check out the companion notebooks:
+
+1. [Part1: PyTorch Foundation](https://github.com/mayank1101.github.io/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)
 
 ## Next Steps
 
@@ -693,4 +690,4 @@ In **Part 2: Deep Learning with PyTorch**, we'll build on these fundamentals to:
 
 ---
 
-*Part of the NLP Mastery series by TensorTales 🐙*
+*Part of the NLP Mastery series by TensorTales*

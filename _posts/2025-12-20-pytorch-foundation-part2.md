@@ -757,102 +757,13 @@ scheduler = optim.lr_scheduler.OneCycleLR(
 history = train_model(model, train_loader, test_loader, num_epochs=100)
 ```
 
-**Expected results:**
-- Training time: ~30 minutes on GPU
-- Final test accuracy: ~85-90%
-
 ---
 
-## 6. Best Practices
+## Jupyter Notebook 
 
-### Model Saving and Loading
+For hands-on practice, check out the companion notebooks:
 
-```python
-# Save model
-torch.save(model.state_dict(), 'model.pth')
-
-# Load model
-model = CIFAR10_CNN()
-model.load_state_dict(torch.load('model.pth'))
-model.eval()
-
-# Save entire model (less flexible)
-torch.save(model, 'entire_model.pth')
-model = torch.load('entire_model.pth')
-```
-
-### Device-Agnostic Code
-
-```python
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = model.to(device)
-
-for data, targets in train_loader:
-    data, targets = data.to(device), targets.to(device)
-    # Training code...
-```
-
-### Mixed Precision Training
-
-Faster training with minimal accuracy loss:
-
-```python
-from torch.cuda.amp import autocast, GradScaler
-
-scaler = GradScaler()
-
-for data, targets in train_loader:
-    optimizer.zero_grad()
-
-    with autocast():  # Automatic mixed precision
-        outputs = model(data)
-        loss = criterion(outputs, targets)
-
-    scaler.scale(loss).backward()
-    scaler.step(optimizer)
-    scaler.update()
-```
-
-### Reproducibility
-
-```python
-import random
-import numpy as np
-
-def set_seed(seed=42):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed(seed)
-        torch.cuda.manual_seed_all(seed)
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
-
-set_seed(42)
-```
-
----
-
-## 7. Key Takeaways
-
-- **`nn.Module`** is the foundation of all PyTorch models
-
-- **`DataLoader`** provides efficient batching and multi-threaded data loading
-
-- **Optimizers** (`Adam`, `AdamW`) handle parameter updates
-
-- **Training loops** follow a standard pattern: zero grads → forward → backward → step
-
-- **Always call** `model.train()` and `model.eval()` appropriately
-
-- **Use `torch.no_grad()`** during inference
-
-- **Device management** ensures code works on both CPU and GPU
-
-- **Checkpointing** saves best models during training
-
----
+1. [Part2: PyTorch Foundation](https://github.com/mayank1101.github.io/notebooks/2025-12-20-pytorch-foundation-part-2/pytorch-foundation-tutorial-part2.ipynb)
 
 ## Next Steps
 
@@ -868,4 +779,4 @@ In **Part 3: FeedForward and Backward propagation**, we'll explore:
 
 ---
 
-*Part of the NLP Mastery series by TensorTales 🐙*
+*Part of the NLP Mastery series by TensorTales*
