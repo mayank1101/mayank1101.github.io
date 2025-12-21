@@ -67,7 +67,7 @@ mayank1101.github.io/
 │   ├── style.css              # Main stylesheet (1500+ lines)
 │   ├── animations.js          # Scroll animations, hamburger menu
 │   ├── profile.jpg            # Profile photo
-│   └── blog_images/           # Blog series images
+│   └── images/                # Blog images
 │       ├── pytorch-foundation-part1.png
 │       └── pytorch-foundation-part2.png
 ├── index.html                 # Homepage with all sections
