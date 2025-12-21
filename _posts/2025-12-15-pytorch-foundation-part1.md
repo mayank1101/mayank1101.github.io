@@ -661,37 +661,4 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 ## Jupyter Notebook 
 
-For hands-on practice, check out the companion notebooks:
-
-1. [Part1: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)
-
-## Next Steps
-
-In **Part 2: Deep Learning with PyTorch**, we'll build on these fundamentals to:
-
-- Use `torch.nn.Module` to define neural network architectures
-- Leverage `torch.optim` for advanced optimization algorithms
-- Implement efficient data pipelines with `DataLoader`
-- Build and train a complete CNN for image classification
-
-**Before moving forward**, ensure you can:
-- Create and manipulate tensors confidently
-- Explain how autograd builds computational graphs
-- Implement gradient descent from scratch
-- Write device-agnostic code
-
----
-
-### Additional Resources
-
-- **PyTorch Tutorials**: https://pytorch.org/tutorials/beginner/basics/tensor_tutorial.html
-- **Autograd Mechanics**: https://pytorch.org/docs/stable/notes/autograd.html
-- **Performance Tuning**: https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html
-
----
-
-**Ready for Part 2?** You now understand PyTorch's foundational mechanisms. Next, we'll see how the `torch.nn` module abstracts these concepts into reusable, composable building blocks for building real neural networks.
-
----
-
-*Part of the NLP Mastery series by TensorTales*
+For hands-on practice, check out the companion notebooks - [Part1: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)

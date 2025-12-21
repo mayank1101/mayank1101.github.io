@@ -765,22 +765,4 @@ history = train_model(model, train_loader, test_loader, num_epochs=100)
 
 ## Jupyter Notebook 
 
-For hands-on practice, check out the companion notebooks:
-
-1. [Part2: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-20-pytorch-foundation-part2/pytorch-foundation-tutorial-part2.ipynb)
-
-## Next Steps
-
-In **Part 3: FeedForward and Backward propagation**, we'll explore:
-- Feedforward and backward propagation from scratch
-- Understanding the math behind backpropagation in detail
-
-**Before moving forward**, ensure you can:
-- Build custom `nn.Module` classes
-- Create `Dataset` and `DataLoader` pipelines
-- Implement complete training loops
-- Train a CNN on CIFAR-10
-
----
-
-*Part of the NLP Mastery series by TensorTales*
+For hands-on practice, check out the companion notebooks - [Part2: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-20-pytorch-foundation-part2/pytorch-foundation-tutorial-part2.ipynb)
