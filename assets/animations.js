@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.innerWidth <= 768;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Scroll animations (only on desktop or if user allows motion)
-  if (!isMobile && !prefersReducedMotion) {
+  // Scroll animations (enabled on all devices unless reduced motion is preferred)
+  if (!prefersReducedMotion) {
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -80px 0px'
+      threshold: isMobile ? 0.05 : 0.1,
+      rootMargin: isMobile ? '0px 0px -40px 0px' : '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
   } else {
-    // On mobile, show all elements immediately
+    // If reduced motion is preferred, show all elements immediately
     document.querySelectorAll('.scroll-animate').forEach(el => {
       el.classList.add('animate-in');
     });
