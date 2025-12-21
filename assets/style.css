@@ -77,7 +77,7 @@ img, video, iframe {
 /* Better mobile tap highlighting */
 a, button {
   -webkit-tap-highlight-color: rgba(56, 189, 248, 0.2);
-  tap-highlight-color: rgba(56, 189, 248, 0.2);
+  -webkit-tap-highlight-color: rgba(56, 189, 248, 0.2);
 }
 
 a {
