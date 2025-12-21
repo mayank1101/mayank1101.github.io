@@ -162,6 +162,7 @@ a:hover {
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .nav strong {
@@ -199,6 +200,12 @@ a:hover {
   gap: 0.5rem;
 }
 
+.nav-link.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+}
+
 .cta-resume {
   background: var(--gradient-secondary) !important;
   color: var(--bg) !important;
@@ -208,6 +215,38 @@ a:hover {
 .cta-resume:hover {
   box-shadow: var(--glow-yellow);
   transform: translateY(-2px);
+}
+
+/* Hamburger Menu (Mobile Only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  gap: 0.4rem;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-bright);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* ===== Typography ===== */
@@ -269,7 +308,7 @@ p {
     radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.15), transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15), transparent 50%),
     var(--bg);
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   position: relative;
 }
@@ -1103,6 +1142,10 @@ html, body {
     padding: 1.5rem;
   }
 
+  .nav {
+    margin-bottom: 1.5rem;
+  }
+
   .hero-content {
     grid-template-columns: 200px 1fr;
     gap: 2rem;
@@ -1127,43 +1170,65 @@ html, body {
     max-width: 100%;
   }
 
-  /* Navigation - Stack vertically with better spacing */
+  /* Navigation - Collapsible Mobile Menu */
   .nav {
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1rem;
-    align-items: stretch;
-    position: relative;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .nav strong {
-    text-align: center;
     font-size: 1.1rem;
-    padding: 0.5rem;
   }
 
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide menu by default on mobile */
   .hero-cta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    display: none;
+    flex-direction: column;
     width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    animation: slideDown 0.3s ease;
+  }
+
+  /* Show menu when active */
+  .hero-cta.active {
+    display: flex;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .nav a {
     margin-left: 0;
-    padding: 0.7rem;
+    padding: 0.8rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    min-height: 44px; /* Touch target size */
+    gap: 0.5rem;
+    min-height: 48px;
+    width: 100%;
+    border-radius: 8px;
   }
 
   /* Hero section - Stack content */
   .hero {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
   }
 

@@ -1,6 +1,34 @@
 // Intersection Observer for scroll-triggered animations
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Mobile Menu Toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.hero-cta');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+
   // Check if device is mobile
   const isMobile = window.innerWidth <= 768;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
