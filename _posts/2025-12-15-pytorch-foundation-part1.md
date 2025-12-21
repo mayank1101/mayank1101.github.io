@@ -4,7 +4,7 @@ title: "Part 1: The PyTorch Foundation"
 date: 2025-12-15
 series: "NLP Mastery Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/blog_images/pytorch-foundation-part1.png"
+series_image: "/_posts/_images/2025-12-15-pytorch-foundation-part1/pytorch-foundation-part1.png"
 excerpt: "Master PyTorch fundamentals - tensors, autograd, and gradient descent. Learn dynamic computation graphs, GPU acceleration, and build your first neural network from scratch."
 ---
 
