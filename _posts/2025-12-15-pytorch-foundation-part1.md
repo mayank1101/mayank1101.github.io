@@ -661,4 +661,4 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 ## Jupyter Notebook 
 
-For hands-on practice, check out the companion notebooks - [Part1: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-15-pytorch-foundation-part1/pytorch-foundation-tutorial-part1.ipynb)
+For hands-on practice, check out the companion notebooks - [Part1: PyTorch Foundation](https://colab.research.google.com/drive/1Eh6A3ENCzDnkEr4m5dSNQbe_b489ZUK2?usp=drive_link)
