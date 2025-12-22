@@ -14,23 +14,25 @@ In the rapidly evolving landscape of deep learning frameworks, PyTorch has emerg
 
 ### The Dynamic Graph Advantage
 
-Unlike TensorFlow 1.x, which required defining a static computation graph before execution, PyTorch uses **dynamic computation graphs** (also called define-by-run). This means the graph is built on-the-fly during the forward pass, making it:
+PyTorch uses **dynamic computation graphs** (also called define-by-run). This means the graph is built on-the-fly during the forward pass, making it:
 
-- **Intuitive**: Write Python code that executes immediately—no session management
-- **Debuggable**: Use standard Python debugging tools (pdb, print statements)
-- **Flexible**: Support for dynamic architectures (varying computational paths)
+- **Intuitive**: Write Python code that executes immediately—no session management.
+- **Debuggable**: Use standard Python debugging tools (pdb, print statements).
+- **Flexible**: Support for dynamic architectures (varying computational paths).
 
 **Why researchers choose PyTorch:**
-- 70%+ of papers at NeurIPS, ICML, and ICLR use PyTorch
-- Native Python feel reduces cognitive overhead
-- Seamless integration with NumPy ecosystem
-- Hugging Face Transformers built on PyTorch
+
+- 70%+ of papers at NeurIPS, ICML, and ICLR use PyTorch.
+- Native Python feel reduces cognitive overhead.
+- Seamless integration with NumPy ecosystem.
+- Hugging Face Transformers built on PyTorch.
 
 **PyTorch in production:**
-- PyTorch 2.0 introduces `torch.compile` for significant speedups
-- TorchServe provides enterprise-grade model serving
-- ONNX export enables deployment to any platform
-- Major tech companies (Meta, Microsoft, Tesla) use PyTorch at scale
+
+- PyTorch 2.0 introduces `torch.compile` for significant speedups.
+- TorchServe provides enterprise-grade model serving.
+- ONNX export enables deployment to any platform.
+- Major tech companies (Meta, Microsoft, Tesla) use PyTorch at scale.
 
 ---
 
@@ -41,15 +43,17 @@ Unlike TensorFlow 1.x, which required defining a static computation graph before
 A **tensor** is a generalization of scalars, vectors, and matrices to arbitrary dimensions. In mathematical terms, it's a multi-dimensional array with a uniform data type.
 
 **Tensor Hierarchy:**
-- **Rank 0** (Scalar): `5.0` → Single number
-- **Rank 1** (Vector): `[1, 2, 3]` → 1D array
-- **Rank 2** (Matrix): `[[1, 2], [3, 4]]` → 2D array
-- **Rank 3+** (Tensor): `[[[...]]]` → 3D+ arrays
+
+- **Rank 0** (Scalar): `5.0` → Single number.
+- **Rank 1** (Vector): `[1, 2, 3]` → 1D array.
+- **Rank 2** (Matrix): `[[1, 2], [3, 4]]` → 2D array.
+- **Rank 3+** (Tensor): `[[[...]]]` → 3D+ arrays.
 
 In deep learning, tensors represent:
-- **Images**: (batch_size, channels, height, width) → Rank 4
-- **Text sequences**: (batch_size, sequence_length, embedding_dim) → Rank 3
-- **Model parameters**: Weights and biases of arbitrary shape
+
+- **Images**: (batch_size, channels, height, width) → Rank 4.
+- **Text sequences**: (batch_size, sequence_length, embedding_dim) → Rank 3.
+- **Model parameters**: Weights and biases of arbitrary shape.
 
 ### Creating Tensors
 
@@ -90,7 +94,7 @@ print(linear)  # tensor([ 0.0, 2.5, 5.0, 7.5, 10.0])
 
 ### Understanding Tensor Attributes
 
-Every tensor has critical metadata that defines its properties:
+Every tensor has critical `metadata` that defines its properties:
 
 ```python
 x = torch.randn(3, 4)
@@ -359,10 +363,11 @@ if torch.cuda.is_available():
 ```
 
 **Key takeaways:**
-- Always check `torch.cuda.is_available()` before using GPU
-- Use device-agnostic patterns for portable code
-- Operations require tensors on the same device
-- GPU shines for large-scale operations; overhead hurts small ops
+
+- Always check `torch.cuda.is_available()` before using GPU.
+- Use device-agnostic patterns for portable code.
+- Operations require tensors on the same device.
+- GPU shines for large-scale operations; overhead hurts small operations.
 
 ---
 
@@ -419,9 +424,10 @@ print(x.grad)  # tensor(7.) = 2(2) + 3
 ```
 
 **How it works:**
-1. `y.backward()` traverses the graph in reverse (topological order)
-2. Applies chain rule at each node
-3. Accumulates gradients in `.grad` attribute of leaf tensors
+
+1. When you apply `y.backward()`, PyTorch traverses the graph in reverse (topological order).
+2. Applies chain rule at each node.
+3. Accumulates gradients in `.grad` attribute of leaf tensors.
 
 #### Multi-variable Example
 
@@ -443,7 +449,7 @@ print(b.grad)  # tensor(57.)
 
 ### Vector-Valued Functions
 
-For scalar outputs, `.backward()` is straightforward. For vector outputs, you must specify the gradient:
+For scalar outputs, `.backward()` is straightforward. But, for vector outputs, you must specify the gradient:
 
 ```python
 x = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
@@ -459,7 +465,7 @@ print(x.grad)  # tensor([2., 4., 6.]) = 2x evaluated at each element
 
 ### Gradient Accumulation and Zeroing
 
-**CRITICAL**: Gradients **accumulate** by default. You must zero them between iterations.
+**CRITICAL**: It's important to note that Gradients **accumulate** by default. You must zero them between iterations.
 
 ```python
 x = torch.tensor(2.0, requires_grad=True)
@@ -482,8 +488,9 @@ print(x.grad)  # tensor(12.) (correct)
 ```
 
 **When gradient accumulation is useful:**
-- Simulating larger batch sizes with limited memory
-- Accumulating gradients across multiple loss terms
+
+- When you are simulating larger batch sizes with limited memory.
+- When you want to accumulate gradients across multiple loss terms.
 
 ### Detaching from the Graph
 
@@ -503,13 +510,14 @@ z.backward()  # ERROR: z is not part of graph
 ```
 
 **Use cases:**
-- Implementing certain loss functions
-- Debugging: isolate problematic computations
-- Performance: avoid unnecessary gradient computation
+
+- Implementing certain loss functions.
+- Debugging: isolate problematic computations.
+- Performance: avoid unnecessary gradient computation.
 
 ### Context Manager: `torch.no_grad()`
 
-For inference or evaluation, disable gradient tracking entirely:
+For `inference` or `evaluation`, you must disable gradient tracking entirely:
 
 ```python
 x = torch.tensor([1.0, 2.0], requires_grad=True)
@@ -528,15 +536,16 @@ with torch.no_grad():
 ```
 
 **Benefits:**
-- Reduces memory consumption
-- Speeds up computation (no need to store intermediate values)
-- Essential for inference
+
+- It reduces memory consumption.
+- It speeds up computation (no need to store intermediate values).
+- It is essential for inference.
 
 ---
 
 ## 3. Putting It Together: Gradient Descent from Scratch
 
-Let's implement linear regression using only tensors and autograd—no `torch.nn` yet.
+Let's implement `linear regression` using only tensors and autograd, without using `torch.nn` yet.
 
 ### Problem Setup
 
@@ -592,18 +601,6 @@ print(f"\\nFinal parameters: w={w.item():.4f}, b={b.item():.4f}")
 print(f"True parameters:  w=3.0000, b=2.0000")
 ```
 
-**Expected output:**
-```
-Epoch 10/100, Loss: 0.5234
-Epoch 20/100, Loss: 0.3145
-Epoch 30/100, Loss: 0.2789
-...
-Epoch 100/100, Loss: 0.2501
-
-Final parameters: w=2.9876, b=2.0123
-True parameters:  w=3.0000, b=2.0000
-```
-
 ### Visualizing Results
 
 ```python
@@ -637,11 +634,11 @@ print("Visualization saved to 'linear_regression_results.png'")
 
 ### Key Insights
 
-1. **Forward Pass**: Compute predictions using current parameters
-2. **Loss Calculation**: Quantify prediction error
-3. **Backward Pass**: Compute gradients via `loss.backward()`
-4. **Parameter Update**: Move in direction of negative gradient
-5. **Gradient Zeroing**: Essential to prevent accumulation
+1. **Forward Pass**: Compute predictions using current parameters.
+2. **Loss Calculation**: Quantify prediction error.
+3. **Backward Pass**: Compute gradients via `loss.backward()`.
+4. **Parameter Update**: Move in direction of negative gradient.
+5. **Gradient Zeroing**: Essential to prevent accumulation.
 
 This pattern forms the foundation of ALL deep learning training in PyTorch.
 
@@ -649,16 +646,16 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 ## 4. Key Takeaways
 
-### What We've Learned
+### What We've Learned So Far
 
-- **Tensors** are the fundamental data structure—understand creation, operations, and attributes
-- **Device management** is crucial—write device-agnostic code for portability
-- **Autograd** automatically computes gradients through computational graphs
-- **`.backward()`** propagates gradients; always zero them between iterations
-- **Gradient descent** can be implemented from scratch using only tensors and autograd
+- **Tensors** are the fundamental data structure—understand creation, operations, and attributes.
+- **Device management** is crucial—write device-agnostic code for portability.
+- **Autograd** automatically computes gradients through computational graphs.
+- **`.backward()`** propagates gradients; always zero them between iterations.
+- **Gradient descent** can be implemented from scratch using only tensors and autograd.
 
 ---
 
-## Jupyter Notebook 
+## Jupyter Notebook
 
 For hands-on practice, check out the companion notebooks - [Part1: PyTorch Foundation](https://colab.research.google.com/drive/1Eh6A3ENCzDnkEr4m5dSNQbe_b489ZUK2?usp=drive_link)
