@@ -10,6 +10,10 @@ layout: default
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>{{ page.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 
@@ -20,7 +24,15 @@ layout: default
 
 <nav class="nav fade-in">
   <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
-  <div>
+
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="hero-cta">
     <a href="/" class="nav-link">
       <i class="fas fa-home"></i> Home
     </a>
@@ -82,7 +94,7 @@ layout: default
   };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script src="/assets/animations.js"></script>
 
 </body>
 </html>
