@@ -14,7 +14,7 @@ excerpt: "Build production-ready neural networks with torch.nn, advanced optimiz
 
 ## Introduction
 
-In Part 1, we built everything from scratch using raw tensors and autograd. While educational, this approach doesn't scale to real-world deep learning projects. Imagine manually implementing every layer, activation function, and optimizer for a 100-layer ResNet!
+In Part 1, you built everything from scratch using raw tensors and autograd. While educational, this approach doesn't scale to real-world deep learning projects. Imagine manually implementing every layer, activation function, and optimizer for a 100-layer ResNet!
 
 **Part 2 introduces the high-level abstractions** that make PyTorch the framework of choice for both researchers and practitioners:
 
@@ -39,6 +39,8 @@ Every neural network in PyTorch inherits from `nn.Module`. This base class provi
 - State saving/loading
 
 **The minimal example:**
+
+Here we have a simple model with two linear layers and a ReLU activation.
 
 ```python
 import torch
@@ -66,14 +68,17 @@ print(output.shape)  # torch.Size([5, 1])
 ```
 
 **Key concepts:**
-- `__init__`: Define all layers and parameters
-- `forward()`: Define the computation graph
-- Calling `model(x)` automatically invokes `forward(x)`
-- All `nn.Module` parameters are tracked automatically
 
-### Essential Layers
+- `__init__`: Define all layers and parameters.
+- `forward()`: Define the computation graph.
+- Calling `model(x)` automatically invokes `forward(x)`.
+- All `nn.Module` parameters are tracked automatically.
+
+### Lets understand the Essential Layers
 
 #### Fully Connected (Linear) Layers
+
+Here we have a simple linear layer with 128 input features and 64 output features.
 
 ```python
 # nn.Linear(in_features, out_features, bias=True)
@@ -90,11 +95,14 @@ print(f"Bias shape: {linear.bias.shape}")      # [64]
 ```
 
 **Use cases:**
-- Classification heads
-- Fully connected layers in MLPs
-- Projection layers in transformers
+
+- Classification heads.
+- Fully connected layers in MLPs.
+- Projection layers in transformers.
 
 #### Convolutional Layers
+
+Here we have a convolutional layer with 3 input channels (RGB), 16 output channels (filters), and a 3×3 kernel.
 
 ```python
 # nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0)
@@ -114,11 +122,13 @@ print(y.shape)  # torch.Size([8, 16, 32, 32])
 ```
 
 **Spatial dimension formula:**
+
 ```python
 output_size = floor((input_size + 2*padding - kernel_size) / stride) + 1
 ```
 
 **Example:** Input 32, kernel 3, padding 1, stride 1
+
 ```python
 output = floor((32 + 2*1 - 3) / 1) + 1 = 32
 ```
@@ -145,9 +155,10 @@ print(y_adaptive.shape)  # torch.Size([8, 16, 1, 1])
 ```
 
 **Use cases:**
-- Downsampling feature maps
-- Reducing spatial dimensions
-- Translation invariance
+
+- Downsampling feature maps.
+- Reducing spatial dimensions.
+- Translation invariance.
 
 #### Batch Normalization
 
@@ -171,11 +182,12 @@ y = bn2d(x)
 ```
 
 **Benefits:**
-- Accelerates training (enables higher learning rates)
-- Reduces sensitivity to initialization
-- Acts as regularization (slight noise from batch statistics)
 
-**Important:** Behaves differently in training vs. eval mode!
+- Accelerates training (enables higher learning rates).
+- Reduces sensitivity to initialization.
+- Acts as regularization (slight noise from batch statistics).
+
+**Important:** It is important to notice that `BatchNorm` behaves differently in training vs. eval mode!
 
 ```python
 model.train()  # Updates running statistics
@@ -198,13 +210,13 @@ y_eval = dropout(x)   # No dropout during inference
 ```
 
 **Key points:**
-- Only active during training (`model.train()`)
-- Automatically scaled by 1/(1-p) to maintain expected sum
-- Prevents overfitting by reducing co-adaptation
+- Only active during training (`model.train()`).
+- Automatically scaled by 1/(1-p) to maintain expected sum.
+- Prevents overfitting by reducing co-adaptation.
 
 ### Activation Functions
 
-Non-linear activations are essential for neural networks to learn complex patterns.
+Non-linear activations are essential for neural networks to learn complex patterns. Here are some common ones:
 
 ```python
 # ReLU: Most common activation
@@ -230,13 +242,16 @@ print(tanh(x))
 ```
 
 **When to use:**
-- **ReLU**: Default choice for hidden layers
-- **Leaky ReLU**: If experiencing dying ReLU (many zero activations)
-- **GELU**: Modern transformers and vision models
-- **Sigmoid**: Binary classification output
-- **Tanh**: When outputs should be centered around zero
+
+- **ReLU**: Default choice for hidden layers.
+- **Leaky ReLU**: If experiencing dying ReLU (many zero activations).
+- **GELU**: Modern transformers and vision models.
+- **Sigmoid**: Binary classification output.
+- **Tanh**: When outputs should be centered around zero.
 
 ### Loss Functions
+
+Loss functions measure how well the model predicts the target.
 
 ```python
 # Cross-Entropy Loss: Multi-class classification
@@ -266,7 +281,9 @@ loss = mse_loss(predictions, targets)
 
 ### Building Complex Models
 
-**Pattern 1: Sequential models**
+#### Pattern 1: Sequential models
+
+A common pattern in PyTorch is to create a sequence of layers. This is often used for simple models. Below is a simple example of a sequential model. Note that this is not the recommended way to build models, but it is a common pattern you will see in many tutorials:
 
 ```python
 model = nn.Sequential(
@@ -284,7 +301,9 @@ x = torch.randn(32, 784)
 output = model(x)
 ```
 
-**Pattern 2: Custom modules (RECOMMENDED)**
+#### Pattern 2: Custom modules (RECOMMENDED)
+
+This is the recommended way to build models. It allows you to create custom modules and compose them together to build more complex models.
 
 ```python
 class MLP(nn.Module):
@@ -309,7 +328,9 @@ class MLP(nn.Module):
 model = MLP(input_size=784, hidden_size=256, num_classes=10)
 ```
 
-**Pattern 3: Modular composition**
+#### Pattern 3: Modular composition
+
+This is the recommended way to compose modules together to build more complex models by reusing existing modules. This is the most flexible and reusable way to build models. Below is an example of a CNN model that uses a reusable `ConvBlock` module.
 
 ```python
 class ConvBlock(nn.Module):
@@ -357,8 +378,9 @@ Efficient data loading is crucial for training performance.
 ### The Dataset Abstraction
 
 Custom datasets implement two methods:
-- `__len__()`: Return number of samples
-- `__getitem__(idx)`: Return sample at index
+
+- `__len__()`: Return number of samples.
+- `__getitem__(idx)`: Return sample at index.
 
 ```python
 from torch.utils.data import Dataset, DataLoader
@@ -410,11 +432,12 @@ for batch_idx, (data, targets) in enumerate(dataloader):
 ```
 
 **Key parameters:**
-- `batch_size`: Number of samples per batch
-- `shuffle`: Randomize order (True for training)
-- `num_workers`: Parallel processes for data loading (0 = main process)
-- `pin_memory`: Use pinned memory for faster GPU transfer
-- `drop_last`: Drop last incomplete batch (useful for batch norm)
+
+- `batch_size`: Number of samples per batch.
+- `shuffle`: Randomize order (True for training).
+- `num_workers`: Parallel processes for data loading (0 = main process).
+- `pin_memory`: Use pinned memory for faster GPU transfer.
+- `drop_last`: Drop last incomplete batch (useful for batch norm).
 
 ### Working with Image Data
 
@@ -450,7 +473,7 @@ print(f"Labels shape: {labels.shape}")  # [64]
 
 ### Data Augmentation
 
-Critical for improving generalization on image tasks.
+In Data augmentation, we artificially expands training data, it is critical for improving generalization on image tasks.
 
 ```python
 train_transform = transforms.Compose([
@@ -475,7 +498,7 @@ test_transform = transforms.Compose([
 
 ### Optimizer Fundamentals
 
-Optimizers update model parameters based on gradients.
+An optimizer is the method that tells the model how to change itself so it makes fewer mistakes. So, it helps to update model weights so that it can slowly learns to make better predictions. Optimizer updates model parameters based on computed gradients.
 
 ```python
 import torch.optim as optim
@@ -496,13 +519,14 @@ optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=0.01)
 ```
 
 **Choosing an optimizer:**
-- **SGD with momentum**: Simple, well-understood, good for final fine-tuning
-- **Adam**: Default choice, adaptive learning rates, fast convergence
-- **AdamW**: Modern best practice, fixes weight decay in Adam
+
+- **SGD with momentum**: Simple, well-understood, good for final fine-tuning.
+- **Adam**: Default choice, adaptive learning rates, fast convergence.
+- **AdamW**: Modern best practice, fixes weight decay in Adam.
 
 ### Learning Rate Scheduling
 
-Learning rate decay improves convergence.
+Learning rate controls how fast or how cautiously a model learns from its mistakes. And scheduling learning rate means changing the learning rate during training instead of keeping it a fixed value. PyTorch provides several strategies for learning rate scheduling.
 
 ```python
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -535,7 +559,7 @@ for epoch in range(num_epochs):
 
 ## 4. The Training Loop
 
-The standard training pattern in PyTorch.
+A training loop is the repeated process where a model predicts, checks its mistake, and improves itself.
 
 ### Basic Training Loop
 
@@ -569,6 +593,8 @@ def train_one_epoch(model, train_loader, criterion, optimizer, device):
 
 ### Validation Loop
 
+A validation loop checks how well the model is learning using data it has never trained on.
+
 ```python
 def validate(model, val_loader, criterion, device):
     model.eval()  # Set to evaluation mode
@@ -597,6 +623,8 @@ def validate(model, val_loader, criterion, device):
 ```
 
 ### Complete Training Pipeline
+
+Below is a complete training pipeline that combines everything we've learned:
 
 ```python
 def train_model(model, train_loader, val_loader, num_epochs=50):
@@ -642,7 +670,7 @@ def train_model(model, train_loader, val_loader, num_epochs=50):
 
 ## 5. Case Study: CNN for CIFAR-10
 
-Let's build a complete image classifier.
+Now, let's apply everything we've learned to build a complete image classifier. We'll use the CIFAR-10 dataset, which contains 10 classes of images: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. The goal is to classify each image into one of these classes. 
 
 ### The CIFAR-10 Dataset
 
