@@ -249,19 +249,23 @@
         {% for post in site.posts limit:4 %}
         <div class="card scroll-animate blog-card" {% if post.series_image %}style="background-image: url('{{ post.series_image }}');"{% endif %}>
             <div class="blog-card-content">
-                {% if post.series %}
-                <div class="blog-series-badge">
-                    <i class="fas fa-book-reader"></i> {{ post.series }}
+                <div>
+                    {% if post.series %}
+                    <div class="blog-series-badge">
+                        <i class="fas fa-book-reader"></i> {{ post.series }}
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-                {% if post.series_author %}
-                <p class="blog-series-author">
-                    <i class="fas fa-user-edit"></i> {{ post.series_author }}
-                </p>
-                {% endif %}
-                <a href="{{ post.url }}" class="blog-read-link">Read → <i class="fas fa-arrow-right"></i></a>
+                <div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+                    {% if post.series_author %}
+                    <p class="blog-series-author">
+                        <i class="fas fa-user-edit"></i> {{ post.series_author }}
+                    </p>
+                    {% endif %}
+                    <a href="{{ post.url }}" class="blog-read-link">Read → <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         {% endfor %}
