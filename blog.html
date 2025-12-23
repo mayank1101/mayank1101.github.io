@@ -29,10 +29,15 @@ title: Blog
 <div class="container section fade-in">
   <h1><i class="fas fa-pen-fancy"></i> Tensor Tales - NLP Mastery Series</h1>
 
-  <div class="cards">
+  <div class="blog-list">
     {% for post in site.posts %}
-      <div class="card scroll-animate blog-card" {% if post.series_image %}style="background-image: url('{{ post.series_image }}');"{% endif %}>
-        <div class="blog-card-content">
+      <div class="card scroll-animate blog-card-list">
+        {% if post.series_image %}
+        <div class="blog-card-image-list">
+          <img src="{{ post.series_image }}" alt="{{ post.title }}">
+        </div>
+        {% endif %}
+        <div class="blog-card-content-list">
           {% if post.series %}
           <div class="blog-series-badge">
             <i class="fas fa-book-reader"></i> {{ post.series }}
@@ -43,14 +48,14 @@ title: Blog
             <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
           </p>
           {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+          <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
           {% endif %}
           {% if post.series_author %}
           <p class="blog-series-author">
             <i class="fas fa-user-edit"></i> {{ post.series_author }}
           </p>
           {% endif %}
-          <a href="{{ post.url }}" class="blog-read-link">Read → <i class="fas fa-arrow-right"></i></a>
+          <a href="{{ post.url }}" class="blog-read-link">Read Article → <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     {% endfor %}

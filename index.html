@@ -245,15 +245,15 @@
         bridging theory and practice for engineers and researchers.
     </p>
 
-    <div class="cards">
+    <div class="blog-list">
         {% for post in site.posts limit:4 %}
-        <div class="card scroll-animate blog-card">
+        <div class="card scroll-animate blog-card-list">
             {% if post.series_image %}
-            <div class="blog-card-image">
+            <div class="blog-card-image-list">
                 <img src="{{ post.series_image }}" alt="{{ post.title }}">
             </div>
             {% endif %}
-            <div class="blog-card-content">
+            <div class="blog-card-content-list">
                 {% if post.series %}
                 <div class="blog-series-badge">
                     <i class="fas fa-book-reader"></i> {{ post.series }}
