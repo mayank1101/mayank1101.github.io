@@ -459,8 +459,6 @@ class NeuralNetwork:
         A1 = self.cache['A1']
         A2 = self.cache['A2']
 
-        # ==================== BACKWARD PASS ====================
-
         # Output layer gradients
         # For binary cross-entropy with sigmoid, the gradient simplifies to:
         dZ2 = A2 - Y  # Shape: (m, 1)
@@ -480,10 +478,8 @@ class NeuralNetwork:
         dW1 = (1/m) * (X.T @ dZ1)  # Shape: (n_input, n_hidden)
         db1 = (1/m) * np.sum(dZ1, axis=0, keepdims=True)  # Shape: (1, n_hidden)
 
-        # ==================== GRADIENT DESCENT ====================
-
         # Update parameters
-        self.W2 -= self.lr * dW2
+        self.W2 -= self.lr * dW2  
         self.b2 -= self.lr * db2
         self.W1 -= self.lr * dW1
         self.b1 -= self.lr * db1
