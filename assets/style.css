@@ -974,6 +974,58 @@ p {
   color: var(--accent-cyan);
 }
 
+/* ===== About Page Styles ===== */
+.about-story {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-story p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.about-story strong {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.skill-tags span {
+  background: var(--card-hover);
+  border: 1px solid var(--border-bright);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.skill-tags span:hover {
+  background: var(--accent-cyan);
+  color: var(--bg);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
 /* ===== Blog List Layout (blog.html) ===== */
 .blog-list {
   display: flex;
@@ -1580,6 +1632,24 @@ html, body {
     font-size: 0.9rem;
   }
 
+  /* About page - Mobile */
+  .about-story p {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-tags {
+    gap: 0.6rem;
+  }
+
+  .skill-tags span {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
   /* Blog list - Stack on mobile */
   .blog-card-list {
     flex-direction: column;
@@ -1718,6 +1788,16 @@ html, body {
 
   .blog-read-link {
     font-size: 0.85rem;
+  }
+
+  /* About page - Smaller on tiny phones */
+  .about-story p {
+    font-size: 0.95rem;
+  }
+
+  .skill-tags span {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
   }
 
   /* Blog list - Smaller on tiny phones */
