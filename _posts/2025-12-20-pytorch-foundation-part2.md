@@ -793,4 +793,4 @@ history = train_model(model, train_loader, test_loader, num_epochs=100)
 
 ## Jupyter Notebook 
 
-For hands-on practice, check out the companion notebooks - [Part2: PyTorch Foundation](https://github.com/mayank1101/mayank1101.github.io/blob/main/notebooks/2025-12-20-pytorch-foundation-part2/pytorch-foundation-tutorial-part2.ipynb)
+For hands-on practice, check out the companion notebooks - [Part2: PyTorch Foundation](https://colab.research.google.com/drive/1CTMO_KYfnfIMpkzNcRVDvs455HM8pX50?usp=sharing)
