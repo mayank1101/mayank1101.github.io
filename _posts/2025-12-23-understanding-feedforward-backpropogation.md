@@ -37,10 +37,10 @@ This cycle continues until the network becomes proficient at the task, much like
 
 Understanding feed-forward and backpropagation is crucial because:
 
-- **Foundation of Deep Learning**: Every neural network—from simple ones to GPT-4—uses these mechanisms
-- **Debugging Intuition**: Knowing how networks learn helps you diagnose and fix training problems
-- **Architecture Design**: Understanding gradients helps you design better neural architectures
-- **Research & Innovation**: Many breakthroughs in AI come from improving these fundamental processes
+- **Foundation of Deep Learning**: Every neural network—from simple ones to GPT-4—uses these mechanisms.
+- **Debugging Intuition**: Knowing how networks learn helps you diagnose and fix training problems.
+- **Architecture Design**: Understanding gradients helps you design better neural architectures.
+- **Research & Innovation**: Many breakthroughs in AI come from improving these fundamental processes.
 
 ## Feed-Forward Pass: Making Predictions
 
@@ -85,17 +85,18 @@ input_data = [0.5, 0.2, 0.8]
 
 #### Step 2: First Linear Transformation
 
-The input is transformed using weights and biases:
+The input is first transformed using weights and biases:
 
 $$z^{[1]} = W^{[1]} \cdot x + b^{[1]}$$
 
 Where:
+
 - $W^{[1]}$ is the weight matrix connecting input to hidden layer
 - $x$ is the input vector
 - $b^{[1]}$ is the bias vector
 - $z^{[1]}$ is the pre-activation output
 
-**What's happening here?** Each neuron in the hidden layer computes a weighted sum of all input features. The weights determine how much each input contributes to each hidden neuron.
+**What's happening here?** Each neuron in the hidden layer computes a weighted sum of all input features. The weights determine how much each input contributes to each hidden neuron. The biases add a constant offset to each hidden neuron.
 
 ```python
 # If input has 3 features and hidden layer has 4 neurons:
@@ -112,16 +113,11 @@ $$a^{[1]} = g(z^{[1]})$$
 
 Common activation functions:
 
-- **ReLU** (Rectified Linear Unit): $f(x) = \max(0, x)$
+- **ReLU**: $f(x) = \max(0, x)$
 - **Sigmoid**: $f(x) = \frac{1}{1 + e^{-x}}$
 - **Tanh**: $f(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
 
 **Why activation functions?** Without them, the network would just be a series of linear transformations, no matter how deep. Activation functions introduce non-linearity, allowing the network to learn complex patterns.
-
-```python
-# ReLU activation
-a1 = np.maximum(0, z1)  # Sets all negative values to 0
-```
 
 #### Step 4: Subsequent Layers
 
@@ -148,7 +144,7 @@ prediction = 0  # Predicted class
 
 ### The Feed-Forward Formula (Complete)
 
-For a 3-layer network (input → hidden → output):
+Now let's take an example of a 3-layer network. For a 3-layer network (input → hidden → output):
 
 $$
 \begin{align}
@@ -161,7 +157,7 @@ $$
 
 ### Intuitive Understanding
 
-Think of each layer as asking increasingly sophisticated questions:
+You can think of each layer as asking increasingly sophisticated questions:
 
 - **Input Layer**: "What are the raw features?" (pixel values, word embeddings, etc.)
 - **Hidden Layers**: "What patterns exist?" (edges, shapes, concepts)
@@ -173,13 +169,13 @@ Each neuron is like a feature detector that becomes activated when it sees certa
 
 ### The Learning Problem
 
-After the feed-forward pass, we have a prediction. But how do we improve the network's performance? This is where backpropagation (short for "backward propagation of errors") comes in.
+Once the feed-forward pass is complete, we have a prediction. But how do we improve the network's performance? This is where backpropagation (short for "backward propagation of errors") comes in.
 
-**The Goal**: Adjust every weight and bias in the network to minimize the difference between predictions and actual values.
+**The Goal**: To adjust every weight and bias in the network so that we can minimize the difference between predictions and actual values.
 
 ### Loss Functions: Measuring Error
 
-Before we can improve, we need to measure how wrong we are. A loss function quantifies the error:
+Before we can improve, we need to measure how wrong we are, this is where loss function comes in. A loss function quantifies the error:
 
 #### Mean Squared Error (MSE) - For Regression
 
