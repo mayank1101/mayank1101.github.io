@@ -10,7 +10,7 @@ excerpt: "Master PyTorch fundamentals—tensors, autograd, and gradient descent.
 
 ## Introduction: Why PyTorch?
 
-If you work with modern deep learning—especially NLP, vision, or generative AI—you will almost certainly encounter **PyTorch**.
+If you work with modern deep learning, especially NLP, vision, or generative AI, you will almost certainly encounter **PyTorch**.
 
 Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
 
