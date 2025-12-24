@@ -12,17 +12,12 @@ excerpt: "Build production-ready neural networks using torch.nn, modern optimize
 
 ## Introduction
 
-In **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important—it showed *how* learning really works under the hood.
-
-But no one builds real-world deep learning systems that way.
-
-Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain.
-
-This is where PyTorch’s **high-level abstractions** come in.
+In **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important, it showed *how* learning really works under the hood. But no one builds real-world deep learning systems that way. Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain. This is where PyTorch’s **high-level abstractions** come in.
 
 In this article, we move from *learning mechanics* to *engineering practice*.
 
 You’ll learn how PyTorch helps you:
+
 - Build complex models cleanly using `torch.nn`
 - Train them efficiently with `torch.optim`
 - Feed data at scale using `Dataset` and `DataLoader`
@@ -38,7 +33,7 @@ By the end, you’ll train a complete CNN for image classification using industr
 
 Every neural network in PyTorch inherits from `nn.Module`.
 
-This base class is not just a formality—it solves several hard problems for you:
+This base class is not just a formality, it solves several hard problems for you:
 
 - Automatically tracks learnable parameters
 - Allows clean composition of layers and submodules
@@ -73,7 +68,7 @@ x = torch.randn(5, 10)
 y = model(x)
 
 print(y.shape)  # torch.Size([5, 1])
-````
+```
 
 **Key ideas to internalize:**
 
@@ -124,9 +119,7 @@ y = conv(x)
 print(y.shape)  # [8, 16, 32, 32]
 ```
 
-Convolutions extract **local spatial patterns**—edges, textures, shapes.
-
-The padding here preserves spatial size, which simplifies model design.
+Convolutions extract **local spatial patterns** such as edges, textures, shapes. The padding here preserves spatial size, which simplifies model design.
 
 ---
 
@@ -162,7 +155,7 @@ bn = nn.BatchNorm2d(16)
 * Makes training less sensitive to initialization
 * Improves convergence speed
 
-⚠️ **Important:** BatchNorm behaves differently during training and evaluation.
+**Important:** BatchNorm behaves differently during training and evaluation.
 
 ```python
 model.train()
@@ -326,7 +319,7 @@ loader = DataLoader(
 )
 ```
 
-Key settings:
+**Key settings:**
 
 * `shuffle=True` for training
 * `num_workers` > 0 for speed
