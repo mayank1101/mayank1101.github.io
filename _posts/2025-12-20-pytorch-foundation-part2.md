@@ -1,5 +1,3 @@
-Now refine/improve this article wherever you believe necessary-
-
 ---
 layout: post
 title: "Part 2: Deep Learning with PyTorch"

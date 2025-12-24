@@ -1,5 +1,3 @@
-now refine/improve this article - 
-
 ---
 layout: post
 title: "Understanding Feed-Forward and Backpropagation: The Heart of Neural Networks"
