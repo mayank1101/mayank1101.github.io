@@ -28,8 +28,8 @@ If you understand these two ideas deeply, *everything else in neural networks be
 3. [Backpropagation: Learning from Mistakes](#backpropagation-learning-from-mistakes)
 4. [The Mathematics Behind Backpropagation](#the-mathematics-behind-backpropagation)
 5. [Building a Neural Network from Scratch](#building-a-neural-network-from-scratch)
-6. [Advanced Concepts and Best Practices](#advanced-concepts-and-best-practices)
-7. [Conclusion and What's Next](#conclusion-and-whats-next)
+6. [Conclusion](#conclusion)
+7. [Jupyter Notebook](#jupyter-notebook)
 
 ## Introduction: How Neural Networks Learn
 
