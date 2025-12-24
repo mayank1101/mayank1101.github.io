@@ -12,9 +12,7 @@ excerpt: "Master PyTorch fundamentals—tensors, autograd, and gradient descent.
 
 If you work with modern deep learning, especially NLP, vision, or generative AI, you will almost certainly encounter **PyTorch**.
 
-Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
-
-PyTorch succeeds because it feels natural to humans.
+Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident. PyTorch succeeds because it feels natural to humans.
 
 You write normal Python code.  
 You run it line by line.  
@@ -26,9 +24,7 @@ That design choice shapes everything we’ll learn in this article.
 
 ## The Dynamic Graph Advantage
 
-PyTorch uses **dynamic computation graphs**, often described as *define-by-run*.
-
-This means the computation graph is built **as your code runs**, not ahead of time.
+PyTorch uses **dynamic computation graphs**, often described as *define-by-run*. This means the computation graph is built **as your code runs**, not ahead of time.
 
 Why does this matter?
 
@@ -62,11 +58,7 @@ With that context, let’s start from the absolute foundation.
 
 ### What is a Tensor?
 
-At its core, a **tensor** is a multi-dimensional array.
-
-If you’ve used NumPy arrays, you already understand the idea.
-
-Think of tensors as containers for numbers, arranged in different dimensions:
+At its core, a **tensor** is a multi-dimensional array. If you’ve used NumPy arrays, you already understand the idea. Think of tensors as containers for numbers, arranged in different dimensions:
 
 - **Scalar (Rank 0)** – a single number  
 - **Vector (Rank 1)** – a list of numbers  
@@ -108,7 +100,7 @@ y = torch.zeros_like(x)
 
 # Linearly spaced values
 linear = torch.linspace(0, 10, steps=5)
-````
+```
 
 These simple creation patterns appear everywhere in real models.
 
@@ -135,7 +127,7 @@ x.is_contiguous()
 * `int64` → indices, token IDs
 * `bool` → masks
 
-Understanding dtype and device early will save you countless bugs later.
+Understanding `dtype` and device early will save you countless bugs later.
 
 ---
 
@@ -160,7 +152,7 @@ In-place operations end with `_`:
 a.add_(1)
 ```
 
-Use them carefully—they modify memory directly.
+Use them carefully as they modify memory directly.
 
 ---
 
@@ -173,9 +165,7 @@ B = torch.randn(4, 2)
 C = A @ B
 ```
 
-Matrix multiplication is the **single most important operation** in deep learning.
-
-Batch operations matter even more:
+Matrix multiplication is the **single most important operation** in deep learning. `Batch` operations matter even more:
 
 ```python
 batch_A = torch.randn(10, 3, 4)
@@ -198,9 +188,7 @@ b = torch.randn(4)
 a + b
 ```
 
-This is convenient—but it can silently hide bugs.
-
-Always verify shapes when debugging unexpected results.
+This is convenient—but it can silently hide bugs. Always verify shapes when debugging unexpected results.
 
 ---
 
@@ -256,9 +244,7 @@ All tensors involved in an operation **must live on the same device**.
 
 ## 2. Autograd: How PyTorch Learns
 
-Autograd is PyTorch’s automatic differentiation engine.
-
-It tracks operations and computes gradients for you.
+Autograd is PyTorch’s automatic differentiation engine. It tracks operations and computes gradients for you.
 
 ### The Computational Graph
 
@@ -285,9 +271,7 @@ PyTorch applies the chain rule backward through that graph.
 x.grad.zero_()
 ```
 
-Gradients **do not reset automatically**.
-
-Forgetting this is one of the most common beginner mistakes.
+Gradients **do not reset automatically**. Forgetting this is one of the most common beginner mistakes.
 
 ---
 
@@ -343,7 +327,7 @@ This pattern underlies *every* deep learning system.
 ## Key Takeaways
 
 * Tensors are the foundation of PyTorch.
-* Devices matter—write portable, device-agnostic code.
+* Devices matter, we write portable, device-agnostic code.
 * Autograd handles differentiation automatically.
 * Gradients accumulate unless cleared.
 * Training is just forward → loss → backward → update.
