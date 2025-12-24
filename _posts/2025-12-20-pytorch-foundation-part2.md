@@ -1,3 +1,5 @@
+Now refine/improve this article wherever you believe necessary-
+
 ---
 layout: post
 title: "Part 2: Deep Learning with PyTorch"
@@ -7,6 +9,8 @@ series_author: "Mayank Sharma"
 series_image: "/assets/images/2025-12-20-pytorch-foundation-part2/pytorch-foundation-part2.png"
 excerpt: "Build production-ready neural networks with torch.nn, advanced optimizers, and efficient data pipelines. Train a complete CNN for image classification following industry best practices."
 ---
+
+<!-- # Part 2: Deep Learning with PyTorch -->
 
 ## Building Production-Ready Neural Networks
 
@@ -30,7 +34,6 @@ By the end of this article, you'll build and train a complete Convolutional Neur
 ### Understanding `nn.Module`
 
 Every neural network in PyTorch inherits from `nn.Module`. This base class provides:
-
 - Automatic parameter tracking
 - Easy model composition (nesting modules)
 - GPU transfer with `.to(device)`
