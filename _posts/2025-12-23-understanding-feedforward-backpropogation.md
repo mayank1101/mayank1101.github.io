@@ -173,9 +173,9 @@ Now let's take an example of a 3-layer network. For a 3-layer network (input →
 
 $$
 \begin{align}
-z^{[1]} &= W^{[1]} x + b^{[1]} \\
+z^{[1]} &= W^{[1]} \cdot x + b^{[1]} \\
 a^{[1]} &= \text{ReLU}(z^{[1]}) \\
-z^{[2]} &= W^{[2]} a^{[1]} + b^{[2]} \\
+z^{[2]} &= W^{[2]} \cdot a^{[1]} + b^{[2]} \\
 \hat{y} &= \text{softmax}(z^{[2]})
 \end{align}
 $$
@@ -785,9 +785,7 @@ W -= learning_rate * dW
 b -= learning_rate * db
 ```
 
-The visualization using `visualize_network_learning` will show how the network learned a non-linear decision boundary to separate the two classes.
-
-## Conclusion and What's Next
+## Conclusion
 
 Congratulations! You've just mastered the fundamental mechanisms that power all neural networks—from the simplest to the most sophisticated AI systems in use today.
 
@@ -801,7 +799,14 @@ Congratulations! You've just mastered the fundamental mechanisms that power all 
 ### The Power of Simplicity
 
 What's remarkable is that these simple principles—matrix multiplication, activation functions, and gradient descent—scale to create systems that can:
+
 - Generate human-like text (GPT-4)
 - Recognize objects in images (CNNs)
 - Translate languages (Transformers)
 - Play complex games (AlphaGo)
+
+## Jupyter Notebook
+
+For hands-on practice, check out the companion notebooks - `coming soon...`
+
+<!-- [Part2: PyTorch Foundation](https://colab.research.google.com/drive/1CTMO_KYfnfIMpkzNcRVDvs455HM8pX50?usp=sharing) -->
