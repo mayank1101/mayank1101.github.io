@@ -10,7 +10,7 @@ excerpt: "Master PyTorch fundamentals - tensors, autograd, and gradient descent.
 
 ## Introduction: Why PyTorch?
 
-If you work with modern deep learning—especially NLP, vision, or generative AI—you will almost certainly encounter **PyTorch**. Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
+If you work with modern deep learning, especially NLP, vision, or generative AI, you will almost certainly encounter **PyTorch**. Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
 
 PyTorch succeeds because it feels natural to humans.
 
@@ -22,33 +22,31 @@ That design choice shapes everything we’ll learn in this article.
 
 ## The Dynamic Graph Advantage
 
-PyTorch uses **dynamic computation graphs**, often described as *define-by-run*.
-
-This means the computation graph is built **as your code runs**, not ahead of time.
+PyTorch uses **dynamic computation graphs**, often described as *define-by-run*. This means the computation graph is built **as your code runs**, not ahead of time.
 
 Why does this matter?
 
-- **Intuitive** – You write standard Python. No sessions. No placeholders.
-- **Debuggable** – `print()`, `pdb`, stack traces all work normally.
-- **Flexible** – You can change control flow, loops, and model structure on the fly.
+- **Intuitive** – You write standard Python. No sessions. No placeholders
+- **Debuggable** – `print()`, `pdb`, stack traces all work normally
+- **Flexible** – You can change control flow, loops, and model structure on the fly
 
 This is why PyTorch feels more like programming and less like configuration.
 
 ### Why researchers prefer PyTorch
 
-- The majority of papers at NeurIPS, ICML, and ICLR use PyTorch.
-- It integrates seamlessly with NumPy and the Python ecosystem.
-- Hugging Face Transformers are built on PyTorch.
-- Research ideas move quickly from concept to code.
+- The majority of papers at NeurIPS, ICML, and ICLR use PyTorch
+- It integrates seamlessly with NumPy and the Python ecosystem
+- Hugging Face Transformers are built on PyTorch
+- Research ideas move quickly from concept to code
 
 ### PyTorch in production
 
 PyTorch is no longer “just for research”:
 
-- **PyTorch 2.x** introduces `torch.compile` for major performance gains.
-- **TorchServe** enables scalable model serving.
-- **ONNX export** allows deployment across platforms.
-- Companies like Meta, Microsoft, and Tesla use PyTorch at scale.
+- **PyTorch 2.x** introduces `torch.compile` for major performance gains
+- **TorchServe** enables scalable model serving
+- **ONNX export** allows deployment across platforms
+- Companies like Meta, Microsoft, and Tesla use PyTorch at scale
 
 With that context, let’s start from the absolute foundation.
 
@@ -114,7 +112,7 @@ print(linear)  # tensor([ 0.0, 2.5, 5.0, 7.5, 10.0])
 
 ### Understanding Tensor Attributes
 
-Every tensor carries metadata that controls how it behaves.
+Every tensor carries `metadata` that controls how it behaves.
 
 ```python
 x = torch.randn(3, 4)
@@ -159,7 +157,7 @@ Common data types
 - `int64` → indices, token IDs
 - `bool` → masks
 
-Understanding dtype and device early will save you countless bugs later.
+Understanding `dtype` and device early will save you countless bugs later.
 
 ### Essential Tensor Operations
 
@@ -295,7 +293,7 @@ print(tensor[indices])  # Rows 0 and 2
 
 ### Device Management: CPU vs. GPU
 
-GPU acceleration is PyTorch's killer feature for deep learning. Understanding device management is crucial.
+GPU acceleration is PyTorch's killer feature for deep learning. Here we will look at how to use GPUs in PyTorch.
 
 #### Checking GPU Availability
 
@@ -394,10 +392,10 @@ if torch.cuda.is_available():
 
 **Key takeaways:**
 
-- Always check `torch.cuda.is_available()` before using GPU.
-- Use device-agnostic patterns for portable code.
-- Operations require tensors on the same device.
-- GPU shines for large-scale operations; overhead hurts small operations.
+- Always check `torch.cuda.is_available()` before using GPU
+- Use device-agnostic patterns for portable code
+- Operations require tensors on the same device
+- GPU shines for large-scale operations; overhead hurts small operations
 
 ---
 
@@ -436,7 +434,7 @@ print(z)  # tensor(15., grad_fn=<AddBackward0>)
 #              z (15.0)
 ```
 
-**grad_fn**: Each tensor resulting from an operation stores its `grad_fn`, a reference to the function that created it. This enables backpropagation.
+So what is the `grad_fn`? It's the function that created the tensor. For example, `z` has `grad_fn=<AddBackward0>` because it was created by an addition operation. This is how PyTorch knows how to compute gradients during backpropagation. Each tensor resulting from an operation stores its `grad_fn`, a reference to the function that created it. This enables backpropagation.
 
 ### Computing Gradients with `.backward()`
 
@@ -455,9 +453,9 @@ print(x.grad)  # tensor(7.) = 2(2) + 3
 
 **How it works:**
 
-1. When you apply `y.backward()`, PyTorch traverses the graph in reverse (topological order).
-2. Applies chain rule at each node.
-3. Accumulates gradients in `.grad` attribute of leaf tensors.
+1. When you apply `y.backward()`, PyTorch traverses the graph in reverse (topological order)
+2. Applies chain rule at each node
+3. Accumulates gradients in `.grad` attribute of leaf tensors
 
 #### Multi-variable Example
 
@@ -495,7 +493,7 @@ print(x.grad)  # tensor([2., 4., 6.]) = 2x evaluated at each element
 
 ### Gradient Accumulation and Zeroing
 
-**CRITICAL**: It's important to note that Gradients **accumulate** by default. You must zero them between iterations.
+**CRITICAL**: It's important to note that Gradients **accumulate** by default. You `must zero` them between iterations.
 
 ```python
 x = torch.tensor(2.0, requires_grad=True)
@@ -519,8 +517,8 @@ print(x.grad)  # tensor(12.) (correct)
 
 **When gradient accumulation is useful:**
 
-- When you are simulating larger batch sizes with limited memory.
-- When you want to accumulate gradients across multiple loss terms.
+- When you are simulating larger batch sizes with limited memory
+- When you want to accumulate gradients across multiple loss terms
 
 ### Detaching from the Graph
 
@@ -541,9 +539,9 @@ z.backward()  # ERROR: z is not part of graph
 
 **Use cases:**
 
-- Implementing certain loss functions.
-- Debugging: isolate problematic computations.
-- Performance: avoid unnecessary gradient computation.
+- Implementing certain loss functions
+- Debugging: isolate problematic computations
+- Performance: avoid unnecessary gradient computation
 
 ### Context Manager: `torch.no_grad()`
 
@@ -567,15 +565,15 @@ with torch.no_grad():
 
 **Benefits:**
 
-- It reduces memory consumption.
-- It speeds up computation (no need to store intermediate values).
-- It is essential for inference.
+- It reduces memory consumption
+- It speeds up computation (no need to store intermediate values)
+- It is essential for inference and evaluation
 
 ---
 
 ## 3. Putting It Together: Gradient Descent from Scratch
 
-Let's implement `linear regression` using only tensors and autograd, without using `torch.nn` yet.
+Now that we have a solid understanding of PyTorch's basic core concepts. Let's implement `linear regression` using only tensors and autograd, without using `torch.nn` yet.
 
 ### Problem Setup
 
