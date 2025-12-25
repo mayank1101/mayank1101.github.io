@@ -1036,6 +1036,222 @@ p {
   color: var(--accent-cyan);
 }
 
+/* ===== Manifesto Styles (Token by Token) ===== */
+.manifesto-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.03), rgba(56, 189, 248, 0.03));
+  border: 1px solid var(--border-bright);
+  border-left: 4px solid var(--accent-purple);
+  border-radius: 16px;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.manifesto-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.manifesto-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-bright);
+  margin: 0.8rem 0;
+  font-weight: 400;
+}
+
+.manifesto-intro strong {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.manifesto-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 1.5rem 0;
+}
+
+.manifesto-text strong {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.manifesto-text em {
+  color: var(--accent-purple);
+  font-style: italic;
+}
+
+.manifesto-highlight {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-bright);
+  font-weight: 600;
+  font-style: italic;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--accent-cyan);
+}
+
+.manifesto-audience,
+.manifesto-topics {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.manifesto-audience h3,
+.manifesto-topics h3 {
+  color: var(--accent-cyan);
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.manifesto-audience h3 i,
+.manifesto-topics h3 i {
+  color: var(--accent-purple);
+}
+
+.manifesto-audience ul,
+.manifesto-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.manifesto-audience li,
+.manifesto-topics li {
+  padding: 0.7rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.manifesto-audience li::before,
+.manifesto-topics li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.manifesto-audience li em,
+.manifesto-topics li em {
+  color: var(--accent-cyan);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.manifesto-closing {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.manifesto-cta {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.manifesto-cta strong {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.manifesto-welcome {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-bright);
+  margin: 2rem 0 0 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Mobile responsive for manifesto */
+@media (max-width: 768px) {
+  .manifesto-container {
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .manifesto-intro {
+    font-size: 1.1rem;
+  }
+
+  .manifesto-text {
+    font-size: 1rem;
+  }
+
+  .manifesto-highlight {
+    font-size: 1.05rem;
+    padding-left: 1rem;
+  }
+
+  .manifesto-audience,
+  .manifesto-topics {
+    padding: 1.5rem;
+  }
+
+  .manifesto-audience h3,
+  .manifesto-topics h3 {
+    font-size: 1.1rem;
+  }
+
+  .manifesto-audience li,
+  .manifesto-topics li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .manifesto-cta {
+    font-size: 1.05rem;
+  }
+
+  .manifesto-welcome {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .manifesto-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .manifesto-intro {
+    font-size: 1.05rem;
+  }
+
+  .manifesto-text {
+    font-size: 0.95rem;
+  }
+
+  .manifesto-audience,
+  .manifesto-topics {
+    padding: 1.2rem;
+  }
+
+  .manifesto-audience li,
+  .manifesto-topics li {
+    font-size: 0.95rem;
+  }
+}
+
 /* ===== Pagination Styles ===== */
 .pagination {
   margin-top: 4rem;

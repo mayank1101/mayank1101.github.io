@@ -143,54 +143,100 @@
                 <h3>Teaching & Knowledge Sharing</h3>
                 <p>
                     Former Teaching Assistant at IIT Jammu. Now sharing AI/ML insights through
-                    <strong>Tensor Tales</strong> — writing about everything from NLP fundamentals
-                    to advanced LLM techniques and real-world GenAI challenges.
+                    <strong>Token by Token</strong> — a technical writing series exploring AI, ML, LLMs,
+                    and real-world generative systems from the inside out.
                 </p>
                 <p class="muted">
-                    <i class="fas fa-check-circle"></i> IIT Jammu TA · Tensor Tales · NLP Mastery Series
+                    <i class="fas fa-check-circle"></i> IIT Jammu TA · Token by Token · AI Fundamentals
                 </p>
             </div>
         </div>
     </div>
 
 <div class="container section scroll-animate">
-    <h2><i class="fas fa-pen-fancy"></i> Tensor Tales</h2>
-    <p class="muted" style="max-width: 900px; margin: 0 auto 1.5rem; text-align: center; font-size: 1.1rem;">
-        I write about AI/ML fundamentals, NLP, LLMs, RAG systems, and real-world GenAI challenges.
-        Currently working on the <span class="hero-highlight">NLP Mastery</span> series —
-        bridging theory and practice for engineers and researchers.
+    <h2><i class="fas fa-pen-fancy"></i> Token by Token</h2>
+    <p class="muted" style="max-width: 900px; margin: 0 auto 1.5rem; text-align: center; font-size: 1.15rem; font-weight: 500;">
+        Understanding AI, ML, LLMs, and Real-World Generative Systems — One Step at a Time
     </p>
 
-    <div class="blog-list">
-        {% for post in site.posts limit:4 %}
-        <div class="card scroll-animate blog-card-list">
-            {% if post.series_image %}
-            <div class="blog-card-image-list">
-                <img src="{{ post.series_image }}" alt="{{ post.title }}">
-            </div>
-            {% endif %}
-            <div class="blog-card-content-list">
-                {% if post.series %}
-                <div class="blog-series-badge">
-                    <i class="fas fa-book-reader"></i> {{ post.series }}
-                </div>
-                {% endif %}
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                {% if post.series_author %}
-                <p class="blog-series-author">
-                    <i class="fas fa-user-edit"></i> {{ post.series_author }}
-                </p>
-                {% endif %}
-                <a href="{{ post.url }}" class="blog-read-link">Read Article → <i class="fas fa-arrow-right"></i></a>
-            </div>
+    <div class="manifesto-container">
+        <div class="manifesto-section">
+            <p class="manifesto-intro">
+                Artificial intelligence doesn't think in moments of magic.
+            </p>
+            <p class="manifesto-intro">
+                It learns, reasons, and generates outcomes <strong>token by token</strong> — through math, data, and carefully engineered systems.
+            </p>
         </div>
-        {% endfor %}
+
+        <p class="manifesto-text">
+            <strong>Token by Token</strong> is a technical writing series dedicated to understanding modern AI from the inside out. From foundational machine learning concepts to large language models and real-world generative AI systems, this series focuses on <em>how intelligence is built</em>, not just how it appears.
+        </p>
+
+        <p class="manifesto-highlight">
+            This is not a collection of surface-level tutorials or trend-driven commentary.
+        </p>
+
+        <p class="manifesto-text">
+            Here, we slow things down.
+        </p>
+
+        <p class="manifesto-text">
+            Complex ideas — neural networks, optimization, transformers, embeddings, attention, training dynamics, inference pipelines, and deployment trade-offs — are broken into clear, intuitive steps. Each article builds on the previous one, helping you form a mental model of how intelligent systems actually work.
+        </p>
+
+        <p class="manifesto-highlight">
+            The goal is clarity, not intimidation.
+        </p>
+
+        <p class="manifesto-text">
+            Mathematics is introduced only when it sharpens understanding. Code is used to reveal behavior, not to overwhelm. Real-world examples anchor theory in practice — including where models fail, where assumptions break, and why production systems are harder than research papers suggest.
+        </p>
+
+        <div class="manifesto-audience">
+            <h3><i class="fas fa-users"></i> Token by Token is written for:</h3>
+            <ul>
+                <li>Curious learners entering AI from diverse backgrounds</li>
+                <li>Engineers strengthening fundamentals in ML, NLP, and LLMs</li>
+                <li>Practitioners building and deploying generative AI systems</li>
+                <li>Anyone who wants to understand <em>why</em> models behave the way they do</li>
+            </ul>
+        </div>
+
+        <div class="manifesto-topics">
+            <h3><i class="fas fa-compass"></i> You'll explore:</h3>
+            <ul>
+                <li>How models learn representations from data</li>
+                <li>What actually happens inside LLMs beyond prompts</li>
+                <li>The engineering trade-offs behind model and system design</li>
+                <li>Real-world challenges in scaling, evaluation, and reliability</li>
+                <li>How research ideas translate into production — and where they don't</li>
+            </ul>
+        </div>
+
+        <div class="manifesto-closing">
+            <p class="manifesto-text">
+                There's no hype here. No shortcuts. No "black-box" thinking.
+            </p>
+            <p class="manifesto-text">
+                Just careful reasoning, solid engineering, and honest explanations —<br/>
+                <strong>built one concept, one decision, one token at a time.</strong>
+            </p>
+        </div>
+
+        <p class="manifesto-cta">
+            If you want to move beyond using AI tools and start understanding the systems beneath them,<br/>
+            <strong>you're in the right place.</strong>
+        </p>
+
+        <p class="manifesto-welcome">
+            Welcome to <span class="hero-highlight">Token by Token</span>.
+        </p>
     </div>
 
-    <div style="text-align: center; margin-top: 2rem;">
+    <div style="text-align: center; margin-top: 3rem;">
         <a href="blog.html" class="cta cta-large">
-            <i class="fas fa-book-open"></i> View All Articles
+            <i class="fas fa-book-open"></i> Start Reading
         </a>
     </div>
 </div>
