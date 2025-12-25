@@ -10,7 +10,7 @@ excerpt: "Learn how neural networks learn through feed-forward and backpropagati
 
 Imagine learning to throw darts at a dartboard. At first, your throws are random. You miss left. Then right. Then too high. But each throw teaches you something. You adjust your aim slightly based on where the dart landed.
 
-That cycle—**try → observe → adjust**—is exactly how neural networks learn.
+That cycle **try → observe → adjust** is exactly how neural networks learn.
 
 In deep learning, this learning happens through two tightly connected processes:
 
@@ -35,7 +35,7 @@ If you understand these two ideas deeply, *everything else in neural networks be
 
 ### The Big Picture
 
-At its core, a neural network is a **function approximator**. It learns a mapping `inputs -> outputs` by adjusting millions—or even billions—of small numbers called **weights** and **biases**.
+At its core, a neural network is a **function approximator**. It learns a mapping `inputs -> outputs` by adjusting millions or even billions of small numbers called **weights** and **biases**.
 
 Learning happens through a repeated loop:
 
@@ -48,13 +48,13 @@ Learning happens through a repeated loop:
 This loop runs thousands or millions of times until predictions become accurate.
 
 This is not magic.  
-It is systematic trial, error, and correction—done efficiently at scale.
+It is systematic trial, error, and correction done efficiently at scale.
 
 ### Why This Matters
 
 Understanding feed-forward and backpropagation is crucial because:
 
-- **Foundation of Deep Learning**: Every neural network—from simple ones to GPT-4—uses these mechanisms
+- **Foundation of Deep Learning**: Every neural network from simple ones to GPT-4 uses these mechanisms
 - **Debugging Intuition**: Knowing how networks learn helps you diagnose and fix training problems
 - **Architecture Design**: Understanding gradients helps you design better neural architectures
 - **Research & Innovation**: Many breakthroughs in AI come from improving these fundamental processes
@@ -100,7 +100,7 @@ Each arrow represents a matrix multiplication plus a bias.
 
 #### Step 1: Input Layer
 
-The journey begins with your input data. For a network classifying handwritten digits, this might be a 28×28 pixel image flattened into a 784-dimensional vector.
+The journey begins with your input data. For a network classifying handwritten digits, this might be a 28×28 pixel image flattened into a 784 dimensional vector.
 
 ```python
 # Example input: a simple 3-dimensional vector
@@ -169,7 +169,7 @@ prediction = 0  # Predicted class
 
 ### The Feed-Forward Formula (Complete)
 
-Now let's take an example of a 3-layer network. For a 3-layer network (input → hidden → output):
+Now let's take an example of a 3-layer network. For a 3-layer network `(input → hidden → output)`:
 
 $$
 \begin{align}
@@ -194,9 +194,7 @@ Each neuron is like a feature detector that becomes activated when it sees certa
 
 ### The Learning Problem
 
-Once the feed-forward pass is complete, we have a prediction. But how do we improve the network's performance? This is where backpropagation (short for "backward propagation of errors") comes in.
-
-**The Goal** is to adjust every weight and bias in the network so that we can minimize the difference between predictions and actual values.
+Once the feed-forward pass is complete, we have a prediction. But how do we improve the network's performance? This is where backpropagation (short for "backward propagation of errors") comes in. **The Goal** is to adjust every weight and bias in the network so that we can minimize the difference between predictions and actual values.
 
 ### Loss Functions: Measuring Error
 
@@ -297,7 +295,7 @@ The gradient "flows back" through the weights:
 
 $$\frac{\partial L}{\partial a^{[1]}} = (W^{[2]})^T \cdot \frac{\partial L}{\partial z^{[2]}}$$
 
-This is where we see the chain rule in action—the gradient from the output layer is propagated backward through the weight matrix.
+This is where we see the chain rule in action, wherethe gradient from the output layer is propagated backward through the weight matrix.
 
 #### Step 4: Gradient Through ReLU
 
@@ -798,7 +796,7 @@ Congratulations! You've just mastered the fundamental mechanisms that power all 
 
 ### The Power of Simplicity
 
-What's remarkable is that these simple principles—matrix multiplication, activation functions, and gradient descent—scale to create systems that can:
+What's remarkable is that these simple principles, weight initialization, matrix multiplication, activation functions, and gradient descent can scale to create systems that can:
 
 - Generate human-like text (GPT-4)
 - Recognize objects in images (CNNs)
