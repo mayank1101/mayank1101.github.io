@@ -12,7 +12,7 @@ excerpt: "Build production-ready neural networks with torch.nn, advanced optimiz
 
 ## Introduction
 
-In **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important—it showed *how* learning really works under the hood. But no one builds real-world deep learning systems that way. Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain. This is where PyTorch’s **high-level abstractions** come in.
+In **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important, it showed *how* learning really works under the hood. But no one builds real-world deep learning systems that way. Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain. This is where PyTorch’s **high-level abstractions** come in.
 
 In this article, we move from *learning mechanics* to *engineering practice*.
 
@@ -31,7 +31,7 @@ By the end, you’ll train a complete CNN for image classification using industr
 
 ### Understanding `nn.Module`
 
-This base class is not just a formality—it solves several hard problems for you::
+This base class is not just a formality, it solves several hard problems for you::
 
 - Automatically tracks learnable parameters
 - Allows clean composition of layers and submodules
