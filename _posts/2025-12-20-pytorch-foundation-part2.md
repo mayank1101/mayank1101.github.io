@@ -12,7 +12,7 @@ excerpt: "Build production-ready neural networks with torch.nn, advanced optimiz
 
 ## Introduction
 
-In **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important, it showed *how* learning really works under the hood. But no one builds real-world deep learning systems that way. Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain. This is where PyTorch’s **high-level abstractions** come in.
+Continuing in our Deep Learning series, in **Part 1**, we built learning systems from scratch using tensors and autograd. That exercise was important, it showed *how* learning really works under the hood. But no one builds real-world deep learning systems that way. Imagine manually writing every layer, activation function, optimizer, and training loop detail for a 100-layer ResNet or a large transformer. It would be slow, error-prone, and impossible to maintain. This is where PyTorch’s **high-level abstractions** come in.
 
 In this article, we move from *learning mechanics* to *engineering practice*.
 
@@ -799,6 +799,21 @@ scheduler = optim.lr_scheduler.OneCycleLR(
 # Train
 history = train_model(model, train_loader, test_loader, num_epochs=100)
 ```
+
+---
+
+## Conclusion
+
+Now that you've built a complete PyTorch pipeline, let's recap the key concepts you've learned:
+
+- **`nn.Module`** is the foundation of all PyTorch models
+- **`DataLoader`** provides efficient batching and multi-threaded data loading
+- **Optimizers** (`Adam`, `AdamW`) handle parameter updates
+- **Training loops** follow a standard pattern: zero grads → forward → backward → step
+- **Always call** `model.train()` and `model.eval()` appropriately
+- **Use `torch.no_grad()`** during inference
+- **Device management** ensures code works on both CPU and GPU
+- **Checkpointing** saves best models during training
 
 ---
 

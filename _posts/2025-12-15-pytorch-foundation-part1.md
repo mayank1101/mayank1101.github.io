@@ -10,7 +10,7 @@ excerpt: "Master PyTorch fundamentals - tensors, autograd, and gradient descent.
 
 ## Introduction: Why PyTorch?
 
-If you work with modern deep learning, especially NLP, vision, or generative AI, you will almost certainly encounter **PyTorch**. Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
+If you ever decided to work with modern deep learning, especially NLP, vision, or generative AI, you will almost certainly encounter **PyTorch**. Over the past few years, PyTorch has become the *default* framework for AI research and is rapidly becoming just as important in production systems. But this dominance didn’t happen by accident.
 
 PyTorch succeeds because it feels natural to humans.
 
@@ -660,7 +660,7 @@ plt.savefig('linear_regression_results.png')
 print("Visualization saved to 'linear_regression_results.png'")
 ```
 
-### Key Insights
+### Important Points to Remember
 
 1. **Forward Pass**: Compute predictions using current parameters.
 2. **Loss Calculation**: Quantify prediction error.
@@ -672,9 +672,9 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 ---
 
-## 4. Key Takeaways
+### Conclusion
 
-### What We've Learned So Far
+By implementing linear regression from scratch, you've learned:
 
 - **Tensors** are the fundamental data structure—understand creation, operations, and attributes.
 - **Device management** is crucial—write device-agnostic code for portability.

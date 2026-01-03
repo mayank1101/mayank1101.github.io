@@ -8,7 +8,7 @@ series_image: "/assets/images/2025-12-23-understanding-feedforward-backpropogati
 excerpt: "Learn how neural networks learn through feed-forward and backpropagation from scratch to truly understand these concepts."
 ---
 
-Imagine learning to throw darts at a dartboard. At first, your throws are random. You miss left. Then right. Then too high. But each throw teaches you something. You adjust your aim slightly based on where the dart landed.
+Continuing from the previous article in our Deep Learning Series, let's dive deeper into the heart of neural networks. Imagine learning to throw darts at a dartboard. At first, your throws are random. You miss left. Then right. Then too high. But each throw teaches you something. You adjust your aim slightly based on where the dart landed.
 
 That cycle **try → observe → adjust** is exactly how neural networks learn.
 
@@ -785,20 +785,16 @@ b -= learning_rate * db
 
 ## Conclusion
 
-Congratulations! You've just mastered the fundamental mechanisms that power all neural networks—from the simplest to the most sophisticated AI systems in use today.
-
-### Key Takeaways
+So, now that you've mastered the fundamental mechanisms that power all neural networks—from the simplest to the most sophisticated AI systems in use today. You've seen how:
 
 - **Feed-forward pass** transforms input through layers to produce predictions
 - **Backpropagation** efficiently computes gradients using the chain rule
 - **Gradient descent** uses these gradients to incrementally improve parameters
 - **The training loop** repeats forward → compute loss → backward → update thousands of times
 
-### The Power of Simplicity
+What's remarkable is that these simple principles of weight initialization, matrix multiplication, activation functions, and gradient descent can scale to create systems that can:
 
-What's remarkable is that these simple principles, weight initialization, matrix multiplication, activation functions, and gradient descent can scale to create systems that can:
-
-- Generate human-like text (GPT-4)
+- Generate human-like text (GPT-5)
 - Recognize objects in images (CNNs)
 - Translate languages (Transformers)
 - Play complex games (AlphaGo)
