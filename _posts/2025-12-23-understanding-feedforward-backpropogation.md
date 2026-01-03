@@ -8,9 +8,7 @@ series_image: "/assets/images/2025-12-23-understanding-feedforward-backpropogati
 excerpt: "Learn how neural networks learn through feed-forward and backpropagation from scratch to truly understand these concepts."
 ---
 
-Continuing from the previous article in our Deep Learning Series, let's dive deeper into the heart of neural networks. Imagine learning to throw darts at a dartboard. At first, your throws are random. You miss left. Then right. Then too high. But each throw teaches you something. You adjust your aim slightly based on where the dart landed.
-
-That cycle **try → observe → adjust** is exactly how neural networks learn.
+Continuing in our Deep Learning Series, let's dive deeper into the heart of neural networks. Imagine you are learning to throw darts at a dartboard. At first, your throws are random. You miss left, then right, then too high, then too low. But each throw teaches you something. You adjust your aim slightly based on where the dart landed. That cycle **try → observe → adjust** is exactly how neural networks learn.
 
 In deep learning, this learning happens through two tightly connected processes:
 
@@ -35,22 +33,19 @@ If you understand these two ideas deeply, *everything else in neural networks be
 
 ### The Big Picture
 
-At its core, a neural network is a **function approximator**. It learns a mapping `inputs -> outputs` by adjusting millions or even billions of small numbers called **weights** and **biases**.
+At it's core, a neural network is simply a **function approximator**. It learns a mapping `inputs -> outputs` by adjusting millions or even billions of small numbers called **weights** and **biases**.
 
-Learning happens through a repeated loop:
+In neural networks, learning happens through a repeated loop:
 
 1. **Feed-forward pass**  
-   Use current parameters to make a prediction.
+   In each iteration, in a feed-forward pass, we use current parameters to make a prediction.
 
 2. **Backpropagation**  
-   Measure the error and adjust parameters to reduce it.
+   In each iteration, in backpropagation, we measure the error and adjust parameters to reduce it.
 
-This loop runs thousands or millions of times until predictions become accurate.
+This loop runs thousands or millions of times until predictions become accurate. This is not magic. It is systematic trial, error, and correction done efficiently at scale.
 
-This is not magic.  
-It is systematic trial, error, and correction done efficiently at scale.
-
-### Why This Matters
+### Why This Matters ?
 
 Understanding feed-forward and backpropagation is crucial because:
 
@@ -67,11 +62,7 @@ The feed-forward pass is the process of taking input data and passing it through
 
 Think of it like an assembly line: raw input enters, transformations happen layer by layer, and a final product comes out.
 
----
-
-### Anatomy of a Feed-Forward Network
-
-Let's break down a simple neural network with one hidden layer:
+Now, let's break down a simple neural network with one hidden layer:
 
 ```
 Input Layer (3 neurons)
@@ -95,12 +86,11 @@ Each arrow represents a matrix multiplication plus a bias.
 
 ---
 
-
-### Step-by-Step Feed-Forward Process
+### Let's Understand the Step-by-Step Process: Feed-Forward Process
 
 #### Step 1: Input Layer
 
-The journey begins with your input data. For a network classifying handwritten digits, this might be a 28×28 pixel image flattened into a 784 dimensional vector.
+The process begins with your input data. For a network classifying handwritten digits, this might be a 28×28 pixel image flattened into a 784 dimensional vector.
 
 ```python
 # Example input: a simple 3-dimensional vector
@@ -134,11 +124,11 @@ This answers:
 
 #### Step 3: Apply Activation Function
 
-Activation functions introduce non-linearity. Without them, stacking layers would still behave like a single linear model.
+So, activation functions introduce non-linearity. Without them, stacking layers would still behave like a single linear model.
 
 $$a^{[1]} = g(z^{[1]})$$
 
-Common activation functions:
+Let's look at some common activation functions:
 
 - **ReLU**: $f(x) = \max(0, x)$
 - **Sigmoid**: $f(x) = \frac{1}{1 + e^{-x}}$
@@ -180,9 +170,7 @@ z^{[2]} &= W^{[2]} \cdot a^{[1]} + b^{[2]} \\
 \end{align}
 $$
 
-### Intuitive Understanding
-
-You can think of each layer as asking increasingly sophisticated questions:
+Intuitively, you can think of each layer as asking increasingly sophisticated questions:
 
 - **Input Layer**: "What are the raw features?" (pixel values, word embeddings, etc.)
 - **Hidden Layers**: "What patterns exist?" (edges, shapes, concepts)
@@ -217,7 +205,7 @@ Where:
 
 **Key Point**: **Lower loss = Better performance**
 
-### The Intuition Behind Backpropagation
+### What's the Intuition Behind Backpropagation ?
 
 Imagine you're hiking in foggy mountains and want to reach the valley (minimum loss). You can't see far, but you can feel the slope beneath your feet. Backpropagation is like feeling which direction is downhill and taking a step in that direction.
 
