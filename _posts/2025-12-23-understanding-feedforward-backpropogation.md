@@ -321,8 +321,10 @@ $$\frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}$$
 7. $\frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}$
 
 **Parameter Update** (gradient descent):
+
 $$W^{[l]} := W^{[l]} - \alpha \cdot \frac{\partial L}{\partial W^{[l]}}$$
 $$b^{[l]} := b^{[l]} - \alpha \cdot \frac{\partial L}{\partial b^{[l]}}$$
+
 
 Where $\alpha$ is the learning rate.
 
