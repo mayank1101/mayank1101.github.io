@@ -236,6 +236,7 @@ Let's work through backpropagation for a simple 2-layer network:
 - Loss: Cross-entropy
 
 **Forward Pass Summary**:
+
 $$
 \begin{align}
 z^{[1]} &= W^{[1]} \cdot x + b^{[1]} \quad &\text{(Hidden pre-activation)} \\
@@ -304,26 +305,26 @@ $$\frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}$$
 
 **Forward Pass** (compute and cache):
 
-1. $z^{[1]} = W^{[1]} \cdot x + b^{[1]}$
-2. $a^{[1]} = \text{ReLU}(z^{[1]})$
-3. $z^{[2]} = W^{[2]} \cdot a^{[1]} + b^{[2]}$
-4. $\hat{y} = \text{softmax}(z^{[2]})$
-5. $L = -\sum y \log(\hat{y})$
+- $z^{[1]} = W^{[1]} \cdot x + b^{[1]}$
+- $a^{[1]} = \text{ReLU}(z^{[1]})$
+- $z^{[2]} = W^{[2]} \cdot a^{[1]} + b^{[2]}$
+- $\hat{y} = \text{softmax}(z^{[2]})$
+- $L = -\sum y \log(\hat{y})$
 
 **Backward Pass** (compute gradients):
 
-1. $\frac{\partial L}{\partial z^{[2]}} = \hat{y} - y$
-2. $\frac{\partial L}{\partial W^{[2]}} = \frac{\partial L}{\partial z^{[2]}} \cdot (a^{[1]})^T$
-3. $\frac{\partial L}{\partial b^{[2]}} = \frac{\partial L}{\partial z^{[2]}}$
-4. $\frac{\partial L}{\partial a^{[1]}} = (W^{[2]})^T \cdot \frac{\partial L}{\partial z^{[2]}}$
-5. $\frac{\partial L}{\partial z^{[1]}} = \frac{\partial L}{\partial a^{[1]}} \odot (z^{[1]} > 0)$
-6. $\frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[1]}} \cdot x^T$
-7. $\frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}$
+- $\frac{\partial L}{\partial z^{[2]}} = \hat{y} - y$
+- $\frac{\partial L}{\partial W^{[2]}} = \frac{\partial L}{\partial z^{[2]}} \cdot (a^{[1]})^T$
+- $\frac{\partial L}{\partial b^{[2]}} = \frac{\partial L}{\partial z^{[2]}}$
+- $\frac{\partial L}{\partial a^{[1]}} = (W^{[2]})^T \cdot \frac{\partial L}{\partial z^{[2]}}$
+- $\frac{\partial L}{\partial z^{[1]}} = \frac{\partial L}{\partial a^{[1]}} \odot (z^{[1]} > 0)$
+- $\frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[1]}} \cdot x^T$
+- $\frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}$
 
 **Parameter Update** (gradient descent):
 
-$$W^{[l]} := W^{[l]} - \alpha \cdot \frac{\partial L}{\partial W^{[l]}}$$
-$$b^{[l]} := b^{[l]} - \alpha \cdot \frac{\partial L}{\partial b^{[l]}}$$
+- $W^{[l]} := W^{[l]} - \alpha \cdot \frac{\partial L}{\partial W^{[l]}}$
+- $b^{[l]} := b^{[l]} - \alpha \cdot \frac{\partial L}{\partial b^{[l]}}$
 
 
 Where $\alpha$ is the learning rate.
