@@ -792,6 +792,4 @@ What's remarkable is that these simple principles of weight initialization, matr
 
 ## Jupyter Notebook
 
-For hands-on practice, check out the companion notebooks - `coming soon...`
-
-<!-- [Part2: PyTorch Foundation](https://colab.research.google.com/drive/1CTMO_KYfnfIMpkzNcRVDvs455HM8pX50?usp=sharing) -->
+For hands-on practice, check out the companion notebooks - [Feedforward and Backpropogation From Scratch](https://colab.research.google.com/drive/1rQ45fgE9QgEI8CBxNcILCWOrD6BL20_x?usp=sharing)
