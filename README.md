@@ -12,16 +12,18 @@ Visit: [https://mayank1101.github.io](https://mayank1101.github.io)
 
 ## 👨‍💻 About Me
 
-I'm **Mayank Sharma**, an AI/ML Engineer & Researcher with 5+ years of experience building trustworthy Generative AI systems. My work bridges the gap between cutting-edge research and production-scale AI applications.
+I'm **Mayank Sharma**, a Applied AI & Data Leader with 5+ years of experience building trustworthy Data & AI systems. My work bridges the gap between cutting-edge research and production-scale AI applications.
 
 ### Highlights
 - 🎓 **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
 - 🏆 **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
 - 🏅 **Recognition**: Bravo Award at nference for 9× speedup and 8× model compression
 - 👥 **Impact**: Built systems serving 10,000+ daily users with 99% efficiency gains
-- 🌍 **Global Scale**: Deployed AI across 18+ countries in 9+ languages
+- 🌍 **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
 ### Current Focus
+- Data & Analytics
+- Generative AI
 - Multimodal RAG systems
 - Retrieval evaluation & hallucination reduction
 - Medical NLP & clinical AI
