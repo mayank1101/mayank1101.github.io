@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Color scheme for native browser support */
+  color-scheme: light;
+
   /* Core Backgrounds - Light & Airy (Day Mode - Totoro Forest) */
   --bg: #FFF8F0;
   --bg-secondary: #FFF5E8;
@@ -40,6 +43,9 @@
 
 /* ===== Dark Mode (Night Forest with Fireflies) ===== */
 [data-theme="dark"] {
+  /* Color scheme for native browser support */
+  color-scheme: dark;
+
   /* Night forest backgrounds */
   --bg: #1A2234;
   --bg-secondary: #242F45;
