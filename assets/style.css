@@ -549,7 +549,6 @@ p {
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
 }
 
 .card::before {
@@ -568,7 +567,6 @@ p {
 .card:hover {
   transform: translateY(-12px) rotate(-1deg);
   border-color: var(--accent-pink);
-  box-shadow: var(--shadow-large);
 }
 
 .card:hover::before {
@@ -627,17 +625,15 @@ p {
   background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(255, 255, 255, 1));
 }
 
-.card-cyan:hover {
-  box-shadow: var(--shadow-large);
+/* .card-cyan:hover {
 }
 
-.card-purple:hover {
-  box-shadow: var(--shadow-large);
+.card-purple:hover { 
 }
 
 .card-pink:hover {
   box-shadow: var(--shadow-large);
-}
+} */
 
 /* ===== Resume Section ===== */
 .resume-section {
@@ -647,7 +643,7 @@ p {
   border: 2px solid var(--border-bright);
   border-radius: 20px;
   padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
 }
 
 .resume-card {
@@ -695,7 +691,7 @@ p {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .cta::before {
@@ -718,7 +714,7 @@ p {
 
 .cta:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: var(--shadow-medium);
+  /* box-shadow: var(--shadow-medium); */
 }
 
 .cta-large {
@@ -737,13 +733,13 @@ p {
   border-radius: 25px;
   font-weight: 700;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .cta-secondary:hover {
   background: var(--accent-green);
   color: var(--card);
-  box-shadow: var(--shadow-medium);
+  /* box-shadow: var(--shadow-medium); */
   transform: translateY(-4px) scale(1.05);
 }
 
@@ -847,12 +843,12 @@ p {
   margin-bottom: 3rem;
   backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .series-banner:hover {
   border-left-color: var(--accent-pink);
-  box-shadow: var(--shadow-medium);
+  /* box-shadow: var(--shadow-medium); */
   transform: translateY(-4px) rotate(-1deg);
 }
 
@@ -866,7 +862,7 @@ p {
   object-fit: cover;
   border-radius: 16px;
   border: 3px solid var(--accent-green);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .series-info {
@@ -882,7 +878,7 @@ p {
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .series-label i {
@@ -918,7 +914,7 @@ p {
   border-left: 5px solid var(--accent-pink);
   background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(180, 215, 233, 0.1));
   border-radius: 20px;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -926,7 +922,7 @@ p {
   border-left-color: var(--accent-green);
   background: linear-gradient(135deg, rgba(144, 198, 149, 0.15), rgba(255, 212, 186, 0.15));
   transform: translateY(-8px) rotate(-1deg);
-  box-shadow: var(--shadow-medium);
+  /* box-shadow: var(--shadow-medium); */
 }
 
 /* Blog card image */
@@ -1013,7 +1009,7 @@ p {
   font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
   align-self: flex-start;
 }
 
@@ -1046,7 +1042,7 @@ p {
   border-radius: 20px;
   padding: 3rem;
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .manifesto-section {
@@ -1104,7 +1100,7 @@ p {
   background: rgba(180, 215, 233, 0.1);
   border-radius: 16px;
   border: 2px solid var(--border);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .manifesto-audience h3,
@@ -1296,7 +1292,7 @@ p {
   color: var(--bg);
   border-color: var(--accent-cyan);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
 }
 
 .pagination-btn:disabled {
@@ -1336,7 +1332,7 @@ p {
   background: var(--accent-cyan);
   border-color: var(--accent-cyan);
   color: var(--bg);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
 }
 
 /* ===== About Page Styles ===== */
@@ -1388,7 +1384,7 @@ p {
   color: var(--bg);
   border-color: var(--accent-cyan);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
 }
 
 /* ===== Blog List Layout (blog.html) ===== */
@@ -1408,7 +1404,7 @@ p {
   background: linear-gradient(135deg, rgba(212, 181, 232, 0.1), rgba(255, 212, 186, 0.1));
   min-height: 200px;
   border-radius: 20px;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -1416,7 +1412,7 @@ p {
   border-left-color: var(--accent-green);
   background: linear-gradient(135deg, rgba(144, 198, 149, 0.15), rgba(180, 215, 233, 0.15));
   transform: translateY(-8px) rotate(-1deg);
-  box-shadow: var(--shadow-medium);
+  /* box-shadow: var(--shadow-medium); */
 }
 
 /* Blog list image - left side */
@@ -1480,7 +1476,7 @@ p {
   padding: 2rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .series-footer-content {
@@ -1515,7 +1511,7 @@ table {
   border-radius: 16px;
   overflow: hidden;
   border: 2px solid var(--border-bright);
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 table thead {
@@ -1584,7 +1580,7 @@ pre {
   margin: 1.5rem 0;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 /* Code block container */
@@ -1597,7 +1593,7 @@ pre {
   border: 2px solid var(--border);
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .highlight pre {
@@ -2089,7 +2085,7 @@ html, body {
     padding: 1.5rem;
     gap: 1.5rem;
     max-width: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 
   .series-image img {
@@ -2209,7 +2205,7 @@ html, body {
     padding: 1.5rem;
     gap: 1.5rem;
     max-width: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 
   .series-footer-content {
