@@ -781,20 +781,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Dark Mode Toggle (Day/Night Forest Theme) =====
 const initThemeToggle = () => {
+  // Helper function to update theme-color meta tag for mobile browsers
+  const updateThemeColor = (theme) => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      // Use dark background color for dark mode, light for light mode
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#1A2234' : '#FFF8F0');
+    }
+  };
+
   // Check for saved theme preference or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const currentHour = new Date().getHours();
   const isNightTime = currentHour >= 18 || currentHour < 6;
-  
+
   // Set initial theme based on saved preference only (not auto dark)
   if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
+    updateThemeColor('dark');
   } else if (savedTheme === 'light') {
     document.documentElement.removeAttribute('data-theme');
+    updateThemeColor('light');
   }
   // Don't auto-enable dark mode - let user choose
-  
+
   // Apply nav styles immediately after setting theme
   if (typeof updateNavStyles === 'function') {
     updateNavStyles();
@@ -829,14 +840,17 @@ const initThemeToggle = () => {
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
+
       if (newTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
       }
       localStorage.setItem('theme', newTheme);
-      
+
+      // Update theme-color meta tag for mobile browsers
+      updateThemeColor(newTheme);
+
       // Update firefly visibility
       const fireflyContainer = document.querySelector('.firefly-container');
       if (fireflyContainer) {
@@ -872,8 +886,10 @@ const initThemeToggle = () => {
     if (!localStorage.getItem('theme')) {
       if (e.matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeColor('dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
+        updateThemeColor('light');
       }
     }
   });
