@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(img);
   });
 
-  // ===== Add floating particles (Ghibli dust motes) =====
+  // ===== Add floating particles (Ghibli-style petals & dust motes) =====
   if (!isMobile && !prefersReducedMotion) {
     const particleContainer = document.createElement('div');
     particleContainer.className = 'particle-container';
@@ -478,27 +478,42 @@ document.addEventListener('DOMContentLoaded', () => {
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: -1;
+      z-index: 1;
       overflow: hidden;
     `;
     document.body.appendChild(particleContainer);
 
+    // Ghibli-inspired pastel colors for particles (visible against light background)
+    const particleColors = [
+      'rgba(255, 182, 193, 0.8)',  // Pink
+      'rgba(212, 181, 232, 0.7)',  // Purple
+      'rgba(144, 198, 149, 0.7)',  // Green
+      'rgba(255, 180, 150, 0.8)',  // Peach/Orange
+      'rgba(135, 206, 235, 0.7)',  // Sky blue
+    ];
+
     const createParticle = () => {
       const particle = document.createElement('div');
-      const size = Math.random() * 6 + 2;
+      const size = Math.random() * 8 + 4;
       const startX = Math.random() * window.innerWidth;
-      const duration = Math.random() * 10 + 15;
+      const duration = Math.random() * 12 + 18;
+      const color = particleColors[Math.floor(Math.random() * particleColors.length)];
+      const animationType = Math.floor(Math.random() * 5);
+      
+      // Randomly choose between circle and petal shape
+      const isPetal = Math.random() > 0.5;
+      const borderRadius = isPetal ? '50% 0 50% 0' : '50%';
       
       particle.style.cssText = `
         position: absolute;
         width: ${size}px;
-        height: ${size}px;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
+        height: ${isPetal ? size * 1.5 : size}px;
+        background: ${color};
+        border-radius: ${borderRadius};
         left: ${startX}px;
-        top: -10px;
-        animation: particleFall ${duration}s linear forwards;
-        opacity: ${Math.random() * 0.5 + 0.3};
+        top: -20px;
+        animation: particleFall${animationType} ${duration}s ease-in-out forwards;
+        box-shadow: 0 0 ${size * 2}px ${color};
       `;
       
       particleContainer.appendChild(particle);
@@ -506,29 +521,56 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => particle.remove(), duration * 1000);
     };
 
-    // Add particle fall animation
+    // Add particle fall animations with variety
     if (!document.querySelector('#particle-styles')) {
       const style = document.createElement('style');
       style.id = 'particle-styles';
       style.textContent = `
-        @keyframes particleFall {
-          0% {
-            transform: translateY(0) translateX(0) rotate(0deg);
-          }
-          100% {
-            transform: translateY(100vh) translateX(${Math.random() * 200 - 100}px) rotate(360deg);
-          }
+        @keyframes particleFall0 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh) translateX(-80px) rotate(360deg); opacity: 0; }
+        }
+        @keyframes particleFall1 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh) translateX(80px) rotate(-360deg); opacity: 0; }
+        }
+        @keyframes particleFall2 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          50% { transform: translateY(50vh) translateX(-40px) rotate(180deg); }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh) translateX(20px) rotate(270deg); opacity: 0; }
+        }
+        @keyframes particleFall3 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          50% { transform: translateY(50vh) translateX(40px) rotate(-180deg); }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh) translateX(-20px) rotate(-270deg); opacity: 0; }
+        }
+        @keyframes particleFall4 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg) scale(0.8); opacity: 0; }
+          10% { opacity: 1; }
+          25% { transform: translateY(25vh) translateX(-30px) rotate(90deg) scale(1); }
+          50% { transform: translateY(50vh) translateX(30px) rotate(180deg) scale(1.1); }
+          75% { transform: translateY(75vh) translateX(-20px) rotate(270deg) scale(1); }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh) translateX(0) rotate(360deg) scale(0.8); opacity: 0; }
         }
       `;
       document.head.appendChild(style);
     }
 
     // Create particles periodically
-    setInterval(createParticle, 3000);
+    setInterval(createParticle, 2000);
     
     // Create initial particles
-    for (let i = 0; i < 5; i++) {
-      setTimeout(createParticle, i * 500);
+    for (let i = 0; i < 8; i++) {
+      setTimeout(createParticle, i * 300);
     }
   }
 });

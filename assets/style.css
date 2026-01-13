@@ -90,47 +90,58 @@ a:hover {
   color: var(--accent-pink);
 }
 
-/* ===== Background Clouds ===== */
+/* ===== Background Clouds (Ghibli-style soft pastels) ===== */
 .glow-orb {
   position: fixed;
   border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(30px);
-  opacity: 0.7;
+  filter: blur(40px);
+  opacity: 0.5;
   z-index: -1;
   pointer-events: none;
   animation: cloudFloat 60s ease-in-out infinite;
 }
 
+/* Pink/peach cloud */
 .glow-orb-1 {
   top: 5%;
   left: -5%;
   width: 400px;
   height: 200px;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.6), rgba(255, 212, 186, 0.5));
 }
 
+/* Blue/purple cloud */
 .glow-orb-2 {
   top: 15%;
   right: -10%;
   width: 500px;
   height: 250px;
+  background: linear-gradient(135deg, rgba(180, 215, 233, 0.5), rgba(212, 181, 232, 0.4));
   animation-delay: -20s;
 }
 
+/* Green/yellow cloud */
 .glow-orb-3 {
   bottom: 20%;
   left: 10%;
   width: 350px;
   height: 180px;
+  background: linear-gradient(135deg, rgba(144, 198, 149, 0.4), rgba(255, 212, 186, 0.5));
   animation-delay: -40s;
 }
 
 @keyframes cloudFloat {
   0%, 100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40px, -10px) scale(1.02);
   }
   50% {
-    transform: translate(80px, -20px);
+    transform: translate(80px, -20px) scale(1);
+  }
+  75% {
+    transform: translate(40px, -5px) scale(0.98);
   }
 }
 
