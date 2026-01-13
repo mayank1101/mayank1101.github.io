@@ -649,7 +649,7 @@ True label: +1
 
 **The Intuition**
 
-Kullback-Leibler (KL) Divergence measures how different two probability distributions are. It's not symmetric—$\text{KL}(P||Q) \neq \text{KL}(Q||P)$, but which makes it useful for specific applications.
+Kullback-Leibler (KL) Divergence measures how different two probability distributions are. It's important to note that KL divergence is not symmetric $\text{KL}(P||Q) \neq \text{KL}(Q||P)$ which makes it useful for specific applications.
 
 **Mathematical Definition**
 
