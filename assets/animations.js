@@ -795,6 +795,11 @@ const initThemeToggle = () => {
   }
   // Don't auto-enable dark mode - let user choose
   
+  // Apply nav styles immediately after setting theme
+  if (typeof updateNavStyles === 'function') {
+    updateNavStyles();
+  }
+  
   // Create theme toggle button if it doesn't exist
   const navSocial = document.querySelector('.nav-social');
   const nav = document.querySelector('.nav');
