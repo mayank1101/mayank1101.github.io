@@ -219,9 +219,9 @@ Imagine predicting temperatures:
 - Prediction 2: 30°C (error: 10°C)
 
 | Loss | Prediction 1 | Prediction 2 | Ratio |
-|------|-------------|--------------|-------|
-| MSE  | 4           | 100          | 25x   |
-| MAE  | 2           | 10           | 5x    |
+|:-----|:-------------|:-------------|:------|
+| MSE  | 4            | 100          | 25x   |
+| MAE  | 2            | 10           | 5x    |
 
 MSE says "fix the big error ASAP!" while MAE says "both errors matter proportionally."
 
@@ -948,19 +948,19 @@ Task Type?
 ### Quick Reference Table
 
 | Task | Loss Function | When to Use | Avoid When |
-|------|---------------|-------------|------------|
+|:-----|:--------------|:------------|:-----------|
 | **Regression** | MSE | Standard regression, Gaussian errors | Outliers present |
-| | MAE | Outliers, robust fitting | Need to penalize large errors |
-| | Huber | Mixed (some outliers) | Purely clean data |
+| **Regression** | MAE | Outliers, robust fitting | Need to penalize large errors |
+| **Regression** | Huber | Mixed (some outliers) | Purely clean data |
 | **Binary Classification** | BCE with Logits | Standard binary classification | Imbalanced data |
-| | Focal Loss | Severe class imbalance | Balanced data |
-| | Hinge Loss | Margin-based learning, SVM | Need probabilities |
+| **Binary Classification** | Focal Loss | Severe class imbalance | Balanced data |
+| **Binary Classification** | Hinge Loss | Margin-based learning, SVM | Need probabilities |
 | **Multi-Class** | Sparse CCE | Standard multi-class | Binary (use BCE) |
-| | Weighted CCE | Known class weights | Unknown imbalance |
+| **Multi-Class** | Weighted CCE | Known class weights | Unknown imbalance |
 | **Segmentation** | Dice Loss | Pixel imbalance | Standard classification |
-| | Focal Loss | Severe imbalance | Balanced classes |
+| **Segmentation** | Focal Loss | Severe imbalance | Balanced classes |
 | **Metric Learning** | Contrastive | Pair-based similarity | Have triplet info |
-| | Triplet | Face recognition, ranking | Small datasets |
+| **Metric Learning** | Triplet | Face recognition, ranking | Small datasets |
 | **Distribution** | KL Divergence | VAE, distillation | Distance metric needed |
 
 ### Practical Guidelines
