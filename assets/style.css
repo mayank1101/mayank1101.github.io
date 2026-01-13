@@ -506,12 +506,12 @@ p {
 
 .section:nth-of-type(odd) {
   background:
-    linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.5) 100%);
+    linear-gradient(180deg, transparent 0%, rgba(255, 245, 232, 0.6) 100%);
 }
 
 .section:nth-of-type(even) {
   background:
-    radial-gradient(ellipse at bottom, rgba(236, 72, 153, 0.05), transparent 70%);
+    radial-gradient(ellipse at bottom, rgba(255, 182, 193, 0.08), transparent 70%);
 }
 
 /* ===== Cards ===== */
@@ -612,28 +612,55 @@ p {
 /* Card Color Variants */
 .card-cyan {
   border-left: 5px solid var(--accent-cyan);
-  background: linear-gradient(135deg, rgba(180, 215, 233, 0.1), rgba(255, 255, 255, 1));
+  background: linear-gradient(135deg, rgba(180, 215, 233, 0.15), rgba(255, 255, 255, 1));
+}
+
+.card-cyan:hover {
+  border-color: var(--accent-cyan);
+  background: linear-gradient(135deg, rgba(180, 215, 233, 0.25), rgba(255, 248, 240, 1));
 }
 
 .card-purple {
   border-left: 5px solid var(--accent-purple);
-  background: linear-gradient(135deg, rgba(212, 181, 232, 0.1), rgba(255, 255, 255, 1));
+  background: linear-gradient(135deg, rgba(212, 181, 232, 0.15), rgba(255, 255, 255, 1));
+}
+
+.card-purple:hover {
+  border-color: var(--accent-purple);
+  background: linear-gradient(135deg, rgba(212, 181, 232, 0.25), rgba(255, 248, 240, 1));
 }
 
 .card-pink {
   border-left: 5px solid var(--accent-pink);
-  background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(255, 255, 255, 1));
-}
-
-/* .card-cyan:hover {
-}
-
-.card-purple:hover { 
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(255, 255, 255, 1));
 }
 
 .card-pink:hover {
-  box-shadow: var(--shadow-large);
-} */
+  border-color: var(--accent-pink);
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.25), rgba(255, 248, 240, 1));
+}
+
+/* Card green variant for additional styling */
+.card-green {
+  border-left: 5px solid var(--accent-green);
+  background: linear-gradient(135deg, rgba(144, 198, 149, 0.15), rgba(255, 255, 255, 1));
+}
+
+.card-green:hover {
+  border-color: var(--accent-green);
+  background: linear-gradient(135deg, rgba(144, 198, 149, 0.25), rgba(255, 248, 240, 1));
+}
+
+/* Card yellow variant */
+.card-yellow {
+  border-left: 5px solid var(--accent-yellow);
+  background: linear-gradient(135deg, rgba(255, 212, 186, 0.15), rgba(255, 255, 255, 1));
+}
+
+.card-yellow:hover {
+  border-color: var(--accent-yellow);
+  background: linear-gradient(135deg, rgba(255, 212, 186, 0.25), rgba(255, 248, 240, 1));
+}
 
 /* ===== Resume Section ===== */
 .resume-section {
@@ -1288,11 +1315,10 @@ p {
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background: var(--accent-cyan);
-  color: var(--bg);
-  border-color: var(--accent-cyan);
-  transform: translateY(-2px);
-  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
+  background: var(--accent-green);
+  color: var(--card);
+  border-color: var(--accent-green);
+  transform: translateY(-4px) rotate(-2deg);
 }
 
 .pagination-btn:disabled {
@@ -1323,16 +1349,15 @@ p {
 }
 
 .page-number:hover {
-  background: rgba(56, 189, 248, 0.1);
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
+  background: rgba(144, 198, 149, 0.15);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
 }
 
 .page-number.active {
-  background: var(--accent-cyan);
-  border-color: var(--accent-cyan);
-  color: var(--bg);
-  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--card);
 }
 
 /* ===== About Page Styles ===== */
@@ -1349,8 +1374,13 @@ p {
 }
 
 .about-story strong {
-  color: var(--accent-cyan);
+  color: var(--accent-green);
   font-weight: 600;
+}
+
+.about-story em {
+  color: var(--accent-pink);
+  font-style: italic;
 }
 
 /* Skills Grid */
@@ -1369,22 +1399,21 @@ p {
 }
 
 .skill-tags span {
-  background: var(--card-hover);
-  border: 1px solid var(--border-bright);
+  background: var(--card);
+  border: 2px solid var(--border);
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 16px;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   color: var(--text);
 }
 
 .skill-tags span:hover {
-  background: var(--accent-cyan);
-  color: var(--bg);
-  border-color: var(--accent-cyan);
-  transform: translateY(-2px);
-  /* box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); */
+  background: var(--accent-yellow);
+  color: var(--text-bright);
+  border-color: var(--accent-pink);
+  transform: translateY(-4px) rotate(-2deg);
 }
 
 /* ===== Blog List Layout (blog.html) ===== */
@@ -1888,12 +1917,12 @@ html, body {
     text-align: center;
     font-size: 1rem;
     width: 100%;
-    border-radius: 8px;
-    background: rgba(56, 189, 248, 0.05);
+    border-radius: 12px;
+    background: rgba(144, 198, 149, 0.08);
   }
 
   .nav-center .nav-link:hover {
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(144, 198, 149, 0.15);
   }
 
   .nav-center .nav-link::after {
