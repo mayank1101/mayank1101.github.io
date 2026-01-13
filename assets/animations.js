@@ -467,13 +467,79 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(img);
   });
 
-  // ===== TOTORO FOREST THEME - Leaf Shadows & Fireflies =====
+  // ===== SPIRITED AWAY THEME - Lanterns, Water Ripples & Paper Charms =====
   if (!prefersReducedMotion) {
     
-    // === 1. Leaf Shadow Container ===
-    const leafShadowContainer = document.createElement('div');
-    leafShadowContainer.className = 'leaf-shadow-container';
-    leafShadowContainer.style.cssText = `
+    // === 1. Floating Lanterns Container ===
+    const lanternContainer = document.createElement('div');
+    lanternContainer.className = 'lantern-container';
+    lanternContainer.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    `;
+    document.body.appendChild(lanternContainer);
+
+    // Create floating lanterns
+    const createLantern = () => {
+      const lantern = document.createElement('div');
+      const size = Math.random() * 20 + 15; // 15-35px
+      const startX = Math.random() * window.innerWidth;
+      const duration = Math.random() * 15 + 20; // 20-35s to float up
+      const swayDuration = Math.random() * 3 + 2; // 2-5s sway
+      const delay = Math.random() * 10;
+      const hue = Math.random() > 0.5 ?
+        `rgba(255, 180, 100, ${Math.random() * 0.3 + 0.5})` : // warm orange
+        `rgba(255, 220, 150, ${Math.random() * 0.3 + 0.5})`; // warm yellow
+      
+      lantern.className = 'spirit-lantern';
+      lantern.innerHTML = `
+        <svg viewBox="0 0 40 60" width="${size}" height="${size * 1.5}">
+          <defs>
+            <radialGradient id="lanternGlow${Date.now()}" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:rgba(255, 250, 200, 0.9)"/>
+              <stop offset="50%" style="stop-color:${hue}"/>
+              <stop offset="100%" style="stop-color:rgba(255, 150, 50, 0.2)"/>
+            </radialGradient>
+          </defs>
+          <!-- Lantern body -->
+          <ellipse cx="20" cy="30" rx="15" ry="20" fill="url(#lanternGlow${Date.now()})" opacity="0.8"/>
+          <!-- Lantern frame lines -->
+          <path d="M8 15 Q20 5 32 15" stroke="rgba(180, 100, 50, 0.4)" stroke-width="1" fill="none"/>
+          <path d="M8 45 Q20 55 32 45" stroke="rgba(180, 100, 50, 0.4)" stroke-width="1" fill="none"/>
+          <line x1="8" y1="15" x2="8" y2="45" stroke="rgba(180, 100, 50, 0.3)" stroke-width="0.5"/>
+          <line x1="32" y1="15" x2="32" y2="45" stroke="rgba(180, 100, 50, 0.3)" stroke-width="0.5"/>
+          <!-- Inner glow -->
+          <ellipse cx="20" cy="30" rx="8" ry="12" fill="rgba(255, 255, 220, 0.6)"/>
+        </svg>
+      `;
+      lantern.style.cssText = `
+        position: absolute;
+        left: ${startX}px;
+        bottom: -80px;
+        filter: drop-shadow(0 0 ${size/2}px rgba(255, 200, 100, 0.6));
+        animation: lanternFloat ${duration}s ease-in-out ${delay}s infinite, lanternSway ${swayDuration}s ease-in-out infinite;
+        opacity: 0;
+      `;
+      
+      lanternContainer.appendChild(lantern);
+      
+      // Remove and recreate after animation
+      setTimeout(() => {
+        lantern.remove();
+        createLantern();
+      }, (duration + delay) * 1000);
+    };
+
+    // === 2. Paper Charms (Ofuda) Container ===
+    const charmContainer = document.createElement('div');
+    charmContainer.className = 'charm-container';
+    charmContainer.style.cssText = `
       position: fixed;
       top: 0;
       left: 0;
@@ -482,219 +548,260 @@ document.addEventListener('DOMContentLoaded', () => {
       pointer-events: none;
       z-index: 0;
       overflow: hidden;
-      opacity: 0.15;
     `;
-    document.body.appendChild(leafShadowContainer);
+    document.body.appendChild(charmContainer);
 
-    // Create moving leaf shadow overlay
-    const leafShadowOverlay = document.createElement('div');
-    leafShadowOverlay.className = 'leaf-shadow-overlay';
-    leafShadowOverlay.innerHTML = `
-      <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <pattern id="leafPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-            <!-- Leaf 1 -->
-            <ellipse cx="30" cy="40" rx="15" ry="25" fill="#2D5016" transform="rotate(-30 30 40)"/>
-            <line x1="30" y1="20" x2="30" y2="60" stroke="#1A3009" stroke-width="1"/>
-            <!-- Leaf 2 -->
-            <ellipse cx="120" cy="80" rx="12" ry="20" fill="#3D6B1E" transform="rotate(15 120 80)"/>
-            <line x1="120" y1="62" x2="120" y2="98" stroke="#2D5016" stroke-width="1"/>
-            <!-- Leaf 3 -->
-            <ellipse cx="80" cy="150" rx="18" ry="28" fill="#4A7C23" transform="rotate(-15 80 150)"/>
-            <line x1="80" y1="125" x2="80" y2="175" stroke="#3D6B1E" stroke-width="1"/>
-            <!-- Leaf 4 -->
-            <ellipse cx="170" cy="30" rx="10" ry="16" fill="#2D5016" transform="rotate(45 170 30)"/>
-            <!-- Leaf 5 -->
-            <ellipse cx="50" cy="120" rx="14" ry="22" fill="#3D6B1E" transform="rotate(-45 50 120)"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#leafPattern)" class="leaf-shadow-pattern"/>
-      </svg>
-    `;
-    leafShadowOverlay.style.cssText = `
-      width: 200%;
-      height: 200%;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      animation: leafShadowMove 40s ease-in-out infinite;
-    `;
-    leafShadowContainer.appendChild(leafShadowOverlay);
-
-    // === 2. Firefly Container (visible only in evening/night) ===
-    const fireflyContainer = document.createElement('div');
-    fireflyContainer.className = 'firefly-container';
-    fireflyContainer.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 2;
-      overflow: hidden;
-    `;
-    document.body.appendChild(fireflyContainer);
-
-    // Create fireflies
-    const createFirefly = () => {
-      const firefly = document.createElement('div');
-      const size = Math.random() * 4 + 2;
+    // Create paper charms
+    const createPaperCharm = () => {
+      const charm = document.createElement('div');
+      const width = Math.random() * 15 + 10; // 10-25px wide
+      const height = width * 2.5; // Paper ratio
       const startX = Math.random() * window.innerWidth;
-      const startY = Math.random() * window.innerHeight;
-      const duration = Math.random() * 8 + 12;
-      const glowDuration = Math.random() * 2 + 1.5;
+      const duration = Math.random() * 20 + 15;
+      const flutterDuration = Math.random() * 2 + 1;
+      const delay = Math.random() * 8;
       
-      firefly.className = 'firefly';
-      firefly.style.cssText = `
+      charm.className = 'paper-charm';
+      charm.style.cssText = `
         position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: radial-gradient(circle, rgba(255, 255, 180, 1) 0%, rgba(180, 255, 100, 0.8) 40%, transparent 70%);
-        border-radius: 50%;
+        width: ${width}px;
+        height: ${height}px;
         left: ${startX}px;
-        top: ${startY}px;
-        box-shadow: 0 0 ${size * 3}px rgba(200, 255, 100, 0.8), 0 0 ${size * 6}px rgba(180, 255, 100, 0.4);
-        animation: fireflyFloat${Math.floor(Math.random() * 3)} ${duration}s ease-in-out infinite, fireflyGlow ${glowDuration}s ease-in-out infinite;
+        top: -${height + 20}px;
+        background: linear-gradient(180deg,
+          rgba(255, 250, 240, 0.9) 0%,
+          rgba(255, 245, 230, 0.8) 50%,
+          rgba(245, 235, 220, 0.7) 100%);
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(139, 126, 106, 0.2);
+        animation: charmFall ${duration}s ease-in-out ${delay}s infinite, charmFlutter ${flutterDuration}s ease-in-out infinite;
         opacity: 0;
       `;
       
-      fireflyContainer.appendChild(firefly);
+      // Add kanji-like decoration
+      const decoration = document.createElement('div');
+      decoration.style.cssText = `
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 50%;
+        background: linear-gradient(180deg,
+          rgba(200, 80, 80, 0.3) 0%,
+          rgba(200, 80, 80, 0.1) 100%);
+        border-radius: 1px;
+      `;
+      charm.appendChild(decoration);
       
-      // Remove and recreate after some time for variety
+      charmContainer.appendChild(charm);
+      
       setTimeout(() => {
-        firefly.remove();
-        createFirefly();
-      }, duration * 1000);
+        charm.remove();
+        createPaperCharm();
+      }, (duration + delay) * 1000);
     };
 
-    // Add Totoro theme animations
-    if (!document.querySelector('#totoro-styles')) {
+    // Add Spirited Away theme animations
+    if (!document.querySelector('#spirited-away-styles')) {
       const style = document.createElement('style');
-      style.id = 'totoro-styles';
+      style.id = 'spirited-away-styles';
       style.textContent = `
-        /* Leaf Shadow Movement */
-        @keyframes leafShadowMove {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          25% { transform: translate(3%, 2%) rotate(1deg); }
-          50% { transform: translate(5%, 0) rotate(0deg); }
-          75% { transform: translate(2%, -2%) rotate(-1deg); }
+        /* Lantern floating up */
+        @keyframes lanternFloat {
+          0% {
+            bottom: -80px;
+            opacity: 0;
+            transform: translateX(0);
+          }
+          5% {
+            opacity: 0.8;
+          }
+          95% {
+            opacity: 0.8;
+          }
+          100% {
+            bottom: 110vh;
+            opacity: 0;
+            transform: translateX(${Math.random() > 0.5 ? '' : '-'}${Math.random() * 50}px);
+          }
         }
         
-        /* Firefly floating patterns */
-        @keyframes fireflyFloat0 {
-          0%, 100% { transform: translate(0, 0); }
-          20% { transform: translate(30px, -20px); }
-          40% { transform: translate(-20px, -40px); }
-          60% { transform: translate(40px, -30px); }
-          80% { transform: translate(-10px, -10px); }
-        }
-        @keyframes fireflyFloat1 {
-          0%, 100% { transform: translate(0, 0); }
-          25% { transform: translate(-40px, 20px); }
-          50% { transform: translate(20px, 40px); }
-          75% { transform: translate(-30px, -20px); }
-        }
-        @keyframes fireflyFloat2 {
-          0%, 100% { transform: translate(0, 0); }
-          33% { transform: translate(50px, -30px); }
-          66% { transform: translate(-30px, 30px); }
+        /* Lantern gentle sway */
+        @keyframes lanternSway {
+          0%, 100% {
+            transform: translateX(0) rotate(-3deg);
+          }
+          50% {
+            transform: translateX(15px) rotate(3deg);
+          }
         }
         
-        /* Firefly glow pulse */
-        @keyframes fireflyGlow {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 1; }
+        /* Paper charm falling */
+        @keyframes charmFall {
+          0% {
+            top: -60px;
+            opacity: 0;
+          }
+          5% {
+            opacity: 0.7;
+          }
+          90% {
+            opacity: 0.5;
+          }
+          100% {
+            top: 110vh;
+            opacity: 0;
+          }
         }
         
-        /* Grass swaying at section bottoms */
-        .grass-container {
+        /* Paper charm flutter */
+        @keyframes charmFlutter {
+          0%, 100% {
+            transform: rotateY(0deg) rotateZ(-10deg);
+          }
+          25% {
+            transform: rotateY(30deg) rotateZ(5deg);
+          }
+          50% {
+            transform: rotateY(0deg) rotateZ(10deg);
+          }
+          75% {
+            transform: rotateY(-30deg) rotateZ(-5deg);
+          }
+        }
+        
+        /* Water ripple effect on card hover */
+        .card::after,
+        .blog-card::after,
+        .blog-card-list::after {
+          content: '';
           position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 60px;
-          overflow: hidden;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background: radial-gradient(circle,
+            rgba(135, 206, 235, 0.3) 0%,
+            rgba(180, 215, 233, 0.1) 50%,
+            transparent 70%);
+          transform: translate(-50%, -50%);
+          transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+          opacity: 0;
           pointer-events: none;
+          z-index: -1;
         }
         
-        .grass-blade {
+        .card:hover::after,
+        .blog-card:hover::after,
+        .blog-card-list:hover::after {
+          width: 300%;
+          height: 300%;
+          opacity: 1;
+        }
+        
+        /* Spirit orb glow for badges */
+        .badges span::before {
+          content: '';
           position: absolute;
-          bottom: 0;
-          width: 3px;
-          background: linear-gradient(to top, #4A7C23, #90C695);
-          border-radius: 50% 50% 0 0;
-          transform-origin: bottom center;
-          animation: grassSway 3s ease-in-out infinite;
+          inset: -3px;
+          border-radius: 25px;
+          background: linear-gradient(45deg,
+            rgba(255, 200, 100, 0.3),
+            rgba(255, 150, 100, 0.2),
+            rgba(212, 181, 232, 0.3));
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          z-index: -1;
         }
         
-        @keyframes grassSway {
-          0%, 100% { transform: rotate(-5deg); }
-          50% { transform: rotate(5deg); }
+        .badges span:hover::before {
+          opacity: 1;
+          animation: spiritGlow 2s ease-in-out infinite;
         }
         
-        /* Add grass to sections with .has-grass class */
-        .section.has-grass {
+        @keyframes spiritGlow {
+          0%, 100% { filter: blur(8px); }
+          50% { filter: blur(12px); }
+        }
+        
+        /* Bathhouse lantern glow for section headers */
+        h2 i {
           position: relative;
-          padding-bottom: 4rem;
+        }
+        
+        h2 i::after {
+          content: '';
+          position: absolute;
+          inset: -10px;
+          border-radius: 50%;
+          background: radial-gradient(circle,
+            rgba(255, 200, 100, 0.4) 0%,
+            transparent 70%);
+          animation: iconLanternGlow 3s ease-in-out infinite;
+          z-index: -1;
+        }
+        
+        @keyframes iconLanternGlow {
+          0%, 100% {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.8;
+            transform: scale(1.1);
+          }
         }
       `;
       document.head.appendChild(style);
     }
 
-    // Check time and enable fireflies (evening/night mode: 6PM - 6AM)
-    const checkTimeForFireflies = () => {
-      const hour = new Date().getHours();
-      const isNightTime = hour >= 18 || hour < 6;
-      fireflyContainer.style.display = isNightTime ? 'block' : 'none';
-      return isNightTime;
+    // Create initial lanterns (more visible in dark mode)
+    const createInitialLanterns = () => {
+      const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+      const lanternCount = isDarkMode ? 8 : 5;
+      for (let i = 0; i < lanternCount; i++) {
+        setTimeout(createLantern, i * 800);
+      }
     };
 
-    // Create initial fireflies if night time
-    if (checkTimeForFireflies()) {
-      for (let i = 0; i < 15; i++) {
-        setTimeout(createFirefly, i * 200);
+    // Create initial paper charms
+    const createInitialCharms = () => {
+      for (let i = 0; i < 4; i++) {
+        setTimeout(createPaperCharm, i * 2000);
       }
-    }
-
-    // Check every hour for time change
-    setInterval(checkTimeForFireflies, 3600000);
-
-    // === 3. Add swaying grass to sections ===
-    const addGrassToSection = (section) => {
-      const grassContainer = document.createElement('div');
-      grassContainer.className = 'grass-container';
-      
-      // Create grass blades
-      const bladeCount = Math.floor(section.offsetWidth / 8);
-      for (let i = 0; i < bladeCount; i++) {
-        const blade = document.createElement('div');
-        blade.className = 'grass-blade';
-        const height = Math.random() * 30 + 20;
-        const delay = Math.random() * 2;
-        const duration = Math.random() * 1 + 2.5;
-        blade.style.cssText = `
-          left: ${(i / bladeCount) * 100}%;
-          height: ${height}px;
-          animation-delay: ${delay}s;
-          animation-duration: ${duration}s;
-          opacity: ${Math.random() * 0.3 + 0.5};
-        `;
-        grassContainer.appendChild(blade);
-      }
-      
-      section.appendChild(grassContainer);
-      section.classList.add('has-grass');
     };
 
-    // Add grass to every other section for variety (not on mobile)
-    if (!isMobile) {
-      document.querySelectorAll('.section').forEach((section, index) => {
-        if (index % 2 === 1) {
-          addGrassToSection(section);
+    // Initialize
+    createInitialLanterns();
+    createInitialCharms();
+
+    // Listen for theme changes to adjust lantern count
+    const themeObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          // Add more lanterns in dark mode
+          const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+          if (isDarkMode) {
+            for (let i = 0; i < 3; i++) {
+              setTimeout(createLantern, i * 500);
+            }
+          }
         }
       });
-    }
+    });
+    
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+
+    // === 3. Add water ripple effect on interactive elements ===
+    document.querySelectorAll('.card, .blog-card, .blog-card-list').forEach(card => {
+      card.style.position = 'relative';
+      card.style.overflow = 'hidden';
+    });
   }
 });
 
@@ -781,20 +888,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Dark Mode Toggle (Day/Night Forest Theme) =====
 const initThemeToggle = () => {
+  // Helper function to update theme-color meta tag for mobile browsers
+  const updateThemeColor = (theme) => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      // Use dark background color for dark mode, light for light mode
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#1A2234' : '#FFF8F0');
+    }
+  };
+
   // Check for saved theme preference or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const currentHour = new Date().getHours();
   const isNightTime = currentHour >= 18 || currentHour < 6;
-  
+
   // Set initial theme based on saved preference only (not auto dark)
   if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
+    updateThemeColor('dark');
   } else if (savedTheme === 'light') {
     document.documentElement.removeAttribute('data-theme');
+    updateThemeColor('light');
   }
   // Don't auto-enable dark mode - let user choose
-  
+
   // Apply nav styles immediately after setting theme
   if (typeof updateNavStyles === 'function') {
     updateNavStyles();
@@ -829,13 +947,16 @@ const initThemeToggle = () => {
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
+
       if (newTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
       }
       localStorage.setItem('theme', newTheme);
+
+      // Update theme-color meta tag for mobile browsers
+      updateThemeColor(newTheme);
       
       // Update firefly visibility
       const fireflyContainer = document.querySelector('.firefly-container');
@@ -872,8 +993,10 @@ const initThemeToggle = () => {
     if (!localStorage.getItem('theme')) {
       if (e.matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeColor('dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
+        updateThemeColor('light');
       }
     }
   });

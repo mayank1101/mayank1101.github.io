@@ -3150,6 +3150,17 @@ html, body {
   }
 }
 
+/* Dark mode mobile navigation overrides */
+@media (max-width: 768px) {
+  [data-theme="dark"] .nav-center .nav-link {
+    background: rgba(107, 197, 232, 0.12);
+  }
+
+  [data-theme="dark"] .nav-center .nav-link:hover {
+    background: rgba(107, 197, 232, 0.2);
+  }
+}
+
 /* Accessibility - Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
