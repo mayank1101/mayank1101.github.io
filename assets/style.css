@@ -114,6 +114,130 @@
   background: radial-gradient(ellipse, rgba(100, 150, 120, 0.2), rgba(80, 130, 100, 0.1), transparent);
 }
 
+/* Dark mode navigation */
+[data-theme="dark"] .nav {
+  background: rgba(26, 34, 52, 0.95);
+  border-bottom-color: var(--border);
+}
+
+/* Dark mode cards - adjust backgrounds */
+[data-theme="dark"] .card {
+  background: var(--card);
+}
+
+[data-theme="dark"] .card-cyan {
+  background: linear-gradient(135deg, rgba(107, 197, 232, 0.15), var(--card));
+}
+
+[data-theme="dark"] .card-purple {
+  background: linear-gradient(135deg, rgba(200, 168, 232, 0.15), var(--card));
+}
+
+[data-theme="dark"] .card-pink {
+  background: linear-gradient(135deg, rgba(255, 176, 192, 0.15), var(--card));
+}
+
+[data-theme="dark"] .card-green {
+  background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), var(--card));
+}
+
+[data-theme="dark"] .card-yellow {
+  background: linear-gradient(135deg, rgba(255, 208, 138, 0.15), var(--card));
+}
+
+/* Dark mode blog cards */
+[data-theme="dark"] .blog-card {
+  background: linear-gradient(135deg, rgba(255, 176, 192, 0.1), rgba(107, 197, 232, 0.1));
+}
+
+[data-theme="dark"] .blog-card:hover {
+  background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(255, 208, 138, 0.15));
+}
+
+[data-theme="dark"] .blog-card-list {
+  background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), rgba(255, 208, 138, 0.1));
+}
+
+[data-theme="dark"] .blog-card-list:hover {
+  background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(107, 197, 232, 0.15));
+}
+
+/* Dark mode sections */
+[data-theme="dark"] .section:nth-of-type(odd) {
+  background: linear-gradient(180deg, transparent 0%, rgba(42, 54, 80, 0.6) 100%);
+}
+
+[data-theme="dark"] .section:nth-of-type(even) {
+  background: radial-gradient(ellipse at bottom, rgba(90, 74, 112, 0.15), transparent 70%);
+}
+
+/* Dark mode footer */
+[data-theme="dark"] .footer {
+  background: rgba(36, 47, 69, 0.8);
+}
+
+/* Dark mode code blocks */
+[data-theme="dark"] pre,
+[data-theme="dark"] .highlight {
+  background: #242F45;
+  border-color: var(--border);
+}
+
+[data-theme="dark"] code {
+  background: rgba(136, 216, 144, 0.15);
+  color: var(--accent-green);
+  border-color: rgba(136, 216, 144, 0.2);
+}
+
+/* Dark mode syntax highlighting */
+[data-theme="dark"] .highlight .k,
+[data-theme="dark"] .highlight .kd { color: #C8A8E8; }
+[data-theme="dark"] .highlight .kn { color: #88D0F0; }
+[data-theme="dark"] .highlight .n { color: #C8D4E8; }
+[data-theme="dark"] .highlight .na { color: #88D0F0; }
+[data-theme="dark"] .highlight .nb { color: #88D0F0; }
+[data-theme="dark"] .highlight .nc { color: #FFD08A; }
+[data-theme="dark"] .highlight .nf { color: #88D0F0; }
+[data-theme="dark"] .highlight .s,
+[data-theme="dark"] .highlight .s1,
+[data-theme="dark"] .highlight .s2 { color: #88D890; }
+[data-theme="dark"] .highlight .m,
+[data-theme="dark"] .highlight .mf,
+[data-theme="dark"] .highlight .mi { color: #FFB0C0; }
+[data-theme="dark"] .highlight .c,
+[data-theme="dark"] .highlight .c1,
+[data-theme="dark"] .highlight .cm { color: #8090A8; }
+[data-theme="dark"] .highlight .o,
+[data-theme="dark"] .highlight .p { color: #88D0F0; }
+
+/* Dark mode series banner */
+[data-theme="dark"] .series-banner {
+  background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), rgba(255, 208, 138, 0.1));
+}
+
+/* Dark mode manifesto */
+[data-theme="dark"] .manifesto-container {
+  background: linear-gradient(135deg, rgba(200, 168, 232, 0.08), rgba(107, 197, 232, 0.08));
+}
+
+[data-theme="dark"] .manifesto-audience,
+[data-theme="dark"] .manifesto-topics {
+  background: rgba(107, 197, 232, 0.1);
+}
+
+/* Dark mode tables */
+[data-theme="dark"] table {
+  background: var(--card);
+}
+
+[data-theme="dark"] table thead {
+  background: rgba(136, 216, 144, 0.15);
+}
+
+[data-theme="dark"] table tbody tr:hover {
+  background: rgba(107, 197, 232, 0.1);
+}
+
 /* Theme toggle button */
 .theme-toggle {
   width: 40px;
