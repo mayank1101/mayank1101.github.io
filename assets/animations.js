@@ -744,32 +744,36 @@ const initThemeToggle = () => {
   const currentHour = new Date().getHours();
   const isNightTime = currentHour >= 18 || currentHour < 6;
   
-  // Set initial theme
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme === 'dark' ? 'dark' : '');
-  } else if (prefersDark || isNightTime) {
+  // Set initial theme based on saved preference only (not auto dark)
+  if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedTheme === 'light') {
+    document.documentElement.removeAttribute('data-theme');
   }
+  // Don't auto-enable dark mode - let user choose
   
   // Create theme toggle button if it doesn't exist
-  const navRight = document.querySelector('.nav-right');
   const navSocial = document.querySelector('.nav-social');
+  const nav = document.querySelector('.nav');
   
-  if ((navRight || navSocial) && !document.querySelector('.theme-toggle')) {
+  if (nav && !document.querySelector('.theme-toggle')) {
     const themeToggle = document.createElement('button');
     themeToggle.className = 'theme-toggle';
     themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+    themeToggle.setAttribute('title', 'Toggle light/dark mode');
     themeToggle.innerHTML = '<i class="fas fa-moon"></i><i class="fas fa-sun"></i>';
     
-    // Insert into nav-social or nav-right
+    // Insert into nav-social if it exists, or create container in nav-right
     if (navSocial) {
       navSocial.appendChild(themeToggle);
-    } else if (navRight) {
-      const ctaNav = navRight.querySelector('.cta-nav');
-      if (ctaNav) {
-        navRight.insertBefore(themeToggle, ctaNav);
+    } else {
+      // Find nav-right or create position after nav-center
+      const navRight = document.querySelector('.nav-right');
+      if (navRight) {
+        navRight.insertBefore(themeToggle, navRight.firstChild);
       } else {
-        navRight.appendChild(themeToggle);
+        // Fallback: append to nav
+        nav.appendChild(themeToggle);
       }
     }
     
@@ -778,7 +782,11 @@ const initThemeToggle = () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
-      document.documentElement.setAttribute('data-theme', newTheme === 'dark' ? 'dark' : '');
+      if (newTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
       localStorage.setItem('theme', newTheme);
       
       // Update firefly visibility
@@ -797,6 +805,12 @@ const initThemeToggle = () => {
         }
       }
       
+      // Update leaf shadow opacity for dark mode
+      const leafShadowContainer = document.querySelector('.leaf-shadow-container');
+      if (leafShadowContainer) {
+        leafShadowContainer.style.opacity = newTheme === 'dark' ? '0.08' : '0.15';
+      }
+      
       // Animate the toggle
       themeToggle.style.transform = 'rotate(360deg) scale(1.2)';
       setTimeout(() => {
@@ -805,10 +819,14 @@ const initThemeToggle = () => {
     });
   }
   
-  // Listen for system theme changes
+  // Listen for system theme changes (only if no saved preference)
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
-      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : '');
+      if (e.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
     }
   });
 };
