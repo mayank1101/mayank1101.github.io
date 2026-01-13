@@ -702,23 +702,66 @@ document.addEventListener('DOMContentLoaded', () => {
 let lastScroll = 0;
 const nav = document.querySelector('.nav');
 
+// Helper function to get theme-aware nav colors
+const getNavColors = (isScrolled) => {
+  const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+  
+  if (isDarkMode) {
+    return isScrolled ? {
+      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
+      background: 'rgba(26, 34, 52, 0.98)',
+      backdropFilter: 'blur(12px)',
+      borderBottom: '3px solid rgba(58, 74, 96, 0.8)'
+    } : {
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+      background: 'rgba(26, 34, 52, 0.95)',
+      backdropFilter: 'blur(10px)',
+      borderBottom: '3px solid var(--border)'
+    };
+  } else {
+    return isScrolled ? {
+      boxShadow: '0 8px 32px rgba(139, 126, 106, 0.2)',
+      background: 'rgba(255, 248, 240, 0.98)',
+      backdropFilter: 'blur(12px)',
+      borderBottom: '3px solid rgba(232, 220, 200, 0.8)'
+    } : {
+      boxShadow: '0 4px 12px rgba(139, 126, 106, 0.12)',
+      background: 'rgba(255, 248, 240, 0.95)',
+      backdropFilter: 'blur(10px)',
+      borderBottom: '3px solid var(--border)'
+    };
+  }
+};
+
+// Apply nav styles based on scroll and theme
+const updateNavStyles = () => {
+  if (!nav) return;
+  const currentScroll = window.pageYOffset;
+  const colors = getNavColors(currentScroll > 100);
+  
+  nav.style.boxShadow = colors.boxShadow;
+  nav.style.background = colors.background;
+  nav.style.backdropFilter = colors.backdropFilter;
+  nav.style.borderBottom = colors.borderBottom;
+  
+  lastScroll = currentScroll;
+};
+
 if (nav) {
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-      nav.style.boxShadow = '0 8px 32px rgba(139, 126, 106, 0.2)';
-      nav.style.background = 'rgba(255, 248, 240, 0.98)';
-      nav.style.backdropFilter = 'blur(12px)';
-      nav.style.borderBottom = '3px solid rgba(232, 220, 200, 0.8)';
-    } else {
-      nav.style.boxShadow = '0 4px 12px rgba(139, 126, 106, 0.12)';
-      nav.style.background = 'rgba(255, 248, 240, 0.95)';
-      nav.style.backdropFilter = 'blur(10px)';
-      nav.style.borderBottom = '3px solid var(--border)';
-    }
-
-    lastScroll = currentScroll;
+  window.addEventListener('scroll', updateNavStyles);
+  
+  // Also update when theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'data-theme') {
+        updateNavStyles();
+      }
+    });
+  });
+  
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
   });
 }
 
