@@ -1498,6 +1498,72 @@ p {
   font-weight: 600;
 }
 
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-bright);
+}
+
+table thead {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  border-bottom: 2px solid var(--border-bright);
+  border-right: 1px solid var(--border);
+}
+
+table th:last-child {
+  border-right: none;
+}
+
+table td {
+  padding: 0.9rem 1rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+table td:last-child {
+  border-right: none;
+}
+
+table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Mobile table responsiveness */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table th,
+  table td {
+    padding: 0.7rem 0.8rem;
+  }
+}
+
 /* ===== Code Blocks ===== */
 pre {
   background: #0a0e1a;

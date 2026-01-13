@@ -947,21 +947,23 @@ Task Type?
 
 ### Quick Reference Table
 
-| Task | Loss Function | When to Use | Avoid When |
-|:-----|:--------------|:------------|:-----------|
-| **Regression** | MSE | Standard regression, Gaussian errors | Outliers present |
-| **Regression** | MAE | Outliers, robust fitting | Need to penalize large errors |
-| **Regression** | Huber | Mixed (some outliers) | Purely clean data |
-| **Binary Classification** | BCE with Logits | Standard binary classification | Imbalanced data |
-| **Binary Classification** | Focal Loss | Severe class imbalance | Balanced data |
-| **Binary Classification** | Hinge Loss | Margin-based learning, SVM | Need probabilities |
-| **Multi-Class** | Sparse CCE | Standard multi-class | Binary (use BCE) |
-| **Multi-Class** | Weighted CCE | Known class weights | Unknown imbalance |
-| **Segmentation** | Dice Loss | Pixel imbalance | Standard classification |
-| **Segmentation** | Focal Loss | Severe imbalance | Balanced classes |
-| **Metric Learning** | Contrastive | Pair-based similarity | Have triplet info |
-| **Metric Learning** | Triplet | Face recognition, ranking | Small datasets |
-| **Distribution** | KL Divergence | VAE, distillation | Distance metric needed |
+| Task Type | Recommended Loss Function(s) | When to Use |
+|:----------|:-----------------------------|:------------|
+| Regression | MSE | Clean data, Gaussian errors |
+| Regression | MAE | Outliers present |
+| Regression | Huber Loss | Mixed (some outliers) |
+| Binary Classification | BCE with Logits | Balanced classes |
+| Binary Classification | Focal Loss | Imbalanced classes |
+| Binary Classification | Hinge Loss | Need margin |
+| Multi-Class | Sparse CCE | Balanced classes |
+| Multi-Class | Weighted CCE | Imbalanced classes |
+| Multi-Class | Focal Loss | Imbalanced classes |
+| Segmentation | BCE | Balanced pixels |
+| Segmentation | Dice Loss | Imbalanced pixels |
+| Segmentation | Dice + BCE | Multiple objects |
+| Similarity Learning | Contrastive Loss | Pairs available |
+| Similarity Learning | Triplet Loss | Triplets available |
+| Similarity Learning | KL Divergence | Distribution matching |
 
 ### Practical Guidelines
 
