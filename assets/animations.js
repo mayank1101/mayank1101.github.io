@@ -467,110 +467,233 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(img);
   });
 
-  // ===== Add floating particles (Ghibli-style petals & dust motes) =====
-  if (!isMobile && !prefersReducedMotion) {
-    const particleContainer = document.createElement('div');
-    particleContainer.className = 'particle-container';
-    particleContainer.style.cssText = `
+  // ===== TOTORO FOREST THEME - Leaf Shadows & Fireflies =====
+  if (!prefersReducedMotion) {
+    
+    // === 1. Leaf Shadow Container ===
+    const leafShadowContainer = document.createElement('div');
+    leafShadowContainer.className = 'leaf-shadow-container';
+    leafShadowContainer.style.cssText = `
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 1;
+      z-index: 0;
+      overflow: hidden;
+      opacity: 0.15;
+    `;
+    document.body.appendChild(leafShadowContainer);
+
+    // Create moving leaf shadow overlay
+    const leafShadowOverlay = document.createElement('div');
+    leafShadowOverlay.className = 'leaf-shadow-overlay';
+    leafShadowOverlay.innerHTML = `
+      <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="leafPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+            <!-- Leaf 1 -->
+            <ellipse cx="30" cy="40" rx="15" ry="25" fill="#2D5016" transform="rotate(-30 30 40)"/>
+            <line x1="30" y1="20" x2="30" y2="60" stroke="#1A3009" stroke-width="1"/>
+            <!-- Leaf 2 -->
+            <ellipse cx="120" cy="80" rx="12" ry="20" fill="#3D6B1E" transform="rotate(15 120 80)"/>
+            <line x1="120" y1="62" x2="120" y2="98" stroke="#2D5016" stroke-width="1"/>
+            <!-- Leaf 3 -->
+            <ellipse cx="80" cy="150" rx="18" ry="28" fill="#4A7C23" transform="rotate(-15 80 150)"/>
+            <line x1="80" y1="125" x2="80" y2="175" stroke="#3D6B1E" stroke-width="1"/>
+            <!-- Leaf 4 -->
+            <ellipse cx="170" cy="30" rx="10" ry="16" fill="#2D5016" transform="rotate(45 170 30)"/>
+            <!-- Leaf 5 -->
+            <ellipse cx="50" cy="120" rx="14" ry="22" fill="#3D6B1E" transform="rotate(-45 50 120)"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#leafPattern)" class="leaf-shadow-pattern"/>
+      </svg>
+    `;
+    leafShadowOverlay.style.cssText = `
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      animation: leafShadowMove 40s ease-in-out infinite;
+    `;
+    leafShadowContainer.appendChild(leafShadowOverlay);
+
+    // === 2. Firefly Container (visible only in evening/night) ===
+    const fireflyContainer = document.createElement('div');
+    fireflyContainer.className = 'firefly-container';
+    fireflyContainer.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
       overflow: hidden;
     `;
-    document.body.appendChild(particleContainer);
+    document.body.appendChild(fireflyContainer);
 
-    // Ghibli-inspired pastel colors for particles (visible against light background)
-    const particleColors = [
-      'rgba(255, 182, 193, 0.8)',  // Pink
-      'rgba(212, 181, 232, 0.7)',  // Purple
-      'rgba(144, 198, 149, 0.7)',  // Green
-      'rgba(255, 180, 150, 0.8)',  // Peach/Orange
-      'rgba(135, 206, 235, 0.7)',  // Sky blue
-    ];
-
-    const createParticle = () => {
-      const particle = document.createElement('div');
-      const size = Math.random() * 8 + 4;
+    // Create fireflies
+    const createFirefly = () => {
+      const firefly = document.createElement('div');
+      const size = Math.random() * 4 + 2;
       const startX = Math.random() * window.innerWidth;
-      const duration = Math.random() * 12 + 18;
-      const color = particleColors[Math.floor(Math.random() * particleColors.length)];
-      const animationType = Math.floor(Math.random() * 5);
+      const startY = Math.random() * window.innerHeight;
+      const duration = Math.random() * 8 + 12;
+      const glowDuration = Math.random() * 2 + 1.5;
       
-      // Randomly choose between circle and petal shape
-      const isPetal = Math.random() > 0.5;
-      const borderRadius = isPetal ? '50% 0 50% 0' : '50%';
-      
-      particle.style.cssText = `
+      firefly.className = 'firefly';
+      firefly.style.cssText = `
         position: absolute;
         width: ${size}px;
-        height: ${isPetal ? size * 1.5 : size}px;
-        background: ${color};
-        border-radius: ${borderRadius};
+        height: ${size}px;
+        background: radial-gradient(circle, rgba(255, 255, 180, 1) 0%, rgba(180, 255, 100, 0.8) 40%, transparent 70%);
+        border-radius: 50%;
         left: ${startX}px;
-        top: -20px;
-        animation: particleFall${animationType} ${duration}s ease-in-out forwards;
-        box-shadow: 0 0 ${size * 2}px ${color};
+        top: ${startY}px;
+        box-shadow: 0 0 ${size * 3}px rgba(200, 255, 100, 0.8), 0 0 ${size * 6}px rgba(180, 255, 100, 0.4);
+        animation: fireflyFloat${Math.floor(Math.random() * 3)} ${duration}s ease-in-out infinite, fireflyGlow ${glowDuration}s ease-in-out infinite;
+        opacity: 0;
       `;
       
-      particleContainer.appendChild(particle);
+      fireflyContainer.appendChild(firefly);
       
-      setTimeout(() => particle.remove(), duration * 1000);
+      // Remove and recreate after some time for variety
+      setTimeout(() => {
+        firefly.remove();
+        createFirefly();
+      }, duration * 1000);
     };
 
-    // Add particle fall animations with variety
-    if (!document.querySelector('#particle-styles')) {
+    // Add Totoro theme animations
+    if (!document.querySelector('#totoro-styles')) {
       const style = document.createElement('style');
-      style.id = 'particle-styles';
+      style.id = 'totoro-styles';
       style.textContent = `
-        @keyframes particleFall0 {
-          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          90% { opacity: 1; }
-          100% { transform: translateY(100vh) translateX(-80px) rotate(360deg); opacity: 0; }
+        /* Leaf Shadow Movement */
+        @keyframes leafShadowMove {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          25% { transform: translate(3%, 2%) rotate(1deg); }
+          50% { transform: translate(5%, 0) rotate(0deg); }
+          75% { transform: translate(2%, -2%) rotate(-1deg); }
         }
-        @keyframes particleFall1 {
-          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          90% { opacity: 1; }
-          100% { transform: translateY(100vh) translateX(80px) rotate(-360deg); opacity: 0; }
+        
+        /* Firefly floating patterns */
+        @keyframes fireflyFloat0 {
+          0%, 100% { transform: translate(0, 0); }
+          20% { transform: translate(30px, -20px); }
+          40% { transform: translate(-20px, -40px); }
+          60% { transform: translate(40px, -30px); }
+          80% { transform: translate(-10px, -10px); }
         }
-        @keyframes particleFall2 {
-          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          50% { transform: translateY(50vh) translateX(-40px) rotate(180deg); }
-          90% { opacity: 1; }
-          100% { transform: translateY(100vh) translateX(20px) rotate(270deg); opacity: 0; }
+        @keyframes fireflyFloat1 {
+          0%, 100% { transform: translate(0, 0); }
+          25% { transform: translate(-40px, 20px); }
+          50% { transform: translate(20px, 40px); }
+          75% { transform: translate(-30px, -20px); }
         }
-        @keyframes particleFall3 {
-          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          50% { transform: translateY(50vh) translateX(40px) rotate(-180deg); }
-          90% { opacity: 1; }
-          100% { transform: translateY(100vh) translateX(-20px) rotate(-270deg); opacity: 0; }
+        @keyframes fireflyFloat2 {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(50px, -30px); }
+          66% { transform: translate(-30px, 30px); }
         }
-        @keyframes particleFall4 {
-          0% { transform: translateY(0) translateX(0) rotate(0deg) scale(0.8); opacity: 0; }
-          10% { opacity: 1; }
-          25% { transform: translateY(25vh) translateX(-30px) rotate(90deg) scale(1); }
-          50% { transform: translateY(50vh) translateX(30px) rotate(180deg) scale(1.1); }
-          75% { transform: translateY(75vh) translateX(-20px) rotate(270deg) scale(1); }
-          90% { opacity: 1; }
-          100% { transform: translateY(100vh) translateX(0) rotate(360deg) scale(0.8); opacity: 0; }
+        
+        /* Firefly glow pulse */
+        @keyframes fireflyGlow {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 1; }
+        }
+        
+        /* Grass swaying at section bottoms */
+        .grass-container {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 60px;
+          overflow: hidden;
+          pointer-events: none;
+        }
+        
+        .grass-blade {
+          position: absolute;
+          bottom: 0;
+          width: 3px;
+          background: linear-gradient(to top, #4A7C23, #90C695);
+          border-radius: 50% 50% 0 0;
+          transform-origin: bottom center;
+          animation: grassSway 3s ease-in-out infinite;
+        }
+        
+        @keyframes grassSway {
+          0%, 100% { transform: rotate(-5deg); }
+          50% { transform: rotate(5deg); }
+        }
+        
+        /* Add grass to sections with .has-grass class */
+        .section.has-grass {
+          position: relative;
+          padding-bottom: 4rem;
         }
       `;
       document.head.appendChild(style);
     }
 
-    // Create particles periodically
-    setInterval(createParticle, 2000);
-    
-    // Create initial particles
-    for (let i = 0; i < 8; i++) {
-      setTimeout(createParticle, i * 300);
+    // Check time and enable fireflies (evening/night mode: 6PM - 6AM)
+    const checkTimeForFireflies = () => {
+      const hour = new Date().getHours();
+      const isNightTime = hour >= 18 || hour < 6;
+      fireflyContainer.style.display = isNightTime ? 'block' : 'none';
+      return isNightTime;
+    };
+
+    // Create initial fireflies if night time
+    if (checkTimeForFireflies()) {
+      for (let i = 0; i < 15; i++) {
+        setTimeout(createFirefly, i * 200);
+      }
+    }
+
+    // Check every hour for time change
+    setInterval(checkTimeForFireflies, 3600000);
+
+    // === 3. Add swaying grass to sections ===
+    const addGrassToSection = (section) => {
+      const grassContainer = document.createElement('div');
+      grassContainer.className = 'grass-container';
+      
+      // Create grass blades
+      const bladeCount = Math.floor(section.offsetWidth / 8);
+      for (let i = 0; i < bladeCount; i++) {
+        const blade = document.createElement('div');
+        blade.className = 'grass-blade';
+        const height = Math.random() * 30 + 20;
+        const delay = Math.random() * 2;
+        const duration = Math.random() * 1 + 2.5;
+        blade.style.cssText = `
+          left: ${(i / bladeCount) * 100}%;
+          height: ${height}px;
+          animation-delay: ${delay}s;
+          animation-duration: ${duration}s;
+          opacity: ${Math.random() * 0.3 + 0.5};
+        `;
+        grassContainer.appendChild(blade);
+      }
+      
+      section.appendChild(grassContainer);
+      section.classList.add('has-grass');
+    };
+
+    // Add grass to every other section for variety (not on mobile)
+    if (!isMobile) {
+      document.querySelectorAll('.section').forEach((section, index) => {
+        if (index % 2 === 1) {
+          addGrassToSection(section);
+        }
+      });
     }
   }
 });
@@ -611,4 +734,125 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
+});
+
+// ===== Dark Mode Toggle (Day/Night Forest Theme) =====
+const initThemeToggle = () => {
+  // Check for saved theme preference or system preference
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const currentHour = new Date().getHours();
+  const isNightTime = currentHour >= 18 || currentHour < 6;
+  
+  // Set initial theme
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme === 'dark' ? 'dark' : '');
+  } else if (prefersDark || isNightTime) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  
+  // Create theme toggle button if it doesn't exist
+  const navRight = document.querySelector('.nav-right');
+  const navSocial = document.querySelector('.nav-social');
+  
+  if ((navRight || navSocial) && !document.querySelector('.theme-toggle')) {
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i><i class="fas fa-sun"></i>';
+    
+    // Insert into nav-social or nav-right
+    if (navSocial) {
+      navSocial.appendChild(themeToggle);
+    } else if (navRight) {
+      const ctaNav = navRight.querySelector('.cta-nav');
+      if (ctaNav) {
+        navRight.insertBefore(themeToggle, ctaNav);
+      } else {
+        navRight.appendChild(themeToggle);
+      }
+    }
+    
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme === 'dark' ? 'dark' : '');
+      localStorage.setItem('theme', newTheme);
+      
+      // Update firefly visibility
+      const fireflyContainer = document.querySelector('.firefly-container');
+      if (fireflyContainer) {
+        if (newTheme === 'dark') {
+          fireflyContainer.style.display = 'block';
+          // Create fireflies if switching to dark mode
+          const existingFireflies = fireflyContainer.querySelectorAll('.firefly');
+          if (existingFireflies.length === 0) {
+            // Trigger firefly creation - dispatch custom event
+            document.dispatchEvent(new CustomEvent('createFireflies'));
+          }
+        } else {
+          fireflyContainer.style.display = 'none';
+        }
+      }
+      
+      // Animate the toggle
+      themeToggle.style.transform = 'rotate(360deg) scale(1.2)';
+      setTimeout(() => {
+        themeToggle.style.transform = '';
+      }, 400);
+    });
+  }
+  
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : '');
+    }
+  });
+};
+
+// Initialize theme toggle when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initThemeToggle);
+} else {
+  initThemeToggle();
+}
+
+// Listen for firefly creation event (from theme toggle)
+document.addEventListener('createFireflies', () => {
+  const fireflyContainer = document.querySelector('.firefly-container');
+  if (fireflyContainer && fireflyContainer.querySelectorAll('.firefly').length === 0) {
+    // Create fireflies dynamically
+    for (let i = 0; i < 15; i++) {
+      setTimeout(() => {
+        const firefly = document.createElement('div');
+        const size = Math.random() * 4 + 2;
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+        const duration = Math.random() * 8 + 12;
+        const glowDuration = Math.random() * 2 + 1.5;
+        
+        firefly.className = 'firefly';
+        firefly.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          background: radial-gradient(circle, rgba(255, 255, 180, 1) 0%, rgba(180, 255, 100, 0.8) 40%, transparent 70%);
+          border-radius: 50%;
+          left: ${startX}px;
+          top: ${startY}px;
+          box-shadow: 0 0 ${size * 3}px rgba(200, 255, 100, 0.8), 0 0 ${size * 6}px rgba(180, 255, 100, 0.4);
+          animation: fireflyFloat${Math.floor(Math.random() * 3)} ${duration}s ease-in-out infinite, fireflyGlow ${glowDuration}s ease-in-out infinite;
+          opacity: 0;
+        `;
+        
+        fireflyContainer.appendChild(firefly);
+        
+        // Remove after duration
+        setTimeout(() => firefly.remove(), duration * 1000);
+      }, i * 200);
+    }
+  }
 });
