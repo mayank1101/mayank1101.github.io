@@ -140,11 +140,13 @@ if (nav) {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-      nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
-      nav.style.background = 'rgba(2, 6, 23, 0.95)';
+      nav.style.boxShadow = '0 8px 32px rgba(139, 126, 106, 0.2)';
+      nav.style.background = 'rgba(255, 248, 240, 0.98)';
+      nav.style.backdropFilter = 'blur(12px)';
     } else {
-      nav.style.boxShadow = 'none';
-      nav.style.background = 'rgba(2, 6, 23, 0.8)';
+      nav.style.boxShadow = '0 4px 12px rgba(139, 126, 106, 0.12)';
+      nav.style.background = 'rgba(255, 248, 240, 0.95)';
+      nav.style.backdropFilter = 'blur(10px)';
     }
 
     lastScroll = currentScroll;
