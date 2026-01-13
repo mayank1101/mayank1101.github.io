@@ -800,7 +800,8 @@ const initThemeToggle = () => {
   if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
     updateThemeColor('dark');
-  } else if (savedTheme === 'light') {
+  } else {
+    // Default to light mode (remove dark theme attribute if present)
     document.documentElement.removeAttribute('data-theme');
     updateThemeColor('light');
   }
