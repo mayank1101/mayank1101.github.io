@@ -4,7 +4,7 @@ title: "Understanding Loss Functions: A Complete Guide from Theory to Practice"
 date: 2026-01-03
 series: "Deep Learning Mastery Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-31-loss-functions/loss-function-comparison.png"
+series_image: "/assets/images/2026-01-03-loss-functions/loss-functions.png"
 excerpt: "Master loss functions from MSE to Focal Loss with comprehensive theory, implementation, and practical guidance for choosing the right loss."
 ---
 
