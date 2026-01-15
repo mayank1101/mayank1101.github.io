@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirited Away Theme Test</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .test-container {
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .test-section {
+      margin: 3rem auto;
+      max-width: 800px;
+    }
+
+    .test-card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 1rem 0;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 1rem;
+      margin: 0.5rem 0;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .feature-list li::before {
+      content: '✨';
+      font-size: 1.5rem;
+    }
+
+    .theme-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 1rem 2rem;
+      background: var(--card);
+      border-radius: 50px;
+      box-shadow: var(--shadow-large);
+      cursor: pointer;
+      border: 2px solid var(--accent-green);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .theme-switcher:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(139, 126, 106, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background glow orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <button class="theme-switcher" onclick="toggleTheme()">
+    Toggle Dark Mode to See Lanterns
+  </button>
+
+  <div class="test-container">
+    <div class="test-section">
+      <h1 style="text-align: center; color: var(--accent-green); margin-bottom: 2rem;">
+        🎋 Spirited Away Theme Test 🏮
+      </h1>
+
+      <div class="test-card card">
+        <h2>Features Implemented:</h2>
+        <ul class="feature-list">
+          <li>
+            <strong>Floating Lanterns:</strong>
+            Soft glowing lanterns float upward continuously. Switch to dark mode to see more (8 vs 5).
+            They have warm orange/yellow glow with gentle swaying motion.
+          </li>
+          <li>
+            <strong>Water Ripple Effect:</strong>
+            Hover over this card! A gentle blue water ripple expands from the center,
+            creating a serene pond effect.
+          </li>
+          <li>
+            <strong>Paper Charms (Ofuda):</strong>
+            White paper strips flutter and fall from the top, spinning and rotating
+            like protective charms in a breeze.
+          </li>
+        </ul>
+      </div>
+
+      <div class="test-card card" style="margin-top: 2rem;">
+        <h2>How to Test:</h2>
+        <ol style="line-height: 2;">
+          <li>🏮 <strong>Lanterns:</strong> Look for glowing orbs floating upward from bottom. Toggle dark mode for better visibility.</li>
+          <li>💧 <strong>Water Ripples:</strong> Hover over any card with your mouse - you should see a blue ripple expand outward.</li>
+          <li>📜 <strong>Paper Charms:</strong> Look for white paper strips falling from the top, fluttering as they fall.</li>
+        </ol>
+      </div>
+
+      <div class="test-card card" style="margin-top: 2rem;">
+        <h2>Additional Cards for Testing</h2>
+        <p>Hover over these cards to see the water ripple effect in action:</p>
+      </div>
+
+      <div class="test-card card">
+        <h3>Card 1</h3>
+        <p>Hover me to see the gentle water ripple!</p>
+      </div>
+
+      <div class="test-card card">
+        <h3>Card 2</h3>
+        <p>I also have the ripple effect!</p>
+      </div>
+
+      <div class="test-card card">
+        <h3>Card 3</h3>
+        <p>Try hovering over me too!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/animations.js"></script>
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      if (newTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+
+      const button = document.querySelector('.theme-switcher');
+      button.textContent = newTheme === 'dark'
+        ? 'Switch to Light Mode'
+        : 'Toggle Dark Mode to See Lanterns';
+    }
+
+    // Add console log to verify animations are loading
+    console.log('🎋 Spirited Away Test Page Loaded');
+    console.log('✨ Looking for lanterns, charms, and ripples...');
+
+    // Check if elements are being created
+    setTimeout(() => {
+      const lanterns = document.querySelectorAll('.spirit-lantern');
+      const charms = document.querySelectorAll('.paper-charm');
+      console.log(`🏮 Lanterns found: ${lanterns.length}`);
+      console.log(`📜 Paper charms found: ${charms.length}`);
+
+      if (lanterns.length === 0) {
+        console.warn('⚠️ No lanterns detected - they may still be initializing');
+      }
+      if (charms.length === 0) {
+        console.warn('⚠️ No paper charms detected - they may still be initializing');
+      }
+    }, 2000);
+  </script>
+</body>
+</html>
