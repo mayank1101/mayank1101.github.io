@@ -467,79 +467,79 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(img);
   });
 
-  // ===== SPIRITED AWAY THEME - Lanterns, Water Ripples & Paper Charms =====
+
+  // ===== HOWL'S MOVING CASTLE THEME - Sparkles, Steam & Shimmer =====
   if (!prefersReducedMotion) {
-    
-    // === 1. Floating Lanterns Container ===
-    const lanternContainer = document.createElement('div');
-    lanternContainer.className = 'lantern-container';
-    lanternContainer.style.cssText = `
+
+    // === 1. Floating Sparkles Following Cursor ===
+    const sparkleContainer = document.createElement('div');
+    sparkleContainer.className = 'sparkle-cursor-container';
+    sparkleContainer.style.cssText = `
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 1;
+      z-index: 9999;
       overflow: hidden;
     `;
-    document.body.appendChild(lanternContainer);
+    document.body.appendChild(sparkleContainer);
 
-    // Create floating lanterns
-    const createLantern = () => {
-      const lantern = document.createElement('div');
-      const size = Math.random() * 20 + 15; // 15-35px
-      const startX = Math.random() * window.innerWidth;
-      const duration = Math.random() * 15 + 20; // 20-35s to float up
-      const swayDuration = Math.random() * 3 + 2; // 2-5s sway
-      const delay = Math.random() * 10;
-      const hue = Math.random() > 0.5 ?
-        `rgba(255, 180, 100, ${Math.random() * 0.3 + 0.5})` : // warm orange
-        `rgba(255, 220, 150, ${Math.random() * 0.3 + 0.5})`; // warm yellow
-      
-      lantern.className = 'spirit-lantern';
-      lantern.innerHTML = `
-        <svg viewBox="0 0 40 60" width="${size}" height="${size * 1.5}">
-          <defs>
-            <radialGradient id="lanternGlow${Date.now()}" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" style="stop-color:rgba(255, 250, 200, 0.9)"/>
-              <stop offset="50%" style="stop-color:${hue}"/>
-              <stop offset="100%" style="stop-color:rgba(255, 150, 50, 0.2)"/>
-            </radialGradient>
-          </defs>
-          <!-- Lantern body -->
-          <ellipse cx="20" cy="30" rx="15" ry="20" fill="url(#lanternGlow${Date.now()})" opacity="0.8"/>
-          <!-- Lantern frame lines -->
-          <path d="M8 15 Q20 5 32 15" stroke="rgba(180, 100, 50, 0.4)" stroke-width="1" fill="none"/>
-          <path d="M8 45 Q20 55 32 45" stroke="rgba(180, 100, 50, 0.4)" stroke-width="1" fill="none"/>
-          <line x1="8" y1="15" x2="8" y2="45" stroke="rgba(180, 100, 50, 0.3)" stroke-width="0.5"/>
-          <line x1="32" y1="15" x2="32" y2="45" stroke="rgba(180, 100, 50, 0.3)" stroke-width="0.5"/>
-          <!-- Inner glow -->
-          <ellipse cx="20" cy="30" rx="8" ry="12" fill="rgba(255, 255, 220, 0.6)"/>
-        </svg>
-      `;
-      lantern.style.cssText = `
+    let lastSparkleTime = 0;
+    const sparkleThrottle = 50; // Create sparkle every 50ms
+
+    const createCursorSparkle = (x, y) => {
+      const now = Date.now();
+      if (now - lastSparkleTime < sparkleThrottle) return;
+      lastSparkleTime = now;
+
+      const sparkle = document.createElement('div');
+      const size = Math.random() * 8 + 4; // 4-12px
+      const duration = Math.random() * 1000 + 800; // 800-1800ms
+      const colors = [
+        'rgba(255, 215, 0, 0.9)',     // Gold
+        'rgba(255, 182, 193, 0.9)',   // Light pink
+        'rgba(147, 112, 219, 0.9)',   // Purple
+        'rgba(135, 206, 250, 0.9)',   // Sky blue
+        'rgba(255, 255, 255, 0.9)'    // White
+      ];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      // Random offset from cursor
+      const offsetX = (Math.random() - 0.5) * 30;
+      const offsetY = (Math.random() - 0.5) * 30;
+
+      sparkle.className = 'cursor-sparkle';
+      sparkle.style.cssText = `
         position: absolute;
-        left: ${startX}px;
-        bottom: -80px;
-        filter: drop-shadow(0 0 ${size/2}px rgba(255, 200, 100, 0.6));
-        animation: lanternFloat ${duration}s ease-in-out ${delay}s infinite, lanternSway ${swayDuration}s ease-in-out infinite;
-        opacity: 0;
+        left: ${x + offsetX}px;
+        top: ${y + offsetY}px;
+        width: ${size}px;
+        height: ${size}px;
+        background: ${color};
+        border-radius: 50%;
+        pointer-events: none;
+        animation: cursorSparkleFloat ${duration}ms ease-out forwards;
+        box-shadow: 0 0 ${size * 2}px ${color}, 0 0 ${size * 4}px ${color.replace('0.9', '0.4')};
       `;
-      
-      lanternContainer.appendChild(lantern);
-      
-      // Remove and recreate after animation
-      setTimeout(() => {
-        lantern.remove();
-        createLantern();
-      }, (duration + delay) * 1000);
+
+      sparkleContainer.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), duration);
     };
 
-    // === 2. Paper Charms (Ofuda) Container ===
-    const charmContainer = document.createElement('div');
-    charmContainer.className = 'charm-container';
-    charmContainer.style.cssText = `
+    // Track cursor movement
+    if (!isMobile) {
+      document.addEventListener('mousemove', (e) => {
+        createCursorSparkle(e.clientX, e.clientY);
+      });
+    }
+
+    // === 2. Rising Steam/Smoke Wisps ===
+    const steamContainer = document.createElement('div');
+    steamContainer.className = 'steam-container';
+    steamContainer.style.cssText = `
       position: fixed;
       top: 0;
       left: 0;
@@ -549,259 +549,232 @@ document.addEventListener('DOMContentLoaded', () => {
       z-index: 0;
       overflow: hidden;
     `;
-    document.body.appendChild(charmContainer);
+    document.body.appendChild(steamContainer);
 
-    // Create paper charms
-    const createPaperCharm = () => {
-      const charm = document.createElement('div');
-      const width = Math.random() * 15 + 10; // 10-25px wide
-      const height = width * 2.5; // Paper ratio
+    const createSteamWisp = () => {
+      const wisp = document.createElement('div');
+      const width = Math.random() * 80 + 40; // 40-120px
+      const height = Math.random() * 150 + 100; // 100-250px
       const startX = Math.random() * window.innerWidth;
-      const duration = Math.random() * 20 + 15;
-      const flutterDuration = Math.random() * 2 + 1;
-      const delay = Math.random() * 8;
-      
-      charm.className = 'paper-charm';
-      charm.style.cssText = `
+      const duration = Math.random() * 15 + 15; // 15-30s
+      const swayDuration = Math.random() * 4 + 3; // 3-7s
+      const delay = Math.random() * 5;
+      const opacity = Math.random() * 0.15 + 0.05; // 0.05-0.2
+
+      wisp.className = 'steam-wisp';
+      wisp.innerHTML = `
+        <svg width="${width}" height="${height}" viewBox="0 0 100 150" style="filter: blur(20px);">
+          <defs>
+            <radialGradient id="steamGradient${Date.now()}" cx="50%" cy="70%" r="60%">
+              <stop offset="0%" style="stop-color:rgba(255, 255, 255, ${opacity * 2})"/>
+              <stop offset="50%" style="stop-color:rgba(200, 180, 255, ${opacity * 1.5})"/>
+              <stop offset="100%" style="stop-color:rgba(150, 130, 200, 0)"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="50" cy="75" rx="40" ry="60" fill="url(#steamGradient${Date.now()})" opacity="${opacity}"/>
+        </svg>
+      `;
+
+      wisp.style.cssText = `
         position: absolute;
-        width: ${width}px;
-        height: ${height}px;
         left: ${startX}px;
-        top: -${height + 20}px;
-        background: linear-gradient(180deg,
-          rgba(255, 250, 240, 0.9) 0%,
-          rgba(255, 245, 230, 0.8) 50%,
-          rgba(245, 235, 220, 0.7) 100%);
-        border-radius: 2px;
-        box-shadow: 0 2px 4px rgba(139, 126, 106, 0.2);
-        animation: charmFall ${duration}s ease-in-out ${delay}s infinite, charmFlutter ${flutterDuration}s ease-in-out infinite;
+        bottom: -${height}px;
+        animation: steamRise ${duration}s ease-out ${delay}s infinite, steamSway ${swayDuration}s ease-in-out infinite;
         opacity: 0;
       `;
-      
-      // Add kanji-like decoration
-      const decoration = document.createElement('div');
-      decoration.style.cssText = `
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 50%;
-        background: linear-gradient(180deg,
-          rgba(200, 80, 80, 0.3) 0%,
-          rgba(200, 80, 80, 0.1) 100%);
-        border-radius: 1px;
-      `;
-      charm.appendChild(decoration);
-      
-      charmContainer.appendChild(charm);
-      
+
+      steamContainer.appendChild(wisp);
+
       setTimeout(() => {
-        charm.remove();
-        createPaperCharm();
+        wisp.remove();
+        createSteamWisp(); // Create new wisp to replace this one
       }, (duration + delay) * 1000);
     };
 
-    // Add Spirited Away theme animations
-    if (!document.querySelector('#spirited-away-styles')) {
+    // === 3. Magical Shimmer Borders on Cards ===
+    const addShimmerBorders = () => {
+      document.querySelectorAll('.card, .blog-card, .blog-card-list').forEach(card => {
+        // Create shimmer border element
+        const shimmer = document.createElement('div');
+        shimmer.className = 'card-shimmer-border';
+        shimmer.style.cssText = `
+          position: absolute;
+          inset: -2px;
+          border-radius: inherit;
+          padding: 2px;
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 215, 0, 0.4) 25%,
+            rgba(147, 112, 219, 0.4) 50%,
+            rgba(255, 182, 193, 0.4) 75%,
+            transparent 100%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 10;
+          animation: shimmerMove 3s linear infinite;
+        `;
+
+        // Ensure card has proper positioning
+        if (getComputedStyle(card).position === 'static') {
+          card.style.position = 'relative';
+        }
+
+        card.appendChild(shimmer);
+
+        // Show shimmer on hover
+        card.addEventListener('mouseenter', () => {
+          shimmer.style.opacity = '1';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          shimmer.style.opacity = '0';
+        });
+      });
+    };
+
+    // Add Howl's Moving Castle animations to stylesheet
+    if (!document.querySelector('#howls-castle-styles')) {
       const style = document.createElement('style');
-      style.id = 'spirited-away-styles';
+      style.id = 'howls-castle-styles';
       style.textContent = `
-        /* Lantern floating up */
-        @keyframes lanternFloat {
+        /* Cursor sparkle float animation */
+        @keyframes cursorSparkleFloat {
           0% {
-            bottom: -80px;
+            opacity: 1;
+            transform: translate(0, 0) scale(1) rotate(0deg);
+          }
+          50% {
+            opacity: 0.8;
+            transform: translate(${(Math.random() - 0.5) * 40}px, ${-Math.random() * 40 - 20}px) scale(1.2) rotate(180deg);
+          }
+          100% {
             opacity: 0;
-            transform: translateX(0);
+            transform: translate(${(Math.random() - 0.5) * 60}px, ${-Math.random() * 80 - 40}px) scale(0.5) rotate(360deg);
           }
-          5% {
+        }
+
+        /* Steam wisp rising */
+        @keyframes steamRise {
+          0% {
+            bottom: -200px;
+            opacity: 0;
+          }
+          10% {
             opacity: 0.8;
           }
-          95% {
-            opacity: 0.8;
+          80% {
+            opacity: 0.6;
           }
           100% {
             bottom: 110vh;
             opacity: 0;
-            transform: translateX(${Math.random() > 0.5 ? '' : '-'}${Math.random() * 50}px);
           }
         }
-        
-        /* Lantern gentle sway */
-        @keyframes lanternSway {
+
+        /* Steam wisp swaying */
+        @keyframes steamSway {
           0%, 100% {
-            transform: translateX(0) rotate(-3deg);
-          }
-          50% {
-            transform: translateX(15px) rotate(3deg);
-          }
-        }
-        
-        /* Paper charm falling */
-        @keyframes charmFall {
-          0% {
-            top: -60px;
-            opacity: 0;
-          }
-          5% {
-            opacity: 0.7;
-          }
-          90% {
-            opacity: 0.5;
-          }
-          100% {
-            top: 110vh;
-            opacity: 0;
-          }
-        }
-        
-        /* Paper charm flutter */
-        @keyframes charmFlutter {
-          0%, 100% {
-            transform: rotateY(0deg) rotateZ(-10deg);
+            transform: translateX(-20px) scale(1);
           }
           25% {
-            transform: rotateY(30deg) rotateZ(5deg);
+            transform: translateX(30px) scale(1.1);
           }
           50% {
-            transform: rotateY(0deg) rotateZ(10deg);
+            transform: translateX(-10px) scale(0.95);
           }
           75% {
-            transform: rotateY(-30deg) rotateZ(-5deg);
+            transform: translateX(20px) scale(1.05);
           }
         }
-        
-        /* Water ripple effect on card hover */
-        .card::after,
-        .blog-card::after,
-        .blog-card-list::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border-radius: 50%;
-          background: radial-gradient(circle,
-            rgba(135, 206, 235, 0.3) 0%,
-            rgba(180, 215, 233, 0.1) 50%,
-            transparent 70%);
-          transform: translate(-50%, -50%);
-          transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
-          opacity: 0;
-          pointer-events: none;
-          z-index: -1;
+
+        /* Shimmer border animation */
+        @keyframes shimmerMove {
+          0% {
+            background-position: -200% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
         }
-        
-        .card:hover::after,
-        .blog-card:hover::after,
-        .blog-card-list:hover::after {
-          width: 300%;
-          height: 300%;
-          opacity: 1;
+
+        /* Enhanced shimmer with rotation */
+        .card-shimmer-border {
+          transition: opacity 0.5s ease;
+          background-size: 200% 100%;
         }
-        
-        /* Spirit orb glow for badges */
-        .badges span::before {
-          content: '';
-          position: absolute;
-          inset: -3px;
-          border-radius: 25px;
-          background: linear-gradient(45deg,
-            rgba(255, 200, 100, 0.3),
-            rgba(255, 150, 100, 0.2),
-            rgba(212, 181, 232, 0.3));
-          opacity: 0;
-          transition: opacity 0.4s ease;
-          z-index: -1;
-        }
-        
-        .badges span:hover::before {
-          opacity: 1;
-          animation: spiritGlow 2s ease-in-out infinite;
-        }
-        
-        @keyframes spiritGlow {
-          0%, 100% { filter: blur(8px); }
-          50% { filter: blur(12px); }
-        }
-        
-        /* Bathhouse lantern glow for section headers */
-        h2 i {
-          position: relative;
-        }
-        
-        h2 i::after {
-          content: '';
-          position: absolute;
-          inset: -10px;
-          border-radius: 50%;
-          background: radial-gradient(circle,
-            rgba(255, 200, 100, 0.4) 0%,
-            transparent 70%);
-          animation: iconLanternGlow 3s ease-in-out infinite;
-          z-index: -1;
-        }
-        
-        @keyframes iconLanternGlow {
+
+        /* Magical glow pulse on hover */
+        @keyframes magicalGlow {
           0%, 100% {
-            opacity: 0.5;
-            transform: scale(1);
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3))
+                    drop-shadow(0 0 10px rgba(147, 112, 219, 0.2));
           }
           50% {
-            opacity: 0.8;
-            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))
+                    drop-shadow(0 0 20px rgba(147, 112, 219, 0.3));
           }
+        }
+
+        .card:hover,
+        .blog-card:hover,
+        .blog-card-list:hover {
+          animation: magicalGlow 2s ease-in-out infinite;
+        }
+
+        /* Star sparkle variant for cursor */
+        .cursor-sparkle:nth-child(3n) {
+          clip-path: polygon(
+            50% 0%, 61% 35%, 98% 35%, 68% 57%,
+            79% 91%, 50% 70%, 21% 91%, 32% 57%,
+            2% 35%, 39% 35%
+          );
+        }
+
+        /* Diamond sparkle variant */
+        .cursor-sparkle:nth-child(3n+1) {
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
       `;
       document.head.appendChild(style);
     }
 
-    // Create initial lanterns (more visible in dark mode)
-    const createInitialLanterns = () => {
-      const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-      const lanternCount = isDarkMode ? 8 : 5;
-      for (let i = 0; i < lanternCount; i++) {
-        setTimeout(createLantern, i * 800);
+    // Initialize steam wisps
+    const createInitialSteamWisps = () => {
+      const wispCount = isMobile ? 3 : 6;
+      for (let i = 0; i < wispCount; i++) {
+        setTimeout(createSteamWisp, i * 1500);
       }
     };
 
-    // Create initial paper charms
-    const createInitialCharms = () => {
-      for (let i = 0; i < 4; i++) {
-        setTimeout(createPaperCharm, i * 2000);
-      }
-    };
+    // Initialize shimmer borders
+    addShimmerBorders();
 
-    // Initialize
-    createInitialLanterns();
-    createInitialCharms();
-
-    // Listen for theme changes to adjust lantern count
-    const themeObserver = new MutationObserver((mutations) => {
+    // Re-add shimmer borders when new cards are added dynamically
+    const cardObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'data-theme') {
-          // Add more lanterns in dark mode
-          const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-          if (isDarkMode) {
-            for (let i = 0; i < 3; i++) {
-              setTimeout(createLantern, i * 500);
-            }
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === 1 &&
+              (node.classList.contains('card') ||
+               node.classList.contains('blog-card') ||
+               node.classList.contains('blog-card-list'))) {
+            addShimmerBorders();
           }
-        }
+        });
       });
     });
-    
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['data-theme']
+
+    cardObserver.observe(document.body, {
+      childList: true,
+      subtree: true
     });
 
-    // === 3. Add water ripple effect on interactive elements ===
-    document.querySelectorAll('.card, .blog-card, .blog-card-list').forEach(card => {
-      card.style.position = 'relative';
-      card.style.overflow = 'hidden';
-    });
+    // Start creating steam wisps
+    createInitialSteamWisps();
   }
 });
 
