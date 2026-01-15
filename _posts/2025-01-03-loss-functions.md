@@ -111,8 +111,8 @@ Notice how MSE punishes the larger error 25x more (even though it's only 5x larg
 
 **Mean Absolute Error (MAE)**:
 
-- Error 1: |$20,000| = 20,000$
-- Error 2: |$100,000| = 100,000$
+- Error 1: ||$20,000|| = 20,000$
+- Error 2: ||$100,000|| = 100,000$
 
 MAE punishes proportionally, so `5x` the error means `5x the penalty`. This makes it more robust to outliers.
 
