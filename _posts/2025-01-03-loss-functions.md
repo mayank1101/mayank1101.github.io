@@ -193,7 +193,7 @@ $$L_{\text{MAE}} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
 
 $$\frac{\partial L_{\text{MAE}}}{\partial \hat{y}_i} = \frac{1}{n} \text{sign}(\hat{y}_i - y_i)$$
 
-Notice the gradient is constant (±1/n)—it doesn't grow with the error size. This makes MAE more robust to outliers.
+Notice the gradient is constant (±1/n), it doesn't grow with the error size. This makes MAE more robust to outliers.
 
 **When to Use MAE**
 
