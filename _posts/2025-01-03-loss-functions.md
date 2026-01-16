@@ -48,16 +48,6 @@ An effective loss function should:
 4. **Handle edge cases**: Work well with outliers, class imbalance, etc.
 5. **Be numerically stable**: Avoid overflow, underflow, and NaN values
 
-### Historical Context
-
-The choice of loss function has evolved with our understanding of machine learning:
-
-- **1950s-1980s**: Mean Squared Error dominated, borrowed from statistics
-- **1990s**: Cross-entropy emerged for classification, inspired by information theory
-- **2000s**: Specialized losses like hinge loss (SVM) and ranking losses
-- **2010s**: Modern losses addressing real-world challenges: focal loss for imbalance, contrastive/triplet losses for similarity learning
-- **2020s**: Task-specific losses for complex objectives (object detection, segmentation, generation)
-
 ## The Role of Loss Functions in Learning
 
 ### The Training Loop
@@ -660,18 +650,9 @@ Where:
    - Pushes embeddings apart until distance $\geq m$
    - Zero loss when $D \geq m$ (far enough)
 
-**When to Use Contrastive Loss**
+**Why the Margin?**
 
-**Good for:**
-- Face verification (same person or different?)
-- Signature verification
-- Siamese networks
-- Learning embeddings from pair labels
-
-**Bad for:**
-- When you have triplet information (use triplet loss)
-- Classification (use cross-entropy)
-- When pairs are hard to define
+The margin $m$ prevents the model from collapsing all dissimilar pairs to zero distance. It ensures a minimum separation between dissimilar items.
 
 **Practical Example**
 
@@ -727,20 +708,6 @@ Where:
 Unlike contrastive loss which cares about absolute distances, triplet loss cares about **relative** distances:
 
 "Make the anchor closer to the positive than to the negative by at least margin $m$."
-
-**When to Use Triplet Loss**
-
-**Good for:**
-- Face recognition (FaceNet architecture)
-- Person re-identification
-- Image retrieval
-- Ranking tasks
-- When you have clear positive/negative examples
-
-**Bad for:**
-- Classification (use cross-entropy)
-- When triplets are hard to mine
-- Small datasets (hard to find good triplets)
 
 **Triplet Mining**
 
@@ -830,27 +797,6 @@ Task Type?
 | **Metric Learning** | Contrastive | Pair-based similarity | Have triplet info |
 | | Triplet | Face recognition, ranking | Small datasets |
 | **Distribution** | KL Divergence | VAE, distillation | Distance metric needed |
-
-### Practical Guidelines
-
-**1. Start Simple**
-- Binary: BCE with Logits
-- Multi-class: Sparse CCE
-- Regression: MSE
-
-**2. Adjust for Data Characteristics**
-- Outliers? → Switch to MAE or Huber
-- Imbalance? → Try Focal Loss or Weighted Loss
-- Segmentation? → Add Dice Loss
-
-**3. Consider Task Requirements**
-- Need probabilities? → Use cross-entropy (not hinge)
-- Need margin? → Use hinge or triplet loss
-- Need robustness? → Use MAE or Huber
-
-**4. Combine Losses When Needed**
-- Segmentation: `Total Loss = 0.5 × BCE + 0.5 × Dice`
-- Multi-task: `Total Loss = α × Task1 + β × Task2`
 
 ## Practical Implementation Guide
 
