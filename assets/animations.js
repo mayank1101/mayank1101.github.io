@@ -642,23 +642,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.head.appendChild(style);
     }
 
-    // Check time and enable fireflies (evening/night mode: 6PM - 6AM)
-    const checkTimeForFireflies = () => {
-      const hour = new Date().getHours();
-      const isNightTime = hour >= 18 || hour < 6;
-      fireflyContainer.style.display = isNightTime ? 'block' : 'none';
-      return isNightTime;
-    };
-
-    // Create initial fireflies if night time
-    if (checkTimeForFireflies()) {
-      for (let i = 0; i < 15; i++) {
-        setTimeout(createFirefly, i * 200);
-      }
+    // Always create fireflies - CSS controls visibility based on dark mode
+    for (let i = 0; i < 15; i++) {
+      setTimeout(createFirefly, i * 200);
     }
-
-    // Check every hour for time change
-    setInterval(checkTimeForFireflies, 3600000);
 
     // === 3. Add swaying grass to sections ===
     const addGrassToSection = (section) => {
@@ -852,19 +839,14 @@ const initThemeToggle = () => {
       // Update theme-color meta tag for mobile browsers
       updateThemeColor(newTheme);
 
-      // Update firefly visibility
+      // Create fireflies if needed when switching to dark mode
+      // CSS handles visibility via [data-theme="dark"] .firefly-container
       const fireflyContainer = document.querySelector('.firefly-container');
-      if (fireflyContainer) {
-        if (newTheme === 'dark') {
-          fireflyContainer.style.display = 'block';
-          // Create fireflies if switching to dark mode
-          const existingFireflies = fireflyContainer.querySelectorAll('.firefly');
-          if (existingFireflies.length === 0) {
-            // Trigger firefly creation - dispatch custom event
-            document.dispatchEvent(new CustomEvent('createFireflies'));
-          }
-        } else {
-          fireflyContainer.style.display = 'none';
+      if (fireflyContainer && newTheme === 'dark') {
+        const existingFireflies = fireflyContainer.querySelectorAll('.firefly');
+        if (existingFireflies.length === 0) {
+          // Trigger firefly creation - dispatch custom event
+          document.dispatchEvent(new CustomEvent('createFireflies'));
         }
       }
       

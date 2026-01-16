@@ -97,6 +97,11 @@
     );
 }
 
+/* Firefly container - hidden by default in light mode */
+.firefly-container {
+  display: none !important;
+}
+
 /* Fireflies visible in dark mode */
 [data-theme="dark"] .firefly-container {
   display: block !important;
