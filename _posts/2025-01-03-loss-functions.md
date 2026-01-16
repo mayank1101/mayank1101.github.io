@@ -488,7 +488,7 @@ print(f"Focal: {focal_loss(y_true, y_pred):.4f}")
 
 ## Multi-Class Classification Losses: Choosing Among Many
 
-When you have more than two classes, you're classifying images into 1000 categories, predicting which of 50 customers will buy a product—you need multi-class losses.
+When you have more than two classes, you're classifying images into 1000 categories, predicting which of 50 customers will buy a product, you'll need multi-class losses.
 
 ### Categorical Cross-Entropy (CCE)
 
@@ -608,7 +608,7 @@ Beyond standard regression and classification, specialized tasks require special
 
 **The Intuition**
 
-Hinge loss comes from Support Vector Machines (SVM). Instead of just getting the answer right, it wants the model to be confidently right—to have a "margin" of safety.
+Hinge loss comes from Support Vector Machines (SVM). Instead of just getting the answer right, it wants the model to be confidently right to have a "margin" of safety.
 
 **Mathematical Definition**
 
