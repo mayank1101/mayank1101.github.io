@@ -8,7 +8,7 @@ series_image: "/assets/images/2026-01-03-loss-functions/loss-functions.png"
 excerpt: "Master loss functions from MSE to Focal Loss with comprehensive theory, implementation, and practical guidance for choosing the right loss."
 ---
 
-Imagine you're teaching a child to play darts. After each throw, you need to give feedback—but how do you measure how far off they were? You could simply count hits and misses, but that doesn't tell the whole story. A dart that barely misses the bullseye is very different from one that hits the wall. You need a scoring system that captures the nuance of their performance and guides them toward improvement. This is exactly what loss functions do for neural networks, they measure how far predictions are from the truth and guide the learning process.
+Imagine you're teaching a child to play darts. After each throw, you need to give feedback, but how do you measure how far off they were? You could simply count hits and misses, but that doesn't tell the whole story. A dart that barely misses the bullseye is very different from one that hits the wall. You need a scoring system that captures the nuance of their performance and guides them toward improvement. This is exactly what loss functions do for neural networks, they measure how far predictions are from the truth and guide the learning process.
 
 ## Table of Contents
 
