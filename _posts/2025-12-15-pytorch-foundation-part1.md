@@ -676,8 +676,8 @@ This pattern forms the foundation of ALL deep learning training in PyTorch.
 
 By implementing linear regression from scratch, you've learned:
 
-- **Tensors** are the fundamental data structure—understand creation, operations, and attributes.
-- **Device management** is crucial—write device-agnostic code for portability.
+- **Tensors** are the fundamental data structure, to understand creation, operations, and attributes.
+- **Device management** is crucial to write device-agnostic code for portability.
 - **Autograd** automatically computes gradients through computational graphs.
 - **`.backward()`** propagates gradients; always zero them between iterations.
 - **Gradient descent** can be implemented from scratch using only tensors and autograd.
