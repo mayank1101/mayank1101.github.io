@@ -545,7 +545,7 @@ Batch and layer normalization represent fundamental breakthroughs in deep learni
 - Placement matters: typically before activation functions
 - Choose based on architecture: BN for CNNs, LN for Transformers/RNNs
 
-As deep learning continues to evolve, normalization remains a critical component of modern architectures. Understanding these techniques deeply—from mathematical foundations to practical implementations—is essential for anyone building state-of-the-art models.
+As deep learning continues to evolve, normalization remains a critical component of modern architectures. Understanding these techniques deeply from mathematical foundations to practical implementations is essential for anyone building state-of-the-art models.
 
 The journey from simple feedforward networks to today's massive Transformer models was only possible because of innovations like batch and layer normalization. As we push toward even larger and more capable models, these fundamental techniques continue to play a vital role in making the impossible possible.
 
