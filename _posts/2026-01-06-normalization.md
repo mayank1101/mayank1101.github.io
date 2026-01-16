@@ -554,6 +554,7 @@ The journey from simple feedforward networks to today's massive Transformer mode
 ## Further Reading and Resources
 
 ### Seminal Papers
-1. **Batch Normalization**: Ioffe, S., & Szegedy, C. (2015). "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift"
-2. **Layer Normalization**: Ba, J. L., Kiros, J. R., & Hinton, G. E. (2016). "Layer Normalization"
-3. **Group Normalization**: Wu, Y., & He, K. (2018). "Group Normalization"
+
+1. [Ioffe, S., & Szegedy, C. (2015). "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift"](https://arxiv.org/pdf/1502.03167)
+2. [Ba, J. L., Kiros, J. R., & Hinton, G. E. (2016). "Layer Normalization"](https://arxiv.org/pdf/1607.06450)
+3. [Wu, Y., & He, K. (2018). "Group Normalization"](https://arxiv.org/pdf/1803.08494)
