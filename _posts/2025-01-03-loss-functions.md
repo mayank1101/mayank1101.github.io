@@ -142,21 +142,6 @@ $$\frac{\partial L_{\text{MSE}}}{\partial \hat{y}_i} = \frac{2}{n}(\hat{y}_i - y
 
 Notice the gradient is proportional to the error, solarger errors create larger gradients.
 
-**When to Use MSE**
-
-**Good for:**
-
-- When large errors are particularly bad (e.g., safety-critical systems)
-- When errors follow a Gaussian distribution
-- When you want faster convergence (strong gradients for large errors)
-- Standard regression problems
-
-**Bad for:**
-
-- Data with outliers (they dominate the loss)
-- When all errors should be treated equally
-- When the scale of predictions varies widely
-
 **Practical Example**
 
 ```python
@@ -195,21 +180,6 @@ $$\frac{\partial L_{\text{MAE}}}{\partial \hat{y}_i} = \frac{1}{n} \text{sign}(\
 
 Notice the gradient is constant (±1/n), it doesn't grow with the error size. This makes MAE more robust to outliers.
 
-**When to Use MAE**
-
-**Good for:**
-
-- Data with outliers
-- When all errors should matter equally
-- When you want robustness over speed
-- When the error distribution is not Gaussian
-
-**Bad for:**
-
-- When you need to strongly penalize large errors
-- When you want faster convergence
-- Not differentiable at zero (though rarely a practical issue)
-
 **MAE vs MSE: A Visual Comparison**
 
 Imagine predicting temperatures:
@@ -246,18 +216,6 @@ $$\frac{\partial L_{\delta}}{\partial \hat{y}} = \begin{cases}
 (\hat{y} - y) & \text{if } |y - \hat{y}| \leq \delta \\
 \delta \cdot \text{sign}(\hat{y} - y) & \text{otherwise}
 \end{cases}$$
-
-**When to Use Huber Loss**
-
-**Good for:**
-- Datasets with occasional outliers
-- When you want a balance between MSE and MAE
-- Reinforcement learning (used in DQN)
-- Real-world data with noise
-
-**Bad for:**
-- When you know your data has no outliers (MSE is simpler)
-- When you need maximum robustness (use MAE)
 
 **Choosing Delta**
 
@@ -333,19 +291,6 @@ $$\frac{\partial L}{\partial z_i} = \frac{1}{n}(\sigma(z_i) - y_i)$$
 
 Where $z_i$ is the logit (pre-activation value). This elegant simplification is why BCE and sigmoid are so commonly paired.
 
-**When to Use BCE**
-
-**Good for:**
-- Binary classification tasks
-- Multi-label classification (independent binary decisions)
-- When outputs represent probabilities
-- Standard go-to for binary problems
-
-**Bad for:**
-- Multi-class problems (use categorical cross-entropy)
-- Extremely imbalanced datasets (consider focal loss)
-- When numerical stability is a concern (use BCE with logits)
-
 **Numerical Stability Concern**
 
 Computing $\log(0)$ is undefined. Always clip predictions:
@@ -390,13 +335,6 @@ This formulation is numerically stable for any value of $z$ (the logit).
 It's remarkably simple:
 
 $$\frac{\partial L}{\partial z} = \sigma(z) - y$$
-
-**When to Use BCE with Logits**
-
-**Always prefer this over regular BCE**
-- More numerically stable
-- Faster computation
-- Same results, better implementation
 
 **Practical Example**
 
@@ -446,18 +384,6 @@ Where:
    - If $p_t = 0.1$ (very hard): $(1 - 0.1)^2 = 0.81$ → loss × 0.81
 
 3. **Balance factor**: $\alpha_t$ (typically 0.25) further balances classes
-
-**When to Use Focal Loss**
-
-**Good for:**
-- Severe class imbalance (1:100, 1:1000 ratios)
-- Object detection (many background boxes, few objects)
-- Rare event prediction
-- When hard examples are important
-
-**Bad for:**
-- Balanced datasets (adds unnecessary complexity)
-- When all examples should matter equally
 
 **Practical Example**
 
@@ -529,19 +455,6 @@ $$\frac{\partial L}{\partial z_{i,c}} = \hat{y}_{i,c} - y_{i,c}$$
 
 This beautiful simplification (same as BCE+sigmoid) is why softmax and CCE are paired.
 
-**When to Use CCE**
-
-**Good for:**
-- Multi-class classification (mutually exclusive classes)
-- When you have one-hot encoded labels
-- Standard image classification
-- Natural language processing tasks
-
-**Bad for:**
-- Binary classification (use BCE, it's simpler)
-- Multi-label problems (use BCE for each label)
-- Extremely imbalanced multi-class problems
-
 ### Sparse Categorical Cross-Entropy
 
 **The Intuition**
@@ -562,13 +475,6 @@ For 1 million samples with 1000 classes:
 - **Integer labels**: 1M × 4 bytes = 4 MB
 
 That's 1000× memory savings!
-
-**When to Use Sparse CCE**
-
-**Always prefer this over CCE when possible**
-- More memory efficient
-- Faster computation
-- Same mathematical results
 
 **Practical Example**
 
@@ -632,19 +538,6 @@ True label: +1
 - Score = +0.5: $\max(0, 1 - 1 \times 0.5) = 0.5$ (correct but not confident)
 - Score = -1: $\max(0, 1 - 1 \times (-1)) = 2$ ✗ (wrong)
 
-**When to Use Hinge Loss**
-
-**Good for:**
-- Binary classification with margin requirements
-- When you want maximum-margin classifiers
-- Support Vector Machines
-- When confidence matters as much as correctness
-
-**Bad for:**
-- Probabilistic predictions (doesn't output probabilities)
-- Multi-class problems without modification
-- When you need calibrated probabilities
-
 ### KL Divergence - Comparing Distributions
 
 **The Intuition**
@@ -662,18 +555,6 @@ Where:
 **Interpretation**
 
 KL divergence measures the "extra bits" needed to encode samples from $P$ using a code optimized for $Q$. It's always non-negative and equals zero only when $P = Q$.
-
-**When to Use KL Divergence**
-
-**Good for:**
-- Variational Autoencoders (VAE)
-- Knowledge distillation (student learning from teacher)
-- Matching predicted distribution to target distribution
-- Reinforcement learning (policy optimization)
-
-**Bad for:**
-- Not a true distance metric (not symmetric)
-- Undefined when $Q(x) = 0$ but $P(x) > 0$
 
 **Practical Example**
 
@@ -722,19 +603,6 @@ $$L_{\text{Dice}} = 1 - \frac{2 \sum_i y_i \hat{y}_i + \epsilon}{\sum_i y_i + \s
 **Why It Works for Imbalance**
 
 In segmentation, background often dominates (95% background, 5% object). Dice loss focuses on the overlap, not the total accuracy, making it robust to class imbalance.
-
-**When to Use Dice Loss**
-
-**Good for:**
-- Image segmentation
-- Medical imaging (tumor detection, organ segmentation)
-- Imbalanced binary segmentation
-- When pixel-wise accuracy matters
-
-**Bad for:**
-- Classification tasks (use cross-entropy)
-- Regression problems
-- When you need calibrated probabilities
 
 **Practical Example**
 
@@ -1140,6 +1008,8 @@ loss_value = custom_loss(predictions, targets)
 
 ## Conclusion
 
+Loss functions are more than mathematical formulas—they encode what we want our models to learn. Choosing and understanding them is as important as designing the neural network architecture itself.
+
 ### Key Takeaways
 
 1. **Loss functions are the compass of learning**: They tell the model which direction to improve.
@@ -1158,8 +1028,6 @@ loss_value = custom_loss(predictions, targets)
 4. **Numerical stability matters**: Always use stabilized versions (BCE with logits, log-sum-exp tricks).
 
 5. **Start simple, add complexity as needed**: Begin with standard losses, customize only when necessary.
-
-Loss functions are more than mathematical formulas—they encode what we want our models to learn. Choosing and understanding them is as important as designing the neural network architecture itself.
 
 Master loss functions, and you master the language of machine learning optimization. Every model, every task, every breakthrough started with someone asking: "What should I optimize for?" Now you have the knowledge to answer that question.
 
