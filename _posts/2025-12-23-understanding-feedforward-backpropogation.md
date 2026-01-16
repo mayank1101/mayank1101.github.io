@@ -209,7 +209,7 @@ Where:
 
 Imagine you're hiking in foggy mountains and want to reach the valley (minimum loss). You can't see far, but you can feel the slope beneath your feet. Backpropagation is like feeling which direction is downhill and taking a step in that direction.
 
-Mathematically, backpropagation computes the **gradient** of the loss with respect to each parameter—essentially, it tells us "if I change this weight slightly, how much will the loss change?"
+Mathematically, backpropagation computes the **gradient** of the loss with respect to each parameter, essentially, it tells us "if I change this weight slightly, how much will the loss change?"
 
 ### The Chain Rule: The Mathematical Engine
 
@@ -792,4 +792,4 @@ What's remarkable is that these simple principles of weight initialization, matr
 
 ## Jupyter Notebook
 
-For hands-on practice, check out the companion notebooks - [Feedforward and Backpropogation From Scratch](https://colab.research.google.com/drive/1rQ45fgE9QgEI8CBxNcILCWOrD6BL20_x?usp=sharing)
+For hands-on practice, check out this companion notebook - [Feedforward and Backpropogation From Scratch](https://colab.research.google.com/drive/1rQ45fgE9QgEI8CBxNcILCWOrD6BL20_x?usp=sharing)
