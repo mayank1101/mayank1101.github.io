@@ -1,5 +1,5 @@
-- name: "Deep Learning Mastery Series"
-  slug: "deep-learning-mastery"
+- name: "Deep Learning Series"
+  slug: "deep-learning"
   description: "A comprehensive journey through neural network fundamentals, from CNNs to RNNs and regularization techniques."
   accent_color: "purple"
   icon: "fas fa-brain"
