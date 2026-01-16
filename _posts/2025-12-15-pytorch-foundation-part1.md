@@ -686,4 +686,4 @@ By implementing linear regression from scratch, you've learned:
 
 ## Jupyter Notebook
 
-For hands-on practice, check out the companion notebooks - [Part1: PyTorch Foundation](https://colab.research.google.com/drive/1Eh6A3ENCzDnkEr4m5dSNQbe_b489ZUK2?usp=drive_link)
+For hands-on practice, check out this companion notebook - [Part1: PyTorch Foundation](https://colab.research.google.com/drive/1Eh6A3ENCzDnkEr4m5dSNQbe_b489ZUK2?usp=drive_link)

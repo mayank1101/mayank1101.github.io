@@ -819,4 +819,4 @@ Now that you've built a complete PyTorch pipeline, let's recap the key concepts 
 
 ## Jupyter Notebook
 
-For hands-on practice, check out the companion notebooks - [Part2: PyTorch Foundation](https://colab.research.google.com/drive/1CTMO_KYfnfIMpkzNcRVDvs455HM8pX50?usp=sharing)
+For hands-on practice, check out this companion notebook - [Part2: PyTorch Foundation](https://colab.research.google.com/drive/1CTMO_KYfnfIMpkzNcRVDvs455HM8pX50?usp=sharing)
