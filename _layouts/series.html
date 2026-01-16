@@ -43,7 +43,7 @@ layout: default
 </nav>
 
 <div class="container section fade-in">
-  {% assign series_posts = site.posts | where: "series", page.series_name | sort: "date" %}
+  {% assign series_posts = site.posts | where: "series", page.series_name | sort: "date" | reverse %}
   {% assign post_count = series_posts | size %}
 
   <!-- Series Banner -->
