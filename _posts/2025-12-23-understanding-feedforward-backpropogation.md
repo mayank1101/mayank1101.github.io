@@ -776,7 +776,7 @@ b -= learning_rate * db
 
 ## Conclusion
 
-So, now that you've mastered the fundamental mechanisms that power all neural networks—from the simplest to the most sophisticated AI systems in use today. You've seen how:
+So, now that you've mastered the fundamental mechanisms that power all neural networks from the simplest to the most sophisticated AI systems in use today. You've seen how:
 
 - **Feed-forward pass** transforms input through layers to produce predictions
 - **Backpropagation** efficiently computes gradients using the chain rule
