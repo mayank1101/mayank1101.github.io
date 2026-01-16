@@ -1,0 +1,15 @@
+- name: "Deep Learning Mastery Series"
+  slug: "deep-learning-mastery"
+  description: "A comprehensive journey through neural network fundamentals, from CNNs to RNNs and regularization techniques."
+  accent_color: "purple"
+  icon: "fas fa-brain"
+  author: "Mayank Sharma"
+  order: 1
+
+- name: "Deep Learning Series"
+  slug: "deep-learning"
+  description: "Master PyTorch fundamentals and build a strong foundation for deep learning."
+  accent_color: "cyan"
+  icon: "fas fa-fire"
+  author: "Mayank Sharma"
+  order: 2

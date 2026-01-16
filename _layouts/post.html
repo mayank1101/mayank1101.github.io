@@ -127,6 +127,7 @@ layout: default
   {{ content }}
 
   {% if page.series %}
+  {% assign current_series = site.data.series | where: "name", page.series | first %}
   <div class="series-footer">
     <div class="series-footer-content">
       <i class="fas fa-bookmark"></i>
@@ -135,8 +136,8 @@ layout: default
         {% if page.series_author %}by <strong>{{ page.series_author }}</strong>{% endif %}.
       </p>
     </div>
-    <a href="/blog.html" class="cta">
-      <i class="fas fa-list"></i> View All Articles
+    <a href="/series/{{ current_series.slug }}/" class="cta">
+      <i class="fas fa-list"></i> View All Articles in Series
     </a>
   </div>
   {% endif %}

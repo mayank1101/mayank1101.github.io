@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<nav class="nav fade-in">
+  <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
+
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-center">
+    <a class="nav-link" href="/">
+      Home
+    </a>
+    <a class="nav-link" href="/about.html">
+      About
+    </a>
+    <a class="nav-link active" href="/blog.html">
+      Blog
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://github.com/mayank1101" target="_blank" aria-label="GitHub" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank" aria-label="LinkedIn" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/sharma_mayank11" target="_blank" aria-label="Twitter" class="social-icon">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
+    <a class="cta-nav" href="/#resume">
+      Resume
+    </a>
+  </div>
+</nav>
+
+<div class="container section fade-in">
+  {% assign series_posts = site.posts | where: "series", page.series_name | sort: "date" %}
+  {% assign post_count = series_posts | size %}
+
+  <!-- Series Banner -->
+  <div class="series-page-banner card-{{ page.accent_color }}">
+    <div class="series-page-icon">
+      <i class="{{ page.icon }}"></i>
+    </div>
+    <div class="series-page-info">
+      <h1>{{ page.series_name }}</h1>
+      <p class="series-page-description">{{ page.description }}</p>
+      <div class="series-page-meta">
+        <span><i class="fas fa-user"></i> {{ page.author }}</span>
+        <span><i class="fas fa-file-alt"></i> {{ post_count }} article{% if post_count != 1 %}s{% endif %}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Blog Link -->
+  <a href="/blog.html" class="back-to-blog">
+    <i class="fas fa-arrow-left"></i> Back to All Series
+  </a>
+
+  <!-- Articles List -->
+  <div class="series-articles-list">
+    {% for post in series_posts %}
+    <div class="card scroll-animate series-article-card">
+      <div class="series-article-number">{{ forloop.index }}</div>
+      <div class="series-article-content">
+        <h3>{{ post.title }}</h3>
+        <p class="muted blog-date">
+          <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
+        </p>
+        {% if post.excerpt %}
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        <a href="{{ post.url }}" class="blog-read-link">Read Article <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-icons">
+    <i class="fas fa-code"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-terminal"></i>
+  </div>
+  <p>
+    "Intelligence isn't magic — it's math, data, and careful engineering."
+  </p>
+  <p>© 2026 Mayank Sharma · Always learning, always building</p>
+</div>
+
+<script src="/assets/animations.js"></script>
