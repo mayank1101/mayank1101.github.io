@@ -6,20 +6,20 @@
 
 A modern, responsive portfolio website and technical blog showcasing my journey in AI/ML research and engineering. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
 
-## 🌐 Live Website
+## Live Website
 
 Visit: [https://mayank1101.github.io](https://mayank1101.github.io)
 
-## 👨‍💻 About Me
+## About Me
 
-I'm **Mayank Sharma**, a Applied AI & Data Leader with 5+ years of experience building trustworthy Data & AI systems. My work bridges the gap between cutting-edge research and production-scale AI applications.
+I'm **Mayank Sharma**, an Applied AI & Data Leader with 5+ years of experience building trustworthy Data & AI systems. My work bridges the gap between cutting-edge research and production-scale AI applications.
 
 ### Highlights
-- 🎓 **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
-- 🏆 **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
-- 🏅 **Recognition**: Bravo Award at nference for 9× speedup and 8× model compression
-- 👥 **Impact**: Built systems serving 10,000+ daily users with 99% efficiency gains
-- 🌍 **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
+- **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
+- **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
+- **Recognition**: Bravo Award at nference for 9x speedup and 8x model compression
+- **Impact**: Built systems serving 10,000+ daily users with 99% efficiency gains
+- **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
 ### Current Focus
 - Data & Analytics
@@ -29,11 +29,12 @@ I'm **Mayank Sharma**, a Applied AI & Data Leader with 5+ years of experience bu
 - Medical NLP & clinical AI
 - Production-scale LLM deployment
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Technologies
 - **Jekyll**: Static site generator
 - **GitHub Pages**: Hosting and deployment
+- **SCSS/Sass**: Modular CSS preprocessing
 - **Liquid**: Templating engine
 - **Kramdown**: Markdown processor with Rouge syntax highlighting
 
@@ -42,43 +43,62 @@ I'm **Mayank Sharma**, a Applied AI & Data Leader with 5+ years of experience bu
 - **CSS3**: Custom properties, Grid/Flexbox, animations, responsive design
 - **JavaScript**: Intersection Observer API, hamburger menu, scroll effects
 
-### Design Tools
-- **Google Fonts**: Inter (300-900), JetBrains Mono
+### Design
+- **Google Fonts**: Nunito, Quicksand, JetBrains Mono
 - **Font Awesome 6**: Icon library
 - **CSS Animations**: Keyframes, transitions, transforms
+- **Dark/Light Mode**: Theme toggle with localStorage persistence
 
-### Styling
-- **Color Palette**:
-  - Primary: Cyan (#38bdf8), Purple (#a855f7)
-  - Secondary: Pink (#ec4899), Yellow (#fbbf24)
-  - Background: Dark slate (#020617, #0f172a)
-- **Typography**: Inter for text, JetBrains Mono for code
-- **Animations**: fade-in, slide-in, parallax, hover effects
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 mayank1101.github.io/
+├── _includes/                    # Reusable components
+│   ├── navbar.html               # Navigation with dynamic active states
+│   ├── footer.html               # Footer with dynamic year
+│   ├── head.html                 # SEO meta tags, fonts, CSS
+│   ├── theme-script.html         # Theme initialization
+│   └── glow-orbs.html            # Background decorative elements
 ├── _layouts/
-│   ├── default.html          # Base layout with CDN links, glow orbs
-│   └── post.html              # Blog post layout with series support
-├── _posts/
-│   ├── 2025-12-15-pytorch-foundation-part1.md
-│   └── 2025-12-20-pytorch-foundation-part2.md
+│   ├── default.html              # Base layout
+│   ├── page.html                 # Standard page layout
+│   ├── post.html                 # Blog post layout with series support
+│   └── series.html               # Series listing layout
+├── _sass/                        # Modular SCSS
+│   ├── _variables.scss           # CSS custom properties & SCSS variables
+│   ├── _base.scss                # Reset, typography, utilities
+│   ├── _navigation.scss          # Navbar & hamburger menu
+│   ├── _hero.scss                # Hero section & profile
+│   ├── _cards.scss               # Card components
+│   ├── _buttons.scss             # CTAs & buttons
+│   ├── _blog.scss                # Blog & series styles
+│   ├── _manifesto.scss           # Token by Token section
+│   ├── _footer.scss              # Footer styles
+│   ├── _animations.scss          # Keyframes & transitions
+│   ├── _code.scss                # Code blocks & syntax
+│   ├── _tables.scss              # Table styles
+│   ├── _about.scss               # About page specific
+│   ├── _dark-mode.scss           # Dark theme overrides
+│   └── _responsive.scss          # Media queries
+├── _posts/                       # Blog posts
+├── _data/
+│   └── series.yml                # Blog series definitions
+├── series/                       # Series landing pages
 ├── assets/
-│   ├── style.css              # Main stylesheet (1500+ lines)
-│   ├── animations.js          # Scroll animations, hamburger menu
-│   ├── profile.jpg            # Profile photo
-│   └── images/                # Blog images
-│       ├── pytorch-foundation-part1.png
-│       └── pytorch-foundation-part2.png
-├── index.html                 # Homepage with all sections
-├── blog.html                  # Blog listing page
-├── _config.yml                # Jekyll configuration
-└── README.md                  # This file
+│   ├── css/
+│   │   └── main.scss             # Main SCSS entry point
+│   ├── animations.js             # Scroll animations, theme toggle
+│   ├── profile.jpeg              # Profile photo
+│   └── images/                   # Blog images
+├── index.html                    # Homepage
+├── about.html                    # About page
+├── blog.html                     # Blog listing
+├── _config.yml                   # Jekyll configuration
+├── .gitignore                    # Git ignore rules
+└── README.md                     # This file
 ```
 
-## 🚀 Local Development
+## Local Development
 
 ### Prerequisites
 - Ruby (2.7+)
@@ -102,10 +122,6 @@ mayank1101.github.io/
    ```bash
    bundle exec jekyll serve
    ```
-   Or simply:
-   ```bash
-   jekyll serve
-   ```
 
 4. **View in browser**
    ```
@@ -115,7 +131,7 @@ mayank1101.github.io/
 ### Live Reload
 Jekyll watches for file changes and rebuilds automatically. Refresh your browser to see updates.
 
-## 🌐 Deployment
+## Deployment
 
 ### GitHub Pages (Automatic)
 
@@ -136,17 +152,17 @@ bundle exec jekyll build
 ```
 Output in `_site/` directory
 
-## 📝 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Jekyll** and **GitHub Pages** for the platform
 - **Font Awesome** for beautiful icons
-- **Google Fonts** for Inter and JetBrains Mono
+- **Google Fonts** for Nunito, Quicksand, and JetBrains Mono
 
 ---
 
-**Built with ❤️ by Mayank Sharma**
+**Built by Mayank Sharma**
 *Bridging research and real-world AI systems*
