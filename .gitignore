@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+Gemfile.lock

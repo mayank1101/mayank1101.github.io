@@ -1,0 +1,20 @@
+---
+# Front matter required for Jekyll to process this file
+---
+
+// Import all SCSS modules
+@import "variables";
+@import "base";
+@import "navigation";
+@import "hero";
+@import "cards";
+@import "buttons";
+@import "blog";
+@import "manifesto";
+@import "footer";
+@import "animations";
+@import "code";
+@import "tables";
+@import "about";
+@import "dark-mode";
+@import "responsive";

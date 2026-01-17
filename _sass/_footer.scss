@@ -1,0 +1,30 @@
+// ===== Footer =====
+.footer {
+  margin-top: 6rem;
+  padding: 3rem 2rem;
+  border-top: 3px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  background: rgba(255, 245, 232, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+
+  i {
+    color: var(--accent-green);
+    transition: all 0.4s $transition-bounce;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accent-pink);
+      transform: translateY(-8px) rotate(-10deg) scale(1.2);
+      filter: drop-shadow(0 4px 8px rgba(255, 182, 193, 0.4));
+    }
+  }
+}

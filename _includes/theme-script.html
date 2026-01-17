@@ -1,0 +1,37 @@
+<script>
+  // Apply theme immediately to prevent flash - runs synchronously before page render
+  (function() {
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      var html = document.documentElement;
+
+      // Apply theme to html element
+      if (savedTheme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        html.style.setProperty('color-scheme', 'dark');
+      } else {
+        html.removeAttribute('data-theme');
+        html.style.setProperty('color-scheme', 'light');
+      }
+
+      // Update meta theme-color for mobile browsers
+      var updateMetaTheme = function() {
+        var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+          metaThemeColor.setAttribute('content', savedTheme === 'dark' ? '#1A2234' : '#FFF8F0');
+        }
+      };
+
+      // Try immediately
+      updateMetaTheme();
+
+      // Also try when DOM is ready as fallback
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateMetaTheme);
+      }
+    } catch (e) {
+      // Silently fail - theme will use default light mode
+      console.error('Theme init error:', e);
+    }
+  })();
+</script>

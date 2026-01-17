@@ -1,6 +1,18 @@
+title: Mayank Sharma
+description: AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production.
+url: https://mayank1101.github.io
+baseurl: ""
+author: Mayank Sharma
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
 theme: null
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
 
 kramdown:
   input: GFM
@@ -12,3 +24,11 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: false
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

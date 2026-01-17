@@ -1,0 +1,138 @@
+// ===== About Page Styles =====
+.about-story {
+  max-width: 900px;
+  margin: 0 auto;
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  strong {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+
+  em {
+    color: var(--accent-pink);
+    font-style: italic;
+  }
+}
+
+// Skills Grid
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+
+  span {
+    background: var(--card);
+    border: 2px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius-md;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.4s $transition-bounce;
+    color: var(--text);
+
+    &:hover {
+      background: var(--accent-yellow);
+      color: var(--text-bright);
+      border-color: var(--accent-pink);
+      transform: translateY(-4px) rotate(-2deg);
+    }
+  }
+}
+
+// ===== Pagination Styles =====
+.pagination {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.pagination-info {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  background: var(--card);
+  border: 1px solid var(--border-bright);
+  color: var(--text);
+  padding: 0.7rem 1.5rem;
+  border-radius: $border-radius-sm;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+
+  &:hover:not(:disabled) {
+    background: var(--accent-green);
+    color: var(--card);
+    border-color: var(--accent-green);
+    transform: translateY(-4px) rotate(-2deg);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-sm;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  &:hover {
+    background: rgba(144, 198, 149, 0.15);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+  }
+
+  &.active {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+    color: var(--card);
+  }
+}

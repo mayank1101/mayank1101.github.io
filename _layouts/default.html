@@ -1,61 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
-  <meta name="theme-color" content="#FFF8F0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>{{ page.title }}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="/assets/style.css">
-  <script>
-    // Apply theme immediately to prevent flash - runs synchronously before page render
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const html = document.documentElement;
-
-        // Apply theme to html element
-        if (savedTheme === 'dark') {
-          html.setAttribute('data-theme', 'dark');
-          html.style.setProperty('color-scheme', 'dark');
-        } else {
-          html.removeAttribute('data-theme');
-          html.style.setProperty('color-scheme', 'light');
-        }
-
-        // Update meta theme-color for mobile browsers
-        const updateMetaTheme = function() {
-          const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-          if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', savedTheme === 'dark' ? '#1A2234' : '#FFF8F0');
-          }
-        };
-
-        // Try immediately
-        updateMetaTheme();
-
-        // Also try when DOM is ready as fallback
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', updateMetaTheme);
-        }
-      } catch (e) {
-        // Silently fail - theme will use default light mode
-        console.error('Theme init error:', e);
-      }
-    })();
-  </script>
+  {% include head.html %}
+  {% include theme-script.html %}
 </head>
 
 <body>
-  <!-- Background glow orbs -->
-  <div class="glow-orb glow-orb-1 parallax" data-speed="0.3"></div>
-  <div class="glow-orb glow-orb-2 parallax" data-speed="0.5"></div>
-  <div class="glow-orb glow-orb-3 parallax" data-speed="0.4"></div>
+  {% include glow-orbs.html %}
 
 <main>
   {{ content }}

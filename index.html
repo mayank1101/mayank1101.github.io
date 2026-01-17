@@ -1,194 +1,96 @@
 ---
+layout: page
+title: Home
+description: Mayank Sharma - AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production. 5+ years in multimodal RAG, medical NLP, and LLMs.
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
-  <meta name="description" content="Mayank Sharma - AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production. 5+ years in multimodal RAG, medical NLP, and LLMs.">
-  <meta name="theme-color" content="#FFF8F0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Mayank Sharma | AI Researcher & Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-  <script>
-    // Apply theme immediately to prevent flash - runs synchronously before page render
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const html = document.documentElement;
 
-        // Apply theme to html element
-        if (savedTheme === 'dark') {
-          html.setAttribute('data-theme', 'dark');
-          html.style.setProperty('color-scheme', 'dark');
-        } else {
-          html.removeAttribute('data-theme');
-          html.style.setProperty('color-scheme', 'light');
-        }
-
-        // Update meta theme-color for mobile browsers
-        const updateMetaTheme = function() {
-          const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-          if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', savedTheme === 'dark' ? '#1A2234' : '#FFF8F0');
-          }
-        };
-
-        // Try immediately
-        updateMetaTheme();
-
-        // Also try when DOM is ready as fallback
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', updateMetaTheme);
-        }
-      } catch (e) {
-        // Silently fail - theme will use default light mode
-        console.error('Theme init error:', e);
-      }
-    })();
-  </script>
-</head>
-
-<body>
-  <!-- Background glow orbs -->
-  <div class="glow-orb glow-orb-1 parallax" data-speed="0.3"></div>
-  <div class="glow-orb glow-orb-2 parallax" data-speed="0.5"></div>
-  <div class="glow-orb glow-orb-3 parallax" data-speed="0.4"></div>
-
-<nav class="nav fade-in">
-  <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
-
-  <!-- Hamburger Menu Button (Mobile Only) -->
-  <button class="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-center">
-    <a class="nav-link" href="/">
-      Home
-    </a>
-    <a class="nav-link" href="about.html">
-      About
-    </a>
-    <a class="nav-link" href="blog.html">
-      Blog
-    </a>
-  </div>
-
-  <div class="nav-right">
-    <div class="nav-social">
-      <a href="https://github.com/mayank1101" target="_blank" aria-label="GitHub" class="social-icon">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://x.com/sharma_mayank11" target="_blank" aria-label="Twitter" class="social-icon">
-        <i class="fab fa-x-twitter"></i>
-      </a>
-    </div>
-    <a class="cta-nav" href="#resume">
-      Resume
-    </a>
-  </div>
-</nav>
-
-
-<main>
-    <div class="container hero fade-in">
-        <div class="hero-content">
-            <div class="profile-section">
-                <div class="profile-photo">
-                    <div class="photo-glow"></div>
-                    <img src="assets/profile.jpeg" alt="Mayank Sharma" onerror="this.parentElement.classList.add('no-image')">
-                </div>
+<div class="container hero fade-in">
+    <div class="hero-content">
+        <div class="profile-section">
+            <div class="profile-photo">
+                <div class="photo-glow"></div>
+                <img src="/assets/profile.jpeg" alt="Mayank Sharma" onerror="this.parentElement.classList.add('no-image')">
             </div>
+        </div>
 
-            <div class="hero-text">
-                <h1>
-                    I bridge <span class="hero-highlight">research</span> and<br/>
-                    <span class="hero-highlight">real-world</span> AI systems
-                </h1>
-                <p>
-                    Applied AI & Data Leader with 5+ years building trustworthy AI systems.
-                    Co-author of <strong>AAAI 2024</strong> (OpenMedLM). From medical NLP to multimodal RAG,
-                    I turn research into production systems that serve thousands of users daily.
-                </p>
-                <p class="muted" style="margin-top: 1rem;">
-                    <i class="fas fa-graduation-cap"></i> M.Tech CSE - Data Science, IIT Jammu ·
-                    <i class="fas fa-map-marker-alt"></i> India
-                </p>
+        <div class="hero-text">
+            <h1>
+                I bridge <span class="hero-highlight">research</span> and<br/>
+                <span class="hero-highlight">real-world</span> AI systems
+            </h1>
+            <p>
+                Applied AI & Data Leader with 5+ years building trustworthy AI systems.
+                Co-author of <strong>AAAI 2024</strong> (OpenMedLM). From medical NLP to multimodal RAG,
+                I turn research into production systems that serve thousands of users daily.
+            </p>
+            <p class="muted" style="margin-top: 1rem;">
+                <i class="fas fa-graduation-cap"></i> M.Tech CSE - Data Science, IIT Jammu &middot;
+                <i class="fas fa-map-marker-alt"></i> India
+            </p>
 
-                <div class="badges">
-                    <span><i class="fas fa-graduation-cap"></i> AAAI 2024 Co-Author</span>
-                    <span><i class="fas fa-brain"></i> Multimodal RAG</span>
-                    <span><i class="fas fa-shield-alt"></i> Hallucination Reduction</span>
-                    <span><i class="fas fa-search"></i> Retrieval Evaluation</span>
-                    <span><i class="fas fa-flask"></i> Medical NLP</span>
-                    <span><i class="fas fa-code"></i> Crawl4AI Contributor</span>
-                </div>
+            <div class="badges">
+                <span><i class="fas fa-graduation-cap"></i> AAAI 2024 Co-Author</span>
+                <span><i class="fas fa-brain"></i> Multimodal RAG</span>
+                <span><i class="fas fa-shield-alt"></i> Hallucination Reduction</span>
+                <span><i class="fas fa-search"></i> Retrieval Evaluation</span>
+                <span><i class="fas fa-flask"></i> Medical NLP</span>
+                <span><i class="fas fa-code"></i> Crawl4AI Contributor</span>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container section">
-        <h2 class="scroll-animate slide-in-left">
-            <i class="fas fa-compass"></i> Research & Industry
-        </h2>
-        <div class="cards">
-            <div class="card scroll-animate card-cyan">
-                <div class="card-icon">
-                    <i class="fas fa-microscope"></i>
-                </div>
-                <h3>Applied AI Research</h3>
-                <p>
-                    Co-authored <strong>AAAI 2024</strong> (OpenMedLM), demonstrating prompt engineering
-                    can outperform fine-tuning in medical QA. Published research on model compression,
-                    achieving 8× size reduction and 9× speedup for clinical NLP.
-                </p>
-                <p class="muted">
-                    <i class="fas fa-check-circle"></i> Medical NLP · Prompt Engineering · Model Optimization
-                </p>
+<div class="container section">
+    <h2 class="scroll-animate slide-in-left">
+        <i class="fas fa-compass"></i> Research & Industry
+    </h2>
+    <div class="cards">
+        <div class="card scroll-animate card-cyan">
+            <div class="card-icon">
+                <i class="fas fa-microscope"></i>
             </div>
+            <h3>Applied AI Research</h3>
+            <p>
+                Co-authored <strong>AAAI 2024</strong> (OpenMedLM), demonstrating prompt engineering
+                can outperform fine-tuning in medical QA. Published research on model compression,
+                achieving 8&times; size reduction and 9&times; speedup for clinical NLP.
+            </p>
+            <p class="muted">
+                <i class="fas fa-check-circle"></i> Medical NLP &middot; Prompt Engineering &middot; Model Optimization
+            </p>
+        </div>
 
-            <div class="card scroll-animate card-purple">
-                <div class="card-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h3>Production Systems at Scale</h3>
-                <p>
-                    Built multimodal RAG systems serving <strong>10,000+ factory workers daily</strong>,
-                    achieving 99% reduction in manual troubleshooting time. Deployed multilingual
-                    regulatory intelligence platforms across 18+ countries.
-                </p>
-                <p class="muted">
-                    <i class="fas fa-check-circle"></i> Multimodal RAG · Information Extraction · Real-World Impact
-                </p>
+        <div class="card scroll-animate card-purple">
+            <div class="card-icon">
+                <i class="fas fa-rocket"></i>
             </div>
+            <h3>Production Systems at Scale</h3>
+            <p>
+                Built multimodal RAG systems serving <strong>10,000+ factory workers daily</strong>,
+                achieving 99% reduction in manual troubleshooting time. Deployed multilingual
+                regulatory intelligence platforms across 18+ countries.
+            </p>
+            <p class="muted">
+                <i class="fas fa-check-circle"></i> Multimodal RAG &middot; Information Extraction &middot; Real-World Impact
+            </p>
+        </div>
 
-            <div class="card scroll-animate card-pink">
-                <div class="card-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <h3>Teaching & Knowledge Sharing</h3>
-                <p>
-                    Former Teaching Assistant at IIT Jammu. Now sharing AI/ML insights through
-                    <strong>Token by Token</strong>, a technical writing series exploring AI, ML, LLMs,
-                    and real-world generative systems from the inside out.
-                </p>
-                <p class="muted">
-                    <i class="fas fa-check-circle"></i> IIT Jammu TA · Token by Token · AI Fundamentals
-                </p>
+        <div class="card scroll-animate card-pink">
+            <div class="card-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
             </div>
+            <h3>Teaching & Knowledge Sharing</h3>
+            <p>
+                Former Teaching Assistant at IIT Jammu. Now sharing AI/ML insights through
+                <strong>Token by Token</strong>, a technical writing series exploring AI, ML, LLMs,
+                and real-world generative systems from the inside out.
+            </p>
+            <p class="muted">
+                <i class="fas fa-check-circle"></i> IIT Jammu TA &middot; Token by Token &middot; AI Fundamentals
+            </p>
         </div>
     </div>
+</div>
 
 <div class="container section scroll-animate">
     <h2><i class="fas fa-pen-fancy"></i> Token by Token</h2>
@@ -231,7 +133,7 @@
                 There's no hype here. No shortcuts. No "black-box" thinking.
             </p>
             <p class="manifesto-text">
-                Just careful reasoning, solid engineering, and honest explanations, <br/>
+                Just careful reasoning, solid engineering, and honest explanations,<br/>
                 <strong>built one concept, one decision, one token at a time.</strong>
             </p>
         </div>
@@ -247,72 +149,55 @@
     </div>
 
     <div style="text-align: center; margin-top: 3rem;">
-        <a href="blog.html" class="cta cta-large">
+        <a href="/blog.html" class="cta cta-large">
             <i class="fas fa-book-open"></i> Start Reading
         </a>
     </div>
 </div>
 
-    <!-- Resume Section -->
-    <div id="resume" class="container section resume-section scroll-animate">
-        <div class="resume-card">
-            <div class="resume-icon">
-                <i class="fas fa-file-alt"></i>
-            </div>
-            <div class="resume-content">
-                <h2>Resume & Experience</h2>
-                <p>
-                    5+ years across research and industry: Lamipak (Data Scientist), LG Soft (Research Engineer),
-                    NeurIOT Labs (Lead DS), SFO Technologies (Lead SWE), nference.ai (Research DS).
-                    AAAI 2024 co-author, IIT Jammu graduate, former Teaching Assistant.
-                </p>
-                <p class="muted" style="margin-top: 1rem;">
-                    <i class="fas fa-tools"></i> PyTorch, LangChain, RAG, Crawl4AI, vLLM, Qdrant, AWS, Docker
-                </p>
-                <div class="resume-actions">
-                    <a class="cta cta-large" href="" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Resume
-                    </a>
-                </div>
+<!-- Resume Section -->
+<div id="resume" class="container section resume-section scroll-animate">
+    <div class="resume-card">
+        <div class="resume-icon">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="resume-content">
+            <h2>Resume & Experience</h2>
+            <p>
+                5+ years across research and industry: Lamipak (Data Scientist), LG Soft (Research Engineer),
+                NeurIOT Labs (Lead DS), SFO Technologies (Lead SWE), nference.ai (Research DS).
+                AAAI 2024 co-author, IIT Jammu graduate, former Teaching Assistant.
+            </p>
+            <p class="muted" style="margin-top: 1rem;">
+                <i class="fas fa-tools"></i> PyTorch, LangChain, RAG, Crawl4AI, vLLM, Qdrant, AWS, Docker
+            </p>
+            <div class="resume-actions">
+                <a class="cta cta-large" href="" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Resume
+                </a>
             </div>
         </div>
     </div>
-
-    <div class="container section scroll-animate cta-section">
-        <h2>Let's Collaborate</h2>
-        <p>
-            Whether you're exploring cutting-edge AI research, building production systems,
-            or looking for someone who bridges both worlds, I'd love to connect.
-        </p>
-        <p class="muted" style="margin-top: 1rem;">
-            Open to research collaborations, industry opportunities, and mentoring conversations.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
-            <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
-                <i class="fas fa-envelope"></i> Email Me
-            </a>
-            <a class="cta-secondary" href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank">
-                <i class="fab fa-linkedin"></i> Connect on LinkedIn
-            </a>
-            <a class="cta-secondary" href="https://x.com/sharma_mayank11" target="_blank">
-                <i class="fab fa-x-twitter"></i> Follow on Twitter
-            </a>
-        </div>
-    </div>
-</main>
-
-<div class="footer">
-  <div class="footer-icons">
-    <i class="fas fa-code"></i>
-    <i class="fas fa-heart"></i>
-    <i class="fas fa-terminal"></i>
-  </div>
-  <p>
-    "Intelligence isn't magic — it's math, data, and careful engineering."
-  </p>
-  <p>© 2026 Mayank Sharma · Always learning, always building</p>
 </div>
 
-<script src="assets/animations.js"></script>
-</body>
-</html>
+<div class="container section scroll-animate">
+    <h2>Let's Collaborate</h2>
+    <p>
+        Whether you're exploring cutting-edge AI research, building production systems,
+        or looking for someone who bridges both worlds, I'd love to connect.
+    </p>
+    <p class="muted" style="margin-top: 1rem;">
+        Open to research collaborations, industry opportunities, and mentoring conversations.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+        <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
+            <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a class="cta-secondary" href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank">
+            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+        </a>
+        <a class="cta-secondary" href="https://x.com/sharma_mayank11" target="_blank">
+            <i class="fab fa-x-twitter"></i> Follow on Twitter
+        </a>
+    </div>
+</div>

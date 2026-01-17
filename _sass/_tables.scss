@@ -1,0 +1,116 @@
+// ===== Tables =====
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--card);
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  border: 2px solid var(--border-bright);
+
+  thead {
+    background: rgba(144, 198, 149, 0.15);
+  }
+
+  th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--accent-green);
+    border-bottom: 2px solid var(--border-bright);
+    border-right: 2px solid var(--border);
+    font-family: $font-heading;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  td {
+    padding: 0.9rem 1rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tbody tr {
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: rgba(180, 215, 233, 0.1);
+    }
+
+    &:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+// Mobile table responsiveness
+@media (max-width: $breakpoint-sm) {
+  .table-wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    border: 2px solid var(--border-bright);
+    background: var(--card);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 30px;
+      background: linear-gradient(to left, var(--card) 0%, transparent 100%);
+      pointer-events: none;
+      opacity: 0.8;
+      border-radius: 0 10px 10px 0;
+    }
+
+    &.scrolled-end::after {
+      opacity: 0;
+    }
+
+    table {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  table {
+    font-size: 0.85rem;
+    min-width: 500px;
+    width: 100%;
+
+    th,
+    td {
+      padding: 0.6rem 0.7rem;
+      white-space: nowrap;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-size: 0.8rem;
+    }
+
+    td {
+      font-size: 0.85rem;
+    }
+
+    td:first-child,
+    th:first-child {
+      white-space: normal;
+      min-width: 120px;
+    }
+  }
+}

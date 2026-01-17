@@ -1,324 +1,212 @@
 ---
+layout: page
+title: About Me
+description: About Mayank Sharma - AI/ML Engineer & Researcher. Learn about my journey from IIT Jammu to building production AI systems.
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
-  <meta name="description" content="About Mayank Sharma - AI/ML Engineer & Researcher. Learn about my journey from IIT Jammu to building production AI systems.">
-  <meta name="theme-color" content="#FFF8F0">
-  <title>About Me | Mayank Sharma</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-  <script>
-    // Apply theme immediately to prevent flash - runs synchronously before page render
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const html = document.documentElement;
 
-        // Apply theme to html element
-        if (savedTheme === 'dark') {
-          html.setAttribute('data-theme', 'dark');
-          html.style.setProperty('color-scheme', 'dark');
-        } else {
-          html.removeAttribute('data-theme');
-          html.style.setProperty('color-scheme', 'light');
-        }
-
-        // Update meta theme-color for mobile browsers
-        const updateMetaTheme = function() {
-          const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-          if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', savedTheme === 'dark' ? '#1A2234' : '#FFF8F0');
-          }
-        };
-
-        // Try immediately
-        updateMetaTheme();
-
-        // Also try when DOM is ready as fallback
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', updateMetaTheme);
-        }
-      } catch (e) {
-        // Silently fail - theme will use default light mode
-        console.error('Theme init error:', e);
-      }
-    })();
-  </script>
-</head>
-
-<body>
-  <!-- Background glow orbs -->
-  <div class="glow-orb glow-orb-1 parallax" data-speed="0.3"></div>
-  <div class="glow-orb glow-orb-2 parallax" data-speed="0.5"></div>
-  <div class="glow-orb glow-orb-3 parallax" data-speed="0.4"></div>
-
-<nav class="nav fade-in">
-  <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
-
-  <!-- Hamburger Menu Button (Mobile Only) -->
-  <button class="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-center">
-    <a class="nav-link" href="/">
-      Home
-    </a>
-    <a class="nav-link active" href="/about.html">
-      About
-    </a>
-    <a class="nav-link" href="/blog.html">
-      Blog
-    </a>
-  </div>
-
-  <div class="nav-right">
-    <div class="nav-social">
-      <a href="https://github.com/mayank1101" target="_blank" aria-label="GitHub" class="social-icon">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sharma-mayank-m11" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://x.com/sharma_mayank11" target="_blank" aria-label="Twitter" class="social-icon">
-        <i class="fab fa-x-twitter"></i>
-      </a>
-    </div>
-    <a class="cta-nav" href="/#resume">
-      Resume
-    </a>
-  </div>
-</nav>
-
-<main>
-    <!-- About Hero -->
-    <div class="container hero fade-in">
-        <div class="hero-content">
-            <div class="profile-section">
-                <div class="profile-photo">
-                    <div class="photo-glow"></div>
-                    <img src="assets/profile.jpeg" alt="Mayank Sharma" onerror="this.parentElement.classList.add('no-image')">
-                </div>
-            </div>
-
-            <div class="hero-text">
-                <h1>About Me</h1>
-                <p>
-                    I'm an AI/ML Engineer and Researcher who bridges the gap between cutting-edge research
-                    and real-world production systems. With 5+ years of experience, I've contributed to
-                    academic publications (AAAI 2024), built systems serving 10,000+ users daily, and
-                    continue to explore the frontiers of GenAI, NLP, and multimodal AI.
-                </p>
-                <p class="muted" style="margin-top: 1rem;">
-                    <i class="fas fa-graduation-cap"></i> M.Tech CSE - Data Science, IIT Jammu ·
-                    <i class="fas fa-map-marker-alt"></i> India
-                </p>
+<!-- About Hero -->
+<div class="container hero fade-in">
+    <div class="hero-content">
+        <div class="profile-section">
+            <div class="profile-photo">
+                <div class="photo-glow"></div>
+                <img src="/assets/profile.jpeg" alt="Mayank Sharma" onerror="this.parentElement.classList.add('no-image')">
             </div>
         </div>
-    </div>
 
-    <!-- My Story -->
-    <div class="container section scroll-animate">
-        <h2><i class="fas fa-book-open"></i> My Story</h2>
-        <div class="about-story">
+        <div class="hero-text">
+            <h1>About Me</h1>
             <p>
-                My journey in AI began during my M.Tech in Data Science at <strong>IIT Jammu</strong>,
-                where I developed a deep fascination for how machines can understand and generate human language.
-                What started as academic curiosity evolved into a career dedicated to making AI systems that
-                are not just powerful, but also trustworthy and practical.
+                I'm an AI/ML Engineer and Researcher who bridges the gap between cutting-edge research
+                and real-world production systems. With 5+ years of experience, I've contributed to
+                academic publications (AAAI 2024), built systems serving 10,000+ users daily, and
+                continue to explore the frontiers of GenAI, NLP, and multimodal AI.
             </p>
-            <p>
-                During my time at <strong>nference.ai</strong>, I transitioned from pure research to building
-                production healthcare systems. I explored everything from CLIP for chest X-rays to large language
-                models for clinical information extraction. This experience taught me that the real challenge
-                isn't just achieving high accuracy in research papers—it's deploying reliable systems that
-                healthcare professionals can trust with patient care.
-            </p>
-            <p>
-                Today, at <strong>Lamipak</strong>, I lead AI research initiatives focusing on multimodal RAG
-                and regulatory intelligence. I'm building systems that serve thousands of factory workers daily,
-                combining research rigor with production reliability. Every day, I work on problems that require
-                not just technical expertise, but also deep understanding of user needs and real-world constraints.
-            </p>
-            <p>
-                Beyond my day job, I'm passionate about knowledge sharing. Through my blog
-                <strong>Token by Token</strong>, I write about AI, ML, LLMs, RAG systems, and the practical challenges
-                of building GenAI applications. I believe in learning in public and helping others navigate
-                the rapidly evolving AI landscape.
+            <p class="muted" style="margin-top: 1rem;">
+                <i class="fas fa-graduation-cap"></i> M.Tech CSE - Data Science, IIT Jammu &middot;
+                <i class="fas fa-map-marker-alt"></i> India
             </p>
         </div>
     </div>
-
-    <!-- My Journey -->
-    <div class="container section scroll-animate">
-        <h2><i class="fas fa-code-branch"></i> My Journey</h2>
-        <p class="muted" style="max-width: 800px; margin: 0 auto 2rem; text-align: center; font-size: 1.1rem;">
-            From IIT Jammu to production AI systems serving thousands — here's how I bridge
-            the gap between research papers and real-world impact.
-        </p>
-        <div class="cards">
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-university"></i> Academic Foundation</h3>
-                <p>
-                    <strong>M.Tech in Data Science from IIT Jammu</strong> (CGPA: 8.70/10).
-                    Masters thesis on super-resolution in medical imaging. Served as Teaching Assistant,
-                    mentoring 100+ students in Algorithms, Software Tools, and Web Engineering.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-hospital"></i> Medical NLP Research</h3>
-                <p>
-                    At <strong>nference.ai</strong>, transitioned NLP research to production healthcare systems.
-                    Explored CLIP for chest X-rays, investigated Meta-OPT and Nvidia Nemo-GPT for clinical
-                    extraction, and optimized BERT models for real-time clinical deployment.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-industry"></i> Scaling to Production</h3>
-                <p>
-                    Now at <strong>Lamipak</strong>, leading AI research initiatives in multimodal RAG
-                    and regulatory intelligence. Building systems that combine research rigor with
-                    production reliability, deployed across multiple countries and languages.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Impact & Achievements -->
-    <div class="container section scroll-animate">
-        <h2><i class="fas fa-chart-line"></i> Impact & Achievements</h2>
-        <div class="cards">
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-trophy"></i> AAAI 2024 Publication</h3>
-                <p>
-                    Co-authored <strong>OpenMedLM</strong> (AAAI 2024, NEJM AI), showing that
-                    strategic prompt engineering can match or exceed fine-tuning performance
-                    in medical question answering using open-source LLMs.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-users"></i> 10,000+ Daily Users</h3>
-                <p>
-                    Deployed multilingual multimodal RAG system (LamiOps) serving factory workers
-                    in production. Measured impact: <strong>99% reduction in manual troubleshooting time</strong>,
-                    with high retrieval precision and task-completion success rates.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-award"></i> Industry Recognition</h3>
-                <p>
-                    Received <strong>Bravo Award at nference</strong> for optimizing knowledge distillation,
-                    achieving 9× inference speedup and 8× model compression while maintaining
-                    clinical accuracy in production healthcare systems.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-globe"></i> Global Research Impact</h3>
-                <p>
-                    Built regulatory intelligence platform analyzing <strong>200+ data sources</strong>
-                    across 18+ countries and 9+ languages, achieving 95% reduction in
-                    manual R&D research workload through automated extraction.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-robot"></i> Few-Shot Learning Breakthrough</h3>
-                <p>
-                    At nference, demonstrated that <strong>few-shot prompting could replace supervised annotation pipelines</strong>,
-                    reducing reliance on labeled data by 99% while maintaining extraction accuracy
-                    using large-scale models (Meta-OPT, Nvidia Nemo-GPT-20B) for clinical information extraction.
-                </p>
-            </div>
-
-            <div class="card scroll-animate">
-                <h3><i class="fas fa-chalkboard-teacher"></i> Academic Mentorship</h3>
-                <p>
-                    Served as Teaching Assistant at <strong>IIT Jammu</strong> (2019-2021), supporting
-                    100+ students across undergraduate and postgraduate programs in Algorithms,
-                    Software Tools, and Web Engineering through tutorials and assignment design.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Skills & Expertise -->
-    <div class="container section scroll-animate">
-        <h2><i class="fas fa-cogs"></i> Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="card scroll-animate card-cyan">
-                <h3><i class="fas fa-brain"></i> AI/ML Technologies</h3>
-                <div class="skill-tags">
-                    <span>PyTorch</span>
-                    <span>Transformers</span>
-                    <span>LangChain</span>
-                    <span>ONNX</span>
-                    <span>Quantization</span>
-                    <span>AWS Bedrock</span>
-                    <span>Model Pretraining & Fine Tuning</span>
-                    <span>OpenAI API</span>
-                    <span>OpenRouter API</span>
-                </div>
-            </div>
-
-            <div class="card scroll-animate card-purple">
-                <h3><i class="fas fa-database"></i> Data & Infrastructure</h3>
-                <div class="skill-tags">
-                    <span>Qdrant</span>
-                    <span>FAISS</span>
-                    <span>MongoDb</span>
-                    <span>SQL</span>
-                    <span>PySpark</span>
-                    <span>Amazon Web Services (AWS)</span>
-                    <span>Docker</span>
-                    <span>FastAPI</span>
-                    <span>Django</span>
-                    <span>Crawl4AI</span>
-                    <span>Git</span>
-                </div>
-            </div>
-
-            <div class="card scroll-animate card-pink">
-                <h3><i class="fas fa-code-branch"></i> Core Specializations</h3>
-                <div class="skill-tags">
-                    <span>Natrual Language Processing (NLP)</span>
-                    <span>Large Language Models (LLMs)</span>
-                    <span>Multimodal RAG</span>
-                    <span>Medical NLP</span>
-                    <span>Information Extraction</span>
-                    <span>Hallucination Reduction</span>
-                    <span>Retrieval Evaluation</span>
-                    <span>Prompt Engineering</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<div class="footer">
-  <div class="footer-icons">
-    <i class="fas fa-code"></i>
-    <i class="fas fa-heart"></i>
-    <i class="fas fa-terminal"></i>
-  </div>
-  <p>
-    "Intelligence isn't magic — it's math, data, and careful engineering."
-  </p>
-  <p>© 2026 Mayank Sharma · Always learning, always building</p>
 </div>
 
-<script src="assets/animations.js"></script>
-</body>
-</html>
+<!-- My Story -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-book-open"></i> My Story</h2>
+    <div class="about-story">
+        <p>
+            My journey in AI began during my M.Tech in Data Science at <strong>IIT Jammu</strong>,
+            where I developed a deep fascination for how machines can understand and generate human language.
+            What started as academic curiosity evolved into a career dedicated to making AI systems that
+            are not just powerful, but also trustworthy and practical.
+        </p>
+        <p>
+            During my time at <strong>nference.ai</strong>, I transitioned from pure research to building
+            production healthcare systems. I explored everything from CLIP for chest X-rays to large language
+            models for clinical information extraction. This experience taught me that the real challenge
+            isn't just achieving high accuracy in research papers—it's deploying reliable systems that
+            healthcare professionals can trust with patient care.
+        </p>
+        <p>
+            Today, at <strong>Lamipak</strong>, I lead AI research initiatives focusing on multimodal RAG
+            and regulatory intelligence. I'm building systems that serve thousands of factory workers daily,
+            combining research rigor with production reliability. Every day, I work on problems that require
+            not just technical expertise, but also deep understanding of user needs and real-world constraints.
+        </p>
+        <p>
+            Beyond my day job, I'm passionate about knowledge sharing. Through my blog
+            <strong>Token by Token</strong>, I write about AI, ML, LLMs, RAG systems, and the practical challenges
+            of building GenAI applications. I believe in learning in public and helping others navigate
+            the rapidly evolving AI landscape.
+        </p>
+    </div>
+</div>
+
+<!-- My Journey -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-code-branch"></i> My Journey</h2>
+    <p class="muted" style="max-width: 800px; margin: 0 auto 2rem; text-align: center; font-size: 1.1rem;">
+        From IIT Jammu to production AI systems serving thousands — here's how I bridge
+        the gap between research papers and real-world impact.
+    </p>
+    <div class="cards">
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-university"></i> Academic Foundation</h3>
+            <p>
+                <strong>M.Tech in Data Science from IIT Jammu</strong> (CGPA: 8.70/10).
+                Masters thesis on super-resolution in medical imaging. Served as Teaching Assistant,
+                mentoring 100+ students in Algorithms, Software Tools, and Web Engineering.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-hospital"></i> Medical NLP Research</h3>
+            <p>
+                At <strong>nference.ai</strong>, transitioned NLP research to production healthcare systems.
+                Explored CLIP for chest X-rays, investigated Meta-OPT and Nvidia Nemo-GPT for clinical
+                extraction, and optimized BERT models for real-time clinical deployment.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-industry"></i> Scaling to Production</h3>
+            <p>
+                Now at <strong>Lamipak</strong>, leading AI research initiatives in multimodal RAG
+                and regulatory intelligence. Building systems that combine research rigor with
+                production reliability, deployed across multiple countries and languages.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Impact & Achievements -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-chart-line"></i> Impact & Achievements</h2>
+    <div class="cards">
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-trophy"></i> AAAI 2024 Publication</h3>
+            <p>
+                Co-authored <strong>OpenMedLM</strong> (AAAI 2024, NEJM AI), showing that
+                strategic prompt engineering can match or exceed fine-tuning performance
+                in medical question answering using open-source LLMs.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-users"></i> 10,000+ Daily Users</h3>
+            <p>
+                Deployed multilingual multimodal RAG system (LamiOps) serving factory workers
+                in production. Measured impact: <strong>99% reduction in manual troubleshooting time</strong>,
+                with high retrieval precision and task-completion success rates.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-award"></i> Industry Recognition</h3>
+            <p>
+                Received <strong>Bravo Award at nference</strong> for optimizing knowledge distillation,
+                achieving 9× inference speedup and 8× model compression while maintaining
+                clinical accuracy in production healthcare systems.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-globe"></i> Global Research Impact</h3>
+            <p>
+                Built regulatory intelligence platform analyzing <strong>200+ data sources</strong>
+                across 18+ countries and 9+ languages, achieving 95% reduction in
+                manual R&D research workload through automated extraction.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-robot"></i> Few-Shot Learning Breakthrough</h3>
+            <p>
+                At nference, demonstrated that <strong>few-shot prompting could replace supervised annotation pipelines</strong>,
+                reducing reliance on labeled data by 99% while maintaining extraction accuracy
+                using large-scale models (Meta-OPT, Nvidia Nemo-GPT-20B) for clinical information extraction.
+            </p>
+        </div>
+
+        <div class="card scroll-animate">
+            <h3><i class="fas fa-chalkboard-teacher"></i> Academic Mentorship</h3>
+            <p>
+                Served as Teaching Assistant at <strong>IIT Jammu</strong> (2019-2021), supporting
+                100+ students across undergraduate and postgraduate programs in Algorithms,
+                Software Tools, and Web Engineering through tutorials and assignment design.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Skills & Expertise -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-cogs"></i> Skills & Expertise</h2>
+    <div class="skills-grid">
+        <div class="card scroll-animate card-cyan">
+            <h3><i class="fas fa-brain"></i> AI/ML Technologies</h3>
+            <div class="skill-tags">
+                <span>PyTorch</span>
+                <span>Transformers</span>
+                <span>LangChain</span>
+                <span>ONNX</span>
+                <span>Quantization</span>
+                <span>AWS Bedrock</span>
+                <span>Model Pretraining & Fine Tuning</span>
+                <span>OpenAI API</span>
+                <span>OpenRouter API</span>
+            </div>
+        </div>
+
+        <div class="card scroll-animate card-purple">
+            <h3><i class="fas fa-database"></i> Data & Infrastructure</h3>
+            <div class="skill-tags">
+                <span>Qdrant</span>
+                <span>FAISS</span>
+                <span>MongoDb</span>
+                <span>SQL</span>
+                <span>PySpark</span>
+                <span>Amazon Web Services (AWS)</span>
+                <span>Docker</span>
+                <span>FastAPI</span>
+                <span>Django</span>
+                <span>Crawl4AI</span>
+                <span>Git</span>
+            </div>
+        </div>
+
+        <div class="card scroll-animate card-pink">
+            <h3><i class="fas fa-code-branch"></i> Core Specializations</h3>
+            <div class="skill-tags">
+                <span>Natrual Language Processing (NLP)</span>
+                <span>Large Language Models (LLMs)</span>
+                <span>Multimodal RAG</span>
+                <span>Medical NLP</span>
+                <span>Information Extraction</span>
+                <span>Hallucination Reduction</span>
+                <span>Retrieval Evaluation</span>
+                <span>Prompt Engineering</span>
+            </div>
+        </div>
+    </div>
+</div>

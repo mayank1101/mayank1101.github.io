@@ -1,0 +1,62 @@
+// ===== CSS Custom Properties =====
+// Light Mode (Day - Totoro Forest Theme)
+
+:root {
+  // Color scheme for native browser support
+  color-scheme: light;
+
+  // Core Backgrounds - Light & Airy
+  --bg: #FFF8F0;
+  --bg-secondary: #FFF5E8;
+  --card: #FFFFFF;
+  --card-hover: #FFF8F0;
+
+  // Text - Dark & Warm
+  --text: #4A4238;
+  --text-bright: #2D2520;
+  --muted: #8B7E6A;
+
+  // Accent Colors - Soft Ghibli Pastels
+  --accent: #87CEEB;
+  --accent-cyan: #87CEEB;
+  --accent-blue: #B4D7E9;
+  --accent-purple: #D4B5E8;
+  --accent-pink: #FFB6C1;
+  --accent-yellow: #FFD4BA;
+  --accent-green: #90C695;
+
+  // Border - Soft & Natural
+  --border: #E8DCC8;
+  --border-bright: #D4C4A8;
+
+  // Gradients - Gentle & Dreamy
+  --gradient-primary: linear-gradient(135deg, #FFD4BA 0%, #FFB6C1 50%, #D4B5E8 100%);
+  --gradient-secondary: linear-gradient(135deg, #90C695 0%, #87CEEB 100%);
+  --gradient-tertiary: linear-gradient(135deg, #B4D7E9 0%, #D4B5E8 100%);
+  --gradient-sky: linear-gradient(180deg, #87CEEB 0%, #FFF8F0 100%);
+
+  // Shadows - Soft & Natural
+  --shadow-soft: 0 4px 12px rgba(139, 126, 106, 0.12);
+  --shadow-medium: 0 8px 24px rgba(139, 126, 106, 0.15);
+  --shadow-large: 0 12px 32px rgba(139, 126, 106, 0.18);
+}
+
+// ===== SCSS Variables =====
+$transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+$transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+$border-radius-sm: 8px;
+$border-radius-md: 16px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
+$border-radius-round: 50%;
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1200px;
+
+// Font Families
+$font-primary: 'Nunito', 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+$font-heading: 'Quicksand', 'Nunito', sans-serif;
+$font-mono: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
