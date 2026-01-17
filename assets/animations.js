@@ -37,6 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check if device is mobile
   const isMobile = window.innerWidth <= 768;
+
+  // ===== Mobile Table Wrapper =====
+  // Wrap tables in scrollable container for better mobile experience
+  if (isMobile) {
+    document.querySelectorAll('.container table, .section table').forEach(table => {
+      // Skip if already wrapped
+      if (table.parentElement.classList.contains('table-wrapper')) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+
+      // Handle scroll shadow indicator
+      wrapper.addEventListener('scroll', () => {
+        const isAtEnd = wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5;
+        wrapper.classList.toggle('scrolled-end', isAtEnd);
+      });
+
+      // Check initial state
+      const isAtEnd = wrapper.scrollWidth <= wrapper.clientWidth;
+      wrapper.classList.toggle('scrolled-end', isAtEnd);
+    });
+  }
+
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ===== Scroll Animations =====

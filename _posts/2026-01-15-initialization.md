@@ -433,7 +433,9 @@ Output: Initialized network
 
 For convolutional layers, fan-in is computed as:
 
-$$n_{in} = \text{kernel\_height} \times \text{kernel\_width} \times \text{in\_channels}$$
+$$
+n_{in} = \text{kernel\_height} \times \text{kernel\_width} \times \text{in\_channels}
+$$
 
 For a 3×3 convolution with 64 input channels:
 

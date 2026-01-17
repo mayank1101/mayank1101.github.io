@@ -2292,17 +2292,76 @@ table tbody tr:last-child td {
 
 /* Mobile table responsiveness */
 @media (max-width: 768px) {
-  table {
-    font-size: 0.9rem;
-    display: block;
+  /* Table wrapper for horizontal scroll */
+  .table-wrapper {
+    position: relative;
+    width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    border: 2px solid var(--border-bright);
+    background: var(--card);
+  }
+
+  /* Scroll shadow indicator on right */
+  .table-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to left, var(--card) 0%, transparent 100%);
+    pointer-events: none;
+    opacity: 0.8;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* Hide shadow when scrolled to end */
+  .table-wrapper.scrolled-end::after {
+    opacity: 0;
+  }
+
+  .table-wrapper table {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  table {
+    font-size: 0.85rem;
+    min-width: 500px;
+    width: 100%;
   }
 
   table th,
   table td {
-    padding: 0.7rem 0.8rem;
+    padding: 0.6rem 0.7rem;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
   }
+
+  table th {
+    font-size: 0.8rem;
+  }
+
+  table td {
+    font-size: 0.85rem;
+  }
+
+  /* Allow text wrap for cells with longer content */
+  table td:first-child,
+  table th:first-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+
+/* Dark mode table wrapper */
+[data-theme="dark"] .table-wrapper::after {
+  background: linear-gradient(to left, var(--card) 0%, transparent 100%);
 }
 
 /* ===== Code Blocks ===== */
@@ -2567,11 +2626,12 @@ html, body {
     padding-left: 1.5rem;
   }
 
-  /* Tables responsive */
+  /* Tables responsive - ensure proper scrolling */
   .container table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    display: table;
+    min-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* Navigation - Collapsible Mobile Menu */
