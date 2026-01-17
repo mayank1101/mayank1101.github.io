@@ -802,11 +802,8 @@ const initThemeToggle = () => {
     }
   };
 
-  // Check for saved theme preference or system preference
+  // Check for saved theme preference
   const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const currentHour = new Date().getHours();
-  const isNightTime = currentHour >= 18 || currentHour < 6;
 
   // Set initial theme based on saved preference only (not auto dark)
   if (savedTheme === 'dark') {
