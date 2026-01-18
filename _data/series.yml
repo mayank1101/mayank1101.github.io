@@ -1,6 +1,6 @@
 - name: "Deep Learning Series"
   slug: "deep-learning"
-  description: "A comprehensive journey through theory, from understanding mathematics to practical implementation."
+  description: "A comprehensive journey through the fundamentals of core deep learning concepts, from understanding mathematics to practical implementation."
   accent_color: "purple"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
