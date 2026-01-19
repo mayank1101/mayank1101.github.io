@@ -625,21 +625,9 @@ If input data isn't normalized, even perfect weight initialization may fail. Alw
 
 ## Conclusion
 
-Weight initialization is the critical first step that determines whether a neural network will train successfully. What seems like a minor detail "the initial values of weights", has profound implications for the entire training process.
+Weight initialization is the critical first step that determines whether a neural network will train successfully. What seems like a minor detail "the initial values of weights", has profound implications for the entire training process. The journey from naive random initialization to principled methods like Xavier and He represents a fundamental advance in our understanding of neural networks. These techniques transformed deep learning from unreliable experimentation into a more predictable engineering discipline.
 
-### Key Takeaways
-
-1. **Initialization matters**: Poor initialization can completely prevent learning
-2. **Break symmetry**: Random initialization is essential for diverse feature learning
-3. **Control variance**: Activations and gradients must neither explode nor vanish
-4. **Match activation**: Use He for ReLU, Xavier for tanh/sigmoid
-5. **Consider architecture**: RNNs need orthogonal weights, Transformers need scaling
-6. **Normalize inputs**: Even perfect initialization fails with unnormalized data
-7. **Combine with normalization**: Modern networks use both for robustness
-
-The journey from naive random initialization to principled methods like Xavier and He represents a fundamental advance in our understanding of neural networks. These techniques transformed deep learning from unreliable experimentation into a more predictable engineering discipline.
-
-As you build neural networks, remember: the starting point matters. Take the time to initialize properly, and your networks will thank you with stable, efficient training.
+As you build neural networks, remember the starting point matters. Take the time to initialize properly, and your networks will thank you with stable, efficient training.
 
 ---
 
