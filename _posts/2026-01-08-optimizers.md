@@ -5,7 +5,7 @@ date: 2026-01-08
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
 series_image: "/assets/images/2026-01-08-understanding-optimizers/optimizer-landscape.png"
-excerpt: "Master optimization algorithms from SGD to Adam and beyond—understand how neural networks navigate the loss landscape to find optimal solutions."
+excerpt: "Master optimization algorithms from SGD to Adam and beyond. Understand how neural networks navigate the loss landscape to find optimal solutions."
 ---
 
 Continuing in our Deep Learning Series, we now turn our attention to the most critical component of neural network training: optimizers. Imagine you're blindfolded on a mountain range, trying to find the lowest valley. You can't see the landscape, but you can feel the slope beneath your feet. Each step you take is guided by the gradient, the direction of steepest descent. This is exactly how neural networks learn: optimizers are the algorithms that decide how to take each step based on the gradient information available.
