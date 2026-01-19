@@ -23,9 +23,8 @@ Continuing in our Deep Learning Series, we now turn our attention to the most cr
 9. [AdamW: Decoupled Weight Decay](#adamw-decoupled-weight-decay)
 10. [Advanced Optimizers: LAMB, LARS, and Beyond](#advanced-optimizers-lamb-lars-and-beyond)
 11. [Learning Rate Scheduling](#learning-rate-scheduling)
-12. [Choosing the Right Optimizer](#choosing-the-right-optimizer)
-13. [Practical Implementation Guide](#practical-implementation-guide)
-14. [Conclusion: Mastering Optimization](#conclusion-mastering-optimization)
+12. [Choosing The Right Optimizer](#choosing-the-right-optimizer)
+13. [Conclusion](#conclusion)
 
 ## Introduction: The Art of Finding Minima
 
@@ -685,7 +684,7 @@ The one cycle policy (by Leslie Smith) uses:
 
 This often achieves faster convergence and better results.
 
-## Choosing the Right Optimizer
+## Choosing The Right Optimizer
 
 ### Decision Framework
 
@@ -871,7 +870,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9, weight_decay=1e-
 scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[30, 60, 90])
 ```
 
-## Conclusion:
+## Conclusion
 
 We've traveled from simple gradient descent to sophisticated adaptive methods. Each optimizer represents a different strategy for navigating the loss landscape:
 
