@@ -10,13 +10,11 @@ excerpt: "Master weight initialization techniques that determine whether your ne
 
 ## Introduction: The Starting Point Matters
 
-Continuing in our Deep Learning Series, we will now focus on Weight initialization. So, Imagine you're dropped into an unfamiliar mountain range with the goal of finding the lowest valley. Where you start dramatically affects your journey: begin near a good path, and you'll descend smoothly to your destination; start on a steep cliff or a flat plateau, and you might tumble uncontrollably or wander aimlessly forever.
+Continuing in our Deep Learning Series, we will now focus on Weight initialization. So, Imagine you're dropped into an unfamiliar mountain range with the goal of finding the lowest valley. Where you start dramatically affects your journey, you might begin near a good path, and you'll descend smoothly to your destination; or you might start on a steep cliff or a flat plateau, and you might tumble uncontrollably or wander aimlessly forever.
 
-This is precisely the situation neural networks face. Before any training begins, we must assign initial values to the millions (or billions) of weights in the network. These initial values, the **weight initialization** determine the starting point in the optimization landscape. A good initialization leads to smooth, stable training; a poor one can cause the network to fail catastrophically before learning anything at all.
+This is precisely the situation neural networks face. Before any training begins, we must assign initial values to the millions (or billions) of weights in the network. These initial values, the **weight initialization** determine the starting point in the optimization landscape. A good initialization leads to smooth, stable training; whereas a poor one can cause the network to fail catastrophically before learning anything at all.
 
-For decades, weight initialization was treated as a minor detail. Researchers would initialize weights with small random numbers and hope for the best. But as networks grew deeper, this casual approach led to mysterious training failures: gradients would either explode to infinity or vanish to zero, making learning impossible.
-
-The breakthrough came when researchers realized that **the statistics of activations and gradients must be carefully controlled** across layers. This insight led to principled initialization schemes like `Xavier/Glorot initialization` for sigmoid/tanh networks, and `He/Kaiming initialization` for ReLU networks that transformed deep learning from an unreliable art into a more predictable science.
+For decades, weight initialization was treated as a minor detail. Researchers would initialize weights with small random numbers and hope for the best. But as networks grew deeper, this casual approach led to mysterious training failures; the gradients would either explode to infinity or vanish to zero, making learning impossible. The breakthrough came when researchers realized that **the statistics of activations and gradients must be carefully controlled** across layers. This insight led to principled initialization schemes like `Xavier/Glorot initialization` for sigmoid/tanh networks, and `He/Kaiming initialization` for ReLU networks that transformed deep learning from an unreliable art into a more predictable science.
 
 ### Why Initialization Matters
 
@@ -29,11 +27,11 @@ Proper initialization ensures that signals neither explode nor vanish, maintaini
 
 ## The Vanishing and Exploding Gradient Problem
 
-Before diving into initialization techniques, we must understand the problems they solve.
+Before diving into initialization techniques, we must understand the problems they solve. We need to first explore the dynamics of forward and backward propagation in neural networks.
 
 ### Forward Propagation Dynamics
 
-Consider a simple feedforward network without biases:
+Let's consider a simple feedforward network without biases:
 
 $$
 \mathbf{h}^{[l]} = f(\mathbf{W}^{[l]} \mathbf{h}^{[l-1]})
@@ -47,7 +45,7 @@ The variance of activations at layer $l$ depends on:
 3. The number of input connections (fan-in)
 4. The activation function
 
-For a linear network (no activation) with $n$ inputs per neuron:
+Now, for a linear network (no activation) with $n$ inputs per neuron:
 
 $$
 \text{Var}(h^{[l]}) = n \cdot \text{Var}(W) \cdot \text{Var}(h^{[l-1]})
@@ -58,7 +56,7 @@ If $n \cdot \text{Var}(W) < 1$, activations shrink exponentially with depth.
 
 ### Backward Propagation Dynamics
 
-During backpropagation, gradients flow in reverse:
+Whereas during backpropagation, gradients flow in reverse:
 
 $$
 \frac{\partial \mathcal{L}}{\partial \mathbf{h}^{[l-1]}} = (\mathbf{W}^{[l]})^T \frac{\partial \mathcal{L}}{\partial \mathbf{h}^{[l]}} \odot f'(\mathbf{z}^{[l-1]})
@@ -69,7 +67,7 @@ The gradient magnitude depends on:
 2. The derivative of the activation function
 3. The gradient from the next layer
 
-Similar exponential effects occur: if gradients grow or shrink at each layer, they explode or vanish over many layers.
+Similar exponential effects occur, if gradients grow or shrink at each layer, they explode or vanish over many layers.
 
 ### A Concrete Example
 
