@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Weight Initialization: The Critical First Step in Neural Network Training"
-date: 2026-01-15
+date: 2026-01-19
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2026-01-16-initialization/initialization-comparison.png"
+series_image: "/assets/images/2026-01-19-initialization/initialization-comparison.png"
 excerpt: "Master weight initialization techniques that determine whether your neural network trains successfully or fails before it even begins."
 ---
 
 ## Introduction: The Starting Point Matters
 
-Imagine you're dropped into an unfamiliar mountain range with the goal of finding the lowest valley. Where you start dramatically affects your journey: begin near a good path, and you'll descend smoothly to your destination; start on a steep cliff or a flat plateau, and you might tumble uncontrollably or wander aimlessly forever.
+Continuing in our Deep Learning Series, we will now focus on Weight initialization. So, Imagine you're dropped into an unfamiliar mountain range with the goal of finding the lowest valley. Where you start dramatically affects your journey: begin near a good path, and you'll descend smoothly to your destination; start on a steep cliff or a flat plateau, and you might tumble uncontrollably or wander aimlessly forever.
 
 This is precisely the situation neural networks face. Before any training begins, we must assign initial values to the millions (or billions) of weights in the network. These initial values, the **weight initialization** determine the starting point in the optimization landscape. A good initialization leads to smooth, stable training; a poor one can cause the network to fail catastrophically before learning anything at all.
 
@@ -625,7 +625,7 @@ If input data isn't normalized, even perfect weight initialization may fail. Alw
 
 ## Conclusion
 
-Continuing in our Deep Learning Series, we will now focus on Weight initialization.So, weight initialization is the critical first step that determines whether a neural network will train successfully. What seems like a minor detail "the initial values of weights", has profound implications for the entire training process. The journey from naive random initialization to principled methods like Xavier and He represents a fundamental advance in our understanding of neural networks. These techniques transformed deep learning from unreliable experimentation into a more predictable engineering discipline.
+Weight initialization is the critical first step that determines whether a neural network will train successfully. What seems like a minor detail "the initial values of weights", has profound implications for the entire training process. The journey from naive random initialization to principled methods like Xavier and He represents a fundamental advance in our understanding of neural networks. These techniques transformed deep learning from unreliable experimentation into a more predictable engineering discipline.
 
 As you build neural networks, remember the starting point matters. Take the time to initialize properly, and your networks will thank you with stable, efficient training.
 
