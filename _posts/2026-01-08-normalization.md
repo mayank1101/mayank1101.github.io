@@ -443,14 +443,6 @@ Both BN and LN act as **implicit regularizers**:
 - Helps prevent overfitting
 - Sometimes reduces need for dropout
 
-### Practical Examples
-
-**Image Classification**: ResNet-50 with BatchNorm trains 5-10× faster than without, achieving better accuracy.
-
-**Machine Translation**: Transformer models with LayerNorm converge in 100K steps vs. 300K+ steps without normalization.
-
-**Generative Models**: GANs use batch normalization extensively to stabilize training and prevent mode collapse.
-
 ## Advantages and Limitations
 
 ### Advantages of Batch Normalization
@@ -483,50 +475,6 @@ Both BN and LN act as **implicit regularizers**:
 - **Less effective for CNNs**: Batch normalization typically better for vision
 - **Feature dependency**: Assumes features should have similar distributions
 - **Slightly worse regularization**: Less stochastic than batch normalization
-
-## Real-World Considerations
-
-### Debugging Normalized Networks
-
-**Check running statistics**: If batch norm isn't working, inspect running mean/variance:
-```python
-print(f"Running mean: {bn_layer.running_mean}")
-print(f"Running var: {bn_layer.running_var}")
-```
-
-**Verify train/eval modes**: A common bug is forgetting to switch modes:
-```python
-model.eval()  # Before inference!
-```
-
-**Monitor gradient flow**: Normalization should improve gradient magnitudes:
-```python
-for name, param in model.named_parameters():
-    if param.grad is not None:
-        print(f"{name}: {param.grad.norm()}")
-```
-
-### Performance Optimization
-
-**Fused implementations**: Use optimized kernels:
-```python
-# PyTorch provides fused batch norm operations
-torch.nn.BatchNorm2d(..., momentum=0.1, eps=1e-5)
-```
-
-**Mixed precision training**: Normalization layers work well with FP16:
-```python
-with torch.cuda.amp.autocast():
-    output = model(input)  # BN/LN handle mixed precision automatically
-```
-
-### When NOT to Use Normalization
-
-Sometimes normalization can hurt performance:
-- **Very small networks**: Overhead might not be worth it
-- **Batch size = 1**: Batch norm breaks down (use layer norm or group norm)
-- **Specific architectures**: Some GANs use spectral normalization instead
-- **Online learning**: When examples arrive one at a time
 
 ## Conclusion
 
