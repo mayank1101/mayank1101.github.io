@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Understanding Optimizers: How Neural Networks Actually Learn"
-date: 2026-01-19
+date: 2026-01-12
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2026-01-19-understanding-optimizers/optimizer-landscape.png"
+series_image: "/assets/images/2026-01-12-understanding-optimizers/optimizer-landscape.png"
 excerpt: "Master optimization algorithms from SGD to Adam and beyond. Understand how neural networks navigate the loss landscape to find optimal solutions."
 ---
 
