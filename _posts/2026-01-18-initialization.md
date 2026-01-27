@@ -471,7 +471,7 @@ For residual connections $\mathbf{y} = \mathbf{x} + f(\mathbf{x})$, special cons
 
 This technique, called **zero initialization of residual branches**, significantly improves training stability for very deep ResNets.
 
-## Practical Implementation
+## Implementation
 
 ### NumPy Implementation
 
@@ -561,36 +561,6 @@ Modern networks often use **batch normalization** or **layer normalization**. Ho
 
 It is always a `good practice`, that, even with normalization, use appropriate initialization (He for ReLU, Xavier for tanh/sigmoid). It costs nothing and can only help.
 
-## Common Initialization Mistakes To Avoid
-
-### Mistake 1: Using Zero Initialization
-
-Never initialize all weights to zero or any constant. Symmetry breaking requires randomness.
-
-### Mistake 2: Wrong Initialization for Activation
-
-- Using Xavier with ReLU → activations shrink
-- Using He with sigmoid/tanh → activations may saturate
-
-So it's very important to match initialization to activation function.
-
-### Mistake 3: Forgetting Biases
-
-Biases should typically be initialized to **zero**. Non-zero bias initialization can cause issues:
-- For ReLU: Positive bias ensures neurons are active initially (sometimes useful)
-- For sigmoid/tanh: Zero bias centers activations
-
-### Mistake 4: Ignoring Architecture
-
-Different architectures need different approaches:
-- RNNs need orthogonal hidden-to-hidden weights
-- Transformers need scaled initialization for depth
-- ResNets may benefit from zero-initialized residual branches
-
-### Mistake 5: Not Considering Data Scale
-
-If input data isn't normalized, even perfect weight initialization may fail. Always normalize inputs.
-
 ## Comparison of Initialization Methods
 
 | Method | Formula | Best For | Key Property |
@@ -602,24 +572,6 @@ If input data isn't normalized, even perfect weight initialization may fail. Alw
 | **LeCun** | $\mathcal{N}(0, \frac{1}{n_{in}})$ | SELU, Linear | Self-normalizing |
 | **Orthogonal** | QR decomposition | RNNs, Very deep | Preserves norms |
 | **LSUV** | Data-driven scaling | Any | Empirically robust |
-
-## Advantages and Limitations
-
-### Advantages of Proper Initialization
-
-1. **Enables deep networks**: Without good initialization, very deep networks cannot train
-2. **Faster convergence**: Good starting point means fewer iterations needed
-3. **Better final performance**: Avoids bad local minima from poor starts
-4. **Stable training**: Prevents gradient explosion/vanishing
-5. **Reproducibility**: Principled approach yields consistent results
-
-### Limitations
-
-1. **Not a silver bullet**: Bad architectures won't be saved by good initialization
-2. **Doesn't replace normalization**: Both are complementary
-3. **Architecture-dependent**: No single method works universally
-4. **Data-agnostic** (except LSUV): May not account for input distribution
-5. **One-time effect**: Only matters at the start of training
 
 ## Conclusion
 
