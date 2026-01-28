@@ -8,7 +8,7 @@ A modern, responsive portfolio website and technical blog showcasing my journey 
 
 ## Live Website
 
-Visit: [https://mayank1101.github.io](https://mayank1101.github.io)
+Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
