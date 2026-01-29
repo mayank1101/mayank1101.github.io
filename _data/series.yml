@@ -6,10 +6,10 @@
   author: "Mayank Sharma"
   order: 1
 
-- name: "Machine Learning Series"
-  slug: "machine-learning"
-  description: "A comprehensive journey through the fundamentals of core machine learning concepts, from understanding mathematics to practical implementation."
-  accent_color: "cyan"
-  icon: "fas fa-brain"
-  author: "Mayank Sharma"
-  order: 2
+# - name: "Machine Learning Series"
+#   slug: "machine-learning"
+#   description: "A comprehensive journey through the fundamentals of core machine learning concepts, from understanding mathematics to practical implementation."
+#   accent_color: "cyan"
+#   icon: "fas fa-brain"
+#   author: "Mayank Sharma"
+#   order: 2
