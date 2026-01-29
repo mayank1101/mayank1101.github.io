@@ -25,3 +25,7 @@ vendor/
 
 # Build
 Gemfile.lock
+
+# html pages
+certifications.html
+_data/certifications.yml
