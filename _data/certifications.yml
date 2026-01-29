@@ -16,18 +16,19 @@
 
 # Example certifications (replace with your actual certifications):
 
-- name: "Deep Learning Specialization"
-  organization: "DeepLearning.AI (Coursera)"
-  date: "January 2023"
-  credential_id: "ABC123XYZ"
-  credential_url: "https://www.coursera.org/account/accomplishments/specialization/ABC123XYZ"
+- name: "AI Agents in LangGraph"
+  organization: "DeepLearning.AI"
+  date: "January 2024"
+  credential_id: "6476791d-ccd2-4262-9985-3c81ccce0100"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/6476791d-ccd2-4262-9985-3c81ccce0100"
   icon: "fas fa-brain"
   accent_color: "purple"
   skills:
-    - Neural Networks
-    - Convolutional Networks
-    - Sequence Models
-    - Deep Learning Frameworks
+    - LangGraph
+    - Agents
+    - Chatbots
+    - Generative AI
+    - LangChain
   description: "Comprehensive specialization covering neural networks, optimization, CNNs, RNNs, and deep learning best practices."
 
 - name: "Machine Learning"
