@@ -27,5 +27,5 @@ vendor/
 Gemfile.lock
 
 # html pages
-certifications.html
-_data/certifications.yml
+./certifications.html
+./_data/certifications.yml
