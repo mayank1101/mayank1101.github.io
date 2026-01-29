@@ -4,67 +4,131 @@ title: Resume
 description: Mayank Sharma's Resume - Available upon request. Contact me for collaboration opportunities in AI/ML research and engineering.
 ---
 
+<!-- Mobile-friendly styles for resume page -->
+<style>
+    .resume-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .resume-icon-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+    }
+    .resume-icon-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .resume-icon-glow {
+        position: absolute;
+        inset: -20px;
+        background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+        opacity: 0.15;
+        border-radius: 50%;
+        filter: blur(30px);
+    }
+    .resume-icon {
+        position: relative;
+        font-size: 10rem;
+        line-height: 1;
+        color: var(--accent-cyan);
+        text-shadow: 0 0 40px rgba(0, 188, 212, 0.3);
+    }
+    .resume-badges {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .resume-badge {
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin: 0.25rem;
+    }
+    .resume-badge-cyan { background: var(--accent-cyan); }
+    .resume-badge-purple { background: var(--accent-purple); }
+    .resume-content {
+        text-align: left;
+    }
+    .resume-content h1 {
+        font-size: 4rem;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.2;
+    }
+    .resume-content .lead {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+    .resume-content .description {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: var(--text-muted);
+    }
+    .accent-purple { color: var(--accent-purple); font-weight: 600; }
+
+    @media (max-width: 768px) {
+        .resume-hero-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .resume-icon-section {
+            padding: 1.5rem;
+        }
+        .resume-icon {
+            font-size: 6rem;
+        }
+        .resume-content {
+            text-align: center;
+        }
+        .resume-content h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+
 <!-- Resume Hero -->
 <div class="container hero fade-in">
-    <div class="hero-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+    <div class="hero-content resume-hero-grid">
         <!-- Icon & Visual -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem;">
-            <div style="position: relative; display: inline-block;">
-                <div style="position: absolute; inset: -20px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); opacity: 0.15; border-radius: 50%; filter: blur(30px);"></div>
-                <div style="position: relative; font-size: 10rem; line-height: 1; color: var(--accent-cyan); text-shadow: 0 0 40px rgba(0, 188, 212, 0.3);">
+        <div class="resume-icon-section">
+            <div class="resume-icon-wrapper">
+                <div class="resume-icon-glow"></div>
+                <div class="resume-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
             </div>
-            <div style="margin-top: 2rem; text-align: center;">
-                <div class="badges" style="justify-content: center; gap: 0.75rem;">
-                    <span style="background: var(--accent-cyan); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem;">
-                        <i class="fas fa-shield-alt"></i> Private
-                    </span>
-                    <span style="background: var(--accent-purple); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem;">
-                        <i class="fas fa-handshake"></i> By Request
-                    </span>
-                </div>
+            <div class="resume-badges">
+                <span class="resume-badge resume-badge-cyan">
+                    <i class="fas fa-shield-alt"></i> Private
+                </span>
+                <span class="resume-badge resume-badge-purple">
+                    <i class="fas fa-handshake"></i> By Request
+                </span>
             </div>
         </div>
 
         <!-- Content -->
-        <div style="text-align: left;">
-            <h1 style="font-size: 4rem; margin: 0 0 1.5rem 0; line-height: 1.2;">
-                My Resume
-            </h1>
-            <p style="font-size: 1.4rem; line-height: 1.7; margin-bottom: 1.5rem; font-weight: 500; color: var(--text-primary);">
-                I believe in <span style="color: var(--accent-purple); font-weight: 600;">meaningful connections</span> over mass distribution.
+        <div class="resume-content">
+            <h1>My Resume</h1>
+            <p class="lead">
+                I believe in <span class="accent-purple">meaningful connections</span> over mass distribution.
             </p>
-            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-muted);">
+            <p class="description">
                 My resume is available upon request to ensure genuine interest and personalized conversations. If you're looking for a collaborator who is experienced and understands both <span class="hero-highlight">Applied AI</span> and <span class="hero-highlight">Data Science</span>, let's connect.
             </p>
         </div>
     </div>
-
-    <!-- Mobile-friendly stacked layout -->
-    <style>
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            .hero-content > div:first-child {
-                padding: 1.5rem !important;
-            }
-            .hero-content > div:first-child > div:first-child > div:first-child {
-                font-size: 6rem !important;
-            }
-            .hero-content > div:last-child {
-                text-align: center !important;
-            }
-            .hero-content > div:last-child h1 {
-                font-size: 2.5rem !important;
-            }
-            .hero-content > div:last-child > div {
-                justify-content: center !important;
-            }
-        }
-    </style>
 </div>
 
 <!-- Why Upon Request -->

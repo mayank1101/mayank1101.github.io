@@ -1,0 +1,59 @@
+# Add your certifications here
+# Each certification should follow this format:
+#
+# - name: "Certification Name"
+#   organization: "Issuing Organization"
+#   date: "Month Year"
+#   credential_id: "Optional Credential ID"
+#   credential_url: "Optional verification URL"
+#   icon: "fas fa-certificate"
+#   accent_color: "cyan"  # Options: cyan, purple, pink
+#   skills:
+#     - Skill 1
+#     - Skill 2
+#     - Skill 3
+#   description: "Brief description of what this certification covers"
+
+# Example certifications (replace with your actual certifications):
+
+- name: "Deep Learning Specialization"
+  organization: "DeepLearning.AI (Coursera)"
+  date: "January 2023"
+  credential_id: "ABC123XYZ"
+  credential_url: "https://www.coursera.org/account/accomplishments/specialization/ABC123XYZ"
+  icon: "fas fa-brain"
+  accent_color: "purple"
+  skills:
+    - Neural Networks
+    - Convolutional Networks
+    - Sequence Models
+    - Deep Learning Frameworks
+  description: "Comprehensive specialization covering neural networks, optimization, CNNs, RNNs, and deep learning best practices."
+
+- name: "Machine Learning"
+  organization: "Stanford University (Coursera)"
+  date: "June 2022"
+  credential_id: "XYZ789ABC"
+  credential_url: "https://www.coursera.org/account/accomplishments/verify/XYZ789ABC"
+  icon: "fas fa-robot"
+  accent_color: "cyan"
+  skills:
+    - Supervised Learning
+    - Unsupervised Learning
+    - Linear Regression
+    - Neural Networks
+  description: "Foundational course covering machine learning algorithms, including linear regression, logistic regression, neural networks, and more."
+
+- name: "AWS Certified Machine Learning - Specialty"
+  organization: "Amazon Web Services (AWS)"
+  date: "March 2023"
+  credential_id: "AWS-MLS-12345"
+  credential_url: "https://www.credly.com/badges/example"
+  icon: "fab fa-aws"
+  accent_color: "pink"
+  skills:
+    - AWS SageMaker
+    - Model Deployment
+    - ML Pipeline
+    - AWS Services
+  description: "Validates expertise in building, training, tuning, and deploying machine learning models using AWS."
