@@ -1,0 +1,116 @@
+// ===== Resume Page Styles =====
+
+.resume-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-icon-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.resume-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-icon-glow {
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  opacity: 0.15;
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+.resume-icon {
+  position: relative;
+  font-size: 10rem;
+  line-height: 1;
+  color: var(--accent-cyan);
+  text-shadow: 0 0 40px rgba(0, 188, 212, 0.3);
+}
+
+.resume-badges {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resume-badge {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.resume-badge-cyan {
+  background: var(--accent-cyan);
+}
+
+.resume-badge-purple {
+  background: var(--accent-purple);
+}
+
+.resume-content {
+  text-align: left;
+
+  h1 {
+    font-size: 4rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .lead {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+  }
+}
+
+.accent-purple {
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+// ===== Responsive Styles =====
+@media (max-width: 768px) {
+  .resume-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .resume-icon-section {
+    padding: 1.5rem;
+  }
+
+  .resume-icon {
+    font-size: 6rem;
+  }
+
+  .resume-content {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
