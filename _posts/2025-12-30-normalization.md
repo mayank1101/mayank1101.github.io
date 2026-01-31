@@ -10,7 +10,7 @@ excerpt: "Master batch and layer normalization techniques that revolutionized de
 
 ## Introduction: The Challenge of Training Deep Networks
 
-Imagine you're conducting an orchestra where each musician plays at wildly different volumes, some whisper softly while others blast at maximum intensity. The conductor struggles to balance the ensemble, constantly adjusting their attention between the quietest flute and the loudest timpani. This is analogous to training deep neural networks without normalization: as data flows through layers, its statistical properties change unpredictably, making optimization difficult and unstable.
+Continuing in our Deep Learning Series, here we will explore the critical concept of normalization. So, imagine you're conducting an orchestra where each musician plays at wildly different volumes, some whisper softly while others blast at maximum intensity. The conductor struggles to balance the ensemble, constantly adjusting their attention between the quietest flute and the loudest timpani. This is analogous to training deep neural networks without normalization: as data flows through layers, its statistical properties change unpredictably, making optimization difficult and unstable.
 
 **Normalization techniques** solve this problem by standardizing the inputs to each layer, ensuring consistent statistical properties throughout the network. This seemingly simple idea has revolutionized deep learning, enabling the training of much deeper networks, faster convergence, and better generalization.
 
