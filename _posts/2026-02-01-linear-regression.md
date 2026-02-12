@@ -729,5 +729,3 @@ Linear regression is ideal when:
 For complex relationships, consider polynomial regression, regularization techniques, or more advanced models.
 
 Now that you understand one of the most important algorithms in machine learning. Linear regression may be simple, but it's the foundation for countless applications and more advanced techniques. In the next tutorial, we'll extend these concepts to **Logistic Regression** for classification problems.
-
----
