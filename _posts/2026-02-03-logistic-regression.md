@@ -26,6 +26,7 @@ Continuing our journey through machine learning, today we turn to **logistic reg
 10. [Evaluation Metrics for Classification](#evaluation-metrics-for-classification)
 11. [Implementation from Scratch](#implementation-from-scratch)
 12. [Conclusion](#conclusion)
+13. [Jupyter Notebook](#jupyter-notebook)
 
 ## Introduction: From Regression to Classification
 
