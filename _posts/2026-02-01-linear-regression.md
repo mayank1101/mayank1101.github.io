@@ -135,7 +135,7 @@ Squaring serves several purposes:
 
 ### Visualizing the Cost Function
 
-If we plot $J(\theta_0, \theta_1)$ as a function of the parameters, we get a bowl-shaped surface in 3D (or a parabola in 2D if we fix one parameter). Our goal is to find the bottom of this bowl—the point where the cost is minimized.
+If we plot $J(\theta_0, \theta_1)$ as a function of the parameters, we get a bowl-shaped surface in 3D (or a parabola in 2D if we fix one parameter). Our goal is to find the bottom of this bowl, the point where the cost is minimized.
 
 ## Gradient Descent: Learning the Best Fit
 
