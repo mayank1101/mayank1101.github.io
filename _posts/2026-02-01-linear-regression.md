@@ -25,6 +25,7 @@ Continuing in our Machine Learning Series, today we dive deep into linear regres
 9. [Implementation from Scratch](#implementation-from-scratch)
 10. [Model Evaluation and Interpretation](#model-evaluation-and-interpretation)
 11. [Conclusion](#conclusion)
+12. [Jupyter Notebook](#jupyter-notebook)
 
 ## Introduction: The Power of Linear Relationships
 
@@ -729,3 +730,7 @@ Linear regression is ideal when:
 For complex relationships, consider polynomial regression, regularization techniques, or more advanced models.
 
 Now that you understand one of the most important algorithms in machine learning. Linear regression may be simple, but it's the foundation for countless applications and more advanced techniques. In the next tutorial, we'll extend these concepts to **Logistic Regression** for classification problems.
+
+## Jupyter Notebook
+
+For hands-on practice, check out the companion notebooks -  [Linear Regression Tutorial](https://drive.google.com/file/d/1nl8lb0FZRNFG9L_3LmhMVLxdgbv-vvVh/view?usp=sharing)
