@@ -8,8 +8,6 @@ series_image: "/assets/images/2026-02-03-logistic-regression/logistic-regression
 excerpt: "Understanding logistic regression for classification problems, from binary to multiclass with sigmoid and softmax functions."
 ---
 
-# Logistic Regression: Binary and Multiclass Classification
-
 Continuing our journey through machine learning, today we turn to **logistic regression**, the workhorse of classification problems. Imagine you're a doctor looking at a patient's medical data—blood pressure, cholesterol level, age, weight and you need to answer a simple but critical question: **Will this patient develop heart disease?** The answer isn't a number like "$245,000" (as in house price prediction). It's a **yes or no**. Welcome to the world of classification, where logistic regression is the fundamental algorithm you need to master.
 
 ## Table of Contents
