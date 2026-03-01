@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Linear Regression: From Simple to Multiple Regression"
-date: 2026-02-01
+date: 2025-12-01
 series: "Machine Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2026-02-01-linear-regression/linear-regression.png"
+series_image: "/assets/images/2025-12-01-linear-regression/linear-regression.png"
 excerpt: "Master linear regression from scratch, understanding simple and multiple regression, cost functions, and gradient descent."
 ---
 
