@@ -1,4 +1,33 @@
 // ===== About Page Styles =====
+.about-hero-meta {
+  margin-top: 1rem;
+}
+
+.about-section-lead {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.about-quote-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.about-quote {
+  font-style: italic;
+  color: var(--muted);
+
+  .fa-quote-left {
+    margin-right: 0.5rem;
+  }
+
+  .fa-quote-right {
+    margin-left: 0.5rem;
+  }
+}
+
 .about-story {
   max-width: 900px;
   margin: 0 auto;
