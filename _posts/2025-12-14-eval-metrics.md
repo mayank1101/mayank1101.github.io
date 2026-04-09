@@ -209,7 +209,7 @@ $$\tau^* = \frac{C_{FP}}{C_{FP} + C_{FN}}$$
 **Example**: In fraud detection, missing a $10,000 fraud ($C_{FN} = 10{,}000$) is far worse than triggering a review incorrectly ($C_{FP} = 50$):
 $$\tau^* = \frac{50}{50 + 10000} \approx 0.005$$
 
-Set the threshold very low — flag almost everything — to minimise missed frauds.
+Set the threshold very low ($\tau \approx 0$) to flag almost everything as fraudulent to minimise missed frauds.
 
 ## F-Score: Balancing Precision and Recall
 
@@ -793,10 +793,10 @@ In summary, classification metrics are a valuable tool for model evaluation, wit
 
 Here are some best practices to follow when evaluating classification models:
 
-- ✅ **Define your error costs before choosing a metric**: Is FP or FN more expensive?
-- ✅ **Check class balance before reporting accuracy**: switch to F1 or MCC if imbalanced
-- ✅ **Report both the metric value and its CV standard deviation**: a model at 0.85 ± 0.01 beats 0.86 ± 0.08
-- ✅ **Plot the full ROC and PR curves**: aggregate AUC hides where the model works well vs. poorly
-- ✅ **Use stratified k-fold** for all classification problems with imbalanced classes
-- ✅ **Separate hyperparameter tuning from evaluation** using nested CV
-- ✅ **Report multiple metrics**: no single metric tells the complete story
+- **Define your error costs before choosing a metric**: Is FP or FN more expensive?
+- **Check class balance before reporting accuracy**: switch to F1 or MCC if imbalanced
+- **Report both the metric value and its CV standard deviation**: a model at 0.85 ± 0.01 beats 0.86 ± 0.08
+- **Plot the full ROC and PR curves**: aggregate AUC hides where the model works well vs. poorly
+- **Use stratified k-fold** for all classification problems with imbalanced classes
+- **Separate hyperparameter tuning from evaluation** using nested CV
+- **Report multiple metrics**: no single metric tells the complete story
