@@ -1,0 +1,177 @@
+---
+layout: page
+title: Certifications
+description: Professional certifications and continuous learning in AI, Product Management, and Data Science by Mayank Sharma.
+---
+
+<!-- Certifications Hero -->
+<div class="container hero fade-in">
+    <div class="hero-content cert-hero-content">
+        <div class="hero-text cert-hero-text">
+            <div class="cert-hero-title">
+                <div class="cert-hero-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h1>Certifications</h1>
+            </div>
+            <p class="cert-lead">
+                Staying current at the intersection of AI and product — because great AI products require
+                both deep technical fluency and sharp product thinking.
+            </p>
+            <p class="cert-subtitle">
+                Each certification reflects a deliberate investment in the skills that matter for building,
+                evaluating, and shipping AI systems that create real business value.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="container section scroll-animate">
+    <div class="stats-grid">
+        {% assign cert_count = site.data.certifications | size %}
+        <div class="card stat-card">
+            <div class="stat-icon cyan">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="stat-value cyan">{{ cert_count }}</h3>
+            <p class="muted">Certifications</p>
+        </div>
+        <div class="card stat-card">
+            <div class="stat-icon purple">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="stat-value purple">Continuous</h3>
+            <p class="muted">Learning</p>
+        </div>
+        <div class="card stat-card">
+            <div class="stat-icon pink">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="stat-value pink">Growing</h3>
+            <p class="muted">Expertise</p>
+        </div>
+    </div>
+</div>
+
+<!-- Certifications Grid -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-medal"></i> My Certifications</h2>
+    <p class="cert-section-lead muted">
+        From AI/ML fundamentals to product strategy — a curated set of credentials that sharpen
+        the skills I apply every day to design, build, and evaluate AI products.
+    </p>
+
+    {% if site.data.certifications.size > 0 %}
+    <div class="cards">
+        {% for cert in site.data.certifications %}
+        <div class="card scroll-animate card-{{ cert.accent_color }}">
+            <div class="card-icon">
+                <i class="{{ cert.icon }}"></i>
+            </div>
+
+            <h3>{{ cert.name }}</h3>
+
+            <div class="cert-org-info">
+                <p class="org-name">
+                    <i class="fas fa-building"></i> {{ cert.organization }}
+                </p>
+                <p class="muted org-date">
+                    <i class="far fa-calendar"></i> {{ cert.date }}
+                </p>
+            </div>
+
+            <p>{{ cert.description }}</p>
+
+            {% if cert.skills %}
+            <div class="cert-skills-section">
+                <p class="cert-skills-label">
+                    <i class="fas fa-tags"></i> Skills Covered:
+                </p>
+                <div class="skill-tags">
+                    {% for skill in cert.skills %}
+                    <span>{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="cert-footer">
+                {% if cert.credential_id %}
+                <p class="muted cert-credential-id">
+                    <i class="fas fa-fingerprint"></i> Credential ID: <code>{{ cert.credential_id }}</code>
+                </p>
+                {% endif %}
+
+                {% if cert.credential_url %}
+                <a href="{{ cert.credential_url }}" target="_blank" class="blog-read-link cert-verify-link">
+                    <i class="fas fa-external-link-alt"></i> Verify Credential
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="card empty-state">
+        <div class="empty-state-icon">
+            <i class="fas fa-inbox"></i>
+        </div>
+        <h3>No Certifications Yet</h3>
+        <p class="muted">
+            Add your certifications to <code>_data/certifications.yml</code> to display them here.
+        </p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Why Continuous Learning Matters -->
+<div class="container section scroll-animate">
+    <h2><i class="fas fa-lightbulb"></i> Why I Keep Learning</h2>
+    <div class="about-story">
+        <p>
+            The AI landscape moves fast — what's state-of-the-art today is a baseline tomorrow.
+            For an AI product professional, that means two things: staying technically fluent enough
+            to make sound architecture and evaluation decisions, and building product intuition that
+            keeps user needs at the center regardless of how the technology shifts.
+        </p>
+        <p>
+            These certifications represent deliberate learning across both dimensions:
+        </p>
+        <ul class="cert-learning-list">
+            <li><strong>Technical Depth:</strong> Understanding the AI systems I'm designing and evaluating — not just the interfaces</li>
+            <li><strong>Product Craft:</strong> Frameworks for roadmapping, prioritization, experimentation, and measuring impact</li>
+            <li><strong>Evaluation Rigour:</strong> Building the right metrics and feedback loops, not just shipping features</li>
+            <li><strong>Industry Standards:</strong> Learning from leading organizations on how to govern, deploy, and iterate on AI responsibly</li>
+            <li><strong>Validated Credibility:</strong> Demonstrating expertise that complements real-world project delivery</li>
+        </ul>
+        <p>
+            Certifications validate structured knowledge — but real expertise shows up in shipped products.
+            See how I apply these skills in my <a href="/blog.html">blog</a>, or read about the
+            production systems I've built on my <a href="/about.html">about page</a>.
+        </p>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="container section scroll-animate">
+    <div class="card cta-card">
+        <div class="cta-card-icon">
+            <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Let's Build Something Together</h3>
+        <p class="cta-card-text">
+            Looking for an AI Product Manager or consultant who combines technical depth with sharp
+            product thinking? Whether it's defining your AI roadmap, evaluating systems, or leading
+            end-to-end delivery — I'd love to connect.
+        </p>
+        <div class="cta-buttons">
+            <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
+                <i class="fas fa-envelope"></i> Get in Touch
+            </a>
+            <a class="cta-secondary" href="/resume.html">
+                <i class="fas fa-file-alt"></i> View Resume
+            </a>
+        </div>
+    </div>
+</div>

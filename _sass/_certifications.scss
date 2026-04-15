@@ -1,0 +1,208 @@
+// ===== Certifications Page Styles =====
+
+.cert-hero-content {
+  text-align: center;
+}
+
+.cert-hero-text {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-hero-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.cert-hero-icon {
+  font-size: 5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  color: var(--accent-purple);
+}
+
+.cert-lead {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+  color: var(--text-bright);
+}
+
+.cert-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 1.5rem auto 0;
+  color: var(--muted);
+}
+
+// Stats
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+
+  &.cyan  { color: var(--accent-cyan); }
+  &.purple { color: var(--accent-purple); }
+  &.pink  { color: var(--accent-pink); }
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+
+  &.cyan  { color: var(--accent-cyan); }
+  &.purple { color: var(--accent-purple); }
+  &.pink  { color: var(--accent-pink); }
+}
+
+// Certification card internals
+.cert-org-info {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: $border-radius-sm;
+
+  p {
+    margin: 0;
+  }
+
+  .org-name {
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+
+  .org-date {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cert-skills-section {
+  margin: 1.5rem 0;
+}
+
+.cert-skills-label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.cert-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.cert-credential-id {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+
+  code {
+    background: rgba(0, 0, 0, 0.08);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: $font-mono;
+  }
+}
+
+.cert-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cert-section-lead {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.cert-learning-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+// CTA card
+.cta-card {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(212, 181, 232, 0.1));
+  border: 2px solid var(--border);
+}
+
+.cta-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-purple);
+}
+
+.cta-card-text {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+// Empty state
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+// ===== Responsive =====
+@media (max-width: 768px) {
+  .cert-hero-title {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .cert-hero-icon {
+    font-size: 3rem;
+  }
+}

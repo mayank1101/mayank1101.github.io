@@ -27,8 +27,8 @@ vendor/
 Gemfile.lock
 
 # Certifications (private)
-certifications.html
-_data/certifications.yml
+# certifications.html
+# _data/certifications.yml
 
 # machine-learning (private)
 # series/machine-learning
