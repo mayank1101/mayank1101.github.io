@@ -86,83 +86,131 @@
   &.pink  { color: var(--accent-pink); }
 }
 
-// Compact cert cards grid
+// ===== Cert Cards Grid =====
 .cert-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
+}
 
-  .card {
-    padding: 1.25rem 1.5rem;
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: $border-radius-lg;
+  border: 3px solid var(--border);
+  overflow: hidden;
+  transition: all 0.4s $transition-bounce;
 
-    h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+  &:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    border-color: var(--border-bright);
+
+    .cert-card-icon {
+      transform: scale(1.1) rotate(5deg);
     }
 
-    .card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
+    .cert-card-action {
+      color: var(--accent-pink);
+      transform: translateX(4px);
     }
+  }
+
+  &.card-cyan {
+    border-left: 5px solid var(--accent-cyan);
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), var(--card));
+
+    .cert-card-icon { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); }
+  }
+
+  &.card-purple {
+    border-left: 5px solid var(--accent-purple);
+    background: linear-gradient(135deg, rgba(212, 181, 232, 0.1), var(--card));
+
+    .cert-card-icon { background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink)); }
+  }
+
+  &.card-pink {
+    border-left: 5px solid var(--accent-pink);
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), var(--card));
+
+    .cert-card-icon { background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); }
   }
 }
 
-// Certification card internals
-.cert-org-info {
-  margin: 1rem 0;
-  padding: 0.75rem;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: $border-radius-sm;
+.cert-card-header {
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.cert-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: $border-radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: var(--gradient-secondary);
+  color: var(--text-bright);
+  transition: all 0.4s $transition-bounce;
+}
+
+.cert-card-body {
+  padding: 0 1.25rem;
+  flex: 1;
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+    font-family: $font-heading;
+  }
 
   p {
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.5;
     margin: 0;
   }
-
-  .org-name {
-    font-weight: 600;
-    color: var(--text-bright);
-  }
-
-  .org-date {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
 }
 
-.cert-skills-section {
-  margin: 1.5rem 0;
-}
-
-.cert-skills-label {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.cert-footer {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+.cert-card-footer {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
   border-top: 1px solid var(--border);
+  margin-top: 1rem;
 }
 
-.cert-credential-id {
+.cert-card-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  i { color: var(--accent-green); }
+}
+
+.cert-card-action {
+  margin-left: auto;
   font-size: 0.85rem;
-  margin-bottom: 0.75rem;
-
-  code {
-    background: rgba(0, 0, 0, 0.08);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-family: $font-mono;
-  }
-}
-
-.cert-verify-link {
+  font-weight: 600;
+  color: var(--accent-green);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent-pink);
+  }
 }
 
 .cert-section-lead {
@@ -179,7 +227,7 @@
   font-size: 1.1rem;
 }
 
-// CTA card
+// ===== CTA card =====
 .cta-card {
   max-width: 700px;
   margin: 0 auto;
@@ -222,12 +270,21 @@
 // ===== Responsive =====
 @media (max-width: 768px) {
   .cert-hero-title {
-    h1 {
-      font-size: 2.5rem;
-    }
+    h1 { font-size: 2.5rem; }
   }
 
   .cert-hero-icon {
     font-size: 3rem;
+  }
+
+  .cert-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-cards {
+    grid-template-columns: 1fr;
   }
 }
