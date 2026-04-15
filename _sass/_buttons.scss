@@ -1,72 +1,88 @@
-// ===== CTA Buttons — Professional Modern =====
-.cta {
+// ===== Buttons — Sketchy Hand-Drawn =====
+
+%sketch-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--accent);
-  color: #FFFFFF;
-  padding: 0.7rem 1.4rem;
-  border-radius: $border-radius-md;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  border: 1px solid var(--accent);
+  gap: 0.55rem;
+  padding: 0.75rem 1.5rem;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border: 2.5px solid var(--ink);
+  border-radius: 22px 14px 26px 18px / 18px 26px 14px 22px;
+  box-shadow: 4px 4px 0 0 var(--ink);
   cursor: pointer;
-  box-shadow: var(--shadow-soft);
+  transition: transform 0.15s $transition-bounce,
+              box-shadow 0.15s $transition-smooth,
+              background 0.2s ease;
+  text-decoration: none;
 
   &:hover {
-    background: var(--accent-blue);
-    color: #FFFFFF;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-medium);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--ink);
+  }
+
+  &:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 var(--ink);
+  }
+}
+
+.cta {
+  @extend %sketch-btn;
+  background: var(--accent-yellow);
+  color: var(--ink);
+
+  &:hover {
+    background: #FFD84A;
+    color: var(--ink);
   }
 }
 
 .cta-large {
-  padding: 0.9rem 1.75rem;
-  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
 }
 
 .cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid var(--border-bright);
+  @extend %sketch-btn;
   background: var(--card);
-  color: var(--text-bright);
-  padding: 0.7rem 1.4rem;
-  border-radius: $border-radius-md;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
+  color: var(--ink);
 
   &:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--tint-blue);
-    transform: translateY(-1px);
+    background: var(--tint-yellow);
   }
 }
 
-// Theme toggle button
+// Theme toggle — circled sticker
 .theme-toggle {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: $border-radius-md;
+  border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
   background: var(--card);
-  color: var(--muted);
-  transition: all 0.2s ease;
-  font-size: 1rem;
-  border: 1px solid var(--border);
+  color: var(--ink);
+  border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 0 var(--ink);
+  font-size: 1.1rem;
   cursor: pointer;
+  transition: transform 0.15s $transition-bounce,
+              box-shadow 0.15s ease,
+              background 0.2s ease;
+  transform: rotate(-6deg);
 
   &:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-    background: var(--tint-blue);
+    background: var(--tint-yellow);
+    transform: rotate(4deg) translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 var(--ink);
+  }
+
+  &:active {
+    transform: rotate(-2deg) translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 var(--ink);
   }
 
   .fa-sun  { display: none; }

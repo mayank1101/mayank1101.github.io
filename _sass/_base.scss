@@ -1,4 +1,4 @@
-// ===== Base Styles — Professional Modern =====
+// ===== Base Styles — Sketchy Hand-Drawn =====
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
 }
 
 body {
@@ -15,13 +14,31 @@ body {
   font-family: $font-primary;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.6;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  font-size: 1.05rem;
+
+  // Notebook "ruled paper" subtle lines
+  background-image:
+    linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), rgba(46, 91, 219, 0.06) calc(2rem - 1px), rgba(46, 91, 219, 0.06) 2rem),
+    var(--paper-noise);
+  background-size: 100% 2rem, 220px 220px;
+  background-attachment: fixed;
+}
+
+// Paper grain overlay
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: var(--paper-noise);
+  mix-blend-mode: multiply;
+  opacity: 0.35;
 }
 
 *, *::before, *::after {
@@ -33,68 +50,93 @@ img, video, iframe {
   height: auto;
 }
 
-a, button {
-  -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
-}
-
 a {
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s $transition-smooth;
+  background-image: linear-gradient(var(--tint-yellow), var(--tint-yellow));
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: 0 85%;
+  transition: color 0.2s, background-size 0.2s;
 
   &:hover {
-    color: var(--accent-purple);
+    color: var(--accent-pink);
+    background-size: 100% 90%;
   }
 }
 
-// ===== Typography =====
+// ===== Typography — hand-drawn =====
 h1 {
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  margin-bottom: 1.25rem;
-  color: var(--text-bright);
   font-family: $font-heading;
+  font-size: clamp(2.75rem, 8vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+  color: var(--ink);
+  transform: rotate(-0.8deg);
+  display: inline-block;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-family: $font-heading;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
   margin-bottom: 1.25rem;
-  color: var(--text-bright);
+  color: var(--ink);
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  font-family: $font-heading;
+  gap: 0.6rem;
+  transform: rotate(-0.5deg);
 
   i {
-    color: var(--accent);
-    font-size: 0.9em;
+    color: var(--accent-pink);
+    font-size: 0.85em;
+    transform: rotate(-8deg);
+  }
+
+  // Underline scribble
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 8px;
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'><path d='M2,6 Q20,1 40,6 T80,6 T120,6 T160,6 T198,6' fill='none' stroke='%23E23D7A' stroke-width='3' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;
+    pointer-events: none;
   }
 }
 
 h3 {
-  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  margin-bottom: 0.85rem;
-  color: var(--text-bright);
   font-family: $font-heading;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+  letter-spacing: 0.2px;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  font-family: $font-primary;
+}
+
+strong, b {
+  background: linear-gradient(transparent 60%, var(--tint-yellow) 60%);
+  padding: 0 0.1em;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-top: 0.5rem;
+  font-style: italic;
 }
 
 // ===== Container =====
@@ -104,14 +146,9 @@ p {
   padding: 2rem;
 }
 
-// ===== Background decorative orbs — neutralized in modern theme =====
+// Disable glow orbs from legacy layout
 .glow-orb {
   display: none;
-}
-
-// No forest gradient overlay in modern theme
-body::before {
-  content: none;
 }
 
 // ===== Sections =====
@@ -124,4 +161,11 @@ body::before {
   &:nth-of-type(even) {
     background: transparent;
   }
+}
+
+// Doodle decoration helper (optional spans)
+.doodle {
+  display: inline-block;
+  transform: rotate(-6deg);
+  color: var(--accent-pink);
 }

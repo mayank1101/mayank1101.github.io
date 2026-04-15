@@ -273,9 +273,9 @@
       metas.forEach((m) => {
         const media = m.getAttribute('media') || '';
         if (theme === 'dark' && (media.includes('dark') || !media)) {
-          m.setAttribute('content', '#0B1120');
+          m.setAttribute('content', '#1C1B20');
         } else if (theme === 'light' && (media.includes('light') || !media)) {
-          m.setAttribute('content', '#F8FAFC');
+          m.setAttribute('content', '#FBF8F1');
         }
       });
     };

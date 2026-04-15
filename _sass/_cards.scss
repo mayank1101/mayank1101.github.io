@@ -1,35 +1,33 @@
-// ===== Cards — Professional Modern =====
+// ===== Cards — Sketchy Hand-Drawn =====
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .card {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: $border-radius-xl;
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
   padding: 1.75rem;
-  transition: transform 0.2s $transition-smooth,
-              box-shadow 0.2s $transition-smooth,
-              border-color 0.2s $transition-smooth;
   position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.25s $transition-bounce,
+              box-shadow 0.25s $transition-smooth,
+              background 0.25s ease;
+
+  // Rotate cards slightly for a pinned-to-board feel
+  &:nth-child(odd)  { transform: rotate(-0.6deg); }
+  &:nth-child(even) { transform: rotate(0.5deg); }
 
   &:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-    box-shadow: var(--shadow-medium);
+    transform: rotate(0deg) translate(-2px, -2px);
+    box-shadow: 7px 7px 0 0 var(--ink);
+    background: var(--card-hover);
 
-    h3 {
-      color: var(--accent);
-    }
-
-    .card-icon {
-      color: var(--accent);
-    }
+    h3 { color: var(--accent-pink); }
+    .card-icon { transform: rotate(-10deg) scale(1.08); }
   }
 
   h3 {
@@ -38,19 +36,21 @@
   }
 }
 
-// Card Icons
+// Card Icons — circled marker
 .card-icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.85rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.9rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: $border-radius-md;
-  background: var(--tint-blue);
-  color: var(--accent);
-  transition: all 0.2s ease;
+  width: 52px;
+  height: 52px;
+  border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
+  background: var(--tint-yellow);
+  color: var(--ink);
+  border: 2.5px solid var(--ink);
+  transition: transform 0.25s $transition-bounce;
+  transform: rotate(-5deg);
 }
 
 .blog-icon {
@@ -58,46 +58,42 @@
   color: var(--accent-purple);
   margin-bottom: 0.85rem;
   display: inline-block;
-  transition: color 0.2s ease;
+  transition: transform 0.25s $transition-bounce;
+  transform: rotate(-6deg);
 }
 
 .card:hover .blog-icon {
-  color: var(--accent);
+  transform: rotate(8deg) scale(1.1);
+  color: var(--accent-pink);
 }
 
-// Card Color Variants — accent border-top, subtle tint
+// Color variants — marker-swipe backgrounds + ink border stays
 .card-cyan {
-  border-top: 3px solid var(--accent-cyan);
-  .card-icon { background: var(--tint-cyan); color: var(--accent-cyan); }
-  &:hover { border-color: var(--accent-cyan); h3 { color: var(--accent-cyan); } }
+  background: linear-gradient(180deg, var(--tint-cyan), var(--card) 60%);
+  .card-icon { background: var(--tint-cyan); }
 }
 
 .card-blue {
-  border-top: 3px solid var(--accent-blue);
-  .card-icon { background: var(--tint-blue); color: var(--accent-blue); }
-  &:hover { border-color: var(--accent-blue); h3 { color: var(--accent-blue); } }
+  background: linear-gradient(180deg, var(--tint-blue), var(--card) 60%);
+  .card-icon { background: var(--tint-blue); }
 }
 
 .card-purple {
-  border-top: 3px solid var(--accent-purple);
-  .card-icon { background: var(--tint-purple); color: var(--accent-purple); }
-  &:hover { border-color: var(--accent-purple); h3 { color: var(--accent-purple); } }
+  background: linear-gradient(180deg, var(--tint-purple), var(--card) 60%);
+  .card-icon { background: var(--tint-purple); }
 }
 
 .card-pink {
-  border-top: 3px solid var(--accent-pink);
-  .card-icon { background: var(--tint-pink); color: var(--accent-pink); }
-  &:hover { border-color: var(--accent-pink); h3 { color: var(--accent-pink); } }
+  background: linear-gradient(180deg, var(--tint-pink), var(--card) 60%);
+  .card-icon { background: var(--tint-pink); }
 }
 
 .card-green {
-  border-top: 3px solid var(--accent-green);
-  .card-icon { background: var(--tint-green); color: var(--accent-green); }
-  &:hover { border-color: var(--accent-green); h3 { color: var(--accent-green); } }
+  background: linear-gradient(180deg, var(--tint-green), var(--card) 60%);
+  .card-icon { background: var(--tint-green); }
 }
 
 .card-yellow {
-  border-top: 3px solid var(--accent-yellow);
-  .card-icon { background: var(--tint-yellow); color: var(--accent-yellow); }
-  &:hover { border-color: var(--accent-yellow); h3 { color: var(--accent-yellow); } }
+  background: linear-gradient(180deg, var(--tint-yellow), var(--card) 60%);
+  .card-icon { background: var(--tint-yellow); }
 }
