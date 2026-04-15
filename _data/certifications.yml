@@ -21,36 +21,21 @@
   date: "January 2024"
   credential_id: "6476791d-ccd2-4262-9985-3c81ccce0100"
   credential_url: "https://learn.deeplearning.ai/accomplishments/6476791d-ccd2-4262-9985-3c81ccce0100"
-  icon: "fas fa-brain"
   accent_color: "purple"
   skills:
-    - LangGraph
+    - AI Frameworks
     - Agents
     - Chatbots
-    - Generative AI
-    - LangChain
-  # description: "Comprehensive specialization covering neural networks, optimization, CNNs, RNNs, and deep learning best practices."
-
-- name: "Machine Learning"
-  organization: "Stanford University (Coursera)"
-  date: "June 2022"
-  credential_id: "XYZ789ABC"
-  credential_url: "https://www.coursera.org/account/accomplishments/verify/XYZ789ABC"
-  icon: "fas fa-robot"
-  accent_color: "cyan"
-  skills:
-    - Supervised Learning
-    - Unsupervised Learning
-    - Linear Regression
-    - Neural Networks
-  # description: "Foundational course covering machine learning algorithms, including linear regression, logistic regression, neural networks, and more."
+    - Document Processing
+    - GenAI Applications
+    - Generative Models
+    - Search and Retrieval
 
 - name: "Pretraining LLMs"
   organization: "DeepLearning.AI"
   date: "July 2024"
   credential_id: "604fd916-7f61-472e-b0a4-e563a37e75e9"
   credential_url: "https://learn.deeplearning.ai/accomplishments/604fd916-7f61-472e-b0a4-e563a37e75e9"
-  icon: "fab fa-aws"
   accent_color: "pink"
   skills:
     - Deep Learning
@@ -60,4 +45,68 @@
     - LLMOps
     - Mathematical Foundations
     - Transformers
-  # description: "Validates expertise in building, training, tuning, and deploying machine learning models using AWS."
+
+- name: "LangChain for LLM Application Development"
+  organization: "DeepLearning.AI"
+  date: "June 2024"
+  credential_id: "971fc017-be28-48d2-a819-bd6e736b1422"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/971fc017-be28-48d2-a819-bd6e736b1422"
+  accent_color: "cyan"
+  skills:
+    - AI Frameworks
+    - Agents
+    - Chatbots
+    - Generative Models
+    - Prompt Engineering
+    - RAG
+
+- name: "LangChain Chat with Your Data"
+  organization: "DeepLearning.AI"
+  date: "June 2024"
+  credential_id: "be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
+  accent_color: "pink"
+  skills:
+    - Computer Vision
+    - Document Processing
+    - Embeddings
+    - RAG
+    - Vector Databases
+
+- name: "LangChain for LLM Application Development"
+  organization: "DeepLearning.AI"
+  date: "June 2024"
+  credential_id: "971fc017-be28-48d2-a819-bd6e736b1422"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/971fc017-be28-48d2-a819-bd6e736b1422"
+  accent_color: "pink"
+  skills:
+    - AI Frameworks
+    - Agents
+    - Chatbots
+    - Generative Models
+    - Prompt Engineering
+    - RAG
+
+- name: "Finetuning Large Language Models"
+  organization: "DeepLearning.AI"
+  date: "June 2024"
+  credential_id: "afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
+  accent_color: "pink"
+  skills:
+    - Deep Learning
+    - Fine-Tuning
+    - Transformers
+
+- name: "Building Systems with the ChatGPT API"
+  organization: "DeepLearning.AI"
+  date: "June 2024"
+  credential_id: "8400191e-b3e6-470d-990d-287c69d67a34"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/8400191e-b3e6-470d-990d-287c69d67a34"
+  accent_color: "pink"
+  skills:
+    - AI Safety
+    - Chatbots
+    - GenAI Applications
+    - Generative Models
+    - Prompt Engineering
