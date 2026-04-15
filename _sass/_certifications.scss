@@ -1,41 +1,17 @@
 // ===== Certifications Page Styles =====
 
-.cert-hero-content {
-  // Override the default 250px-photo + text grid — no photo on this page
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cert-page-hero {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
 }
 
-.cert-hero-text {
-  max-width: 900px;
-  width: 100%;
-}
-
-.cert-hero-title {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-
-  h1 {
-    font-size: 4.5rem;
-    margin: 0;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.cert-hero-icon {
-  font-size: 5rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
+.cert-page-icon {
+  font-size: 4rem;
   color: var(--accent-purple);
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .cert-lead {
@@ -200,13 +176,7 @@
 
 // ===== Responsive =====
 @media (max-width: 768px) {
-  .cert-hero-title {
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
-
-  .cert-hero-icon {
+  .cert-page-icon {
     font-size: 3rem;
   }
 }
