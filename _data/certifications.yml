@@ -68,9 +68,4 @@
   credential_url: "https://coursera.org/share/c1ebbfdb85db53bde5d007a7574a8bea"
   accent_color: "pink"
 
-- name: "Introduction to Intel® Distribution of OpenVINO™ toolkit for Computer Vision Applications"
-  organization: "Coursera"
-  date: "July 2020"
-  credential_id: "bf2da8a2547211c3e769bba43129f1b5"
-  credential_url: "https://coursera.org/share/bf2da8a2547211c3e769bba43129f1b5"
-  accent_color: "pink"
+
