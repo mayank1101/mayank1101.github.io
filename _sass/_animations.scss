@@ -1,10 +1,15 @@
-// ===== Animations =====
+// ===== Animations — Professional Modern =====
+// Subtle, purposeful motion. Respects prefers-reduced-motion.
 
-// Gentle fade in from below
+// ----- Reusable easing -----
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+// ----- Initial page fade-in -----
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
+  transform: translateY(12px);
+  animation: fadeUp 0.6s $ease-out-expo forwards;
 }
 
 @keyframes fadeUp {
@@ -14,55 +19,14 @@
   }
 }
 
-// Floating animation
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-8px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-8px) rotate(-1deg);
-  }
-}
-
-.floating {
-  animation: float 4s ease-in-out infinite;
-}
-
-// Slide and fade from left
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px) rotate(-5deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-// Slide and fade from right
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px) rotate(5deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-// Scroll Animations
+// ----- Scroll-triggered reveal -----
 .scroll-animate {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s $transition-smooth;
+  transform: translateY(16px);
+  transition:
+    opacity 0.55s $ease-out-expo,
+    transform 0.55s $ease-out-expo;
+  will-change: opacity, transform;
 
   &.animate-in {
     opacity: 1;
@@ -70,10 +34,13 @@
   }
 }
 
+// Horizontal reveal variants
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.8s $transition-bounce;
+  transform: translateX(-24px);
+  transition:
+    opacity 0.55s $ease-out-expo,
+    transform 0.55s $ease-out-expo;
 
   &.animate-in {
     opacity: 1;
@@ -83,8 +50,10 @@
 
 .slide-in-right {
   opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s $transition-bounce;
+  transform: translateX(24px);
+  transition:
+    opacity 0.55s $ease-out-expo,
+    transform 0.55s $ease-out-expo;
 
   &.animate-in {
     opacity: 1;
@@ -92,56 +61,151 @@
   }
 }
 
-// Stagger delays for cards
-.scroll-animate {
-  &:nth-child(1) { transition-delay: 0s; }
-  &:nth-child(2) { transition-delay: 0.1s; }
-  &:nth-child(3) { transition-delay: 0.2s; }
-  &:nth-child(4) { transition-delay: 0.3s; }
-  &:nth-child(5) { transition-delay: 0.4s; }
-  &:nth-child(6) { transition-delay: 0.5s; }
+// ----- Staggered card reveal -----
+// Applied automatically by the IntersectionObserver via --stagger index,
+// but keep a CSS fallback based on nth-child for cards inside .cards grids.
+.cards .scroll-animate,
+.cards .card-animate {
+  &:nth-child(1) { transition-delay: 0.00s; }
+  &:nth-child(2) { transition-delay: 0.06s; }
+  &:nth-child(3) { transition-delay: 0.12s; }
+  &:nth-child(4) { transition-delay: 0.18s; }
+  &:nth-child(5) { transition-delay: 0.24s; }
+  &:nth-child(6) { transition-delay: 0.30s; }
+  &:nth-child(7) { transition-delay: 0.36s; }
+  &:nth-child(8) { transition-delay: 0.42s; }
 }
 
-// Animation delays
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
+// ----- Card entrance -----
+.card-animate {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.55s $ease-out-expo,
+    transform 0.55s $ease-out-expo;
 
-// Scroll progress indicator
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ----- Section reveal -----
+.section-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s $ease-out-expo,
+    transform 0.7s $ease-out-expo;
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ----- Scroll progress indicator -----
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
-  height: 4px;
+  height: 2px;
   background: var(--gradient-primary);
   z-index: 1000;
-  transition: width 0.2s ease;
-  border-radius: 0 2px 2px 0;
+  transition: width 0.1s linear;
+  pointer-events: none;
 }
 
-// Card entrance animations
-.card-animate {
-  opacity: 0;
-  transform: translateY(30px) rotate(-2deg);
-  transition: all 0.6s $transition-bounce;
+// ----- Navigation scroll elevation -----
+.nav.nav-scrolled {
+  box-shadow: var(--shadow-soft);
+  border-bottom-color: var(--border-bright);
+}
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0) rotate(0deg);
+[data-theme="dark"] .nav.nav-scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+// ----- Hover primitives (global) -----
+.hover-lift {
+  transition: transform 0.2s $ease-out-quart, box-shadow 0.2s $ease-out-quart;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
   }
 }
 
-// Section reveal animation
-.section-reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s $transition-smooth;
+// ----- Animated gradient underline (for hero highlight etc.) -----
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
 
-  &.revealed {
-    opacity: 1;
-    transform: translateY(0);
+.hero-highlight {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+// ----- Profile photo subtle float (modern, very gentle) -----
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+.profile-photo {
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+// ----- Skeleton shimmer (for image lazy-load) -----
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+img[data-src] {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 0%,
+    var(--card-hover) 50%,
+    var(--bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+// ----- Focus ring — accessible & on-brand -----
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: $border-radius-sm;
+}
+
+// ----- Reduced motion: disable everything with motion -----
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in,
+  .scroll-animate,
+  .slide-in-left,
+  .slide-in-right,
+  .card-animate,
+  .section-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .profile-photo,
+  .hero-highlight,
+  img[data-src] {
+    animation: none !important;
   }
 }
