@@ -105,12 +105,21 @@ table {
 }
 
 // ----- Inline & block code -----
+pre,
 .highlight {
   background: var(--bg-secondary);
   border: 2.5px solid var(--ink);
   border-radius: $border-radius-md;
   box-shadow: var(--shadow-soft);
   font-family: $font-mono;
+
+  pre {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 code {

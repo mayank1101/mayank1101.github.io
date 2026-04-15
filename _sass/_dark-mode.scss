@@ -134,6 +134,14 @@ $paper-noise-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/20
   .highlight {
     background: #18171C;
     border-color: var(--ink);
+
+    pre {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   code {
