@@ -4,12 +4,6 @@
   credential_id: "6476791d-ccd2-4262-9985-3c81ccce0100"
   credential_url: "https://learn.deeplearning.ai/accomplishments/6476791d-ccd2-4262-9985-3c81ccce0100"
   accent_color: "purple"
-  skills:
-    - AI Agents
-    - LangGraph
-    - Multi-Agent Systems
-    - GenAI Applications
-    - Search and Retrieval
 
 - name: "Pretraining LLMs"
   organization: "DeepLearning.AI"
@@ -17,25 +11,13 @@
   credential_id: "604fd916-7f61-472e-b0a4-e563a37e75e9"
   credential_url: "https://learn.deeplearning.ai/accomplishments/604fd916-7f61-472e-b0a4-e563a37e75e9"
   accent_color: "pink"
-  skills:
-    - Pretraining
-    - Transformers
-    - Fine-Tuning
-    - LLMOps
-    - Mathematical Foundations
-
+  
 - name: "LangChain for LLM Application Development"
   organization: "DeepLearning.AI"
   date: "June 2024"
   credential_id: "971fc017-be28-48d2-a819-bd6e736b1422"
   credential_url: "https://learn.deeplearning.ai/accomplishments/971fc017-be28-48d2-a819-bd6e736b1422"
-  accent_color: "cyan"
-  skills:
-    - LangChain
-    - Agents
-    - Prompt Engineering
-    - RAG
-    - GenAI Applications
+  accent_color: "pink"
 
 - name: "LangChain Chat with Your Data"
   organization: "DeepLearning.AI"
@@ -43,36 +25,20 @@
   credential_id: "be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
   credential_url: "https://learn.deeplearning.ai/accomplishments/be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
   accent_color: "pink"
-  skills:
-    - RAG
-    - Vector Databases
-    - Embeddings
-    - Document Processing
-    - LangChain
 
 - name: "Finetuning Large Language Models"
   organization: "DeepLearning.AI"
   date: "June 2024"
   credential_id: "afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
   credential_url: "https://learn.deeplearning.ai/accomplishments/afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
-  accent_color: "purple"
-  skills:
-    - Fine-Tuning
-    - LoRA / PEFT
-    - Deep Learning
-    - Transformers
+  accent_color: "pink"
 
 - name: "Building Systems with the ChatGPT API"
   organization: "DeepLearning.AI"
   date: "June 2024"
   credential_id: "8400191e-b3e6-470d-990d-287c69d67a34"
   credential_url: "https://learn.deeplearning.ai/accomplishments/8400191e-b3e6-470d-990d-287c69d67a34"
-  accent_color: "cyan"
-  skills:
-    - ChatGPT API
-    - Prompt Chaining
-    - AI Safety
-    - GenAI Applications
+  accent_color: "pink"
 
 - name: "ChatGPT Prompt Engineering for Developers"
   organization: "DeepLearning.AI"
@@ -80,8 +46,31 @@
   credential_id: "84dcd38d-b215-47aa-9327-592b04a6fbc3"
   credential_url: "https://learn.deeplearning.ai/accomplishments/84dcd38d-b215-47aa-9327-592b04a6fbc3"
   accent_color: "pink"
-  skills:
-    - Prompt Engineering
-    - Chain-of-Thought
-    - GenAI Applications
-    - Chatbots
+
+- name: "Generative AI with Large Language Models"
+  organization: "Coursera"
+  date: "October 2024"
+  credential_id: "6081e92aca081d7ed708d04f0bc328c0"
+  credential_url: "https://coursera.org/share/6081e92aca081d7ed708d04f0bc328c0"
+  accent_color: "pink"
+
+- name: "DeepLearning.AI TensorFlow Developer Specialization"
+  organization: "Coursera"
+  date: "October 2023"
+  credential_id: "5fe0ceb3e1b23cdb938d074b39366b22"
+  credential_url: "https://coursera.org/share/5fe0ceb3e1b23cdb938d074b39366b22"
+  accent_color: "pink"
+
+- name: "Natural Language Processing with Classification and Vector Spaces"
+  organization: "Coursera"
+  date: "May 2021"
+  credential_id: "c1ebbfdb85db53bde5d007a7574a8bea"
+  credential_url: "https://coursera.org/share/c1ebbfdb85db53bde5d007a7574a8bea"
+  accent_color: "pink"
+
+- name: "Introduction to Intel® Distribution of OpenVINO™ toolkit for Computer Vision Applications"
+  organization: "Coursera"
+  date: "July 2020"
+  credential_id: "bf2da8a2547211c3e769bba43129f1b5"
+  credential_url: "https://coursera.org/share/bf2da8a2547211c3e769bba43129f1b5"
+  accent_color: "pink"
