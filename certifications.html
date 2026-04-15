@@ -63,12 +63,14 @@ description: Professional certifications and continuous learning in AI, Product 
     </p>
 
     {% if site.data.certifications.size > 0 %}
-    <div class="cards">
+    <div class="cert-cards">
         {% for cert in site.data.certifications %}
         <div class="card scroll-animate card-{{ cert.accent_color }}">
+            {% if cert.icon %}
             <div class="card-icon">
                 <i class="{{ cert.icon }}"></i>
             </div>
+            {% endif %}
 
             <h3>{{ cert.name }}</h3>
 
@@ -81,7 +83,9 @@ description: Professional certifications and continuous learning in AI, Product 
                 </p>
             </div>
 
+            {% if cert.description %}
             <p>{{ cert.description }}</p>
+            {% endif %}
 
             {% if cert.skills %}
             <div class="cert-skills-section">
