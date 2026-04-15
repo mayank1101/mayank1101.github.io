@@ -1,273 +1,239 @@
-// ===== Dark Mode (Night Forest with Fireflies) =====
+// ===== Dark Mode — Sketchy (Chalkboard) =====
 
 [data-theme="dark"] {
-  // Color scheme for native browser support
   color-scheme: dark;
 
-  // Night forest backgrounds
-  --bg: #1A2234;
-  --bg-secondary: #242F45;
-  --card: #2A3650;
-  --card-hover: #324060;
+  // Chalkboard surfaces
+  --bg: #1C1B20;
+  --bg-secondary: #24232A;
+  --card: #2A2932;
+  --card-hover: #33323C;
 
-  // Text - Light for dark backgrounds
-  --text: #C8D4E8;
-  --text-bright: #E8F0F8;
-  --muted: #8090A8;
+  // Chalk text
+  --text: #EDE7D3;
+  --text-bright: #FFF8E7;
+  --muted: #9B958A;
 
-  // Accent Colors - Slightly more vibrant for dark mode
-  --accent: #6BC5E8;
-  --accent-cyan: #6BC5E8;
-  --accent-blue: #88D0F0;
-  --accent-purple: #C8A8E8;
-  --accent-pink: #FFB0C0;
-  --accent-yellow: #FFD08A;
-  --accent-green: #88D890;
+  // Chalk colors
+  --accent:        #7DB9FF;
+  --accent-cyan:   #68E1FD;
+  --accent-blue:   #7DB9FF;
+  --accent-purple: #C9A9FF;
+  --accent-pink:   #FF8DB6;
+  --accent-yellow: #FFE071;
+  --accent-green:  #8BE39A;
+  --accent-red:    #FF8A7A;
 
-  // Border - Darker tones
-  --border: #3A4A60;
-  --border-bright: #4A5A70;
+  // Ink becomes chalk
+  --ink:      #EDE7D3;
+  --ink-soft: #C8C3B2;
 
-  // Gradients - Night sky theme
-  --gradient-primary: linear-gradient(135deg, #2A3650 0%, #3A4A60 50%, #4A5A70 100%);
-  --gradient-secondary: linear-gradient(135deg, #4A7060 0%, #3A5A70 100%);
-  --gradient-tertiary: linear-gradient(135deg, #3A5A70 0%, #5A4A70 100%);
-  --gradient-sky: linear-gradient(180deg, #1A2234 0%, #2A3650 100%);
+  --border: #EDE7D3;
+  --border-bright: #FFF8E7;
 
-  // Shadows - More prominent for dark mode
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-large: 0 12px 32px rgba(0, 0, 0, 0.5);
+  // Highlighter tints — glowing chalk
+  --tint-blue:   rgba(125, 185, 255, 0.18);
+  --tint-purple: rgba(201, 169, 255, 0.18);
+  --tint-pink:   rgba(255, 141, 182, 0.18);
+  --tint-green:  rgba(139, 227, 154, 0.18);
+  --tint-yellow: rgba(255, 224, 113, 0.22);
+  --tint-cyan:   rgba(104, 225, 253, 0.18);
+  --tint-red:    rgba(255, 138, 122, 0.18);
+
+  // Chalk offset shadows
+  --shadow-soft:   3px 3px 0 0 rgba(237, 231, 211, 0.6);
+  --shadow-medium: 5px 5px 0 0 rgba(237, 231, 211, 0.55);
+  --shadow-large:  8px 8px 0 0 rgba(237, 231, 211, 0.5);
+  --shadow-hover:  2px 2px 0 0 rgba(237, 231, 211, 0.7);
+
+  --gradient-primary:   linear-gradient(135deg, #FFE071 0%, #FF8DB6 50%, #C9A9FF 100%);
+  --gradient-secondary: linear-gradient(135deg, #8BE39A 0%, #68E1FD 100%);
+  --gradient-tertiary:  linear-gradient(135deg, #C9A9FF 0%, #FF8DB6 100%);
+  --gradient-sky:       linear-gradient(180deg, #1C1B20 0%, #24232A 100%);
 }
 
-// Night mode specific styles
+// Chalkboard body — reuse $paper-noise (blend mode tints it for dark)
+$paper-noise-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='11'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.84  0 0 0 0.07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
 [data-theme="dark"] body {
-  background: var(--gradient-sky);
-
-  &::before {
-    background:
-      linear-gradient(180deg,
-        rgba(20, 30, 50, 0.3) 0%,
-        rgba(30, 50, 70, 0.2) 30%,
-        rgba(20, 40, 60, 0.1) 60%,
-        rgba(40, 30, 50, 0.15) 100%
-      );
-  }
+  background-image:
+    linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), rgba(237, 231, 211, 0.06) calc(2rem - 1px), rgba(237, 231, 211, 0.06) 2rem),
+    $paper-noise-dark;
 }
 
-// Firefly container - hidden by default in light mode
-.firefly-container {
+[data-theme="dark"] body::before {
+  mix-blend-mode: screen;
+  opacity: 0.3;
+}
+
+// Legacy decorative containers — hidden
+.firefly-container,
+.leaf-shadow-container {
   display: none !important;
 }
 
-[data-theme="dark"] .firefly-container {
-  display: block !important;
-}
-
-// Adjust leaf shadows for night
-[data-theme="dark"] .leaf-shadow-container {
-  opacity: 0.08;
-}
-
-// Night mode glow orbs - moonlight effect
+// Shadows use chalk color
 [data-theme="dark"] {
-  .glow-orb-1 {
-    background: radial-gradient(circle, rgba(200, 220, 255, 0.3), rgba(150, 180, 220, 0.15), transparent);
+  .card,
+  .cta,
+  .cta-secondary,
+  .cta-nav,
+  .theme-toggle,
+  .social-icon,
+  .badges span,
+  .resume-section {
+    box-shadow: 4px 4px 0 0 rgba(237, 231, 211, 0.6);
   }
 
-  .glow-orb-2 {
-    background: radial-gradient(circle, rgba(180, 200, 240, 0.25), rgba(140, 170, 210, 0.1), transparent);
-  }
-
-  .glow-orb-3 {
-    background: radial-gradient(ellipse, rgba(100, 150, 120, 0.2), rgba(80, 130, 100, 0.1), transparent);
+  .card:hover {
+    box-shadow: 6px 6px 0 0 rgba(237, 231, 211, 0.7);
   }
 }
 
-// Dark mode navigation
-[data-theme="dark"] .nav {
-  background: rgba(26, 34, 52, 0.95);
-  border-bottom-color: var(--border);
-}
-
-// Dark mode cards
+// Dark mode card backgrounds — chalk swipe
 [data-theme="dark"] {
   .card {
     background: var(--card);
+    border-color: var(--ink);
   }
 
-  .card-cyan {
-    background: linear-gradient(135deg, rgba(107, 197, 232, 0.15), var(--card));
-  }
-
-  .card-purple {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.15), var(--card));
-  }
-
-  .card-pink {
-    background: linear-gradient(135deg, rgba(255, 176, 192, 0.15), var(--card));
-  }
-
-  .card-green {
-    background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), var(--card));
-  }
-
-  .card-yellow {
-    background: linear-gradient(135deg, rgba(255, 208, 138, 0.15), var(--card));
-  }
+  .card-cyan   { background: linear-gradient(180deg, var(--tint-cyan),   var(--card) 60%); }
+  .card-blue   { background: linear-gradient(180deg, var(--tint-blue),   var(--card) 60%); }
+  .card-purple { background: linear-gradient(180deg, var(--tint-purple), var(--card) 60%); }
+  .card-pink   { background: linear-gradient(180deg, var(--tint-pink),   var(--card) 60%); }
+  .card-green  { background: linear-gradient(180deg, var(--tint-green),  var(--card) 60%); }
+  .card-yellow { background: linear-gradient(180deg, var(--tint-yellow), var(--card) 60%); }
 }
 
-// Dark mode blog cards
+// Dark blog cards
 [data-theme="dark"] {
-  .blog-card {
-    background: linear-gradient(135deg, rgba(255, 176, 192, 0.1), rgba(107, 197, 232, 0.1));
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(255, 208, 138, 0.15));
-    }
-  }
-
+  .blog-card,
   .blog-card-list {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), rgba(255, 208, 138, 0.1));
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(107, 197, 232, 0.15));
-    }
+    background: var(--card);
+    border-color: var(--ink);
   }
 }
 
 // Dark mode sections
 [data-theme="dark"] .section {
-  &:nth-of-type(odd) {
-    background: linear-gradient(180deg, transparent 0%, rgba(42, 54, 80, 0.6) 100%);
-  }
-
+  &:nth-of-type(odd),
   &:nth-of-type(even) {
-    background: radial-gradient(ellipse at bottom, rgba(90, 74, 112, 0.15), transparent 70%);
+    background: transparent;
   }
 }
 
-// Dark mode footer
+// Dark footer
 [data-theme="dark"] .footer {
-  background: rgba(36, 47, 69, 0.8);
+  background: var(--bg-secondary);
+  border-top: 3px dashed var(--ink);
 }
 
-// Dark mode code blocks
+// Dark code blocks
 [data-theme="dark"] {
   pre,
   .highlight {
-    background: #242F45;
-    border-color: var(--border);
+    background: #18171C;
+    border-color: var(--ink);
+
+    pre {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   code {
-    background: rgba(136, 216, 144, 0.15);
-    color: var(--accent-green);
-    border-color: rgba(136, 216, 144, 0.2);
+    background: var(--tint-yellow);
+    color: var(--accent-yellow);
+    border-color: var(--ink);
   }
 }
 
-// Dark mode syntax highlighting
+// Dark syntax highlighting — chalk palette
 [data-theme="dark"] .highlight {
-  .k, .kd { color: #C8A8E8; }
-  .kn { color: #88D0F0; }
-  .n { color: #C8D4E8; }
-  .na { color: #88D0F0; }
-  .nb { color: #88D0F0; }
-  .nc { color: #FFD08A; }
-  .nf { color: #88D0F0; }
-  .s, .s1, .s2 { color: #88D890; }
-  .m, .mf, .mi { color: #FFB0C0; }
-  .c, .c1, .cm { color: #8090A8; }
-  .o, .p { color: #88D0F0; }
+  .k, .kd { color: #C9A9FF; font-weight: 700; }
+  .kn     { color: #7DB9FF; }
+  .n, .nx { color: #EDE7D3; }
+  .na     { color: #68E1FD; }
+  .nb     { color: #68E1FD; }
+  .nc     { color: #FFE071; }
+  .nf     { color: #7DB9FF; }
+  .s, .s1, .s2 { color: #8BE39A; }
+  .sd     { color: #9B958A; font-style: italic; }
+  .m, .mf, .mi { color: #FF8DB6; }
+  .c, .c1, .cm, .cs { color: #9B958A; font-style: italic; }
+  .o, .p  { color: #EDE7D3; }
+  .w      { color: #EDE7D3; }
 }
 
-// Dark mode series
+// Dark manifesto / series
 [data-theme="dark"] {
-  .series-banner {
-    background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), rgba(255, 208, 138, 0.1));
-  }
-
-  .manifesto-container {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.08), rgba(107, 197, 232, 0.08));
+  .series-banner,
+  .manifesto-container,
+  .series-card,
+  .series-page-banner,
+  .series-article-card {
+    background: var(--card);
+    border-color: var(--ink);
   }
 
   .manifesto-audience,
   .manifesto-topics {
-    background: rgba(107, 197, 232, 0.1);
-  }
-
-  .series-card {
-    background: var(--card);
-
-    &.card-purple {
-      background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), var(--card));
-
-      &:hover {
-        background: linear-gradient(135deg, rgba(200, 168, 232, 0.2), var(--card));
-      }
-    }
-
-    &.card-cyan {
-      background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), var(--card));
-
-      &:hover {
-        background: linear-gradient(135deg, rgba(107, 197, 232, 0.2), var(--card));
-      }
-    }
-  }
-
-  .series-page-banner {
-    background: var(--card);
-
-    &.card-purple {
-      background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), var(--card));
-    }
-
-    &.card-cyan {
-      background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), var(--card));
-    }
-  }
-
-  .series-article-card {
-    background: var(--card);
+    background: var(--bg-secondary);
+    border-color: var(--ink);
   }
 }
 
-// Dark mode tables
+// Dark tables
 [data-theme="dark"] {
   table {
     background: var(--card);
+    border-color: var(--ink);
 
     thead {
-      background: rgba(136, 216, 144, 0.15);
+      background: var(--bg-secondary);
     }
 
     tbody tr:hover {
-      background: rgba(107, 197, 232, 0.1);
+      background: var(--card-hover);
     }
-  }
 
-  .table-wrapper::after {
-    background: linear-gradient(to left, var(--card) 0%, transparent 100%);
+    th, td {
+      border-color: var(--ink);
+    }
   }
 }
 
-// Dark mode theme toggle
+// Dark theme toggle — sun visible
 [data-theme="dark"] .theme-toggle {
-  color: var(--accent-cyan);
+  color: var(--accent-yellow);
 
   &:hover {
-    background: var(--accent-cyan);
-    color: var(--bg);
-    border-color: var(--accent-cyan);
+    background: var(--tint-yellow);
   }
 
-  .fa-sun {
-    display: inline;
-  }
+  .fa-sun  { display: inline; }
+  .fa-moon { display: none; }
+}
 
-  .fa-moon {
-    display: none;
-  }
+// Dark hero highlight
+[data-theme="dark"] .hero-highlight {
+  background: linear-gradient(transparent 55%, var(--tint-yellow) 55%, var(--tint-yellow) 92%, transparent 92%);
+  color: var(--ink);
+}
+
+// Dark dashed nav border
+[data-theme="dark"] .nav {
+  border-bottom-color: var(--ink);
+}
+
+// Dark squiggle underlines use chalk pink
+[data-theme="dark"] .nav-center .nav-link::after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'><path d='M1,5 Q15,1 25,5 T50,5 T75,5 T99,5' fill='none' stroke='%23FF8DB6' stroke-width='2.5' stroke-linecap='round'/></svg>");
+}
+
+[data-theme="dark"] h2::after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'><path d='M2,6 Q20,1 40,6 T80,6 T120,6 T160,6 T198,6' fill='none' stroke='%23FF8DB6' stroke-width='3' stroke-linecap='round'/></svg>");
 }

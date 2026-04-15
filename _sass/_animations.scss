@@ -1,132 +1,77 @@
-// ===== Animations =====
+// ===== Animations — Sketchy Hand-Drawn =====
+// Wiggle, jitter, and scribble motion. Respects prefers-reduced-motion.
 
-// Gentle fade in from below
+$ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// ----- Initial fade in with a little tilt -----
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
+  transform: translateY(12px) rotate(-1deg);
+  animation: fadeUp 0.7s $ease-bounce forwards;
 }
 
 @keyframes fadeUp {
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Floating animation
-@keyframes float {
-  0%, 100% {
     transform: translateY(0) rotate(0deg);
   }
-  25% {
-    transform: translateY(-8px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-8px) rotate(-1deg);
-  }
 }
 
-.floating {
-  animation: float 4s ease-in-out infinite;
-}
-
-// Slide and fade from left
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px) rotate(-5deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-// Slide and fade from right
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px) rotate(5deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-// Scroll Animations
+// ----- Scroll reveal -----
 .scroll-animate {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s $transition-smooth;
+  transform: translateY(18px) rotate(-1deg);
+  transition:
+    opacity 0.6s $ease-bounce,
+    transform 0.6s $ease-bounce;
+  will-change: opacity, transform;
 
   &.animate-in {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
   }
 }
 
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.8s $transition-bounce;
+  transform: translateX(-28px) rotate(-2deg);
+  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
 
   &.animate-in {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) rotate(0deg);
   }
 }
 
 .slide-in-right {
   opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s $transition-bounce;
+  transform: translateX(28px) rotate(2deg);
+  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
 
   &.animate-in {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) rotate(0deg);
   }
 }
 
-// Stagger delays for cards
-.scroll-animate {
-  &:nth-child(1) { transition-delay: 0s; }
-  &:nth-child(2) { transition-delay: 0.1s; }
-  &:nth-child(3) { transition-delay: 0.2s; }
-  &:nth-child(4) { transition-delay: 0.3s; }
-  &:nth-child(5) { transition-delay: 0.4s; }
-  &:nth-child(6) { transition-delay: 0.5s; }
+// ----- Stagger inside grids -----
+.cards .scroll-animate,
+.cards .card-animate {
+  &:nth-child(1) { transition-delay: 0.00s; }
+  &:nth-child(2) { transition-delay: 0.07s; }
+  &:nth-child(3) { transition-delay: 0.14s; }
+  &:nth-child(4) { transition-delay: 0.21s; }
+  &:nth-child(5) { transition-delay: 0.28s; }
+  &:nth-child(6) { transition-delay: 0.35s; }
+  &:nth-child(7) { transition-delay: 0.42s; }
+  &:nth-child(8) { transition-delay: 0.49s; }
 }
 
-// Animation delays
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
-
-// Scroll progress indicator
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: var(--gradient-primary);
-  z-index: 1000;
-  transition: width 0.2s ease;
-  border-radius: 0 2px 2px 0;
-}
-
-// Card entrance animations
+// ----- Card entrance: draw in -----
 .card-animate {
   opacity: 0;
-  transform: translateY(30px) rotate(-2deg);
-  transition: all 0.6s $transition-bounce;
+  transform: translateY(18px) rotate(-1.5deg);
+  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
 
   &.visible {
     opacity: 1;
@@ -134,14 +79,145 @@
   }
 }
 
-// Section reveal animation
 .section-reveal {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s $transition-smooth;
+  transform: translateY(22px);
+  transition: opacity 0.8s $ease-bounce, transform 0.8s $ease-bounce;
 
   &.revealed {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// ----- Scroll progress — hand-drawn marker stripe -----
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background: var(--gradient-primary);
+  border-bottom: 2px solid var(--ink);
+  z-index: 1000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+// ----- Wiggle keyframes (sketchy jitter) -----
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
+  25%      { transform: rotate(1deg)  translate(1px, -1px); }
+  50%      { transform: rotate(-0.5deg) translate(-1px, 1px); }
+  75%      { transform: rotate(0.8deg) translate(1px, 1px); }
+}
+
+@keyframes jitter {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(-0.5px, 0.5px) rotate(-0.3deg); }
+  50%  { transform: translate(0.5px, -0.5px) rotate(0.3deg); }
+  75%  { transform: translate(-0.5px, -0.5px) rotate(-0.3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+// Stop-motion "two-frame" wiggle — simulates hand-drawn animation
+@keyframes handDrawn {
+  0%, 49%   { transform: translate(0, 0) rotate(-0.3deg); }
+  50%, 100% { transform: translate(0.6px, -0.4px) rotate(0.3deg); }
+}
+
+// Profile photo: continuous wiggle
+.profile-photo {
+  animation: wiggle 4s ease-in-out infinite;
+}
+
+// Hero heading: occasional jitter
+.hero h1,
+.hero-highlight {
+  display: inline-block;
+  animation: handDrawn 0.3s steps(2) infinite;
+}
+
+// Apply stop-motion to icons and social dots
+.card-icon,
+.social-icon,
+.theme-toggle,
+.resume-icon {
+  animation: handDrawn 0.4s steps(2) infinite;
+  animation-play-state: running;
+}
+
+// Pause wiggles when hovered so users can click comfortably
+.card-icon:hover,
+.social-icon:hover,
+.theme-toggle:hover {
+  animation-play-state: paused;
+}
+
+// Nav scrolled state
+.nav.nav-scrolled {
+  box-shadow: 0 4px 0 0 var(--ink);
+}
+
+// ----- Text selection -----
+::selection {
+  background: var(--tint-yellow);
+  color: var(--ink);
+}
+
+// ----- Focus ring — scribbled dashed outline -----
+:focus-visible {
+  outline: 3px dashed var(--accent-pink);
+  outline-offset: 4px;
+  border-radius: $border-radius-sm;
+}
+
+// ----- Shimmer skeleton for lazy images -----
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+img[data-src] {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 0%,
+    var(--card-hover) 50%,
+    var(--bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+// ----- Reduced motion: disable all the wiggle -----
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in,
+  .scroll-animate,
+  .slide-in-left,
+  .slide-in-right,
+  .card-animate,
+  .section-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .profile-photo,
+  .hero h1,
+  .hero-highlight,
+  .card-icon,
+  .social-icon,
+  .theme-toggle,
+  .resume-icon,
+  img[data-src] {
+    animation: none !important;
   }
 }

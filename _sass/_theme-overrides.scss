@@ -1,0 +1,200 @@
+// ===== Sketchy Theme — Component Overrides =====
+
+// ----- Footer -----
+.footer {
+  background: var(--bg-secondary);
+  border-top: 3px dashed var(--ink);
+
+  .footer-icon,
+  i {
+    filter: none;
+  }
+}
+
+// ----- Blog listing -----
+.blog-hero,
+.blog-featured,
+.blog-archive,
+.blog-intro,
+.blog-list-section {
+  background: transparent;
+}
+
+.blog-card,
+.blog-card-list,
+.blog-card-featured {
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.2s $transition-bounce, box-shadow 0.2s ease, background 0.2s ease;
+
+  &:nth-child(odd)  { transform: rotate(-0.4deg); }
+  &:nth-child(even) { transform: rotate(0.3deg); }
+
+  &:hover {
+    transform: rotate(0deg) translate(-2px, -2px);
+    background: var(--card-hover);
+    box-shadow: 7px 7px 0 0 var(--ink);
+  }
+}
+
+// ----- Certifications -----
+.cert-card,
+.cert-card.card-cyan,
+.cert-card.card-pink,
+.cert-card.card-purple {
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-medium);
+}
+
+.cert-lead,
+.cert-hero {
+  background: transparent;
+}
+
+// ----- About page -----
+.about-highlight,
+.about-stat,
+.about-value {
+  background: var(--bg-secondary);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-md;
+  box-shadow: var(--shadow-soft);
+}
+
+// ----- Manifesto / Series -----
+.manifesto-container,
+.series-banner {
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-medium);
+}
+
+.manifesto-audience,
+.manifesto-topics {
+  background: var(--bg-secondary);
+  border: 2px dashed var(--ink);
+  border-radius: $border-radius-md;
+}
+
+// ----- Tables -----
+table {
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+
+  thead {
+    background: var(--tint-yellow);
+    color: var(--ink);
+    font-family: $font-heading;
+  }
+
+  th, td {
+    border-color: var(--ink);
+  }
+
+  tbody tr:hover {
+    background: var(--card-hover);
+  }
+}
+
+// ----- Inline & block code -----
+pre,
+.highlight {
+  background: var(--bg-secondary);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-md;
+  box-shadow: var(--shadow-soft);
+  font-family: $font-mono;
+
+  pre {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+code {
+  background: var(--tint-yellow);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 8px 14px 10px 16px / 12px 10px 14px 8px;
+  padding: 0.1em 0.45em;
+  font-family: $font-mono;
+  font-size: 0.92em;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--ink);
+}
+
+// Light-mode syntax highlighting — marker palette
+.highlight {
+  .k, .kd { color: #7B3FD4; font-weight: 700; }
+  .kn     { color: #2E5BDB; }
+  .n, .nx { color: #141312; }
+  .na     { color: #2E5BDB; }
+  .nb     { color: #1FA8C9; }
+  .nc     { color: #E23D7A; }
+  .nf     { color: #2E5BDB; }
+  .s, .s1, .s2 { color: #3E9A4C; }
+  .sd     { color: #6C6A63; font-style: italic; }
+  .m, .mf, .mi { color: #E23D7A; }
+  .c, .c1, .cm, .cs { color: #6C6A63; font-style: italic; }
+  .o, .p  { color: #2B2A27; }
+  .gp     { color: #6C6A63; font-weight: 700; }
+  .w      { color: #141312; }
+}
+
+// ----- Lists inside content: doodle bullets -----
+.container ul:not(.badges):not(.nav-center):not(.nav-social) > li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+
+  &::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--accent-pink);
+    transform: rotate(-10deg);
+  }
+}
+
+// ----- Blockquote — handwritten margin note -----
+blockquote {
+  border-left: 4px solid var(--accent-pink);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--tint-yellow);
+  border-radius: $border-radius-md;
+  font-style: italic;
+  color: var(--ink);
+  transform: rotate(-0.3deg);
+  box-shadow: var(--shadow-soft);
+}
+
+// ----- Horizontal rule — scribble line -----
+hr {
+  border: none;
+  height: 12px;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'><path d='M2,7 Q30,2 60,7 T120,7 T180,7 T240,7 T298,7' fill='none' stroke='%23141312' stroke-width='2.5' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;
+  margin: 2.5rem 0;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] hr {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'><path d='M2,7 Q30,2 60,7 T120,7 T180,7 T240,7 T298,7' fill='none' stroke='%23EDE7D3' stroke-width='2.5' stroke-linecap='round'/></svg>");
+}
