@@ -1,12 +1,16 @@
 // ===== Certifications Page Styles =====
 
 .cert-hero-content {
+  // Override the default 250px-photo + text grid — no photo on this page
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .cert-hero-text {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
 }
 
 .cert-hero-title {
