@@ -1,236 +1,155 @@
-// ===== Dark Mode (Night Forest with Fireflies) =====
+// ===== Dark Mode — Professional Modern Theme =====
 
 [data-theme="dark"] {
-  // Color scheme for native browser support
   color-scheme: dark;
 
-  // Night forest backgrounds
-  --bg: #1A2234;
-  --bg-secondary: #242F45;
-  --card: #2A3650;
-  --card-hover: #324060;
+  // Core surfaces — deep slate
+  --bg: #0B1120;
+  --bg-secondary: #0F172A;
+  --card: #111827;
+  --card-hover: #1E293B;
 
-  // Text - Light for dark backgrounds
-  --text: #C8D4E8;
-  --text-bright: #E8F0F8;
-  --muted: #8090A8;
+  // Text
+  --text: #CBD5E1;
+  --text-bright: #F8FAFC;
+  --muted: #94A3B8;
 
-  // Accent Colors - Slightly more vibrant for dark mode
-  --accent: #6BC5E8;
-  --accent-cyan: #6BC5E8;
-  --accent-blue: #88D0F0;
-  --accent-purple: #C8A8E8;
-  --accent-pink: #FFB0C0;
-  --accent-yellow: #FFD08A;
-  --accent-green: #88D890;
+  // Accents — brightened for dark backgrounds
+  --accent: #60A5FA;
+  --accent-cyan: #22D3EE;
+  --accent-blue: #60A5FA;
+  --accent-purple: #A78BFA;
+  --accent-pink: #F472B6;
+  --accent-yellow: #FBBF24;
+  --accent-green: #34D399;
 
-  // Border - Darker tones
-  --border: #3A4A60;
-  --border-bright: #4A5A70;
+  // Borders
+  --border: #1F2937;
+  --border-bright: #334155;
 
-  // Gradients - Night sky theme
-  --gradient-primary: linear-gradient(135deg, #2A3650 0%, #3A4A60 50%, #4A5A70 100%);
-  --gradient-secondary: linear-gradient(135deg, #4A7060 0%, #3A5A70 100%);
-  --gradient-tertiary: linear-gradient(135deg, #3A5A70 0%, #5A4A70 100%);
-  --gradient-sky: linear-gradient(180deg, #1A2234 0%, #2A3650 100%);
+  // Gradients
+  --gradient-primary: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
+  --gradient-secondary: linear-gradient(135deg, #22D3EE 0%, #60A5FA 100%);
+  --gradient-tertiary: linear-gradient(135deg, #A78BFA 0%, #F472B6 100%);
+  --gradient-sky: linear-gradient(180deg, #0B1120 0%, #0F172A 100%);
 
-  // Shadows - More prominent for dark mode
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-large: 0 12px 32px rgba(0, 0, 0, 0.5);
+  // Shadows
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 25px rgba(0, 0, 0, 0.6);
+
+  // Accent tints
+  --tint-blue: rgba(96, 165, 250, 0.12);
+  --tint-purple: rgba(167, 139, 250, 0.12);
+  --tint-pink: rgba(244, 114, 182, 0.12);
+  --tint-green: rgba(52, 211, 153, 0.12);
+  --tint-yellow: rgba(251, 191, 36, 0.12);
+  --tint-cyan: rgba(34, 211, 238, 0.12);
 }
 
-// Night mode specific styles
-[data-theme="dark"] body {
-  background: var(--gradient-sky);
-
-  &::before {
-    background:
-      linear-gradient(180deg,
-        rgba(20, 30, 50, 0.3) 0%,
-        rgba(30, 50, 70, 0.2) 30%,
-        rgba(20, 40, 60, 0.1) 60%,
-        rgba(40, 30, 50, 0.15) 100%
-      );
-  }
-}
-
-// Firefly container - hidden by default in light mode
-.firefly-container {
+// Hide any legacy decorative containers entirely in the modern theme
+.firefly-container,
+.leaf-shadow-container {
   display: none !important;
-}
-
-[data-theme="dark"] .firefly-container {
-  display: block !important;
-}
-
-// Adjust leaf shadows for night
-[data-theme="dark"] .leaf-shadow-container {
-  opacity: 0.08;
-}
-
-// Night mode glow orbs - moonlight effect
-[data-theme="dark"] {
-  .glow-orb-1 {
-    background: radial-gradient(circle, rgba(200, 220, 255, 0.3), rgba(150, 180, 220, 0.15), transparent);
-  }
-
-  .glow-orb-2 {
-    background: radial-gradient(circle, rgba(180, 200, 240, 0.25), rgba(140, 170, 210, 0.1), transparent);
-  }
-
-  .glow-orb-3 {
-    background: radial-gradient(ellipse, rgba(100, 150, 120, 0.2), rgba(80, 130, 100, 0.1), transparent);
-  }
 }
 
 // Dark mode navigation
 [data-theme="dark"] .nav {
-  background: rgba(26, 34, 52, 0.95);
+  background: rgba(11, 17, 32, 0.85);
   border-bottom-color: var(--border);
 }
 
-// Dark mode cards
+// Dark mode cards — unified look
 [data-theme="dark"] {
   .card {
     background: var(--card);
   }
 
-  .card-cyan {
-    background: linear-gradient(135deg, rgba(107, 197, 232, 0.15), var(--card));
-  }
-
-  .card-purple {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.15), var(--card));
-  }
-
-  .card-pink {
-    background: linear-gradient(135deg, rgba(255, 176, 192, 0.15), var(--card));
-  }
-
-  .card-green {
-    background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), var(--card));
-  }
-
-  .card-yellow {
-    background: linear-gradient(135deg, rgba(255, 208, 138, 0.15), var(--card));
-  }
+  .card-cyan   { background: linear-gradient(180deg, var(--tint-cyan),   var(--card)); }
+  .card-blue   { background: linear-gradient(180deg, var(--tint-blue),   var(--card)); }
+  .card-purple { background: linear-gradient(180deg, var(--tint-purple), var(--card)); }
+  .card-pink   { background: linear-gradient(180deg, var(--tint-pink),   var(--card)); }
+  .card-green  { background: linear-gradient(180deg, var(--tint-green),  var(--card)); }
+  .card-yellow { background: linear-gradient(180deg, var(--tint-yellow), var(--card)); }
 }
 
 // Dark mode blog cards
 [data-theme="dark"] {
-  .blog-card {
-    background: linear-gradient(135deg, rgba(255, 176, 192, 0.1), rgba(107, 197, 232, 0.1));
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(255, 208, 138, 0.15));
-    }
-  }
-
+  .blog-card,
   .blog-card-list {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), rgba(255, 208, 138, 0.1));
+    background: var(--card);
+    border-color: var(--border);
 
     &:hover {
-      background: linear-gradient(135deg, rgba(136, 216, 144, 0.15), rgba(107, 197, 232, 0.15));
+      background: var(--card-hover);
+      border-color: var(--accent);
     }
   }
 }
 
-// Dark mode sections
+// Dark mode sections — flat
 [data-theme="dark"] .section {
-  &:nth-of-type(odd) {
-    background: linear-gradient(180deg, transparent 0%, rgba(42, 54, 80, 0.6) 100%);
-  }
-
+  &:nth-of-type(odd),
   &:nth-of-type(even) {
-    background: radial-gradient(ellipse at bottom, rgba(90, 74, 112, 0.15), transparent 70%);
+    background: transparent;
   }
 }
 
 // Dark mode footer
 [data-theme="dark"] .footer {
-  background: rgba(36, 47, 69, 0.8);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
 }
 
 // Dark mode code blocks
 [data-theme="dark"] {
   pre,
   .highlight {
-    background: #242F45;
+    background: #0F172A;
     border-color: var(--border);
   }
 
   code {
-    background: rgba(136, 216, 144, 0.15);
-    color: var(--accent-green);
-    border-color: rgba(136, 216, 144, 0.2);
+    background: var(--tint-blue);
+    color: var(--accent-blue);
+    border-color: var(--border);
   }
 }
 
 // Dark mode syntax highlighting
 [data-theme="dark"] .highlight {
-  .k, .kd { color: #C8A8E8; }
-  .kn { color: #88D0F0; }
-  .n { color: #C8D4E8; }
-  .na { color: #88D0F0; }
-  .nb { color: #88D0F0; }
-  .nc { color: #FFD08A; }
-  .nf { color: #88D0F0; }
-  .s, .s1, .s2 { color: #88D890; }
-  .m, .mf, .mi { color: #FFB0C0; }
-  .c, .c1, .cm { color: #8090A8; }
-  .o, .p { color: #88D0F0; }
+  .k, .kd { color: #A78BFA; }
+  .kn { color: #60A5FA; }
+  .n  { color: #CBD5E1; }
+  .na { color: #60A5FA; }
+  .nb { color: #22D3EE; }
+  .nc { color: #FBBF24; }
+  .nf { color: #60A5FA; }
+  .s, .s1, .s2 { color: #34D399; }
+  .m, .mf, .mi { color: #F472B6; }
+  .c, .c1, .cm { color: #64748B; font-style: italic; }
+  .o, .p { color: #CBD5E1; }
 }
 
 // Dark mode series
 [data-theme="dark"] {
-  .series-banner {
-    background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), rgba(255, 208, 138, 0.1));
-  }
-
+  .series-banner,
   .manifesto-container {
-    background: linear-gradient(135deg, rgba(200, 168, 232, 0.08), rgba(107, 197, 232, 0.08));
+    background: var(--card);
+    border: 1px solid var(--border);
   }
 
   .manifesto-audience,
   .manifesto-topics {
-    background: rgba(107, 197, 232, 0.1);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
   }
 
-  .series-card {
-    background: var(--card);
-
-    &.card-purple {
-      background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), var(--card));
-
-      &:hover {
-        background: linear-gradient(135deg, rgba(200, 168, 232, 0.2), var(--card));
-      }
-    }
-
-    &.card-cyan {
-      background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), var(--card));
-
-      &:hover {
-        background: linear-gradient(135deg, rgba(107, 197, 232, 0.2), var(--card));
-      }
-    }
-  }
-
-  .series-page-banner {
-    background: var(--card);
-
-    &.card-purple {
-      background: linear-gradient(135deg, rgba(200, 168, 232, 0.1), var(--card));
-    }
-
-    &.card-cyan {
-      background: linear-gradient(135deg, rgba(107, 197, 232, 0.1), var(--card));
-    }
-  }
-
+  .series-card,
+  .series-page-banner,
   .series-article-card {
     background: var(--card);
+    border: 1px solid var(--border);
   }
 }
 
@@ -240,11 +159,11 @@
     background: var(--card);
 
     thead {
-      background: rgba(136, 216, 144, 0.15);
+      background: var(--bg-secondary);
     }
 
     tbody tr:hover {
-      background: rgba(107, 197, 232, 0.1);
+      background: var(--card-hover);
     }
   }
 
@@ -253,21 +172,17 @@
   }
 }
 
-// Dark mode theme toggle
+// Dark mode theme toggle — sun visible in dark mode
 [data-theme="dark"] .theme-toggle {
-  color: var(--accent-cyan);
+  color: var(--accent-yellow);
+  border-color: var(--border);
 
   &:hover {
-    background: var(--accent-cyan);
-    color: var(--bg);
-    border-color: var(--accent-cyan);
+    background: var(--tint-yellow);
+    color: var(--accent-yellow);
+    border-color: var(--accent-yellow);
   }
 
-  .fa-sun {
-    display: inline;
-  }
-
-  .fa-moon {
-    display: none;
-  }
+  .fa-sun  { display: inline; }
+  .fa-moon { display: none; }
 }

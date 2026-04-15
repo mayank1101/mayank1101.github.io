@@ -1,0 +1,162 @@
+// ===== Professional Modern Theme — Component Overrides =====
+// These rules override leftover ghibli-era hardcoded colors in older
+// component partials without touching their layout/spacing.
+
+// ----- Footer -----
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+
+  .footer-icon,
+  i {
+    filter: none;
+  }
+}
+
+// ----- Blog listing -----
+.blog-hero,
+.blog-featured,
+.blog-archive,
+.blog-intro,
+.blog-list-section {
+  background: transparent;
+}
+
+.blog-card,
+.blog-card-list,
+.blog-card-featured {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: var(--card);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-3px);
+  }
+}
+
+.blog-card.card-cyan,
+.blog-card.card-blue,
+.blog-card-list.card-cyan,
+.blog-card-list.card-blue {
+  border-top: 3px solid var(--accent-blue);
+}
+
+.blog-card.card-pink,
+.blog-card-list.card-pink {
+  border-top: 3px solid var(--accent-pink);
+}
+
+.blog-card.card-green,
+.blog-card-list.card-green {
+  border-top: 3px solid var(--accent-green);
+}
+
+.blog-card.card-purple,
+.blog-card-list.card-purple {
+  border-top: 3px solid var(--accent-purple);
+}
+
+// ----- Certifications -----
+.cert-card,
+.cert-card.card-cyan,
+.cert-card.card-pink,
+.cert-card.card-purple {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.cert-lead,
+.cert-hero {
+  background: transparent;
+}
+
+// ----- About page -----
+.about-highlight,
+.about-stat,
+.about-value {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+// ----- Manifesto / Series -----
+.manifesto-container,
+.series-banner {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.manifesto-audience,
+.manifesto-topics {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+// ----- Tables -----
+table {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-md;
+  overflow: hidden;
+
+  thead {
+    background: var(--bg-secondary);
+    color: var(--text-bright);
+  }
+
+  th, td {
+    border-color: var(--border);
+  }
+
+  tbody tr:hover {
+    background: var(--card-hover);
+  }
+}
+
+// ----- Code (light mode) -----
+pre,
+.highlight {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-md;
+}
+
+code {
+  background: var(--tint-blue);
+  color: var(--accent-blue);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-sm;
+  padding: 0.1em 0.4em;
+  font-family: $font-mono;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+// Light mode syntax highlighting — modern palette
+.highlight {
+  .k, .kd { color: #7C3AED; font-weight: 600; }
+  .kn     { color: #2563EB; }
+  .n, .nx { color: #0F172A; }
+  .na     { color: #2563EB; }
+  .nb     { color: #0EA5E9; }
+  .nc     { color: #DB2777; }
+  .nf     { color: #2563EB; }
+  .s, .s1, .s2 { color: #059669; }
+  .sd     { color: #64748B; font-style: italic; }
+  .m, .mf, .mi { color: #DB2777; }
+  .c, .c1, .cm, .cs { color: #64748B; font-style: italic; }
+  .o, .p  { color: #334155; }
+  .gp     { color: #64748B; font-weight: 600; }
+  .w      { color: #0F172A; }
+}

@@ -1,102 +1,100 @@
-// ===== Base Styles =====
+// ===== Base Styles — Professional Modern =====
 
 * {
   box-sizing: border-box;
 }
 
-// Smooth scrolling
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(56, 189, 248, 0.2);
+  -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
 }
 
 body {
   margin: 0;
   font-family: $font-primary;
-  background: var(--gradient-sky);
-  background-attachment: fixed;
+  background: var(--bg);
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.7;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-// Prevent horizontal scroll
 *, *::before, *::after {
   max-width: 100%;
 }
 
-// Ensure images and media don't overflow
 img, video, iframe {
   max-width: 100%;
   height: auto;
 }
 
-// Better mobile tap highlighting
 a, button {
-  -webkit-tap-highlight-color: rgba(56, 189, 248, 0.2);
+  -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
 }
 
 a {
-  color: var(--accent-green);
+  color: var(--accent);
   text-decoration: none;
-  transition: color 0.3s $transition-bounce;
+  transition: color 0.2s $transition-smooth;
 
   &:hover {
-    color: var(--accent-pink);
+    color: var(--accent-purple);
   }
 }
 
 // ===== Typography =====
 h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
   color: var(--text-bright);
   font-family: $font-heading;
-  text-shadow: 2px 2px 0px rgba(255, 182, 193, 0.3);
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
-  letter-spacing: 0.01em;
-  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
   color: var(--text-bright);
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   font-family: $font-heading;
 
   i {
-    color: var(--accent-green);
+    color: var(--accent);
     font-size: 0.9em;
   }
 }
 
 h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
   font-weight: 600;
-  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
   color: var(--text-bright);
   font-family: $font-heading;
 }
 
 p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 0.95rem;
-  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 // ===== Container =====
@@ -106,93 +104,24 @@ p {
   padding: 2rem;
 }
 
-// ===== Background Elements =====
+// ===== Background decorative orbs — neutralized in modern theme =====
 .glow-orb {
-  position: fixed;
-  border-radius: $border-radius-round;
-  filter: blur(60px);
-  opacity: 0.25;
-  z-index: -1;
-  pointer-events: none;
-  animation: sunlightDapple 20s ease-in-out infinite;
+  display: none;
 }
 
-.glow-orb-1 {
-  top: 10%;
-  left: 20%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 248, 220, 0.8), rgba(255, 223, 150, 0.4), transparent);
-}
-
-.glow-orb-2 {
-  top: 40%;
-  right: 15%;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(255, 250, 230, 0.6), rgba(255, 230, 180, 0.3), transparent);
-  animation-delay: -7s;
-}
-
-.glow-orb-3 {
-  bottom: 15%;
-  left: 5%;
-  width: 400px;
-  height: 200px;
-  background: radial-gradient(ellipse, rgba(144, 198, 149, 0.3), rgba(120, 180, 130, 0.2), transparent);
-  animation-delay: -14s;
-  border-radius: 60% 40% 50% 50%;
-}
-
-@keyframes sunlightDapple {
-  0%, 100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-  25% {
-    opacity: 0.35;
-    transform: scale(1.05);
-  }
-  50% {
-    opacity: 0.2;
-    transform: scale(0.95);
-  }
-  75% {
-    opacity: 0.3;
-    transform: scale(1.02);
-  }
-}
-
-// Forest atmosphere gradient overlay
+// No forest gradient overlay in modern theme
 body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(180deg,
-      rgba(135, 206, 235, 0.1) 0%,
-      rgba(144, 198, 149, 0.05) 30%,
-      rgba(255, 248, 240, 0) 60%,
-      rgba(255, 212, 186, 0.08) 100%
-    );
-  pointer-events: none;
-  z-index: -2;
+  content: none;
 }
 
 // ===== Sections =====
 .section {
-  margin-top: 6rem;
-  padding: 3rem 2rem;
+  margin-top: 5rem;
+  padding: 2.5rem 2rem;
   position: relative;
 
-  &:nth-of-type(odd) {
-    background: linear-gradient(180deg, transparent 0%, rgba(255, 245, 232, 0.6) 100%);
-  }
-
+  &:nth-of-type(odd),
   &:nth-of-type(even) {
-    background: radial-gradient(ellipse at bottom, rgba(255, 182, 193, 0.08), transparent 70%);
+    background: transparent;
   }
 }
