@@ -68,12 +68,11 @@ description: Professional certifications and continuous learning in AI, Product 
         <div class="cert-card card-{{ cert.accent_color }} scroll-animate">
             <div class="cert-card-header">
                 <div class="cert-card-icon">
-                    <i class="{{ cert.icon | default: 'fas fa-certificate' }}"></i>
+                    <i class="fas fa-certificate"></i>
                 </div>
             </div>
             <div class="cert-card-body">
                 <h3>{{ cert.name }}</h3>
-                {% if cert.description %}<p>{{ cert.description }}</p>{% endif %}
             </div>
             <div class="cert-card-footer">
                 <span class="cert-card-meta">

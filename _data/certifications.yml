@@ -3,9 +3,7 @@
   date: "January 2024"
   credential_id: "6476791d-ccd2-4262-9985-3c81ccce0100"
   credential_url: "https://learn.deeplearning.ai/accomplishments/6476791d-ccd2-4262-9985-3c81ccce0100"
-  icon: "fas fa-robot"
   accent_color: "purple"
-  description: "Build agentic AI workflows using LangGraph — multi-agent architectures, memory, tool use, and human-in-the-loop patterns."
   skills:
     - AI Agents
     - LangGraph
@@ -18,9 +16,7 @@
   date: "July 2024"
   credential_id: "604fd916-7f61-472e-b0a4-e563a37e75e9"
   credential_url: "https://learn.deeplearning.ai/accomplishments/604fd916-7f61-472e-b0a4-e563a37e75e9"
-  icon: "fas fa-brain"
   accent_color: "pink"
-  description: "Deep dive into the full LLM pretraining pipeline — data preparation, tokenization, training dynamics, and evaluation at scale."
   skills:
     - Pretraining
     - Transformers
@@ -33,9 +29,7 @@
   date: "June 2024"
   credential_id: "971fc017-be28-48d2-a819-bd6e736b1422"
   credential_url: "https://learn.deeplearning.ai/accomplishments/971fc017-be28-48d2-a819-bd6e736b1422"
-  icon: "fas fa-link"
   accent_color: "cyan"
-  description: "Build LLM-powered applications using LangChain — chains, agents, tools, memory, and production-ready app patterns."
   skills:
     - LangChain
     - Agents
@@ -48,9 +42,7 @@
   date: "June 2024"
   credential_id: "be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
   credential_url: "https://learn.deeplearning.ai/accomplishments/be0b7f8c-b46d-4a3d-8079-a83031c5ad40"
-  icon: "fas fa-database"
   accent_color: "pink"
-  description: "Build RAG systems with LangChain — document loading, chunking, embeddings, vector stores, and retrieval-augmented generation."
   skills:
     - RAG
     - Vector Databases
@@ -63,9 +55,7 @@
   date: "June 2024"
   credential_id: "afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
   credential_url: "https://learn.deeplearning.ai/accomplishments/afbb8ed4-b0ee-4b1b-9a22-dc8ff6bfce8a"
-  icon: "fas fa-sliders-h"
   accent_color: "purple"
-  description: "Fine-tune open-source LLMs for domain-specific tasks using instruction tuning, LoRA/PEFT, and evaluation best practices."
   skills:
     - Fine-Tuning
     - LoRA / PEFT
@@ -77,9 +67,7 @@
   date: "June 2024"
   credential_id: "8400191e-b3e6-470d-990d-287c69d67a34"
   credential_url: "https://learn.deeplearning.ai/accomplishments/8400191e-b3e6-470d-990d-287c69d67a34"
-  icon: "fas fa-cogs"
   accent_color: "cyan"
-  description: "Design multi-step LLM systems using the ChatGPT API — chained prompts, moderation, evaluation, and production patterns."
   skills:
     - ChatGPT API
     - Prompt Chaining
@@ -91,9 +79,7 @@
   date: "June 2024"
   credential_id: "84dcd38d-b215-47aa-9327-592b04a6fbc3"
   credential_url: "https://learn.deeplearning.ai/accomplishments/84dcd38d-b215-47aa-9327-592b04a6fbc3"
-  icon: "fas fa-pen-nib"
   accent_color: "pink"
-  description: "Master prompt engineering techniques — zero-shot, few-shot, chain-of-thought reasoning, and iterative prompt refinement."
   skills:
     - Prompt Engineering
     - Chain-of-Thought
