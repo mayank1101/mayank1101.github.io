@@ -15,20 +15,29 @@
   margin-bottom: 4rem;
   gap: 2rem;
 
-  strong {
-    font-family: $font-heading;
-    font-weight: 700;
-    font-size: 1.55rem;
-    color: var(--ink);
+  .nav-logo {
+    text-decoration: none;
     flex-shrink: 0;
-    transform: rotate(-1.5deg);
-    display: inline-block;
 
-    i {
-      color: var(--accent-pink);
-      margin-right: 0.4rem;
-      transform: rotate(-6deg);
+    strong {
+      font-family: $font-heading;
+      font-weight: 700;
+      font-size: 1.55rem;
+      color: var(--ink);
+      transform: rotate(-1.5deg);
       display: inline-block;
+      transition: transform 0.2s $transition-bounce;
+
+      i {
+        color: var(--accent-pink);
+        margin-right: 0.4rem;
+        transform: rotate(-6deg);
+        display: inline-block;
+      }
+    }
+
+    &:hover strong {
+      transform: rotate(0deg) scale(1.02);
     }
   }
 
@@ -118,6 +127,52 @@
   }
 }
 
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 0 var(--ink);
+  border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 1.1rem;
+  transition: transform 0.2s $transition-bounce, box-shadow 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+
+  i {
+    position: absolute;
+    transition: transform 0.4s $transition-bounce, opacity 0.3s ease;
+  }
+
+  .fa-sun {
+    opacity: 0;
+    transform: translateY(20px) rotate(45deg);
+  }
+
+  &:hover {
+    background: var(--tint-yellow);
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 var(--ink);
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .fa-moon {
+    opacity: 0;
+    transform: translateY(-20px) rotate(-45deg);
+  }
+  .fa-sun {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
 // Resume CTA in nav
 .cta-nav {
   font-family: $font-heading;
@@ -137,6 +192,13 @@
     box-shadow: 5px 5px 0 0 var(--ink);
     color: #FFFEF8;
   }
+}
+
+.nav-controls {
+  display: none; // Hidden on desktop
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 101;
 }
 
 // Hamburger
