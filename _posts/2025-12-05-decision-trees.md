@@ -4,7 +4,6 @@ title: "Decision Trees: Understanding Tree-Based Learning"
 date: 2025-12-05
 series: "Machine Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-05-decision-trees/decision-trees.png"
 excerpt: "Learn how decision trees work, including splitting criteria, pruning, and visualization techniques for interpretable models."
 ---
 

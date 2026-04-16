@@ -4,7 +4,6 @@ title: "Batch and Layer Normalization: Stabilizing Deep Neural Network Training"
 date: 2025-12-30
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-30-normalization/normalization.png"
 excerpt: "Master batch and layer normalization techniques that revolutionized deep learning training, with comprehensive theory, mathematical foundations, and practical implementations."
 ---
 
