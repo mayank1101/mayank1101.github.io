@@ -96,49 +96,5 @@
   }
 }
 
-// ===== Resume callout =====
-.resume-section {
-  background: var(--card);
-  border: 3px solid var(--ink);
-  border-radius: $border-radius-xl;
-  padding: 2.5rem;
-  box-shadow: 7px 7px 0 0 var(--ink);
-  transform: rotate(-0.4deg);
-}
-
-.resume-card {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.resume-icon {
-  font-size: 3rem;
-  color: var(--ink);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 86px;
-  height: 86px;
-  border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
-  background: var(--tint-yellow);
-  border: 3px solid var(--ink);
-  flex-shrink: 0;
-  transform: rotate(-8deg);
-}
-
-.resume-content h2 {
-  margin-top: 0;
-  background: none;
-  -webkit-text-fill-color: initial;
-  color: var(--ink);
-}
-
-.resume-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
+// ===== Resume callout (Unused/Duplicate) =====
+// Removed to avoid conflict with dedicated resume page styles
