@@ -289,27 +289,8 @@
       updateMetaThemeColor('light');
     }
 
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-
-    let toggle = document.querySelector('.theme-toggle');
-    if (!toggle) {
-      toggle = document.createElement('button');
-      toggle.className = 'theme-toggle';
-      toggle.setAttribute('aria-label', 'Toggle dark mode');
-      toggle.setAttribute('title', 'Toggle light/dark mode');
-      toggle.innerHTML = '<i class="fas fa-moon"></i><i class="fas fa-sun"></i>';
-
-      const navSocial = document.querySelector('.nav-social');
-      const navRight = document.querySelector('.nav-right');
-      if (navSocial) {
-        navSocial.appendChild(toggle);
-      } else if (navRight) {
-        navRight.insertBefore(toggle, navRight.firstChild);
-      } else {
-        nav.appendChild(toggle);
-      }
-    }
+    const toggle = document.querySelector('.theme-toggle');
+    if (!toggle) return;
 
     toggle.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
