@@ -57,8 +57,7 @@ mayank1101.github.io/
 │   ├── navbar.html               # Navigation with dynamic active states
 │   ├── footer.html               # Footer with dynamic year
 │   ├── head.html                 # SEO meta tags, fonts, CSS
-│   ├── theme-script.html         # Theme initialization
-│   └── glow-orbs.html            # Background decorative elements
+│   └── theme-script.html         # Theme initialization
 ├── _layouts/
 │   ├── default.html              # Base layout
 │   ├── page.html                 # Standard page layout
@@ -88,8 +87,7 @@ mayank1101.github.io/
 │   ├── css/
 │   │   └── main.scss             # Main SCSS entry point
 │   ├── animations.js             # Scroll animations, theme toggle
-│   ├── profile.jpeg              # Profile photo
-│   └── images/                   # Blog images
+│   └── profile.jpeg              # Profile photo
 ├── index.html                    # Homepage
 ├── about.html                    # About page
 ├── blog.html                     # Blog listing

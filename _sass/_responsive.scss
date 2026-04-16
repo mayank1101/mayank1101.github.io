@@ -325,11 +325,6 @@ html, body {
     overflow-wrap: normal;
   }
 
-  // Hide glow orbs on mobile for performance
-  .glow-orb {
-    display: none !important;
-  }
-
   // Scroll animations
   .scroll-animate {
     transition: all 0.5s ease !important;

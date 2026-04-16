@@ -4,7 +4,6 @@ title: "Random Forests: Ensemble Learning with Decision Trees"
 date: 2025-12-07
 series: "Machine Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-07-random-forests/random-forests.png"
 excerpt: "Master random forests, understanding bagging, feature importance, and how ensemble methods improve prediction accuracy."
 ---
 

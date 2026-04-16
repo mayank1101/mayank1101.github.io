@@ -4,7 +4,6 @@ title: "Naive Bayes: Probabilistic Classification"
 date: 2025-12-13
 series: "Machine Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-13-naive-bayes/naive-bayes.png"
 excerpt: "Understand Naive Bayes classification using Bayes theorem, conditional independence, and variants for different data types."
 ---
 

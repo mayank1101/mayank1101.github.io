@@ -4,7 +4,6 @@ title: "Weight Initialization: The Critical First Step in Neural Network Trainin
 date: 2026-01-09
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2026-01-09-initialization/initialization-comparison.png"
 excerpt: "Master weight initialization techniques that determine whether your neural network trains successfully or fails before it even begins."
 ---
 

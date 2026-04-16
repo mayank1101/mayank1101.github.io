@@ -4,7 +4,6 @@ title: "Understanding Feed-Forward and Backpropagation: The Heart of Neural Netw
 date: 2025-12-20
 series: "Deep Learning Series"
 series_author: "Mayank Sharma"
-series_image: "/assets/images/2025-12-20-understanding-feedforward-backpropogation/forward-backpropogation.png"
 excerpt: "Learn how neural networks learn through feed-forward and backpropagation from scratch to truly understand these concepts."
 ---
 
