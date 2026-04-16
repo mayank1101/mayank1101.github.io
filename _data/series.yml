@@ -13,3 +13,11 @@
   icon: "fas fa-brain"
   author: "Mayank Sharma"
   order: 2
+
+- name: "Natural Language Processing Series"
+  slug: "nlp"
+  description: "Explore the fascinating world of Natural Language Processing, from linguistic foundations to modern transformer models and real-world applications."
+  accent_color: "green"
+  icon: "fas fa-brain"
+  author: "Mayank Sharma"
+  order: 3
