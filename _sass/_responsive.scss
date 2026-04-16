@@ -113,17 +113,44 @@ html, body {
     margin-bottom: 1rem;
     gap: 1rem;
 
-    strong {
+    .nav-logo strong {
       font-size: 1.1rem;
     }
   }
 
-  .nav-controls {
-    display: flex;
-  }
-
   .hamburger {
     display: flex;
+    order: 2;
+  }
+
+  .nav-right {
+    display: flex !important; // Force flex for theme-toggle visibility
+    order: 1;
+    margin-left: auto;
+    width: auto;
+    margin-top: 0;
+
+    .nav-social, .cta-nav {
+      display: none; // Hide these by default on mobile
+    }
+
+    &.active {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      order: 3;
+      gap: 0.8rem;
+      margin-top: 1rem;
+
+      .nav-social, .cta-nav {
+        display: flex;
+      }
+
+      .nav-social {
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+    }
   }
 
   .theme-toggle {
@@ -134,14 +161,14 @@ html, body {
     box-shadow: 2.5px 2.5px 0 0 var(--ink);
   }
 
-  .nav-center,
-  .nav-right {
+  .nav-center {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 0.8rem;
     animation: slideDown 0.3s ease;
-    margin-top: 1rem; // Add spacing when active
+    margin-top: 1rem;
+    order: 3;
 
     &.active {
       display: flex;

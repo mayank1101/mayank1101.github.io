@@ -3,20 +3,6 @@
     <strong><i class="fas fa-code"></i> Mayank Sharma</strong>
   </a>
 
-  <div class="nav-controls">
-    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-    </button>
-
-    <!-- Hamburger Menu Button (Mobile Only) -->
-    <button class="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-
   <div class="nav-center">
     <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="/">
       Home
@@ -33,6 +19,11 @@
   </div>
 
   <div class="nav-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+
     <div class="nav-social">
       <a href="https://github.com/mayank1101" target="_blank" aria-label="GitHub" class="social-icon">
         <i class="fab fa-github"></i>
@@ -49,4 +40,11 @@
       Resume
     </a>
   </div>
+
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
