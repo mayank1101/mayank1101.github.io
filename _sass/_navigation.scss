@@ -18,6 +18,7 @@
   .nav-logo {
     text-decoration: none;
     flex-shrink: 0;
+    position: relative;
 
     strong {
       font-family: $font-heading;
@@ -27,6 +28,22 @@
       transform: rotate(-1.5deg);
       display: inline-block;
       transition: transform 0.2s $transition-bounce;
+      position: relative;
+      z-index: 1;
+      padding: 0 0.2rem;
+
+      // Marker stroke background
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0 -5px;
+        background: var(--tint-yellow);
+        border-radius: var(--r-sketch-1);
+        z-index: -1;
+        transform: scaleX(0) rotate(-1deg);
+        transform-origin: left center;
+        transition: transform 0.25s $ease-bounce;
+      }
 
       i {
         color: var(--accent-pink);
@@ -36,12 +53,18 @@
       }
     }
 
-    &:hover strong {
-      transform: rotate(0deg) scale(1.02);
+    &:hover {
+      strong {
+        transform: rotate(0deg) scale(1.02);
+        &::before {
+          transform: scaleX(1) rotate(1.5deg);
+        }
+      }
     }
   }
 
   &.nav-scrolled {
+    border-bottom-style: solid;
     box-shadow: 0 4px 0 0 var(--ink);
   }
 }
@@ -85,7 +108,10 @@
       color: var(--accent-pink);
       transform: translateY(-2px);
 
-      &::after { transform: scaleX(1); }
+      &::after { 
+        transform: scaleX(1); 
+        animation: underline-scribble 0.4s steps(3) infinite;
+      }
     }
   }
 }
@@ -186,8 +212,10 @@
   box-shadow: 3px 3px 0 0 var(--ink);
   transition: transform 0.15s $transition-bounce, box-shadow 0.15s ease;
   transform: rotate(-1.2deg);
+  animation: cta-wiggle 6s ease-in-out infinite;
 
   &:hover {
+    animation-play-state: paused;
     transform: rotate(0deg) translate(-2px, -2px);
     box-shadow: 5px 5px 0 0 var(--ink);
     color: #FFFEF8;
