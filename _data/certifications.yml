@@ -11,7 +11,7 @@
   credential_id: "604fd916-7f61-472e-b0a4-e563a37e75e9"
   credential_url: "https://learn.deeplearning.ai/accomplishments/604fd916-7f61-472e-b0a4-e563a37e75e9"
   accent_color: "pink"
-  
+
 - name: "LangChain for LLM Application Development"
   organization: "DeepLearning.AI"
   date: "June 2024"
@@ -68,4 +68,16 @@
   credential_url: "https://coursera.org/share/c1ebbfdb85db53bde5d007a7574a8bea"
   accent_color: "pink"
 
+- name: "Parallel Computing with Dask"
+  organization: "DataCamp"
+  credential_id: "3de6d6228ae138accf0d306c58223934aeb6415c"
+  credential_url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/3de6d6228ae138accf0d306c58223934aeb6415c"
+  date: "September 2020"
+  accent_color: "pink"
 
+- name: "Python Programmer Track"
+  organization: "DataCamp"
+  credential_id: "541cc7ab0cc98d1e643f8906976bea5e552262e9"
+  credential_url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/541cc7ab0cc98d1e643f8906976bea5e552262e9"
+  date: "September 2020"
+  accent_color: "pink"
