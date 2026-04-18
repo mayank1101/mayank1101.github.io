@@ -21,11 +21,10 @@
   icon: "fas fa-brain"
   author: "Mayank Sharma"
   order: 3
-
-- name: "Data Structures and Algorithms Series"
-  slug: "dsa"
-  description: "Master the foundations of computer science, from basic data structures to complex algorithmic paradigms and competitive programming techniques."
-  accent_color: "blue"
-  icon: "fas fa-code"
-  author: "Mayank Sharma"
-  order: 4
+# - name: "Data Structures and Algorithms Series"
+#   slug: "dsa"
+#   description: "Master the foundations of computer science, from basic data structures to complex algorithmic paradigms and competitive programming techniques."
+#   accent_color: "blue"
+#   icon: "fas fa-code"
+#   author: "Mayank Sharma"
+#   order: 4
