@@ -648,3 +648,53 @@
     font-size: 1rem;
   }
 }
+
+// Topic Filter
+.topic-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.filter-btn {
+  background: var(--bg-secondary);
+  color: var(--text);
+  border: 2px solid var(--border);
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    border-color: var(--accent-green);
+    color: var(--text-bright);
+    background: rgba(144, 198, 149, 0.1);
+  }
+
+  &.active {
+    background: var(--gradient-secondary);
+    color: var(--text-bright);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.article-topic-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-green);
+  margin-bottom: 0.3rem;
+  background: rgba(144, 198, 149, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}

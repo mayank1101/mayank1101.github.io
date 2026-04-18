@@ -14,10 +14,18 @@
   author: "Mayank Sharma"
   order: 2
 
-- name: "Natural Language Processing Series"
+- name: "NLP: Foundations to Advance"
   slug: "nlp"
   description: "Explore the fascinating world of Natural Language Processing, from linguistic foundations to modern transformer models and real-world applications."
   accent_color: "green"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
   order: 3
+
+- name: "Data Structures and Algorithms Series"
+  slug: "dsa"
+  description: "Master the foundations of computer science, from basic data structures to complex algorithmic paradigms and competitive programming techniques."
+  accent_color: "blue"
+  icon: "fas fa-code"
+  author: "Mayank Sharma"
+  order: 4

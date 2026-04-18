@@ -30,6 +30,6 @@ Gemfile.lock
 # certifications.html
 # _data/certifications.yml
 
-# machine-learning (private)
-# series/machine-learning
-
+# dsa-series (private)
+series/dsa
+_posts/dsa

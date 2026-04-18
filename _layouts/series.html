@@ -28,12 +28,36 @@ layout: default
     <i class="fas fa-arrow-left"></i> Back to All Series
   </a>
 
+  <!-- Topic Filter -->
+  {% assign all_topics = "" | split: "," %}
+  {% for post in series_posts %}
+    {% if post.topic %}
+      {% assign all_topics = all_topics | push: post.topic | uniq %}
+    {% endif %}
+  {% endfor %}
+
+  {% if all_topics.size > 0 %}
+  <div class="topic-filter scroll-animate">
+    <button class="filter-btn active" data-filter="all">
+      <i class="fas fa-layer-group"></i> All Topics
+    </button>
+    {% for topic in all_topics %}
+    <button class="filter-btn" data-filter="{{ topic | slugify }}">
+      <i class="fas fa-tag"></i> {{ topic }}
+    </button>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <!-- Articles List -->
-  <div class="series-articles-list">
+  <div class="series-articles-list" id="articles-list">
     {% for post in series_posts %}
-    <div class="card scroll-animate series-article-card">
+    <div class="card scroll-animate series-article-card" data-topic="{{ post.topic | slugify | default: 'none' }}">
       <div class="series-article-number">{{ forloop.index }}</div>
       <div class="series-article-content">
+        {% if post.topic %}
+        <span class="article-topic-badge">{{ post.topic }}</span>
+        {% endif %}
         <h3>{{ post.title }}</h3>
         <p class="muted blog-date">
           <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
@@ -47,5 +71,36 @@ layout: default
     {% endfor %}
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const articles = document.querySelectorAll('.series-article-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      articles.forEach(article => {
+        const articleTopic = article.getAttribute('data-topic');
+        
+        if (filterValue === 'all' || articleTopic === filterValue) {
+          article.style.display = 'flex';
+          // Trigger animation
+          article.classList.remove('fade-in');
+          void article.offsetWidth; // Force reflow
+          article.classList.add('fade-in');
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
 
 {% include footer.html %}
