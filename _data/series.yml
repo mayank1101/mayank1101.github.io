@@ -1,23 +1,23 @@
+- name: "NLP: Foundations to Advance"
+  slug: "nlp"
+  description: "Explore the fascinating world of Natural Language Processing, from linguistic foundations to modern transformer models and real-world applications."
+  accent_color: "green"
+  icon: "fas fa-brain"
+  author: "Mayank Sharma"
+  order: 1
+
 - name: "Deep Learning Series"
   slug: "deep-learning"
   description: "A comprehensive journey through the fundamentals of core deep learning concepts, from understanding mathematics to practical implementation."
   accent_color: "purple"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
-  order: 1
+  order: 2
 
 - name: "Machine Learning Series"
   slug: "machine-learning"
   description: "A comprehensive journey through the fundamentals of core machine learning concepts, from understanding mathematics to practical implementation."
   accent_color: "cyan"
-  icon: "fas fa-brain"
-  author: "Mayank Sharma"
-  order: 2
-
-- name: "NLP: Foundations to Advance"
-  slug: "nlp"
-  description: "Explore the fascinating world of Natural Language Processing, from linguistic foundations to modern transformer models and real-world applications."
-  accent_color: "green"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
   order: 3
