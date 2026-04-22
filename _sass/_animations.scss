@@ -1,6 +1,61 @@
 // ===== Animations — Sketchy Hand-Drawn =====
 // Wiggle, jitter, and scribble motion. Respects prefers-reduced-motion.
 
+// ----- Squigglevision: subtle vibration using SVG filters -----
+.hero h1,
+.hero-highlight,
+.section h2,
+.nav-logo strong {
+  filter: url(#sketchy-wiggle);
+}
+
+// ----- Intense squiggle on hover -----
+.cta:hover,
+.cta-secondary:hover,
+.card:hover,
+.social-icon:hover,
+.theme-toggle:hover,
+.nav-link:hover,
+.cta-nav:hover {
+  filter: url(#sketchy-hover);
+}
+
+// ----- Draw-in animation for h2 underlines -----
+@keyframes drawUnderline {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+h2::after {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s $ease-bounce;
+}
+
+h2.revealed::after {
+  clip-path: inset(0 0 0 0);
+  animation: underline-scribble 4s infinite 0.8s;
+}
+
+// ----- Pencil Sketch Image Reveal -----
+img.revealed {
+  animation: sketchIn 1.2s ease-out forwards;
+}
+
+@keyframes sketchIn {
+  0% {
+    filter: grayscale(1) contrast(2) brightness(1.5) blur(2px);
+    opacity: 0;
+  }
+  50% {
+    filter: grayscale(0.5) contrast(1.5) brightness(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    filter: grayscale(0) contrast(1) brightness(1);
+    opacity: 1;
+  }
+}
+
 // ----- Initial fade in with a little tilt -----
 .fade-in {
   opacity: 0;

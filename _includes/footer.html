@@ -9,3 +9,24 @@
   </p>
   <p>&copy; {{ site.time | date: '%Y' }} Mayank Sharma &middot; Always learning, always building</p>
 </div>
+
+<!-- SVG Filters for Sketchy Theme -->
+<svg style="display: none;">
+  <defs>
+    <!-- Squigglevision: subtle "vibrating" filter for hand-drawn look -->
+    <filter id="sketchy-wiggle">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2">
+        <animate attributeName="seed" values="1;2;3" dur="0.2s" repeatCount="indefinite" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="1.5" />
+    </filter>
+
+    <!-- Sketchy Scribble: more intense wiggle for hover effects -->
+    <filter id="sketchy-hover">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3">
+        <animate attributeName="seed" values="10;20;30;40;50" dur="0.3s" repeatCount="indefinite" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="3" />
+    </filter>
+  </defs>
+</svg>

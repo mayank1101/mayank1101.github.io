@@ -250,11 +250,9 @@
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const img = entry.target;
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.4s ease';
         img.src = img.dataset.src;
         img.onload = () => {
-          img.style.opacity = '1';
+          img.classList.add('revealed');
           img.removeAttribute('data-src');
         };
         o.unobserve(img);
