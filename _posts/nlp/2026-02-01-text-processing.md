@@ -18,6 +18,7 @@ In this article, we will explore the three pillars of text processing: **Tokeniz
 ---
 
 ## What You'll Learn
+
 - **The Philosophy of Normalization**: Why we reduce language complexity.
 - **Advanced Tokenization**: From whitespace to Byte Pair Encoding (BPE).
 - **Stemming Mechanics**: Step-by-step breakdown of the Porter Stemmer algorithm.
@@ -417,6 +418,7 @@ Text preprocessing is the art of balancing complexity and information. We've see
 As we move deeper into the era of Large Language Models, the "manual" part of preprocessing might seem to be shrinking, but the underlying principles remain vital. Understanding how a tokenizer sees the world is the first step in understanding how an AI thinks.
 
 ### Key Takeaways
+
 - **Preprocessing is mandatory** for managing dimensionality and improving model generalization.
 - **Subword tokenization (BPE/WordPiece)** is the standard for modern neural networks, solving the OOV problem.
 - **Stemming is for speed**; use it when performance is critical and linguistic nuance is secondary (e.g., Search).
