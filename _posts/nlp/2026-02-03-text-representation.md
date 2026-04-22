@@ -124,11 +124,11 @@ TF measures how frequently a term occurs in a document. There are several ways t
 IDF measures how "rare" or "informative" a term is across the whole corpus. If a word appears in every single document (like "the"), its IDF should be very low (close to 0).
 
 The standard formula for IDF is:
-$$IDF(t, D) = \log\left(\frac{N}{|\{d \in D : t \in d\}|}\right)$$
+$$IDF(t, D) = \log\left(\frac{N}{\lvert \{d \in D \mid t \in d\} \rvert}\right)$$
 
 Where:
 *   $N$: Total number of documents in the corpus.
-*   $|\{d \in D : t \in d\}|$: Number of documents where term $t$ appears.
+*   $\lvert \{d \in D \mid t \in d\} \rvert$: Number of documents where term $t$ appears.
 
 **Why the Logarithm?**
 The log function ensures that the IDF doesn't explode for very rare words and stays within a manageable range. If $N=1,000,000$ and a word appears in only 1 document, the raw ratio is $1,000,000$. The $\log_{10}$ of that is $6$. This makes the weights much more stable for machine learning models.
