@@ -1,53 +1,108 @@
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMC64BPPF5"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-PMC64BPPF5"
+></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-PMC64BPPF5');
+  gtag("config", "G-PMC64BPPF5");
 </script>
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
-<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1C1B20" media="(prefers-color-scheme: dark)">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+/>
+<meta
+  name="theme-color"
+  content="#FBF8F1"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#1C1B20"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="black-translucent"
+/>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Mayank Sharma - AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production.{% endif %}">
-<meta name="author" content="Mayank Sharma">
-<meta name="keywords" content="AI, ML, Machine Learning, Deep Learning, NLP, LLM, RAG, PyTorch, Data Science">
+<meta
+  name="description"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Mayank Sharma - AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production.{% endif %}"
+/>
+<meta name="author" content="Mayank Sharma" />
+<meta
+  name="keywords"
+  content="AI, ML, Machine Learning, Deep Learning, NLP, LLM, RAG, PyTorch, Data Science, Generative AI, GenAI, AgenticAI, AI Product Manager, AI Product Strategy"
+/>
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}">
-<meta property="og:image" content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}">
-<meta property="og:site_name" content="Mayank Sharma">
+<meta
+  property="og:type"
+  content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
+/>
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta
+  property="og:title"
+  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}"
+/>
+<meta
+  property="og:description"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}"
+/>
+<meta
+  property="og:image"
+  content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
+/>
+<meta property="og:site_name" content="Mayank Sharma" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@sharma_mayank11">
-<meta name="twitter:creator" content="@sharma_mayank11">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}">
-<meta name="twitter:image" content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@sharma_mayank11" />
+<meta name="twitter:creator" content="@sharma_mayank11" />
+<meta
+  name="twitter:title"
+  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}"
+/>
+<meta
+  name="twitter:description"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}"
+/>
+<meta
+  name="twitter:image"
+  content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
+/>
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-<title>{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}</title>
+<title>
+  {% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma |
+  AI Researcher & Engineer{% endif %}
+</title>
 
 <!-- Fonts - Consolidated Google Fonts request -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Patrick+Hand&family=Shantell+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Patrick+Hand&family=Shantell+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css" />
