@@ -2,7 +2,7 @@
 layout: post
 title: "Word Embeddings from Scratch: CBOW and Skip-Gram"
 date: 2026-04-22
-series: "Natural Language Processing Mastery"
+series: "NLP: Foundations to Advance"
 series_author: "Mayank Sharma"
 excerpt: "Learn how Word2Vec learns dense word vectors by implementing both CBOW and Skip-Gram from scratch in a single hands-on Jupyter notebook."
 ---
