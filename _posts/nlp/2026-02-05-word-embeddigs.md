@@ -28,11 +28,10 @@ In this tutorial, we're building this from scratch. No frameworks, no magical li
 4. [CBOW: Predict the Center Word](#cbow-predict-the-center-word)
 5. [Skip-Gram: Predict the Context](#skip-gram-predict-the-context)
 6. [The Shared Word2Vec Pipeline](#the-shared-word2vec-pipeline)
-7. [Mathematical Formulation](#mathematical-formulation)
-8. [What the Notebook Builds](#what-the-notebook-builds)
-9. [CBOW vs Skip-Gram](#cbow-vs-skip-gram)
-10. [Advantages and Limitations](#advantages-and-limitations)
-11. [Conclusion and What Comes Next](#conclusion-and-what-comes-next)
+7. [The Math (It's Simpler Than You'd Think)](#the-math-its-simpler-than-youd-think)
+8. [CBOW vs Skip-Gram: Which Do You Actually Use?](#cbow-vs-skip-gram-which-do-you-actually-use)
+9. [What Actually Works Well (And What Doesn't)](#what-actually-works-well-and-what-doesnt)
+10. [Conclusion and What Comes Next](#conclusion-and-what-comes-next)
 
 ## Why Word Embeddings Matter
 
