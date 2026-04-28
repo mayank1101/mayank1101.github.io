@@ -31,7 +31,7 @@ In this tutorial, we're building this from scratch. No frameworks, no magical li
 7. [The Math (It's Simpler Than You'd Think)](#the-math-its-simpler-than-youd-think)
 8. [CBOW vs Skip-Gram: Which Do You Actually Use?](#cbow-vs-skip-gram-which-do-you-actually-use)
 9. [What Actually Works Well (And What Doesn't)](#what-actually-works-well-and-what-doesnt)
-10. [Conclusion and What Comes Next](#conclusion-and-what-comes-next)
+10. [Why This Matters](#why-this-matters)
 
 ## Why Word Embeddings Matter
 
@@ -277,7 +277,7 @@ It's a tiny change in perspective that cascades into different behavior. Same al
 
 These aren't bugs in Word2Vec. They're exactly the problems that motivated the next generation of methods. Contextual embeddings, subword tokenization, and pre-training emerged because people kept bumping into these walls.
 
-## Why This Matters (And What Comes Next)
+## Why This Matters
 
 Word2Vec's genius is its simplicity. One core insight:
 
@@ -286,6 +286,7 @@ Word2Vec's genius is its simplicity. One core insight:
 That's it. No hand-crafted features, no linguistic rules, no expensive annotations. Just context clues and gradient descent.
 
 CBOW and Skip-Gram are two flavors of the same idea:
+
 - **CBOW** — context → center word (fast, stable)
 - **Skip-Gram** — center word → context (thorough, detailed)
 
