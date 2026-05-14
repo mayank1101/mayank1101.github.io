@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my journey in AI/ML research and engineering. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
+A modern, responsive portfolio website and technical blog showcasing my journey in analytics engineering, data infrastructure, and production AI systems. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, an Applied AI & Data Leader with 5+ years of experience building trustworthy Data & AI systems. My work bridges the gap between cutting-edge research and production-scale AI applications.
+I'm **Mayank Sharma**, an Analytics Engineer and AI professional with 5+ years of experience building data-driven systems and production AI solutions. My work combines data infrastructure expertise with AI to deliver measurable business impact across healthcare, manufacturing, and enterprise domains.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
@@ -22,12 +22,12 @@ I'm **Mayank Sharma**, an Applied AI & Data Leader with 5+ years of experience b
 - **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
 ### Current Focus
-- Data & Analytics
-- Generative AI
-- Multimodal RAG systems
-- Retrieval evaluation & hallucination reduction
-- Medical NLP & clinical AI
-- Production-scale LLM deployment
+- Analytics Engineering & Data Infrastructure
+- Data Modeling, Warehousing, and ETL Pipelines (Snowflake, dbt)
+- Operational Analytics at Scale
+- Generative AI & LLM Applications
+- Production AI System Optimization
+- Multimodal RAG and Retrieval Evaluation
 
 ## Tech Stack
 
@@ -163,4 +163,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Bridging research and real-world AI systems*
+*Building analytics-driven systems and production AI at scale*
