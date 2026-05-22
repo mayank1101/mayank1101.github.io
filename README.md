@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my journey in analytics engineering, data infrastructure, and production AI systems. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
+A modern, responsive portfolio website and technical blog showcasing my journey in data science, machine learning, and analytics. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, an Analytics Engineer and AI professional with 5+ years of experience building data-driven systems and production AI solutions. My work combines data infrastructure expertise with AI to deliver measurable business impact across healthcare, manufacturing, and enterprise domains.
+I'm **Mayank Sharma**, a Data Scientist with 5+ years of experience building machine learning and analytics solutions. My work combines deep ML and NLP expertise with strong analytics capabilities to deliver intelligent systems that drive measurable business impact across healthcare, manufacturing, and enterprise domains.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
@@ -22,12 +22,12 @@ I'm **Mayank Sharma**, an Analytics Engineer and AI professional with 5+ years o
 - **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
 ### Current Focus
-- Analytics Engineering & Data Infrastructure
-- Data Modeling, Warehousing, and ETL Pipelines (Snowflake, dbt)
+- Machine Learning & Generative AI Systems
+- Natural Language Processing (NLP) & LLMs
+- Prompt Engineering & Model Optimization
+- Data Science & Analytics
 - Operational Analytics at Scale
-- Generative AI & LLM Applications
-- Production AI System Optimization
-- Multimodal RAG and Retrieval Evaluation
+- Production ML Deployment & Evaluation
 
 ## Tech Stack
 
@@ -163,4 +163,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Building analytics-driven systems and production AI at scale*
+*Building machine learning and analytics solutions that matter*
