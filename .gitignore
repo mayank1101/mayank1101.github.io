@@ -36,5 +36,4 @@ _posts/dsa
 
 # projects (private)
 projects.html
-_sass/_projects.scss
 _data/projects.yml
