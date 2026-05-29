@@ -33,3 +33,8 @@ _data/certifications.yml
 # dsa-series (private)
 series/dsa
 _posts/dsa
+
+# projects (private)
+projects.html
+_sass/_projects.scss
+_data/projects.yml
