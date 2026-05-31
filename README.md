@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my journey in data science, machine learning, and analytics. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
+A modern, responsive portfolio website and technical blog showcasing my journey in product management, data-driven decision making, and building products that users love. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Data Scientist with 5+ years of experience building machine learning and analytics solutions. My work combines deep ML and NLP expertise with strong analytics capabilities to deliver intelligent systems that drive measurable business impact across healthcare, manufacturing, and enterprise domains.
+I'm **Mayank Sharma**, a Product Manager with 5+ years of experience shipping products that matter and driving measurable business impact. My work combines product leadership with deep technical expertise in data, analytics, and ML — giving me unique credibility to bridge product and engineering, make data-driven decisions, and deliver user-centric solutions at scale.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
@@ -22,12 +22,12 @@ I'm **Mayank Sharma**, a Data Scientist with 5+ years of experience building mac
 - **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
 ### Current Focus
-- Machine Learning & Generative AI Systems
-- Natural Language Processing (NLP) & LLMs
-- Prompt Engineering & Model Optimization
-- Data Science & Analytics
-- Operational Analytics at Scale
-- Production ML Deployment & Evaluation
+- Product Strategy & Roadmapping
+- Data-Driven Product Decisions
+- User Research & Problem Discovery
+- Cross-Functional Team Leadership
+- Building Analytics Products at Scale
+- Product Philosophy & Thought Leadership
 
 ## Tech Stack
 
@@ -163,4 +163,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Building machine learning and analytics solutions that matter*
+*Shipping data-driven products that solve real problems at scale*
