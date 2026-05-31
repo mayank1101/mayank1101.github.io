@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my journey in product management, data-driven decision making, and building products that users love. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach.
+A modern, responsive portfolio website and technical blog showcasing my transition from AI & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth in ML, NLP, and data systems informs better product decisions.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Product Manager with 5+ years of experience shipping products that matter and driving measurable business impact. My work combines product leadership with deep technical expertise in data, analytics, and ML — giving me unique credibility to bridge product and engineering, make data-driven decisions, and deliver user-centric solutions at scale.
+I'm **Mayank Sharma**, an AI & Analytics professional transitioning into Product Management. With 5+ years building production ML/NLP systems and analytics platforms, I'm making an intentional move into product leadership. My technical depth in data science, AI, and analytics is my competitive advantage — I understand engineering constraints, can credibly partner with technical teams, and make smarter product decisions grounded in data. This rare combination of technical credibility and product thinking is what I bring to PM roles.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
@@ -21,13 +21,13 @@ I'm **Mayank Sharma**, a Product Manager with 5+ years of experience shipping pr
 - **Impact**: Built systems serving 10,000+ daily users with 99% efficiency gains
 - **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
 
-### Current Focus
-- Product Strategy & Roadmapping
-- Data-Driven Product Decisions
+### Current Focus (Transitioning to PM)
+- Product Strategy & Roadmapping (with technical depth)
+- Data-Driven Product Decisions & Evaluation Rigor
 - User Research & Problem Discovery
-- Cross-Functional Team Leadership
-- Building Analytics Products at Scale
-- Product Philosophy & Thought Leadership
+- Cross-Functional Team Leadership (with engineering credibility)
+- Building Products that Matter at Scale
+- Bridging AI/Analytics and Product Leadership
 
 ## Tech Stack
 
@@ -163,4 +163,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Shipping data-driven products that solve real problems at scale*
+*AI & Analytics professional transitioning into Product Management. Shipping products powered by technical depth and user-centric thinking.*
