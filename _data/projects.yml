@@ -1,0 +1,19 @@
+- name: "Deep Learning Projects"
+  description: "Various deep learning, natural language processing, and computer vision projects completed during Udacity Nanodegree Program."
+  icon: "fas fa-chart-line"
+  accent_color: "purple"
+  github: "https://github.com/mayank1101/Data-Science-ML-Projects/tree/main/Udacity%20Projects"
+  live: ""
+  tags: ["Deep Learning", "NLP", "Computer Vision"]
+  status: "completed"
+
+- name: "Data Analytics Projects"
+  description: "Various case-studies and data analytics projects using python, pandas and numpy completed during DataCamp Program."
+  icon: "fas fa-brain"
+  accent_color: "cyan"
+  github: "https://github.com/mayank1101/Data-Science-ML-Projects/tree/main/DataCamp%20Projects"
+  live: ""
+  tags: ["Python", "Pandas", "Numpy", "Data Science", "Matplotlib"]
+  status: "completed"
+
+
