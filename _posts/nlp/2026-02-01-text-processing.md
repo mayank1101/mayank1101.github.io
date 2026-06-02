@@ -2,7 +2,7 @@
 layout: post
 title: "Text Processing: Tokenization, Stemming, Lemmatization"
 date: 2026-02-01
-series: "NLP: Foundations to Advance"
+series: "NLP Series"
 series_author: "Mayank Sharma"
 excerpt: "Master the foundational blocks of NLP: how to break down text into tokens and reduce them to their root forms using stemming and lemmatization."
 ---

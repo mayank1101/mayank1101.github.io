@@ -2,7 +2,7 @@
 layout: post
 title: "Advanced Word Embeddings from Scratch: GloVe and FastText"
 date: 2026-02-07
-series: "NLP: Foundations to Advance"
+series: "NLP Series"
 series_author: "Mayank Sharma"
 excerpt: "Learn how advanced embeddings go beyond Word2Vec by implementing a toy GloVe model and a FastText-style subword model from scratch in a Jupyter notebook."
 ---

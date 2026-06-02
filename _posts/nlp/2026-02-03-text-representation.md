@@ -2,7 +2,7 @@
 layout: post
 title: "Text Representation: From Bag-of-Words to TF-IDF"
 date: 2026-02-03
-series: "NLP: Foundations to Advance"
+series: "NLP Series"
 series_author: "Mayank Sharma"
 excerpt: "Learn how to transform raw text into numerical vectors that machines can understand using Bag-of-Words and TF-IDF techniques."
 ---
