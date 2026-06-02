@@ -220,8 +220,10 @@ $paper-noise-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/20
 
 // Dark hero highlight
 [data-theme="dark"] .hero-highlight {
-  background: linear-gradient(transparent 55%, var(--tint-yellow) 55%, var(--tint-yellow) 92%, transparent 92%);
+  background: linear-gradient(transparent 50%, rgba(255, 224, 113, 0.5) 50%, rgba(255, 224, 113, 0.5) 95%, transparent 95%);
   color: var(--ink);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 // Dark dashed nav border

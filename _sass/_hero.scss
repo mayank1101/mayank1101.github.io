@@ -51,12 +51,14 @@
 
 // Highlighted name — marker swipe behind text
 .hero-highlight {
-  display: inline-block;
+  display: inline;
   color: var(--ink);
   font-weight: 700;
   padding: 0 0.25em;
-  background: linear-gradient(transparent 55%, var(--tint-yellow) 55%, var(--tint-yellow) 92%, transparent 92%);
+  background: linear-gradient(transparent 50%, rgba(244, 196, 48, 0.5) 50%, rgba(244, 196, 48, 0.5) 95%, transparent 95%);
   transform: rotate(-1deg);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 // ===== Badges — sticker pill =====

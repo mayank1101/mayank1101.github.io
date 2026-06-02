@@ -145,9 +145,12 @@
 }
 
 // Hero heading: occasional jitter
-.hero h1,
-.hero-highlight {
+.hero h1 {
   display: inline-block;
+  animation: handDrawn 0.3s steps(2) infinite;
+}
+
+.hero-highlight {
   animation: handDrawn 0.3s steps(2) infinite;
 }
 
