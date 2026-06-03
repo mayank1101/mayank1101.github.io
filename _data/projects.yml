@@ -1,6 +1,5 @@
 - name: "The AI/ML Playbook: Small Models, Big Impacts"
-  description: "Various deep learning, natural language processing, and computer vision projects completed during Udacity Nanodegree Program."
-  icon: "fas fa-chart-line"
+  description: "Collection of various deep learning, natural language processing, and computer vision projects completed during Udacity Nanodegree Program."
   accent_color: "purple"
   github: "https://github.com/mayank1101/Mayank-AI-Lab/tree/main/Udacity%20Projects"
   # live: ""
@@ -8,12 +7,19 @@
   status: "completed"
 
 - name: "The Analytics Mosaic: A Collection of Bitesize Data Stories"
-  description: "Various case-studies and data analytics projects using python, pandas and numpy completed during DataCamp Program."
-  icon: "fas fa-brain"
+  description: "Collection of various case-studies and data analytics projects using python, pandas and numpy completed during DataCamp Program."
   accent_color: "cyan"
   github: "https://github.com/mayank1101/Mayank-AI-Lab/tree/main/DataCamp%20Projects"
   # live: ""
   tags: ["Python", "Pandas", "Numpy", "Data Science", "Matplotlib"]
+  status: "completed"
+
+- name: "VizWizardry: A Collection of SQL Data Stories"
+  description: "Collection of various case-studies and hands on data analytics using SQL completed during NamasteSQL Program."
+  accent_color: "green"
+  github: "https://github.com/mayank1101/Mayank-AI-Lab/tree/main/NamasteSQL/"
+  # live: ""
+  tags: ["MS SQL", "SQL", "SQL Server", "Analytics"]
   status: "completed"
 
 
