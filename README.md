@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my transition from AI & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth in ML, NLP, and data systems informs better product decisions.
+A modern, responsive portfolio website and technical blog showcasing my transition from Data & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth and data-driven thinking inform better product decisions.
 
 ## Live Website
 
@@ -12,22 +12,22 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, an AI & Analytics professional transitioning into Product Management. With 5+ years building production ML/NLP systems and analytics platforms, I'm making an intentional move into product leadership. My technical depth in data science, AI, and analytics is my competitive advantage — I understand engineering constraints, can credibly partner with technical teams, and make smarter product decisions grounded in data. This rare combination of technical credibility and product thinking is what I bring to PM roles.
+I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 5+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics is my competitive advantage — I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
 - **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
-- **Recognition**: Bravo Award at nference for 9x speedup and 8x model compression
-- **Impact**: Built systems serving 10,000+ daily users with 99% efficiency gains
-- **Global Scale**: Deployed AI Analytics Platform covering information across 18+ countries in 9+ languages
+- **Product Scale**: Built products serving 10,000+ daily users
+- **Impact**: LamiOps (analytics platform), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
+- **Product Focus**: End-to-end ownership: discovery, strategy, roadmapping, execution, scaling
 
 ### Current Focus (Transitioning to PM)
-- Product Strategy & Roadmapping (with technical depth)
-- Data-Driven Product Decisions & Evaluation Rigor
-- User Research & Problem Discovery
-- Cross-Functional Team Leadership (with engineering credibility)
-- Building Products that Matter at Scale
-- Bridging AI/Analytics and Product Leadership
+- Product Strategy & Roadmapping
+- User Discovery & Problem Definition
+- Metrics Design & Data-Driven Decisions
+- Cross-Functional Leadership & Execution
+- Building Products at Scale
+- Analytics as a Competitive Advantage in Product Management
 
 ## Tech Stack
 
@@ -163,4 +163,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*AI & Analytics professional transitioning into Product Management. Shipping products powered by technical depth and user-centric thinking.*
+*Data & Analytics leader transitioning into Product Management. Shipping products grounded in user understanding and evidence-based decisions.*
