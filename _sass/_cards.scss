@@ -70,30 +70,35 @@
 // Color variants — marker-swipe backgrounds + ink border stays
 .card-cyan {
   background: linear-gradient(180deg, var(--tint-cyan), var(--card) 60%);
-  .card-icon { background: var(--tint-cyan); }
+  .card-icon { background: var(--tint-cyan); color: var(--accent-cyan); }
+  &:hover h3 { color: var(--accent-cyan); }
 }
 
 .card-blue {
   background: linear-gradient(180deg, var(--tint-blue), var(--card) 60%);
-  .card-icon { background: var(--tint-blue); }
+  .card-icon { background: var(--tint-blue); color: var(--accent-blue); }
+  &:hover h3 { color: var(--accent-blue); }
 }
 
 .card-purple {
   background: linear-gradient(180deg, var(--tint-purple), var(--card) 60%);
-  .card-icon { background: var(--tint-purple); }
+  .card-icon { background: var(--tint-purple); color: var(--accent-purple); }
+  &:hover h3 { color: var(--accent-purple); }
 }
 
 .card-pink {
   background: linear-gradient(180deg, var(--tint-pink), var(--card) 60%);
-  .card-icon { background: var(--tint-pink); }
+  .card-icon { background: var(--tint-pink); color: var(--accent-pink); }
+  &:hover h3 { color: var(--accent-pink); }
 }
 
 .card-green {
   background: linear-gradient(180deg, var(--tint-green), var(--card) 60%);
-  .card-icon { background: var(--tint-green); }
+  .card-icon { background: var(--tint-green); color: var(--accent-green); }
+  &:hover h3 { color: var(--accent-green); }
 }
 
 .card-yellow {
   background: linear-gradient(180deg, var(--tint-yellow), var(--card) 60%);
-  .card-icon { background: var(--tint-yellow); }
+  .card-icon { background: var(--tint-yellow); color: var(--accent-yellow); }
 }

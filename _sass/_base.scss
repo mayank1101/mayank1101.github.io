@@ -168,3 +168,74 @@ strong, b {
   transform: rotate(-6deg);
   color: var(--accent-pink);
 }
+
+// ===== Collaborate Card (Home) =====
+.collaborate-card {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.5rem 3rem;
+  background: linear-gradient(135deg, var(--tint-cyan), var(--tint-purple), var(--tint-pink));
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-large);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--card);
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  > * { position: relative; z-index: 1; }
+
+  h2 {
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    max-width: 640px;
+    margin: 0 auto 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .muted {
+    display: block;
+    max-width: 580px;
+    margin: 0 auto 1.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+.collaborate-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: var(--accent-pink);
+  transform: rotate(-5deg);
+  display: inline-block;
+}
+
+.collaborate-card-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .collaborate-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .collaborate-card-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}

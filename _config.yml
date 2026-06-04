@@ -25,6 +25,12 @@ kramdown:
     block:
       line_numbers: false
 
+# Collections
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+
 # Exclude from build
 exclude:
   - README.md

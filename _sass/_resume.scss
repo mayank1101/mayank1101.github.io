@@ -116,3 +116,52 @@
     }
   }
 }
+
+// Digital Profile cards
+.resume-profile-cards {
+  margin-top: 2rem;
+}
+
+.resume-profile-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background-image: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    background-image: none;
+    color: inherit;
+
+    .resume-profile-card-link {
+      gap: 0.7rem;
+    }
+  }
+
+  p {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+}
+
+.resume-profile-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  transition: gap 0.2s ease;
+  margin-top: auto;
+
+  i { font-size: 0.8rem; }
+}
+
+@media (max-width: 768px) {
+  .resume-profile-cards {
+    grid-template-columns: 1fr;
+  }
+}
