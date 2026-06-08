@@ -1,6 +1,6 @@
 - name: "NLP Series"
   slug: "nlp"
-  description: "Explore the fascinating world of Natural Language Processing, from linguistic foundations to modern transformer models and real-world applications."
+  description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how — from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
   accent_color: "green"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
@@ -8,7 +8,7 @@
 
 - name: "Deep Learning Series"
   slug: "deep-learning"
-  description: "A comprehensive journey through the fundamentals of core deep learning concepts, from understanding mathematics to practical implementation."
+  description: "Deep learning is the engine behind image recognition, voice assistants, and generative AI. This series breaks down how neural networks actually work — no calculus required to follow the ideas."
   accent_color: "purple"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
@@ -16,7 +16,7 @@
 
 - name: "Machine Learning Series"
   slug: "machine-learning"
-  description: "A comprehensive journey through the fundamentals of core machine learning concepts, from understanding mathematics to practical implementation."
+  description: "Machine learning teaches computers to spot patterns instead of following fixed rules. This series walks through the core ideas — from how models learn, to why they sometimes get things confidently wrong."
   accent_color: "cyan"
   icon: "fas fa-brain"
   author: "Mayank Sharma"
