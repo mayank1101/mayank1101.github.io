@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 5+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics is my competitive advantage — I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
+I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 4+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics is my competitive advantage — I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
@@ -90,7 +90,7 @@ mayank1101.github.io/
 │   └── profile.jpeg              # Profile photo
 ├── index.html                    # Homepage
 ├── about.html                    # About page
-├── blog.html                     # Blog listing
+├── TokenByToken.html             # Blog listing
 ├── _config.yml                   # Jekyll configuration
 ├── .gitignore                    # Git ignore rules
 └── README.md                     # This file
