@@ -44,3 +44,7 @@ _data/case-studies.yml
 _case_studies/
 _layouts/case-study.html
 
+# Product Management Series (private)
+series/pm
+_posts/pm
+

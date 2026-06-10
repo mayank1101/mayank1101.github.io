@@ -1,9 +1,9 @@
-- name: "Product Management Series"
-  slug: "pm"
-  description: "Product management connects users, business goals, and technology decisions. This series explains the fundamentals for non-technical readers and beginners — from understanding customer problems to building better product judgment"
-  accent_color: "blue"
-  author: "Mayank Sharma"
-  order: 1
+# - name: "Product Management Series"
+#   slug: "pm"
+#   description: "Product management connects users, business goals, and technology decisions. This series explains the fundamentals for non-technical readers and beginners — from understanding customer problems to building better product judgment"
+#   accent_color: "blue"
+#   author: "Mayank Sharma"
+#   order: 1
 
 
 - name: "NLP Series"
@@ -11,21 +11,21 @@
   description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how — from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
   accent_color: "green"
   author: "Mayank Sharma"
-  order: 2
+  order: 1
 
 - name: "Deep Learning Series"
   slug: "deep-learning"
   description: "Deep learning is the engine behind image recognition, voice assistants, and generative AI. This series breaks down how neural networks actually work — no calculus required to follow the ideas."
   accent_color: "purple"
   author: "Mayank Sharma"
-  order: 3
+  order: 2
 
 - name: "Machine Learning Series"
   slug: "machine-learning"
   description: "Machine learning teaches computers to spot patterns instead of following fixed rules. This series walks through the core ideas — from how models learn, to why they sometimes get things confidently wrong."
   accent_color: "cyan"
   author: "Mayank Sharma"
-  order: 4
+  order: 3
 
 # - name: "Data Structures and Algorithms Series"
 #   slug: "dsa"
