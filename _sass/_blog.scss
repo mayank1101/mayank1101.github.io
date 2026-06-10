@@ -323,10 +323,6 @@
     transform: translateY(-8px) rotate(-1deg);
     border-color: var(--border-bright);
 
-    .series-card-icon {
-      transform: scale(1.1) rotate(5deg);
-    }
-
     .series-card-action {
       color: var(--accent-pink);
       transform: translateX(5px);
@@ -346,9 +342,6 @@
       background: linear-gradient(135deg, rgba(212, 181, 232, 0.2), var(--card));
     }
 
-    .series-card-icon {
-      background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-    }
   }
 
   &.card-cyan {
@@ -360,9 +353,6 @@
       background: linear-gradient(135deg, rgba(135, 206, 235, 0.2), var(--card));
     }
 
-    .series-card-icon {
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-    }
   }
 
   &.card-pink {
@@ -386,22 +376,6 @@
   }
 }
 
-.series-card-header {
-  padding: 2rem 2rem 1rem;
-}
-
-.series-card-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: $border-radius-md;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  background: var(--gradient-secondary);
-  color: var(--text-bright);
-  transition: all 0.4s $transition-bounce;
-}
 
 .series-card-content {
   padding: 0 2rem;

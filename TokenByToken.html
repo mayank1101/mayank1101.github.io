@@ -20,11 +20,6 @@ description: AI and product thinking explained for curious minds — no CS degre
       {% assign series_posts = site.posts | where: "series", series.name %}
       {% assign post_count = series_posts | size %}
       <a href="/series/{{ series.slug }}/" class="series-card card-{{ series.accent_color }} scroll-animate">
-        <div class="series-card-header">
-          <div class="series-card-icon">
-            <i class="{{ series.icon }}"></i>
-          </div>
-        </div>
         <div class="series-card-content">
           <h3>{{ series.name }}</h3>
           <p>{{ series.description }}</p>
