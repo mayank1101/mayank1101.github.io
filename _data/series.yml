@@ -20,7 +20,7 @@
   author: "Mayank Sharma"
   order: 2
 
-- name: "Machine Learning Series"
+- name: "Machine Learning for Engineers"
   slug: "machine-learning"
   description: "Machine learning teaches computers to spot patterns instead of following fixed rules. This series walks through the core ideas — from how models learn, to why they sometimes get things confidently wrong."
   accent_color: "cyan"

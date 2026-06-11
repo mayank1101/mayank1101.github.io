@@ -2,7 +2,7 @@
 layout: post
 title: "Random Forests: Ensemble Learning with Decision Trees"
 date: 2025-12-07
-series: "Machine Learning Series"
+series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Master random forests, understanding bagging, feature importance, and how ensemble methods improve prediction accuracy."
 ---
