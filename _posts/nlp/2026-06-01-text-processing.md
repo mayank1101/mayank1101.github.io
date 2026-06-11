@@ -2,7 +2,7 @@
 layout: post
 title: "How Computers Read Text: Tokenization, Stemming, and Lemmatization for PMs"
 date: 2026-04-15
-series: "NLP Series"
+series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Before AI can understand language, it has to break it apart. Here's what that actually means, and why it matters for the products you build."
 ---
