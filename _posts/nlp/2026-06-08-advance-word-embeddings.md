@@ -207,5 +207,4 @@ When evaluating or specifying an NLP feature, here are practical questions to as
 
 ## Further Reading
 
-- Previous: [How Computers Understand What Text Is About]({% post_url nlp/2026-06-06-word-embeddings %})
-<!-- - Next: [Smarter Word Understanding: GloVe and FastText Explained]({% post_url nlp/2026-02-07-advance-word-embeddings %}) -->
+- Previous: [Teaching Computers That Words Have Meaning: Word Embeddings for Product Managers]({% post_url nlp/2026-06-06-word-embeddings %})
