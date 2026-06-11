@@ -1,11 +1,3 @@
-# - name: "Product Management Series"
-#   slug: "pm"
-#   description: "Product management connects users, business goals, and technology decisions. This series explains the fundamentals for non-technical readers and beginners — from understanding customer problems to building better product judgment"
-#   accent_color: "blue"
-#   author: "Mayank Sharma"
-#   order: 1
-
-
 - name: "NLP for Product Managers"
   slug: "nlp"
   description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how — from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
