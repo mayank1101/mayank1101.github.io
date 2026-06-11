@@ -7,8 +7,6 @@ series_author: "Mayank Sharma"
 excerpt: "Before AI can understand language, it has to break it apart. Here's what that actually means, and why it matters for the products you build."
 ---
 
-# How Computers Read Text: A Product Manager's Guide
-
 Imagine you hire someone to read thousands of customer reviews and tag them by theme. Before they can do that, they need to actually *read* - recognise words, understand that "running" and "run" mean the same thing, and figure out where one idea ends and another begins.
 
 Computers have to do the same thing. They just do it differently.

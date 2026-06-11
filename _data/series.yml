@@ -13,7 +13,7 @@
   author: "Mayank Sharma"
   order: 1
 
-- name: "Deep Learning Series"
+- name: "Deep Learning for Engineers"
   slug: "deep-learning"
   description: "Deep learning is the engine behind image recognition, voice assistants, and generative AI. This series breaks down how neural networks actually work — no calculus required to follow the ideas."
   accent_color: "purple"

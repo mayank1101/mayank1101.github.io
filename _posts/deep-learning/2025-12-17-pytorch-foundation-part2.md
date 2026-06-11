@@ -2,7 +2,7 @@
 layout: post
 title: "Part 2: Deep Learning with PyTorch"
 date: 2025-12-17
-series: "Deep Learning Series"
+series: "Deep Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Build production-ready neural networks with torch.nn, advanced optimizers, and efficient data pipelines. Train a complete CNN for image classification following industry best practices."
 ---
