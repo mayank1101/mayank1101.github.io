@@ -207,4 +207,4 @@ When evaluating or specifying an NLP feature, here are practical questions to as
 
 ## Further Reading
 
-- Previous: [Teaching Computers That Words Have Meaning: Word Embeddings for Product Managers]({% post_url nlp/2026-06-06-word-embeddings %})
+- Previous: [Teaching Computers That Words Have Meaning]({% post_url nlp/2026-06-06-word-embeddings %})
