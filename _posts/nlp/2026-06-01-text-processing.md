@@ -155,4 +155,4 @@ When a language feature in your product isn't working the way users expect, this
 
 - [SpaCy — Production-ready NLP library](https://spacy.io/)
 - [NLTK — Learning-focused NLP library](https://www.nltk.org/)
-- Next: [How Computers Understand What Text Is About](../02_text_representation/article.md)
+- Next: [How Computers Understand What Text Is About]({% post_url nlp/2026-06-03-text-representation %})

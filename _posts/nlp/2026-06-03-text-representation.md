@@ -178,5 +178,5 @@ But BoW and TF-IDF are still used today, often as a first step or a baseline. Th
 
 ## Further Reading
 
-- Previous: [How Computers Read Text](../01_text_processing/article.md)
-- Next: [Teaching Computers That Words Have Meaning](../03_word_embeddings/article.md)
+- Previous: [How Computers Read Text]({% post_url nlp/2026-06-01-text-processing %})
+- Next: [Teaching Computers That Words Have Meaning]({% post_url nlp/2026-06-06-word-embeddigs %})

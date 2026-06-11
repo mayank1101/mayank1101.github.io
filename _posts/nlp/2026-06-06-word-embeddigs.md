@@ -209,5 +209,5 @@ The limitation of word embeddings is that they assign one fixed meaning per word
 
 ## Further Reading
 
-- Previous: [How Computers Understand What Text Is About](../02_text_representation/article.md)
-- Next: [Smarter Word Understanding: GloVe and FastText Explained](../04_advanced_embeddings/article.md)
+- Previous: [How Computers Understand What Text Is About]({% post_url nlp/2026-06-03-text-representation %})
+- Next: [Smarter Word Understanding: GloVe and FastText Explained]({% post_url nlp/2026-02-07-advance-word-embeddings %})
