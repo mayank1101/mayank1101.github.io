@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Computers Understand What Text Is About: A Guide for Product Managers"
-date: 2026-01-03
+date: 2026-06-03
 series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Computers don't read words — they work with numbers. Here's how text gets converted into something a machine can reason about, and what that means for your product."
@@ -17,7 +17,7 @@ This article explains the two most common approaches **Bag-of-Words** and **TF-I
 
 ## Why This Matters for Product Managers
 
-Whenever your product uses language AI — search, recommendation, spam detection, sentiment tagging, and more — there's a representation layer underneath it. The choices made in that layer determine:
+Whenever your product uses language AI for search, recommendation, spam detection, sentiment tagging, and more, there's a representation layer underneath it. The choices made in that layer determine:
 
 - Whether your search returns relevant results or random ones
 - Whether your spam filter catches real spam without blocking legitimate emails
@@ -55,7 +55,7 @@ Say you have three reviews:
 - "terrible product waste of money"
 - "love the quality great value"
 
-**Step 1:** Build a vocabulary — the list of all unique words across all reviews.
+**Step 1:** Build a vocabulary list. This is the list of all unique words across all reviews.
 
 `[great, product, love, it, terrible, waste, of, money, the, quality, value]`
 
@@ -96,7 +96,7 @@ Each row is now a list of numbers. The machine can work with this.
 
 **TF-IDF** stands for Term Frequency–Inverse Document Frequency. The name sounds intimidating, but the idea is intuitive: give more weight to words that are distinctive, and less weight to words that appear everywhere.
 
-Think of it like a journalist deciding which words to highlight in a story. "The" and "is" appear constantly — they tell you nothing specific. But "bankruptcy" appearing in a company's press release? That's a signal worth flagging.
+Think of it like a journalist deciding which words to highlight in a story. "The" and "is" appear constantly, they tell you nothing specific. But "bankruptcy" appearing in a company's press release? That's a signal worth flagging.
 
 ### The Two Ideas Behind TF-IDF
 
@@ -108,7 +108,7 @@ TF-IDF multiplies these two scores together. The result: a word gets a high scor
 
 ### A Real Example
 
-Imagine an email system processing thousands of emails. The word "the" appears in almost every email — so its IDF score is very low. The word "invoice" appears in some emails but not most — higher IDF. If "invoice" also appears many times in a specific email (high TF), that email is probably about billing.
+Imagine an email system processing thousands of emails. The word "the" appears in almost every email — so its IDF score is very low. The word "invoice" appears in some emails but not most, so its IDF score is higher. If "invoice" also appears many times in a specific email (high TF), that email is probably about billing.
 
 This is the logic behind spam filters, email categorisation, document search, and content tagging.
 
@@ -168,11 +168,11 @@ But BoW and TF-IDF are still used today, often as a first step or a baseline. Th
 
 ## Key Takeaways
 
-- **Vectorization** is how text becomes numbers — a required step before any AI can process language
-- **Bag-of-Words** counts word occurrences — simple, fast, works for many use cases
+- **Vectorization** is how text becomes numbers, a required step before any AI can process language
+- **Bag-of-Words** counts word occurrences, simple, fast, works for many use cases
 - **TF-IDF** improves on BoW by weighing words based on how distinctive they are, not just how frequent
 - **Cosine similarity** lets you measure how similar two pieces of text are, which powers search and recommendations
-- Both methods ignore word meaning — they can't tell that "happy" and "joyful" are related
+- Both methods ignore word meaning, they can't tell that "happy" and "joyful" are related
 
 ---
 

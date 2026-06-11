@@ -7,11 +7,11 @@ series_author: "Mayank Sharma"
 excerpt: "Before AI can understand language, it has to break it apart. Here's what that actually means, and why it matters for the products you build."
 ---
 
-Imagine you hire someone to read thousands of customer reviews and tag them by theme. Before they can do that, they need to actually *read* - recognise words, understand that "running" and "run" mean the same thing, and figure out where one idea ends and another begins.
+Imagine you hire someone to read thousands of customer reviews and tag them by theme. Before they can do that, they need to actually *read*, recognise words, understand that "running" and "run" mean the same thing, and figure out where one idea ends and another begins.
 
 Computers have to do the same thing. They just do it differently.
 
-This article explains the first three steps every language AI takes when processing text — and why the decisions made at this stage affect everything downstream: search quality, chatbot accuracy, content tagging, and more.
+This article explains the first three steps every language AI takes when processing text and why the decisions made at this stage affect everything downstream: search quality, chatbot accuracy, content tagging, and more.
 
 ---
 
@@ -64,7 +64,7 @@ This is the difference between a search bar that says "no results found" and one
 
 **What it is:** Reducing a word to its base form by stripping away prefixes and suffixes.
 
-Think of it like a postal sorting system that treats "runner," "running," and "ran" as all belonging to the same pile. The system doesn't need perfect accuracy — it just needs to group similar words together fast.
+Think of it like a postal sorting system that treats "runner," "running," and "ran" as all belonging to the same pile. The system doesn't need perfect accuracy, it just needs to group similar words together fast.
 
 **Example:**
 
@@ -74,11 +74,11 @@ Think of it like a postal sorting system that treats "runner," "running," and "r
 | easily   | easili         |
 | fairly   | fair           |
 
-Notice "easily" becomes "easili" — not a real word. Stemming is fast and pragmatic, but it's blunt. It chops, it doesn't think.
+Notice "easily" becomes "easili", which is not a real word. Stemming is fast and pragmatic, but it's blunt. It chops, it doesn't think.
 
 ### Where Stemming Is Used
 
-Stemming is common in **search engines** and **document indexing** — situations where you need to process millions of words quickly and a bit of roughness is acceptable. When someone searches for "running shoes," you want results for "run" and "runner" and "runs" to show up too.
+Stemming is common in **search engines** and **document indexing**, situations where you need to process millions of words quickly and a bit of roughness is acceptable. When someone searches for "running shoes," you want results for "run" and "runner" and "runs" to show up too.
 
 The trade-off is accuracy. Stemming sometimes collapses words that shouldn't be grouped (like "caring" and "car"), or produces unrecognisable stems like "easili."
 
@@ -88,7 +88,7 @@ The trade-off is accuracy. Stemming sometimes collapses words that shouldn't be 
 
 **What it is:** Reducing a word to its proper dictionary form, called a *lemma*.
 
-This is the more intelligent cousin of stemming. Instead of blindly chopping off endings, lemmatization understands grammar. It knows that "ran" is the past tense of "run," and it knows that "saw" could mean the tool *or* the verb "to see" — depending on how it's used in the sentence.
+This is the more intelligent cousin of stemming. Instead of blindly chopping off endings, lemmatization understands grammar. It knows that "ran" is the past tense of "run," and it knows that "saw" could mean the tool *or* the verb "to see", depending on how it's used in the sentence.
 
 **Example:**
 
@@ -99,7 +99,7 @@ This is the more intelligent cousin of stemming. Instead of blindly chopping off
 | saw (verb) | see                 |
 | saw (noun) | saw                 |
 
-Notice "better" becomes "good" — stemming would leave it as "better" or mangle it. Lemmatization understands the relationship.
+Notice "better" becomes "good", but stemming would leave it as "better" or mangle it. Lemmatization understands the relationship.
 
 ### Why Context Matters
 
@@ -112,7 +112,7 @@ This is why lemmatization is slower but more accurate. It's doing real grammatic
 
 ### Where Lemmatization Is Used
 
-Lemmatization is preferred for **chatbots**, **sentiment analysis**, and **content understanding** — anywhere you need semantic accuracy, not just speed. If you're building a feature that has to genuinely understand what users are saying, you'll usually find lemmatization somewhere in the pipeline.
+Lemmatization is preferred for **chatbots**, **sentiment analysis**, and **content understanding**, anywhere you need semantic accuracy, not just speed. If you're building a feature that has to genuinely understand what users are saying, you'll usually find lemmatization somewhere in the pipeline.
 
 ---
 
@@ -137,13 +137,13 @@ If your product is processing millions of documents per second and a bit of erro
 
 **Content recommendation:** A media platform wants to group articles about similar topics. If stemming/lemmatization isn't applied, "election" and "elections" get treated as different topics. Your recommendations become noisier.
 
-**Review analysis:** You're processing thousands of reviews to detect themes. "Loved it," "loving the product," "absolutely love this" — all need to be recognized as expressing the same sentiment. Without lemmatization, you'd miss patterns.
+**Review analysis:** You're processing thousands of reviews to detect themes. "Loved it," "loving the product," "absolutely love this", all need to be recognized as expressing the same sentiment. Without lemmatization, you'd miss patterns.
 
 ---
 
 ## The Key Takeaway
 
-Before any AI can do something useful with text - search, summarise, classify, respond, and more - it has to first *clean and normalize* that text. Tokenization, stemming, and lemmatization are the first three steps of that process.
+Before any AI can do something useful with text like search, summarise, classify, respond, and more, it has to first *clean and normalize* that text. Tokenization, stemming, and lemmatization are the first three steps of that process.
 
 They're not glamorous. But they're load-bearing. Poor text preprocessing leads to poor search results, missed patterns in customer feedback, and chatbots that seem inexplicably confused.
 
