@@ -6,7 +6,7 @@
 #   order: 1
 
 
-- name: "NLP Series"
+- name: "NLP for Product Managers"
   slug: "nlp"
   description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how — from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
   accent_color: "green"
