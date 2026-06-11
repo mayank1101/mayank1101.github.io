@@ -11,7 +11,7 @@ Computers don't understand words the way you do. They work with numbers. So when
 
 This conversion is called **vectorization**, and the way you do it has a huge impact on how well your AI feature works.
 
-This article explains the two most common approaches — **Bag-of-Words** and **TF-IDF** — and shows you how they're used in real products.
+This article explains the two most common approaches **Bag-of-Words** and **TF-IDF**, how they work, what they're good for, and shows you how they're used in real products.
 
 ---
 
