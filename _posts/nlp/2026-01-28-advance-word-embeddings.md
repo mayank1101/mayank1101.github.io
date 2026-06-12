@@ -195,16 +195,10 @@ When evaluating or specifying an NLP feature, here are practical questions to as
 
 ---
 
-## Key Takeaways
+## Conclusion
 
 - **GloVe** improves on Word2Vec by learning from the global patterns of the entire corpus, not just local windows, to producing more stable, comprehensive representations
 - **FastText** improves on Word2Vec by breaking words into character pieces — enabling graceful handling of typos, new words, and specialised vocabulary
 - They solve different problems: GloVe is about the quality of learning, FastText is about vocabulary coverage
 - Both are still **static** word embeddings, assigning one meaning per word regardless of context
 - Modern models (BERT, GPT) build on these ideas by adding context-sensitivity
-
----
-
-## Further Reading
-
-- Previous: [Teaching Computers That Words Have Meaning]({% post_url nlp/2026-06-06-word-embeddings %})
