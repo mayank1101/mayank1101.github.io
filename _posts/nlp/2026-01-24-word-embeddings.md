@@ -197,17 +197,10 @@ The limitation of word embeddings is that they assign one fixed meaning per word
 
 ---
 
-## Key Takeaways
+## Conclusion
 
 - **Word embeddings** place every word on a "meaning map" where similar words are physically near each other
 - The map is built automatically by reading enormous amounts of text and observing which words tend to appear together
 - **CBOW** is fast and reliable for common words; **Skip-Gram** is slower but better for rare and specialised terms
 - Embeddings power semantic search, smart recommendations, intent recognition, and content clustering
 - The main limitation: each word gets one fixed location, regardless of its meaning in context
-
----
-
-## Further Reading
-
-- Previous: [How Computers Understand What Text Is About]({% post_url nlp/2026-06-03-text-representation %})
-- Next: [Smarter Word Understanding: GloVe and FastText Explained]({% post_url nlp/2026-06-08-advance-word-embeddings %})

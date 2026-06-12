@@ -166,17 +166,10 @@ But BoW and TF-IDF are still used today, often as a first step or a baseline. Th
 
 ---
 
-## Key Takeaways
+## Conclusion
 
 - **Vectorization** is how text becomes numbers, a required step before any AI can process language
 - **Bag-of-Words** counts word occurrences, simple, fast, works for many use cases
 - **TF-IDF** improves on BoW by weighing words based on how distinctive they are, not just how frequent
 - **Cosine similarity** lets you measure how similar two pieces of text are, which powers search and recommendations
 - Both methods ignore word meaning, they can't tell that "happy" and "joyful" are related
-
----
-
-## Further Reading
-
-- Previous: [How Computers Read Text]({% post_url nlp/2026-06-01-text-processing %})
-- Next: [Teaching Computers That Words Have Meaning]({% post_url nlp/2026-06-06-word-embeddings %})

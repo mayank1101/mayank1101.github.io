@@ -141,18 +141,10 @@ If your product is processing millions of documents per second and a bit of erro
 
 ---
 
-## The Key Takeaway
+## Conclusion
 
 Before any AI can do something useful with text like search, summarise, classify, respond, and more, it has to first *clean and normalize* that text. Tokenization, stemming, and lemmatization are the first three steps of that process.
 
 They're not glamorous. But they're load-bearing. Poor text preprocessing leads to poor search results, missed patterns in customer feedback, and chatbots that seem inexplicably confused.
 
 When a language feature in your product isn't working the way users expect, this layer is often where the problem starts.
-
----
-
-## Further Reading
-
-- [SpaCy — Production-ready NLP library](https://spacy.io/)
-- [NLTK — Learning-focused NLP library](https://www.nltk.org/)
-- Next: [How Computers Understand What Text Is About]({% post_url nlp/2026-06-03-text-representation %})
