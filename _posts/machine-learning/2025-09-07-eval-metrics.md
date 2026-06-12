@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Model Evaluation Metrics: Measuring ML Performance"
-date: 2025-12-14
+date: 2025-09-07
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Learn essential evaluation metrics including accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrices."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logistic Regression: Binary and Multiclass Classification"
-date: 2025-12-03
+date: 2025-07-15
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Understanding logistic regression for classification problems, from binary to multiclass with sigmoid and softmax functions."

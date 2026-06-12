@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Activation Functions: The Non-Linear Magic in Neural Networks"
-date: 2025-12-23
+date: 2025-10-15
 series: "Deep Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Master activation functions from Sigmoid to GELU, understand why neural networks need non-linearity and how to choose the right activation for your model."

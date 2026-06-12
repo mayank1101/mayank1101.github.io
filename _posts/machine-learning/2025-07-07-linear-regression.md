@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linear Regression: From Simple to Multiple Regression"
-date: 2025-12-01
+date: 2025-07-07
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Master linear regression from scratch, understanding simple and multiple regression, cost functions, and gradient descent."

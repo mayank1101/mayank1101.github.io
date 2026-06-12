@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Feed-Forward and Backpropagation: The Heart of Neural Networks"
-date: 2025-12-20
+date: 2025-10-08
 series: "Deep Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Learn how neural networks learn through feed-forward and backpropagation from scratch to truly understand these concepts."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Naive Bayes: Probabilistic Classification"
-date: 2025-12-13
+date: 2025-08-28
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Understand Naive Bayes classification using Bayes theorem, conditional independence, and variants for different data types."

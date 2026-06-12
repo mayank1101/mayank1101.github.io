@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Decision Trees: Understanding Tree-Based Learning"
-date: 2025-12-05
+date: 2025-07-23
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
 excerpt: "Learn how decision trees work, including splitting criteria, pruning, and visualization techniques for interpretable models."
