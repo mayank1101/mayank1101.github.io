@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Teaching Computers That Words Have Meaning: Word Embeddings for Product Managers"
-date: 2026-06-06
+date: 2026-01-24
 series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Bag-of-Words treats 'happy' and 'joyful' as strangers. Word embeddings teach computers that some words are neighbours. Here's why that changes everything."

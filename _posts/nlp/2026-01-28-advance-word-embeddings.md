@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Smarter Word Understanding: GloVe and FastText Explained for Product Managers"
-date: 2026-06-08
+date: 2026-01-28
 series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Word2Vec was a breakthrough, but it had two real problems: it only learned from nearby words, and it gave up on words it had never seen. GloVe and FastText fix both."

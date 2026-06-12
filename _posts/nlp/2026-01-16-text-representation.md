@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Computers Understand What Text Is About: A Guide for Product Managers"
-date: 2026-06-03
+date: 2026-01-16
 series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Computers don't read words — they work with numbers. Here's how text gets converted into something a machine can reason about, and what that means for your product."
