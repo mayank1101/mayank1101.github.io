@@ -108,7 +108,7 @@ TF-IDF multiplies these two scores together. The result: a word gets a high scor
 
 ### A Real Example
 
-Imagine an email system processing thousands of emails. The word "the" appears in almost every email — so its IDF score is very low. The word "invoice" appears in some emails but not most, so its IDF score is higher. If "invoice" also appears many times in a specific email (high TF), that email is probably about billing.
+Imagine an email system processing thousands of emails. The word "the" appears in almost every email, so its IDF score is very low. The word "invoice" appears in some emails but not most, so its IDF score is higher. If "invoice" also appears many times in a specific email (high TF), that email is probably about billing.
 
 This is the logic behind spam filters, email categorisation, document search, and content tagging.
 

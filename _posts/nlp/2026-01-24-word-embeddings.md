@@ -105,7 +105,7 @@ Example:
 > Given the word "throne," predict what words appear nearby:
 > "king," "queen," "palace," "royal," "sat"...
 
-Skip-Gram generates many prediction tasks from a single word. This makes it more thorough — especially for unusual or rare words that don't appear very often.
+Skip-Gram generates many prediction tasks from a single word. This makes it more thorough, especially for unusual or rare words that don't appear very often.
 
 **What Skip-Gram is good at:** Building better representations for specialised vocabulary, rare terms, or technical language. It takes longer to train but gives more detailed results for words that don't appear often.
 

@@ -1,411 +1,241 @@
 ---
 layout: post
-title: "Sentiment Analysis from Scratch: Classifying Text with Bag-of-Words and Logistic Regression"
-date: 2026-04-22
-series: "NLP Series"
+title: "Reading Between the Lines: Sentiment Analysis Explained for Product Managers"
+date: 2026-02-03
+series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
-excerpt: "Learn how sentiment analysis works end to end by turning raw text into Bag-of-Words features and training a logistic regression classifier from scratch in a Jupyter notebook."
+excerpt: "Users express opinions everywhere — in reviews, tweets, support tickets, and surveys. Sentiment analysis turns that unstructured text into signals your team can act on. Here's how it works and where it fails."
 ---
 
-Here's the honest reality of production: users leave opinions everywhere. In reviews, tweets, support tickets, app store feedback, survey responses. And companies desperately want to know what those opinions are.
+Users leave opinions everywhere.
 
-When a user writes:
-- `this movie was fantastic`
-- `the service was painfully slow`
-- `the update is okay, but still buggy`
+App store reviews. Support tickets. Post-purchase surveys. Social media comments. Community forums. Cancellation feedback. Every one of these is a signal, but it's buried in unstructured text that no human team can read at scale.
 
-They're not just producing text. They're expressing measurable opinion that can inform business decisions.
+A company launching a product update might receive ten thousand reviews in a week. Even with a dedicated team, manually reading and categorising that feedback is impossible. And if something is going wrong, like a new bug, a feature users hate, a critical UX problem, then the time to discover it through manual review is too long.
 
-**Sentiment analysis** is the task of teaching a model to extract that. At its simplest, it asks:
+**Sentiment analysis** is the AI capability that converts this flood of unstructured text into actionable signals. It reads text and answers one question: *is this positive, negative, or neutral?*
 
-> Given this text, is the opinion positive, negative, or neutral?
+This article explains how it works, what it gets right, and critically explains where it fails. Because understanding the failure modes is what separates a product team that uses sentiment analysis wisely from one that gets burned by it.
 
-Sounds straightforward. And it is, until the language gets real.
+---
 
-**The messy reality:**
-- Sarcasm: "yeah, *great* customer service" (sarcasm detector: humans, not NLP)
-- Negation: "not good" completely flips "good"
-- Domain drift: "cheap" is positive for goods, negative for build quality
-- Mixed sentiment: "great product but terrible support" — both sentiments in one review
-- Implicit emotion: "I expected more" doesn't mention good/bad explicitly
+## What Sentiment Analysis Actually Does
 
-That's why every production sentiment system needs a strong baseline first. Not to ship it, but to understand the problem clearly.
+At its core, sentiment analysis is a **classification problem**. You give the system a piece of text, and it assigns it a label.
 
-This tutorial builds exactly that: a complete, interpretable foundation using:
-- Text preprocessing (keeping what matters, removing noise)
-- Bag-of-Words features (simple but surprisingly useful)
-- Logistic regression trained from scratch (linear, interpretable, fast)
-- Proper evaluation (accuracy is misleading; we need precision/recall/F1)
+The simplest version is binary: **positive** or **negative**.
 
-## Table of Contents
+> "This product changed my life." → Positive
+> "Worst purchase I've ever made." → Negative
 
-1. [What Sentiment Analysis Actually Solves](#what-sentiment-analysis-actually-solves)
-2. [Why This Problem Is Harder Than It Looks](#why-this-problem-is-harder-than-it-looks)
-3. [The Classical Sentiment Analysis Pipeline](#the-classical-sentiment-analysis-pipeline)
-4. [Preprocessing Text for Classification](#preprocessing-text-for-classification)
-5. [From Sentences to Numbers](#from-sentences-to-numbers)
-6. [Bag-of-Words Intuition](#bag-of-words-intuition)
-7. [Logistic Regression for Sentiment Classification](#logistic-regression-for-sentiment-classification)
-8. [Loss Function and Gradient Descent](#loss-function-and-gradient-descent)
-9. [How We Evaluate a Sentiment Model](#how-we-evaluate-a-sentiment-model)
-10. [What the Notebook Builds](#what-the-notebook-builds)
-11. [Strengths and Limitations of This Baseline](#strengths-and-limitations-of-this-baseline)
-12. [Conclusion and What Comes Next](#conclusion-and-what-comes-next)
+More nuanced versions add a neutral category, or go further with five-star granularity, or try to identify sentiment about *specific aspects* of a product ("great camera, terrible battery life").
 
-## What Sentiment Analysis Actually Solves
+The business value is straightforward: if you can automatically classify every review, ticket, or comment, you can:
+- Spot emerging problems at the moment they start (before they become crises)
+- Measure whether product changes made things better or worse
+- Prioritise support tickets by urgency
+- Track brand sentiment over time
+- Route feedback to the right team automatically
 
-Sentiment analysis is **text classification**. You have text, you want to label it with a category. In this case, the category is opinion.
+---
 
-Common formulations in the wild:
-- **Binary**: positive vs negative (simplest, what we do here)
-- **Three-way**: positive vs neutral vs negative (more nuanced)
-- **Fine-grained**: 1-5 star ratings (ordered labels)
-- **Aspect-based**: different sentiments for different aspects of the same review (hard, useful)
+## Why This Problem Is Harder Than It Looks
 
-We use binary classification:
+Sentiment seems obvious when you read it. "I love this app." Positive. Easy. But the moment you go beyond simple cases, the complexity escalates fast.
 
-$$
-y \in \{0, 1\}
-$$
+### Negation Flips Everything
 
-Where $y=1$ is positive and $y=0$ is negative. It's the cleanest way to see the mechanics.
+> "This product is **not** good."
 
-### Why This Matters in Practice
+The word "not" completely reverses the sentiment. But a system that just counts positive and negative words will read "good" and lean positive. It missed the negation.
 
-Sentiment systems show up because companies actually need them:
-- **Product teams** monitor reviews to catch systemic issues (tons of "battery sucks" = problem)
-- **Support teams** use it to triage tickets (escalate angry customers faster)
-- **Brand teams** track reputation shifts across social media
-- **Analysts** mine survey responses without reading thousands of free-text answers
-- **Researchers** analyze feedback at scale
+> "I expected so much **more** from this."
 
-The pure value proposition: convert thousands of unstructured opinions into one number you can act on. That number shapes product decisions, customer experience, and sometimes company strategy.
+No obviously negative words. But this is clearly disappointed. A word-counting approach misses it entirely.
 
-So this isn't theoretical. It's solving a real business problem.
+### Sarcasm Is Nearly Impossible
 
-## Why This Problem Is Harder Than It Looks (And Why That Matters)
+> "Oh great, another update that breaks things."
 
-Humans read "this phone is good" and instantly know positive sentiment. Models can't do that without us being explicit about the representation.
+The word "great" is technically positive. But a human immediately reads frustration. Detecting sarcasm reliably requires understanding context, tone, and sometimes shared cultural knowledge, which most AI systems handle poorly.
 
-Two words change everything:
-- `this phone is good` → positive
-- `this phone is not good` → negative
+### Mixed Sentiment Is Common
 
-One word flipped the sentiment completely. So sentiment analysis isn't just counting positive vs negative words. It's understanding how they interact.
+> "The camera is fantastic, but the battery drains in three hours."
 
-**The really hard cases:**
-- `great camera, terrible battery` (mixed: which dominates? depends on context)
-- `I expected more` (implicit: no emotion words, but clearly disappointed)
-- `thanks for the amazing customer support` (sarcasm: if the support was actually bad)
-- `the app is intuitive` (domain shift: intuitive is good for software, irrelevant for food)
+How would you classify this? Both positive and negative sentiments are present. Which dominates? The answer might depend on whether your product is a camera company or a general electronics retailer.
 
-A Bag-of-Words baseline won't handle all of these. It genuinely can't. It'll struggle with negation, miss sarcasm, and overlook word order. 
+### Domain Shifts Change Word Meaning
 
-**So why build it?** Because:
-1. It teaches you the full supervised learning pipeline
-2. It often works better than you'd expect on real data
-3. It forces you to understand what embeddings and neural nets are *fixing*
-4. Every production system starts with this baseline
+> "This knife is dangerously sharp."
 
-A good baseline isn't about perfection. It's about having something defensible to improve from.
+In a cooking context: positive (sharp = good). In a children's toy review: negative (sharp = hazardous).
 
-## The Classical Sentiment Analysis Pipeline
+The word "cheap" means very different things in a budget travel context versus a premium hardware context.
 
-A practical classical workflow usually looks like this:
+### Implicit Sentiment Has No Emotion Words
 
-1. collect labeled text examples,
-2. clean and tokenize the text,
-3. build a vocabulary,
-4. convert each sentence into a numeric feature vector,
-5. train a classifier,
-6. evaluate on held-out data,
-7. inspect errors and iterate.
+> "I returned it after two days."
 
-This pipeline is simple enough to implement from scratch and strong enough to work surprisingly well on many small and medium datasets.
+No positive or negative words. But this clearly expresses dissatisfaction. A system trained only on obvious emotional language will miss this entirely.
 
-In this module, we use **Bag-of-Words** for the representation and **logistic regression** for the classifier.
+### Why This Matters for Product Decisions
 
-That choice is deliberate:
+If you use a sentiment system that can't handle these cases, you get misleading signals. You might launch a "we improved sentiment" report that just reflects the system's inability to detect sarcasm, not a genuine improvement in user experience. Bad data leads to bad decisions.
 
-- Bag-of-Words makes feature construction transparent,
-- logistic regression gives probabilities and interpretable weights,
-- the whole system can be trained in a few lines of NumPy once the math is clear.
+This is why understanding failure modes isn't academic, it's a real problem that directly affects how you interpret sentiment outputs in roadmap and strategy discussions.
 
-## Preprocessing Text for Classification
+---
 
-Raw text is messy. Before we train anything, we usually apply a few normalization steps.
+## How Sentiment Analysis Works: The Basics
 
-Typical preprocessing steps include:
+Every sentiment analysis system, from the simplest to the most sophisticated, follows a similar pipeline.
 
-- lowercasing,
-- removing unnecessary punctuation,
-- tokenization,
-- optionally removing stop words,
-- optionally stemming or lemmatization.
+### Step 1: Clean the Text
 
-For an educational sentiment baseline, simpler is often better. Over-cleaning can sometimes remove useful signals.
+Before anything can be analysed, the raw text needs to be prepared. This means removing irrelevant noise (HTML tags, URLs, extra spaces), standardising capitalisation, and keeping features that carry sentiment signals, like punctuation marks ("This is amazing!!" vs "This is amazing.") and intensifiers ("very bad" vs "bad").
 
-For example, punctuation can carry sentiment:
+Cleaning is not neutral. Aggressive cleaning removes useful signal. Gentle cleaning leaves too much noise. The right balance is domain-specific.
 
-- `good`
-- `good!!!`
+### Step 2: Convert Text to Numbers
 
-Likewise, negation words such as `not`, `never`, and `no` are crucial. A preprocessing pipeline that removes them blindly will damage the classifier.
+As we covered in earlier articles, AI cannot directly process text. It needs numbers. The two main approaches are:
 
-That is why the notebook uses a compact and explicit preprocessing function rather than an aggressive generic pipeline.
+**Word counting (Bag-of-Words / TF-IDF):** Count which words appear. This is fast, interpretable, and surprisingly good at catching obvious sentiment. If a review contains "love," "excellent," and "perfect," that's strong positive signal even without understanding the sentence structure.
 
-## From Sentences to Numbers
+**Word embeddings:** Use semantic meaning to understand relationships between words. This handles synonyms better, such as "terrific" and "wonderful" are both positive even though they're different words.
 
-A classifier cannot learn directly from raw strings. We need to convert each sentence into a vector of numbers.
+### Step 3: Learn the Pattern
 
-This is the feature engineering step.
+The system trains on thousands of labelled examples of text that humans have already marked as positive or negative. It adjusts its understanding of which features predict which label.
 
-There are many choices:
+In the simplest form, it essentially learns: "when these words appear, lean positive; when those words appear, lean negative."
 
-- one-hot token indicators,
-- Bag-of-Words counts,
-- TF-IDF,
-- averaged word embeddings,
-- learned sequence encoders,
-- transformer embeddings.
+### Step 4: Make Predictions
 
-To build intuition, we start with **Bag-of-Words**.
+Given new, unseen text, the system produces either a label ("positive") or a probability score ("82% positive, 18% negative"). The probability version is often more useful because it lets you prioritise the most strongly negative responses and not overreact to mildly negative ones.
 
-## Bag-of-Words: Dead Simple But It Works
+---
 
-Vocabulary: `["amazing", "bad", "boring", "great", "love", "slow"]`
+## How to Evaluate a Sentiment System (And Why Accuracy Alone Is Misleading)
 
-Review 1: `love this great movie`
-→ `[0, 0, 0, 1, 1, 0]` (1 "love", 1 "great", others are 0)
+Here's a trap that catches many teams: reporting accuracy as the only metric.
 
-Review 2: `bad slow boring`
-→ `[0, 1, 1, 0, 0, 1]` (1 "bad", 1 "boring", 1 "slow")
+Suppose 80% of your reviews are positive and 20% are negative. A system that labels *everything* as positive achieves 80% accuracy. That sounds good until you realise it has completely failed its actual job, which is to detect negative reviews. It's so good at positive reviews that it detected zero negative reviews.
 
-That's it. Count how many times each vocabulary word appears. Ignore word order completely.
+A proper evaluation looks at several dimensions.
 
-**Yes, you lose information.** Word order matters. Grammar matters. But here's what's surprising: for sentiment, you lose less than you'd think.
+### Precision — When It Says Negative, Is It Right?
 
-### Why This Actually Works
+If a system flags 100 reviews as negative, and 80 of those are actually negative, it has 80% precision. The other 20 are false alarms.
 
-Sentiment tasks have a lot of **lexical signal**. The vocabulary itself carries most of the meaning:
-- Positive-leaning words: `great`, `excellent`, `love`, `amazing`, `fantastic`
-- Negative-leaning words: `bad`, `terrible`, `disappointing`, `weak`, `waste`
+**Why this matters:** False alarms waste your team's time. A support team drowning in false positives will stop trusting the system.
 
-A logistic regression model can learn: "when I see 'great' and 'love', push the prediction toward positive. When I see 'bad' and 'disappointing', push it toward negative."
+### Recall — Of All the Negative Reviews, How Many Did It Find?
 
-It's not subtle. It's not handling negation or sarcasm. But for many real reviews, it's honest work. And it's fast, interpretable, and actually useful.
+If there are 200 genuinely negative reviews and the system found 150 of them, that's 75% recall. It missed 25%.
 
-## Logistic Regression for Sentiment Classification
+**Why this matters:** Missed negatives are real problems that went undetected. In some contexts (safety issues, regulatory complaints, early bug reports), missed negatives are more dangerous than false alarms.
 
-Once each review is a feature vector $\mathbf{x} \in \mathbb{R}^d$, we can train a binary classifier.
+### F1 Score — The Balance
 
-Logistic regression computes:
+F1 is a single number that balances precision and recall. It's more informative than accuracy for tasks where the classes are unequal (which is almost always the case with sentiment).
 
-$$
-z = \mathbf{w}^\top \mathbf{x} + b
-$$
+### Confusion Matrix — The Full Picture
 
-and then turns that raw score into a probability using the sigmoid function:
+A confusion matrix shows exactly where the system is making errors:
+- How many positives is it correctly identifying?
+- How many negatives is it correctly identifying?
+- When it's wrong, which direction does it fail?
 
-$$
-\hat{y} = \sigma(z) = \frac{1}{1 + e^{-z}}
-$$
+Looking at this breakdown tells you whether the system systematically over detects positivity or under-detects negativity, which helps you interpret its outputs appropriately.
 
-This gives:
+---
 
-$$
-P(y = 1 \mid \mathbf{x}) = \hat{y}
-$$
+## What Sentiment Analysis Is Good For (And Where to Use It)
 
-Interpretation:
+### High-Value Use Cases
 
-- if $\hat{y}$ is close to 1, the model thinks the review is positive,
-- if $\hat{y}$ is close to 0, the model thinks the review is negative.
+**Review triage:** Instead of reading every app store review manually, automatically flag the most negative ones for immediate attention. A customer who gave one star and wrote a detailed complaint deserves a response. Someone who gave four stars with no comment does not.
 
-### Decision Rule
+**Support ticket prioritisation:** Route tickets tagged as "angry" or "urgent" to your fastest-responding agents. Deprioritise general enquiries. This is simple to implement and has measurable impact on customer satisfaction.
 
-For binary classification, a standard decision threshold is:
+**Feature feedback analysis:** After launching a new feature, automatically segment all feedback about it into positive and negative buckets. See in hours what would take days of manual review.
 
-$$
-\hat{y}_{class} =
-\begin{cases}
-1 & \text{if } \hat{y} \ge 0.5 \\
-0 & \text{otherwise}
-\end{cases}
-$$
+**Churn signal detection:** If a user who has never complained suddenly submits a negative review or a frustrated support ticket, that's an early signal of potential churn. A sentiment-aware CRM can flag this automatically.
 
-The model is linear in the feature space. That means each feature gets a weight:
+**Brand monitoring:** Track sentiment about your product across social media over time. Did that controversy last Tuesday show up in the numbers? Did the launch announcement move sentiment positively?
 
-- large positive weight: evidence for positive sentiment,
-- large negative weight: evidence for negative sentiment.
+**Survey analysis:** Open-ended survey questions produce text that no one has time to read. Sentiment analysis converts this into summary statistics your team can actually use.
 
-This is one of the best reasons to use logistic regression in an educational tutorial: it is easy to inspect what the model learned.
+### Where to Be Careful
 
-## Loss Function and Gradient Descent
+**Sarcasm-heavy communities:** If your users write in communities where sarcasm is common (gaming, social media, tech-savvy audiences), standard sentiment models will misclassify frequently.
 
-To train logistic regression, we need a loss that penalizes wrong probabilities.
+**Highly specialised domains:** A model trained on general consumer reviews may perform poorly on medical feedback, legal filings, or financial reports. Domain-specific language and norms require domain-specific training.
 
-For one example, the **binary cross-entropy loss** is:
+**Nuanced mixed sentiment:** "Great for power users, overwhelming for beginners" is genuinely mixed and important. Simple binary classification will get this wrong.
 
-$$
-\mathcal{L}(y, \hat{y}) =
-- \left[y \log(\hat{y}) + (1-y)\log(1-\hat{y})\right]
-$$
+**High-stakes decisions:** Sentiment should inform, not decide. Never make a significant product or business decision based solely on a sentiment score without a human spot-check.
 
-For a dataset of $N$ examples:
+---
 
-$$
-J(\mathbf{w}, b) =
-- \frac{1}{N}\sum_{i=1}^{N}
-\left[
-y^{(i)} \log(\hat{y}^{(i)}) +
-\left(1-y^{(i)}\right)\log\left(1-\hat{y}^{(i)}\right)
-\right]
-$$
+## The Business Impact: Turning Signal into Action
 
-Gradient descent updates the parameters to reduce this loss:
+Here's the PM framing that matters: sentiment analysis is not a feature, it's an infrastructure capability.
 
-$$
-\mathbf{w} \leftarrow \mathbf{w} - \eta \frac{\partial J}{\partial \mathbf{w}}
-$$
+Once you have reliable sentiment scoring on incoming feedback, it becomes a layer that powers many other things:
 
-$$
-b \leftarrow b - \eta \frac{\partial J}{\partial b}
-$$
+- Dashboards showing real-time satisfaction trends
+- Automated alerts when sentiment dips below a threshold
+- Data feeding into A/B test evaluation (did variant B actually improve how users feel?)
+- Qualitative research at scale (tag every piece of negative feedback with a reason code, then look for patterns)
 
-where $\eta$ is the learning rate.
+The value isn't in the individual classification. It's in the ability to process *all* feedback, and not just what bubbles up to human attention, so you can spot problems early and surface systematic patterns at a pace that matches how fast products ship.
 
-The notebook implements these updates directly in NumPy so the training loop remains transparent.
+---
 
-## How We Evaluate a Sentiment Model
+## Why Baseline Systems Still Matter
 
-Accuracy alone is often not enough. A sentiment model can look strong on accuracy while hiding poor behavior on one class.
+Modern AI has produced impressive sentiment systems, such as fine-tuned transformer models that handle nuance, domain adaptation, and even some sarcasm. So should you use those instead?
 
-That is why the notebook computes:
+Sometimes. But the simple, interpretable baseline matters for several reasons:
 
-- **accuracy**,
-- **precision**,
-- **recall**,
-- **F1 score**,
-- **confusion matrix**.
+**Interpretability.** A simple system tells you *why* it made a decision. If it classified a review as negative because the words "broken," "disappointed," and "refund" appeared, you can verify that reasoning. A large neural network may be more accurate, but it's harder to audit when it makes mistakes.
 
-### Accuracy
+**Speed and cost.** A simple sentiment classifier runs very fast and very cheaply. A large transformer model requires much more compute per inference. For applications processing millions of pieces of text daily, this cost difference is significant.
 
-Accuracy is the fraction of correct predictions:
+**Baseline for comparison.** You can't know whether a sophisticated model is worth the investment without comparing it to a simple one. Sometimes the simple one is good enough.
 
-$$
-\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-$$
+**Debugging.** When a simple system makes errors, you can usually figure out why. When a complex one makes errors, the investigation is much harder.
 
-### Precision
+The right choice depends on your accuracy requirements, your volume, your tolerance for mistakes, and whether the failure modes of simpler systems would cause real problems in your context.
 
-Of the examples predicted as positive, how many were actually positive?
+---
 
-$$
-\text{Precision} = \frac{TP}{TP + FP}
-$$
+## The Honest Picture: What Sentiment Analysis Cannot Do
 
-### Recall
+It's worth ending with a clear-eyed summary of what this technology cannot do, even at its best.
 
-Of the truly positive examples, how many did the model recover?
+**It cannot detect sarcasm reliably.** Humans still struggle with this across different communication styles.
 
-$$
-\text{Recall} = \frac{TP}{TP + FN}
-$$
+**It cannot handle negation and qualifiers consistently.** "Not bad at all" and "not great" are genuinely confusing for systems that process them naively.
 
-### F1 Score
+**It cannot interpret context outside the text.** "This is fine" means very different things in different situations, and the AI often can't tell which.
 
-The harmonic mean of precision and recall:
+**It cannot replace reading individual feedback.** Aggregate sentiment scores can mask important individual signals. A critical bug report from one key customer can get lost in a sea of broadly positive reviews.
 
-$$
-F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
-$$
+**It tends to reflect the biases of its training data.** If a system was trained mostly on reviews from one demographic, it may systematically misclassify language from others.
 
-These metrics make evaluation less misleading, especially when classes are imbalanced.
+These aren't reasons not to use sentiment analysis. They're reasons to use it as a tool that assists human judgment, not one that replaces it.
 
-## What the Notebook Builds
+---
 
-Everything for this tutorial lives in:
+## Conclusion
 
-- [`jupyter/sentiment_analysis_tutorial.ipynb`](./jupyter/sentiment_analysis_tutorial.ipynb)
-
-The notebook is organized as a full learning workflow.
-
-### 1. Small Labeled Review Dataset
-
-We start with a compact handcrafted dataset of positive and negative reviews. It is intentionally small enough to inspect manually while still large enough to make training meaningful.
-
-### 2. Text Preprocessing and Tokenization
-
-The notebook lowercases text, normalizes punctuation, tokenizes sentences, and preserves negation terms so the model does not lose crucial information.
-
-### 3. Vocabulary and Bag-of-Words Encoding
-
-Each training sentence is converted into a numeric vector using a Bag-of-Words representation built from the dataset vocabulary.
-
-### 4. Logistic Regression from Scratch
-
-The classifier is implemented directly with:
-
-- parameter initialization,
-- sigmoid activation,
-- binary cross-entropy loss,
-- gradient descent updates,
-- probability and class prediction functions.
-
-### 5. Evaluation and Interpretation
-
-The notebook reports classification metrics, inspects common mistakes, and prints the most positive and most negative words according to the learned weights.
-
-That last step is especially useful because it turns the model from a black box into something inspectable.
-
-## Real Talk: What This Baseline Actually Does and Doesn't Do
-
-### What It Does Well
-
-- **Fast** — trains in seconds on modern hardware
-- **Interpretable** — you can literally read the learned weights and know why it predicted what it did
-- **Works for many real cases** — especially short, direct reviews
-- **Minimal code** — you can implement it from scratch yourself
-- **Educational** — forces you through the entire supervised learning loop
-
-### What It Definitely Doesn't Do
-
-- **Handle negation well** — "not good" looks like a negative review (low weight on "not", negative weight on "good")
-- **Catch sarcasm** — "thanks for the *amazing* service" (when service was terrible) is just positive words
-- **Understand word order** — `the movie was bad` and `bad the movie was` get identical vectors
-- **Generalize to new vocabulary** — unseen words are just ignored
-- **Compete with modern models** — fine-tuned transformers beat this on hard datasets
-
-**The key insight:** These aren't bugs. They're features. Each limitation is exactly why the next method was invented. Can't handle negation with Bag-of-Words? That's why we invented RNNs. Still not enough? Transformers. Not generalizing to unseen words? FastText subword embeddings. Each step solves a real problem.
-
-This baseline teaches you the landscape of NLP, not the final answer.
-
-## Why This Tutorial Matters
-
-Sentiment analysis is one of the rare NLP problems where the full supervised learning pipeline is transparent *and* the problem is real. You have to:
-
-1. Get data (the dataset is right there)
-2. Clean it (preprocessing)
-3. Engineer features (Bag-of-Words)
-4. Train a model (logistic regression, gradient descent)
-5. Evaluate honestly (not just accuracy)
-6. Inspect errors (what did the model learn?)
-
-And here's the thing: this isn't historical. Every production NLP system, even the fancy ones with transformers, still does these same steps. The representation got fancier. The model got larger. But the structure is identical.
-
-**The durable lesson isn't about Bag-of-Words or logistic regression.** It's this:
-
-> Sentiment analysis is learning to map raw language into measurable signals. Everything else is implementation detail.
-
-You understand the core? You can learn any new representation. RNNs, transformers, attention — they're all solving the same problem: better features, better training, better evaluation.
-
-### Natural Next Steps
-
-From here, obvious upgrades:
-- **TF-IDF** instead of counts (weight rare words more)
-- **Word embeddings** instead of one-hot (capture semantic similarity)
-- **RNNs/LSTMs** instead of linear models (actually process word order)
-- **Attention + Transformers** (best current approach, but conceptually similar to everything here)
-
-Each one solves a specific problem the Bag-of-Words baseline couldn't. Once you understand this baseline, each upgrade makes sense because you know what it was fixing.
+- **Sentiment analysis** classifies text as positive, negative, or neutral, a key tool for converting unstructured feedback into scalable signals
+- Hard cases include: negation ("not good"), sarcasm, mixed sentiment, and implicit emotion
+- Simple systems work by counting sentiments, looking for positive/negative leaning words, better systems use word embeddings and learned representations
+- **Accuracy alone is a misleading metric** — look at precision, recall, and F1 to understand real performance
+- Best use cases: review triage, support ticket routing, feature feedback analysis, churn signal detection, brand monitoring
+- Use sentiment as a signal that informs human judgment, not as an autonomous decision-maker
