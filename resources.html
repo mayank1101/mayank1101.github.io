@@ -57,35 +57,39 @@ description: Curated prompts, books, videos, and courses handpicked by Mayank Sh
   </div>
 
   {% if site.data.resources.prompts.size > 0 %}
-  <div class="prompt-cards">
+  <div class="prompt-grid">
     {% for prompt in site.data.resources.prompts %}
     <div class="prompt-card card-{{ prompt.accent_color | default: 'cyan' }} scroll-animate">
-      <div class="prompt-card-header">
-        <div class="prompt-card-icon">
-          <i class="fas fa-{{ prompt.icon | default: 'terminal' }}"></i>
-        </div>
-        <div class="prompt-card-meta-top">
+      <div class="prompt-card-content">
+        <div class="prompt-card-top">
+          <div class="prompt-card-icon">
+            <i class="fas fa-{{ prompt.icon | default: 'terminal' }}"></i>
+          </div>
           {% if prompt.tags %}
           <div class="prompt-tags">
-            {% for tag in prompt.tags %}
+            {% for tag in prompt.tags limit: 2 %}
             <span class="prompt-tag">{{ tag }}</span>
             {% endfor %}
           </div>
           {% endif %}
         </div>
-      </div>
-      <div class="prompt-card-body">
         <h3>{{ prompt.title }}</h3>
         {% if prompt.description %}
-        <p class="prompt-desc muted">{{ prompt.description }}</p>
+        <p>{{ prompt.description }}</p>
         {% endif %}
         <div class="prompt-text-wrapper">
           <pre class="prompt-text"><code>{{ prompt.prompt }}</code></pre>
-          <button class="prompt-copy-btn" onclick="copyPrompt(this)" aria-label="Copy prompt">
-            <i class="fas fa-copy"></i>
-            <span>Copy</span>
-          </button>
         </div>
+      </div>
+      <div class="prompt-card-footer">
+        {% if prompt.tags %}
+        <span class="prompt-card-meta">
+          <i class="fas fa-tag"></i> {{ prompt.tags | first }}
+        </span>
+        {% endif %}
+        <button class="prompt-card-action" onclick="copyPrompt(this)" aria-label="Copy prompt">
+          Copy Prompt <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
     </div>
     {% endfor %}
@@ -174,16 +178,16 @@ description: Curated prompts, books, videos, and courses handpicked by Mayank Sh
 
 <script>
 function copyPrompt(btn) {
-  const code = btn.closest('.prompt-text-wrapper').querySelector('code');
+  const code = btn.closest('.prompt-card').querySelector('code');
   navigator.clipboard.writeText(code.innerText).then(() => {
-    const span = btn.querySelector('span');
     const icon = btn.querySelector('i');
-    span.textContent = 'Copied!';
+    const originalText = btn.childNodes[0].textContent;
+    btn.childNodes[0].textContent = 'Copied! ';
     icon.className = 'fas fa-check';
     btn.classList.add('copied');
     setTimeout(() => {
-      span.textContent = 'Copy';
-      icon.className = 'fas fa-copy';
+      btn.childNodes[0].textContent = originalText;
+      icon.className = 'fas fa-arrow-right';
       btn.classList.remove('copied');
     }, 2000);
   });

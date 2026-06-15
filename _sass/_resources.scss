@@ -134,11 +134,12 @@
   margin: 0;
 }
 
-// ===== Prompt Cards =====
-.prompt-cards {
+// ===== Prompt Cards — mirrors series-card pattern =====
+.prompt-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .prompt-card {
@@ -146,50 +147,90 @@
   flex-direction: column;
   background: var(--card);
   border-radius: $border-radius-lg;
-  border: 2px solid var(--border);
+  border: 3px solid var(--border);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s $transition-bounce;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) rotate(-1deg);
     border-color: var(--border-bright);
-    box-shadow: var(--shadow-medium);
+
+    .prompt-card-action {
+      color: var(--accent-pink);
+      transform: translateX(5px);
+
+      i { transform: translateX(3px); }
+    }
   }
 
-  &.card-cyan   { border-left: 5px solid var(--accent-cyan);
+  &.card-cyan {
+    border-left: 5px solid var(--accent-cyan);
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), var(--card));
+
+    &:hover { background: linear-gradient(135deg, rgba(135, 206, 235, 0.2), var(--card)); }
+
     .prompt-card-icon { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); }
   }
-  &.card-purple { border-left: 5px solid var(--accent-purple);
+
+  &.card-purple {
+    border-left: 5px solid var(--accent-purple);
+    background: linear-gradient(135deg, rgba(212, 181, 232, 0.1), var(--card));
+
+    &:hover { background: linear-gradient(135deg, rgba(212, 181, 232, 0.2), var(--card)); }
+
     .prompt-card-icon { background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink)); }
   }
-  &.card-pink   { border-left: 5px solid var(--accent-pink);
+
+  &.card-pink {
+    border-left: 5px solid var(--accent-pink);
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), var(--card));
+
+    &:hover { background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), var(--card)); }
+
     .prompt-card-icon { background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); }
   }
 }
 
-.prompt-card-header {
+.prompt-card-content {
+  padding: 2rem 2rem 0;
+  flex: 1;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin: 0 0 0.8rem;
+    font-family: $font-heading;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0 0 1.25rem;
+  }
+}
+
+// Icon + tags row at top of card content
+.prompt-card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
-  padding: 1.25rem 1.25rem 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .prompt-card-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: $border-radius-md;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   background: var(--gradient-secondary);
   color: #fff;
   flex-shrink: 0;
-}
-
-.prompt-card-meta-top {
-  flex: 1;
-  padding-top: 0.25rem;
 }
 
 .prompt-tags {
@@ -201,55 +242,30 @@
 .prompt-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.65rem;
   border-radius: 999px;
   border: 1.5px solid var(--border);
   color: var(--muted);
   background: var(--bg-secondary);
-  letter-spacing: 0.02em;
 }
 
-.prompt-card-body {
-  padding: 0 1.25rem 1.25rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-
-  h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text-bright);
-    margin: 0;
-    line-height: 1.3;
-  }
-}
-
-.prompt-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-// Prompt text block with copy button
+// Prompt text preview block
 .prompt-text-wrapper {
-  position: relative;
-  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .prompt-text {
   background: var(--bg-secondary);
   border: 1.5px solid var(--border);
   border-radius: $border-radius-md;
-  padding: 1rem 1rem 1rem;
+  padding: 1rem;
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.65;
   white-space: pre-wrap;
   word-break: break-word;
-  max-height: 220px;
+  max-height: 180px;
   overflow-y: auto;
-  padding-right: 3.5rem;
 
   code {
     font-family: $font-mono;
@@ -260,34 +276,47 @@
   }
 }
 
-.prompt-copy-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  display: inline-flex;
+// Card footer — mirrors series-card-footer
+.prompt-card-footer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.65rem;
-  border-radius: $border-radius-sm;
-  border: 1.5px solid var(--border);
-  background: var(--card);
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1.5rem;
+}
+
+.prompt-card-meta {
+  font-size: 0.85rem;
   color: var(--muted);
-  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  i { color: var(--accent-green); }
+}
+
+// Action button — mirrors series-card-action
+.prompt-card-action {
+  margin-left: auto;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  padding: 0;
   font-family: $font-primary;
 
-  &:hover {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-    background: var(--tint-cyan);
-  }
+  i { transition: transform 0.3s ease; }
 
   &.copied {
-    border-color: var(--accent-green);
     color: var(--accent-green);
-    background: var(--tint-green);
   }
 }
 
@@ -309,15 +338,15 @@
 
 // ===== Responsive =====
 @media (max-width: 768px) {
-  .resource-hero-title h1  { font-size: 2.5rem; }
-  .resource-hero-icon      { font-size: 3rem; }
+  .resource-hero-title h1 { font-size: 2.5rem; }
+  .resource-hero-icon     { font-size: 3rem; }
 
   .resource-section-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .prompt-cards {
+  .prompt-grid {
     grid-template-columns: 1fr;
   }
 }
