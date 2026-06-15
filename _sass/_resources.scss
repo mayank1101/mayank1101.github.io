@@ -45,96 +45,48 @@
   color: var(--text-bright);
 }
 
-// Section nav pills
-.resource-section-nav {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 1rem;
+// ===== Category cards on resources.html =====
+
+// Icon block inside series-card-content for resource categories
+.resource-cat-content {
+  padding-top: 2rem;
 }
 
-.resource-nav-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: 999px;
-  border: 2px solid var(--border);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text);
-  background: var(--card);
-  text-decoration: none;
-  transition: all 0.25s ease;
-  position: relative;
-
-  &:hover:not(.coming-soon) {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-    background: var(--tint-cyan);
-    transform: translateY(-2px);
-  }
-
-  &.active {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-    background: var(--tint-cyan);
-  }
-
-  &.coming-soon {
-    opacity: 0.55;
-    cursor: default;
-  }
-}
-
-.pill-badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
-  background: var(--accent-purple);
-  color: #fff;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-// Section header (icon + title + desc row)
-.resource-section-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 2rem;
-
-  h2 {
-    margin: 0 0 0.35rem;
-  }
-}
-
-.resource-section-icon {
-  width: 56px;
-  height: 56px;
+.resource-cat-icon {
+  width: 52px;
+  height: 52px;
   border-radius: $border-radius-md;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
 
   &.cyan   { background: var(--tint-cyan);   color: var(--accent-cyan);   border: 2px solid var(--accent-cyan); }
   &.purple { background: var(--tint-purple); color: var(--accent-purple); border: 2px solid var(--accent-purple); }
   &.pink   { background: var(--tint-pink);   color: var(--accent-pink);   border: 2px solid var(--accent-pink); }
 }
 
-.resource-section-desc {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0;
+// Dimmed non-clickable coming-soon category card
+.resource-cat-soon {
+  opacity: 0.62;
+  cursor: default;
+  pointer-events: none;
 }
 
-// ===== Prompt Cards — mirrors series-card pattern =====
+.resource-soon-badge {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent-purple);
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+// ===== Prompt Cards (resources/prompts/) =====
 .prompt-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -212,7 +164,6 @@
   }
 }
 
-// Icon + tags row at top of card content
 .prompt-card-top {
   display: flex;
   align-items: center;
@@ -249,7 +200,7 @@
   background: var(--bg-secondary);
 }
 
-// Prompt text preview block
+// Prompt text preview
 .prompt-text-wrapper {
   margin-bottom: 0;
 }
@@ -276,7 +227,7 @@
   }
 }
 
-// Card footer — mirrors series-card-footer
+// Footer — mirrors series-card-footer exactly
 .prompt-card-footer {
   padding: 1.5rem 2rem;
   display: flex;
@@ -297,7 +248,7 @@
   i { color: var(--accent-green); }
 }
 
-// Action button — mirrors series-card-action
+// Action button — mirrors series-card-action exactly
 .prompt-card-action {
   margin-left: auto;
   font-size: 0.9rem;
@@ -315,22 +266,18 @@
 
   i { transition: transform 0.3s ease; }
 
-  &.copied {
-    color: var(--accent-green);
-  }
+  &.copied { color: var(--accent-green); }
 }
 
-// Empty / coming-soon states
-.resource-empty-state,
-.resource-coming-soon-card {
+// Empty state (shared across category pages)
+.resource-empty-state {
   text-align: center;
   padding: 3rem 2rem;
   max-width: 560px;
   margin: 0 auto;
 }
 
-.resource-empty-icon,
-.coming-soon-icon {
+.resource-empty-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   color: var(--muted);
@@ -340,11 +287,6 @@
 @media (max-width: 768px) {
   .resource-hero-title h1 { font-size: 2.5rem; }
   .resource-hero-icon     { font-size: 3rem; }
-
-  .resource-section-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
   .prompt-grid {
     grid-template-columns: 1fr;

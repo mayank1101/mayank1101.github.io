@@ -1,0 +1,103 @@
+---
+layout: page
+title: Prompts
+description: Curated prompts for thinking, writing, building, and getting unstuck — handpicked by Mayank Sharma.
+---
+
+<div class="container section fade-in">
+
+  <!-- Banner -->
+  {% assign prompt_count = site.data.resources.prompts | size %}
+  <div class="series-page-banner card-cyan">
+    <div class="series-page-icon">
+      <i class="fas fa-terminal"></i>
+    </div>
+    <div class="series-page-info">
+      <h1>Prompts</h1>
+      <p class="series-page-description">
+        Prompts I actually use — for thinking, writing, building, and getting unstuck.
+        Copy, adapt, and make them your own.
+      </p>
+      <div class="series-page-meta">
+        <span><i class="fas fa-terminal"></i> {{ prompt_count }} prompt{% if prompt_count != 1 %}s{% endif %}</span>
+        <span><i class="fas fa-user"></i> Curated by Mayank Sharma</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back link -->
+  <a href="/resources.html" class="back-to-blog">
+    <i class="fas fa-arrow-left"></i> Back to Resources
+  </a>
+
+  <!-- Prompt Cards -->
+  {% if prompt_count > 0 %}
+  <div class="prompt-grid">
+    {% for prompt in site.data.resources.prompts %}
+    <div class="prompt-card card-{{ prompt.accent_color | default: 'cyan' }} scroll-animate">
+      <div class="prompt-card-content">
+        <div class="prompt-card-top">
+          <div class="prompt-card-icon">
+            <i class="fas fa-{{ prompt.icon | default: 'terminal' }}"></i>
+          </div>
+          {% if prompt.tags %}
+          <div class="prompt-tags">
+            {% for tag in prompt.tags limit: 2 %}
+            <span class="prompt-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <h3>{{ prompt.title }}</h3>
+        {% if prompt.description %}
+        <p>{{ prompt.description }}</p>
+        {% endif %}
+        <div class="prompt-text-wrapper">
+          <pre class="prompt-text"><code>{{ prompt.prompt }}</code></pre>
+        </div>
+      </div>
+      <div class="prompt-card-footer">
+        {% if prompt.tags %}
+        <span class="prompt-card-meta">
+          <i class="fas fa-tag"></i> {{ prompt.tags | first }}
+        </span>
+        {% endif %}
+        <button class="prompt-card-action" onclick="copyPrompt(this)" aria-label="Copy prompt">
+          Copy Prompt <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card resource-empty-state">
+    <div class="resource-empty-icon">
+      <i class="fas fa-terminal"></i>
+    </div>
+    <h3>Prompts Coming Soon</h3>
+    <p class="muted">
+      I'm curating a collection of prompts I actually use day-to-day.
+      Follow me on <a href="https://x.com/sharma_mayank11" target="_blank">X</a> for updates.
+    </p>
+  </div>
+  {% endif %}
+
+</div>
+
+<script>
+function copyPrompt(btn) {
+  const code = btn.closest('.prompt-card').querySelector('code');
+  navigator.clipboard.writeText(code.innerText).then(() => {
+    const icon = btn.querySelector('i');
+    const originalText = btn.childNodes[0].textContent;
+    btn.childNodes[0].textContent = 'Copied! ';
+    icon.className = 'fas fa-check';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.childNodes[0].textContent = originalText;
+      icon.className = 'fas fa-arrow-right';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
