@@ -4,7 +4,7 @@ title: "How Computers Understand What Text Is About: A Guide for Product Manager
 date: 2026-01-16
 series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
-excerpt: "Computers don't read words — they work with numbers. Here's how text gets converted into something a machine can reason about, and what that means for your product."
+excerpt: "Computers don't read words, they work with numbers. Here's how text gets converted into something a machine can reason about, and what that means for your product."
 ---
 
 Computers don't understand words the way you do. They work with numbers. So when your product sends a user's review, a search query, or a support ticket to an AI model, the first thing that model does is convert that text into a list of numbers.

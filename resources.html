@@ -1,0 +1,191 @@
+---
+layout: page
+title: Resources
+description: Curated prompts, books, videos, and courses handpicked by Mayank Sharma for learning and building in AI, product, and data.
+---
+
+<!-- Resources Hero -->
+<div class="container hero fade-in">
+  <div class="resource-hero-content">
+    <div class="resource-hero-text">
+      <div class="resource-hero-title">
+        <div class="resource-hero-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <h1>Resources</h1>
+      </div>
+      <p class="resource-lead">
+        A curated collection of prompts, books, videos, and courses I personally use and recommend
+        — everything I wish I had in one place when I started learning.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Section Nav -->
+<div class="container resource-section-nav scroll-animate">
+  <a href="#prompts" class="resource-nav-pill active">
+    <i class="fas fa-terminal"></i> Prompts
+  </a>
+  <a href="#books" class="resource-nav-pill coming-soon">
+    <i class="fas fa-book"></i> Books
+    <span class="pill-badge">Soon</span>
+  </a>
+  <a href="#videos" class="resource-nav-pill coming-soon">
+    <i class="fas fa-play-circle"></i> Videos
+    <span class="pill-badge">Soon</span>
+  </a>
+  <a href="#courses" class="resource-nav-pill coming-soon">
+    <i class="fas fa-graduation-cap"></i> Courses
+    <span class="pill-badge">Soon</span>
+  </a>
+</div>
+
+<!-- Prompts Section -->
+<div id="prompts" class="container section scroll-animate">
+  <div class="resource-section-header">
+    <div class="resource-section-icon cyan">
+      <i class="fas fa-terminal"></i>
+    </div>
+    <div>
+      <h2>Prompts</h2>
+      <p class="resource-section-desc muted">
+        Prompts I actually use — for thinking, writing, building, and getting unstuck.
+        Copy, adapt, and make them your own.
+      </p>
+    </div>
+  </div>
+
+  {% if site.data.resources.prompts.size > 0 %}
+  <div class="prompt-cards">
+    {% for prompt in site.data.resources.prompts %}
+    <div class="prompt-card card-{{ prompt.accent_color | default: 'cyan' }} scroll-animate">
+      <div class="prompt-card-header">
+        <div class="prompt-card-icon">
+          <i class="fas fa-{{ prompt.icon | default: 'terminal' }}"></i>
+        </div>
+        <div class="prompt-card-meta-top">
+          {% if prompt.tags %}
+          <div class="prompt-tags">
+            {% for tag in prompt.tags %}
+            <span class="prompt-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="prompt-card-body">
+        <h3>{{ prompt.title }}</h3>
+        {% if prompt.description %}
+        <p class="prompt-desc muted">{{ prompt.description }}</p>
+        {% endif %}
+        <div class="prompt-text-wrapper">
+          <pre class="prompt-text"><code>{{ prompt.prompt }}</code></pre>
+          <button class="prompt-copy-btn" onclick="copyPrompt(this)" aria-label="Copy prompt">
+            <i class="fas fa-copy"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card resource-empty-state">
+    <div class="resource-empty-icon">
+      <i class="fas fa-terminal"></i>
+    </div>
+    <h3>Prompts Coming Soon</h3>
+    <p class="muted">
+      I'm curating a collection of prompts I actually use day-to-day.
+      Check back soon — or follow me on
+      <a href="https://x.com/sharma_mayank11" target="_blank">X</a>
+      for updates.
+    </p>
+  </div>
+  {% endif %}
+</div>
+
+<!-- Books Teaser -->
+<div id="books" class="container section scroll-animate">
+  <div class="resource-section-header">
+    <div class="resource-section-icon purple">
+      <i class="fas fa-book"></i>
+    </div>
+    <div>
+      <h2>Books</h2>
+      <p class="resource-section-desc muted">
+        Books that changed how I think about products, data, and systems.
+      </p>
+    </div>
+  </div>
+  <div class="card resource-coming-soon-card">
+    <div class="coming-soon-icon">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+    <h3>Coming Soon</h3>
+    <p class="muted">Curated reading list in progress.</p>
+  </div>
+</div>
+
+<!-- Videos Teaser -->
+<div id="videos" class="container section scroll-animate">
+  <div class="resource-section-header">
+    <div class="resource-section-icon pink">
+      <i class="fas fa-play-circle"></i>
+    </div>
+    <div>
+      <h2>Videos</h2>
+      <p class="resource-section-desc muted">
+        Talks and video essays worth your time.
+      </p>
+    </div>
+  </div>
+  <div class="card resource-coming-soon-card">
+    <div class="coming-soon-icon">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+    <h3>Coming Soon</h3>
+    <p class="muted">Hand-picked videos list in progress.</p>
+  </div>
+</div>
+
+<!-- Courses Teaser -->
+<div id="courses" class="container section scroll-animate">
+  <div class="resource-section-header">
+    <div class="resource-section-icon cyan">
+      <i class="fas fa-graduation-cap"></i>
+    </div>
+    <div>
+      <h2>Courses</h2>
+      <p class="resource-section-desc muted">
+        Courses I've taken and would recommend without hesitation.
+      </p>
+    </div>
+  </div>
+  <div class="card resource-coming-soon-card">
+    <div class="coming-soon-icon">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+    <h3>Coming Soon</h3>
+    <p class="muted">Course recommendations list in progress.</p>
+  </div>
+</div>
+
+<script>
+function copyPrompt(btn) {
+  const code = btn.closest('.prompt-text-wrapper').querySelector('code');
+  navigator.clipboard.writeText(code.innerText).then(() => {
+    const span = btn.querySelector('span');
+    const icon = btn.querySelector('i');
+    span.textContent = 'Copied!';
+    icon.className = 'fas fa-check';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      span.textContent = 'Copy';
+      icon.className = 'fas fa-copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
