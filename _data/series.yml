@@ -1,6 +1,6 @@
 - name: "NLP for Product Managers"
   slug: "nlp"
-  description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how — from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
+  description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how language AI works under the hood, from why language is harder for computers than numbers, to how modern AI like ChatGPT actually understands your prompts."
   accent_color: "green"
   author: "Mayank Sharma"
   order: 1
@@ -14,7 +14,7 @@
 
 - name: "Machine Learning for Engineers"
   slug: "machine-learning"
-  description: "Machine learning teaches computers to spot patterns instead of following fixed rules. This series walks through the core ideas — from how models learn, to why they sometimes get things confidently wrong."
+  description: "Machine learning teaches computers to spot patterns instead of following fixed rules. This series walks through the core ideas of machine learning from how models learn, to why they sometimes get things confidently wrong."
   accent_color: "cyan"
   author: "Mayank Sharma"
   order: 3
