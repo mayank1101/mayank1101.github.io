@@ -17,8 +17,8 @@ I'm **Mayank Sharma**, a Senior Applied AI Engineer with 4.5+ years building ent
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
 - **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI) — first open-source model >80% on MMLU medical-subset
-- **Scale**: LamiOps (RAG-powered enterprise assistant, 10,000+ daily users)
-- **Impact**: Regulatory Intelligence Platform (200+ sources, 18+ countries, 95% reduction in manual R&D tracking)
+- **Scale**: LamiOps (Enterprise AI Assistant — Operations, 10,000+ daily users, 99% retrieval time reduction)
+- **Impact**: LamiTracker (Regulatory Intelligence Platform — R&D, 200+ sources, 18+ countries, 95% reduction in manual R&D tracking)
 - **Model Optimization**: Bravo Award at nference — 8× model compression, 9× inference speedup via knowledge distillation + TensorRT
 
 ### Core Skills
