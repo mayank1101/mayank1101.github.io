@@ -7,7 +7,7 @@
 
 - name: "Deep Learning for Engineers"
   slug: "deep-learning"
-  description: "Deep learning is the engine behind image recognition, voice assistants, and generative AI. This series breaks down how neural networks actually work — no calculus required to follow the ideas."
+  description: "Deep learning is the engine behind image recognition, voice assistants, and generative AI. This series breaks down how neural networks actually work, no calculus required to follow the ideas."
   accent_color: "purple"
   author: "Mayank Sharma"
   order: 2
