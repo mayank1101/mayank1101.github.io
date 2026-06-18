@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my transition from Data & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth and data-driven thinking inform better product decisions.
+A modern, responsive portfolio website and technical blog for an Applied AI Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Showcasing 4.5+ years of end-to-end AI system building — NLP, GenAI, RAG, healthcare AI, and model optimization.
 
 ## Live Website
 
@@ -12,22 +12,19 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 4+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics is my competitive advantage — I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
+I'm **Mayank Sharma**, a Senior Applied AI Engineer with 4.5+ years building enterprise AI systems end-to-end — from research validation to production deployment. NLP pipelines, RAG-powered assistants, regulatory intelligence platforms, and healthcare AI across Lamipak, nference.ai, NeurIOT Labs, and LG Soft India.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
-- **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
-- **Product Scale**: Built products serving 10,000+ daily users
-- **Impact**: LamiOps (analytics platform), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
-- **Product Focus**: End-to-end ownership: discovery, strategy, roadmapping, execution, scaling
+- **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI) — first open-source model >80% on MMLU medical-subset
+- **Scale**: LamiOps (RAG-powered enterprise assistant, 10,000+ daily users)
+- **Impact**: Regulatory Intelligence Platform (200+ sources, 18+ countries, 95% reduction in manual R&D tracking)
+- **Model Optimization**: Bravo Award at nference — 8× model compression, 9× inference speedup via knowledge distillation + TensorRT
 
-### Current Focus (Transitioning to PM)
-- Product Strategy & Roadmapping
-- User Discovery & Problem Definition
-- Metrics Design & Data-Driven Decisions
-- Cross-Functional Leadership & Execution
-- Building Products at Scale
-- Analytics as a Competitive Advantage in Product Management
+### Core Skills
+- AI Engineering: NLP, GenAI, LLM, RAG, Fine-tuning (LoRA/PEFT), Knowledge Distillation, PyTorch, HuggingFace
+- Infrastructure: Vector DBs (Qdrant, FAISS), PySpark, AWS, Docker, FastAPI
+- Product Thinking: Stakeholder discovery, AI evaluation frameworks, end-to-end delivery
 
 ## Tech Stack
 
@@ -163,4 +160,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Data & Analytics leader transitioning into Product Management. Shipping products grounded in user understanding and evidence-based decisions.*
+*Senior Applied AI Engineer — NLP, GenAI, RAG, Healthcare AI. Research published at AAAI 2024.*
