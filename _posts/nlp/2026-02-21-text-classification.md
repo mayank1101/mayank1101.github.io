@@ -2,7 +2,7 @@
 layout: post
 title: "Text Classification for Product Managers: Teaching Machines to Sort Your Words"
 date: 2026-02-21
-series: "NLP for Product Managers"
+series: "NLP Explained"
 series_author: "Mayank Sharma"
 excerpt: "A plain-English guide to text classification for product managers: what it is, how it works, and why it quietly powers some of the most important features in modern products."
 ---
