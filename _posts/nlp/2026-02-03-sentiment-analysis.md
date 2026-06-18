@@ -2,7 +2,7 @@
 layout: post
 title: "Reading Between the Lines: Sentiment Analysis Explained for Product Managers"
 date: 2026-02-03
-series: "NLP Explained"
+series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "Users express opinions everywhere in reviews, tweets, support tickets, and surveys. Sentiment analysis turns that unstructured text into signals your team can act on. Here's how it works and where it fails."
 ---

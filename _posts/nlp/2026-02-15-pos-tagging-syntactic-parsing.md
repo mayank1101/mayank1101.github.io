@@ -2,7 +2,7 @@
 layout: post
 title: "POS Tagging & Syntactic Parsing for Product Managers: How AI Understands the Grammar of Your Users"
 date: 2026-02-15
-series: "NLP Explained"
+series: "NLP for Product Managers"
 series_author: "Mayank Sharma"
 excerpt: "A plain-English guide to how AI understands not just what words mean, but what role they play — and why this matters for building smarter products."
 ---

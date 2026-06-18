@@ -1,6 +1,6 @@
-- name: "NLP Explained"
+- name: "NLP for Product Managers"
   slug: "nlp"
-  description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how language AI works under the hood — from why language is harder for computers than numbers, to how modern models like ChatGPT actually understand your words."
+  description: "NLP powers every chatbot, search engine, and autocomplete you use daily. This series explains how language AI works under the hood, from why language is harder for computers than numbers, to how modern models like ChatGPT actually understand your words."
   accent_color: "green"
   author: "Mayank Sharma"
   order: 1
