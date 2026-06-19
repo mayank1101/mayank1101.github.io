@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog for an Applied AI Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Showcasing 4.5+ years of end-to-end AI system building — NLP, GenAI, RAG, healthcare AI, and model optimization.
+A modern, responsive portfolio website and technical blog for an Applied AI Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Showcasing 5+ years of end-to-end AI system building — NLP, GenAI, RAG, healthcare AI, and model optimization.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Senior Applied AI Engineer with 4.5+ years building enterprise AI systems end-to-end — from research validation to production deployment. NLP pipelines, RAG-powered assistants, regulatory intelligence platforms, and healthcare AI across Lamipak, nference.ai, NeurIOT Labs, and LG Soft India.
+I'm **Mayank Sharma**, a Senior Applied AI Engineer with 5+ years building enterprise AI systems end-to-end — from research validation to production deployment. NLP pipelines, RAG-powered assistants, regulatory intelligence platforms, and healthcare AI across Lamipak, nference.ai, NeurIOT Labs, and LG Soft India.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
