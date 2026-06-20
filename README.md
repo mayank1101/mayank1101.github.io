@@ -12,10 +12,10 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 4+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics is my competitive advantage — I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
+I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 5+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics helps me understand how to build products and systems that matter. I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
 
 ### Highlights
-- **Education**: M.Tech in Data Science from IIT Jammu (CGPA: 8.70/10)
+- **Education**: M.Tech in Data Science from IIT Jammu
 - **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
 - **Product Scale**: Built products serving 10,000+ daily users
 - **Impact**: LamiOps (analytics platform), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
