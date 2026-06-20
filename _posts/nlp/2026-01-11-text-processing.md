@@ -7,9 +7,7 @@ series_author: "Mayank Sharma"
 excerpt: "Before AI can understand language, it has to break it apart. Here's what that actually means, and why it matters for the products you build."
 ---
 
-Imagine you hire someone to read thousands of customer reviews and tag them by theme. Before they can do that, they need to actually *read*, recognise words, understand that "running" and "run" mean the same thing, and figure out where one idea ends and another begins.
-
-Computers have to do the same thing. They just do it differently.
+Imagine you hire someone to read thousands of customer reviews and tag them by theme. Before they can do that, they need to actually *read*, recognise words, understand that "running" and "run" mean the same thing, and figure out where one idea ends and another begins. Computers have to do the same thing. They just do it differently.
 
 This article explains the first three steps every language AI takes when processing text and why the decisions made at this stage affect everything downstream: search quality, chatbot accuracy, content tagging, and more.
 
@@ -30,19 +28,13 @@ Understanding this layer helps you ask the right questions and catch problems be
 
 ## Step 1: Tokenization — Breaking Text into Pieces
 
-**What it is:** Splitting a chunk of text into smaller units called *tokens*.
-
-Think of it like a librarian who, before cataloguing a book, first has to separate every word on every page. The librarian can't work with a wall of text. They need individual units they can examine one by one.
-
-A token is usually a word, but not always. Punctuation, numbers, and even parts of words can all be tokens depending on the system.
+**What it is:** Splitting a chunk of text into smaller units called *tokens*. Think of it like a librarian who, before cataloguing a book, first has to separate every word on every page. The librarian can't work with a wall of text. They need individual units they can examine one by one. Same is true for AI systems. A token is usually a word, but not always. Punctuation, numbers, and even parts of words can all be tokens depending on the system.
 
 **Example:**
 
-The sentence `"It's a beautiful day, isn't it?"` becomes:
+The sentence `"It's a beautiful day, isn't it?"` becomes `[It] ['s] [a] [beautiful] [day] [,] [is] [n't] [it] [?]`.
 
-`[It] ['s] [a] [beautiful] [day] [,] [is] [n't] [it] [?]`
-
-Notice that "It's" was split into "It" and "'s" — the system is smarter than just splitting at spaces.
+Here, you might notice that "It's" was split into "It" and "'s". This is because the AI is smarter than just splitting at spaces.
 
 ### Three Flavours of Tokenization
 
@@ -54,17 +46,13 @@ Notice that "It's" was split into "It" and "'s" — the system is smarter than j
 
 ### Why Subword Tokenization Matters for Products
 
-Say you're building a product search feature and a user types "unboxable." Your AI has probably never seen that word. With simple word tokenization, it draws a blank. With subword tokenization, it recognises "un" and "box" and "able" and can make a reasonable guess.
-
-This is the difference between a search bar that says "no results found" and one that at least tries to find something relevant.
+Say you're building a product search feature and a user types "unboxable." Your AI has probably never seen that word. With simple word tokenization, it draws a blank. With subword tokenization, it recognises "un" and "box" and "able" and can make a reasonable guess. This is the difference between a search bar that says "no results found" and one that at least tries to find something relevant.
 
 ---
 
 ## Step 2: Stemming — Chopping Words Down to Their Core
 
-**What it is:** Reducing a word to its base form by stripping away prefixes and suffixes.
-
-Think of it like a postal sorting system that treats "runner," "running," and "ran" as all belonging to the same pile. The system doesn't need perfect accuracy, it just needs to group similar words together fast.
+Stemming is the process of reducing a word to its base form by stripping away prefixes and suffixes. Think of it like a postal sorting system that treats "runner," "running," and "ran" as all belonging to the same pile. The system doesn't need perfect accuracy, it just needs to group similar words together fast.
 
 **Example:**
 
@@ -78,17 +66,13 @@ Notice "easily" becomes "easili", which is not a real word. Stemming is fast and
 
 ### Where Stemming Is Used
 
-Stemming is common in **search engines** and **document indexing**, situations where you need to process millions of words quickly and a bit of roughness is acceptable. When someone searches for "running shoes," you want results for "run" and "runner" and "runs" to show up too.
-
-The trade-off is accuracy. Stemming sometimes collapses words that shouldn't be grouped (like "caring" and "car"), or produces unrecognisable stems like "easili."
+Stemming is common in **search engines** and **document indexing**, situations where you need to process millions of words quickly and a bit of roughness is acceptable. When someone searches for "running shoes," you want results for "run" and "runner" and "runs" to show up too. The trade-off is accuracy. Stemming sometimes collapses words that shouldn't be grouped (like "caring" and "car"), or produces unrecognisable stems like "easili."
 
 ---
 
 ## Step 3: Lemmatization — Finding the Dictionary Form
 
-**What it is:** Reducing a word to its proper dictionary form, called a *lemma*.
-
-This is the more intelligent cousin of stemming. Instead of blindly chopping off endings, lemmatization understands grammar. It knows that "ran" is the past tense of "run," and it knows that "saw" could mean the tool *or* the verb "to see", depending on how it's used in the sentence.
+Lammatization is the process of reducing a word to its proper dictionary form, called a *lemma*. And interestingly, this is the more intelligent cousin of stemming. Instead of blindly chopping off endings, lemmatization understands grammar. It knows that "ran" is the past tense of "run," and it knows that "saw" could mean the tool *or* the verb "to see", depending on how it's used in the sentence.
 
 **Example:**
 
@@ -103,7 +87,7 @@ Notice "better" becomes "good", but stemming would leave it as "better" or mangl
 
 ### Why Context Matters
 
-The word "saw" is a perfect example. Without knowing its context, you can't lemmatize it correctly:
+The word "saw" is a perfect example. Without knowing its context, you can't lemmatize it correctly to "see" or "saw".
 
 - "She **saw** the film" → verb → lemma: **see**
 - "He used a **saw** to cut the wood" → noun → lemma: **saw**
@@ -143,8 +127,4 @@ If your product is processing millions of documents per second and a bit of erro
 
 ## Conclusion
 
-Before any AI can do something useful with text like search, summarise, classify, respond, and more, it has to first *clean and normalize* that text. Tokenization, stemming, and lemmatization are the first three steps of that process.
-
-They're not glamorous. But they're load-bearing. Poor text preprocessing leads to poor search results, missed patterns in customer feedback, and chatbots that seem inexplicably confused.
-
-When a language feature in your product isn't working the way users expect, this layer is often where the problem starts.
+Before any AI can do something useful with text like search, summarise, classify, respond, and more, it has to first *clean and normalize* that text. Tokenization, stemming, and lemmatization are the first three steps of that process. They're not glamorous. But they're load-bearing. Poor text preprocessing leads to poor search results, missed patterns in customer feedback, and chatbots that seem inexplicably confused. So invest in them and remember: **garbage in, garbage out**, even for AI. So, when a language feature in your product isn't working the way users expect, this layer is often where the problem starts.
