@@ -1,216 +1,3 @@
-// ===== Case Study Cards — Redesigned =====
-
-.cs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.cs-card {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: inherit;
-  background: var(--card);
-  border: 2.5px solid var(--ink);
-  border-radius: $border-radius-lg;
-  box-shadow: var(--shadow-medium);
-  overflow: hidden;
-  transition: transform 0.25s $transition-bounce, box-shadow 0.25s $transition-smooth;
-  max-width: 720px;
-
-  &:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: var(--shadow-large);
-
-    .cs-card-action { gap: 0.8rem; }
-    .cs-card-icon   { transform: rotate(-10deg) scale(1.1); }
-  }
-}
-
-// Header strip
-.cs-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 1.4rem 1.75rem 1.2rem;
-  background: var(--tint-cyan);
-  border-bottom: 2px solid var(--ink);
-  position: relative;
-  overflow: hidden;
-}
-
-.cs-card-icon {
-  font-size: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: $border-radius-round;
-  background: var(--accent-cyan);
-  color: #fff;
-  border: 2px solid var(--ink);
-  flex-shrink: 0;
-  transition: transform 0.25s $transition-bounce;
-  transform: rotate(-5deg);
-}
-
-.cs-card-badges {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  flex: 1;
-}
-
-.cs-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.28rem 0.7rem;
-  border-radius: $border-radius-sm;
-  border: 1.5px solid var(--ink);
-}
-
-.cs-badge-milestone {
-  background: var(--accent-cyan);
-  color: #fff;
-  border-color: var(--ink);
-}
-
-.cs-badge-org {
-  background: transparent;
-  color: var(--muted);
-}
-
-.cs-card-num {
-  font-size: 3rem;
-  font-weight: 900;
-  font-family: $font-heading;
-  opacity: 0.08;
-  line-height: 1;
-  position: absolute;
-  right: 1.25rem;
-  bottom: -0.25rem;
-  pointer-events: none;
-}
-
-// Body
-.cs-card-body {
-  padding: 1.5rem 1.75rem;
-  flex: 1;
-}
-
-.cs-card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 1.35;
-  color: var(--text-bright);
-  margin: 0 0 0.5rem 0;
-}
-
-.cs-card-meta {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin: 0 0 1rem 0;
-  line-height: 1.6;
-
-  i { font-size: 0.75rem; }
-}
-
-.cs-card-desc {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: var(--text);
-  margin: 0 0 1.4rem 0;
-}
-
-// Key highlights strip
-.cs-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin-bottom: 1.4rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border: 2px solid var(--ink);
-  border-radius: $border-radius-sm;
-}
-
-.cs-highlight {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
-  text-align: center;
-}
-
-.cs-highlight-val {
-  font-size: 1.25rem;
-  font-weight: 800;
-  font-family: $font-heading;
-  color: var(--accent-cyan);
-  line-height: 1;
-}
-
-.cs-highlight-lbl {
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.3;
-}
-
-// Tags
-.cs-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-
-  span {
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.3rem 0.75rem;
-    background: var(--card);
-    border: 1.5px solid var(--ink);
-    border-radius: $border-radius-sm;
-    color: var(--text);
-    transition: all 0.3s $transition-bounce;
-
-    &:hover {
-      background: var(--accent-yellow);
-      border-color: var(--accent-pink);
-      transform: translateY(-3px) rotate(-1deg);
-    }
-  }
-}
-
-// Footer
-.cs-card-footer {
-  padding: 1rem 1.75rem;
-  border-top: 2px solid var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg-secondary);
-}
-
-.cs-card-action {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: gap 0.25s ease;
-  letter-spacing: 0.02em;
-
-  i { font-size: 0.78rem; }
-}
-
 // ===== Case Studies Landing Page =====
 
 // Hero Section — override the default two-column grid (designed for pages with a profile photo)
@@ -1128,6 +915,123 @@
     p {
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// ===== Case Study Card — Icon Row & Badges =====
+
+.case-study-card-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.case-study-card-mic-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: $border-radius-round;
+  background: var(--accent-cyan);
+  color: #fff;
+  font-size: 1.3rem;
+  border: 2px solid var(--ink);
+  flex-shrink: 0;
+  transform: rotate(-5deg);
+  transition: transform 0.25s $transition-bounce;
+
+  .case-study-card-link:hover & {
+    transform: rotate(-10deg) scale(1.1);
+  }
+}
+
+.case-study-card-badge-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.case-study-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.7rem;
+  border: 1.5px solid var(--ink);
+  border-radius: $border-radius-sm;
+
+  &.badge-filled {
+    background: var(--accent-cyan);
+    color: #fff;
+  }
+
+  &.badge-outline {
+    background: transparent;
+    color: var(--muted);
+  }
+}
+
+// ===== Case Study Highlights Strip =====
+
+.case-study-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--ink);
+  border-radius: $border-radius-sm;
+}
+
+.case-study-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.case-study-highlight-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: $font-heading;
+  color: var(--accent-cyan);
+  line-height: 1;
+}
+
+.case-study-highlight-lbl {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+// ===== Case Study Card Tags =====
+
+.case-study-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: $border-radius-sm;
+    color: var(--text);
+    transition: all 0.3s $transition-bounce;
+
+    &:hover {
+      background: var(--accent-yellow);
+      border-color: var(--accent-pink);
+      transform: translateY(-3px) rotate(-1deg);
     }
   }
 }
