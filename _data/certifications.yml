@@ -1,3 +1,9 @@
+- name: "Systems Thinking & Mapping Outcomes"
+  organization: "NextLeap PM Fellowship"
+  date: "June 2026"
+  credential_url: "https://nextleap.app/certificates/verify/nlcert2gr09bz2a8s6b2a4"
+  accent_color: "cyan"
+
 - name: "AI Agents in LangGraph"
   organization: "DeepLearning.AI"
   date: "October 2024"
