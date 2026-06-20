@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Case Studies
-description: Product case studies by Mayank Sharma — real products owned and shipped, plus PM fellowship projects applying product thinking to consumer AI challenges.
+description: Product case studies by Mayank Sharma — applying product thinking to real-world challenges through the NextLeap PM Fellowship.
 ---
 
 <div class="container hero fade-in">
@@ -9,49 +9,14 @@ description: Product case studies by Mayank Sharma — real products owned and s
     <div class="case-studies-hero-text">
       <h1>Case Studies</h1>
       <p>
-        Products I've owned end-to-end — from user discovery through roadmap, delivery, and outcomes —
-        plus applied PM fellowship work practicing product thinking on real-world challenges.
+        Applied PM fellowship work practicing product strategy, user research, competitive analysis,
+        and outcome mapping on real-world product challenges.
       </p>
     </div>
   </div>
 </div>
 
-<!-- Real Work -->
 <div class="container section scroll-animate">
-  <h2 style="margin-bottom: 2.5rem;"><i class="fas fa-briefcase"></i> Products Owned</h2>
-  <div class="case-studies-grid">
-    {% assign sorted_cases = site.case_studies | sort: "order" %}
-    {% for case in sorted_cases %}
-    <a href="{{ case.url }}" class="case-study-card-link card-{{ case.accent_color }} scroll-animate">
-      <div class="case-study-card-header">
-        <div class="case-study-card-number">{{ case.order | prepend: "0" }}</div>
-        <h3 class="case-study-card-title">{{ case.title }}</h3>
-      </div>
-      <div class="case-study-card-body">
-        <div class="case-study-card-meta">
-          <span><i class="fas fa-building"></i> {{ case.company }}</span>
-          <span><i class="fas fa-user-tie"></i> {{ case.role }}</span>
-          <span><i class="fas fa-calendar"></i> {{ case.period }}</span>
-          <span><i class="fas fa-tag"></i> {{ case.type }}</span>
-        </div>
-        <p class="case-study-card-preview">{{ case.summary }}</p>
-      </div>
-      <div class="case-study-card-footer">
-        <span class="case-study-card-action">
-          Read Case Study <i class="fas fa-arrow-right"></i>
-        </span>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-</div>
-
-<!-- Fellowship Projects -->
-<div class="container section scroll-animate">
-  <h2 style="margin-bottom: 0.75rem;"><i class="fas fa-graduation-cap"></i> PM Fellowship Projects</h2>
-  <p class="muted" style="margin-bottom: 2.5rem; font-size: 1rem;">
-    Applied case studies from the NextLeap PM Fellowship — practicing product strategy, user research, and outcome mapping on real-world product challenges.
-  </p>
   <div class="case-studies-grid">
     <a href="/case-studies/voice-input-chatgpt-india.html" class="case-study-card-link card-cyan scroll-animate">
       <div class="case-study-card-header">
@@ -61,7 +26,6 @@ description: Product case studies by Mayank Sharma — real products owned and s
       <div class="case-study-card-body">
         <div class="case-study-card-meta">
           <span><i class="fas fa-graduation-cap"></i> NextLeap PM Fellowship</span>
-          <span><i class="fas fa-user-tie"></i> PM Fellow</span>
           <span><i class="fas fa-calendar"></i> June 2026</span>
           <span><i class="fas fa-tag"></i> Product Strategy · Consumer Growth</span>
         </div>
@@ -76,7 +40,6 @@ description: Product case studies by Mayank Sharma — real products owned and s
   </div>
 </div>
 
-<!-- CTA -->
 <div class="container section scroll-animate">
   <div class="case-studies-cta-card">
     <h2><i class="fas fa-handshake"></i> Let's Talk Product</h2>
