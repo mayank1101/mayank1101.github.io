@@ -40,7 +40,7 @@
   text-align: center;
   padding: 3rem 2rem;
   background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), rgba(123, 63, 212, 0.08));
-  border: 2px solid var(--card-border);
+  border: 2px solid var(--ink);
   border-radius: 16px;
 
   h2 {
@@ -86,51 +86,44 @@
   text-decoration: none;
   color: inherit;
   padding: 2.5rem;
-  background: var(--card-bg);
-  border: 2px solid var(--card-border);
-  border-radius: 16px;
-  transition: all 0.35s ease;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.25s $transition-bounce, box-shadow 0.25s $transition-smooth;
   position: relative;
   overflow: hidden;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-large);
 
-    .case-study-card-action {
-      gap: 0.8rem;
-    }
-
-    .case-study-card-number {
-      transform: scale(1.1);
-    }
+    .case-study-card-action { gap: 0.8rem; }
+    .case-study-card-number { transform: scale(1.1); }
   }
 
   &.card-cyan {
     border-top: 5px solid var(--accent-cyan);
-    background: linear-gradient(160deg, rgba(31, 168, 201, 0.07) 0%, var(--card-bg) 60%);
+    background: linear-gradient(160deg, var(--tint-cyan) 0%, var(--card) 60%);
 
     .case-study-card-number { color: var(--accent-cyan); }
     .case-study-card-action { color: var(--accent-cyan); }
-    &:hover { border-color: var(--accent-cyan); }
   }
 
   &.card-purple {
     border-top: 5px solid var(--accent-purple);
-    background: linear-gradient(160deg, rgba(123, 63, 212, 0.07) 0%, var(--card-bg) 60%);
+    background: linear-gradient(160deg, var(--tint-purple) 0%, var(--card) 60%);
 
     .case-study-card-number { color: var(--accent-purple); }
     .case-study-card-action { color: var(--accent-purple); }
-    &:hover { border-color: var(--accent-purple); }
   }
 
   &.card-pink {
     border-top: 5px solid var(--accent-pink);
-    background: linear-gradient(160deg, rgba(226, 61, 122, 0.07) 0%, var(--card-bg) 60%);
+    background: linear-gradient(160deg, var(--tint-pink) 0%, var(--card) 60%);
 
     .case-study-card-number { color: var(--accent-pink); }
     .case-study-card-action { color: var(--accent-pink); }
-    &:hover { border-color: var(--accent-pink); }
   }
 }
 
@@ -141,7 +134,7 @@
   gap: 0.8rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--ink);
 }
 
 .case-study-card-number {
@@ -194,7 +187,7 @@
 // Card Footer
 .case-study-card-footer {
   padding-top: 1.5rem;
-  border-top: 1px solid var(--card-border);
+  border-top: 1px solid var(--ink);
 }
 
 .case-study-card-action {
@@ -213,7 +206,7 @@
 .case-study-page-hero {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid var(--card-border);
+  border-bottom: 2px solid var(--ink);
 
   h1 {
     font-size: 2.5rem;
@@ -283,7 +276,7 @@
 
 .case-study-page-cta {
   background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), rgba(123, 63, 212, 0.08));
-  border: 2px solid var(--card-border);
+  border: 2px solid var(--ink);
   border-radius: 12px;
   padding: 2.5rem;
   text-align: center;
@@ -341,19 +334,19 @@
 
     &.card-cyan {
       border-left: 4px solid var(--accent-cyan);
-      background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), var(--card-bg));
+      background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), var(--card));
       h3 i { color: var(--accent-cyan); }
     }
 
     &.card-purple {
       border-left: 4px solid var(--accent-purple);
-      background: linear-gradient(135deg, rgba(123, 63, 212, 0.08), var(--card-bg));
+      background: linear-gradient(135deg, rgba(123, 63, 212, 0.08), var(--card));
       h3 i { color: var(--accent-purple); }
     }
 
     &.card-pink {
       border-left: 4px solid var(--accent-pink);
-      background: linear-gradient(135deg, rgba(226, 61, 122, 0.08), var(--card-bg));
+      background: linear-gradient(135deg, rgba(226, 61, 122, 0.08), var(--card));
       h3 i { color: var(--accent-pink); }
     }
 
@@ -532,9 +525,9 @@
   max-width: 900px;
   margin: 0 auto 3rem;
   padding: 3rem;
-  background: var(--card-bg);
+  background: var(--card);
   border-radius: 16px;
-  border: 2px solid var(--card-border);
+  border: 2px solid var(--ink);
   transition: all 0.3s ease;
 
   &:hover {
@@ -545,7 +538,7 @@
 
   &.card-cyan {
     border-top: 5px solid var(--accent-cyan);
-    background: linear-gradient(135deg, rgba(135, 206, 235, 0.05), var(--card-bg));
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.05), var(--card));
 
     .case-study-section h3 {
       color: var(--accent-cyan);
@@ -554,7 +547,7 @@
 
   &.card-purple {
     border-top: 5px solid var(--accent-purple);
-    background: linear-gradient(135deg, rgba(212, 181, 232, 0.05), var(--card-bg));
+    background: linear-gradient(135deg, rgba(212, 181, 232, 0.05), var(--card));
 
     .case-study-section h3 {
       color: var(--accent-purple);
@@ -563,7 +556,7 @@
 
   &.card-pink {
     border-top: 5px solid var(--accent-pink);
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.05), var(--card-bg));
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.05), var(--card));
 
     .case-study-section h3 {
       color: var(--accent-pink);
@@ -575,7 +568,7 @@
 .case-study-header {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--ink);
 }
 
 .case-study-title-section h2 {
@@ -689,8 +682,8 @@
   align-items: flex-start;
   gap: 0.8rem;
   padding: 1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--card);
+  border: 1px solid var(--ink);
   border-radius: 8px;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -736,8 +729,8 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background: var(--card-bg);
-    border: 2px solid var(--card-border);
+    background: var(--card);
+    border: 2px solid var(--ink);
     border-radius: 12px;
     transition: all 0.3s ease;
 
@@ -782,7 +775,7 @@
 
 .case-study-cta-card {
   background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(212, 181, 232, 0.1));
-  border: 2px solid var(--card-border);
+  border: 2px solid var(--ink);
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
