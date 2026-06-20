@@ -39,10 +39,11 @@ _posts/dsa
 # _data/projects.yml
 
 # case-studies (private)
-case-studies.html
-_data/case-studies.yml
-_case_studies/
-_layouts/case-study.html
+# case-studies.html
+# _data/case-studies.yml
+_case_studies/lamitracker.md
+_case_studies/lamiops.md
+# _layouts/case-study.html
 
 # Product Management Series (private)
 series/pm
