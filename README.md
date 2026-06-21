@@ -1,10 +1,10 @@
-# Mayank Sharma - Personal Portfolio & Blog
+# Mayank Sharma - Personal Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://mayank1101.github.io)
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website and technical blog showcasing my transition from Data & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth and data-driven thinking inform better product decisions.
+A modern, responsive portfolio website showcasing my transition from Data & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth and data-driven thinking inform better product decisions.
 
 ## Live Website
 
@@ -71,7 +71,7 @@ mayank1101.github.io/
 │   ├── _cards.scss               # Card components
 │   ├── _buttons.scss             # CTAs & buttons
 │   ├── _blog.scss                # Blog & series styles
-│   ├── _manifesto.scss           # Token by Token section
+│   ├── _manifesto.scss           # Manifesto section styles
 │   ├── _footer.scss              # Footer styles
 │   ├── _animations.scss          # Keyframes & transitions
 │   ├── _code.scss                # Code blocks & syntax
@@ -79,10 +79,7 @@ mayank1101.github.io/
 │   ├── _about.scss               # About page specific
 │   ├── _dark-mode.scss           # Dark theme overrides
 │   └── _responsive.scss          # Media queries
-├── _posts/                       # Blog posts
 ├── _data/
-│   └── series.yml                # Blog series definitions
-├── series/                       # Series landing pages
 ├── assets/
 │   ├── css/
 │   │   └── main.scss             # Main SCSS entry point
@@ -90,7 +87,6 @@ mayank1101.github.io/
 │   └── profile.jpeg              # Profile photo
 ├── index.html                    # Homepage
 ├── about.html                    # About page
-├── TokenByToken.html             # Blog listing
 ├── _config.yml                   # Jekyll configuration
 ├── .gitignore                    # Git ignore rules
 └── README.md                     # This file
