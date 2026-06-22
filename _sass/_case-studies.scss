@@ -1,47 +1,155 @@
-// ===== Case Studies Section Groups =====
+// ===== Case Studies Section Cards (landing page) =====
 
-.cs-group {
-  border: 2px solid var(--ink);
-  border-radius: $border-radius-lg;
-  padding: 2rem;
-  background: var(--card);
+.cs-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.cs-group-header {
-  margin-bottom: 2rem;
+.cs-section-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: $border-radius-lg;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.25s $transition-bounce, box-shadow 0.25s $transition-smooth;
+  overflow: hidden;
 
-  h2 {
-    font-size: 1.5rem;
-    margin: 0.6rem 0 0.4rem 0;
+  &:hover:not(.cs-section-card-placeholder) {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-large);
+
+    .cs-section-card-action { gap: 0.8rem; }
+  }
+
+  &.card-cyan {
+    border-top: 5px solid var(--accent-cyan);
+    background: linear-gradient(160deg, var(--tint-cyan) 0%, var(--card) 60%);
+    .cs-section-card-action { color: var(--accent-cyan); }
+    .cs-section-card-badge { background: var(--tint-cyan); color: var(--accent-cyan); border-color: var(--accent-cyan); }
+  }
+
+  &.cs-section-card-placeholder {
+    opacity: 0.6;
+    border-style: dashed;
+    box-shadow: none;
+    cursor: default;
+  }
+}
+
+.cs-section-card-content {
+  padding: 2rem 2rem 1rem;
+  flex: 1;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--text-bright);
+    margin: 0.6rem 0 0.8rem 0;
+    font-family: $font-heading;
   }
 
   p {
-    margin: 0;
     font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
   }
 }
 
-.cs-group-badge {
+.cs-section-card-badge {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 0.3rem 0.8rem;
+  padding: 0.28rem 0.7rem;
   border: 1.5px solid var(--ink);
   border-radius: $border-radius-sm;
 
-  &.badge-personal {
-    background: var(--tint-purple);
-    color: var(--accent-purple);
-    border-color: var(--accent-purple);
+  &.badge-muted {
+    background: var(--bg-secondary);
+    color: var(--muted);
+  }
+}
+
+.cs-section-card-footer {
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--ink);
+  margin-top: 1.5rem;
+}
+
+.cs-section-card-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  i { color: var(--accent-cyan); }
+}
+
+.cs-section-card-action {
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+// ===== NextLeap Listing Page Banner =====
+
+.cs-listing-banner {
+  padding: 2.5rem;
+  border-radius: $border-radius-lg;
+  border: 3px solid var(--ink);
+  margin-bottom: 2rem;
+  background: var(--card);
+
+  &.card-cyan {
+    border-left: 5px solid var(--accent-cyan);
+    background: linear-gradient(135deg, var(--tint-cyan), var(--card));
   }
 
-  &.badge-nextleap {
-    background: var(--tint-cyan);
-    color: var(--accent-cyan);
-    border-color: var(--accent-cyan);
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-bright);
+    font-family: $font-heading;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.cs-listing-banner-info {
+  flex: 1;
+}
+
+.cs-listing-banner-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  span {
+    font-size: 0.9rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i { color: var(--accent-cyan); }
   }
 }
 
