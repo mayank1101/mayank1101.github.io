@@ -25,9 +25,6 @@ kramdown:
     block:
       line_numbers: false
 
-# Permalink for posts
-permalink: /:categories/:year/:month/:day/:title/
-
 # Collections
 collections:
   case_studies:
