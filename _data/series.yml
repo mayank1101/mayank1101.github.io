@@ -1,0 +1,28 @@
+- name: "NLP for Product Managers"
+  slug: "nlp"
+  description: "My notes on how language AI actually works — tokenization, embeddings, transformers. Written as I dug into NLP to understand the systems I was building around."
+  accent_color: "green"
+  author: "Mayank Sharma"
+  order: 1
+
+- name: "Deep Learning for Engineers"
+  slug: "deep-learning"
+  description: "Notes from learning how neural networks work from scratch — forward pass, backprop, CNNs, RNNs, and beyond. Written to actually understand it, not just use it."
+  accent_color: "purple"
+  author: "Mayank Sharma"
+  order: 2
+
+- name: "Machine Learning for Engineers"
+  slug: "machine-learning"
+  description: "My notes on core ML — how models learn, why they fail, and what the math is actually doing. The foundation I built before going deeper into deep learning."
+  accent_color: "cyan"
+  author: "Mayank Sharma"
+  order: 3
+
+# - name: "Data Structures and Algorithms Series"
+#   slug: "dsa"
+#   description: "Master the foundations of computer science, from basic data structures to complex algorithmic paradigms and competitive programming techniques."
+#   accent_color: "blue"
+#   icon: "fas fa-code"
+#   author: "Mayank Sharma"
+#   order: 4

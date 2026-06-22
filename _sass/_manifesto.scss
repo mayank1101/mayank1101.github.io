@@ -1,0 +1,206 @@
+// ===== Manifesto Styles (Token by Token) =====
+.manifesto-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, rgba(212, 181, 232, 0.08), rgba(180, 215, 233, 0.08));
+  border: 2px solid var(--border-bright);
+  border-left: 5px solid var(--accent-purple);
+  border-radius: $border-radius-lg;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.manifesto-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.manifesto-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-bright);
+  margin: 0.8rem 0;
+  font-weight: 400;
+
+  strong {
+    color: var(--accent-pink);
+    font-weight: 700;
+  }
+}
+
+.manifesto-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 1.5rem 0;
+
+  strong {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+
+  em {
+    color: var(--accent-purple);
+    font-style: italic;
+  }
+}
+
+.manifesto-highlight {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-bright);
+  font-weight: 600;
+  font-style: italic;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--accent-pink);
+  border-radius: 0 $border-radius-sm $border-radius-sm 0;
+}
+
+.manifesto-audience,
+.manifesto-topics {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: rgba(180, 215, 233, 0.1);
+  border-radius: $border-radius-md;
+  border: 2px solid var(--border);
+
+  h3 {
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: $font-heading;
+
+    i {
+      color: var(--accent-purple);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.7rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text);
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    em {
+      color: var(--accent-pink);
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+}
+
+.manifesto-closing {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.manifesto-cta {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 2.5rem 0;
+  text-align: center;
+
+  strong {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+}
+
+.manifesto-welcome {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-bright);
+  margin: 2rem 0 0 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: $font-heading;
+}
+
+// Mobile responsive for manifesto
+@media (max-width: $breakpoint-sm) {
+  .manifesto-container {
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .manifesto-intro {
+    font-size: 1.1rem;
+  }
+
+  .manifesto-text {
+    font-size: 1rem;
+  }
+
+  .manifesto-highlight {
+    font-size: 1.05rem;
+    padding-left: 1rem;
+  }
+
+  .manifesto-audience,
+  .manifesto-topics {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    li {
+      font-size: 1rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .manifesto-cta {
+    font-size: 1.05rem;
+  }
+
+  .manifesto-welcome {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: $breakpoint-xs) {
+  .manifesto-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .manifesto-intro {
+    font-size: 1.05rem;
+  }
+
+  .manifesto-text {
+    font-size: 0.95rem;
+  }
+
+  .manifesto-audience,
+  .manifesto-topics {
+    padding: 1.2rem;
+
+    li {
+      font-size: 0.95rem;
+    }
+  }
+}

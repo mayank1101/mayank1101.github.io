@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  {% include theme-script.html %}
+</head>
+
+<body>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-progress"></div>
+
+{% include navbar.html %}
+
+<div class="container section fade-in">
+  {% if page.series %}
+  <div class="series-banner">
+    <div class="series-info">
+      <span class="series-label">
+        <i class="fas fa-pencil-alt"></i> learning notes
+      </span>
+      <h3 class="series-title">{{ page.series }}</h3>
+      {% if page.series_author %}
+      <p class="series-author">by {{ page.series_author }}</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+  <h1>{{ page.title }}</h1>
+  <p class="muted">
+    <i class="far fa-calendar"></i> {{ page.date | date: "%b %d, %Y" }}
+  </p>
+
+  {{ content }}
+
+  {% if page.series %}
+  {% assign current_series = site.data.series | where: "name", page.series | first %}
+  <div class="series-footer">
+    <div class="series-footer-content">
+      <i class="fas fa-bookmark"></i>
+      <p>
+        This note is part of <strong>{{ page.series }}</strong>
+        {% if page.series_author %} — Mayank's personal learning notes.{% endif %}
+      </p>
+    </div>
+    <a href="/series/{{ current_series.slug }}/" class="cta">
+      <i class="fas fa-list"></i> View All Notes
+    </a>
+  </div>
+  {% endif %}
+</div>
+
+{% include footer.html %}
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="/assets/animations.js"></script>
+
+</body>
+</html>
