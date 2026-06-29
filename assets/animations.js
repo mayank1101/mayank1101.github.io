@@ -265,64 +265,11 @@
   };
 
   // -----------------------------------------------------------
-  // Theme toggle (light / dark) with persistence
-  // -----------------------------------------------------------
-  const initThemeToggle = () => {
-    const updateMetaThemeColor = (theme) => {
-      const metas = document.querySelectorAll('meta[name="theme-color"]');
-      metas.forEach((m) => {
-        const media = m.getAttribute('media') || '';
-        if (theme === 'dark' && (media.includes('dark') || !media)) {
-          m.setAttribute('content', '#1C1B20');
-        } else if (theme === 'light' && (media.includes('light') || !media)) {
-          m.setAttribute('content', '#FBF8F1');
-        }
-      });
-    };
-
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      updateMetaThemeColor('dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      updateMetaThemeColor('light');
-    }
-
-    const toggle = document.querySelector('.theme-toggle');
-    if (!toggle) return;
-
-    toggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      if (next === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-      }
-      localStorage.setItem('theme', next);
-      updateMetaThemeColor(next);
-    });
-
-    // Respect system preference if user hasn't chosen yet
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-    mql.addEventListener('change', (e) => {
-      if (localStorage.getItem('theme')) return;
-      if (e.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        updateMetaThemeColor('dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-        updateMetaThemeColor('light');
-      }
-    });
-  };
 
   // -----------------------------------------------------------
   // Boot
   // -----------------------------------------------------------
   const boot = () => {
-    initThemeToggle();
     initMobileMenu();
     wrapTables();
     autoTagReveal();

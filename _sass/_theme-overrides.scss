@@ -103,40 +103,7 @@ table {
   }
 }
 
-// ----- Code blocks -----
-pre,
-.highlight {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: $border-radius-md;
-  box-shadow: var(--shadow-soft);
-  font-family: $font-mono;
-
-  pre {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-code {
-  background: var(--tint-yellow);
-  color: var(--text-bright);
-  border: 1px solid rgba(244, 196, 48, 0.28);
-  border-radius: $border-radius-sm;
-  padding: 0.1em 0.42em;
-  font-family: $font-mono;
-  font-size: 0.88em;
-}
-
-pre code {
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: inherit;
-}
+// Code block styles are fully defined in _code.scss
 
 // Light-mode syntax highlighting
 .highlight {

@@ -1,53 +1,72 @@
 // ===== Code Blocks =====
-pre {
-  background: #FFF5E8;
-  padding: 1.2rem;
-  border-radius: $border-radius-md;
-  overflow-x: auto;
-  border: 2px solid var(--border);
-  margin: 1.5rem 0;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
-}
 
+// Block: outer wrapper div.highlight
 .highlight {
-  background: #FFF5E8;
+  background: #EDE8DC;
   border-radius: $border-radius-md;
   padding: 1.4rem 1.6rem;
   overflow-x: auto;
   margin: 1.5rem 0;
-  border: 2px solid var(--border);
+  border: 1px solid rgba(30, 28, 24, 0.20);
+  box-shadow: var(--shadow-soft);
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
 
+  // Nested pre inside highlight wrapper — transparent, no double padding
   pre {
     margin: 0;
     padding: 0;
     background: transparent;
     border: none;
+    box-shadow: none;
+    overflow-x: auto;
+    font-family: $font-mono;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    white-space: pre;
   }
+}
+
+// Standalone pre (not inside .highlight)
+pre:not(.highlight) {
+  background: #EDE8DC;
+  padding: 1.2rem 1.4rem;
+  border-radius: $border-radius-md;
+  overflow-x: auto;
+  border: 1px solid rgba(30, 28, 24, 0.20);
+  box-shadow: var(--shadow-soft);
+  margin: 1.5rem 0;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  font-family: $font-mono;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
 // Inline code
 code {
   font-family: $font-mono;
-  font-size: 0.9rem;
-  background: rgba(144, 198, 149, 0.15);
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
-  color: var(--accent-green);
+  font-size: 0.88em;
+  background: rgba(244, 196, 48, 0.22);
+  padding: 0.15em 0.45em;
+  border-radius: $border-radius-sm;
+  color: #6B4C00;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  border: 1px solid rgba(144, 198, 149, 0.2);
+  border: 1px solid rgba(244, 196, 48, 0.30);
 }
 
-// Block code - remove inline code styling
-pre code {
+// Code inside pre — reset inline code styles
+pre code,
+.highlight code {
   background: transparent;
   padding: 0;
-  color: var(--text);
+  color: inherit;
   border-radius: 0;
   border: none;
+  font-size: inherit;
+  word-wrap: normal;
+  overflow-wrap: normal;
 }
 
 // ===== Rouge/Pygments Syntax Highlighting =====
@@ -62,7 +81,7 @@ pre code {
 .highlight .kc  { color: #D87A52; font-weight: 600; }
 
 // Names
-.highlight .n   { color: #4A4238; }
+.highlight .n   { color: #2C2824; }
 .highlight .na  { color: #3A7A8C; }
 .highlight .nb  { color: #3A7A8C; }
 .highlight .nc  { color: #A67C52; }
@@ -71,7 +90,7 @@ pre code {
 .highlight .nf  { color: #3A7A8C; }
 .highlight .nl  { color: #3A7A8C; }
 .highlight .nn  { color: #A67C52; }
-.highlight .nx  { color: #4A4238; }
+.highlight .nx  { color: #2C2824; }
 .highlight .nv  { color: #C45A5F; }
 .highlight .vc  { color: #C45A5F; }
 .highlight .vg  { color: #C45A5F; }
@@ -99,41 +118,41 @@ pre code {
 .highlight .mo  { color: #D87A52; }
 .highlight .il  { color: #D87A52; }
 
-// Operators
-.highlight .o   { color: #4A90A4; }
-.highlight .ow  { color: #4A90A4; font-weight: 600; }
-.highlight .p   { color: #4A90A4; }
+// Operators & punctuation
+.highlight .o   { color: #5A7A94; }
+.highlight .ow  { color: #5A7A94; font-weight: 600; }
+.highlight .p   { color: #5A5048; }
 
 // Comments
-.highlight .c   { color: #8B7E6A; font-style: italic; }
-.highlight .c1  { color: #8B7E6A; font-style: italic; }
-.highlight .cm  { color: #8B7E6A; font-style: italic; }
+.highlight .c   { color: #9B8E7A; font-style: italic; }
+.highlight .c1  { color: #9B8E7A; font-style: italic; }
+.highlight .cm  { color: #9B8E7A; font-style: italic; }
 .highlight .cp  { color: #4A90A4; font-style: italic; }
-.highlight .cs  { color: #8B7E6A; font-style: italic; }
+.highlight .cs  { color: #9B8E7A; font-style: italic; }
 
 // Generic
 .highlight .gd  { color: #C45A5F; }
 .highlight .ge  { font-style: italic; }
 .highlight .gh  { color: #3A7A8C; font-weight: bold; }
 .highlight .gi  { color: #5A8F5A; }
-.highlight .gp  { color: #8B7E6A; font-weight: bold; }
+.highlight .gp  { color: #9B8E7A; font-weight: bold; }
 .highlight .gs  { font-weight: bold; }
 .highlight .gu  { color: #4A90A4; font-weight: bold; }
 
 // Errors
-.highlight .err { color: #C45A5F; background-color: rgba(196, 90, 95, 0.1); }
+.highlight .err { color: #C45A5F; background-color: rgba(196, 90, 95, 0.10); }
 
 // Others
-.highlight .w   { color: #4A4238; }
+.highlight .w   { color: #2C2824; }
 .highlight .bp  { color: #3A7A8C; }
 .highlight .fm  { color: #3A7A8C; }
 .highlight .vm  { color: #C45A5F; }
 
 // Line numbers
 .highlight .lineno {
-  color: #8B7E6A;
+  color: #9B8E7A;
   user-select: none;
   padding-right: 1rem;
-  border-right: 2px solid var(--border);
+  border-right: 1px solid rgba(30, 28, 24, 0.15);
   margin-right: 1rem;
 }
