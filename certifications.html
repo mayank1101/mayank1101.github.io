@@ -6,148 +6,176 @@ description: Professional certifications and continuous learning in AI, Product 
 
 <!-- Certifications Hero -->
 <div class="container hero fade-in">
-    <div class="hero-content cert-hero-content">
-        <div class="hero-text cert-hero-text">
-            <div class="cert-hero-title">
-                <div class="cert-hero-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <h1>Certifications</h1>
-            </div>
-            <p class="cert-lead">
-                Staying current in data, analytics, and product management, because great products require
-                both technical rigor and sharp product thinking.
-            </p>
-            <p class="cert-subtitle">
-                Each certification reflects a deliberate investment in the skills that matter for building,
-                evaluating, and shipping products that create real user value.
-            </p>
+  <div class="hero-content cert-hero-content">
+    <div class="hero-text cert-hero-text">
+      <div class="cert-hero-title">
+        <div class="cert-hero-icon">
+          <i class="fas fa-award"></i>
         </div>
+        <h1>Certifications</h1>
+      </div>
+      <p class="cert-lead">
+        Staying current in data, analytics, and product management, because
+        great products require both technical rigor and sharp product thinking.
+      </p>
+      <p class="cert-subtitle">
+        Each certification reflects a deliberate investment in the skills that
+        matter for building, evaluating, and shipping products that create real
+        user value.
+      </p>
     </div>
+  </div>
 </div>
 
 <!-- Stats Section -->
 <div class="container section scroll-animate">
-    <div class="stats-grid">
-        {% assign cert_count = site.data.certifications | size %}
-        <div class="card stat-card">
-            <div class="stat-icon cyan">
-                <i class="fas fa-certificate"></i>
-            </div>
-            <h3 class="stat-value cyan">{{ cert_count }}</h3>
-            <p class="muted">Certifications</p>
-        </div>
-        <div class="card stat-card">
-            <div class="stat-icon purple">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h3 class="stat-value purple">Continuous</h3>
-            <p class="muted">Learning</p>
-        </div>
-        <div class="card stat-card">
-            <div class="stat-icon pink">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="stat-value pink">Growing</h3>
-            <p class="muted">Expertise</p>
-        </div>
+  <div class="stats-grid">
+    {% assign cert_count = site.data.certifications | size %}
+    <div class="card stat-card">
+      <div class="stat-icon cyan">
+        <i class="fas fa-certificate"></i>
+      </div>
+      <h3 class="stat-value cyan">{{ cert_count }}</h3>
+      <p class="muted">Certifications</p>
     </div>
+    <div class="card stat-card">
+      <div class="stat-icon purple">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <h3 class="stat-value purple">Continuous</h3>
+      <p class="muted">Learning</p>
+    </div>
+    <div class="card stat-card">
+      <div class="stat-icon pink">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h3 class="stat-value pink">Growing</h3>
+      <p class="muted">Expertise</p>
+    </div>
+  </div>
 </div>
 
 <!-- Certifications Grid -->
 <div class="container section scroll-animate">
-    <h2><i class="fas fa-medal"></i> My Certifications</h2>
-    <p class="cert-section-lead muted">
-        From data science to product strategy, a curated set of credentials that sharpen
-        the skills I apply every day to understand users, design products, and measure impact.
-    </p>
+  <h2><i class="fas fa-medal"></i> My Certifications</h2>
+  <p class="cert-section-lead muted">
+    From data science to product strategy, a curated set of credentials that
+    sharpen the skills I apply every day to understand users, design products,
+    and measure impact.
+  </p>
 
-    {% if site.data.certifications.size > 0 %}
-    <div class="cert-cards">
-        {% for cert in site.data.certifications %}
-        <div class="cert-card card-{{ cert.accent_color }} scroll-animate">
-            <div class="cert-card-header">
-                <div class="cert-card-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-            </div>
-            <div class="cert-card-body">
-                <h3>{{ cert.name }}</h3>
-            </div>
-            <div class="cert-card-footer">
-                <span class="cert-card-meta">
-                    <i class="fas fa-building"></i> {{ cert.organization }}
-                </span>
-                <span class="cert-card-meta">
-                    <i class="far fa-calendar"></i> {{ cert.date }}
-                </span>
-                {% if cert.credential_url %}
-                <a href="{{ cert.credential_url }}" target="_blank" class="cert-card-action">
-                    Verify <i class="fas fa-arrow-right"></i>
-                </a>
-                {% endif %}
-            </div>
+  {% if site.data.certifications.size > 0 %}
+  <div class="cert-cards">
+    {% for cert in site.data.certifications %}
+    <div class="cert-card card-{{ cert.accent_color }} scroll-animate">
+      <div class="cert-card-header">
+        {% comment %}
+        <div class="cert-card-icon">
+          <i class="fas fa-certificate"></i>
         </div>
-        {% endfor %}
+        {% endcomment %}
+      </div>
+      <div class="cert-card-body">
+        <h3>{{ cert.name }}</h3>
+      </div>
+      <div class="cert-card-footer">
+        <span class="cert-card-meta">
+          <i class="fas fa-building"></i> {{ cert.organization }}
+        </span>
+        <span class="cert-card-meta">
+          <i class="far fa-calendar"></i> {{ cert.date }}
+        </span>
+        {% if cert.credential_url %}
+        <a
+          href="{{ cert.credential_url }}"
+          target="_blank"
+          class="cert-card-action"
+        >
+          Verify <i class="fas fa-arrow-right"></i>
+        </a>
+        {% endif %}
+      </div>
     </div>
-    {% else %}
-    <div class="card empty-state">
-        <div class="empty-state-icon">
-            <i class="fas fa-inbox"></i>
-        </div>
-        <h3>No Certifications Yet</h3>
-        <p class="muted">
-            Add your certifications to <code>_data/certifications.yml</code> to display them here.
-        </p>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card empty-state">
+    <div class="empty-state-icon">
+      <i class="fas fa-inbox"></i>
     </div>
-    {% endif %}
+    <h3>No Certifications Yet</h3>
+    <p class="muted">
+      Add your certifications to <code>_data/certifications.yml</code> to
+      display them here.
+    </p>
+  </div>
+  {% endif %}
 </div>
 
 <!-- Why Continuous Learning Matters -->
 <div class="container section scroll-animate">
-    <h2><i class="fas fa-lightbulb"></i> Why I Keep Learning</h2>
-    <div class="about-story">
-        <p>
-            The technology landscape moves fast, and what's cutting-edge today is a baseline tomorrow.
-            For a product manager, that means two things: understanding the technical possibilities and constraints well enough
-            to make smart product decisions, and building product intuition that keeps user needs at the center regardless of how the technology shifts.
-        </p>
-        <p>
-            These certifications represent deliberate learning across both dimensions:
-        </p>
-        <ul class="cert-learning-list">
-            <li><strong>Technical Credibility:</strong> Understanding the systems I'm designing and evaluating, not just surface-level</li>
-            <li><strong>Product Craft:</strong> Frameworks for roadmapping, prioritization, experimentation, and measuring real impact</li>
-            <li><strong>Evaluation Rigor:</strong> Building the right metrics and feedback loops, not just shipping features</li>
-            <li><strong>Analytics Discipline:</strong> Learning how to use data to drive product decisions and prove value</li>
-            <li><strong>Validated Expertise:</strong> Demonstrating knowledge that complements real-world product delivery</li>
-        </ul>
-        <p>
-            Certifications validate structured knowledge, but real expertise shows up in shipped products.
-            Read about the products I've owned and the outcomes they created on my <a href="/about.html">about page</a>.
-        </p>
-    </div>
+  <h2><i class="fas fa-lightbulb"></i> Why I Keep Learning</h2>
+  <div class="about-story">
+    <p>
+      The technology landscape moves fast, and what's cutting-edge today is a
+      baseline tomorrow. For a product manager, that means two things:
+      understanding the technical possibilities and constraints well enough to
+      make smart product decisions, and building product intuition that keeps
+      user needs at the center regardless of how the technology shifts.
+    </p>
+    <p>
+      These certifications represent deliberate learning across both dimensions:
+    </p>
+    <ul class="cert-learning-list">
+      <li>
+        <strong>Technical Credibility:</strong> Understanding the systems I'm
+        designing and evaluating, not just surface-level
+      </li>
+      <li>
+        <strong>Product Craft:</strong> Frameworks for roadmapping,
+        prioritization, experimentation, and measuring real impact
+      </li>
+      <li>
+        <strong>Evaluation Rigor:</strong> Building the right metrics and
+        feedback loops, not just shipping features
+      </li>
+      <li>
+        <strong>Analytics Discipline:</strong> Learning how to use data to drive
+        product decisions and prove value
+      </li>
+      <li>
+        <strong>Validated Expertise:</strong> Demonstrating knowledge that
+        complements real-world product delivery
+      </li>
+    </ul>
+    <p>
+      Certifications validate structured knowledge, but real expertise shows up
+      in shipped products. Read about the products I've owned and the outcomes
+      they created on my <a href="/about.html">about page</a>.
+    </p>
+  </div>
 </div>
 
 <!-- CTA Section -->
 <div class="container section scroll-animate">
-    <div class="card cta-card">
-        <div class="cta-card-icon">
-            <i class="fas fa-handshake"></i>
-        </div>
-        <h3>Let's Build Something Together</h3>
-        <p class="cta-card-text">
-            Looking for a Product Manager who combines technical credibility with sharp product thinking?
-            Whether it's defining your product strategy, building analytics capabilities, or coordinating
-            cross-functional teams to ship products, I'd love to connect.
-        </p>
-        <div class="cta-buttons">
-            <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
-                <i class="fas fa-envelope"></i> Get in Touch
-            </a>
-            <a class="cta-secondary" href="/resume.html">
-                <i class="fas fa-file-alt"></i> View Resume
-            </a>
-        </div>
+  <div class="card cta-card">
+    <div class="cta-card-icon">
+      <i class="fas fa-handshake"></i>
     </div>
+    <h3>Let's Build Something Together</h3>
+    <p class="cta-card-text">
+      Looking for a Product Manager who combines technical credibility with
+      sharp product thinking? Whether it's defining your product strategy,
+      building analytics capabilities, or coordinating cross-functional teams to
+      ship products, I'd love to connect.
+    </p>
+    <div class="cta-buttons">
+      <a class="cta cta-large" href="mailto:sharma.mayank.iitjammu@gmail.com">
+        <i class="fas fa-envelope"></i> Get in Touch
+      </a>
+      <a class="cta-secondary" href="/resume.html">
+        <i class="fas fa-file-alt"></i> View Resume
+      </a>
+    </div>
+  </div>
 </div>
