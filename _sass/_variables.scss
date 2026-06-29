@@ -69,7 +69,7 @@ $breakpoint-sm: 768px;
 $breakpoint-md: 1024px;
 $breakpoint-lg: 1200px;
 
-// Font families — clean, professional
-$font-primary: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-$font-heading: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
-$font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+// Font families — Geist (Vercel's type system)
+$font-primary: 'Geist', system-ui, -apple-system, sans-serif;
+$font-heading: 'Geist', system-ui, sans-serif;
+$font-mono:    'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
