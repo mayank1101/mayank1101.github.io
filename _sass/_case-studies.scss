@@ -19,8 +19,8 @@
   overflow: hidden;
 
   &:hover:not(.cs-section-card-placeholder) {
-    transform: translate(-3px, -3px);
-    box-shadow: var(--shadow-large);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 
     .cs-section-card-action { gap: 0.8rem; }
   }
@@ -250,8 +250,8 @@
   overflow: hidden;
 
   &:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: var(--shadow-large);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 
     .case-study-card-action { gap: 0.8rem; }
     .case-study-card-number { transform: scale(1.1); }

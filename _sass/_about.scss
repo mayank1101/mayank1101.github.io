@@ -52,8 +52,8 @@
   }
 
   strong {
-    color: var(--accent-green);
-    font-weight: 600;
+    color: var(--text-bright);
+    font-weight: 700;
   }
 
   em {
@@ -78,19 +78,18 @@
 
   span {
     background: var(--card);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     padding: 0.5rem 1rem;
     border-radius: $border-radius-md;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: all 0.4s $transition-bounce;
+    transition: all 0.22s $transition-smooth;
     color: var(--text);
 
     &:hover {
-      background: var(--accent-yellow);
+      background: var(--bg-secondary);
       color: var(--text-bright);
-      border-color: var(--accent-pink);
-      transform: translateY(-3px);
+      border-color: var(--border-bright);
     }
   }
 }
@@ -132,10 +131,10 @@
   font-size: 0.95rem;
 
   &:hover:not(:disabled) {
-    background: var(--accent-green);
-    color: var(--card);
-    border-color: var(--accent-green);
-    transform: translateY(-3px);
+    background: var(--accent-pink);
+    color: #fff;
+    border-color: var(--accent-pink);
+    transform: translateY(-2px);
   }
 
   &:disabled {
@@ -166,14 +165,14 @@
   font-size: 0.95rem;
 
   &:hover {
-    background: rgba(144, 198, 149, 0.15);
-    border-color: var(--accent-green);
-    color: var(--accent-green);
+    background: var(--bg-secondary);
+    border-color: var(--border-bright);
+    color: var(--text-bright);
   }
 
   &.active {
-    background: var(--accent-green);
-    border-color: var(--accent-green);
-    color: var(--card);
+    background: var(--accent-pink);
+    border-color: var(--accent-pink);
+    color: #fff;
   }
 }
