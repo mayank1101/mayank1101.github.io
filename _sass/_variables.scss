@@ -1,21 +1,21 @@
 // ===== CSS Custom Properties =====
-// Light Mode — Sketchy Hand-Drawn Theme
+// Light Mode — Warm Professional Theme
 
 :root {
   color-scheme: light;
 
-  // Paper surfaces — off-white, notebook-like
-  --bg: #FBF8F1;
-  --bg-secondary: #F4EFE3;
-  --card: #FFFEF8;
-  --card-hover: #FFF9E8;
+  // Warm surfaces
+  --bg: #FAF8F3;
+  --bg-secondary: #F3EFE6;
+  --card: #FFFEFB;
+  --card-hover: #FFF9F0;
 
-  // Ink text
-  --text: #2B2A27;
-  --text-bright: #141312;
-  --muted: #6C6A63;
+  // Text
+  --text: #1E1C18;
+  --text-bright: #0F0E0C;
+  --muted: #6E6B62;
 
-  // Marker/highlighter accents
+  // Accent palette — unchanged from original
   --accent: #2E5BDB;
   --accent-cyan: #1FA8C9;
   --accent-blue: #2E5BDB;
@@ -23,42 +23,32 @@
   --accent-pink: #E23D7A;
   --accent-yellow: #F4C430;
   --accent-green: #3E9A4C;
-  --accent-red:    #D64541;
+  --accent-red: #D64541;
 
-  // Ink strokes
-  --ink: #141312;
-  --ink-soft: #3A3834;
+  // Borders — thin, warm-tinted
+  --border: rgba(30, 28, 24, 0.13);
+  --border-bright: rgba(30, 28, 24, 0.22);
 
-  // "Borders" are ink strokes in sketchy theme
-  --border: #141312;
-  --border-bright: #2B2A27;
+  // Tints
+  --tint-blue:   rgba(46, 91, 219, 0.10);
+  --tint-purple: rgba(123, 63, 212, 0.10);
+  --tint-pink:   rgba(226, 61, 122, 0.10);
+  --tint-green:  rgba(62, 154, 76, 0.12);
+  --tint-yellow: rgba(244, 196, 48, 0.20);
+  --tint-cyan:   rgba(31, 168, 201, 0.10);
+  --tint-red:    rgba(214, 69, 65, 0.10);
 
-  // Highlighter tints — low-opacity marker swipes
-  --tint-blue:   rgba(46, 91, 219, 0.14);
-  --tint-purple: rgba(123, 63, 212, 0.14);
-  --tint-pink:   rgba(226, 61, 122, 0.14);
-  --tint-green:  rgba(62, 154, 76, 0.16);
-  --tint-yellow: rgba(244, 196, 48, 0.28);
-  --tint-cyan:   rgba(31, 168, 201, 0.14);
-  --tint-red:    rgba(214, 69, 65, 0.14);
-
-  // Gradients — crayon scribble
+  // Gradients
   --gradient-primary:   linear-gradient(135deg, #F4C430 0%, #E23D7A 50%, #7B3FD4 100%);
   --gradient-secondary: linear-gradient(135deg, #3E9A4C 0%, #1FA8C9 100%);
   --gradient-tertiary:  linear-gradient(135deg, #7B3FD4 0%, #E23D7A 100%);
-  --gradient-sky:       linear-gradient(180deg, #FBF8F1 0%, #F4EFE3 100%);
+  --gradient-sky:       linear-gradient(180deg, #FAF8F3 0%, #F3EFE6 100%);
 
-  // Shadows — hard offset "sticker" shadow, like marker on paper
-  --shadow-soft:   3px 3px 0 0 var(--ink);
-  --shadow-medium: 5px 5px 0 0 var(--ink);
-  --shadow-large:  8px 8px 0 0 var(--ink);
-  --shadow-hover:  2px 2px 0 0 var(--ink);
-
-  // Irregular border radii — "hand-drawn" squircle values
-  --r-sketch-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
-  --r-sketch-2: 15px 225px 15px 255px / 255px 15px 225px 15px;
-  --r-sketch-3: 125px 25px 225px 20px / 25px 175px 20px 205px;
-  --r-blob:     30% 70% 70% 30% / 30% 30% 70% 70%;
+  // Shadows — soft, warm-tinted
+  --shadow-soft:   0 1px 4px rgba(30, 28, 24, 0.07), 0 4px 12px rgba(30, 28, 24, 0.05);
+  --shadow-medium: 0 2px 8px rgba(30, 28, 24, 0.09), 0 8px 24px rgba(30, 28, 24, 0.06);
+  --shadow-large:  0 4px 16px rgba(30, 28, 24, 0.11), 0 16px 40px rgba(30, 28, 24, 0.08);
+  --shadow-hover:  0 6px 20px rgba(30, 28, 24, 0.14), 0 2px 6px rgba(30, 28, 24, 0.07);
 }
 
 // ===== SCSS Variables =====
@@ -66,12 +56,12 @@ $transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 $ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 $transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
-// Border radii — used by components; sketchy values
-$border-radius-sm: 8px 14px 10px 16px / 12px 10px 14px 8px;
-$border-radius-md: 14px 22px 18px 24px / 20px 18px 22px 14px;
-$border-radius-lg: 20px 32px 24px 36px / 28px 24px 32px 20px;
-$border-radius-xl: 28px 40px 32px 44px / 36px 32px 40px 28px;
-$border-radius-round: 48% 52% 50% 50% / 52% 48% 52% 48%;
+// Border radii — clean, consistent
+$border-radius-sm: 6px;
+$border-radius-md: 10px;
+$border-radius-lg: 14px;
+$border-radius-xl: 20px;
+$border-radius-round: 9999px;
 
 // Breakpoints
 $breakpoint-xs: 480px;
@@ -79,7 +69,7 @@ $breakpoint-sm: 768px;
 $breakpoint-md: 1024px;
 $breakpoint-lg: 1200px;
 
-// Font families — handwritten, sketchbook
-$font-primary: 'Kalam', 'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive;
-$font-heading: 'Caveat', 'Kalam', 'Patrick Hand', cursive;
-$font-mono:    'Shantell Sans', 'Courier New', 'JetBrains Mono', monospace;
+// Font families — clean, professional
+$font-primary: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+$font-heading: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
+$font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;

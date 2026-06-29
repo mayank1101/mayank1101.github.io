@@ -16,7 +16,7 @@
 
   &:hover {
     border-left-color: var(--accent-pink);
-    transform: translateY(-4px) rotate(-1deg);
+    transform: translateY(-3px);
   }
 }
 
@@ -85,7 +85,7 @@
   &:hover {
     border-left-color: var(--accent-green);
     background: linear-gradient(135deg, rgba(144, 198, 149, 0.15), rgba(255, 212, 186, 0.15));
-    transform: translateY(-8px) rotate(-1deg);
+    transform: translateY(-4px);
 
     .blog-card-image img {
       transform: scale(1.05);
@@ -212,7 +212,7 @@
   &:hover {
     border-left-color: var(--accent-green);
     background: linear-gradient(135deg, rgba(144, 198, 149, 0.15), rgba(180, 215, 233, 0.15));
-    transform: translateY(-8px) rotate(-1deg);
+    transform: translateY(-4px);
 
     .blog-card-image-list img {
       transform: scale(1.05);
@@ -320,7 +320,7 @@
   color: inherit;
 
   &:hover {
-    transform: translateY(-8px) rotate(-1deg);
+    transform: translateY(-4px);
     border-color: var(--border-bright);
 
     .series-card-action {

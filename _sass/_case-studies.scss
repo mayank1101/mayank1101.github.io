@@ -12,7 +12,7 @@
   text-decoration: none;
   color: inherit;
   background: var(--card);
-  border: 2.5px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-lg;
   box-shadow: var(--shadow-medium);
   transition: transform 0.25s $transition-bounce, box-shadow 0.25s $transition-smooth;
@@ -34,7 +34,7 @@
 
   &.cs-section-card-placeholder {
     opacity: 0.6;
-    border-style: dashed;
+    border-style: solid;
     box-shadow: none;
     cursor: default;
   }
@@ -67,7 +67,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   padding: 0.28rem 0.7rem;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-sm;
 
   &.badge-muted {
@@ -81,7 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--border);
   margin-top: 1.5rem;
 }
 
@@ -109,7 +109,7 @@
 .cs-listing-banner {
   padding: 2.5rem;
   border-radius: $border-radius-lg;
-  border: 3px solid var(--ink);
+  border: 1px solid var(--border);
   margin-bottom: 2rem;
   background: var(--card);
 
@@ -195,7 +195,7 @@
   text-align: center;
   padding: 3rem 2rem;
   background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), rgba(123, 63, 212, 0.08));
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: 16px;
 
   h2 {
@@ -242,7 +242,7 @@
   color: inherit;
   padding: 2.5rem;
   background: var(--card);
-  border: 2.5px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-lg;
   box-shadow: var(--shadow-medium);
   transition: transform 0.25s $transition-bounce, box-shadow 0.25s $transition-smooth;
@@ -289,7 +289,7 @@
   gap: 0.8rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--border);
 }
 
 .case-study-card-number {
@@ -342,7 +342,7 @@
 // Card Footer
 .case-study-card-footer {
   padding-top: 1.5rem;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--border);
 }
 
 .case-study-card-action {
@@ -361,7 +361,7 @@
 .case-study-page-hero {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid var(--border);
 
   h1 {
     font-size: 2.5rem;
@@ -431,7 +431,7 @@
 
 .case-study-page-cta {
   background: linear-gradient(135deg, rgba(31, 168, 201, 0.08), rgba(123, 63, 212, 0.08));
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2.5rem;
   text-align: center;
@@ -682,7 +682,7 @@
   padding: 3rem;
   background: var(--card);
   border-radius: 16px;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   transition: all 0.3s ease;
 
   &:hover {
@@ -723,7 +723,7 @@
 .case-study-header {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--border);
 }
 
 .case-study-title-section h2 {
@@ -838,7 +838,7 @@
   gap: 0.8rem;
   padding: 1rem;
   background: var(--card);
-  border: 1px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -885,7 +885,7 @@
     flex-direction: column;
     padding: 2rem;
     background: var(--card);
-    border: 2px solid var(--ink);
+    border: 1px solid var(--border);
     border-radius: 12px;
     transition: all 0.3s ease;
 
@@ -930,7 +930,7 @@
 
 .case-study-cta-card {
   background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(212, 181, 232, 0.1));
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
@@ -1086,13 +1086,13 @@
   background: var(--accent-cyan);
   color: #fff;
   font-size: 1.3rem;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   flex-shrink: 0;
-  transform: rotate(-5deg);
+  transform: none;
   transition: transform 0.25s $transition-bounce;
 
   .case-study-card-link:hover & {
-    transform: rotate(-10deg) scale(1.1);
+    transform: scale(1.06);
   }
 }
 
@@ -1108,7 +1108,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.28rem 0.7rem;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-sm;
 
   &.badge-filled {
@@ -1132,7 +1132,7 @@
   margin-bottom: 1.25rem;
   padding: 1rem;
   background: var(--bg-secondary);
-  border: 2px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-sm;
 }
 
@@ -1171,7 +1171,7 @@
     font-weight: 600;
     padding: 0.3rem 0.75rem;
     background: var(--card);
-    border: 1.5px solid var(--ink);
+    border: 1px solid var(--border);
     border-radius: $border-radius-sm;
     color: var(--text);
     transition: all 0.3s $transition-bounce;
@@ -1179,7 +1179,7 @@
     &:hover {
       background: var(--accent-yellow);
       border-color: var(--accent-pink);
-      transform: translateY(-3px) rotate(-1deg);
+      transform: translateY(-3px);
     }
   }
 }

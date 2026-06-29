@@ -1,86 +1,86 @@
-// ===== Animations — Sketchy Hand-Drawn =====
-// Wiggle, jitter, and scribble motion. Respects prefers-reduced-motion.
+// ===== Animations =====
+// Smooth, professional reveals. No wiggle or jitter.
 
-// ----- Initial fade in with a little tilt -----
+// Initial fade in
 .fade-in {
   opacity: 0;
-  transform: translateY(12px) rotate(-1deg);
-  animation: fadeUp 0.7s $ease-bounce forwards;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s $transition-smooth forwards;
 }
 
 @keyframes fadeUp {
   to {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 }
 
-// ----- Scroll reveal -----
+// Scroll reveal
 .scroll-animate {
   opacity: 0;
-  transform: translateY(18px) rotate(-1deg);
+  transform: translateY(16px);
   transition:
-    opacity 0.6s $ease-bounce,
-    transform 0.6s $ease-bounce;
+    opacity 0.55s $transition-smooth,
+    transform 0.55s $transition-smooth;
   will-change: opacity, transform;
 
   &.animate-in {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 }
 
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-28px) rotate(-2deg);
-  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
+  transform: translateX(-22px);
+  transition: opacity 0.55s $transition-smooth, transform 0.55s $transition-smooth;
 
   &.animate-in {
     opacity: 1;
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0);
   }
 }
 
 .slide-in-right {
   opacity: 0;
-  transform: translateX(28px) rotate(2deg);
-  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
+  transform: translateX(22px);
+  transition: opacity 0.55s $transition-smooth, transform 0.55s $transition-smooth;
 
   &.animate-in {
     opacity: 1;
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0);
   }
 }
 
-// ----- Stagger inside grids -----
+// Stagger inside grids
 .cards .scroll-animate,
 .cards .card-animate {
   &:nth-child(1) { transition-delay: 0.00s; }
-  &:nth-child(2) { transition-delay: 0.07s; }
-  &:nth-child(3) { transition-delay: 0.14s; }
-  &:nth-child(4) { transition-delay: 0.21s; }
-  &:nth-child(5) { transition-delay: 0.28s; }
-  &:nth-child(6) { transition-delay: 0.35s; }
-  &:nth-child(7) { transition-delay: 0.42s; }
-  &:nth-child(8) { transition-delay: 0.49s; }
+  &:nth-child(2) { transition-delay: 0.06s; }
+  &:nth-child(3) { transition-delay: 0.12s; }
+  &:nth-child(4) { transition-delay: 0.18s; }
+  &:nth-child(5) { transition-delay: 0.24s; }
+  &:nth-child(6) { transition-delay: 0.30s; }
+  &:nth-child(7) { transition-delay: 0.36s; }
+  &:nth-child(8) { transition-delay: 0.42s; }
 }
 
-// ----- Card entrance: draw in -----
+// Card entrance
 .card-animate {
   opacity: 0;
-  transform: translateY(18px) rotate(-1.5deg);
-  transition: opacity 0.6s $ease-bounce, transform 0.6s $ease-bounce;
+  transform: translateY(16px);
+  transition: opacity 0.55s $transition-smooth, transform 0.55s $transition-smooth;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 }
 
 .section-reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.8s $ease-bounce, transform 0.8s $ease-bounce;
+  transform: translateY(20px);
+  transition: opacity 0.7s $transition-smooth, transform 0.7s $transition-smooth;
 
   &.revealed {
     opacity: 1;
@@ -88,110 +88,37 @@
   }
 }
 
-// ----- Scroll progress — hand-drawn marker stripe -----
+// Scroll progress bar
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
-  height: 5px;
+  height: 3px;
   background: var(--gradient-primary);
-  border-bottom: 2px solid var(--ink);
   z-index: 1000;
   transition: width 0.1s linear;
   pointer-events: none;
+  border-radius: 0 2px 2px 0;
 }
 
-// ----- Wiggle keyframes (sketchy jitter) -----
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
-  25%      { transform: rotate(1deg)  translate(1px, -1px); }
-  50%      { transform: rotate(-0.5deg) translate(-1px, 1px); }
-  75%      { transform: rotate(0.8deg) translate(1px, 1px); }
-}
-
-@keyframes jitter {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  25%  { transform: translate(-0.5px, 0.5px) rotate(-0.3deg); }
-  50%  { transform: translate(0.5px, -0.5px) rotate(0.3deg); }
-  75%  { transform: translate(-0.5px, -0.5px) rotate(-0.3deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-// Stop-motion "two-frame" wiggle — simulates hand-drawn animation
-@keyframes handDrawn {
-  0%, 49%   { transform: translate(0, 0) rotate(-0.3deg); }
-  50%, 100% { transform: translate(0.6px, -0.4px) rotate(0.3deg); }
-}
-
-// Periodic nudge for primary CTAs
-@keyframes cta-wiggle {
-  0%, 88%, 100% { transform: rotate(-1.2deg) scale(1); }
-  91% { transform: rotate(2deg) scale(1.05); }
-  94% { transform: rotate(-3deg) scale(1.05); }
-  97% { transform: rotate(1deg) scale(1.02); }
-}
-
-// Active link underline jitter
-@keyframes underline-scribble {
-  0%, 100% { transform: scaleX(1) translateY(0) rotate(0); }
-  33% { transform: scaleX(1.05) translateY(0.5px) rotate(0.2deg); }
-  66% { transform: scaleX(0.97) translateY(-0.5px) rotate(-0.2deg); }
-}
-
-// Profile photo: continuous wiggle
-.profile-photo {
-  animation: wiggle 4s ease-in-out infinite;
-}
-
-// Hero heading: occasional jitter
-.hero h1 {
-  display: inline-block;
-  animation: handDrawn 0.3s steps(2) infinite;
-}
-
-.hero-highlight {
-  animation: handDrawn 0.3s steps(2) infinite;
-}
-
-// Apply stop-motion to icons and social dots
-.card-icon,
-.social-icon,
-.theme-toggle,
-.resume-icon {
-  animation: handDrawn 0.4s steps(2) infinite;
-  animation-play-state: running;
-}
-
-// Pause wiggles when hovered so users can click comfortably
-.card-icon:hover,
-.social-icon:hover,
-.theme-toggle:hover {
-  animation-play-state: paused;
-}
-
-// Nav scrolled state
-.nav.nav-scrolled {
-  box-shadow: 0 4px 0 0 var(--ink);
-}
-
-// ----- Text selection -----
+// Text selection
 ::selection {
-  background: var(--tint-yellow);
-  color: var(--ink);
+  background: rgba(244, 196, 48, 0.32);
+  color: var(--text-bright);
 }
 
-// ----- Focus ring — scribbled dashed outline -----
+// Focus ring
 :focus-visible {
-  outline: 3px dashed var(--accent-pink);
-  outline-offset: 4px;
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 3px;
   border-radius: $border-radius-sm;
 }
 
-// ----- Shimmer skeleton for lazy images -----
+// Shimmer for lazy images
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  100% { background-position:  200% 0; }
 }
 
 img[data-src] {
@@ -205,7 +132,7 @@ img[data-src] {
   animation: shimmer 1.4s linear infinite;
 }
 
-// ----- Reduced motion: disable all the wiggle -----
+// Reduced motion
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -224,16 +151,5 @@ img[data-src] {
   .section-reveal {
     opacity: 1 !important;
     transform: none !important;
-  }
-
-  .profile-photo,
-  .hero h1,
-  .hero-highlight,
-  .card-icon,
-  .social-icon,
-  .theme-toggle,
-  .resume-icon,
-  img[data-src] {
-    animation: none !important;
   }
 }

@@ -104,11 +104,11 @@
   transition: all 0.4s $transition-bounce;
 
   &:hover {
-    transform: translateY(-8px) rotate(-1deg);
+    transform: translateY(-4px);
     border-color: var(--border-bright);
 
     .cert-card-icon {
-      transform: scale(1.1) rotate(5deg);
+      transform: scale(1.08);
     }
 
     .cert-card-action {

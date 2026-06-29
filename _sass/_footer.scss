@@ -2,29 +2,27 @@
 .footer {
   margin-top: 6rem;
   padding: 3rem 2rem;
-  border-top: 3px solid var(--border);
+  border-top: 1px solid var(--border);
   text-align: center;
   color: var(--muted);
-  background: rgba(255, 245, 232, 0.8);
-  backdrop-filter: blur(10px);
+  background: var(--bg-secondary);
 }
 
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.75rem;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 
   i {
-    color: var(--accent-green);
-    transition: all 0.4s $transition-bounce;
+    color: var(--muted);
+    transition: color 0.2s ease, transform 0.2s ease;
     cursor: pointer;
 
     &:hover {
       color: var(--accent-pink);
-      transform: translateY(-8px) rotate(-10deg) scale(1.2);
-      filter: drop-shadow(0 4px 8px rgba(255, 182, 193, 0.4));
+      transform: translateY(-4px);
     }
   }
 }

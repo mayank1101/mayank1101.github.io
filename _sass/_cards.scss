@@ -1,33 +1,29 @@
-// ===== Cards — Sketchy Hand-Drawn =====
+// ===== Cards =====
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1.75rem;
   margin-top: 2.5rem;
 }
 
 .card {
   background: var(--card);
-  border: 2.5px solid var(--ink);
+  border: 1px solid var(--border);
   border-radius: $border-radius-lg;
   padding: 1.75rem;
   position: relative;
-  box-shadow: var(--shadow-medium);
-  transition: transform 0.25s $transition-bounce,
-              box-shadow 0.25s $transition-smooth,
-              background 0.25s ease;
-
-  // Rotate cards slightly for a pinned-to-board feel
-  &:nth-child(odd)  { transform: rotate(-0.6deg); }
-  &:nth-child(even) { transform: rotate(0.5deg); }
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s $transition-smooth,
+              box-shadow 0.22s $transition-smooth,
+              border-color 0.22s ease;
 
   &:hover {
-    transform: rotate(0deg) translate(-2px, -2px);
-    box-shadow: 7px 7px 0 0 var(--ink);
-    background: var(--card-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--border-bright);
 
     h3 { color: var(--accent-pink); }
-    .card-icon { transform: rotate(-10deg) scale(1.08); }
+    .card-icon { transform: scale(1.06); }
   }
 
   h3 {
@@ -36,69 +32,67 @@
   }
 }
 
-// Card Icons — circled marker
+// Card Icons
 .card-icon {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   margin-bottom: 0.9rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
+  width: 46px;
+  height: 46px;
+  border-radius: $border-radius-md;
   background: var(--tint-yellow);
-  color: var(--ink);
-  border: 2.5px solid var(--ink);
-  transition: transform 0.25s $transition-bounce;
-  transform: rotate(-5deg);
+  color: var(--text-bright);
+  border: 1px solid rgba(244, 196, 48, 0.25);
+  transition: transform 0.22s $transition-smooth;
 }
 
 .blog-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--accent-purple);
   margin-bottom: 0.85rem;
   display: inline-block;
-  transition: transform 0.25s $transition-bounce;
-  transform: rotate(-6deg);
+  transition: transform 0.22s $transition-smooth, color 0.2s ease;
 }
 
 .card:hover .blog-icon {
-  transform: rotate(8deg) scale(1.1);
+  transform: scale(1.08);
   color: var(--accent-pink);
 }
 
-// Color variants — marker-swipe backgrounds + ink border stays
+// Color variants
 .card-cyan {
-  background: linear-gradient(180deg, var(--tint-cyan), var(--card) 60%);
-  .card-icon { background: var(--tint-cyan); color: var(--accent-cyan); }
+  background: linear-gradient(160deg, var(--tint-cyan), var(--card) 55%);
+  .card-icon { background: var(--tint-cyan); color: var(--accent-cyan); border-color: rgba(31, 168, 201, 0.2); }
   &:hover h3 { color: var(--accent-cyan); }
 }
 
 .card-blue {
-  background: linear-gradient(180deg, var(--tint-blue), var(--card) 60%);
-  .card-icon { background: var(--tint-blue); color: var(--accent-blue); }
+  background: linear-gradient(160deg, var(--tint-blue), var(--card) 55%);
+  .card-icon { background: var(--tint-blue); color: var(--accent-blue); border-color: rgba(46, 91, 219, 0.2); }
   &:hover h3 { color: var(--accent-blue); }
 }
 
 .card-purple {
-  background: linear-gradient(180deg, var(--tint-purple), var(--card) 60%);
-  .card-icon { background: var(--tint-purple); color: var(--accent-purple); }
+  background: linear-gradient(160deg, var(--tint-purple), var(--card) 55%);
+  .card-icon { background: var(--tint-purple); color: var(--accent-purple); border-color: rgba(123, 63, 212, 0.2); }
   &:hover h3 { color: var(--accent-purple); }
 }
 
 .card-pink {
-  background: linear-gradient(180deg, var(--tint-pink), var(--card) 60%);
-  .card-icon { background: var(--tint-pink); color: var(--accent-pink); }
+  background: linear-gradient(160deg, var(--tint-pink), var(--card) 55%);
+  .card-icon { background: var(--tint-pink); color: var(--accent-pink); border-color: rgba(226, 61, 122, 0.2); }
   &:hover h3 { color: var(--accent-pink); }
 }
 
 .card-green {
-  background: linear-gradient(180deg, var(--tint-green), var(--card) 60%);
-  .card-icon { background: var(--tint-green); color: var(--accent-green); }
+  background: linear-gradient(160deg, var(--tint-green), var(--card) 55%);
+  .card-icon { background: var(--tint-green); color: var(--accent-green); border-color: rgba(62, 154, 76, 0.2); }
   &:hover h3 { color: var(--accent-green); }
 }
 
 .card-yellow {
-  background: linear-gradient(180deg, var(--tint-yellow), var(--card) 60%);
-  .card-icon { background: var(--tint-yellow); color: var(--accent-yellow); }
+  background: linear-gradient(160deg, var(--tint-yellow), var(--card) 55%);
+  .card-icon { background: var(--tint-yellow); color: var(--text-bright); }
 }

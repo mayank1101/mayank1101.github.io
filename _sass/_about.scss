@@ -90,7 +90,7 @@
       background: var(--accent-yellow);
       color: var(--text-bright);
       border-color: var(--accent-pink);
-      transform: translateY(-4px) rotate(-2deg);
+      transform: translateY(-3px);
     }
   }
 }
@@ -135,7 +135,7 @@
     background: var(--accent-green);
     color: var(--card);
     border-color: var(--accent-green);
-    transform: translateY(-4px) rotate(-2deg);
+    transform: translateY(-3px);
   }
 
   &:disabled {
