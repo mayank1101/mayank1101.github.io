@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Token by Token"
+description: "My personal learning notes on ML, NLP, and Deep Learning — written as I learn, open for anyone to use."
+---
+
+{% include navbar.html %}
+
+<div class="container hero fade-in">
+  <h1>Token by Token</h1>
+  <p class="lead">My notes on machine learning, as I learn it.</p>
+  <p class="muted">These are the notes I wish I had when I started. Written to understand things properly, not to impress anyone — open to whoever finds them useful.</p>
+</div>
+
+<div class="container section">
+  <div class="manifesto-container scroll-animate">
+    <div class="manifesto-section">
+      <p class="manifesto-intro">
+        I kept running into the same problem: most explanations were either <strong>too hand-wavy</strong> to be useful, or assumed I already knew the thing I was trying to learn.
+      </p>
+      <p class="manifesto-text">
+        So I started writing my own notes. The rule I set for myself: <em>don't move on until I can explain it clearly</em>. If I can't write it out without leaning on jargon, I don't actually understand it yet.
+      </p>
+      <p class="manifesto-highlight">
+        These aren't polished tutorials. They're how I actually learned this stuff — and they're here in case they help you too.
+      </p>
+    </div>
+
+    <div class="manifesto-audience">
+      <h3><i class="fas fa-sticky-note"></i> How to use these notes</h3>
+      <ul>
+        <li>Each series follows the order I learned things in — start from the top</li>
+        <li>The math is there when it matters, skipped when it doesn't add anything</li>
+        <li>If something's unclear, that's a gap in my notes — I'm still filling them in</li>
+      </ul>
+    </div>
+
+    <div class="manifesto-cta">
+      Pick a topic below. <strong>Start from article one and go in order.</strong>
+    </div>
+  </div>
+</div>
+
+<div class="container section">
+  <h2>Learning Notes</h2>
+  <div class="series-grid">
+    {% assign sorted_series = site.data.series | sort: "order" %}
+    {% for series in sorted_series %}
+    <a href="/series/{{ series.slug }}/" class="series-card card-{{ series.accent_color }}">
+      <div class="series-card-content">
+        <h3>{{ series.name }}</h3>
+        <p>{{ series.description }}</p>
+      </div>
+      <div class="series-card-footer">
+        <span class="series-card-meta">
+          <i class="fas fa-pencil-alt"></i> Mayank's notes
+        </span>
+        {% assign series_posts = site.posts | where: "series", series.name %}
+        <span class="series-card-meta">
+          <i class="fas fa-file-alt"></i> {{ series_posts | size }} notes
+        </span>
+        <span class="series-card-action">
+          Open Notes <i class="fas fa-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% include footer.html %}
