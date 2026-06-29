@@ -7,14 +7,14 @@
 
 - name: "Deep Learning for Engineers"
   slug: "deep-learning"
-  description: "Notes from learning how neural networks work from scratch — forward pass, backprop, CNNs, RNNs, and beyond. Written to actually understand it, not just use it."
+  description: "Notes from deep learning, from how neural networks work from scratch to advanced topics. Covering, forward pass, backprop, CNNs, RNNs, and beyond. Written to actually understand it, not just use it."
   accent_color: "purple"
   author: "Mayank Sharma"
   order: 1
 
 - name: "Machine Learning for Engineers"
   slug: "machine-learning"
-  description: "My notes on core ML — how models learn, why they fail, and what the math is actually doing. The foundation I built before going deeper into deep learning."
+  description: "My notes on core ML. How models learn, why they fail, and what the math is actually doing. The foundation I built before going deeper into deep learning."
   accent_color: "cyan"
   author: "Mayank Sharma"
   order: 2
