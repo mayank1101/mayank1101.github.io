@@ -175,7 +175,7 @@ $$P(y = k \mid x) = \frac{e^{z_k}}{\sum_{j=1}^{K} e^{z_j}}$$
 If your model has too many features, it will overfit by memorizing the noise in your training set. We control this by adding a penalty term to our cost function:
 
 * **L2 Regularization (Ridge):** Adds a penalty equal to the *square* of the weights ($\theta^2$). It forces the weights to become very small, creating smoother decision boundaries.
-* **L1 Regularization (Lasso):** Adds a penalty equal to the *absolute value* of the weights ($|\theta|$). This has a unique property: it can drive less important feature weights **exactly to zero**, effectively acting as an automatic feature selector.
+* **L1 Regularization (Lasso):** Adds a penalty equal to the *absolute value* of the weights ($\lvert\theta\rvert$). This has a unique property: it can drive less important feature weights **exactly to zero**, effectively acting as an automatic feature selector.
 
 ---
 
