@@ -1,4 +1,5 @@
-// ===== Manifesto Styles (Token by Token) =====
+// ===== Manifesto Styles (Token by Token page) =====
+
 .manifesto-container {
   max-width: 900px;
   margin: 3rem auto;
@@ -16,6 +17,7 @@
   border-bottom: 1px solid var(--border);
 }
 
+// Lead paragraph — larger, high-contrast opener
 .manifesto-intro {
   font-size: 1.3rem;
   line-height: 1.8;
@@ -46,6 +48,7 @@
   }
 }
 
+// Pull quote style — pink left border
 .manifesto-highlight {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -58,8 +61,8 @@
   border-radius: 0 $border-radius-sm $border-radius-sm 0;
 }
 
-.manifesto-audience,
-.manifesto-topics {
+// Audience box with bullet list
+.manifesto-audience {
   margin: 2.5rem 0;
   padding: 2rem;
   background: rgba(180, 215, 233, 0.1);
@@ -75,9 +78,7 @@
     gap: 0.7rem;
     font-family: $font-heading;
 
-    i {
-      color: var(--accent-purple);
-    }
+    i { color: var(--accent-purple); }
   }
 
   ul {
@@ -94,6 +95,7 @@
     line-height: 1.7;
     color: var(--text);
 
+    // Arrow bullet
     &::before {
       content: "▹";
       position: absolute;
@@ -111,11 +113,6 @@
   }
 }
 
-.manifesto-closing {
-  margin: 2.5rem 0;
-  text-align: center;
-}
-
 .manifesto-cta {
   font-size: 1.15rem;
   line-height: 1.8;
@@ -129,17 +126,7 @@
   }
 }
 
-.manifesto-welcome {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: var(--text-bright);
-  margin: 2rem 0 0 0;
-  text-align: center;
-  font-weight: 700;
-  font-family: $font-heading;
-}
-
-// Mobile responsive for manifesto
+// ===== Responsive =====
 @media (max-width: $breakpoint-sm) {
   .manifesto-container {
     padding: 2rem 1.5rem;
@@ -159,13 +146,10 @@
     padding-left: 1rem;
   }
 
-  .manifesto-audience,
-  .manifesto-topics {
+  .manifesto-audience {
     padding: 1.5rem;
 
-    h3 {
-      font-size: 1.1rem;
-    }
+    h3 { font-size: 1.1rem; }
 
     li {
       font-size: 1rem;
@@ -175,10 +159,6 @@
 
   .manifesto-cta {
     font-size: 1.05rem;
-  }
-
-  .manifesto-welcome {
-    font-size: 1.2rem;
   }
 }
 
@@ -195,12 +175,9 @@
     font-size: 0.95rem;
   }
 
-  .manifesto-audience,
-  .manifesto-topics {
+  .manifesto-audience {
     padding: 1.2rem;
 
-    li {
-      font-size: 0.95rem;
-    }
+    li { font-size: 0.95rem; }
   }
 }

@@ -22,3 +22,5 @@
 @import "manifesto";
 @import "theme-overrides";
 @import "responsive";
+// dark-mode removed: theme-script.html forces light only, [data-theme="dark"] never applies
+

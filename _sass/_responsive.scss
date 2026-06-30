@@ -281,9 +281,6 @@ html, body {
     padding: 1.5rem 1rem;
   }
 
-  // Resume section (Unused/Duplicate)
-  // Removed to avoid conflict with dedicated resume page styles
-
   // Buttons
   .cta {
     padding: 0.9rem 1.4rem;
@@ -344,11 +341,6 @@ html, body {
     max-width: 100%;
   }
 
-  .series-image img {
-    width: 120px;
-    height: 120px;
-  }
-
   .series-title {
     font-size: 1.3rem;
   }
@@ -356,11 +348,6 @@ html, body {
   // Blog cards
   .blog-card-image {
     height: 180px;
-  }
-
-  .blog-series-badge {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
   }
 
   .blog-card-content {
@@ -395,58 +382,6 @@ html, body {
       font-size: 0.85rem;
       padding: 0.4rem 0.8rem;
     }
-  }
-
-  // Blog list
-  .blog-card-list {
-    flex-direction: column;
-  }
-
-  .blog-card-image-list {
-    width: 100%;
-    height: 180px;
-  }
-
-  .blog-card-content-list {
-    padding: 1.5rem;
-
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    p {
-      font-size: 0.9rem;
-    }
-  }
-
-  // Pagination
-  .pagination {
-    margin-top: 3rem;
-    padding-top: 2rem;
-  }
-
-  .pagination-info {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .pagination-controls {
-    gap: 0.8rem;
-  }
-
-  .pagination-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .pagination-numbers {
-    gap: 0.4rem;
-  }
-
-  .page-number {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
   }
 
   // Series footer
@@ -570,11 +505,6 @@ html, body {
     padding: 1rem;
   }
 
-  .series-image img {
-    width: 100px;
-    height: 100px;
-  }
-
   .series-title {
     font-size: 1.1rem;
   }
@@ -604,40 +534,6 @@ html, body {
     padding: 0.35rem 0.7rem;
   }
 
-  .blog-card-image-list {
-    height: 150px;
-  }
-
-  .blog-card-content-list {
-    padding: 1.2rem;
-
-    h3 {
-      font-size: 1.1rem;
-    }
-
-    p {
-      font-size: 0.85rem;
-    }
-  }
-
-  .pagination-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-
-    i {
-      font-size: 0.8rem;
-    }
-  }
-
-  .page-number {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
-  }
-
-  .pagination-numbers {
-    gap: 0.3rem;
-  }
 }
 
 // Landscape mobile
@@ -685,10 +581,6 @@ html, body {
     transform: scale(1);
   }
 
-  .blog-card-list:hover .blog-card-image-list img {
-    transform: scale(1);
-  }
-
   .cta:active {
     transform: scale(0.97);
     opacity: 0.9;
@@ -696,17 +588,6 @@ html, body {
 
   .card:active {
     transform: scale(0.98);
-  }
-}
-
-// Dark mode mobile navigation
-@media (max-width: $breakpoint-sm) {
-  [data-theme="dark"] .nav-center .nav-link {
-    background: var(--bg-secondary);
-
-    &:hover {
-      background: var(--card);
-    }
   }
 }
 

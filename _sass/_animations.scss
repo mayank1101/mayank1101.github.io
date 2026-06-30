@@ -1,7 +1,7 @@
 // ===== Animations =====
 // Smooth, professional reveals. No wiggle or jitter.
 
-// Initial fade in
+// Initial fade in — applied to page-level hero containers
 .fade-in {
   opacity: 0;
   transform: translateY(10px);
@@ -15,7 +15,7 @@
   }
 }
 
-// Scroll reveal
+// Scroll reveal — toggled to .animate-in by animations.js IntersectionObserver
 .scroll-animate {
   opacity: 0;
   transform: translateY(16px);
@@ -30,6 +30,7 @@
   }
 }
 
+// Slide from left (about page, hero text)
 .slide-in-left {
   opacity: 0;
   transform: translateX(-22px);
@@ -41,20 +42,8 @@
   }
 }
 
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(22px);
-  transition: opacity 0.55s $transition-smooth, transform 0.55s $transition-smooth;
-
-  &.animate-in {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-// Stagger inside grids
-.cards .scroll-animate,
-.cards .card-animate {
+// Stagger delays for cards inside a .cards grid
+.cards .scroll-animate {
   &:nth-child(1) { transition-delay: 0.00s; }
   &:nth-child(2) { transition-delay: 0.06s; }
   &:nth-child(3) { transition-delay: 0.12s; }
@@ -65,30 +54,7 @@
   &:nth-child(8) { transition-delay: 0.42s; }
 }
 
-// Card entrance
-.card-animate {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.55s $transition-smooth, transform 0.55s $transition-smooth;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section-reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s $transition-smooth, transform 0.7s $transition-smooth;
-
-  &.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Scroll progress bar
+// Scroll progress bar — width driven by scroll position in animations.js
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -102,20 +68,20 @@
   border-radius: 0 2px 2px 0;
 }
 
-// Text selection
+// Text selection highlight
 ::selection {
   background: rgba(244, 196, 48, 0.32);
   color: var(--text-bright);
 }
 
-// Focus ring
+// Focus ring — keyboard navigation
 :focus-visible {
   outline: 2px solid var(--accent-pink);
   outline-offset: 3px;
   border-radius: $border-radius-sm;
 }
 
-// Shimmer for lazy images
+// Shimmer placeholder for lazy-loaded images
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
   100% { background-position:  200% 0; }
@@ -132,7 +98,7 @@ img[data-src] {
   animation: shimmer 1.4s linear infinite;
 }
 
-// Reduced motion
+// Reduced motion — disable all transitions/animations for accessibility
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -145,10 +111,7 @@ img[data-src] {
 
   .fade-in,
   .scroll-animate,
-  .slide-in-left,
-  .slide-in-right,
-  .card-animate,
-  .section-reveal {
+  .slide-in-left {
     opacity: 1 !important;
     transform: none !important;
   }

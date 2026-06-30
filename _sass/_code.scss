@@ -1,6 +1,6 @@
 // ===== Code Blocks =====
 
-// Block: outer wrapper div.highlight
+// Outer wrapper div.highlight (Rouge-generated)
 .highlight {
   background: #EDE8DC;
   border-radius: $border-radius-md;
@@ -12,7 +12,7 @@
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
 
-  // Nested pre inside highlight wrapper — transparent, no double padding
+  // Nested pre — transparent so outer div bg shows through
   pre {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@
   }
 }
 
-// Standalone pre (not inside .highlight)
+// Standalone pre not wrapped by .highlight
 pre:not(.highlight) {
   background: #EDE8DC;
   padding: 1.2rem 1.4rem;
@@ -43,7 +43,7 @@ pre:not(.highlight) {
   line-height: 1.7;
 }
 
-// MathJax display equations — scroll horizontally when wider than viewport
+// MathJax display equations
 mjx-container[display="true"] {
   display: block !important;
   overflow-x: auto;
@@ -52,13 +52,13 @@ mjx-container[display="true"] {
   max-width: 100%;
   padding-bottom: 0.25rem;
 
-  // Allow internal SVG/math nodes to be their natural width
   svg, mjx-math {
     max-width: none !important;
   }
 }
 
-// Inline code
+// ===== Inline Code =====
+
 code {
   font-family: $font-mono;
   font-size: 0.88em;
@@ -71,7 +71,7 @@ code {
   border: 1px solid rgba(244, 196, 48, 0.30);
 }
 
-// Code inside pre — reset inline code styles
+// Reset inline styles when code is inside a block
 pre code,
 .highlight code {
   background: transparent;
@@ -84,84 +84,95 @@ pre code,
   overflow-wrap: normal;
 }
 
-// ===== Rouge/Pygments Syntax Highlighting =====
+// Inline code highlighted by Rouge (e.g. `import os` in prose)
+// Shows as regular inline code without conflicting syntax colors
+code.highlighter-rouge {
+  background: rgba(244, 196, 48, 0.22);
+  color: #6B4C00;
+  border-color: rgba(244, 196, 48, 0.30);
+
+  // Reset span colors so tokens don't clash with yellow bg
+  span { color: inherit; font-weight: inherit; font-style: inherit; }
+}
+
+// ===== Rouge / Pygments Syntax Tokens (light mode) =====
 
 // Keywords
-.highlight .k   { color: #8B5A9C; font-weight: 600; }
+.highlight .k,
 .highlight .kd  { color: #8B5A9C; font-weight: 600; }
 .highlight .kn  { color: #4A90A4; font-weight: 600; }
-.highlight .kp  { color: #8B5A9C; }
+.highlight .kp,
 .highlight .kr  { color: #8B5A9C; }
 .highlight .kt  { color: #A67C52; }
-.highlight .kc  { color: #D87A52; font-weight: 600; }
+.highlight .kc  { color: #D87A52; font-weight: 600; } // True, False, None
 
 // Names
-.highlight .n   { color: #2C2824; }
-.highlight .na  { color: #3A7A8C; }
-.highlight .nb  { color: #3A7A8C; }
-.highlight .nc  { color: #A67C52; }
-.highlight .nd  { color: #4A90A4; }
-.highlight .ne  { color: #C45A5F; }
-.highlight .nf  { color: #3A7A8C; }
-.highlight .nl  { color: #3A7A8C; }
-.highlight .nn  { color: #A67C52; }
+.highlight .n,
 .highlight .nx  { color: #2C2824; }
-.highlight .nv  { color: #C45A5F; }
-.highlight .vc  { color: #C45A5F; }
-.highlight .vg  { color: #C45A5F; }
-.highlight .vi  { color: #C45A5F; }
+.highlight .na  { color: #3A7A8C; } // attribute
+.highlight .nb  { color: #3A7A8C; } // builtin
+.highlight .nc  { color: #A67C52; } // class
+.highlight .nd  { color: #4A90A4; } // decorator
+.highlight .ne  { color: #C45A5F; } // exception
+.highlight .nf,
+.highlight .fm  { color: #3A7A8C; } // function, format method
+.highlight .nl  { color: #3A7A8C; } // label
+.highlight .nn  { color: #A67C52; } // namespace
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm  { color: #C45A5F; } // variables
+.highlight .bp  { color: #3A7A8C; } // builtin pseudo (self, cls)
 
-// Literals
-.highlight .s   { color: #5A8F5A; }
-.highlight .s1  { color: #5A8F5A; }
-.highlight .s2  { color: #5A8F5A; }
-.highlight .sb  { color: #5A8F5A; }
-.highlight .sc  { color: #5A8F5A; }
-.highlight .sd  { color: #8B7E6A; font-style: italic; }
-.highlight .se  { color: #4A90A4; }
-.highlight .sh  { color: #5A8F5A; }
-.highlight .si  { color: #4A90A4; }
+// Strings
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sh,
 .highlight .sx  { color: #5A8F5A; }
-.highlight .sr  { color: #4A90A4; }
-.highlight .ss  { color: #4A90A4; }
+.highlight .sd  { color: #8B7E6A; font-style: italic; } // docstring
+.highlight .se,
+.highlight .si  { color: #4A90A4; } // escape, interpolation
+.highlight .sr,
+.highlight .ss  { color: #4A90A4; } // regex, symbol
 
 // Numbers
-.highlight .m   { color: #D87A52; }
-.highlight .mf  { color: #D87A52; }
-.highlight .mh  { color: #D87A52; }
-.highlight .mi  { color: #D87A52; }
-.highlight .mo  { color: #D87A52; }
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
 .highlight .il  { color: #D87A52; }
 
 // Operators & punctuation
-.highlight .o   { color: #5A7A94; }
+.highlight .o,
 .highlight .ow  { color: #5A7A94; font-weight: 600; }
 .highlight .p   { color: #5A5048; }
 
 // Comments
-.highlight .c   { color: #9B8E7A; font-style: italic; }
-.highlight .c1  { color: #9B8E7A; font-style: italic; }
-.highlight .cm  { color: #9B8E7A; font-style: italic; }
-.highlight .cp  { color: #4A90A4; font-style: italic; }
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
 .highlight .cs  { color: #9B8E7A; font-style: italic; }
 
-// Generic
+// Generic (diff output, etc.)
 .highlight .gd  { color: #C45A5F; }
 .highlight .ge  { font-style: italic; }
-.highlight .gh  { color: #3A7A8C; font-weight: bold; }
+.highlight .gh,
+.highlight .gu  { color: #3A7A8C; font-weight: bold; }
 .highlight .gi  { color: #5A8F5A; }
 .highlight .gp  { color: #9B8E7A; font-weight: bold; }
 .highlight .gs  { font-weight: bold; }
-.highlight .gu  { color: #4A90A4; font-weight: bold; }
 
-// Errors
-.highlight .err { color: #C45A5F; background-color: rgba(196, 90, 95, 0.10); }
+// Errors — color only, no bg so Unicode chars (→, ×, etc.) don't look broken
+.highlight .err { color: #C45A5F; }
 
-// Others
+// Whitespace
 .highlight .w   { color: #2C2824; }
-.highlight .bp  { color: #3A7A8C; }
-.highlight .fm  { color: #3A7A8C; }
-.highlight .vm  { color: #C45A5F; }
 
 // Line numbers
 .highlight .lineno {

@@ -3,7 +3,7 @@
   margin-top: 1rem;
 }
 
-// Story paragraphs — left-border pull quote treatment
+// Left-border accent on each story paragraph, cycling through accent colors
 .about-story p {
   padding-left: 1.25rem;
   border-left: 3px solid transparent;
@@ -31,13 +31,8 @@
   font-style: italic;
   color: var(--muted);
 
-  .fa-quote-left {
-    margin-right: 0.5rem;
-  }
-
-  .fa-quote-right {
-    margin-left: 0.5rem;
-  }
+  .fa-quote-left  { margin-right: 0.5rem; }
+  .fa-quote-right { margin-left: 0.5rem; }
 }
 
 .about-story {
@@ -62,7 +57,7 @@
   }
 }
 
-// Skills Grid
+// ===== Skills Grid =====
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -91,88 +86,5 @@
       color: var(--text-bright);
       border-color: var(--border-bright);
     }
-  }
-}
-
-// ===== Pagination Styles =====
-.pagination {
-  margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 1px solid var(--border);
-}
-
-.pagination-info {
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
-}
-
-.pagination-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.pagination-btn {
-  background: var(--card);
-  border: 1px solid var(--border-bright);
-  color: var(--text);
-  padding: 0.7rem 1.5rem;
-  border-radius: $border-radius-sm;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-
-  &:hover:not(:disabled) {
-    background: var(--accent-pink);
-    color: #fff;
-    border-color: var(--accent-pink);
-    transform: translateY(-2px);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-}
-
-.pagination-numbers {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.page-number {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: $border-radius-sm;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  font-size: 0.95rem;
-
-  &:hover {
-    background: var(--bg-secondary);
-    border-color: var(--border-bright);
-    color: var(--text-bright);
-  }
-
-  &.active {
-    background: var(--accent-pink);
-    border-color: var(--accent-pink);
-    color: #fff;
   }
 }

@@ -1,6 +1,7 @@
 // ===== Theme — Component Overrides =====
+// Fine-tuned per-component adjustments applied after component files.
 
-// ----- Footer -----
+// ===== Footer =====
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
@@ -11,18 +12,9 @@
   }
 }
 
-// ----- Blog listing -----
-.blog-hero,
-.blog-featured,
-.blog-archive,
-.blog-intro,
-.blog-list-section {
-  background: transparent;
-}
-
-.blog-card,
-.blog-card-list,
-.blog-card-featured {
+// ===== Blog Cards =====
+// Ensure card surfaces always use design-system tokens
+.blog-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: $border-radius-lg;
@@ -37,7 +29,8 @@
   }
 }
 
-// ----- Certifications -----
+// ===== Certifications =====
+// Base surface override; accent-color gradients are in _certifications.scss
 .cert-card,
 .cert-card.card-cyan,
 .cert-card.card-pink,
@@ -48,22 +41,11 @@
   box-shadow: var(--shadow-soft);
 }
 
-.cert-lead,
-.cert-hero {
+.cert-lead {
   background: transparent;
 }
 
-// ----- About page -----
-.about-highlight,
-.about-stat,
-.about-value {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: $border-radius-md;
-  box-shadow: var(--shadow-soft);
-}
-
-// ----- Manifesto / Series -----
+// ===== Manifesto / Series =====
 .manifesto-container,
 .series-banner {
   background: var(--card);
@@ -72,14 +54,13 @@
   box-shadow: var(--shadow-medium);
 }
 
-.manifesto-audience,
-.manifesto-topics {
+.manifesto-audience {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: $border-radius-md;
 }
 
-// ----- Tables -----
+// ===== Tables =====
 table {
   background: var(--card);
   border: 1px solid var(--border);
@@ -105,7 +86,7 @@ table {
 
 // Code block styles are fully defined in _code.scss
 
-// Light-mode syntax highlighting
+// Light-mode syntax highlighting — fine-tunes token colors vs _code.scss defaults
 .highlight {
   .k, .kd { color: #7B3FD4; font-weight: 600; }
   .kn     { color: #2E5BDB; }
@@ -123,7 +104,8 @@ table {
   .w      { color: #1E1C18; }
 }
 
-// ----- Lists inside content -----
+// ===== Lists inside content =====
+// Custom arrow bullet for <ul> in .container; excludes badge/nav lists
 .container ul:not(.badges):not(.nav-center):not(.nav-social) > li {
   list-style: none;
   position: relative;
@@ -137,7 +119,7 @@ table {
   }
 }
 
-// ----- Blockquote -----
+// ===== Blockquote =====
 blockquote {
   border-left: 3px solid var(--accent-pink);
   padding: 0.75rem 1.25rem;
@@ -149,14 +131,10 @@ blockquote {
   box-shadow: var(--shadow-soft);
 }
 
-// ----- Horizontal rule -----
+// ===== Horizontal Rule =====
 hr {
   border: none;
   height: 1px;
   background: var(--border);
   margin: 2.5rem 0;
-}
-
-[data-theme="dark"] hr {
-  background: var(--border);
 }

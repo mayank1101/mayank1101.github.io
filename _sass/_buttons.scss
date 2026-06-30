@@ -1,5 +1,6 @@
 // ===== Buttons =====
 
+// Shared base via SCSS placeholder — extended by .cta and .cta-secondary
 %btn-base {
   display: inline-flex;
   align-items: center;
@@ -30,6 +31,7 @@
   }
 }
 
+// Primary CTA — warm yellow
 .cta {
   @extend %btn-base;
   background: var(--accent-yellow);
@@ -42,11 +44,13 @@
   }
 }
 
+// Larger CTA variant — used on hero and CTA sections
 .cta-large {
   padding: 0.88rem 1.9rem;
   font-size: 1.05rem;
 }
 
+// Secondary CTA — card-style outlined
 .cta-secondary {
   @extend %btn-base;
   background: var(--card);
@@ -58,28 +62,4 @@
     border-color: var(--border-bright);
     color: var(--text-bright);
   }
-}
-
-// Theme toggle — defined fully in _navigation.scss; stub here for import order safety
-.theme-toggle {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: $border-radius-md;
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease;
-
-  &:hover {
-    color: var(--text-bright);
-    background: var(--card);
-  }
-
-  .fa-sun  { display: none; }
-  .fa-moon { display: inline; }
 }

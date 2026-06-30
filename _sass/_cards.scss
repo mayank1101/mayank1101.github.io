@@ -32,7 +32,7 @@
   }
 }
 
-// Card Icons
+// ===== Card Icon =====
 .card-icon {
   font-size: 1.45rem;
   margin-bottom: 0.9rem;
@@ -48,30 +48,13 @@
   transition: transform 0.22s $transition-smooth;
 }
 
-.blog-icon {
-  font-size: 1.4rem;
-  color: var(--accent-purple);
-  margin-bottom: 0.85rem;
-  display: inline-block;
-  transition: transform 0.22s $transition-smooth, color 0.2s ease;
-}
+// ===== Accent Color Variants =====
+// Applied as modifier classes: <div class="card card-cyan">
 
-.card:hover .blog-icon {
-  transform: scale(1.08);
-  color: var(--accent-pink);
-}
-
-// Color variants
 .card-cyan {
   background: linear-gradient(160deg, var(--tint-cyan), var(--card) 55%);
   .card-icon { background: var(--tint-cyan); color: var(--accent-cyan); border-color: rgba(31, 168, 201, 0.2); }
   &:hover h3 { color: var(--accent-cyan); }
-}
-
-.card-blue {
-  background: linear-gradient(160deg, var(--tint-blue), var(--card) 55%);
-  .card-icon { background: var(--tint-blue); color: var(--accent-blue); border-color: rgba(46, 91, 219, 0.2); }
-  &:hover h3 { color: var(--accent-blue); }
 }
 
 .card-purple {
@@ -84,15 +67,4 @@
   background: linear-gradient(160deg, var(--tint-pink), var(--card) 55%);
   .card-icon { background: var(--tint-pink); color: var(--accent-pink); border-color: rgba(226, 61, 122, 0.2); }
   &:hover h3 { color: var(--accent-pink); }
-}
-
-.card-green {
-  background: linear-gradient(160deg, var(--tint-green), var(--card) 55%);
-  .card-icon { background: var(--tint-green); color: var(--accent-green); border-color: rgba(62, 154, 76, 0.2); }
-  &:hover h3 { color: var(--accent-green); }
-}
-
-.card-yellow {
-  background: linear-gradient(160deg, var(--tint-yellow), var(--card) 55%);
-  .card-icon { background: var(--tint-yellow); color: var(--text-bright); }
 }

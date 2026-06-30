@@ -1,5 +1,6 @@
 // ===== Certifications Page Styles =====
 
+// ===== Hero =====
 .cert-hero-content {
   display: flex;
   flex-direction: column;
@@ -12,6 +13,7 @@
   width: 100%;
 }
 
+// Large title row: icon + h1 side by side
 .cert-hero-title {
   display: inline-flex;
   align-items: center;
@@ -46,15 +48,7 @@
   color: var(--text-bright);
 }
 
-.cert-subtitle {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  max-width: 750px;
-  margin: 1.5rem auto 0;
-  color: var(--muted);
-}
-
-// Stats
+// ===== Stats Row =====
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -72,18 +66,18 @@
   font-size: 3rem;
   margin-bottom: 0.5rem;
 
-  &.cyan  { color: var(--accent-cyan); }
+  &.cyan   { color: var(--accent-cyan); }
   &.purple { color: var(--accent-purple); }
-  &.pink  { color: var(--accent-pink); }
+  &.pink   { color: var(--accent-pink); }
 }
 
 .stat-value {
   font-size: 2.5rem;
   margin: 0.5rem 0;
 
-  &.cyan  { color: var(--accent-cyan); }
+  &.cyan   { color: var(--accent-cyan); }
   &.purple { color: var(--accent-purple); }
-  &.pink  { color: var(--accent-pink); }
+  &.pink   { color: var(--accent-pink); }
 }
 
 // ===== Cert Cards Grid =====
@@ -210,14 +204,7 @@
   font-size: 1.1rem;
 }
 
-.cert-learning-list {
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 2;
-  font-size: 1.1rem;
-}
-
-// ===== CTA card =====
+// ===== CTA Card =====
 .cta-card {
   max-width: 700px;
   margin: 0 auto;
@@ -246,7 +233,7 @@
   flex-wrap: wrap;
 }
 
-// Empty state
+// ===== Empty State =====
 .empty-state {
   text-align: center;
   padding: 3rem;

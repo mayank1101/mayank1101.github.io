@@ -1,5 +1,6 @@
 // ===== Resume Page Styles =====
 
+// Two-column hero: icon visual on right, text content on left
 .resume-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,6 +23,7 @@
   display: inline-block;
 }
 
+// Soft glow ring behind the icon
 .resume-icon-glow {
   position: absolute;
   inset: -20px;
@@ -37,30 +39,6 @@
   line-height: 1;
   color: var(--accent-cyan);
   text-shadow: 0 0 40px rgba(0, 188, 212, 0.3);
-}
-
-.resume-badges {
-  margin-top: 3.5rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.resume-badge {
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin: 0.25rem;
-}
-
-.resume-badge-cyan {
-  background: var(--accent-cyan);
-}
-
-.resume-badge-purple {
-  background: var(--accent-purple);
 }
 
 .resume-content {
@@ -88,12 +66,7 @@
   }
 }
 
-.accent-purple {
-  color: var(--accent-purple);
-  font-weight: 600;
-}
-
-// ===== Responsive Styles =====
+// ===== Responsive =====
 @media (max-width: 768px) {
   .resume-hero-grid {
     grid-template-columns: 1fr;
@@ -117,7 +90,7 @@
   }
 }
 
-// Digital Profile cards
+// ===== Digital Profile Cards =====
 .resume-profile-cards {
   margin-top: 2rem;
 }

@@ -39,12 +39,13 @@
     }
   }
 
+  // Add shadow when user has scrolled (class toggled by animations.js)
   &.nav-scrolled {
     box-shadow: var(--shadow-soft);
   }
 }
 
-// Center links
+// ===== Center Nav Links =====
 .nav-center {
   display: flex;
   gap: 1.75rem;
@@ -64,6 +65,7 @@
     transition: color 0.2s ease;
     letter-spacing: 0.01em;
 
+    // Underline slide-in on hover/active
     &::after {
       content: '';
       position: absolute;
@@ -89,6 +91,7 @@
   }
 }
 
+// ===== Right Side: Social + CTA =====
 .nav-right {
   display: flex;
   align-items: center;
@@ -123,53 +126,7 @@
   }
 }
 
-.theme-toggle {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: $border-radius-md;
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 0.95rem;
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-
-  i {
-    position: absolute;
-    transition: transform 0.3s $transition-smooth, opacity 0.3s ease;
-  }
-
-  .fa-sun {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  &:hover {
-    color: var(--text-bright);
-    background: var(--card);
-    border-color: var(--border-bright);
-    box-shadow: var(--shadow-soft);
-  }
-}
-
-[data-theme="dark"] .theme-toggle {
-  .fa-moon {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-  .fa-sun {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Resume CTA in nav
+// Resume CTA pill in nav
 .cta-nav {
   font-family: $font-primary;
   background: var(--accent-pink);
@@ -190,7 +147,7 @@
   }
 }
 
-// Hamburger
+// ===== Hamburger (Mobile Only) =====
 .hamburger {
   display: none;
   flex-direction: column;
@@ -210,14 +167,10 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+  // X shape when menu is open
   &.active {
     span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     span:nth-child(2) { opacity: 0; }
     span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
   }
-}
-
-[data-theme="dark"] .nav {
-  background: rgba(24, 23, 28, 0.94);
-  border-bottom-color: var(--border);
 }
