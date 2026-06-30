@@ -86,7 +86,7 @@ $$\text{Error} = \text{Actual Value} - \text{Predicted Value} = y_i - \hat{y}_i$
 
 > 💡 **Interview Hotseat Question:** *Why can't we just add up all the raw errors to find the best line?*
 > 
-> **Answer:** Because positive and negative errors cancel each other out! If your model is $\$10,000$ too high on House A, and $\$10,000$ too low on House B, adding them gives a total error of $0$. It looks flawless on paper, but it missed both houses completely.
+> **Answer:** Because positive and negative errors cancel each other out! If your model is \$10,000 too high on House A, and \$10,000 too low on House B, adding them gives a total error of $0$. It looks flawless on paper, but it missed both houses completely.
 
 ---
 
