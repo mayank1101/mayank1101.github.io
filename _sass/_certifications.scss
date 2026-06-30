@@ -99,43 +99,34 @@
   flex-direction: column;
   background: var(--card);
   border-radius: $border-radius-lg;
-  border: 3px solid var(--border);
+  border: 1px solid var(--border);
+  border-top: 3px solid transparent;
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
-  transition: all 0.4s $transition-bounce;
+  transition: transform 0.22s $transition-smooth, box-shadow 0.22s $transition-smooth;
 
   &:hover {
-    transform: translateY(-4px);
-    border-color: var(--border-bright);
-
-    .cert-card-icon {
-      transform: scale(1.08);
-    }
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 
     .cert-card-action {
       color: var(--accent-pink);
-      transform: translateX(4px);
     }
   }
 
   &.card-cyan {
-    border-left: 5px solid var(--accent-cyan);
-    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), var(--card));
-
-    .cert-card-icon { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); }
+    border-top-color: var(--accent-cyan);
+    background: linear-gradient(160deg, rgba(31, 168, 201, 0.05), var(--card) 50%);
   }
 
   &.card-purple {
-    border-left: 5px solid var(--accent-purple);
-    background: linear-gradient(135deg, rgba(212, 181, 232, 0.1), var(--card));
-
-    .cert-card-icon { background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink)); }
+    border-top-color: var(--accent-purple);
+    background: linear-gradient(160deg, rgba(123, 63, 212, 0.05), var(--card) 50%);
   }
 
   &.card-pink {
-    border-left: 5px solid var(--accent-pink);
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), var(--card));
-
-    .cert-card-icon { background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); }
+    border-top-color: var(--accent-pink);
+    background: linear-gradient(160deg, rgba(226, 61, 122, 0.05), var(--card) 50%);
   }
 }
 
@@ -153,7 +144,6 @@
   font-size: 1.4rem;
   background: var(--gradient-secondary);
   color: var(--text-bright);
-  transition: all 0.4s $transition-bounce;
 }
 
 .cert-card-body {
@@ -233,8 +223,9 @@
   margin: 0 auto;
   text-align: center;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(212, 181, 232, 0.1));
-  border: 2px solid var(--border);
+  background: linear-gradient(160deg, rgba(123, 63, 212, 0.04), var(--card) 60%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .cta-card-icon {
