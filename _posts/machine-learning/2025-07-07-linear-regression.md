@@ -143,7 +143,7 @@ We want to find the values of $\theta_0$ and $\theta_1$ that minimize the cost f
 
 ### The Intuition: Hiking Down a Mountain
 
-Imagine you're on a foggy mountain and want to reach the valley (minimum). You can't see the whole landscape, but you can feel the slope beneath your feet. The strategy:
+Imagine you're on a foggy mountain and want to reach the valley (minimum). You can't see the whole landscape, but you can feel the slope beneath your feet. So, what strategy will you follow?
 
 - Figure out which direction is downhill (compute the gradient)
 - Take a step in that direction
