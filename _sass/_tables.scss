@@ -52,6 +52,40 @@ table {
 
 // Mobile table responsiveness
 @media (max-width: $breakpoint-sm) {
+  // Tables scroll horizontally; display:block preserves internal cell layout
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    font-size: 0.85rem;
+    // Keep border-radius by letting the element clip its own overflow
+    border-radius: $border-radius-md;
+
+    th,
+    td {
+      padding: 0.6rem 0.7rem;
+      white-space: nowrap;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-size: 0.8rem;
+    }
+
+    td {
+      font-size: 0.85rem;
+    }
+
+    td:first-child,
+    th:first-child {
+      white-space: normal;
+      min-width: 120px;
+    }
+  }
+
+  // Optional explicit wrapper (authored in posts for enhanced scroll UX)
   .table-wrapper {
     position: relative;
     width: 100%;
@@ -80,37 +114,11 @@ table {
     }
 
     table {
+      display: table;
       margin: 0;
       border: none;
       border-radius: 0;
-    }
-  }
-
-  table {
-    font-size: 0.85rem;
-    min-width: 500px;
-    width: 100%;
-
-    th,
-    td {
-      padding: 0.6rem 0.7rem;
-      white-space: nowrap;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      font-size: 0.8rem;
-    }
-
-    td {
-      font-size: 0.85rem;
-    }
-
-    td:first-child,
-    th:first-child {
-      white-space: normal;
-      min-width: 120px;
+      max-width: none;
     }
   }
 }

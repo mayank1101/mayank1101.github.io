@@ -78,14 +78,9 @@ html, body {
   .container {
     padding: 1rem;
     max-width: 100%;
-    overflow-x: hidden;
 
-    * {
+    p, ul, ol, img, a {
       max-width: 100%;
-    }
-
-    p, ul, ol, table, img, a {
-      max-width: 100% !important;
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
@@ -96,13 +91,6 @@ html, body {
 
     ul, ol {
       padding-left: 1.5rem;
-    }
-
-    table {
-      display: table;
-      min-width: 100%;
-      margin-left: 0;
-      margin-right: 0;
     }
   }
 
@@ -529,7 +517,6 @@ html, body {
 @media (max-width: $breakpoint-xs) {
   .container {
     padding: 0.75rem;
-    overflow-x: hidden;
   }
 
   .nav {

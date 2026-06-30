@@ -43,6 +43,21 @@ pre:not(.highlight) {
   line-height: 1.7;
 }
 
+// MathJax display equations — scroll horizontally when wider than viewport
+mjx-container[display="true"] {
+  display: block !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  padding-bottom: 0.25rem;
+
+  // Allow internal SVG/math nodes to be their natural width
+  svg, mjx-math {
+    max-width: none !important;
+  }
+}
+
 // Inline code
 code {
   font-family: $font-mono;

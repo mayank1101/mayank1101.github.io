@@ -26,6 +26,13 @@ body {
   max-width: 100%;
 }
 
+// Allow MathJax internal nodes to exceed container width so the scroll works
+mjx-container[display="true"] svg,
+mjx-container[display="true"] mjx-math,
+mjx-container[display="true"] * {
+  max-width: none;
+}
+
 img, video, iframe {
   max-width: 100%;
   height: auto;
