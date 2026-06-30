@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Logistic Regression: Binary and Multiclass Classification"
+title: "Logistic Regression for Beginners: Binary, Multiclass & Interview Prep"
 date: 2025-07-15
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
-excerpt: "Understanding logistic regression for classification problems, from binary to multiclass with sigmoid and softmax functions."
+excerpt: "Master classification with this simple guide to logistic regression. Understand the sigmoid function, softmax, evaluation metrics, and top interview questions."
 ---
 
 Continuing our journey through machine learning, today we turn to **Logistic Regression**, the true workhorse of classification problems. 

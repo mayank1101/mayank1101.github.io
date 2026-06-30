@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Linear Regression: From Simple to Multiple Regression"
+title: "Linear Regression for Beginners: Interview Guide & Implementation"
 date: 2025-07-07
 series: "Machine Learning for Engineers"
 series_author: "Mayank Sharma"
-excerpt: "Master linear regression from scratch, understanding simple and multiple regression, cost functions, and gradient descent."
+excerpt: "A beginner-friendly guide to linear regression. Learn simple and multiple regression, master the cost function, and crack top interview questions."
 ---
 
-Continuing in our Machine Learning Series, today we dive deep into **Linear Regression**, the absolute cornerstone of predictive modeling. 
+Continuing in our Machine Learning Series, today we dive deep into **Linear Regression**, the absolute cornerstone of predictive modeling.
 
 Imagine you're a real estate agent trying to estimate house prices. You notice that larger houses generally sell for more money. Intuitively, you know there is a relationship between size and price. But can you calculate it precisely? Can you predict the price of a 2,000-square-foot house based on past sales data? 
 
