@@ -16,6 +16,7 @@ This is exactly what linear regression does. It draws a mathematical line throug
 ---
 
 ## Table of Contents
+
 1. [Introduction: The Power of Linear Relationships](#introduction-the-power-of-linear-relationships)
 2. [Simple Linear Regression: The Foundation](#simple-linear-regression-the-foundation)
 3. [The Mathematics Behind the Line](#the-mathematics-behind-the-line)
@@ -24,10 +25,9 @@ This is exactly what linear regression does. It draws a mathematical line throug
 6. [Multiple Linear Regression: Beyond One Variable](#multiple-linear-regression-beyond-one-variable)
 7. [The Normal Equation: Analytical Solution](#the-normal-equation-analytical-solution)
 8. [Assumptions of Linear Regression](#assumptions-of-linear-regression)
-9. [Implementation from Scratch](#implementation-from-scratch)
-10. [Model Evaluation and Interpretation](#model-evaluation-and-interpretation)
-11. [Conclusion](#conclusion)
-12. [Top 5 Interview Cheat Sheet Questions](#top-5-interview-cheat-sheet-questions)
+9. [Model Evaluation Metrics](#model-evaluation-metrics)
+10. [Conclusion](#conclusion)
+11. [Top 5 Interview Cheat Sheet Questions](#top-5-interview-cheat-sheet-questions)
 
 ---
 
@@ -104,6 +104,7 @@ $$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2$$
 > 💡 **Interview Hotseat Question:** *What are the advantages of squaring the errors in MSE?*
 > 
 > **Answer:**
+> 
 > 1. **No Cancel-Outs:** All negative numbers become positive when squared.
 > 2. **Punishes Large Mistakes:** It penalizes massive misses heavily. An error of $2$ becomes a penalty of $4$. An error of $10$ explodes into a penalty of $100$. 
 > 3. **Smooth Math:** It creates a smooth, differentiable "bowl" shape that gradient descent can easily navigate.
@@ -116,6 +117,7 @@ $$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2$$
 We want to find values for $\theta_0$ and $\theta_1$ that make our MSE cost function as close to $0$ as possible. 
 
 Imagine you are trapped on a foggy mountain and need to find the valley at the bottom. You can’t see the valley, but you can feel the slope of the ground beneath your feet. What do you do?
+
 1. Feel which direction slopes downward.
 2. Take a step in that direction.
 3. Repeat until the ground goes completely flat.
@@ -126,6 +128,7 @@ This is **Gradient Descent**. The slope of the ground is the **gradient** (calcu
 
 ### The Balancing Act of Learning Rate ($\alpha$)
 Choosing your step size ($\alpha$) is critical:
+
 * **Too Small:** You take tiny baby steps. The model will eventually find the bottom, but it might take hours or days to calculate.
 * **Too Large:** You take giant leaps. You might step right *over* the valley, bounce back and forth, and actually get further away from the solution (**divergence**).
 
@@ -175,22 +178,27 @@ $$\theta = (X^T X)^{-1} X^T y$$
 Before relying on Linear Regression, your data must pass 5 strict rules:
 
 ### 1. Linearity
+
 * **Meaning:** The relationship between your input features and target must be a straight line.
 * **How to check:** Look at a scatter plot.
 * **Fix if broken:** Transform your data (e.g., take the log or square of $X$).
 
 ### 2. Independence
+
 * **Meaning:** The data points must not depend on one another. (e.g., Stock prices today depend heavily on stock prices yesterday—this violates independence).
 * **Fix if broken:** Use Time-Series forecasting models instead.
 
 ### 3. Homoscedasticity (Equal Variance)
+
 * **Meaning:** The size of your errors should be roughly the same across all prediction levels. If your model predicts cheap houses accurately but misses wildly on expensive houses, you have *Heteroscedasticity* (bad variance).
 * **How to check:** Plot your errors. They should look like a random cloud, not a expanding funnel shape.
 
 ### 4. Normality of Residuals
+
 * **Meaning:** If you plot all your errors on a histogram, they should form a clean, symmetric bell curve centered around zero.
 
 ### 5. No Multicollinearity
+
 * **Meaning:** Your input features should not be predicting *each other*. For example, including "House Size in Square Feet" and "House Size in Square Meters" will completely break your model because they contain identical information.
 * **How to check:** Use a Correlation Matrix or VIF (Variance Inflation Factor).
 
@@ -219,21 +227,26 @@ In our next tutorial, we will look at how we adapt these linear concepts to solv
 If you are preparing for a Data Science or Machine Learning interview, expect these core questions on Linear Regression. Here is your quick-fire study guide:
 
 ### 1. What is the difference between $R^2$ and Adjusted $R^2$?
+
 * **The Problem:** $R^2$ will *always* stay the same or increase when you add new features, even if those features are complete garbage (like adding "favorite color" to predict house prices). 
 * **The Solution:** **Adjusted $R^2$** penalizes you for adding features that don't add real value. If a new feature doesn't improve the model significantly, the Adjusted $R^2$ score goes down.
 
 ### 2. What happens to a Linear Regression model if your data has high multicollinearity?
+
 * The model will still make decent predictions, but the **coefficients ($\theta$) become highly unstable and unreliable**. 
 * You won't be able to accurately tell which feature is truly important because the variables are fighting over and bleeding into each other's predictive power.
 
 ### 3. Why do we scale features before running Gradient Descent?
+
 * If one feature ranges from 1 to 5 (like bedrooms) and another ranges from 10,000 to 500,000 (like income), the cost function becomes stretched out like an elongated football instead of a round bowl. 
 * Gradient descent will bounce back and forth wildly along the steep sides, taking a very long time to find the bottom. Scaling features makes the "bowl" symmetric, allowing the algorithm to march straight to the minimum.
 
 ### 4. What is the geometric interpretation of a residual plot with a distinct funnel shape?
+
 * It indicates **Heteroscedasticity** (non-constant variance in errors). 
 * It means your model's prediction accuracy changes across different ranges of your target variable (e.g., your model predicts cheap houses accurately, but its errors get progressively larger and wilder as the houses get more expensive).
 
 ### 5. How does an outlier affect Linear Regression?
+
 * Because the cost function (MSE) **squares the errors**, a single massive outlier can pull the entire regression line toward itself like a magnet. This ruins the model's accuracy for all the other normal data points. 
 * **Fix:** Remove the outlier, use robust scaling, or switch to a loss function less sensitive to outliers, like Mean Absolute Error (MAE) or Huber Loss.

@@ -14,6 +14,7 @@ Imagine you're a doctor looking at a patient's medical data: blood pressure, cho
 ---
 
 ## Table of Contents
+
 1. [Introduction: From Regression to Classification](#introduction-from-regression-to-classification)
 2. [Why Not Just Use Linear Regression?](#why-not-just-use-linear-regression)
 3. [The Sigmoid Function: The Heart of Logistic Regression](#the-sigmoid-function-the-heart-of-logistic-regression)
@@ -21,9 +22,9 @@ Imagine you're a doctor looking at a patient's medical data: blood pressure, cho
 5. [Decision Boundary: Drawing the Line](#decision-boundary-drawing-the-line)
 6. [Cost Function: Cross-Entropy Loss](#cost-function-cross-entropy-loss)
 7. [Gradient Descent for Logistic Regression](#gradient-descent-for-logistic-regression)
-8. [Multiclass Classification](#multiclass-classification)
-9. [Regularization in Logistic Regression](#regularization-in-logistic-regression)
-10. [Evaluation Metrics for Classification](#evaluation-metrics-for-classification)
+8. [Multiclass Classification: More Than Two Options](#multiclass-classification-more-than-two-options)
+9. [Regularization: Preventing Overfitting](#regularization-preventing-overfitting)
+10. [Evaluation Metrics: Grading Our Classifier](#evaluation-metrics-grading-our-classifier)
 11. [Conclusion](#conclusion)
 
 ---
