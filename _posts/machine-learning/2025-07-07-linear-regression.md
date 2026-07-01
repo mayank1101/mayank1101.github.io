@@ -16,13 +16,15 @@ Continuing in our Machine Learning Series, today we dive deep into linear regres
 3. [The Mathematics Behind the Line](#the-mathematics-behind-the-line)
 4. [Cost Function: Measuring Our Mistakes](#cost-function-measuring-our-mistakes)
 5. [Gradient Descent: Learning the Best Fit](#gradient-descent-learning-the-best-fit)
-6. [Multiple Linear Regression: Beyond One Variable](#multiple-linear-regression-beyond-one-variable)
-7. [The Normal Equation: Analytical Solution](#the-normal-equation-analytical-solution)
-8. [Assumptions of Linear Regression](#assumptions-of-linear-regression)
-9. [Implementation from Scratch](#implementation-from-scratch)
-10. [Model Evaluation and Interpretation](#model-evaluation-and-interpretation)
-11. [Conclusion](#conclusion)
-12. [Jupyter Notebook](#jupyter-notebook)
+6. [Feature Scaling: Making Gradient Descent Work](#feature-scaling-making-gradient-descent-work)
+7. [Multiple Linear Regression: Beyond One Variable](#multiple-linear-regression-beyond-one-variable)
+8. [The Normal Equation: Analytical Solution](#the-normal-equation-analytical-solution)
+9. [Train/Test Split: Honest Evaluation](#traintest-split-honest-evaluation)
+10. [Assumptions of Linear Regression](#assumptions-of-linear-regression)
+11. [Implementation from Scratch](#implementation-from-scratch)
+12. [Model Evaluation and Interpretation](#model-evaluation-and-interpretation)
+13. [Conclusion](#conclusion)
+14. [Jupyter Notebook](#jupyter-notebook)
 
 ## Introduction: The Power of Linear Relationships
 
@@ -120,7 +122,7 @@ $$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 = \fra
 Where:
 - $J$ is the cost function (also called loss function or objective function)
 - $m$ is the number of training examples
-- $\frac{1}{2m}$ is for mathematical convenience (the 1/2 makes derivatives cleaner)
+- The $\frac{1}{2}$ in $\frac{1}{2m}$ is purely for mathematical convenience — when we take the derivative later, the exponent 2 comes down and cancels the $\frac{1}{2}$, giving us cleaner gradient formulas
 
 ### Why Square the Errors?
 
@@ -133,7 +135,7 @@ Squaring serves several purposes:
 
 ### Visualizing the Cost Function
 
-If we plot $J(\theta_0, \theta_1)$ as a function of the parameters, we get a bowl-shaped surface in 3D (or a parabola in 2D if we fix one parameter). Our goal is to find the bottom of this bowl, the point where the cost is minimized.
+If we plot $J(\theta_0, \theta_1)$ as a function of the parameters, we get a bowl-shaped surface in 3D (or a parabola in 2D if we fix one parameter). Our goal is to find the bottom of this bowl, the point where the cost is minimized. Because this bowl has a single lowest point (it is **convex**), gradient descent is guaranteed to find the global minimum for linear regression.
 
 ## Gradient Descent: Learning the Best Fit
 
@@ -163,27 +165,90 @@ Where:
 - $\alpha$ is the **learning rate**: controls how big our steps are
 - $\frac{\partial J}{\partial \theta_j}$ is the **partial derivative**: indicates the direction and magnitude of steepest ascent
 
-### Computing the Gradients
+### Computing the Gradients (Step-by-Step Derivation)
 
-Taking the partial derivatives of the cost function:
+Let's carefully derive the partial derivatives using the chain rule. Starting from:
 
-$$\frac{\partial J}{\partial \theta_0} = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) = \frac{1}{m} \sum_{i=1}^{m} ((\theta_0 + \theta_1 x_i) - y_i)$$
+$$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (y_i - (\theta_0 + \theta_1 x_i))^2$$
 
-$$\frac{\partial J}{\partial \theta_1} = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) \cdot x_i = \frac{1}{m} \sum_{i=1}^{m} ((\theta_0 + \theta_1 x_i) - y_i) \cdot x_i$$
+**Derivative with respect to $\theta_0$:**
+
+$$\frac{\partial J}{\partial \theta_0} = \frac{1}{2m} \sum_{i=1}^{m} 2(y_i - (\theta_0 + \theta_1 x_i)) \cdot \frac{\partial}{\partial \theta_0}(y_i - \theta_0 - \theta_1 x_i)$$
+
+The inner derivative $\frac{\partial}{\partial \theta_0}(y_i - \theta_0 - \theta_1 x_i) = -1$, so:
+
+$$\frac{\partial J}{\partial \theta_0} = \frac{1}{2m} \sum_{i=1}^{m} 2(y_i - \hat{y}_i)(-1) = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)$$
+
+Notice how the 2 from the power rule cancelled with the $\frac{1}{2}$ — that's exactly why we included it in the cost function.
+
+**Derivative with respect to $\theta_1$:**
+
+The inner derivative $\frac{\partial}{\partial \theta_1}(y_i - \theta_0 - \theta_1 x_i) = -x_i$, so:
+
+$$\frac{\partial J}{\partial \theta_1} = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) \cdot x_i$$
 
 **Intuition**:
 - For $\theta_0$: The average error tells us how much to adjust the intercept
 - For $\theta_1$: The average of (error × input) tells us how much to adjust the slope
+
+### Numerical Walkthrough: Seeing Gradient Descent in Action
+
+Let's trace through the first two iterations manually with a tiny dataset:
+
+```
+Data: (x=1, y=2), (x=2, y=4)
+True relationship: y = 2x  (so θ₀=0, θ₁=2 is ideal)
+Start: θ₀ = 0, θ₁ = 0,  α = 0.1
+```
+
+**Iteration 1:**
+
+Predictions: $\hat{y}_1 = 0 + 0(1) = 0$, $\hat{y}_2 = 0 + 0(2) = 0$
+
+Errors: $\hat{y}_1 - y_1 = 0 - 2 = -2$, $\hat{y}_2 - y_2 = 0 - 4 = -4$
+
+Cost: $J = \frac{1}{2(2)}[(-2)^2 + (-4)^2] = \frac{1}{4}[4 + 16] = 5.0$
+
+Gradients:
+$$\frac{\partial J}{\partial \theta_0} = \frac{1}{2}[(-2) + (-4)] = -3.0$$
+$$\frac{\partial J}{\partial \theta_1} = \frac{1}{2}[(-2)(1) + (-4)(2)] = \frac{1}{2}[-2 - 8] = -5.0$$
+
+Update:
+$$\theta_0 = 0 - 0.1(-3.0) = 0.3$$
+$$\theta_1 = 0 - 0.1(-5.0) = 0.5$$
+
+**Iteration 2:**
+
+Predictions: $\hat{y}_1 = 0.3 + 0.5(1) = 0.8$, $\hat{y}_2 = 0.3 + 0.5(2) = 1.3$
+
+Errors: $0.8 - 2 = -1.2$, $1.3 - 4 = -2.7$
+
+Cost: $J = \frac{1}{4}[1.44 + 7.29] = 2.18$ ← **Cost dropped from 5.0 to 2.18!**
+
+After many iterations, $\theta_0$ will approach 0 and $\theta_1$ will approach 2, converging to the true relationship.
+
+### When Does Gradient Descent Stop? (Convergence)
+
+Running for a fixed number of iterations works, but it's not always ideal. A principled stopping rule checks whether the cost has changed meaningfully:
+
+$$|\, J(\text{iteration } t) - J(\text{iteration } t-1)\, | < \epsilon$$
+
+If the cost changes by less than a tiny threshold $\epsilon$ (e.g., $10^{-6}$) between iterations, the algorithm has effectively converged and further iterations won't help.
+
+You can also **detect problems** early by watching the cost:
+- **Cost is decreasing smoothly** → gradient descent is working
+- **Cost is decreasing very slowly** → learning rate is too small
+- **Cost is increasing or oscillating** → learning rate is too large; reduce it
 
 ### The Learning Rate: A Balancing Act
 
 The learning rate $\alpha$ is crucial:
 
 - **Too small**: Learning is painfully slow; might need millions of iterations
-- **Too large**: Might overshoot the minimum or even diverge
+- **Too large**: Might overshoot the minimum or even diverge (cost goes up instead of down)
 - **Just right**: Converges efficiently to the minimum
 
-Typical values: 0.001, 0.01, 0.1 (depends on data scaling)
+Typical starting values: 0.001, 0.01, 0.1. A common strategy is to try 0.01 first, plot the cost history, and adjust based on what you see.
 
 ### Batch vs. Stochastic vs. Mini-Batch
 
@@ -203,6 +268,70 @@ Now that we have the gradient, we need to decide how to use it to update our par
 - Uses a small batch (e.g., 32, 64, 128 examples) per iteration
 - Best of both worlds: faster than batch, more stable than SGD
 - Most commonly used in practice
+
+## Feature Scaling: Making Gradient Descent Work
+
+### Why Feature Scaling Matters
+
+This is one of the most important practical steps that beginners often skip, leading to gradient descent that is painfully slow or fails entirely.
+
+Consider a house price model with two features:
+- **Size**: ranges from 500 to 5,000 sq ft
+- **Age**: ranges from 0 to 50 years
+
+Because size values are 100× larger than age values, the cost function becomes a very elongated bowl rather than a circular one:
+
+```
+Without scaling (elongated bowl):       With scaling (circular bowl):
+                                        
+    θ₁ ^                                  θ₁ ^
+       |   ___________                        |    ___
+       |  /           \                       |   /   \
+       | |             |                      |  |  *  |
+       | |    *        |                      |   \___/
+       |  \___________/                       |
+       +---------------> θ₀                  +-----------> θ₀
+       
+  Gradient descent zigzags             Gradient descent goes
+  and takes many steps                 straight to minimum
+```
+
+The gradient in the steep direction (size) dominates, causing gradient descent to zigzag back and forth and converge slowly.
+
+### Two Common Scaling Methods
+
+**Min-Max Normalization** (scales features to [0, 1]):
+
+$$x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}$$
+
+**Z-score Standardization** (scales features to mean=0, std=1):
+
+$$x' = \frac{x - \mu}{\sigma}$$
+
+Where $\mu$ is the mean and $\sigma$ is the standard deviation of the feature.
+
+**Which to use?**
+- Use **Z-score standardization** when your data has outliers or you don't know the range in advance. It's the default choice in most ML workflows.
+- Use **Min-Max normalization** when you need values in a specific range (e.g., pixel values for images).
+
+### Critical Rule: Scale Using Training Data Only
+
+A common mistake is to scale the entire dataset before splitting into train and test sets. This "leaks" information from the test set into training. The correct procedure:
+
+1. Split data into train and test sets first
+2. Compute $\mu$ and $\sigma$ **from the training set only**
+3. Apply those same values to scale the test set
+
+```python
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)  # fit on train data
+X_test_scaled = scaler.transform(X_test)         # only transform test data
+```
 
 ## Multiple Linear Regression: Beyond One Variable
 
@@ -225,12 +354,26 @@ $$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_n x_n$$
 
 Or in matrix notation (more compact and computationally efficient):
 
-$$\hat{y} = \theta^T X$$
+$$\hat{y} = X\theta$$
 
 Where:
-
-- $X = [1, x_1, x_2, \ldots, x_n]^T$ is the feature vector (we add a 1 for the intercept term)
+- $X$ is the feature matrix of shape $(m \times (n+1))$ — $m$ examples, $n$ features, plus a column of ones for the intercept
 - $\theta = [\theta_0, \theta_1, \theta_2, \ldots, \theta_n]^T$ is the parameter vector
+
+### The Column of Ones Trick
+
+You might wonder: why do we prepend a column of ones to $X$? This is an elegant trick. Instead of writing the intercept separately, we treat it as just another weight multiplied by a feature that is always 1:
+
+$$\hat{y} = \theta_0 \cdot 1 + \theta_1 x_1 + \theta_2 x_2 + \ldots$$
+
+This means $\theta_0$ (the intercept) is just the weight for the constant feature $x_0 = 1$. Now all parameters are handled uniformly — the same update rule applies to all of them, including the intercept.
+
+```python
+# Without the trick: need separate handling for θ₀
+# With the trick: all parameters updated the same way
+X_b = np.c_[np.ones((m, 1)), X]  # prepend a column of 1s
+predictions = X_b.dot(theta)      # θ₀ × 1 + θ₁ × x₁ + ...
+```
 
 ### Example: House Price Prediction
 
@@ -249,7 +392,7 @@ $$\text{Price} = 50,000 + 100(2000) + 5,000(3) + (-2,000)(10) = \$245,000$$
 
 ### Vectorized Implementation
 
-For m training examples and n features, we organize our data as:
+For $m$ training examples and $n$ features, we organize our data as:
 
 $$X = \begin{bmatrix}
 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\
@@ -266,7 +409,7 @@ $$X = \begin{bmatrix}
 
 Then predictions for all examples are simply:
 
-$$\hat{y} = X\theta$$
+$$\hat{y} = X\theta \quad \text{(shape: } m \times 1\text{)}$$
 
 ### Cost Function for Multiple Variables
 
@@ -280,7 +423,7 @@ The vectorized gradient update becomes:
 
 $$\theta := \theta - \alpha \frac{1}{m} X^T(X\theta - y)$$
 
-This single line replaces the need for separate updates for each parameter!
+This single line handles all parameters at once, including $\theta_0$, because we added the column of ones.
 
 ## The Normal Equation: Analytical Solution
 
@@ -318,6 +461,61 @@ $$\theta = (X^T X)^{-1} X^T y$$
 
 - **Normal Equation**: When n is small (< 10,000 features) and $(X^TX)$ is invertible
 - **Gradient Descent**: When n is large, or for online learning scenarios
+
+## Train/Test Split: Honest Evaluation
+
+### Why You Must Split Your Data
+
+A critical concept that beginners often miss: **you cannot evaluate your model on the same data you trained it on**. If you do, you're essentially asking "how well does the model memorize its own training data?" — not "how well does it generalize to new, unseen examples?"
+
+Imagine you gave a student the exam questions in advance and they memorized the answers. They'd score 100%, but you'd have no idea if they actually understood the material.
+
+**The correct workflow:**
+
+```
+All data (100%)
+    │
+    ├── Training set (80%) → used to fit the model (learn θ)
+    │
+    └── Test set (20%)    → used only at the end to evaluate generalization
+```
+
+### Overfitting: When the Model Memorizes Instead of Learns
+
+A model is **overfitting** when it performs well on training data but poorly on test data. This happens when the model is too complex relative to the amount of training data — it learns the noise and quirks of the training set rather than the underlying pattern.
+
+```
+Training accuracy: 99%   ← looks amazing
+Test accuracy:     72%   ← the model hasn't learned the real pattern
+```
+
+For linear regression, overfitting typically occurs when you have many features but few training examples. The model fits a hyperplane that passes through (or near) all training points but fails on new ones.
+
+**Signs of overfitting:**
+- Large gap between training and test error
+- Test error is much higher than training error
+
+**How to address it:**
+- Get more training data
+- Reduce the number of features
+- Use regularization (Ridge or Lasso regression, covered in a future post)
+
+### How to Split in Practice
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,    # 20% for testing
+    random_state=42   # for reproducibility
+)
+
+print(f"Training samples: {X_train.shape[0]}")
+print(f"Test samples:     {X_test.shape[0]}")
+```
+
+**Rule of thumb**: Use 80% training / 20% test. With very small datasets (< 500 examples), consider cross-validation instead.
 
 ## Assumptions of Linear Regression
 
@@ -402,85 +600,47 @@ Let's build linear regression from scratch to deeply understand the mechanics:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 class LinearRegressionScratch:
-    """
-    Linear Regression implemented from scratch using gradient descent.
-
-    Parameters:
-    -----------
-    learning_rate : float, default=0.01
-        Step size for gradient descent
-    n_iterations : int, default=1000
-        Number of iterations for gradient descent
-    """
-
-    def __init__(self, learning_rate=0.01, n_iterations=1000):
+    def __init__(self, learning_rate=0.01, n_iterations=1000, tol=1e-6):
         self.learning_rate = learning_rate
         self.n_iterations = n_iterations
+        self.tol = tol          # convergence tolerance
         self.theta = None
         self.cost_history = []
 
     def fit(self, X, y):
-        """
-        Fit linear regression model using gradient descent.
-
-        Parameters:
-        -----------
-        X : array-like, shape (m, n)
-            Training features
-        y : array-like, shape (m,)
-            Target values
-        """
-        # Add intercept term (column of ones)
         m, n = X.shape
-        X_b = np.c_[np.ones((m, 1)), X]  # X_b has shape (m, n+1)
+        X_b = np.c_[np.ones((m, 1)), X]  # prepend column of ones for intercept
 
-        # Initialize parameters randomly
-        self.theta = np.random.randn(n + 1, 1)
+        self.theta = np.zeros(n + 1)
 
-        # Gradient descent
         for iteration in range(self.n_iterations):
-            # Compute predictions
             predictions = X_b.dot(self.theta)
+            errors = predictions - y
 
-            # Compute errors
-            errors = predictions - y.reshape(-1, 1)
-
-            # Compute cost (for tracking)
             cost = (1 / (2 * m)) * np.sum(errors ** 2)
             self.cost_history.append(cost)
 
-            # Compute gradients
-            gradients = (1 / m) * X_b.T.dot(errors)
+            # Check convergence: stop early if cost barely changes
+            if iteration > 0 and abs(self.cost_history[-2] - cost) < self.tol:
+                print(f"Converged at iteration {iteration}")
+                break
 
-            # Update parameters
+            gradients = (1 / m) * X_b.T.dot(errors)
             self.theta -= self.learning_rate * gradients
 
-            # Print progress every 100 iterations
             if iteration % 100 == 0:
-                print(f"Iteration {iteration}: Cost = {cost:.4f}")
+                print(f"Iteration {iteration}: Cost = {cost:.6f}")
 
     def predict(self, X):
-        """
-        Make predictions using the learned parameters.
-
-        Parameters:
-        -----------
-        X : array-like, shape (m, n)
-            Features to predict on
-
-        Returns:
-        --------
-        predictions : array, shape (m,)
-            Predicted values
-        """
         m = X.shape[0]
         X_b = np.c_[np.ones((m, 1)), X]
-        return X_b.dot(self.theta).flatten()
+        return X_b.dot(self.theta)
 
     def plot_cost_history(self):
-        """Plot the cost function over iterations."""
         plt.figure(figsize=(10, 6))
         plt.plot(range(len(self.cost_history)), self.cost_history)
         plt.xlabel('Iteration')
@@ -491,109 +651,83 @@ class LinearRegressionScratch:
 
 
 class LinearRegressionNormalEq:
-    """
-    Linear Regression using the Normal Equation (closed-form solution).
-    """
-
     def __init__(self):
         self.theta = None
 
     def fit(self, X, y):
-        """
-        Fit linear regression using the normal equation.
-
-        Parameters:
-        -----------
-        X : array-like, shape (m, n)
-            Training features
-        y : array-like, shape (m,)
-            Target values
-        """
-        # Add intercept term
         m = X.shape[0]
         X_b = np.c_[np.ones((m, 1)), X]
-
-        # Normal equation: θ = (X^T X)^(-1) X^T y
+        # θ = (XᵀX)⁻¹ Xᵀy
         self.theta = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
 
     def predict(self, X):
-        """
-        Make predictions using the learned parameters.
-
-        Parameters:
-        -----------
-        X : array-like, shape (m, n)
-            Features to predict on
-
-        Returns:
-        --------
-        predictions : array, shape (m,)
-            Predicted values
-        """
         m = X.shape[0]
         X_b = np.c_[np.ones((m, 1)), X]
         return X_b.dot(self.theta)
 
 
-# Example usage
+# ── End-to-End Example ──────────────────────────────────────────────────────
+
 if __name__ == "__main__":
-    # Generate synthetic data
+    # 1. Generate synthetic data  (true relationship: y = 4 + 3x)
     np.random.seed(42)
-    m = 100  # number of examples
-    X = 2 * np.random.rand(m, 1)  # random values between 0 and 2
-    y = 4 + 3 * X + np.random.randn(m, 1)  # y = 4 + 3x + noise
+    m = 100
+    X = 2 * np.random.rand(m, 1)
+    y = (4 + 3 * X + np.random.randn(m, 1)).flatten()
 
-    # Flatten y to 1D
-    y = y.flatten()
+    # 2. Split into train and test sets BEFORE any scaling
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+    print(f"Train size: {X_train.shape[0]}, Test size: {X_test.shape[0]}")
 
-    print("=" * 50)
-    print("Training with Gradient Descent")
-    print("=" * 50)
+    # 3. Scale features using training statistics only
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled  = scaler.transform(X_test)
 
-    # Train using gradient descent
-    model_gd = LinearRegressionScratch(learning_rate=0.1, n_iterations=1000)
-    model_gd.fit(X, y)
-
-    print("\nLearned parameters (Gradient Descent):")
-    print(f"θ₀ (intercept) = {model_gd.theta[0][0]:.4f}")
-    print(f"θ₁ (slope) = {model_gd.theta[1][0]:.4f}")
-
-    # Train using normal equation
+    # 4. Train with gradient descent
     print("\n" + "=" * 50)
-    print("Training with Normal Equation")
+    print("Gradient Descent")
     print("=" * 50)
+    model_gd = LinearRegressionScratch(learning_rate=0.1, n_iterations=1000)
+    model_gd.fit(X_train_scaled, y_train)
+    print(f"\nθ₀ (intercept) = {model_gd.theta[0]:.4f}")
+    print(f"θ₁ (slope)     = {model_gd.theta[1]:.4f}")
 
+    # 5. Train with normal equation
+    print("\n" + "=" * 50)
+    print("Normal Equation")
+    print("=" * 50)
     model_ne = LinearRegressionNormalEq()
-    model_ne.fit(X, y)
+    model_ne.fit(X_train_scaled, y_train)
+    print(f"\nθ₀ (intercept) = {model_ne.theta[0]:.4f}")
+    print(f"θ₁ (slope)     = {model_ne.theta[1]:.4f}")
 
-    print("\nLearned parameters (Normal Equation):")
-    print(f"θ₀ (intercept) = {model_ne.theta[0]:.4f}")
-    print(f"θ₁ (slope) = {model_ne.theta[1]:.4f}")
+    # 6. Evaluate on the held-out test set
+    pred_gd = model_gd.predict(X_test_scaled)
+    pred_ne = model_ne.predict(X_test_scaled)
 
-    # Make predictions
-    X_test = np.array([[0], [2]])
-    predictions_gd = model_gd.predict(X_test)
-    predictions_ne = model_ne.predict(X_test)
+    mse_gd = np.mean((y_test - pred_gd) ** 2)
+    mse_ne = np.mean((y_test - pred_ne) ** 2)
+    print(f"\nTest MSE (Gradient Descent): {mse_gd:.4f}")
+    print(f"Test MSE (Normal Equation):  {mse_ne:.4f}")
 
-    # Visualize
+    # 7. Visualize
     plt.figure(figsize=(12, 5))
 
-    # Plot 1: Data and regression line
     plt.subplot(1, 2, 1)
-    plt.scatter(X, y, alpha=0.5, label='Training data')
-    plt.plot(X_test, predictions_gd, 'r-', linewidth=2, label='Gradient Descent')
-    plt.plot(X_test, predictions_ne, 'g--', linewidth=2, label='Normal Equation')
-    plt.xlabel('X')
-    plt.ylabel('y')
-    plt.title('Linear Regression: Predictions')
-    plt.legend()
-    plt.grid(True)
+    plt.scatter(X_test, y_test, alpha=0.6, label='Test data')
+    sort_idx = X_test_scaled[:, 0].argsort()
+    plt.plot(X_test[sort_idx], pred_gd[sort_idx], 'r-', lw=2, label='Gradient Descent')
+    plt.plot(X_test[sort_idx], pred_ne[sort_idx], 'g--', lw=2, label='Normal Equation')
+    plt.xlabel('X'); plt.ylabel('y')
+    plt.title('Linear Regression: Test Set Predictions')
+    plt.legend(); plt.grid(True)
 
-    # Plot 2: Cost history
     plt.subplot(1, 2, 2)
     plt.plot(model_gd.cost_history)
-    plt.xlabel('Iteration')
-    plt.ylabel('Cost J(θ)')
+    plt.xlabel('Iteration'); plt.ylabel('Cost J(θ)')
     plt.title('Cost Function Convergence')
     plt.grid(True)
 
@@ -603,27 +737,44 @@ if __name__ == "__main__":
 
 ### Using Scikit-Learn
 
-For production use, we use scikit-learn which provides an optimized implementation:
+For production use, scikit-learn provides an optimized implementation. Here is a complete, self-contained example including the train/test split and feature scaling:
 
 ```python
+import numpy as np
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Create and train model
-model = LinearRegression()
-model.fit(X, y)
+# Generate data
+np.random.seed(42)
+X = 2 * np.random.rand(100, 1)
+y = (4 + 3 * X + np.random.randn(100, 1)).flatten()
 
-# Make predictions
-predictions = model.predict(X_test)
+# Split first, then scale
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled  = scaler.transform(X_test)
+
+# Fit
+model = LinearRegression()
+model.fit(X_train_scaled, y_train)
+
+# Predict on the test set
+predictions = model.predict(X_test_scaled)
 
 # Evaluate
 mse = mean_squared_error(y_test, predictions)
-r2 = r2_score(y_test, predictions)
+rmse = np.sqrt(mse)
+r2  = r2_score(y_test, predictions)
 
-print(f"Intercept: {model.intercept_:.4f}")
-print(f"Coefficients: {model.coef_}")
-print(f"MSE: {mse:.4f}")
-print(f"R² Score: {r2:.4f}")
+print(f"Intercept:   {model.intercept_:.4f}")
+print(f"Coefficient: {model.coef_[0]:.4f}")
+print(f"MSE:         {mse:.4f}")
+print(f"RMSE:        {rmse:.4f}")
+print(f"R² Score:    {r2:.4f}")
 ```
 
 ## Model Evaluation and Interpretation
@@ -642,8 +793,8 @@ $$MSE = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2$$
 
 $$RMSE = \sqrt{MSE}$$
 
-- **Interpretation**: Average magnitude of error
-- **Units**: Same as target variable (easier to interpret than MSE)
+- **Interpretation**: Average magnitude of error, in the same units as the target
+- **Easier to interpret than MSE**: If you're predicting house prices in dollars, RMSE is in dollars
 - **Lower is better**: 0 is perfect
 
 #### 3. Mean Absolute Error (MAE)
@@ -661,36 +812,37 @@ $$R^2 = 1 - \frac{\sum_{i=1}^{m}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{m}(y_i - \bar{y
 Where $\bar{y}$ is the mean of actual values.
 
 - **Interpretation**: Proportion of variance in y explained by the model
-- **Range**: 0 to 1 (can be negative for very poor models)
-- **1.0 is perfect**: Model explains all variance
-- **0.0 means**: Model is no better than just predicting the mean
+- **R² = 1.0**: Model explains all variance (perfect fit)
+- **R² = 0.0**: Model is no better than always predicting the mean $\bar{y}$
+- **R² < 0**: Model is worse than predicting the mean — something is very wrong
 
 ### Interpreting Coefficients
 
 For the equation: $\text{Price} = 50,000 + 100 \times \text{Size} + 5,000 \times \text{Bedrooms}$
 
-- **Intercept (50,000)**: Expected price when all features are 0 (often not meaningful)
+- **Intercept (50,000)**: Expected price when all features are 0 (often not meaningful in isolation)
 - **Size coefficient (100)**: Each additional square foot increases price by $100, **holding bedrooms constant**
 - **Bedrooms coefficient (5,000)**: Each additional bedroom increases price by $5,000, **holding size constant**
 
 **Key point**: "Holding other variables constant" is crucial for interpretation in multiple regression.
+
+**Important caveat when features are scaled**: If you used StandardScaler, the coefficients correspond to the scaled features, not the original units. To get back to original units, divide each coefficient by the corresponding feature's standard deviation.
 
 ### Residual Analysis
 
 Examining residuals (errors) helps validate assumptions:
 
 ```python
-# Calculate residuals
 residuals = y_test - predictions
 
-# Plot 1: Residual plot
+# Plot 1: Residual plot — should show no pattern
 plt.scatter(predictions, residuals)
 plt.axhline(y=0, color='r', linestyle='--')
 plt.xlabel('Predicted Values')
 plt.ylabel('Residuals')
 plt.title('Residual Plot')
 
-# Plot 2: Distribution of residuals
+# Plot 2: Distribution of residuals — should look like a bell curve
 plt.hist(residuals, bins=30, edgecolor='black')
 plt.xlabel('Residual Value')
 plt.ylabel('Frequency')
@@ -702,7 +854,7 @@ plt.title('Distribution of Residuals')
 - Roughly normal distribution
 - Constant spread across predicted values
 
-## Conclusion:
+## Conclusion
 
 ### Limitations of Linear Regression
 
@@ -724,9 +876,9 @@ Linear regression is ideal when:
 - You want a **simple baseline** model
 - **Sample size** is relatively small
 
-For complex relationships, consider polynomial regression, regularization techniques, or more advanced models.
+For complex relationships, consider polynomial regression, regularization techniques (Ridge, Lasso), or more advanced models.
 
-Now that you understand one of the most important algorithms in machine learning. Linear regression may be simple, but it's the foundation for countless applications and more advanced techniques. In the next tutorial, we'll extend these concepts to **Logistic Regression** for classification problems.
+Now that you understand one of the most important algorithms in machine learning — linear regression may be simple, but it's the foundation for countless applications and more advanced techniques. In the next tutorial, we'll extend these concepts to **Logistic Regression** for classification problems.
 
 ## Jupyter Notebook
 
