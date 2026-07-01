@@ -43,6 +43,7 @@ _data/projects.yml
 case-studies.html
 _case_studies/
 _layouts/case-study.html
+case-studies/
 
 # Product Management Series (private)
 series/pm
