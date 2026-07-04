@@ -1,62 +1,74 @@
 // ===== Material Design 3 — Design Tokens =====
 // Light theme only. Seed color: #2E5BDB (blue).
 // Warm neutral surface tone preserved from original brand (not M3 default grey neutral).
+//
+// Container / on-container / outline values below are computed from each
+// role's true HCT hue+chroma via Google's material-color-utilities
+// TonalPalette API (tone 90 / tone 10 per the M3 light-scheme spec), not
+// hand-picked. Source colors (primary/secondary/tertiary/etc.) are kept as
+// the site's existing brand hex values since they're also used directly as
+// text/border colors elsewhere in the codebase.
 
 :root {
   color-scheme: light;
 
-  // ---------- M3 Color Roles: Primary (seed: #2E5BDB) ----------
+  // ---------- M3 Color Roles: Primary (brand blue, HCT hue 274.2° chroma 66.3) ----------
   --md-primary: #2E5BDB;
   --md-on-primary: #FFFFFF;
   --md-primary-container: #DCE1FF;
-  --md-on-primary-container: #001347;
+  --md-on-primary-container: #00164F;
 
-  // ---------- M3 Color Roles: Secondary (purple) ----------
+  // ---------- M3 Color Roles: Secondary (brand purple, HCT hue 304.5° chroma 71.0) ----------
   --md-secondary: #7B3FD4;
   --md-on-secondary: #FFFFFF;
-  --md-secondary-container: #EBDDFF;
-  --md-on-secondary-container: #26005E;
+  --md-secondary-container: #ECDCFF;
+  --md-on-secondary-container: #270057;
 
-  // ---------- M3 Color Roles: Tertiary (pink) ----------
+  // ---------- M3 Color Roles: Tertiary (brand pink, HCT hue 3.2° chroma 79.3) ----------
   --md-tertiary: #E23D7A;
   --md-on-tertiary: #FFFFFF;
-  --md-tertiary-container: #FFD9E3;
-  --md-on-tertiary-container: #3E0021;
+  --md-tertiary-container: #FFD9E0;
+  --md-on-tertiary-container: #3F001A;
 
-  // ---------- M3 Color Roles: Error ----------
+  // ---------- M3 Color Roles: Error (HCT hue 23.1° chroma 72.3) ----------
   --md-error: #D64541;
   --md-on-error: #FFFFFF;
   --md-error-container: #FFDAD6;
-  --md-on-error-container: #410002;
+  --md-on-error-container: #410003;
 
   // ---------- M3 Extended Colors (custom brand accents) ----------
+  // Cyan — HCT hue 221.2° chroma 46.8
   --md-cyan: #1FA8C9;
   --md-on-cyan: #FFFFFF;
-  --md-cyan-container: #C3EEF7;
-  --md-on-cyan-container: #002028;
+  --md-cyan-container: #B3EBFF;
+  --md-on-cyan-container: #001F27;
 
+  // Yellow — HCT hue 90.4° chroma 54.9
   --md-yellow: #F4C430;
   --md-on-yellow: #241A00;
-  --md-yellow-container: #FFE08C;
+  --md-yellow-container: #FFDF90;
   --md-on-yellow-container: #241A00;
 
+  // Green — HCT hue 148.4° chroma 55.1
   --md-green: #3E9A4C;
   --md-on-green: #FFFFFF;
-  --md-green-container: #C2F0C2;
-  --md-on-green-container: #002204;
+  --md-green-container: #99F89E;
+  --md-on-green-container: #002106;
 
   // ---------- M3 Neutral Surfaces (warm-tinted, brand-preserved) ----------
+  // Surface ladder computed on the warm neutral hue (109.4°, chroma 4) so it
+  // stays a warm off-white family rather than M3's default cool grey.
   --md-surface: #FAF8F3;
-  --md-surface-dim: #DED9CD;
+  --md-surface-dim: #DDDAD1;
   --md-surface-bright: #FAF8F3;
   --md-surface-container-lowest: #FFFFFF;
-  --md-surface-container-low: #F4F1E8;
-  --md-surface-container: #F3EFE6;
-  --md-surface-container-high: #EDE8DC;
-  --md-surface-container-highest: #E7E1D3;
+  --md-surface-container-low: #F7F3EA;
+  --md-surface-container: #F1EDE5;
+  --md-surface-container-high: #ECE8DF;
+  --md-surface-container-highest: #E6E2D9;
   --md-on-surface: #1E1C18;
   --md-on-surface-variant: #6E6B62;
-  --md-outline: #7B7669;
+  --md-outline: #7A7865;
   --md-outline-variant: rgba(30, 28, 24, 0.13);
 
   // ---------- M3 Elevation (tonal shadow scale, level 0-5) ----------
