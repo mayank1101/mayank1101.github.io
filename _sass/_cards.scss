@@ -6,20 +6,21 @@
   margin-top: 2.5rem;
 }
 
+// M3 Elevated Card — level 1 resting, level 2 on hover, medium (12dp) corner.
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: $border-radius-lg;
+  border-radius: $md-shape-md;
   padding: 1.75rem;
   position: relative;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.22s $transition-smooth,
-              box-shadow 0.22s $transition-smooth,
+  box-shadow: var(--md-elevation-1);
+  transition: transform 0.22s $md-easing-standard,
+              box-shadow 0.22s $md-easing-standard,
               border-color 0.22s ease;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--md-elevation-2);
     border-color: var(--border-bright);
 
     h3 { color: var(--accent-pink); }
@@ -41,7 +42,7 @@
   justify-content: center;
   width: 46px;
   height: 46px;
-  border-radius: $border-radius-md;
+  border-radius: $md-shape-sm;
   background: var(--tint-yellow);
   color: var(--text-bright);
   border: 1px solid rgba(244, 196, 48, 0.25);

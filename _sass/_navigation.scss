@@ -40,8 +40,9 @@
   }
 
   // Add shadow when user has scrolled (class toggled by animations.js)
+  // M3 top app bar goes from elevation 0 → elevation 2 on scroll.
   &.nav-scrolled {
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--md-elevation-2);
   }
 }
 
@@ -111,7 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: $border-radius-md;
+  border-radius: $md-shape-sm;
   background: transparent;
   color: var(--muted);
   border: 1px solid var(--border);
@@ -122,28 +123,43 @@
     color: var(--text-bright);
     background: var(--card);
     border-color: var(--border-bright);
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--md-elevation-1);
   }
 }
 
-// Resume CTA pill in nav
+// Resume CTA pill in nav — M3 Filled Button (tertiary color)
 .cta-nav {
   font-family: $font-primary;
   background: var(--accent-pink);
   color: #fff;
   padding: 0.48rem 1.1rem;
-  border-radius: $border-radius-round;
-  font-weight: 600;
-  font-size: 0.88rem;
+  border-radius: $md-shape-full;
+  font-weight: 500;
+  font-size: $md-label-large-size;
   border: none;
   letter-spacing: 0.01em;
-  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: background 0.2s $md-easing-standard, box-shadow 0.2s $md-easing-standard;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.2s $md-easing-standard;
+  }
 
   &:hover {
-    background: #D4366F;
-    box-shadow: var(--shadow-soft);
-    transform: translateY(-1px);
+    box-shadow: var(--md-elevation-1);
     color: #fff;
+
+    &::after {
+      opacity: var(--md-state-hover);
+    }
   }
 }
 
