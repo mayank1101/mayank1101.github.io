@@ -1,0 +1,93 @@
+---
+layout: default
+title: "Token by Token"
+description: "Clear, zero-fluff learning notes on AI/ML, NLP, and Deep Learning—built for actual understanding."
+---
+
+{% include navbar.html %}
+
+<div class="container hero fade-in">
+  <h1>Token by Token</h1>
+  <p class="lead">My notes on AI/ML, NLP, Deep Learning, RAG, LLMs and more</p>
+  <p class="muted">
+    These are the notes I wish I had when I started. Co-authored with Claude to
+    demystify complex concepts, they strike the right mix of
+    <em>maths, theory and practice</em> - built to understand, not to impress
+    anyone. Open to whoever finds them useful.
+  </p>
+</div>
+
+<div class="container section">
+  <div class="manifesto-container scroll-animate">
+    <div class="manifesto-section">
+      <p class="manifesto-intro">
+        When I first dove into AI/ML, I kept running into the same roadblock:
+        most explanations were either
+        <strong>too hand-wavy</strong> to be practical, or assumed I already had
+        a PhD in the topic.
+      </p>
+      <p class="manifesto-text">
+        So, I started building my own knowledge base to cut through the noise
+      </p>
+      <p class="manifesto-highlight">
+        These aren't polished, corporate tutorials. They're how I actually
+        learned this stuff and they're here in case they help you too.
+      </p>
+    </div>
+
+    <div class="manifesto-audience">
+      <h3><i class="fas fa-sticky-note"></i> How to use these notes</h3>
+      <ul>
+        <li>
+          Each series tracks my own learning order - it's best to start from the
+          top.
+        </li>
+        <li>
+          The equations are there when they matter, and skipped when they don't
+          add intuition.
+        </li>
+        <li>
+          <strong>Work in progress:</strong> If a concept feels unclear, it's a
+          gap in my notes. Let me know—I'm actively filling them in.
+        </li>
+      </ul>
+    </div>
+
+    <div class="manifesto-cta">
+      Pick a topic below.
+      <strong>Start from article one and go in order.</strong>
+    </div>
+  </div>
+</div>
+
+<div class="container section">
+  <h2>Learning Notes</h2>
+  <div class="series-grid">
+    {% assign sorted_series = site.data.series | sort: "order" %} {% for series
+    in sorted_series %}
+    <a
+      href="/series/{{ series.slug }}/"
+      class="series-card card-{{ series.accent_color }}"
+    >
+      <div class="series-card-content">
+        <h3>{{ series.name }}</h3>
+        <p>{{ series.description }}</p>
+      </div>
+      <div class="series-card-footer">
+        <span class="series-card-meta">
+          <i class="fas fa-pencil-alt"></i> Mayank's notes
+        </span>
+        {% assign series_posts = site.posts | where: "series", series.name %}
+        <span class="series-card-meta">
+          <i class="fas fa-file-alt"></i> {{ series_posts | size }} notes
+        </span>
+        <span class="series-card-action">
+          Open Notes <i class="fas fa-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% include footer.html %}
