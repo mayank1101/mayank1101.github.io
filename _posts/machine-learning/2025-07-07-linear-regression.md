@@ -7,7 +7,7 @@ series_author: "Mayank Sharma"
 excerpt: "Master linear regression from scratch, understanding simple and multiple regression, cost functions, and gradient descent."
 ---
 
-Continuing in our Machine Learning Series, today we dive deep into linear regression, the cornerstone of predictive modeling. Imagine you're a real estate agent trying to estimate house prices. You notice that larger houses generally sell for more money. Intuitively, you understand there's a relationship between size and price, but can you quantify it? Can you predict the price of a 2,000 square foot house based on past sales data? This is exactly what linear regression does, it finds the mathematical relationship between variables and uses it to make predictions.
+Today we dive deep into linear regression, the cornerstone of predictive modeling. Imagine you're a real estate agent trying to estimate house prices. You notice that larger houses generally sell for more money. Intuitively, you understand there's a relationship between size and price, but can you quantify it? Can you predict the price of a 2,000 square foot house based on past sales data? This is exactly what linear regression does, it finds the mathematical relationship between variables and uses it to make predictions.
 
 ## Table of Contents
 

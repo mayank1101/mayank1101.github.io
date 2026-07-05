@@ -18,12 +18,6 @@
   accent_color: "cyan"
   author: "Mayank Sharma"
   order: 2
-# - name: "Machine Learning for Product Managers"
-#   slug: "machine-learning-pm"
-#   description: "Core ML concepts explained for product managers, written to help newcomers build intuition and to hold up under interview questions. No math required, no depth sacrificed."
-#   accent_color: "pink"
-#   author: "Mayank Sharma"
-#   order: 3
 # - name: "Data Structures and Algorithms Series"
 #   slug: "dsa"
 #   description: "Master the foundations of computer science, from basic data structures to complex algorithmic paradigms and competitive programming techniques."
