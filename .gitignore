@@ -60,3 +60,9 @@ _data/series.yml
 
 # Projects
 _data/projects.yml
+
+# PM-Gym
+pm-gym.html
+pm-gym/
+_layouts/pm-gym.html
+_sass/_pm-gym.scss
