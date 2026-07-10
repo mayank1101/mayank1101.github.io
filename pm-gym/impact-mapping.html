@@ -1,0 +1,782 @@
+---
+layout: pm-gym
+title: "Impact Mapping — PM Gym"
+description: "A beginner-friendly, interactive guide to impact mapping: connect business goals to features through actors and behavior changes."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Impact Mapping</h1>
+  <p class="lead">Connect what you build to why it matters</p>
+  <p class="muted">
+    Teams waste months shipping features nobody needs. Impact mapping is a simple visual
+    method that prevents this: it forces every feature to trace back — through real people
+    and real behavior changes — to a business goal.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Master Impact Mapping</h2>
+      <p class="muted">Four short lessons on the four-pillar chain that keeps product teams from building the wrong things.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Four Pillars</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. The Goal</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Who &amp; How</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Deliverables</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>The Four Pillars</h3>
+      </div>
+
+      <p>
+        The core rule of impact mapping:
+        <strong>never ask "what should we build?" until you know whose behavior needs to change.</strong>
+        The map is a chain with four links, always in this order:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — deciding to get fit</h4>
+        <p>
+          Say your goal is "lose 5kg by summer" (the <strong>Why</strong>). Who can actually make
+          that happen? Only you (the <strong>Who</strong> / actor). What do you need to do
+          differently? Eat less sugar and walk daily (the <strong>How</strong> / impact — a real
+          behavior change). And only then: what tools help you do that? A step-tracker, meal-prep
+          boxes (the <strong>What</strong> / deliverable). Notice you'd never start by buying
+          gadgets — that's backwards. Impact mapping keeps the same order for products: goal first,
+          gadgets last.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Why</span>
+          <h4>Goal</h4>
+          <p>The business metric you need to move.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Who</span>
+          <h4>Actors</h4>
+          <p>The people who can make the goal succeed or fail.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">How</span>
+          <h4>Impact</h4>
+          <p>The behavior change you want to see in those people.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">What</span>
+          <h4>Deliverable</h4>
+          <p>The feature or tool you actually ship.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          You work at <strong>Spotify</strong> and want to drive subscription growth.
+          What role does a <strong>"Share lyrics to Instagram" feature</strong> play in the map,
+          and what is its <strong>impact</strong>?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A feature can never be the goal — goals are business metrics like subscriptions or retention. And 'spending more money' is a goal-level result, not a behavior change the feature creates directly.">
+            A) The feature is the goal; the impact is users spending more money.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The feature is what you ship (deliverable), and the impact is the new sharing habit it creates — users posting lyrics to their stories. That behavior change is what eventually moves the subscription metric.">
+            B) The feature is the deliverable; the impact is users posting lyrics to their stories — a change in their sharing habits.
+          </button>
+          <button class="pm-quiz-option" data-msg="An impact is a human behavior change, not a piece of software. And actors are the people whose behavior matters — Instagram the company doesn't decide whether Spotify listeners share lyrics.">
+            C) The feature is the impact; the actor is the Instagram company.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: The Goal <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Setting the Goal (the "Why")</h3>
+      </div>
+
+      <p>
+        A common beginner mistake is starting with a build goal ("launch a dashboard").
+        A strong goal is a <strong>SMART business outcome</strong> — Specific, Measurable,
+        Achievable, Relevant, and Time-bound.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — New Year's resolutions</h4>
+        <p>
+          "Get fit this year" is the resolution everyone quits by February — it's vague, has no
+          number, and no deadline, so you can never tell if you're winning. "Run a 5k without
+          stopping by June 1st" is the one people actually keep: it's <strong>SMART</strong> —
+          specific, measurable, and time-bound. Product goals fail the same way. "Improve the
+          product" is a wish; "reduce cart abandonment from 60% to 45% by end of Q3" is a goal you
+          can build toward and check.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-bullseye"></i> How to write a good goal</h4>
+        <p>
+          Start with an active verb, target a number you can measure, and give it a deadline.
+        </p>
+        <p class="pm-key-line">
+          "Reduce cart abandonment from 60% to 45% by the end of Q3."
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is a real <strong>goal</strong>, rather than a feature request in disguise?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Build a checkout button' is a deliverable dressed up as a goal — it says what to ship, not what business result to achieve. Ask: what number should change after we ship it?">
+            A) "Our goal is to build a beautiful new 1-click checkout button by next month."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This is a proper goal: a measurable metric (abandonment rate), a target (60% → 45%), and a deadline (end of Q3). Many different features could serve it — that's exactly the point.">
+            B) "Our goal is to reduce cart abandonment from 60% to 45% by the end of Q3."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: Who &amp; How <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Actors and Impacts (the "Who" and "How")</h3>
+      </div>
+
+      <p>
+        With the goal set, work out <strong>who</strong> can influence it (actors)
+        and <strong>how</strong> their behavior needs to shift (impacts).
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — throwing a party</h4>
+        <p>
+          Your goal: "a packed, fun party." Who makes that happen? Your friends (the actors). What
+          do they need to <em>do differently</em>? RSVP yes, actually show up, and bring friends —
+          those are the <strong>impacts</strong> (real changes in behavior). Sending a nice invite
+          is a <em>deliverable</em>, not an impact — it's just a tool to trigger the RSVP. Beginners
+          constantly mix these up: "made a beautiful invite" feels like progress, but if nobody
+          shows up, the impact never happened. Always ask: what must people actually <em>do</em>,
+          not what did we <em>make</em>?
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-users"></i></span>
+          <div>
+            <h4>Actors — the "who"</h4>
+            <p>Never just "the user." Think in specific segments (first-time guest buyers) and secondary players (delivery drivers, support agents).</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-bolt"></i></span>
+          <div>
+            <h4>Impacts — the "how"</h4>
+            <p>A genuine change in what people do — doing something <em>more</em>, <em>less</em>, or <em>differently</em>. Not a click; a habit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          The actor is a <strong>delivery partner</strong> and we want food delivered faster.
+          Which of these is a true <strong>impact</strong> (behavior change) rather than a feature?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A parking map is something you build — that's a deliverable. The impact is what changes in the driver's day because of it. Look for the option describing a change in behavior, not software.">
+            A) "Develop a smart parking map inside their delivery app."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This describes a measurable change in what drivers actually do — less time circling for parking. That's an impact. A parking map might be one deliverable that causes it.">
+            B) "Delivery partners spend 50% less time searching for parking near restaurants."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: Deliverables <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Aligning Deliverables (the "What")</h3>
+      </div>
+
+      <p>
+        Only after mapping the desired behavior changes do you brainstorm features.
+        <strong>Deliverables</strong> are the software, systems, or content you ship
+        to trigger those changes.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the grocery list</h4>
+        <p>
+          Shopping with a list tied to the meals you're cooking, you buy only what traces back to a
+          dinner. Shopping while hungry with no list, you grab a cart full of snacks that connect to
+          no meal — and half of it rots. Unmapped features are those impulse snacks: they look
+          appealing in the aisle but serve no goal. The impact map is your shopping list. When a
+          stakeholder tosses "let's add an AI chat companion!" in the cart, you kindly trace it back:
+          which behavior change, for which actor, toward which goal? If the line breaks, it's an
+          impulse buy — leave it on the shelf.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-shield-halved"></i> The alignment guard</h4>
+        <p>
+          When a stakeholder requests an arbitrary feature ("let's add an AI chat companion!"),
+          trace it backwards: does it trigger a behavior change that serves the goal?
+        </p>
+        <p class="pm-key-line">
+          If the trace breaks anywhere, the feature is probably waste — say so, kindly, with the map.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Goal: grow active fitness-app users 20%. Actor: casual joggers. Impact: they log runs daily.
+          Which <strong>deliverable</strong> is tightly aligned with that impact?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-result="correct" data-msg="A streak counter with nudges exists precisely to make daily logging a habit — it maps straight onto the impact, which maps onto the goal. Clean trace, all four pillars connected.">
+            A) A "daily streak counter &amp; rewards" system that nudges runners who haven't logged today.
+          </button>
+          <button class="pm-quiz-option" data-msg="An accounting dashboard has no connection to joggers logging runs. It might be valuable work for someone — but on this map, the trace to the goal is broken, so it doesn't belong here.">
+            B) A complete overhaul of the corporate accounting dashboard.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Impact Mapping Flashcards</h2>
+      <p class="muted">Six cards covering the pillars, common mistakes, and thinking tools. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Mindset</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">The Golden Rule of Impact Mapping</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 realistic mapping situations. Pick the answer that keeps the goal → actor → impact → deliverable chain intact, then read why the others break it.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">An executive asks you to lead an initiative: grow premium subscriptions by 15% this quarter. The team immediately starts pitching feature ideas.</p>
+        <div class="pm-quiz">
+          <p><strong>Where should the impact map start?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Features are the last link of the chain, not the first. Ideas collected now will anchor everyone before the goal and actors are even defined.">
+            A) Collect the team's feature ideas first — they're the raw material of the map.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right order: goal → actors → impacts → deliverables. Once you know free-tier listeners hold the leverage and what behavior must change, only then do feature ideas get evaluated.">
+            B) Anchor the measurable goal (+15% premium subs by quarter end), then identify which actors can move it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Competitor features are answers to their map, not yours. Without your own goal-to-actor chain, copying them is decoration, not strategy.">
+            C) List what features competitors shipped for subscription growth.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">Uber wants to cut driver churn by 10%. Your team drafts the map and needs to fill in the Impact column for the actor 'part-time commuter drivers'.</p>
+        <div class="pm-quiz">
+          <p><strong>Which entry is a genuine impact?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="That's software you ship — a deliverable. The impact is what changes in the driver's day because the heatmap exists.">
+            A) 'Build a real-time parking availability heatmap in the driver app.'
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="A real, observable change in human behavior — doing something less (circling for parking) and something more (staying online). Deliverables exist only to cause entries like this.">
+            B) 'Drivers spend half as much time hunting for parking and stay online through rush hour.'
+          </button>
+          <button class="pm-quiz-option" data-msg="That's a metric — goal-level territory. An impact names the concrete behavior change that would move such a metric, not the metric itself.">
+            C) 'Driver satisfaction score improves by 10 points.'
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">Duolingo's goal is +20% daily active users. A senior stakeholder insists on building a multiplayer gaming lounge and wants your support.</p>
+        <div class="pm-quiz">
+          <p><strong>How do you evaluate the request with the impact map?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Engaging' is a hope, not a trace. The map demands a specific line: which actor changes which daily behavior because of the lounge? If that line can't be drawn, the feature is floating.">
+            A) Support it — games are engaging, and engagement means daily users.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The diplomatic power of the map: you never say 'bad idea', you show the broken trace to the goal — and offer an alternative whose trace holds. Logic beats politics.">
+            B) Place it on the map: does a lounge make casual learners practice every day? If the trace breaks, propose a cheaper aligned deliverable like streak freezes.
+          </button>
+          <button class="pm-quiz-option" data-msg="Capacity arguments invite escalation and leave the idea undead. Tracing it on the map settles whether it deserves capacity at all — and educates the stakeholder for next time.">
+            C) Decline it flatly — the roadmap is full this quarter.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A teammate writes the goal as: "Launch the new mobile app by Q2."</p>
+        <div class="pm-quiz">
+          <p><strong>Why isn't this a valid impact-map goal?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A deadline doesn't make it a goal. 'Launch the app' is a deliverable — the thing you ship — dressed up as an objective. It says nothing about what business metric should move once the app exists.">
+            A) It's fine — it's specific and has a deadline.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Launch an app' is a deliverable, not a goal. A goal is the business outcome you want the app to cause — e.g., 'grow mobile-active users to 100k by Q2.' Starting the map with a deliverable inverts the whole method; you lose the ability to ask whether the app is even the right way to hit the outcome.">
+            B) It's a deliverable disguised as a goal — a real goal names the measurable business outcome the app should cause, not the act of shipping it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Pushing the date to Q3 changes nothing about the core problem: it's still a build target, not a business outcome. The flaw is the type of statement, not the timeline.">
+            C) The date should be Q3 to be realistic.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">Goal: reduce support ticket volume by 30%. A PM lists only "end customers" as the actor.</p>
+        <div class="pm-quiz">
+          <p><strong>What's missing in the actor thinking?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Only end customers is too narrow. Support ticket volume is shaped by several groups — including support agents (who could deflect or resolve faster) and even engineers (whose bugs generate tickets). Missing actors means missing whole branches of the map.">
+            A) Nothing — customers file the tickets, so they're the only actor.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Actors include everyone who can influence the goal, not just the obvious user. Support agents could resolve issues on first contact; engineers could fix the bugs generating tickets; the help-center content team could pre-empt questions. Each is a distinct actor with its own impacts and deliverables. Narrow actor thinking blinds you to high-leverage branches.">
+            B) It ignores secondary actors — support agents, engineers, and content teams also influence ticket volume, each opening a different branch of the map.
+          </button>
+          <button class="pm-quiz-option" data-msg="Jumping to a chatbot skips straight to a deliverable before mapping the actors and impacts. You might discover the biggest lever is fixing a recurring bug, not deflecting tickets — but only if you map the actors first.">
+            C) Skip actors entirely and just build a support chatbot.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">In the Impact column, a team writes: "Users click the new 'Invite' button."</p>
+        <div class="pm-quiz">
+          <p><strong>Why is this a weak impact?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A click is an interaction with your feature, not a meaningful change in the person's behavior or life. Impacts describe people doing something more, less, or differently — not tapping a specific button you built.">
+            A) It's fine — clicking the button is a measurable behavior.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Clicks a button' ties the impact to one specific deliverable, which defeats the purpose — impacts should be solution-agnostic behavior changes. A real impact is 'existing users regularly bring in new users,' which many deliverables (invite button, referral rewards, share links) could cause. Phrasing it as a click quietly locks you into one feature before you've compared options.">
+            B) A click is a feature interaction, not a real behavior change — the impact should be 'users regularly invite others,' which many deliverables could cause.
+          </button>
+          <button class="pm-quiz-option" data-msg="The button's color or wording is irrelevant to why this is a weak impact. The problem is conceptual: you've written a click on a specific feature instead of a genuine, solution-agnostic behavior change.">
+            C) The button just needs a more prominent color.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Your map has: Goal (grow retention 15%) → Actor (power users) → Impact (they invite colleagues) → Deliverable (a company-wide rebranding project).</p>
+        <div class="pm-quiz">
+          <p><strong>What's broken?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The first three links are fine, but the deliverable doesn't connect. A rebranding project won't specifically make power users invite colleagues — the trace from impact to deliverable is broken, which is exactly what the map is designed to catch.">
+            A) Nothing — rebranding always helps retention.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The deliverable doesn't cause the impact. A rebrand is a huge, diffuse effort with no clear line to 'power users invite colleagues.' A tightly-aligned deliverable would be a one-click team-invite flow or referral incentive. When the impact→deliverable link is this loose, the feature is likely waste — the map just exposed it.">
+            B) The deliverable doesn't cause the impact — a rebrand won't specifically make power users invite colleagues; a team-invite flow would.
+          </button>
+          <button class="pm-quiz-option" data-msg="The problem isn't that the goal is too ambitious — 15% may be fine. The break is at the last link: the deliverable has no plausible path to producing the named impact.">
+            C) The goal of 15% is too high; lower it and the map works.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">Leadership hands you a strategy where the map has ten actors, each with three impacts, each with several deliverables — 60+ features. Everything is "priority."</p>
+        <div class="pm-quiz">
+          <p><strong>How does impact mapping help you prioritize?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building all 60 defeats the purpose. A big map isn't a to-do list — it's a menu of options. The whole value is choosing the few branches most likely to move the goal, not committing to every twig.">
+            A) Build all 60 deliverables since they're all on the map.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The map is a menu, not a mandate. Pick the actor and impact most likely to move the goal with the least effort, and pursue only the deliverables on that branch first. You can bet on one high-leverage path, learn, and then decide whether to fund the next. Impact mapping makes the options and their trade-offs visible so you can choose deliberately.">
+            B) Treat the map as a menu — pick the highest-leverage actor/impact branch and fund only its deliverables first, then reassess.
+          </button>
+          <button class="pm-quiz-option" data-msg="Splitting the team evenly across all branches guarantees that nothing gets enough force to move the goal. The map's purpose is to reveal where leverage concentrates, so you can focus — not to spread effort uniformly.">
+            C) Split the team evenly across all ten actors at once.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A stakeholder is adamant: "Just trust me, the AI companion feature will be huge. We don't need to map it."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the diplomatic impact-mapping response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Caving to seniority abandons the tool exactly when it's most useful. 'Trust me' features that skip the map are how roadmaps fill with unaccountable bets. You can honor the stakeholder without skipping the trace.">
+            A) Agree and build it — they're senior, so they must be right.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. You never call it a bad idea — you invite them to place it on the map: 'Which actor's behavior does this change, and how does that move our goal?' If the trace holds, great, it's justified; if it breaks, the map — not you — makes the case. It turns a political standoff into a shared, logical question.">
+            B) Invite them to place it on the map: which actor changes which behavior, and how does that move the goal? Let the trace make the case, not opinions.
+          </button>
+          <button class="pm-quiz-option" data-msg="Flatly refusing sparks a political fight and wastes the map's diplomatic power. The strength of impact mapping is that it lets you challenge an idea with logic and a shared diagram, not a personal 'no.'">
+            C) Refuse outright and tell them the idea is bad.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Two deliverables both trace cleanly to the goal. One is a small notification tweak (2 days); the other is a full loyalty-program build (3 months). Both target the same impact.</p>
+        <div class="pm-quiz">
+          <p><strong>How should the map inform your choice?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Automatically picking the bigger build ignores effort. When two deliverables target the same impact, the map's job is to help you get the behavior change for the least cost — so test the cheap one before betting three months.">
+            A) Build the loyalty program — bigger investment means bigger results.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. When both deliverables map to the same impact, start with the cheapest one that could plausibly cause it. Ship the 2-day notification tweak, see if it moves the behavior, and only invest in the 3-month program if the cheap test justifies it. The map shows they're interchangeable bets on one impact, so let cost and evidence decide the order.">
+            B) Test the cheap deliverable first — both target the same impact, so get the behavior change for the least cost before committing 3 months.
+          </button>
+          <button class="pm-quiz-option" data-msg="Doing both at once spends three months and two days to move a single impact you could have tested for two days. Since they target the same behavior change, running them in parallel is redundant effort.">
+            C) Build both simultaneously to be thorough.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">Three months into building the deliverables on your map, data shows the target impact isn't moving the goal at all — the behavior changed, but retention didn't budge.</p>
+        <div class="pm-quiz">
+          <p><strong>What does this reveal about the map?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Pushing harder on a deliverable when the impact→goal link is broken just wastes more effort. The behavior already changed; the problem is that this particular behavior turned out not to drive the goal. More of the same won't fix a wrong assumption.">
+            A) Keep building — the deliverables just need more time.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A map encodes assumptions, and this one just proved false: you assumed this impact would move retention, but it didn't. That's valuable learning — revisit the map, pick a different actor/impact branch that more plausibly drives the goal, and redirect. The map isn't sacred; it's a hypothesis you test and revise.">
+            B) The map's assumption was wrong — this impact doesn't drive the goal, so revisit the map and pick a different, more plausible actor/impact branch.
+          </button>
+          <button class="pm-quiz-option" data-msg="Impact mapping isn't 'useless' because one branch failed — it's doing exactly its job by making the failed assumption visible and cheap to correct. Abandoning the tool discards the very thing that just caught your mistake.">
+            C) Impact mapping is useless; abandon the technique.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Goal: increase marketplace transactions. A junior PM maps only buyers as actors, forgetting sellers entirely.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk of this omission?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="In a marketplace, transactions need both sides. Mapping only buyers means you might pour effort into demand while supply stays too thin to fulfill it — a classic way to 'succeed' at one branch and still miss the goal.">
+            A) No risk — more buyers automatically means more transactions.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A transaction requires a seller too. If you only map buyers, you may drive demand the supply side can't meet — no inventory, slow response, sold-out listings. Sellers are a critical actor with their own impacts (list more, respond faster, price competitively) and deliverables. Missing an actor can leave the goal unreachable no matter how well the other branch performs.">
+            B) A transaction needs both sides — ignoring sellers means demand may outstrip supply, so the goal can stall even if buyer behavior improves.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more buyer impacts deepens the same one-sided map. The gap isn't too few buyer branches — it's a missing actor (sellers) whose behavior is equally required for a transaction to happen.">
+            C) Just add more impacts under the buyer actor.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">Someone proposes the impact: "Make users happy."</p>
+        <div class="pm-quiz">
+          <p><strong>Why is this a poor impact entry?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Make users happy' is a nice sentiment but useless on a map — it's not a specific, observable behavior change you can design a deliverable for or measure. It could 'justify' literally any feature, which means it guides nothing.">
+            A) It's great — user happiness is the ultimate goal.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. An impact must be a concrete, observable change in behavior — something you can see people doing more, less, or differently. 'Make users happy' is vague and unmeasurable, so it can't anchor deliverables or tell you if you succeeded. Sharpen it to a behavior: 'users return within 7 days' or 'users complete a second purchase.'">
+            B) It's vague and unobservable — an impact must be a specific behavior change you can see and measure, like 'users return within 7 days.'
+          </button>
+          <button class="pm-quiz-option" data-msg="Happiness can be surveyed, but that's not what makes this a weak impact. The real problem is that it's not a specific behavior change — it's a fuzzy feeling that could justify any feature and direct none.">
+            C) Happiness just can't be measured by any means.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">Your finished impact map is beautiful, but a stakeholder asks: "How do we know these behavior changes will actually happen if we ship the deliverables?"</p>
+        <div class="pm-quiz">
+          <p><strong>What's the honest answer about what a map is?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Claiming certainty oversells the map. It doesn't guarantee outcomes — it lays out your best assumptions about what drives the goal. Treating it as proof invites overconfidence and skips the testing the map is meant to enable.">
+            A) The map guarantees the outcomes — that's why we made it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. An impact map is a set of connected assumptions — hypotheses about which behaviors drive the goal and which deliverables drive those behaviors. Its value is making those assumptions explicit so you can test the riskiest ones cheaply and update the map as evidence comes in. It's a thinking and prioritization tool, not a promise.">
+            B) It's a set of explicit assumptions to test — the map makes your hypotheses visible so you can validate the riskiest links, not a guarantee of results.
+          </button>
+          <button class="pm-quiz-option" data-msg="Dismissing the map as 'just a diagram, ignore it' throws away its real benefit: it structures your assumptions so you know what to test. The right response is to treat those links as testable hypotheses, not to disown the map.">
+            C) It's just a pretty diagram; ignore it once building starts.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A PM builds the entire map alone at their desk, then presents the finished version to engineering and design as final.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the process flaw?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A map built in isolation misses the whole collaborative point. Engineers and designers spot infeasible deliverables and overlooked actors; excluding them means blind spots baked in and a team with no buy-in to a plan handed down as final.">
+            A) Nothing — a PM should own the map and hand it down.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Impact mapping is a collaborative workshop, not a solo artifact. Building it with engineering, design, and business stakeholders surfaces better actors and impacts, catches infeasible deliverables early, and — crucially — creates shared understanding and buy-in. A map handed down as 'final' loses the alignment that's half its value.">
+            B) A map should be built collaboratively — doing it solo loses better actor/impact ideas, feasibility checks, and the team buy-in that's half the point.
+          </button>
+          <button class="pm-quiz-option" data-msg="The map isn't automatically 'wrong' because one person drafted it — a solo draft can be a fine starting point. The flaw is presenting it as final without collaboration, which forfeits shared understanding and misses the team's knowledge.">
+            C) The map is automatically wrong because one person made it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Impact Mapping Quick Reference</h2>
+      <p class="muted">The whole framework on one screen — perfect for a two-minute refresher.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-sitemap"></i> The Four-Pillar Chain</h3>
+        <p class="muted">Every product plan should trace an unbroken line from why (goal) to what (deliverable).</p>
+        <div class="pm-concept-grid">
+          <div class="pm-concept-item pm-good">
+            <span class="pm-chip">1. Why</span>
+            <h4>Goal</h4>
+            <p>Measurable business metric. <em>"Grow retention by 10%."</em></p>
+          </div>
+          <div class="pm-concept-item pm-good">
+            <span class="pm-chip">2. Who</span>
+            <h4>Actor</h4>
+            <p>The people with leverage. <em>"Casual free listeners."</em></p>
+          </div>
+          <div class="pm-concept-item">
+            <span class="pm-chip">3. How</span>
+            <h4>Impact</h4>
+            <p>Visible behavior change. <em>"Posting lyrics to stories."</em></p>
+          </div>
+          <div class="pm-concept-item">
+            <span class="pm-chip">4. What</span>
+            <h4>Deliverable</h4>
+            <p>Features you ship. <em>"A lyric export button."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-circle-exclamation"></i> Common Traps</h3>
+        <p class="muted">Three mistakes almost everyone makes at first — and how to avoid them.</p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Jumping to features</h4>
+              <p>Asked "how would you improve X?" — anchor on a measurable goal first, then find the actors. Features come last.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Confusing clicks with impacts</h4>
+              <p>An impact is never "users click the button." It's the change in habit or frequency the button causes.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Accepting unmapped features</h4>
+              <p>Use the map to prioritize the backlog — if a request doesn't trace back to the goal, challenge it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-diagram-project"></i> How to Run It</h3>
+        <p class="muted">A map is a workshop and a hypothesis, not a solo artifact.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-people-group"></i></span><div><h4>Build it together</h4><p>Do it with eng, design, and stakeholders — better ideas, feasibility checks, buy-in.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-list-check"></i></span><div><h4>It's a menu, not a mandate</h4><p>A big map is options. Fund the highest-leverage branch first, then reassess.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-flask"></i></span><div><h4>Every link is an assumption</h4><p>Test the riskiest impact→goal link cheaply; update the map as evidence lands.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-coins"></i></span><div><h4>Cheapest deliverable first</h4><p>If two features hit the same impact, ship the cheaper one and learn.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-users"></i> Don't Forget Secondary Actors</h3>
+        <p class="muted">The goal is rarely moved by the obvious user alone.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-user-check"></i></span><div><h4>Primary user</h4><p>The obvious one — but map their specific segments, not just "the user."</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-store"></i></span><div><h4>The other side</h4><p>In marketplaces, sellers matter as much as buyers — both make a transaction.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-headset"></i></span><div><h4>Internal actors</h4><p>Support agents, sales reps, moderators, engineers can all move a goal.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/impact-mapping.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

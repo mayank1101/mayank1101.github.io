@@ -1,0 +1,757 @@
+---
+layout: pm-gym
+title: "Design Thinking Process — PM Gym"
+description: "A beginner-friendly, interactive guide to the five-stage design thinking process: empathize, define, ideate, prototype, and test."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Design Thinking Process</h1>
+  <p class="lead">A human-centered recipe for solving the right problem creatively</p>
+  <p class="muted">
+    Design thinking is a five-stage, human-centered process for tackling fuzzy problems: understand people deeply, frame the real problem, generate many ideas, build something cheap to react to, and learn from real users — looping back as you go.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>The Five Stages</h2>
+      <p class="muted">One short lesson per stage. The process is iterative — you loop back constantly, not march straight through.</p>
+    </div>
+
+    <div class="pm-lesson-nav pm-lesson-nav-5">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Empathize</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Define</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Ideate</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Prototype</button>
+      <button class="pm-lesson-btn" data-lesson="5">5. Test</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Empathize</h3>
+      </div>
+
+      <p>
+        Stage one: understand the people you're designing for, deeply and without assumptions.
+        You're gathering real human context, not opinions about it.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the good friend vs. the fixer</h4>
+        <p>
+          Imagine a friend who, the moment you mention a problem, jumps in with "just do X!" before
+          you've even finished. Compare them to the friend who actually listens, asks "what's that
+          like for you?", and understands before advising. <strong>Empathize is being the second
+          friend.</strong> You watch and listen to real users until you genuinely feel their
+          problem — because a solution built on a guess about people is a solution built on sand.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-heart"></i> Set your assumptions aside</h4>
+        <p>
+          Watch people in their real setting, ask open questions, and listen for the feelings and
+          struggles beneath what they say. The goal is to see the problem through their eyes, not
+          yours.
+        </p>
+        <p class="pm-key-line">
+          You can't solve a problem you don't genuinely understand — so empathy comes first,
+          before any idea.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>In the Empathize stage, which activity fits best?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Idea generation is the Ideate stage, later. Jumping to solutions now means designing for the users you <em>imagine</em>, before you've understood the real ones.">A) Brainstorming feature ideas with the team.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Empathize is about gathering genuine human understanding — watching, asking, listening — so every later stage is grounded in real people, not assumptions.">B) Interviewing and observing real users to understand their needs and feelings firsthand.</button>
+          <button class="pm-quiz-option" data-msg="Framing the problem is the next stage, Define. It's the <em>output</em> of empathy work — you can't write a true problem statement before you've done the listening.">C) Writing the final problem statement.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Define <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Define</h3>
+      </div>
+
+      <p>
+        Stage two: synthesize everything you learned into a single, sharp problem statement. A
+        fuzzy problem produces fuzzy solutions.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the doctor's diagnosis</h4>
+        <p>
+          A patient walks in saying "I just feel awful." That's too vague to treat. A good doctor
+          narrows it to a precise diagnosis — "an iron deficiency causing your fatigue" — and
+          suddenly the treatment is obvious. <strong>Define does the same for a product problem:</strong>
+          it turns a vague "users are frustrated" into a sharp statement everyone can aim at. The
+          "How Might We…" phrasing keeps it a question (so ideas can flow) rather than jumping
+          straight to one cure.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-crosshairs"></i> From findings to a point of view</h4>
+        <p>
+          Turn raw observations into a clear <strong>point-of-view</strong>: <em>[user] needs [need]
+          because [insight]</em>. Then reframe it as a <strong>"How Might We…"</strong> question that
+          opens up solutions.
+        </p>
+        <p class="pm-key-line">
+          "How might we help a rushed parent get a healthy dinner on the table with zero planning?"
+          — specific enough to act on, open enough to invite many ideas.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which is a well-formed <strong>Define</strong> output (a "How Might We" question)?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Too broad and solution-shaped — it names a technology, not a human need, and could 'solve' anything. A good HMW frames a specific problem, not a predetermined answer.">A) "How might we build an app?"</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. It centers a specific user and need, stays open to many solutions, and is grounded in an insight from empathy work — the sweet spot for a Define statement.">B) "How might we help a rushed parent get a healthy dinner ready with no planning?"</button>
+          <button class="pm-quiz-option" data-msg="That's a solution with a deadline, not a problem framing. Define keeps the problem open; committing to a specific build here would short-circuit the ideation to come.">C) "Ship a recipe recommendation engine by Q3."</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Ideate <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Ideate</h3>
+      </div>
+
+      <p>
+        Stage three: generate a wide range of possible solutions. Quantity first, judgment later —
+        the goal is options, not the one perfect answer yet.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — planning a group trip</h4>
+        <p>
+          When friends plan a holiday, the fun version goes: everyone shouts out destinations —
+          beach, mountains, a road trip, Tokyo, camping — and someone writes them all down, no
+          shooting anything down yet. Only after the wild list exists do you weigh cost and dates
+          and pick. If one person kills every idea as it's said ("too expensive," "too far"),
+          nobody suggests anything and you end up back at the same boring place.
+          <strong>That's Ideate:</strong> get every option out first, judge later.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-lightbulb"></i> Diverge before you converge</h4>
+        <p>
+          Push for many ideas, including wild ones. Defer judgment — criticism kills the half-formed
+          idea that could have led somewhere. Build on others' ideas ("yes, and…").
+        </p>
+        <p class="pm-key-line">
+          You first <strong>diverge</strong> (open up lots of options), then <strong>converge</strong>
+          (narrow to the few worth prototyping).
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Someone in an ideation session says "that idea is silly, it'll never work" after each suggestion. Why is this a problem?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Judging during divergence saves no time; it shuts people down and kills the half-baked ideas that often lead to the best ones. Filtering belongs in the later converge step.">A) It isn't — filtering bad ideas early saves time.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Ideate is about quantity and deferring judgment. Criticism mid-flow makes people self-censor, and you lose the wild seed that a teammate could have grown into gold.">B) Early judgment shuts down divergence — it stops the flow of options before the good ones can emerge or be built upon.</button>
+          <button class="pm-quiz-option" data-msg="More criticism during ideation makes it worse, not better. Evaluation has its place — after you diverge — but during idea generation it strangles the options you need.">C) The problem is there aren't enough critics.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Prototype <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Prototype</h3>
+      </div>
+
+      <p>
+        Stage four: turn promising ideas into something cheap and tangible that people can react
+        to. A prototype is a question, not a product.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the movie storyboard</h4>
+        <p>
+          Before a film studio spends millions shooting, artists draw the movie as rough sketches —
+          a <strong>storyboard</strong> — so they can see if the story works for almost no money.
+          If a scene falls flat, they redraw it; nobody's precious about a pencil sketch. A product
+          prototype is that storyboard: a paper sketch or clickable mockup that lets people react to
+          the idea before you build the expensive real thing. Keep it rough on purpose — the fancier
+          it looks, the more attached you get and the less honestly you'll hear "this doesn't work."
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-cubes"></i> Cheap, fast, disposable</h4>
+        <p>
+          A paper sketch, a clickable mockup, a role-play — whatever is fastest to build and
+          fastest to throw away. The point is to learn, not to polish.
+        </p>
+        <p class="pm-key-line">
+          The more you spend on a prototype, the more attached you get and the less honestly you
+          hear the feedback. Keep it rough.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Your team wants to test a new booking flow. Which is the best <strong>prototype</strong> for a first learning cycle?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="That's a finished product, not a prototype. It's slow to build and expensive to change — and after all that investment, you'll be tempted to defend it rather than learn from it.">A) A fully coded, production-ready version of the whole flow.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Cheap, fast, and disposable — enough for a user to react to the flow without weeks of engineering. You learn the big problems before writing any real code.">B) A quick clickable mockup of the key screens that a user can tap through.</button>
+          <button class="pm-quiz-option" data-msg="A spec describes the idea but doesn't let a user experience it. Prototypes are tangible things people can react to; a document can't reveal how the flow actually feels to use.">C) A written specification document.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="5">Test <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="5">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">5</span>
+        <h3>Test</h3>
+      </div>
+
+      <p>
+        Stage five: put the prototype in front of real users, watch what happens, and learn.
+        Testing feeds straight back into the earlier stages.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the chef's taste test</h4>
+        <p>
+          A good chef doesn't cook one giant batch and serve 200 guests untasted. They taste as they
+          go, hand a spoonful to a colleague, watch the reaction, and adjust the salt. <strong>Testing
+          is that spoonful:</strong> you watch a few real users try the prototype and notice where
+          they wince. And crucially — if the whole dish is wrong, you don't just tweak the garnish;
+          you go back and rethink the recipe. That's the loop: a bad test sends you back to
+          Define or Empathize, not just to a small fix.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-arrows-rotate"></i> The loop, not the finish line</h4>
+        <p>
+          Observe users with the prototype, note where they struggle and what surprises you, then
+          loop back: refine the prototype, re-frame the problem, or even return to empathy if you
+          got the user wrong.
+        </p>
+        <p class="pm-key-line">
+          Design thinking is iterative. Test isn't the end — it's what sends you round again,
+          smarter each time.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>During testing, users keep misunderstanding the core concept — not just small UI details. What's the right response?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating testing as a rubber stamp defeats its purpose. Users missing the <em>core concept</em> is a loud signal that something upstream is wrong — ignoring it ships the flaw.">A) Ship it anyway; testing is just a formality.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Design thinking is iterative. A fundamental misunderstanding points to an earlier stage; the test just told you where to go back and fix it before building for real.">B) Loop back — a deep misunderstanding may mean re-framing the problem (Define) or revisiting user needs (Empathize), not just tweaking the prototype.</button>
+          <button class="pm-quiz-option" data-msg="When many users miss the concept, the concept or its framing is the problem, not the users. Testing exists to catch exactly this — so you improve the design, not dismiss the feedback.">C) Blame the users for not getting it.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="4"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Design Thinking Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Overview</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Design Thinking</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can spot the right stage, avoid the classic traps, and keep the loop alive. Choose the strongest move, then read why the others miss.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A stakeholder walks in and says: "Let's build a chatbot." No one has talked to users about their actual problem yet.</p>
+        <div class="pm-quiz">
+          <p><strong>Where should a design-thinking team start?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Prototyping a predetermined solution skips Empathize and Define entirely. You'd be building for an assumed problem; the chatbot might solve something nobody struggles with.">
+            A) Start prototyping the chatbot — that's the idea on the table.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Build a chatbot' is a solution in search of a problem. Empathy and a sharp problem statement come first; the right solution — maybe a chatbot, maybe not — emerges after.">
+            B) Back up to Empathize and Define — understand the real user problem before committing to any solution, chatbot or not.
+          </button>
+          <button class="pm-quiz-option" data-msg="Team preference isn't user need. Design thinking is human-centered — the answer comes from understanding the people with the problem, not from internal opinions about a solution.">
+            C) Poll the team on whether they like chatbots.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">In an ideation session, the group latches onto the first decent idea after five minutes and starts planning it in detail.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the design-thinking concern?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Converging after five minutes skips real divergence. The first decent idea is rarely the best; you've narrowed before generating the range of options ideation exists to produce.">
+            A) None — committing fast is efficient.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. The power of Ideate is quantity before judgment. Jumping to plan the first workable idea forecloses the wilder options that often lead somewhere much better.">
+            B) They converged too early — Ideate needs broad divergence first, or they'll miss stronger ideas the first one blocked.
+          </button>
+          <button class="pm-quiz-option" data-msg="Skipping ideation entirely is the opposite fix and just as limiting — you'd prototype the single obvious idea. The point is to diverge widely first, then converge on the best.">
+            C) They should have skipped ideation and prototyped immediately.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">Your team spent three weeks building a polished, near-final prototype. In testing, users clearly don't understand it — but the team resists changing anything.</p>
+        <div class="pm-quiz">
+          <p><strong>What went wrong, in design-thinking terms?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="If users need training to grasp it, the design failed the test — that's the signal to change, not to coach users. And 'nothing wrong' ignores the resistance that's now blocking learning.">
+            A) Nothing — the users just need more training.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Prototypes should be cheap and disposable precisely so you stay open to bad news. Three weeks of polish created sunk-cost attachment that's now overriding what testing revealed.">
+            B) The prototype was too polished — heavy investment made the team attached and unwilling to hear the feedback the test produced.
+          </button>
+          <button class="pm-quiz-option" data-msg="They tested too <em>late</em>, if anything — after over-investing. Testing surfaced a real problem; the failure is the attachment blocking the loop-back, not the timing of the test.">
+            C) They tested too early.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">During user interviews, a PM keeps asking: "Wouldn't you love a feature that does X? You'd use that, right?" Users nod along.</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with this Empathize technique?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Getting agreement feels productive but proves little. These are leading questions that plant the answer — people nod to be polite. You've confirmed your own assumption, not learned the user's real world.">
+            A) Nothing — the users agreed, so the need is validated.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Leading questions ('wouldn't you love…') push users toward the answer you want and gather false validation. Good empathy work asks open, non-leading questions about actual past behavior — 'tell me about the last time you did this' — and watches what people do, not what they'll politely agree to.">
+            B) They're leading questions — asking users to endorse your idea gathers polite agreement, not genuine understanding of their real needs and behavior.
+          </button>
+          <button class="pm-quiz-option" data-msg="The interviews weren't too short — they were pointed the wrong way. Even a long interview full of leading questions produces biased answers. Fix the questions, not the clock.">
+            C) The interviews were just too short; make them longer.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A team writes its problem statement as: "Users need our new AI dashboard because dashboards are the future."</p>
+        <div class="pm-quiz">
+          <p><strong>Why is this a poor Define output?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It reads like a problem statement but smuggles in the solution ('our AI dashboard') and a slogan for an insight ('dashboards are the future'). A real Define output names the user need and the evidence behind it, not a predetermined build.">
+            A) Nothing — it names a user, a need, and a reason.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It bakes the solution into the problem ('need our AI dashboard') and props it up with a trend cliché instead of a real insight from users. A good statement is solution-agnostic: '[user] needs [need] because [insight we observed]' — leaving the solution open for Ideate.">
+            B) It hides a predetermined solution inside the 'need' and uses a trend slogan instead of a real, observed insight — so it prejudges the answer.
+          </button>
+          <button class="pm-quiz-option" data-msg="Length isn't the issue — a short statement can be excellent. The flaw is that it embeds the solution and lacks a genuine user insight, not that it needs more words.">
+            C) It's too short; a problem statement should be a paragraph.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">Ideation has produced 40 ideas on the wall. The room falls silent — nobody knows what to do next.</p>
+        <div class="pm-quiz">
+          <p><strong>What stage-transition is needed?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Generating even more ideas when you already have 40 avoids the real next step. Divergence has done its job; endlessly diverging just grows an unmanageable pile.">
+            A) Keep diverging — brainstorm another 40 ideas.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. After diverging (opening up options), you converge — cluster similar ideas, then use a method like dot-voting or an impact/effort sort to narrow to the few worth prototyping. The pause is the natural signal to shift from generating to selecting.">
+            B) Converge — cluster the ideas and use dot-voting or an impact/effort sort to narrow to a few worth prototyping.
+          </button>
+          <button class="pm-quiz-option" data-msg="Having a manager unilaterally pick throws away the group's divergence and the criteria that make convergence rigorous. Converge deliberately with the team, don't hand it to one gut call.">
+            C) Have the most senior person just pick their favorite.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Engineering wants a fully functional, backend-connected prototype before showing anything to users, "so the test is realistic."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the design-thinking counter-argument?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A fully-built prototype defeats the purpose: it's slow, expensive, and by the time it's done you're too invested to hear bad news. Prototypes exist to learn cheaply BEFORE that investment.">
+            A) Agree — only a fully working version gives a valid test.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A prototype's job is to answer a question as cheaply as possible. A rough mockup can surface the biggest usability and value problems without a real backend — and keeps everyone unattached enough to change course. Save the full build for after the cheap prototype has de-risked the idea.">
+            B) A prototype should be the cheapest thing that answers the question — a rough mockup reveals the big problems without a backend, and keeps the team open to changing it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Skipping prototyping and shipping straight to production is the most expensive way to learn — the opposite lesson. The point is to prototype cheaply, not to bypass prototyping for the real thing.">
+            C) Skip the prototype and just ship to production to see what happens.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">In testing, a user struggles with the prototype. The PM immediately jumps in to explain how it's "supposed" to work, and the user then says "oh, that makes sense."</p>
+        <div class="pm-quiz">
+          <p><strong>What did the PM do wrong?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Helping the user feels kind but destroys the test. In the real world you won't be standing next to every user to explain things. By coaching them, the PM erased the exact struggle they needed to observe.">
+            A) Nothing — helping the user finish is good hospitality.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The struggle IS the data. By explaining, the PM contaminated the test and got a false 'that makes sense.' The right move is to stay quiet, watch where the user gets stuck, and ask 'what are you thinking here?' — because the product has to work without you in the room.">
+            B) They contaminated the test — the user's confusion was the finding, and by explaining it away the PM erased the real signal.
+          </button>
+          <button class="pm-quiz-option" data-msg="The prototype being 'too hard' isn't the lesson here — struggle is expected and useful. The mistake is the PM intervening and masking that struggle, not the difficulty itself.">
+            C) The prototype was too hard, so the test was pointless.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A leader insists the five stages must be done strictly in order, once each, like a checklist — Empathize, then Define, then Ideate, then Prototype, then Test, then done.</p>
+        <div class="pm-quiz">
+          <p><strong>What misunderstanding is this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating the stages as a one-pass checklist misses the core idea. Design thinking is a loop, not a line — testing routinely sends you back to redefine or re-empathize, sometimes many times.">
+            A) It's correct — the stages are a strict linear sequence.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Design thinking is iterative and non-linear. You loop back constantly: a test can send you to re-frame the problem (Define) or re-learn the user (Empathize), and you may prototype several times. The five stages are modes you move between, not a one-time checklist.">
+            B) The process is iterative, not a one-pass line — teams loop back repeatedly (e.g., a bad test returns you to Define or Empathize).
+          </button>
+          <button class="pm-quiz-option" data-msg="The order isn't 'wrong' — empathize-define-ideate-prototype-test is the usual starting flow. The misunderstanding is treating it as strictly once-through instead of a repeating loop.">
+            C) The stages are listed in the wrong order.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Your team is designing a tool for warehouse workers but has only interviewed office managers who supervise them, never the workers themselves.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the Empathize flaw?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Managers can describe the work, but they're not the ones who'll use the tool or feel its friction. Designing from a proxy's secondhand account is how you build something that looks right on paper and fails on the floor.">
+            A) It's fine — managers know their workers' needs well enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Human-centered design means empathizing with the actual end users — the warehouse workers — not a proxy who supervises them. Managers have their own (often different) priorities and blind spots. Go observe and talk to the people who'll really use the tool in their real environment.">
+            B) They empathized with a proxy, not the real end users — you must observe and talk to the warehouse workers who'll actually use the tool.
+          </button>
+          <button class="pm-quiz-option" data-msg="More manager interviews deepen the wrong well. The gap isn't quantity — it's that they've never heard from the actual users. Adding managers can't fix the absence of workers.">
+            C) They just need to interview more managers.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A "How Might We" question is phrased: "How might we increase quarterly revenue by 20%?"</p>
+        <div class="pm-quiz">
+          <p><strong>Why doesn't this work as a design-thinking HMW?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It's a fine business goal but a poor HMW. It centers a company metric, not a human need, so it doesn't point ideation at a user problem — it just restates the target you want to hit.">
+            A) Nothing — it's specific and measurable.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A design-thinking HMW should frame a human need drawn from empathy work, not a business KPI. 'Increase revenue 20%' is an outcome you want, not a user problem to solve creatively. Reframe around what users are struggling with — solving that is what drives the revenue.">
+            B) It frames a business metric, not a human problem — a good HMW centers a user need discovered in Empathize, so ideas target people, not a KPI.
+          </button>
+          <button class="pm-quiz-option" data-msg="The 20% isn't the flaw — even a vaguer revenue target would fail the same way. The problem is that it's a business outcome, not a human-centered problem for ideation to open up.">
+            C) The 20% target is simply too ambitious.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Testing five prototypes with users reveals that the whole underlying assumption — that people want to plan meals a week ahead — is wrong. Most decide dinner an hour before.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right loop-back?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Tweaking the prototype's buttons can't fix a broken core assumption. The problem isn't the interface — it's that you framed the wrong problem. Polishing the prototype ignores what the test actually revealed.">
+            A) Keep refining the prototype's buttons and colors.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A wrong core assumption is a signal to loop all the way back to Define (and maybe Empathize) — re-frame the problem around how people actually decide dinner ('help someone throw together a good meal from what's on hand right now'). That's the loop working: a cheap test saved you from building for a fictional user.">
+            B) Loop back to Define/Empathize — the core assumption was wrong, so re-frame the problem around how people really decide meals, not just tweak the prototype.
+          </button>
+          <button class="pm-quiz-option" data-msg="Pushing ahead because you've 'come this far' is sunk-cost thinking. Building on a disproven assumption guarantees a product for users who don't exist. The test just gave you the gift of finding out cheaply — use it.">
+            C) Ignore it and build the week-ahead planner anyway.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">During ideation, the quietest team member sketches a strange, seemingly impractical idea. The group chuckles and moves on.</p>
+        <div class="pm-quiz">
+          <p><strong>What does good ideation practice say?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dismissing the odd idea with a laugh is exactly the judgment ideation asks you to defer. Wild, impractical ideas are often the seed of a breakthrough once someone builds on them.">
+            A) The group was right — impractical ideas waste time.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Ideate values wild ideas and 'yes, and…' building. The strange idea might be reshaped into something brilliant, and dismissing quiet contributors teaches everyone to self-censor. Capture it, build on it, and defer judgment until the converge step.">
+            B) Capture the wild idea and build on it ('yes, and…') — deferring judgment protects the odd ideas that often spark the best solutions, and keeps quiet voices contributing.
+          </button>
+          <button class="pm-quiz-option" data-msg="Only pursuing practical ideas from senior people narrows the funnel to the safe and obvious — the opposite of what divergence is for. The best ideas often come from unexpected, unpolished sparks.">
+            C) Only entertain practical ideas from senior members.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A PM says: "We already know our users perfectly, so let's skip Empathize and jump straight to Ideate."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk of skipping Empathize?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'We already know our users' is the phrase that precedes most product flops. Assumed knowledge is frozen and often outdated; skipping empathy means ideating for the users you imagine, not the ones who exist now.">
+            A) No risk — experienced teams can safely skip empathy work.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Skipping Empathize means every idea rests on assumptions that may be stale or wrong, and the whole process inherits that error. Even a quick empathy check — a few real conversations — grounds ideation in current reality instead of memory. The confidence itself is the warning sign.">
+            B) Every later stage inherits unchecked assumptions — ideating without fresh empathy means solving for an imagined user, not the real, current one.
+          </button>
+          <button class="pm-quiz-option" data-msg="Ideation isn't 'always a waste of time' — it's essential. The problem is doing it on top of assumed rather than observed understanding, which points all that creative energy at the wrong problem.">
+            C) Ideation is always a waste of time anyway.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">Your prototype tests well with users, but a developer points out it would take two years and a full rewrite to build for real.</p>
+        <div class="pm-quiz">
+          <p><strong>How does design thinking handle this tension?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Users loved it, so build it no matter the cost' ignores that a desirable idea still has to be buildable and worthwhile. Design thinking balances what people want with what's technically and practically viable.">
+            A) Build it regardless — user love is all that matters.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Design thinking aims for the overlap of desirable (users want it), feasible (we can build it), and viable (it makes sense for the business). A beloved but two-year prototype fails feasibility as-is — so loop back and ideate a simpler version that keeps the value users loved but can actually ship. Desirability alone isn't enough.">
+            B) Loop back and ideate a simpler version — the goal is the overlap of desirable, feasible, and viable, so find a buildable design that preserves the value users loved.
+          </button>
+          <button class="pm-quiz-option" data-msg="Abandoning the whole thing throws away real validated desirability. A positive test is valuable evidence; the right move is to find a feasible way to deliver that value, not to discard the insight entirely.">
+            C) Abandon the idea completely — feasibility problems mean it's dead.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Design Thinking Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-diagram-project"></i> The Five Stages</h3>
+        <p class="muted">Human-centered and iterative — loop back constantly.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Empathize</h4><p>Understand real people, assumptions aside.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Define</h4><p>Frame one sharp problem — a "How Might We".</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Ideate</h4><p>Diverge — many ideas, judgment deferred.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Prototype</h4><p>Cheap, tangible, disposable.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Test</h4><p>Learn from real users, then loop back.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-lightbulb"></i> Principles to Remember</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-user"></i></span><div><h4>Human-centered</h4><p>Start from real people's needs, not solutions.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrows-left-right"></i></span><div><h4>Diverge, then converge</h4><p>Open up options before narrowing down.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrows-rotate"></i></span><div><h4>Iterate</h4><p>Test isn't the end — it loops you back, smarter.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-feather"></i></span><div><h4>Stay cheap</h4><p>Rough prototypes keep you honest and open to feedback.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-screwdriver-wrench"></i> A Method Per Stage</h3>
+        <p class="muted">One go-to technique for each stage.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Empathize</h4><p>Non-leading interviews &amp; observation. Ask about real past behavior.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Define</h4><p>Point-of-view statement: <em>[user] needs [need] because [insight]</em>.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Ideate</h4><p>Brainstorm to diverge; dot-vote or impact/effort to converge.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Prototype</h4><p>Paper sketch or clickable mockup — cheapest thing that asks the question.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Test</h4><p>Watch ~5 users, stay silent, note the struggles.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Classic Traps</h3>
+        <p class="muted">The mistakes beginners make most.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-forward"></i></span><div><h4>Skipping empathy</h4><p>"We already know our users" — ideating on stale assumptions.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comment-dots"></i></span><div><h4>Leading questions</h4><p>"You'd love this, right?" gathers polite agreement, not truth.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bolt"></i></span><div><h4>Converging too early</h4><p>Grabbing the first decent idea before diverging.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-gem"></i></span><div><h4>Over-polishing prototypes</h4><p>Investment breeds attachment and deafness to feedback.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-hand"></i></span><div><h4>Rescuing users in tests</h4><p>Explaining away confusion erases the finding.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/design-thinking.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

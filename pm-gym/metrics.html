@@ -1,0 +1,638 @@
+---
+layout: pm-gym
+title: "Metrics — PM Gym"
+description: "A beginner-friendly, interactive guide to product metrics: what makes a good metric, leading vs. lagging indicators, choosing a North Star, and matching a metric to the decision it needs to inform."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Metrics</h1>
+  <p class="lead">Pick the number that actually tells you the truth</p>
+  <p class="muted">
+    Not all metrics are equal. Some tell you what's about to happen; some only tell you what already happened. Some can be gamed into looking good while the product quietly gets worse. This guide covers how to choose metrics you can actually trust and act on.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Choose Metrics You Can Trust</h2>
+      <p class="muted">Four short lessons: what makes a good metric, the main types, picking a North Star, and matching a metric to a decision.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Good Metrics</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Types of Metrics</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. The North Star</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Matching Metric to Decision</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>What Makes a Metric Good</h3>
+      </div>
+
+      <p>
+        Before adopting any metric, run it through three checks — the <strong>3 A's</strong>.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">A1</span>
+          <h4>Actionable</h4>
+          <p>A specific decision can actually move it — it's not just a number that sits there.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">A2</span>
+          <h4>Accessible</h4>
+          <p>Easy to get and understand, not buried in a report only one analyst can pull.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">A3</span>
+          <h4>Auditable</h4>
+          <p>You can trace it back to source data and trust it's counted consistently.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team tracks "total page views, all-time" as their main dashboard metric. Which of the 3 A's does it fail hardest?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The scenario doesn't suggest it's hard to find; the real weakness is elsewhere.">A) Accessible — the number is hard to find.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It can be perfectly accessible and auditable and still be useless for decisions.">B) Actionable — an all-time cumulative count only rises, so no specific decision can move it or be judged against it.</button>
+          <button class="pm-quiz-option" data-msg="There's no indication of a counting problem here; the issue is that even counted correctly, it can't guide a decision.">C) Auditable — the number is being miscounted.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Types of Metrics <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Leading vs. Lagging, Input vs. Output</h3>
+      </div>
+
+      <p>
+        Metrics differ in when they tell you something, and in what part of the system they
+        describe.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-forward"></i></span><div><h4>Leading indicator</h4><p>Moves first, predicts a future result — e.g. trial signups predicting future revenue.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-backward"></i></span><div><h4>Lagging indicator</h4><p>Confirms what already happened — e.g. quarterly revenue.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-gears"></i></span><div><h4>Input metric</h4><p>Something the team directly controls — e.g. features shipped.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bullseye"></i></span><div><h4>Output / outcome metric</h4><p>The result inputs are meant to produce — e.g. activation, retention.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Quarterly revenue confirms how the last three months went, but by the time you see it, the quarter is over. What kind of metric is this?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It doesn't predict the future — it reports on the past. That's the definition of a lagging indicator.">A) A leading indicator, since it strongly predicts the future.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Useful for judging overall success, but too slow to help you react quickly.">B) A lagging indicator — it confirms results after the fact rather than predicting them in time to act.</button>
+          <button class="pm-quiz-option" data-msg="Revenue is the result of many inputs, not an input itself — it's a lagging/outcome metric.">C) An input metric, since revenue comes from team effort.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">The North Star <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Choosing a North Star Metric</h3>
+      </div>
+
+      <p>
+        A <strong>North Star metric</strong> is the single number that best captures the core
+        value your product delivers to customers, correlated with long-term business success.
+      </p>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-star"></i> Not revenue directly, but what leads to it</h4>
+        <p>
+          Spotify tracks time spent listening. Airbnb tracks nights booked. Neither is revenue
+          itself — both are the moment a customer actually gets the core value the product
+          promises. When that number is healthy, revenue reliably follows.
+        </p>
+        <p class="pm-key-line">
+          A North Star isn't your only metric, and a shallow proxy like "app opens" — easy to
+          measure but disconnected from real value — is a common trap.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team picks "number of app opens" as their North Star, even though users often open the app, get frustrated, and leave without doing anything useful. What's the problem?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Ease of measurement doesn't make a metric a good proxy for value — it can be easy to track and still meaningless.">A) Nothing, app opens is easy to measure and track.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Opening the app isn't the same as the product doing what it's supposed to do.">B) It's a shallow proxy that doesn't reflect real value delivered — a good North Star should track when customers actually get value.</button>
+          <button class="pm-quiz-option" data-msg="The size of the number isn't the issue — what it actually represents is.">C) The problem is only that the number is too high to be useful.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Matching Metric to Decision <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>The Right Metric for the Decision</h3>
+      </div>
+
+      <p>
+        There's no single metric that fits every decision. Before reaching for a number, ask what
+        decision it's actually meant to inform.
+      </p>
+
+      <p class="pm-key-line">
+        Judging a pricing test needs a different metric than judging an onboarding redesign.
+        Match the metric to the decision, don't default to whichever number is already on the
+        dashboard.
+      </p>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team wants to judge whether a new onboarding flow works, and defaults to checking "total company revenue" a week later. What's wrong with this metric choice?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Revenue is influenced by dozens of factors far removed from onboarding — too indirect and slow to isolate the effect.">A) Nothing, revenue is always the most important metric to check.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The closer the metric is to the change being tested, the more it actually tells you.">B) Revenue is too indirect — a closer metric like activation rate would answer the question more directly.</button>
+          <button class="pm-quiz-option" data-msg="A longer window doesn't fix the core issue — revenue is too indirect a signal for this decision regardless of window length.">C) The team should instead check revenue over a full year instead of a week.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Metrics Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">The 3 A's</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can spot a bad metric, tell leading from lagging, or match a metric to the decision it needs to inform.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A team's dashboard headlines "total signups since launch," which has risen every month for three years, even during a period when the product was clearly declining.</p>
+        <div class="pm-quiz">
+          <p><strong>What kind of metric is this, and what's the risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It isn't predicting anything; it's a cumulative count that can't reflect current decline at all.">
+            A) A leading indicator — it's predicting future growth.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A number that can only go up can't tell you when things are actually going wrong.">
+            B) A vanity metric — it always rises and can't reflect the real decline happening underneath it.
+          </button>
+          <button class="pm-quiz-option" data-msg="The issue isn't reporting frequency — even reported daily, a cumulative all-time count still can't fall.">
+            C) A lagging indicator that's simply reported too infrequently.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A team wants a metric to catch problems early enough to react, not just confirm results after the fact.</p>
+        <div class="pm-quiz">
+          <p><strong>What type of metric should they prioritize?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Lagging indicators arrive after the fact by definition — the opposite of &quot;early enough to react.&quot;">
+            A) A lagging indicator, since it's the most reliable and accurate.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Leading indicators exist precisely to catch things early.">
+            B) A leading indicator — it moves first and gives the team time to act before the lagging result confirms the outcome.
+          </button>
+          <button class="pm-quiz-option" data-msg="Ease of tracking has nothing to do with whether a metric predicts anything early.">
+            C) A vanity metric, since it's the easiest to track.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A support team is evaluated purely on "tickets closed per hour," and closures soar while customer satisfaction quietly drops.</p>
+        <div class="pm-quiz">
+          <p><strong>Which of the 3 A's does this metric fail?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The scenario gives no indication the number is hard to access; the problem is what happens once the team optimizes for it.">
+            A) Accessible — it's hard for the team to see their own numbers.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The metric can be moved, but moving it doesn't mean the real goal (satisfied customers) improved.">
+            B) It technically passes actionable and accessible, but is a poor proxy for the real goal — a gameable metric rather than one truly reflecting quality.
+          </button>
+          <button class="pm-quiz-option" data-msg="There's no indication of a miscount — the issue is that the number doesn't capture quality of resolution.">
+            C) Auditable, since the tickets aren't being counted correctly.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A PM proposes "employee happiness with the roadmap" as the company's North Star metric.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the issue?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Worth tracking somewhere doesn't make it a valid North Star — a North Star needs to reflect customer value specifically.">
+            A) None, employee sentiment is important to track somewhere.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Employee sentiment might be a useful internal metric, just not a North Star.">
+            B) A North Star should capture the core value delivered to customers, correlated with business success — internal sentiment doesn't measure that.
+          </button>
+          <button class="pm-quiz-option" data-msg="Measurement difficulty isn't the core problem here.">
+            C) The issue is only that it's hard to measure precisely.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A team wants to evaluate a pricing-page redesign and defaults to checking "monthly active users" a week later.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern with this metric choice?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="MAU reflects overall usage, not pricing-page performance specifically — too indirect for this decision.">
+            A) None, MAU is always the right metric for any product change.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The closer the metric to the actual change, the more it tells you.">
+            B) MAU is too indirect for a pricing-page change — a closer metric like checkout conversion would isolate the effect better.
+          </button>
+          <button class="pm-quiz-option" data-msg="A longer window doesn't fix the indirection problem.">
+            C) MAU should be checked over a longer period instead, like six months.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A metric is described as: "the number our finance team can trace back to raw transaction records at any time, with a documented calculation method."</p>
+        <div class="pm-quiz">
+          <p><strong>Which of the 3 A's does this describe?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Actionable is about whether a decision can move the metric, not about traceability.">
+            A) Actionable.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. That's exactly what auditability means.">
+            B) Auditable — traceable to source data with a clear, trusted calculation method.
+          </button>
+          <button class="pm-quiz-option" data-msg="Accessible is about ease of retrieval, not traceability to raw records.">
+            C) Accessible.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">A growth team reports "trial signups are up 30% this week" and predicts a strong revenue quarter.</p>
+        <div class="pm-quiz">
+          <p><strong>What kind of metric are they using to make that prediction?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Trial signups aren't confirming a result that already happened; they're predicting one still ahead.">
+            A) A lagging indicator.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Leading and lagging often pair up like this.">
+            B) A leading indicator — signups move first and are being used to predict a future lagging result.
+          </button>
+          <button class="pm-quiz-option" data-msg="Being a raw count doesn't automatically make it vanity — this number is informing a real prediction.">
+            C) A vanity metric, since it's a raw count.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">Airbnb famously tracks "nights booked" rather than just "signups" as closer to its North Star.</p>
+        <div class="pm-quiz">
+          <p><strong>Why is "nights booked" the better choice?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Raw size has nothing to do with what makes a North Star good.">
+            A) Because it's a bigger number.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Signups are just an early funnel step; a booked night is the real value moment.">
+            B) Because it more directly reflects the core value being delivered — an actual stay happening.
+          </button>
+          <button class="pm-quiz-option" data-msg="Measurement difficulty isn't the issue with signups — the issue is what the number represents.">
+            C) Because signups are too hard to measure accurately.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A team's "onboarding completion rate" has been flat for months, and they're debating whether it's a leading or lagging indicator of retention.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right way to think about it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Being a rate versus a raw count has no bearing on whether a metric is leading or lagging.">
+            A) It must be lagging, since it's a rate rather than a raw count.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Leading vs. lagging is about timing relative to the outcome, not the number's format.">
+            B) It's likely a leading indicator of retention if completing onboarding tends to happen before, and predicts, whether users stick around.
+          </button>
+          <button class="pm-quiz-option" data-msg="The two are plausibly causally linked, so dismissing any relationship isn't well-founded.">
+            C) It can't be either, since onboarding and retention are unrelated metrics.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A stakeholder asks for "one metric that tells us everything about how the product is doing."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the realistic response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Even a well-chosen North Star is one signal among several a healthy product needs.">
+            A) Provide the North Star metric alone, since it's designed to summarize everything.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. One number plus a few guardrails gives a fuller, more honest picture.">
+            B) Explain that no single metric captures everything — pair a North Star with a small set of supporting metrics.
+          </button>
+          <button class="pm-quiz-option" data-msg="A blended formula tends to obscure which underlying driver actually moved.">
+            C) Combine ten metrics into one weighted formula and present that as the single number.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A metric named "engagement score" turns out to be calculated differently by two different teams, with no shared documentation.</p>
+        <div class="pm-quiz">
+          <p><strong>Which of the 3 A's is this failing?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Being plottable doesn't address whether the number can be trusted and traced.">
+            A) Actionable, since the number can still be plotted on a chart.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Two teams computing it differently is exactly an auditability failure.">
+            B) Auditable — without a shared, documented calculation method, the number can't be trusted or consistently traced.
+          </button>
+          <button class="pm-quiz-option" data-msg="Having access to compute a number isn't the same as it being auditable.">
+            C) Accessible, since two teams already have access to compute it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A team is deciding between raising prices or improving retention, and someone suggests checking "daily app opens" to guide the choice.</p>
+        <div class="pm-quiz">
+          <p><strong>Is this the right metric for this decision?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="No single metric fits every decision — app opens doesn't isolate financial or retention effects specifically.">
+            A) Yes, app opens is a universal metric that fits every decision.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Revenue per user or churn rate would answer the actual question.">
+            B) Probably not — this decision needs financial and retention-specific metrics, not a general usage count.
+          </button>
+          <button class="pm-quiz-option" data-msg="A longer time window doesn't change the fundamental mismatch.">
+            C) Yes, as long as app opens is tracked over a full year.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A team notices their North Star metric has been rising for six months, but customer support tickets about frustration have also been rising just as fast.</p>
+        <div class="pm-quiz">
+          <p><strong>What should the team do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Ignoring a contradicting signal risks missing that the North Star may be an incomplete proxy for real value.">
+            A) Ignore the support tickets since the North Star is what matters most.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Contradicting signals deserve investigation, not dismissal.">
+            B) Investigate — a rising North Star alongside rising frustration suggests the metric may not be fully capturing real value, or something is quietly breaking.
+          </button>
+          <button class="pm-quiz-option" data-msg="Swapping metrics without investigating first just replaces one potentially flawed number with another.">
+            C) Switch the North Star to "support tickets closed" immediately.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A junior PM says "let's just track everything so we don't miss anything important."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the issue with this instinct?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Tracking everything produces enough noise that the team can't tell which numbers actually matter.">
+            A) None — more tracked metrics is always strictly better.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. More metrics without decision-linkage is noise, not insight.">
+            B) Without picking metrics tied to specific decisions, the team drowns in numbers and loses the actionable, decision-linked focus a good metric set needs.
+          </button>
+          <button class="pm-quiz-option" data-msg="Tooling cost is a minor concern compared to losing focus on which numbers actually drive decisions.">
+            C) The issue is only that it costs more in dashboard tooling.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A team wants to A/B test a checkout redesign and picks "checkout completion rate" as the metric to judge success.</p>
+        <div class="pm-quiz">
+          <p><strong>Is this a good match?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Narrowness isn't a weakness here — a metric tightly scoped to the change being tested is what makes it a strong signal.">
+            A) No, checkout completion is too narrow to matter.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The closer the metric to the change, the more trustworthy the read.">
+            B) Yes — it's a close, actionable, directly-affected metric for a checkout-specific change, unlike a distant one like total company revenue.
+          </button>
+          <button class="pm-quiz-option" data-msg="Company-wide revenue is too indirect and influenced by too many other factors.">
+            C) No, only company-wide revenue should ever be used to judge a test's success.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Metrics Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-check-double"></i> The 3 A's of a Good Metric</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">A</span><div><h4>Actionable</h4><p>A decision can actually move it.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">A</span><div><h4>Accessible</h4><p>Easy to get and understand.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">A</span><div><h4>Auditable</h4><p>Traceable to source data, trusted.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-arrows-left-right"></i> Leading vs. Lagging</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-forward"></i></span><div><h4>Leading</h4><p>Moves first, predicts what's coming.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-backward"></i></span><div><h4>Lagging</h4><p>Confirms after the fact — too slow to react to.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-star"></i> Choosing a North Star</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-gem"></i></span><div><h4>Captures core value</h4><p>The moment a customer gets real value.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-chart-line"></i></span><div><h4>Correlates with success</h4><p>Healthy North Star, healthy business.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-triangle-exclamation"></i></span><div><h4>Avoid shallow proxies</h4><p>"App opens" isn't the same as value delivered.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-bullseye"></i> Matching Metric to Decision</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-question"></i></span><div><h4>Ask what decision it informs</h4><p>Before picking any metric.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bullseye"></i></span><div><h4>Prefer close, isolatable metrics</h4><p>Over distant, indirect ones.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-shield"></i></span><div><h4>Pair with guardrails</h4><p>No single number tells the whole story.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/metrics.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

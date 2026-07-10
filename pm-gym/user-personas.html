@@ -1,0 +1,708 @@
+---
+layout: pm-gym
+title: "User Personas — PM Gym"
+description: "A beginner-friendly, interactive guide to user personas: the four quadrants, data-driven persona building, and using personas to settle roadmap debates."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>User Personas</h1>
+  <p class="lead">Turn dry research data into a person your team can build for</p>
+  <p class="muted">
+    A user persona converts rows of statistics and interview notes into a vivid, realistic
+    profile — so the whole team designs for the same real human instead of a vague "user".
+    This guide shows how to build personas that actually drive decisions.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Humanizing Raw Research</h2>
+      <p class="muted">Three short lessons on building persona cards that inspire product decisions instead of gathering dust.</p>
+    </div>
+
+    <div class="pm-lesson-nav pm-lesson-nav-3">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Four Quadrants</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Data, Not Guesswork</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. The Decision Compass</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>The Anatomy of a Persona</h3>
+      </div>
+
+      <p>
+        A good persona balances <strong>four quadrants</strong>, tied together by one unbroken
+        logical thread: the goals should relieve the pains, and the behaviors should show the
+        person already trying to cope.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — describing a friend for a blind date</h4>
+        <p>
+          If you set a friend up on a date, you'd describe them in a way that hangs together:
+          <strong>who they are</strong> ("Maya, 29, nurse"), <strong>what they do</strong> ("hikes
+          every weekend, terrible at texting back"), <strong>what frustrates them</strong> ("hates
+          loud, crowded bars"), and <strong>what they want</strong> ("someone easy-going for quiet
+          dinners"). Notice it all connects — the frustration (loud bars) and the goal (quiet
+          dinners) fit. If you said "hates crowds" but "wants a partner for nightclubbing," the
+          date would sense something's off. A persona works the same way: the four parts must tell
+          one believable story.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Identity</span>
+          <h4>Profile &amp; demographics</h4>
+          <p>A name and a life. <em>"Rohan, 34, software architect."</em></p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Habits</span>
+          <h4>Behaviors</h4>
+          <p>What they do routinely. <em>"Automates everything, lives by keyboard shortcuts."</em></p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Friction</span>
+          <h4>Pain points</h4>
+          <p>What blocks them. <em>"No time to cook; big menus cause decision fatigue."</em></p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Progress</span>
+          <h4>Goals &amp; motivations</h4>
+          <p>What they want instead. <em>"Healthy food sorted instantly, no thinking required."</em></p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check: spot the broken quadrant</h4>
+        <p>
+          A draft persona for a premium grocery app: Rohan, 34, works 60-hour weeks, automates
+          everything, and his pain is having no time to cook healthy meals. His listed goal reads:
+          <em>"wants to hunt for the cheapest bulk discounts on cleaning supplies."</em> What's wrong?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly — the thread is broken. A time-starved person's goal should relieve his time pain (fast, effortless healthy meals), not add a time-consuming hobby like coupon hunting. Goals must heal the listed pains.">
+            A) It breaks alignment — Rohan values saving time, and bulk coupon-hunting costs time.
+          </button>
+          <button class="pm-quiz-option" data-msg="Hobbies and music taste are exactly the kind of decorative detail a persona doesn't need. The real problem is a logic break: the stated goal contradicts the stated pain.">
+            B) It's wrong because it doesn't list his musical interests or hobbies.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: Data, Not Guesswork <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Root Every Line in Real Data</h3>
+      </div>
+
+      <p>
+        The difference between a persona that guides decisions and one that decorates a slide deck:
+        every line must trace back to <strong>observed data</strong> — a usage metric or a real
+        interview quote.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — a police sketch vs. fan fiction</h4>
+        <p>
+          A police sketch artist draws only from what witnesses actually saw — every feature traces
+          to real testimony. Useful. Fan fiction invents whatever the author fancies — fun, but it
+          tells you nothing true about a real person. A <strong>data-backed persona is the sketch;
+          a made-up one is fan fiction.</strong> The dangerous part is that invented personas feel
+          just as vivid and convincing as real ones — so teams confidently build for a person who
+          doesn't exist. The fix is simple and strict: for every line on the card, ask "what real
+          quote or number is this based on?" No source, no line.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Guesswork</span>
+          <h4>Decorative fluff</h4>
+          <p>"Drinks oat-milk lattes, listens to indie vinyl, enjoys rainy weather." Charming — and useless for deciding what to build.</p>
+        </div>
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Tracked data</span>
+          <h4>Behavioral evidence</h4>
+          <p>"Abandons checkout whenever the form has more than 3 steps." Directly shapes the conversion flow and engineering scope.</p>
+        </div>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-clipboard-list"></i> The traceability audit</h4>
+        <p>
+          For each trait on the persona, draw a line back to its source: a quote from an interview
+          or a metric from your analytics.
+        </p>
+        <p class="pm-key-line">
+          If a trait has no source, delete it. No exceptions.
+        </p>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: The Decision Compass <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Personas as a Decision Compass</h3>
+      </div>
+
+      <p>
+        Personas aren't wall decoration — they're a tiebreaker. When designers and engineers
+        clash over what to build next, the persona grounds the debate in a real person's needs.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — "what would Grandma do?"</h4>
+        <p>
+          If you're building a gadget for your grandmother, every time the team argues you can ask:
+          "would Grandma actually use this? Could she even find the button?" Suddenly the debate
+          stops being about opinions ("I think it's cool") and becomes about a real person. A
+          persona is that Grandma-in-the-room — a shared, named human you point to when someone
+          says "users want X." Instead of "I feel…" versus "I feel…", the question becomes "does
+          this serve Rohan's actual pains?" — which usually has a clear answer.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-scale-balanced"></i> A worked example</h4>
+        <p>
+          Your food-app team is split over what to ship next for <strong>Busy Rohan</strong>
+          (time-starved, decision-fatigued):
+        </p>
+        <p>
+          <strong>Feature A:</strong> a one-tap "reorder my usual" button on the home screen.<br>
+          <strong>Feature B:</strong> a bulk-discount calendar that saves 15% but needs a 10-minute setup.
+        </p>
+        <p class="pm-key-line">
+          Verdict: Feature A. It attacks Rohan's actual pains — time and decision load. Feature B
+          asks him to spend the very thing he lacks.
+        </p>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Persona Flashcards</h2>
+      <p class="muted">Four cards covering the key techniques and traps. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Anatomy</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 4</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">The Empathy Thread</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 4</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 team situations where a persona either earns its keep or gets misused. Pick the strongest move, then read why the others fall short.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">Your engineering lead says personas are a waste of time: 'Let's just build for everyone and maximize the market.'</p>
+        <div class="pm-quiz">
+          <p><strong>What's the strongest counter?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building for everyone means averaging everyone's needs — and an average product delights no one. Big TAM with a generic product converts none of it.">
+            A) Agree — a bigger target audience means more potential revenue.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The persona is a decision tool, not decoration: it filters scope creep, prevents bloat, and turns 'I think users want…' arguments into checks against a real person's pains and goals.">
+            B) Building for everyone yields a generic product nobody loves; a precise persona focuses engineering hours and settles feature debates objectively.
+          </button>
+          <button class="pm-quiz-option" data-msg="Appealing to process convinces no engineer. The argument that lands is economic: focused targets waste fewer engineering hours and ship products people actually adopt.">
+            C) Explain that personas are required by the design process.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A designer adds 'loves outdoor mountain biking' to your fintech persona, saying it makes the persona feel more human.</p>
+        <div class="pm-quiz">
+          <p><strong>How do you evaluate the addition?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Relatable is nice; actionable is the job. Details that never change a product decision are cosmetic bloat, and they dilute the details that do.">
+            A) Keep it — vivid personal details make personas relatable.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Every persona line should either trace to real evidence or leave the card. The working test: would a designer or engineer decide anything differently because of this line?">
+            B) Run two tests: did research actually say this (traceability), and does it change how they use a finance app (relevance)? Fails either — cut it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Building features from an unverified decorative trait is the fiction trap at full speed: invent a detail, then invest engineering in it. Verify before anything else.">
+            C) Lean into it — propose a biking-expenses tracking feature.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">For 'Busy Rohan' (time-starved, decision-fatigued architect), the team is split: Feature A is a one-tap 'reorder my usual' button; Feature B is a bulk-discount calendar that saves 15% but needs a 10-minute setup.</p>
+        <div class="pm-quiz">
+          <p><strong>The persona says…?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Everyone' isn't the persona. Rohan's scarcest resource is time; a 10-minute setup spends the exact thing he lacks to save a thing he lacks less.">
+            A) Feature B — everyone loves saving money.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This is the empathy thread doing its job as a tiebreaker: goals must relieve the listed pains. One tap, zero decisions — precisely Rohan-shaped.">
+            B) Feature A — it attacks Rohan's actual pains (time and decision load); B demands the very resource he doesn't have.
+          </button>
+          <button class="pm-quiz-option" data-msg="Building both dodges the decision the persona exists to settle — and doubles the cost. Roadmaps are choices; the persona just made this one easy.">
+            C) Build both and let users choose.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A stakeholder builds a persona from scratch in a meeting, purely from imagination, without any user research: "I just know our users — they're 35, busy, and love automation."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the core risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A persona invented without research is a mirror of the stakeholder's assumptions, not the users. It feels authoritative but can be confidently wrong — and the whole team then builds on that false foundation.">
+            A) None — experienced stakeholders can intuit their users accurately.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. An imagined persona is a 'fictional darling' — it encodes the maker's biases and conveniently justifies whatever they already wanted to build. Because it looks like a real persona, it lends false confidence. Ground it in interviews and analytics, or at minimum label it a provisional/assumption persona to be validated, so no one mistakes a guess for evidence.">
+            B) It's a 'fictional darling' — an imagined persona encodes the maker's biases and gives false confidence; it must be grounded in real research or clearly marked as an unvalidated assumption.
+          </button>
+          <button class="pm-quiz-option" data-msg="The specific age (35) isn't the problem — even correct-sounding details are worthless if they came from imagination rather than evidence. The flaw is the absence of any data behind the whole persona.">
+            C) The age 35 is probably wrong; just adjust it to 40.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">Your team has created 11 detailed personas to "cover all our users." In practice, nobody can remember them and they're never referenced in decisions.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the problem, and the fix?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More personas isn't more coverage in any useful sense — 11 is too many to hold in mind, so none actually guide decisions. Comprehensiveness that no one can use is worthless. The tool failed at its one job: focusing the team.">
+            A) Nothing — more personas means more thorough coverage.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Personas exist to focus the team, and 11 do the opposite — they're unmemorable and unused. Prioritize down to the 2–3 primary personas who matter most to the product's success and lead with those, keeping the rest as secondary references. A persona nobody remembers can't settle a single debate.">
+            B) Too many to be usable — narrow to the 2–3 primary personas that matter most, since personas exist to focus the team, not to catalog everyone.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding a 12th persona for the leftover users deepens the exact problem. The issue is that 11 is already unusable; the fix is ruthless prioritization down to a few, not more coverage.">
+            C) Add a 12th persona to capture the remaining users.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A persona lists the pain "gets overwhelmed by too many options" but also lists the goal "wants a fully customizable dashboard with 50 configurable widgets."</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="These two lines fight each other: someone overwhelmed by options wouldn't crave 50 configurable widgets. The empathy thread is broken — the stated goal doesn't relieve the stated pain, it worsens it.">
+            A) Nothing — users can want customization and dislike clutter.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A coherent persona has one unbroken thread: goals must relieve the listed pains. 'Overwhelmed by options' and 'wants 50 configurable widgets' directly contradict — the goal amplifies the pain. Either the research is being misread or one line is wrong. A real overwhelmed user's goal would be 'smart defaults, minimal choices.' Fix the contradiction before the team builds toward it.">
+            B) The empathy thread is broken — the goal (50 widgets) worsens the stated pain (option overwhelm) instead of relieving it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more detail to a self-contradicting persona doesn't fix the contradiction — it buries it. The problem is a logic break between pain and goal, which needs resolving, not decorating.">
+            C) It just needs more demographic detail to feel complete.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Marketing built buyer personas focused on brand attitudes and media habits. Your product team wants to reuse them to prioritize features.</p>
+        <div class="pm-quiz">
+          <p><strong>Should you reuse them as-is?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Marketing and product personas serve different jobs. Marketing personas emphasize messaging, channels, and brand attitudes; a product persona needs behaviors, workflows, pains, and goals that tell you what to build. Reusing a marketing persona wholesale often leaves out exactly the quadrants product decisions need.">
+            A) Yes — a persona is a persona; reuse saves time.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. They overlap but serve different purposes. Marketing personas focus on how to reach and persuade people; product personas focus on behaviors, workflows, pains, and goals that guide what to build. Borrow the shared research, but adapt the persona to include the behavioral and needs detail product decisions require — don't assume a messaging persona doubles as a build persona.">
+            B) Adapt them — marketing personas emphasize messaging/channels, while product decisions need behaviors, workflows, pains, and goals; reuse the research but add what's missing.
+          </button>
+          <button class="pm-quiz-option" data-msg="Discarding all of marketing's work is wasteful — there's usually shared underlying research worth reusing. The right move is to adapt their personas to product needs, not to start over from nothing.">
+            C) Reject them entirely and start from a blank page.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">The personas were built two years ago from research done before a major product pivot and a shift in your user base. The team still treats them as gospel.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Personas aren't permanent artifacts. Built on two-year-old, pre-pivot research and an outdated user base, they may now describe people who've moved on — steering the team toward stale needs while they treat it as current truth.">
+            A) None — a well-made persona is valid forever.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Personas reflect the users and research at the time they were made. After a pivot and a changed user base, they can quietly go stale — describing needs that no longer match reality while the team trusts them completely. Personas need periodic revalidation against fresh data, especially after big product or market shifts. Treat them as living documents, not gospel.">
+            B) They may be stale — a pivot and changed user base can outdate personas, so revalidate them against fresh research rather than trusting them as permanent truth.
+          </button>
+          <button class="pm-quiz-option" data-msg="Deleting personas and never using them again overcorrects — they're valuable when current. The fix is to refresh them with new research, not to abandon the tool because this set aged out.">
+            C) Abandon personas as a technique — they always go out of date.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A PM wants to add a photo and a real-sounding name ("Busy Rohan") to the persona. An engineer objects: "That's just fluff — give me a spreadsheet of attributes."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the honest case for the name and photo?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dropping the name and photo for a raw attribute table loses the very thing that makes a persona work: memorability and empathy. A spreadsheet of traits doesn't get referenced in heated debates the way a named, pictured person does.">
+            A) The engineer is right — remove the name and photo, keep only data.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The name and photo aren't decoration for their own sake — they make the persona memorable and trigger empathy, so the team actually invokes it ('would Rohan do this?') instead of ignoring a spreadsheet. The key is that the vivid wrapper sits on top of real, traceable data. Keep the human presentation AND the evidence; the two together are what make a persona a decision tool.">
+            B) The name and photo make the persona memorable and empathetic so the team actually uses it — as long as the traits underneath are still traceable to real data.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding an elaborate fictional backstory to feel 'more real' is the opposite lesson — that's cosmetic bloat and invites the fictional-darling trap. A name and photo help; invented life stories with no data source hurt.">
+            C) Add a full fictional life story so it feels even more real.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Your product genuinely serves two very different primary users — an admin who configures it and an end-user who uses it daily — with conflicting needs.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right persona approach?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Averaging two genuinely different primary users into one persona recreates the 'average user' fiction — a blended person whose contradictory needs describe nobody. When two distinct roles both matter, one persona can't hold them.">
+            A) Blend them into one balanced persona for simplicity.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. When a product has two genuinely distinct primary users with conflicting needs, create two separate personas and design deliberately for each (often with different flows or interfaces). Forcing them into one produces a mushy compromise. Two focused personas keep each role's needs sharp — while still limiting yourself to the few that truly matter.">
+            B) Create two distinct personas (admin and end-user) and design for each, since their conflicting needs can't be honestly merged into one.
+          </button>
+          <button class="pm-quiz-option" data-msg="Picking only one and ignoring the other abandons a real, important user. If both the admin and the end-user are essential to the product's success, both deserve a persona — dropping one guarantees you underserve it.">
+            C) Pick whichever is easier and ignore the other user entirely.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A designer proposes a feature and justifies it: "Rohan would love this." When you check the persona, nothing in Rohan's pains or goals relates to the feature.</p>
+        <div class="pm-quiz">
+          <p><strong>What's happening, and what do you do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Accepting 'Rohan would love it' without a link to his documented pains or goals lets the persona be used as a rubber stamp for any idea. That's persona misuse — invoking the name to launder a preference that isn't actually supported.">
+            A) Approve it — invoking the persona's name is enough justification.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is the persona being used as a rubber stamp — 'Rohan would love it' with no basis in his actual pains or goals. Push back kindly: which documented pain or goal does this serve? If none, the claim is projection, not evidence. The persona only settles debates when arguments tie back to what it actually says, not to its name.">
+            B) It's rubber-stamping — ask which of Rohan's documented pains or goals the feature serves; if none, the justification is projection, not evidence.
+          </button>
+          <button class="pm-quiz-option" data-msg="Rewriting Rohan's goals to fit the feature inverts the whole tool — you'd be bending the evidence to justify a predetermined idea. The persona should test the feature, not be edited to approve it.">
+            C) Edit Rohan's goals so the feature fits the persona.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Leadership asks: "What's the difference between a persona and a market segment? Aren't they the same thing?"</p>
+        <div class="pm-quiz">
+          <p><strong>What's the clearest distinction?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="They're related but not the same. A segment is a group defined by shared characteristics or needs; a persona is a single, vivid, humanized representative of a segment used to build empathy and guide design. Treating them as identical loses the persona's distinct purpose.">
+            A) They're identical — just two words for the same list of users.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A segment is a group (a slice of the audience defined by shared traits or needs); a persona is one named, humanized character that represents a key segment, complete with pains, goals, and behaviors. Segmentation tells you which groups exist and which to target; the persona makes the chosen group feel like a real person the team can design for. They're complementary steps, not synonyms.">
+            B) A segment is a defined group; a persona is a single humanized representative of a key segment — used to build empathy and guide design decisions.
+          </button>
+          <button class="pm-quiz-option" data-msg="It's not that personas are 'for marketing' and segments 'for product' — both tools are used across both functions. The real distinction is group-vs-representative-individual, not which department owns them.">
+            C) Personas are only for marketing; segments are only for product.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A persona's "behaviors" quadrant reads: "is a passionate, detail-oriented perfectionist who values quality." An engineer says this doesn't help them build anything.</p>
+        <div class="pm-quiz">
+          <p><strong>Why is the engineer right?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Passionate perfectionist who values quality' describes a personality, not a behavior. It's vague and unobservable, so it can't tell an engineer what to build or test. The behaviors quadrant should list concrete, observed actions.">
+            A) The engineer is wrong — personality traits are the most important part.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The behaviors quadrant should contain concrete, observable actions that translate into product decisions — e.g., 'double-checks every entry before submitting,' 'exports data to review offline,' 'abandons flows with more than 3 steps.' 'Passionate perfectionist' is a vague personality label an engineer can't design against. Rewrite fuzzy traits as specific behaviors tied to evidence.">
+            B) 'Passionate perfectionist' is a vague personality label, not an observable behavior — the quadrant needs concrete actions (like 'double-checks entries before submitting') that guide what to build.
+          </button>
+          <button class="pm-quiz-option" data-msg="Moving the phrase to the demographics quadrant doesn't fix it — it's still a vague trait that guides no decision anywhere. The fix is to replace it with concrete, observed behaviors, not to relocate the fluff.">
+            C) Just move the phrase to the demographics quadrant instead.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A startup with no users yet and no budget for research insists on creating personas before their first launch.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the honest, pragmatic guidance?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building fully-confident personas with zero users invites the fictional-darling trap — you'd be dressing up guesses as facts. But refusing to think about users at all isn't right either; the answer is an explicitly provisional approach.">
+            A) Build detailed, confident personas from the founders' intuition and treat them as final.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. With no data yet, create 'provisional' or 'proto-personas' — clearly labeled as assumptions built from the founders' best guesses and any indirect evidence (competitor reviews, forums, expert input). They give the team a shared starting hypothesis, but the whole point is to validate and rewrite them with real research as soon as the first users arrive. The honesty is in labeling them unproven, not in pretending they're facts.">
+            B) Make clearly-labeled 'provisional' personas from best-guess assumptions and indirect evidence, then validate and revise them with real research as soon as users arrive.
+          </button>
+          <button class="pm-quiz-option" data-msg="Forbidding any persona until you have data leaves the team with no shared starting point at all. A provisional, clearly-flagged persona is more useful than nothing — as long as everyone knows it's a hypothesis to test, not established truth.">
+            C) Forbid any personas until you have thousands of users.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">Your beautifully-made persona sits in a slide deck that no one has opened since the kickoff. Features keep shipping based on whoever argues hardest.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the real failure, and the fix?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The persona isn't failing because it's low quality — it's failing because it's not being used. A perfect persona buried in a deck changes no decisions. Its whole value is being invoked when the team makes calls.">
+            A) The persona wasn't detailed enough; add more attributes and re-share it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A persona only earns its keep when it's actively used as a decision tool. The failure is adoption, not craft. Fix it by bringing the persona into the room where decisions happen: reference it in prioritization ('does this serve Rohan?'), post it where the team works, and make 'which persona, which pain?' a standard question in reviews. An unused persona is just art; a referenced one settles debates.">
+            B) The failure is adoption — a persona only works when it's actively invoked in decisions, so build it into prioritization and reviews, not just a one-time deck.
+          </button>
+          <button class="pm-quiz-option" data-msg="Concluding that personas 'just don't work' misreads the problem. It worked as an artifact but was never operationalized. The lesson is to embed it in the decision process, not to abandon the technique.">
+            C) Personas clearly don't work — stop making them.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Persona Quick Reference</h2>
+      <p class="muted">Health checks and the classic traps on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-vial"></i> The Persona Health Check</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Coherent</h4>
+              <p>Goals relieve the listed pains; pains are backed by observed behavior. One unbroken thread.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Actionable</h4>
+              <p>Engineers and designers can read the behaviors quadrant and immediately know what to build and test.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Traceable</h4>
+              <p>Every line links back to a real quote or metric. No source, no line.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Classic Traps</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-wand-magic-sparkles"></i></span>
+            <div>
+              <h4>The fictional darling</h4>
+              <p>An invented user with zero real pains who conveniently loves every feature on the backlog.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-icons"></i></span>
+            <div>
+              <h4>Cosmetic bloat</h4>
+              <p>Lifestyle details (music taste, coffee order) that never change a product decision.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-clock"></i></span>
+            <div>
+              <h4>Stale persona</h4>
+              <p>Built once, never revalidated. Refresh after a pivot or user-base shift.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-box-archive"></i></span>
+            <div>
+              <h4>Deck decoration</h4>
+              <p>A persona nobody references. Invoke it in reviews or it changes nothing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-hammer"></i> How to Build One</h3>
+        <p class="muted">From raw research to a card the team will actually use.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Gather real data</h4><p>Interviews + analytics. Every line will need a source.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Cluster into groups</h4><p>Find patterns of shared behavior and need — that's a persona candidate.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Fill the four quadrants</h4><p>Profile, behaviors, pains, goals — with the empathy thread intact.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Humanize &amp; limit</h4><p>Add a name and photo; keep to the 2–3 that matter most.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Use &amp; revalidate</h4><p>Invoke it in decisions; refresh with new research over time.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-people-arrows"></i> Persona vs. Segment</h3>
+        <p class="muted">Related, but not the same thing.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Segment</h4><p>A group defined by shared traits or needs. Tells you who exists and who to target.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-user"></i></span><div><h4>Persona</h4><p>One humanized representative of a key segment. Makes the group feel real to build for.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-flask"></i></span><div><h4>Provisional persona</h4><p>No data yet? Make a clearly-labeled assumption persona, then validate.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/user-personas.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

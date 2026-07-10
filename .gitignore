@@ -36,8 +36,8 @@ series/dsa
 _posts/dsa
 
 # projects (private)
-projects.html
-_data/projects.yml
+# projects.html
+# _data/projects.yml
 
 # case-studies (private)
 case-studies.html
@@ -58,11 +58,8 @@ _posts/machine-learning/2025-07-01-intro-ml.md
 # series/nlp/
 _data/series.yml
 
-# Projects
-_data/projects.yml
-
 # PM-Gym
-pm-gym.html
-pm-gym/
-_layouts/pm-gym.html
-_sass/_pm-gym.scss
+# pm-gym.html
+# pm-gym/
+# _layouts/pm-gym.html
+# _sass/_pm-gym.scss

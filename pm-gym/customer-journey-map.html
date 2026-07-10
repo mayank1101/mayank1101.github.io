@@ -1,0 +1,834 @@
+---
+layout: pm-gym
+title: "Customer Journey Map — PM Gym"
+description: "A beginner-friendly, interactive guide to customer journey mapping: stages, swimlanes, emotion curves, and moments of truth."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Customer Journey Map</h1>
+  <p class="lead">See your product the way your customers experience it</p>
+  <p class="muted">
+    Teams see screens and features; customers experience a journey — with detours, dead ends,
+    and moods. A journey map lays that experience out on one page, so you can find exactly
+    where you delight people and where you lose them.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Master Journey Mapping</h2>
+      <p class="muted">Four short lessons: what a journey map is, how it's built, how to read emotions on it, and how to turn it into action.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Core Idea</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Anatomy of a Map</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. The Emotion Curve</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. From Map to Action</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>The Core Idea</h3>
+      </div>
+
+      <p>
+        A customer journey map is a <strong>visual timeline of everything a customer does,
+        thinks, and feels</strong> while trying to reach a goal with your product — from the
+        moment they first hear about it to the day they become loyal (or quietly leave).
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — dinner at a restaurant</h4>
+        <p>
+          The restaurant's kitchen tracks its own view: "table 5's food went out in 12 minutes —
+          great." But think about the <em>diner's</em> whole evening: the warm welcome (lovely),
+          the 20-minute wait for a menu (annoying), the delicious meal (delight), and then
+          15 minutes trying to flag someone down for the bill at the end (leaving on a sour note).
+          The kitchen's metrics all looked fine, yet the guest remembers the frustrating bits and
+          may not come back. A journey map captures that whole lived experience — the parts your
+          internal dashboards never see.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-pizza-slice"></i> The pizza night story</h4>
+        <p>
+          Imagine ordering pizza through an app. The app team sees five screens working perfectly:
+          browse, customize, pay, track, rate. Each screen passes its tests.
+        </p>
+        <p>
+          The customer experiences something else: hungry at 8 PM, overwhelmed by 40 menu options,
+          annoyed the address form forgot their street again, anxious for 35 minutes because
+          "tracking" just shows a spinning circle, and finally relieved when the doorbell rings.
+        </p>
+        <p class="pm-key-line">
+          Same product, two realities. The journey map documents the customer's reality — because
+          that's the one that decides whether they order again.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>What is the main thing a journey map adds that a list of app screens doesn't show?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Layouts live in design files, not journey maps. The map isn't about how screens look — it's about what happens to the person moving through them (including everything that happens off-screen).">
+            A) A more detailed view of each screen's layout.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly — the map captures the human side: what customers do, think, and feel across the whole experience, including moments outside the app (waiting for delivery, talking to support, hearing about you from a friend).">
+            B) What the customer does, thinks, and feels across the whole experience — including off-screen moments.
+          </button>
+          <button class="pm-quiz-option" data-msg="Revenue lives in dashboards. A journey map can point at where money leaks (a painful checkout), but its content is the customer's experience, not the finances.">
+            C) A breakdown of how much revenue each screen generates.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: Anatomy of a Map <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>The Anatomy of a Map</h3>
+      </div>
+
+      <p>
+        A journey map is a grid. <strong>Columns are stages</strong> — the phases of the journey
+        in time order. <strong>Rows are swimlanes</strong> — the dimensions you track at every stage.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — a road-trip diary</h4>
+        <p>
+          Picture a diary of a road trip laid out as a table. Across the top, the
+          <strong>columns</strong> are each place you stopped: "Home → Gas station → Beach town →
+          Mountain lodge." Down the side, the <strong>rows</strong> are what you're recording at
+          each stop: what you <em>did</em>, what you were <em>thinking</em>, how you <em>felt</em>,
+          and what <em>went wrong</em>. Read a column top-to-bottom and you get the full picture of
+          one moment; read a row left-to-right and you see how, say, your mood rose and fell across
+          the whole trip. A journey map is exactly this grid, for a customer instead of a traveler.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-timeline"></i> The typical stages (columns)</h4>
+        <p class="pm-key-line">Awareness → Consideration → Purchase → Onboarding → Usage → Loyalty</p>
+        <p>Adapt them to your product — a hospital, a bank, and a game will name these differently.</p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-person-walking"></i></span>
+          <div>
+            <h4>Actions</h4>
+            <p>What the customer physically does at this stage. <em>"Compares three apps, reads reviews."</em></p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-comment-dots"></i></span>
+          <div>
+            <h4>Thoughts</h4>
+            <p>What's going through their head. <em>"Is this one trustworthy? Why is it cheaper?"</em></p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-face-smile"></i></span>
+          <div>
+            <h4>Emotions</h4>
+            <p>How they feel — plotted as a curve across the stages.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-triangle-exclamation"></i></span>
+          <div>
+            <h4>Pain points</h4>
+            <p>Where friction, confusion, or disappointment strikes.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-lightbulb"></i></span>
+          <div>
+            <h4>Opportunities</h4>
+            <p>Ideas for removing each pain — the row that feeds your roadmap.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          On a journey map for a fitness app, where does this entry belong:
+          <em>"Worried the gym plan is too hard — considering quitting"</em>?
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-msg="Actions are observable behaviors — tapping, comparing, canceling. 'Worried' is happening inside the person's head, not in their hands.">Actions</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right — it's an internal state: a worry plus a thought about quitting. It belongs in thoughts/emotions, and it should probably drag the emotion curve down at that stage, flagging a churn risk.">Thoughts / Emotions</button>
+          <button class="pm-quiz-option" data-msg="Close — the worry may *reveal* a pain point (plan difficulty), but the entry itself describes what the user feels and thinks. The pain-point row would say 'workout plan too hard for beginners.'">Opportunities</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: The Emotion Curve <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>The Emotion Curve &amp; Moments of Truth</h3>
+      </div>
+
+      <p>
+        The most valuable line on the map is the <strong>emotion curve</strong> — how the customer
+        feels, stage by stage. Peaks show what to protect; dips show where customers are silently
+        deciding to leave.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — a first date</h4>
+        <p>
+          A first date has an emotional arc: nervous at the start, warming up over dinner, maybe a
+          dip during an awkward silence, then a high if it ends well. And a few instants matter far
+          more than the rest — the <strong>moments of truth</strong>: the first impression at the
+          door, and especially how someone reacts when a drink gets spilled. A person who laughs it
+          off and helps clean up wins more trust than an evening that was merely smooth and
+          forgettable. Products are the same: <strong>how you handle the moment something goes
+          wrong</strong> builds more loyalty than a hundred flawless-but-unremarkable sessions. Aim
+          your energy at the deepest dips and the make-or-break moments.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-star"></i> Moments of truth</h4>
+        <p>
+          A few interactions matter far more than the rest — the make-or-break moments where the
+          relationship is decided:
+        </p>
+        <p>
+          <strong>The first impression</strong> (does this look worth my time?),
+          <strong>the first value</strong> (did it actually help me?),
+          <strong>the first failure</strong> (what happens when something breaks?), and
+          <strong>the first support contact</strong> (do they care?).
+        </p>
+        <p class="pm-key-line">
+          A brilliant recovery at a moment of truth builds more loyalty than ten flawless ordinary sessions.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Your food-delivery emotion curve: excited while ordering, neutral at checkout,
+          <strong>deep dip while waiting with no updates</strong>, relieved at delivery.
+          Where should the team invest first?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Ordering is already a peak — polishing it further buys little. The curve says customers are happy there; the danger lives in the dip.">
+            A) Make the ordering experience even more fun.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The deepest dip is where customers suffer — and where the next order is silently lost. Live tracking with an honest ETA attacks exactly that anxiety. This is how the curve converts feelings into roadmap priorities.">
+            B) Fix the waiting dip — live tracking and an honest arrival estimate.
+          </button>
+          <button class="pm-quiz-option" data-msg="Delivery is already the relief peak — the problem isn't the doorbell moment, it's the 35 anxious minutes before it. Invest where the curve is lowest.">
+            C) Add a celebration animation when the food arrives.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: From Map to Action <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>From Map to Action</h3>
+      </div>
+
+      <p>
+        A map that hangs on a wall changes nothing. The payoff comes from three habits:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — patching the leakiest hole</h4>
+        <p>
+          If your boat is taking on water, you don't repaint the deck or polish the rails — you find
+          the biggest leak and plug it first. A journey map is how you spot the leaks: the deepest
+          emotion dips are where customers are "leaking" out of your product. The discipline is to
+          (1) map the <em>real</em> journey from data, not the one you wish were true, (2) rank the
+          leaks by how many people they sink and how badly, and (3) turn the worst one into a fix
+          you can test. A gorgeous map that doesn't lead to patching a leak is just a painting of a
+          sinking boat.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Map reality, not hope</h4>
+            <p>Build the current-state map from research and analytics — interviews, tickets, funnel data. A map based on how you <em>wish</em> the journey went produces a fantasy roadmap.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Rank the pain points</h4>
+            <p>Score each pain by how many customers hit it and how badly it hurts (this is <a href="/pm-gym/opportunity-analysis.html">opportunity analysis</a> applied to the map).</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Turn dips into experiments</h4>
+            <p>Each major pain becomes a testable hypothesis: "if we add live tracking, waiting anxiety drops and reorder rate rises."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          A teammate builds a beautiful journey map entirely from the team's own assumptions
+          in a two-hour workshop — no customer data. What's the biggest risk?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Looks are fine — a pretty map is easier to share. The danger isn't the polish; it's what the polish is standing on.">
+            A) The map might look too polished for stakeholders to take seriously.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Without real data, the map documents the team's imagination, not the customers' experience — and every 'insight' from it inherits that fiction. Assumption workshops are fine as a starting draft, but each cell then needs validating against research.">
+            B) It documents the team's imagination — pain points customers actually have may be missing, and fixes will target problems that don't exist.
+          </button>
+          <button class="pm-quiz-option" data-msg="More stages isn't the issue — maps can be as detailed as useful. The problem is that unvalidated content is fiction regardless of how many columns it has.">
+            C) Two hours isn't enough to draw all the stages.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Journey Map Flashcards</h2>
+      <p class="muted">Five cards covering the structure and the key concepts. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Definition</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 5</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">What Is a Customer Journey Map?</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 5</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations where a journey map earns its keep — reading emotion curves, spotting moments of truth, scoping fixes, and avoiding fantasy maps. Pick the strongest move, then read why the others miss.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">Sign-ups for your meal-kit service are healthy, but most customers cancel within the first month.</p>
+        <div class="pm-quiz">
+          <p><strong>How does a journey map help?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Sign-ups are healthy; the wound is later. Redesigning a working stage is effort spent where the map would show no dip.">
+            A) It doesn't yet — first redesign the sign-up flow, since that's the start of the journey.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Churn shows up at cancellation but is born earlier — maybe when the first '30-minute' recipe takes 50. The map traces the symptom back to the stage that caused it.">
+            B) Build a current-state map of the first month from real data (surveys, tickets, analytics), find the emotion dips, and turn each into a testable fix.
+          </button>
+          <button class="pm-quiz-option" data-msg="A bribe delays the exit without fixing the reason for it. If the first-cook experience disappoints, month two churns just the same — now at lower margin.">
+            C) Offer a discount on the second month to stop the cancellations.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">Your team wants to 'redesign the whole onboarding flow' — six screens, full quarter of work.</p>
+        <div class="pm-quiz">
+          <p><strong>What does journey-map thinking suggest?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Important ≠ everything is broken. Full redesigns spend a quarter fixing four screens that work to reach the two that don't.">
+            A) Go ahead — onboarding is important, so a full redesign is justified.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The map is a scoping weapon: 'redesign onboarding' becomes 'fix the empty-dashboard moment where 60% stall'. Smaller bet, faster result, measurable claim.">
+            B) Map the onboarding stages against funnel data and session recordings first; usually one or two moments of truth carry most of the loss — scope the redesign there.
+          </button>
+          <button class="pm-quiz-option" data-msg="Their flow solves their journey's dips — you'd import solutions to problems you may not have while leaving your actual dips untouched.">
+            C) Copy the onboarding flow of the market leader.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A customer's very first order on your platform fails to deliver. Support can see it happened but has no special protocol for it.</p>
+        <div class="pm-quiz">
+          <p><strong>Why does the journey map say this deserves special investment?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="This isn't an average moment. First experiences are where the customer decides whether there will be a second one — the cost of failure here is the entire relationship.">
+            A) It doesn't — failed orders are rare edge cases; average metrics matter more.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Moments of truth get outsized weight on the map precisely so teams build recovery protocols for them instead of treating them as ordinary tickets.">
+            B) It's a moment of truth: a first failure decides the relationship, and a brilliant recovery (instant refund, proactive status, redo) creates more loyalty than ten smooth sessions.
+          </button>
+          <button class="pm-quiz-option" data-msg="Equal investment is how peak moments get ignored and dips stay dips. The map exists to make investment *unequal* — concentrated where the relationship is decided.">
+            C) Because every stage of the journey deserves equal investment.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A PM maps a single journey but tries to represent both a first-time casual buyer and a returning power user on the same emotion curve. The curve looks confusingly flat and contradictory.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the fix?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A flat, contradictory curve is the symptom of averaging two very different travelers. A first-timer and a power user feel completely different things at the same stage, so blending them cancels out the real highs and lows.">
+            A) Keep one map — it's more efficient to have everything in one place.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. One persona per map. A first-time buyer and a returning power user travel genuinely different journeys with different emotions at each stage; forcing them onto one curve averages their feelings into meaningless mush. Make a separate map for each key persona so the dips and peaks stay sharp and actionable.">
+            B) Split into one map per persona — different personas travel different journeys, and blending them flattens the real emotional highs and lows.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more emotion rows doesn't fix the core problem: two different people's feelings are being averaged into one line. The fix is separate maps per persona, not more rows on a blended one.">
+            C) Add more emotion rows to capture both at once.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">Your journey map's emotion curve is high everywhere inside the app, but churn is high. Then someone notes the map only covers on-screen steps — nothing about the 3-day shipping wait or the confusing return process.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the gap?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="If the in-app curve is all high yet people churn, the pain must be happening somewhere the map doesn't look — off-screen. A map limited to your own screens misses shipping, support, and returns, which are often where the relationship actually breaks.">
+            A) Nothing — if the app experience is good, churn must be random.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Much of the journey happens off your product — waiting for delivery, contacting support, returning an item, hearing from friends. A map that stops at your app's edges hides the real dips. Extend the map to include off-product moments, and the shipping wait and return hassle will likely show up as the true churn drivers.">
+            B) The map ignores off-product moments — shipping, returns, and support are part of the journey and are probably where the real dips (and churn) live.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding celebratory in-app animations decorates the part that's already working. The problem is the invisible off-screen pain; polishing the on-screen peaks won't touch it.">
+            C) Add more delightful animations to the in-app screens.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">Two pain points show up on the map. Pain A: a mildly clunky settings page, hit by 90% of users. Pain B: a checkout crash, hit by 3% of users but it completely blocks purchase.</p>
+        <div class="pm-quiz">
+          <p><strong>How do you decide which to fix first?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Reach alone (90% vs 3%) doesn't decide it — you have to weigh severity too. A mild annoyance for many can matter less than a total purchase blocker for a few, especially since B directly kills revenue for everyone it hits.">
+            A) Always fix Pain A — it affects the most users.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Rank pain points by reach AND severity together (opportunity analysis applied to the map). B blocks purchase entirely — near-maximal severity and direct revenue loss — which likely outweighs a mild annoyance even at 90% reach. Estimate the impact of each (users × severity × business cost) rather than defaulting to whichever has bigger reach.">
+            B) Weigh reach against severity and business cost — a total purchase-blocker (B) may outrank a mild annoyance (A) despite lower reach; estimate the real impact of each.
+          </button>
+          <button class="pm-quiz-option" data-msg="Fixing whichever is easier to build ignores impact entirely. Effort matters for prioritization, but you first have to know which pain actually costs more — and a checkout crash blocking purchases is a strong candidate regardless of ease.">
+            C) Fix whichever one is technically easier, regardless of impact.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Leadership wants to jump straight to designing the "ideal future" journey without mapping how the journey works today.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk of skipping the current-state map?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Designing the dream journey first feels visionary but skips the diagnosis. Without knowing where customers actually struggle today, the 'ideal' map fixes imagined problems and misses the real dips that are driving people away.">
+            A) No risk — designing the ideal experience is more inspiring and efficient.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Current-state before future-state. The current-state map, built from real research and analytics, tells you where the actual pain is. Jump straight to a future-state map and you'll design elegant fixes for problems customers may not have, while the genuine dips go untouched. Diagnose reality first, then design the ideal to close the specific gaps you found.">
+            B) Without the current-state map you don't know where real pain is, so the 'ideal' journey may fix imagined problems and miss the actual dips.
+          </button>
+          <button class="pm-quiz-option" data-msg="A future-state map isn't useless — it's valuable once you know the real gaps. The error is doing it FIRST, before mapping current reality. Both maps have a place; the order matters.">
+            C) Future-state maps are always a waste of time; never make them.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">The map shows a big emotion peak right after users hit their "first real value" moment. A teammate says "peaks are fine, ignore them — only fix dips."</p>
+        <div class="pm-quiz">
+          <p><strong>Is ignoring peaks the right call?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dips deserve attention, but peaks aren't nothing. A high point right after first value is a moment of truth worth protecting and even amplifying — it's when delight and word-of-mouth are born. Ignoring peaks entirely leaves value on the table.">
+            A) Yes — peaks are already good, so there's nothing to do there.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Fixing dips is priority one, but peaks matter too: they show what customers love, which you should protect from regressions and consider amplifying (e.g., prompt a review or referral right at the high). A peak at 'first value' is a prime moment to deepen loyalty. Read the whole curve — dips to fix, peaks to protect and leverage.">
+            B) No — protect and amplify peaks too; a high right after first value is a moment to reinforce loyalty and prompt referrals, not to neglect.
+          </button>
+          <button class="pm-quiz-option" data-msg="Flipping to 'only work on peaks' overcorrects the other way. The point isn't to abandon dips — those are where you're losing people. It's that peaks also deserve some attention (protect and leverage them), alongside prioritizing the dips.">
+            C) Actually, only work on peaks and ignore the dips.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">Your map's "opportunities" row is full of vague sticky notes like "improve onboarding" and "make it less confusing."</p>
+        <div class="pm-quiz">
+          <p><strong>What turns these into something actionable?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Improve onboarding' is a wish, not a plan — no one can build or measure it. Vague opportunities are how a map ends up as wall art. Each needs to become a specific, testable hypothesis tied to a metric.">
+            A) Nothing — capturing the general theme is enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Convert each vague opportunity into a testable hypothesis with a specific change and expected effect: 'If we add a 3-step guided setup at the empty-dashboard dip, activation rises from 40% to 55%.' Now it's buildable, measurable, and falsifiable — the map has produced a real experiment instead of a sticky note.">
+            B) Rewrite each as a testable hypothesis — 'if we add a guided setup at the empty-dashboard dip, activation rises from 40% to 55%' — so it's specific and measurable.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more vague notes multiplies the problem. The issue isn't too few ideas — it's that the ideas aren't specific or testable. Sharpen the ones you have into hypotheses instead of piling on more.">
+            C) Add even more sticky notes to cover every possible idea.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A B2B PM realizes their product's journey involves an evaluator, an approver, and an end-user — each with a totally different experience of the same purchase.</p>
+        <div class="pm-quiz">
+          <p><strong>How should the journey mapping handle this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Squeezing three very different roles onto one journey averages their distinct experiences into a blur. The evaluator's demo journey, the approver's budget-approval journey, and the end-user's daily-use journey are genuinely different arcs.">
+            A) Force all three onto one journey to keep it simple.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. In complex B2B buying, different roles travel different journeys. Map each key role's journey separately (evaluator, approver, end-user), because each has distinct actions, thoughts, pains, and moments of truth. You can then see, for example, that the approver's dip (unclear ROI) is a separate problem from the end-user's dip (clunky daily workflow) — and address each where it lives.">
+            B) Map each role's journey separately — evaluator, approver, and end-user have distinct experiences, pains, and moments of truth in the same purchase.
+          </button>
+          <button class="pm-quiz-option" data-msg="Mapping only the end-user ignores the evaluator and approver, who often decide whether the purchase happens at all. In B2B, the buying journey involves multiple roles; leaving two of them off the map hides the pains that block deals.">
+            C) Only map the end-user, since they use the product most.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">Analytics show a huge drop-off at one specific step, but the journey map's emotion row for that step just says "neutral." The two don't match.</p>
+        <div class="pm-quiz">
+          <p><strong>What should you do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Trusting the 'neutral' label over a huge measured drop-off ignores hard evidence. A big behavioral exit almost always signals a real dip the map has mislabeled — probably because that emotion was guessed, not researched.">
+            A) Trust the map — if it says neutral, users must feel neutral.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A large drop-off with a 'neutral' emotion is a red flag that the map's emotion was assumed rather than researched. Go investigate that step directly — session recordings, exit surveys, interviews — to learn what people actually feel and why they leave. Then correct the map. Behavioral data and the emotion curve should reconcile; when they don't, the guessed layer (usually emotion) is the one to re-check.">
+            B) Investigate that step with real data (recordings, exit surveys) — a big drop-off usually means the 'neutral' emotion was guessed; correct the map to match reality.
+          </button>
+          <button class="pm-quiz-option" data-msg="Deleting the analytics because they contradict the map is backwards — the hard behavioral data is more trustworthy than a possibly-assumed emotion label. Reconcile by fixing the map, not by discarding the evidence.">
+            C) Delete the analytics — the map is the source of truth.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Your product has a smooth, high-emotion journey — except for one severe dip: the moment a user's free trial ends and they hit a hard paywall with no warning.</p>
+        <div class="pm-quiz">
+          <p><strong>Why is this dip especially worth attention?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A single dip in an otherwise-smooth journey isn't 'negligible' — it's exactly where you're likely losing conversions. And this one sits at a decision point (trial-to-paid) that directly determines revenue, making it high-stakes, not minor.">
+            A) It's just one dip in an otherwise good journey, so it's negligible.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This dip sits at a moment of truth — the trial-to-paid decision — where a bad experience (an abrupt paywall with no warning) can undo all the goodwill built earlier and directly costs conversions. It's a prime candidate for a designed recovery: warn users before the trial ends, remind them of the value they've gotten, and ease the transition. Severe dips at revenue-deciding moments deserve outsized attention.">
+            B) It's a moment of truth (trial-to-paid) where a jarring experience can erase earlier goodwill and directly costs conversions — a prime spot to design a smoother, warned transition.
+          </button>
+          <button class="pm-quiz-option" data-msg="Removing the paywall to erase the dip 'fixes' the emotion by giving the product away — not a viable business move. The goal is to smooth the transition (warnings, value reminders, easing in), not to eliminate monetization.">
+            C) Remove the paywall entirely so the dip disappears.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A stakeholder wants the journey map to include every possible edge case and micro-step, producing a 40-column monster nobody can read.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the journey-mapping principle here?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A 40-column map that no one can read fails the map's purpose: to give the team a shared, at-a-glance view of the experience and its worst moments. Exhaustive detail buries the signal you actually need.">
+            A) More detail is always better — include every edge case.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A journey map is a communication and prioritization tool — it works when it's legible at a glance and highlights the moments that matter most. Focus on the main path and its key dips and moments of truth for the chosen persona; capture rare edge cases elsewhere if needed. Readability and focus beat exhaustive completeness.">
+            B) A map must stay legible and focused — cover the main path and key moments for one persona; exhaustive detail defeats its purpose as a shared, at-a-glance tool.
+          </button>
+          <button class="pm-quiz-option" data-msg="Making it even bigger (100 columns) worsens the exact problem. The fix is to trim to the meaningful stages and dips, not to keep adding until it's truly unusable.">
+            C) Expand it to 100 columns to be truly thorough.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">Six months after building a journey map that drove several fixes, the team never looks at it again — even though the product and onboarding have changed a lot since.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the issue?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A journey map isn't a one-time deliverable. As the product, flows, and customers change, the old map drifts out of date — its dips may already be fixed and new ones may have appeared that no one has captured.">
+            A) Nothing — a journey map is a one-time artifact you make once.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A journey map is a living document. After significant product or onboarding changes, revisit and update it — old dips may be resolved, and new pain points (or moments of truth) may have emerged. Periodically re-grounding the map in fresh data keeps it a reliable guide rather than a snapshot of a product that no longer exists.">
+            B) The map is a living document — after product changes, revisit and update it, since old dips may be fixed and new ones may have appeared.
+          </button>
+          <button class="pm-quiz-option" data-msg="The map wasn't 'wrong from the start' — it drove real fixes. The issue is that it wasn't kept current as things changed. The lesson is to maintain it, not to distrust the original.">
+            C) The original map must have been wrong, so discard the whole approach.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">Your journey map clearly shows the deepest dip is during a slow, anxious delivery-wait — but the delivery is handled by a third-party logistics company you don't control.</p>
+        <div class="pm-quiz">
+          <p><strong>Does the map still help, even though you don't own that step?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dismissing the dip because you don't own the delivery gives up too easily. Even when you can't control a step directly, you almost always control how you communicate around it — and the map just told you exactly where to focus that effort.">
+            A) No — if you don't control the step, the map is useless there.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The map's value is identifying WHERE the customer suffers, not just where you have direct control. You can't speed up the third-party truck, but you can attack the anxiety: honest ETAs, proactive status updates, reassuring messaging, or setting expectations up front. Often the emotion at a step is driven more by uncertainty than by the wait itself — and communication is fully within your control. The map points you to the highest-leverage place to improve the experience, owned or not.">
+            B) Yes — you may not control the delivery speed, but you control the communication around it (honest ETAs, proactive updates), which often drives the emotion more than the wait itself.
+          </button>
+          <button class="pm-quiz-option" data-msg="Cutting the delivery step off the map hides your single deepest dip — the exact thing you most need to see. The step belongs on the map precisely because it's where customers suffer most, even if a partner handles the logistics.">
+            C) Remove the delivery step from the map since it's out of scope.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Journey Map Quick Reference</h2>
+      <p class="muted">The whole framework on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-table-cells"></i> The Grid</h3>
+        <p class="muted">Columns = stages in time order. Rows = what you track at every stage.</p>
+        <div class="pm-concept-grid">
+          <div class="pm-concept-item">
+            <span class="pm-chip">Columns</span>
+            <h4>Stages</h4>
+            <p>Awareness → Consideration → Purchase → Onboarding → Usage → Loyalty.</p>
+          </div>
+          <div class="pm-concept-item">
+            <span class="pm-chip">Rows</span>
+            <h4>Swimlanes</h4>
+            <p>Actions, thoughts, emotions, pain points, opportunities.</p>
+          </div>
+          <div class="pm-concept-item pm-good">
+            <span class="pm-chip">Signal</span>
+            <h4>Emotion curve</h4>
+            <p>Peaks = protect. Dips = fix first.</p>
+          </div>
+          <div class="pm-concept-item pm-bad">
+            <span class="pm-chip">Danger</span>
+            <h4>Moments of truth</h4>
+            <p>First impression, first value, first failure, first support contact.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-list-check"></i> Rules of Thumb</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Current state before future state</h4>
+              <p>Map reality from research and analytics first; the ideal journey is a separate map.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>One persona per map</h4>
+              <p>Different <a href="/pm-gym/user-personas.html">personas</a> travel different journeys — don't average them into mush.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Include off-product moments</h4>
+              <p>Waiting, word-of-mouth, support calls — much of the journey happens outside your screens.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">4</span>
+            <div>
+              <h4>End with experiments</h4>
+              <p>Every major dip becomes a testable hypothesis, not just a sticky note.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-hammer"></i> How to Build One</h3>
+        <p class="muted">From a blank grid to a roadmap of fixes.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Pick one persona &amp; goal</h4><p>One traveler, one journey — e.g., "first-time buyer completing a purchase."</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Lay out the stages</h4><p>The time-ordered phases, including off-product ones (shipping, support).</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Fill rows from real data</h4><p>Actions, thoughts, emotions, pains — from interviews, tickets, analytics.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Plot the emotion curve</h4><p>Find the deepest dips and the moments of truth.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Rank &amp; turn into experiments</h4><p>Score dips by reach &times; severity; make each a testable hypothesis.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Common Mistakes</h3>
+        <p class="muted">Where journey maps go wrong.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-wand-magic-sparkles"></i></span><div><h4>The fantasy map</h4><p>Built from assumptions in a workshop, not from real customer data.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Averaging personas</h4><p>Two personas on one curve flattens the real highs and lows.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-mobile-screen"></i></span><div><h4>Stopping at your screens</h4><p>Missing off-product moments hides where churn is really born.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-box-archive"></i></span><div><h4>Set-and-forget</h4><p>A map never revisited drifts stale as the product changes.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/customer-journey-map.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

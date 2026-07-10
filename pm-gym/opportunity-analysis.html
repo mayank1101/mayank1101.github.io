@@ -1,0 +1,818 @@
+---
+layout: pm-gym
+title: "Opportunity Analysis — PM Gym"
+description: "A beginner-friendly, interactive guide to opportunity analysis: opportunity solution trees, opportunity scoring, and RICE prioritization."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Opportunity Analysis</h1>
+  <p class="lead">Find problems worth solving before writing a line of code</p>
+  <p class="muted">
+    The most common product mistake is falling in love with a feature idea instead of the
+    user problem behind it. This guide teaches you to spot real opportunities, size them,
+    and prioritize them with simple, repeatable frameworks.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Master Opportunity Analysis</h2>
+      <p class="muted">Four short lessons: what an opportunity is, how to map it, how to size it, and how to prioritize it.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Opportunities vs. Solutions</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. The Solution Tree</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Sizing Problems</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. RICE Prioritization</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Opportunities vs. Solutions</h3>
+      </div>
+
+      <p>
+        The classic beginner trap: falling in love with a <em>solution</em> (a specific feature idea)
+        instead of the <strong>opportunity</strong> — the unmet pain, need, or desire behind it.
+        Staying in the problem space first saves you from building things nobody needs.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — "a faster horse"</h4>
+        <p>
+          There's a famous line attributed to Henry Ford: "If I'd asked people what they wanted,
+          they'd have said a faster horse." A faster horse is a <strong>solution</strong>. The real
+          <strong>opportunity</strong> underneath it was "I need to get places quicker and more
+          comfortably" — and the car served that far better than any horse could. When users ask
+          for a specific feature, they're handing you their guessed solution. Your job is to dig
+          out the opportunity beneath it, because a better solution than the one they named often
+          exists.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-user-doctor"></i> The doctor analogy</h4>
+        <p>
+          A patient walks in with severe muscle cramps and demands a specific pill they saw
+          in an advertisement — that's the solution.
+        </p>
+        <p>
+          A good doctor doesn't just hand it over. They ask questions, run tests, and discover
+          the patient is severely dehydrated — that's the opportunity. Treating dehydration
+          fixes the problem for good; the pill alone would fix nothing.
+        </p>
+        <p class="pm-key-line">
+          Rule: never prescribe a feature without diagnosing the opportunity first.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>You work on a fitness app. Which of these is an <strong>opportunity</strong>, not a solution?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A Bluetooth widget is a very specific thing to build — a solution. Look for the option that describes a user struggle without naming any feature.">
+            A) "Let's build a smart Bluetooth water-bottle sync widget for the dashboard."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This describes a pain — tedious manual logging and forgetting to track — without prescribing any feature yet. That's a genuine opportunity, and many different solutions could serve it.">
+            B) "Users find manual logging tedious and constantly forget to track hydration on busy days."
+          </button>
+          <button class="pm-quiz-option" data-msg="A barcode scanner is a concrete feature — a solution. The question to ask first: what user struggle would it actually solve, and how big is that struggle?">
+            C) "I want to add a barcode scanner so users can scan sports drinks instantly."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: The Solution Tree <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>The Opportunity Solution Tree</h3>
+      </div>
+
+      <p>
+        To keep problems and solutions organized, product discovery expert
+        <strong>Teresa Torres</strong> created the <strong>Opportunity Solution Tree</strong> —
+        a simple map that flows top-down in four levels:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — planning to save money</h4>
+        <p>
+          Imagine a tree for "save $200 a month" (the <strong>outcome</strong>, at the top). Branch
+          into the reasons you're not: "eating out too much," "forgotten subscriptions," "impulse
+          shopping" (the <strong>opportunities</strong>). Under each, list ideas: for eating out —
+          "meal-prep Sundays," "a lunch budget app" (the <strong>solutions</strong>). Then try one
+          for two weeks and see if it sticks (the <strong>experiment</strong>). The tree keeps you
+          from jumping straight to a random idea ("download a budgeting app!") before you even know
+          which problem is costing you the most.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Desired outcome</h4>
+            <p>A measurable business target. <em>"Increase food-delivery retention by 10%."</em></p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Opportunities</h4>
+            <p>Unmet user needs blocking that outcome. <em>"Food arrives cold."</em></p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Solutions</h4>
+            <p>Feature ideas that might resolve each opportunity. <em>"Text directions, 3D maps."</em></p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">4</span>
+          <div>
+            <h4>Experiments</h4>
+            <p>Cheap tests — A/B tests, interviews — to find which solution actually works.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Your tree's outcome is <strong>"Boost user retention by 12%."</strong> Where does the task
+          <em>"Run an A/B test comparing two checkout layouts"</em> sit?
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-msg="The outcome is the business metric at the very top of the tree — retention by 12%. A test is something you run further down to learn which idea works.">Outcome</button>
+          <button class="pm-quiz-option" data-msg="Opportunities are user pains and needs, written without features. A layout comparison test isn't a user pain — it's how you validate a proposed fix.">Opportunity</button>
+          <button class="pm-quiz-option" data-msg="Close! The new checkout layout itself would be the solution. But *running the comparison test* on it belongs one level lower.">Solution</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right — an A/B test is an experiment: a cheap way to validate which solution actually moves the outcome before fully committing to it.">Experiment</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: Sizing Problems <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Sizing Up Opportunities</h3>
+      </div>
+
+      <p>
+        Not all user problems deserve your team's time. Before committing resources,
+        score each opportunity on three questions:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — which pothole to fix</h4>
+        <p>
+          A city can't fix every pothole at once, so it picks wisely. A deep crater on a busy main
+          road that wrecks tires (many people hit it, and it hurts a lot) gets fixed first. A small
+          crack on a quiet dead-end street waits. The <strong>opportunity score</strong> does the
+          same math for user problems: a pain that's <strong>important</strong> to many users and
+          <strong>badly served</strong> today is your main-road crater — the sweet spot. A pain
+          that's minor, or that competitors already solve well, is the quiet-street crack. Fix the
+          craters first.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">How many?</span>
+          <h4>User demand</h4>
+          <p>What share of your users hit this problem — 70% or 5%?</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">How bad?</span>
+          <h4>Pain severity</h4>
+          <p>Is it a workflow-breaking blocker causing uninstalls, or a minor annoyance?</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Who else?</span>
+          <h4>Market gap</h4>
+          <p>Can users solve it elsewhere easily, or would fixing it set you apart?</p>
+        </div>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-calculator"></i> The opportunity score</h4>
+        <p>
+          The sweet spot is a need with <strong>high importance</strong> but
+          <strong>low satisfaction</strong> with today's alternatives:
+        </p>
+        <p class="pm-key-line">
+          Score = Importance + Max(Importance − Satisfaction, 0)
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          A problem is very important to users (importance = 9/10), but competitors already solve it
+          brilliantly (satisfaction = 9/10). What's its opportunity score?
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-result="correct" data-msg="9 + Max(9 − 9, 0) = 9 + 0 = 9. Important, yes — but no unserved gap, so no bonus. The market is already satisfied; there's little room to win here.">Score: 9</button>
+          <button class="pm-quiz-option" data-msg="18 would need satisfaction of 0 — a hugely important problem nobody solves. Here satisfaction is 9, so the gap term Max(9 − 9, 0) adds nothing.">Score: 18</button>
+          <button class="pm-quiz-option" data-msg="Not zero — importance still counts. The formula is Importance + Max(Importance − Satisfaction, 0), so the floor is the importance itself: 9.">Score: 0</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: RICE Prioritization <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Prioritizing with RICE</h3>
+      </div>
+
+      <p>
+        To take emotion and politics out of roadmap debates, many teams score every idea
+        with the <strong>RICE framework</strong>. It's just a way of turning gut feelings into
+        a number everyone can compare fairly.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — picking a home project</h4>
+        <p>
+          Deciding between home improvements, you weigh four things.
+          <strong>Reach:</strong> how many rooms does it affect? (Rewiring the whole house vs. one
+          closet.) <strong>Impact:</strong> how much nicer will life be? <strong>Confidence:</strong>
+          how sure are you it'll actually work out? <strong>Effort:</strong> a weekend or three
+          months? A project that helps every room, a lot, reliably, in a weekend beats one that
+          helps one closet, slightly, maybe, over months. RICE literally divides the payoff (reach
+          &times; impact &times; confidence) by the effort — so quick wins with wide, confident
+          benefit rise to the top, and expensive gut-feel bets sink.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-square-root-variable"></i> The formula</h4>
+        <p class="pm-key-line">RICE Score = (Reach × Impact × Confidence) ÷ Effort</p>
+        <p><strong>Reach</strong> — how many users it touches in a given period.</p>
+        <p><strong>Impact</strong> — how much each user gains (scored 0.25 to 3).</p>
+        <p><strong>Confidence</strong> — how solid your evidence is (100% = strong data, 50% = educated guess).</p>
+        <p><strong>Effort</strong> — the cost to build, in person-months.</p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          A riddle: <em>"I am the truth-teller of the RICE formula. When a stakeholder overhypes a
+          feature's reach and impact on pure gut feeling, scoring me honestly — based on verified
+          research only — drags the final score back down to reality. Who am I?"</em>
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-msg="Reach counts users — it's one of the numbers a stakeholder might inflate, not the check against inflation.">Reach</button>
+          <button class="pm-quiz-option" data-msg="Impact measures value per user — again, easy to overhype. The riddle asks about the safeguard against hype.">Impact</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Confidence is the honesty gate. If reach and impact rest on gut feeling rather than data, a 50% confidence multiplier cuts the whole score in half — protecting your team from hype.">Confidence</button>
+          <button class="pm-quiz-option" data-msg="Effort is the cost divider — important, but it measures build time, not the reliability of the other estimates.">Effort</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="game">Play the Vocab Game <i class="fas fa-dice"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Opportunity Analysis Flashcards</h2>
+      <p class="muted">Four cards covering the vocabulary, the tree, and the two scoring formulas. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Terminology</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 4</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Opportunities vs. Solutions</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 4</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can stay in the problem space, size opportunities, and prioritize with RICE. Pick the strongest move, then read why the others fall short.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A high-value enterprise customer threatens to churn unless you build a custom 'PDF Export' feature that isn't on your roadmap.</p>
+        <div class="pm-quiz">
+          <p><strong>What is your first step?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Maybe — but you'd be prescribing the patient's self-diagnosed pill. Custom one-off features pile up into an unmaintainable product. First find out what job the PDF is actually doing.">
+            A) Build it — losing a high-value account costs more than one feature.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The doctor's move: diagnose before prescribing. If the real need is proving ROI to their boss, live dashboards might solve it for every customer — not just this one.">
+            B) Dig behind the request: what workflow problem is PDF export solving? Often a more scalable opportunity (like shareable executive reporting) is hiding underneath.
+          </button>
+          <button class="pm-quiz-option" data-msg="Refusing the solution without exploring the opportunity throws away both the account and the learning. The request is a symptom worth investigating, even if the feature never gets built.">
+            C) Refuse — custom requests aren't on the roadmap.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">Food-delivery users complain their food arrives cold because drivers get lost inside large apartment complexes. You start an Opportunity Solution Tree with the outcome 'raise delivery satisfaction to 95%'.</p>
+        <div class="pm-quiz">
+          <p><strong>Where does 'drivers lose time in the final 100 meters' belong on the tree?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The outcome is the measurable business target already at the root (satisfaction to 95%). Getting lost is what stands between users and that outcome — one level down.">
+            A) It's the outcome — the thing we ultimately want to fix.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Correct placement. Under this opportunity you'd branch multiple solutions (text directions, drop-pins, entrance photos) and then cheap experiments to pick the winner.">
+            B) It's an opportunity — a user pain blocking the outcome, under which several solutions can branch.
+          </button>
+          <button class="pm-quiz-option" data-msg="Experiments are the tests you run on candidate solutions (like A/B testing text directions). The lost-driver problem is the pain those solutions target — the opportunity node.">
+            C) It's an experiment — something to A/B test.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A stakeholder proposes a Bluetooth smart-water-bottle integration to boost activity logging in your fitness app.</p>
+        <div class="pm-quiz">
+          <p><strong>What does a RICE evaluation most likely reveal?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Everyone drinks water; almost nobody owns a smart bottle. Real reach is tiny, and reach is only one of four factors — effort and confidence are where this idea truly collapses.">
+            A) High reach — everyone drinks water, so build it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Hardware integration = huge effort; unknown smart-bottle ownership = low confidence. The underlying opportunity (effortless logging) has cheaper, higher-scoring solutions. RICE lets you say no with numbers.">
+            B) Maximum effort and low confidence crush the score; a lock-screen widget or health-API sync serves the same need with a far higher RICE.
+          </button>
+          <button class="pm-quiz-option" data-msg="Confidence measures evidence quality, not enthusiasm. Scoring passion as confidence is exactly the failure mode RICE exists to prevent.">
+            C) Confidence is high because the stakeholder feels strongly about it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">You must choose between two opportunities. Opportunity A: importance 8, satisfaction 7. Opportunity B: importance 7, satisfaction 2.</p>
+        <div class="pm-quiz">
+          <p><strong>Which scores higher, and why?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A looks more important (8 vs 7), but the opportunity score rewards the GAP between importance and satisfaction, not importance alone. A's gap is nearly closed (8−7=1); B's is wide open (7−2=5).">
+            A) A — it has the higher importance score.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Score = Importance + Max(Importance − Satisfaction, 0). A = 8 + Max(8−7,0) = 8 + 1 = 9. B = 7 + Max(7−2,0) = 7 + 5 = 12. B wins because it's important AND poorly served today — a real unmet need. A is important but already satisfied, so there's little room to add value.">
+            B) B — score 12 vs 9, because its need is important AND badly served today (a wide satisfaction gap), where A's need is already mostly met.
+          </button>
+          <button class="pm-quiz-option" data-msg="They're not equal — plug in the formula. A = 9, B = 12. The whole point of the opportunity score is that a big unmet gap (B) beats a slightly-higher-importance need that's already satisfied (A).">
+            C) They're roughly equal, so pick either.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">Two features have similar Reach, Impact, and Effort. But one is backed by solid usage data and interviews; the other is a hunch from a single loud meeting.</p>
+        <div class="pm-quiz">
+          <p><strong>How does RICE separate them?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="If R, I, and E are similar, RICE isn't a tie — the Confidence factor breaks it. The evidence-backed feature earns a high confidence multiplier; the hunch gets a low one, which cuts its score.">
+            A) They tie — three of four factors match.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Confidence is the honesty gate. The data-backed feature might score 90–100% confidence; the hunch maybe 50%. Since RICE multiplies by confidence, the hunch's score is roughly halved. This is exactly how RICE protects teams from confident-sounding but unevidenced bets.">
+            B) Confidence breaks the tie — the evidence-backed feature keeps its score; the hunch gets a low confidence multiplier that roughly halves it.
+          </button>
+          <button class="pm-quiz-option" data-msg="You can't just raise the hunch's Impact to compensate — that would be fabricating a number to win an argument, the precise behavior RICE is designed to expose. Score Impact honestly and let low Confidence reflect the weak evidence.">
+            C) Boost the hunch's Impact score so it can compete.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A PM writes this "opportunity" on the tree: "Build an AI recommendation engine."</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with it as an opportunity?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It's phrased as a thing to build — that's a solution, not an opportunity. Opportunities describe a user pain or unmet need, never a feature. Putting a solution in the opportunity slot skips the whole 'what problem are we solving?' question.">
+            A) Nothing — a recommendation engine is a great opportunity.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Build an AI recommendation engine' is a solution masquerading as an opportunity. The opportunity is the user pain beneath it — e.g., 'users can't find relevant content and give up browsing.' Stated that way, the AI engine becomes one candidate solution among several (better search, curated lists, filters), which you can then compare.">
+            B) It's a solution in the opportunity slot — the opportunity is the user pain beneath it ('users can't find relevant content'), which many solutions could address.
+          </button>
+          <button class="pm-quiz-option" data-msg="AI being 'too hard to build' is a feasibility concern for the solution layer, not why this fails as an opportunity. The core problem is that it's a solution, not a user need — it belongs one level down the tree.">
+            C) AI is too hard to build, so it can't be an opportunity.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Your team found a real, painful problem that only affects about 0.5% of users — but for those few it's a total blocker.</p>
+        <div class="pm-quiz">
+          <p><strong>How should you weigh it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Severity alone isn't enough to justify a big investment — RICE deliberately combines it with Reach. A total blocker for 0.5% of users has real pain but tiny reach, so its score is usually modest unless those users are disproportionately valuable.">
+            A) Build a full solution immediately — a total blocker must be fixed.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Sizing means weighing severity AND reach together. High pain but 0.5% reach usually yields a low RICE score — unless that segment is strategically vital (e.g., high-paying enterprise accounts), which would raise its effective impact/value. Check who those users are before deciding; don't let vividness of the pain override the small reach.">
+            B) Weigh severity against reach — high pain but 0.5% reach means a modest score, unless that segment is strategically valuable enough to raise its impact.
+          </button>
+          <button class="pm-quiz-option" data-msg="Dismissing it outright is too hasty. A tiny segment can still be worth serving if it's high-value or a strategic beachhead. Size it properly (reach × impact × confidence ÷ effort, plus who they are) rather than ignoring real pain by reflex.">
+            C) Ignore it — anything under 1% of users never matters.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A stakeholder games the RICE scores: they quietly inflate Reach and Impact and lowball Effort for their pet feature so it tops the list.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right way to protect the process?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Trusting whatever numbers get entered defeats RICE. The framework is only as honest as its inputs — if anyone can dial the numbers to a predetermined answer, the ranking is theater, not analysis.">
+            A) Accept the scores — RICE is objective, so the numbers must be right.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. RICE removes bias only when the inputs are grounded in evidence and reviewed openly. Require a source for each Reach and Impact estimate, score Confidence to reflect how solid that evidence is, and review scores as a group. Transparency and evidence — not the formula alone — are what keep it honest.">
+            B) Require evidence behind each estimate, use Confidence to penalize weak data, and score openly as a team so inflated inputs get challenged.
+          </button>
+          <button class="pm-quiz-option" data-msg="Abandoning RICE for pure gut feeling removes the one thing that makes bias visible. The fix isn't to drop the framework — it's to enforce evidence and open review so gamed inputs can't hide.">
+            C) Drop RICE and just go with everyone's gut instead.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">During research you uncover 15 distinct user pains for one outcome. Leadership wants you to tackle all 15 this quarter.</p>
+        <div class="pm-quiz">
+          <p><strong>What does the Opportunity Solution Tree encourage instead?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Attacking all 15 spreads the team so thin that none get solved well. The tree isn't a checklist of every pain — it's a map you use to pick the few opportunities most likely to move the outcome.">
+            A) Attack all 15 — more problems solved is more value.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The tree helps you focus: compare the opportunities, pick the two or three with the highest importance-low-satisfaction gap and the clearest link to the outcome, and pursue those first. You leave the rest visible on the tree for later. Discovery is about choosing where to dig, not digging everywhere.">
+            B) Focus — compare the opportunities, pick the two or three most likely to move the outcome, and pursue those first while the rest stay visible for later.
+          </button>
+          <button class="pm-quiz-option" data-msg="Picking randomly wastes the analysis you just did. The tree exists precisely so you can rank opportunities by size and link to the outcome, then choose deliberately — not draw straws.">
+            C) Pick 3 at random to keep things simple.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">You have a promising opportunity and three candidate solutions. A teammate wants to fully build the most exciting one right away.</p>
+        <div class="pm-quiz">
+          <p><strong>What does the tree's 'experiments' layer suggest?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Fully building the most exciting solution skips the experiment layer entirely. Excitement isn't evidence — the flashy option may not be the one that actually moves the outcome, and you'd only find out after an expensive build.">
+            A) Build the most exciting solution — enthusiasm signals it's the right one.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Before committing to a full build, run cheap experiments (A/B tests, prototypes, interviews) to see which of the three solutions actually resolves the opportunity and moves the outcome. The experiments layer exists so evidence, not excitement, picks the winner — and so you invest heavily only in what's been validated.">
+            B) Run cheap experiments on the candidates first — let evidence, not excitement, reveal which solution actually resolves the opportunity before a full build.
+          </button>
+          <button class="pm-quiz-option" data-msg="Building all three fully is the most expensive path and unnecessary — the point of experiments is to learn which one works cheaply, then invest in that single winner, not to fully build every candidate.">
+            C) Fully build all three and keep whichever performs best.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">Sales relays that "customers keep asking for a dark mode." You investigate and find the underlying complaint is eye strain during long night shifts.</p>
+        <div class="pm-quiz">
+          <p><strong>Why does distinguishing these matter?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating 'dark mode' as the whole story locks you into one solution and might miss better ones. The stated request is a solution; the eye strain during night shifts is the opportunity, and it may have several fixes worth comparing.">
+            A) It doesn't — just build dark mode, since that's what they asked for.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Dark mode' is the customer's proposed solution; the opportunity is 'reduce eye strain during long night shifts.' Framing it as the opportunity opens up more options (adjustable brightness, warm-color schedules, larger text, dark mode) and lets you pick the one with the best RICE — dark mode might still win, but now it's a choice, not an assumption.">
+            B) 'Dark mode' is a proposed solution; the opportunity is 'reduce night-shift eye strain,' which opens several possible solutions to compare — dark mode being just one.
+          </button>
+          <button class="pm-quiz-option" data-msg="The eye-strain finding isn't irrelevant — it's the actual opportunity. Ignoring it and shipping dark mode by reflex is exactly the solution-first trap this whole topic warns against.">
+            C) The eye-strain detail is irrelevant; the request is all that counts.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">An opportunity scores high on importance and low on satisfaction — a jackpot. But when you size the effort, any real solution would take 18 months and a new team.</p>
+        <div class="pm-quiz">
+          <p><strong>How should this affect your decision?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A high opportunity score alone doesn't justify commitment — you still divide by effort. An 18-month, new-team build is enormous effort that can sink even a jackpot opportunity's RICE score relative to cheaper wins available now.">
+            A) Start the 18-month build immediately — the opportunity score is high.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Opportunity size tells you the prize is real; RICE's Effort term tells you the cost of claiming it. A huge effort can make even a jackpot opportunity a poor near-term bet versus cheaper, high-scoring options. Look for a smaller first slice you can ship to test the opportunity, or sequence the big bet deliberately rather than diving in blind.">
+            B) Weigh the prize against the effort — a huge build can lower the RICE score below cheaper wins, so look for a smaller first slice or sequence the big bet deliberately.
+          </button>
+          <button class="pm-quiz-option" data-msg="Abandoning a genuine jackpot opportunity just because it's expensive is too hasty — it may be worth a phased investment or a strategic bet. The right move is to weigh prize against effort and look for a cheaper entry point, not to discard real value.">
+            C) Abandon it — anything over a few months isn't worth doing.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A leader says: "RICE scores are just made-up numbers — they give false precision. Let's not bother."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the balanced defense of RICE?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Claiming RICE is perfectly objective overstates it — the leader is partly right that the numbers are estimates. Defending it as flawless invites easy dismissal the first time an estimate proves off.">
+            A) Insist the scores are precise and always correct.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Concede the point partly: the numbers are estimates, not truth. But RICE's value isn't precision — it's forcing a consistent, transparent conversation about reach, impact, evidence, and cost, so decisions are comparable and biases are visible. Use it as a structured discussion tool and tiebreaker, not a magic oracle. That honest framing wins skeptics.">
+            B) Agree the numbers are estimates, but argue RICE's value is forcing a consistent, transparent comparison of reach, impact, evidence, and cost — a debiasing tool, not an oracle.
+          </button>
+          <button class="pm-quiz-option" data-msg="Dropping all frameworks in favor of pure seniority-driven gut calls is exactly what RICE guards against — it re-opens the door to the loudest voice winning. The answer is to use RICE honestly as a structured aid, not to abandon structure.">
+            C) Agree fully and let the most senior person just decide by gut.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">You're comparing two features. Feature X: Reach 1000, Impact 1, Confidence 100%, Effort 2. Feature Y: Reach 500, Impact 3, Confidence 80%, Effort 5.</p>
+        <div class="pm-quiz">
+          <p><strong>Which has the higher RICE score?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. X = (1000 × 1 × 1.0) ÷ 2 = 500. Y = (500 × 3 × 0.8) ÷ 5 = 1200 ÷ 5 = 240. X wins, 500 vs 240 — mostly because its effort is low and its confidence is certain. This is the lesson: a modest-impact feature that's cheap and well-evidenced can beat a flashier high-impact one that's expensive and less certain.">
+            A) X — score 500 vs Y's 240, because X is cheap (Effort 2) and fully evidenced.
+          </button>
+          <button class="pm-quiz-option" data-msg="Impact 3 looks impressive, but run the math: Y = (500 × 3 × 0.8) ÷ 5 = 240, while X = (1000 × 1 × 1.0) ÷ 2 = 500. Y's high impact is dragged down by its higher effort and lower confidence. Impact alone doesn't win.">
+            B) Y — its Impact of 3 is the highest single factor.
+          </button>
+          <button class="pm-quiz-option" data-msg="They're not close — 500 vs 240 is a 2x gap. Compute (Reach × Impact × Confidence) ÷ Effort for each; effort and confidence swing the result decisively toward X.">
+            C) They're basically tied.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">Your opportunity tree has an outcome ("increase retention 10%") but a teammate keeps adding opportunities like "users on Android" and "enterprise customers."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the confusion, and how do you fix the tree?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Users on Android' and 'enterprise customers' are groups of people, not unmet needs. Opportunities on the tree must be pains or needs ('X is frustrating / slow / confusing'), not user segments. Mixing the two muddles the tree.">
+            A) Nothing — those are perfectly good opportunities.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Those are user segments, not opportunities. Opportunities are unmet needs phrased as pains — 'Android users lose their session on app switch' or 'enterprise admins can't bulk-manage seats.' Segments can help organize the tree, but each opportunity node must be a specific problem you could solve. Rewrite them as needs, and the tree becomes actionable again.">
+            B) They're user segments, not needs — rewrite each as a specific unmet pain ('Android users lose sessions on switch') so opportunities describe problems, not groups.
+          </button>
+          <button class="pm-quiz-option" data-msg="Deleting the tree overreacts to a fixable slip. The tree structure is fine; only the opportunity nodes are mislabeled as segments. Reframe them as needs rather than starting over.">
+            C) Scrap the tree — it's beyond saving.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Opportunity Analysis Quick Reference</h2>
+      <p class="muted">The formulas and the tree on one screen — perfect for a two-minute refresher.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-chart-pie"></i> Sizing &amp; Scoring</h3>
+        <p class="muted">Quantify the size of the prize before committing your team.</p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-calculator"></i></span>
+            <div>
+              <h4>Opportunity score</h4>
+              <p>Score = Importance + Max(Importance − Satisfaction, 0). Jackpot: high importance, low satisfaction.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>User demand</h4>
+              <p>What percentage of active users hit this problem?</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Pain severity</h4>
+              <p>Minor annoyance or core workflow blocker?</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Market gap</h4>
+              <p>How well do competitors already solve it?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-network-wired"></i> The Opportunity Solution Tree</h3>
+        <p class="muted">Teresa Torres's map keeps discovery tied to metrics. Always read top-to-bottom.</p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Outcome</h4>
+              <p>The measurable north-star target. <em>"Boost checkout conversion 12% in Q4."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Opportunities</h4>
+              <p>Human pains blocking the outcome. Never phrased as features.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Solutions &amp; experiments</h4>
+              <p>Feature ideas per opportunity, validated with cheap tests before big builds.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-square-root-variable"></i></span>
+            <div>
+              <h4>RICE formula</h4>
+              <p>(Reach × Impact × Confidence) ÷ Effort — confidence is your honesty gate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-square-root-variable"></i> RICE, Factor by Factor</h3>
+        <p class="muted">Score each honestly — the formula is only as good as the inputs.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">R</span><div><h4>Reach</h4><p>How many users per period? Count them from real data.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">I</span><div><h4>Impact</h4><p>How much per user? Use a scale: 3 = massive, 1 = medium, 0.25 = minimal.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">C</span><div><h4>Confidence</h4><p>How solid is the evidence? 100% = data, 80% = some, 50% = a guess.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">E</span><div><h4>Effort</h4><p>Person-months to build. The divider — cheap wins rise.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-calculator"></i></span><div><h4>Example</h4><p>(1000 × 1 × 1.0) ÷ 2 = <strong>500</strong> beats (500 × 3 × 0.8) ÷ 5 = <strong>240</strong>.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Traps to Avoid</h3>
+        <p class="muted">Where opportunity work goes wrong.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-heart"></i></span><div><h4>Falling for a solution</h4><p>A feature request is a guessed answer. Find the pain beneath it first.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Segments as opportunities</h4><p>"Android users" is a group, not a need. Phrase opportunities as pains.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-dice"></i></span><div><h4>Gaming the numbers</h4><p>Inflated inputs kill RICE. Demand evidence; score openly as a team.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-fire"></i></span><div><h4>Severity without reach</h4><p>A total blocker for 0.5% of users is usually a low-priority fix.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/opportunity-analysis.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

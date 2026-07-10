@@ -1,0 +1,660 @@
+---
+layout: pm-gym
+title: "Defining The Problem — PM Gym"
+description: "A beginner-friendly, interactive guide to problem framing: writing a sharp problem statement, digging to the root cause with the 5 Whys, and dodging solution-shaped problems."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Defining The Problem</h1>
+  <p class="lead">Solve the right problem before you solve a problem right</p>
+  <p class="muted">
+    Teams love jumping straight to solutions. But build the sharpest feature to answer a fuzzy or wrong problem, and you've still shipped nothing worth using. This guide covers how to frame a problem so the rest of the process has something solid to stand on.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Frame the Problem Before You Solve It</h2>
+      <p class="muted">Four short lessons: why framing matters, how to write a sharp problem statement, how to dig to the root cause, and the traps to avoid.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Why Framing Matters</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Problem Statement</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Root Cause</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. The Traps</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Solving the Wrong Problem Well</h3>
+      </div>
+
+      <p>
+        Most product failures aren't features executed badly — they're features that answer the
+        wrong question. <strong>Problem framing</strong> is the step before ideation and design:
+        get precise about what's actually broken, for whom, and why it matters, before anyone
+        touches a solution.
+      </p>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-triangle-exclamation"></i> The support-ticket trap</h4>
+        <p>
+          A team notices users abandon checkout and complain "your checkout is confusing." They
+          redesign the checkout flow end to end. Abandonment barely moves — because the real
+          problem was a shipping-cost surprise on the last step, not the layout. They solved a
+          problem. Just not the one that mattered.
+        </p>
+        <p class="pm-key-line">
+          A sharp solution to a fuzzy or wrong problem still fails. Framing comes first.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A stakeholder says "users want a dark mode, build it." What's the problem-framing move before writing any code?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A request names a solution, not a problem. Building whatever's asked skips the step of checking whether dark mode actually addresses a real, sized pain — you might ship it and move nothing.">A) Build it — a direct user request is the best kind of requirement.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. &quot;Dark mode&quot; is a solution wearing a problem's clothes. Digging into the why reveals the actual need, its size, and whether dark mode is even the best answer to it.">B) Ask why they want it — eye strain, battery life, brand preference? — then confirm how many users share that underlying need.</button>
+          <button class="pm-quiz-option" data-msg="Dismissing the request without investigating assumes you already know the underlying need — which is exactly the assumption problem framing exists to test.">C) Politely decline since dark mode is a low-priority cosmetic feature.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">The Problem Statement <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Writing a Sharp Problem Statement</h3>
+      </div>
+
+      <p>
+        A good problem statement is specific enough that two different teams reading it would
+        picture the same problem — and specific enough to know when it's solved.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Who</h4><p>The specific user or segment affected — not "users," but "new sellers in their first week."</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">2</span><div><h4>What</h4><p>The observed friction, stated as behavior, not a guess at cause: "38% abandon the listing form."</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Why it matters</h4><p>The cost to the user or business: "It's our single biggest activation leak."</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Evidence</h4><p>What tells you this is real: data, quotes, session recordings, support tickets.</p></div></div>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Too vague</span>
+          <h4>"Users struggle with pricing"</h4>
+          <p>No segment, no number, no source — impossible to know when it's fixed.</p>
+        </div>
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Sharp</span>
+          <h4>"New sellers abandon the pricing step (38%, last 90 days)"</h4>
+          <p>Specific enough to investigate, specific enough to know if a fix works.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is the sharpest problem statement?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Too vague — no who, no what, no evidence. It could mean almost anything, which means it can never be confirmed as solved.">A) "Our app needs to be more user-friendly."</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It names the who, the what, and the evidence, with a measurable size — sharp enough to investigate and to know when it's fixed.">B) "First-time Android users abandon signup at the phone-verification step (52% last quarter, per funnel data)."</button>
+          <button class="pm-quiz-option" data-msg="That's a solution, not a problem statement — it skips naming what's actually broken before jumping to a fix.">C) "We should add social login to reduce signup friction."</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Root Cause <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Digging to the Root Cause</h3>
+      </div>
+
+      <p>
+        Once you know <em>what's</em> broken, dig into <em>why</em>. The <strong>5 Whys</strong> is
+        a simple technique for moving past the first plausible cause to something you can actually
+        act on.
+      </p>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-list-ol"></i> The 5 Whys, in action</h4>
+        <p><strong>Problem:</strong> Checkout crashes on Mondays.</p>
+        <p><strong>Why?</strong> Traffic spikes then. <strong>Why?</strong> Our Monday email blast lands right at 9am. <strong>Why does the spike crash it?</strong> Servers are scaled for average load, not peak. <strong>Why?</strong> No autoscaling is configured. <strong>Why wasn't it configured?</strong> No one owns capacity planning.</p>
+        <p class="pm-key-line">
+          The root cause isn't "add more servers" — it's an ownership gap. Fix that, and every
+          future spike stops being a fire drill.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Using the 5 Whys, you land on "nobody owns capacity planning" after five whys. What should you do with that?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Stopping at a symptom like &quot;under-provisioned&quot; misses the ownership gap that keeps causing it — you'd fix this Monday and hit the same wall next quarter.">A) Stop earlier — two whys already found "servers under-provisioned," that's good enough.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A one-time server bump treats a symptom; assigning ownership fixes the structure that let the problem recur in the first place.">B) Treat that as the real root cause and fix the ownership gap, not just add servers this one time.</button>
+          <button class="pm-quiz-option" data-msg="Root causes are often structural or people-related — dismissing it because it isn't a code fix throws away the whole point of the exercise.">C) Ignore it since it's a people problem, not a technical one.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">The Traps <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Common Problem-Framing Traps</h3>
+      </div>
+
+      <p>
+        Problem framing fails in predictable ways. Watch for these three traps every time you or
+        a teammate writes a "problem" down.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 1</span>
+          <h4>Solution-shaped problem</h4>
+          <p>"We need push notifications" names a feature, not a pain. Ask what it's meant to fix.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 2</span>
+          <h4>Too broad to act on</h4>
+          <p>"Users are unhappy" can't be tested or solved. Narrow to a segment and a moment.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 3</span>
+          <h4>Cherry-picked evidence</h4>
+          <p>Hunting only for data that confirms the fix you already wanted defeats the point of framing.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A PM writes: "Problem: we lack a referral program." What's wrong with this framing?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It names a solution (&quot;referral program&quot;), not a problem — what pain does its absence actually cause?">A) Nothing — a missing feature is a valid problem.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Naming the underlying need keeps the door open to any solution — a referral program is one option, but maybe not the best one once the real problem is clear.">B) It's solution-shaped — it should instead name the underlying need, like "we have no low-cost acquisition channel and CAC is rising."</button>
+          <button class="pm-quiz-option" data-msg="Adding a number to a solution-shaped statement doesn't fix the core issue — it's still a solution, not the problem underneath it.">C) It just needs a target number attached, like "we lack a referral program (goal: 10k referrals)."</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Defining The Problem Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Problem Framing</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can spot a fuzzy problem, a solution in disguise, or a root cause hiding beneath a symptom.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A support lead says: "Problem: we need a live chat widget."</p>
+        <div class="pm-quiz">
+          <p><strong>What's your first move?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating a request as a validated problem skips learning what pain the widget is meant to solve.">
+            A) Build the widget — support asked for it directly.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Peeling back the solution reveals the real pain, which might point to live chat, or to something cheaper, like a better FAQ.">
+            B) Ask what's driving the request — slow email response? unanswered pre-purchase questions? — and frame the actual problem first.
+          </button>
+          <button class="pm-quiz-option" data-msg="Dismissing without investigating is just as premature as building without investigating.">
+            C) Reject it outright since chat widgets are usually low-value.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">Two teammates argue hotly about button color while debating a signup problem nobody has actually defined yet.</p>
+        <div class="pm-quiz">
+          <p><strong>What should happen?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The disagreement is a symptom of skipping problem framing, not a design-ownership question.">
+            A) Let design decide since it's their domain.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Debating pixels before agreeing on the problem wastes energy on a decision that may not even matter once the problem is clear.">
+            B) Pull the conversation back to the problem space — agree on the who/what/why of the signup issue before touching any UI detail.
+          </button>
+          <button class="pm-quiz-option" data-msg="Testing a design detail before framing the problem risks testing the wrong lever entirely.">
+            C) Let both variants ship as an A/B test immediately.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A churn analysis concludes: "users leave because the product is bad."</p>
+        <div class="pm-quiz">
+          <p><strong>How do you improve this problem statement?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;The product is bad&quot; is unfalsifiable and can't be acted on — it names a feeling, not a who/what/evidence.">
+            A) Accept it — it's already clear that quality is the issue.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Slicing by segment and moment turns an unfalsifiable complaint into something a team can actually investigate.">
+            B) Break it down: which segment churns, at what point in their lifecycle, doing what right before leaving — until it's specific and testable.
+          </button>
+          <button class="pm-quiz-option" data-msg="More votes on a vague statement just produces a bigger vague statement.">
+            C) Survey more users and ask if they agree the product is bad.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A PM's 5 Whys chain stops after one why — "Signups dropped. Why? The homepage changed." — and ships a full revert.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It might resolve the symptom, but stopping at one why risks missing what actually hurt signups and reverting good changes along with the bad.">
+            A) None — reverting fixes the drop, so the job is done.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Maybe the new homepage buried the signup CTA — the real fix might be re-adding the CTA, not reverting everything else that improved.">
+            B) One why usually lands on a proximate cause, not the root — dig further before treating the revert as the fix.
+          </button>
+          <button class="pm-quiz-option" data-msg="The point isn't quantity of whys everywhere — it's depth on the specific problem at hand.">
+            C) Run the same 5 Whys process on every metric to be thorough.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">Leadership demands: "Problem: we don't have a mobile app."</p>
+        <div class="pm-quiz">
+          <p><strong>How do you reframe it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building from a solution-shaped directive skips validating the actual user need a mobile app would serve.">
+            A) Start scoping the mobile app immediately since leadership wants it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Maybe the real problem is &quot;commute-time users can't complete tasks on our slow mobile site&quot; — solvable without ever building a native app.">
+            B) Ask what specific user need or moment isn't served well today that a mobile app might address, and size that need first.
+          </button>
+          <button class="pm-quiz-option" data-msg="The goal isn't to refuse the input — it's to translate it into an underlying problem, which might still lead back to a mobile app.">
+            C) Tell leadership no, since problem framing forbids starting from a solution.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A problem statement reads: "New users abandon onboarding (61%, last 30 days, from funnel analytics)."</p>
+        <div class="pm-quiz">
+          <p><strong>Why is this a strong statement?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Brevity isn't the point; a short vague statement is still weak.">
+            A) Because it's short.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly — all four parts are present, which is what makes a problem statement actionable and falsifiable.">
+            B) It names the who, the what, a measurable size, a timeframe, and its evidence source.
+          </button>
+          <button class="pm-quiz-option" data-msg="A good problem statement stays in the problem space; implying a fix can bias the team toward one solution too early.">
+            C) Because it already implies the fix (simplify onboarding).
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">During a root-cause dig, someone says "let's stop, we all agree it's an API bug" after only two whys — while data shows three teams changed things that week.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the caution?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Quick consensus, next to unexamined contradicting evidence, is a sign the dig stopped too early.">
+            A) None, group agreement is enough validation.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Three concurrent changes means several plausible causes exist; declaring victory this fast risks fixing the wrong one.">
+            B) Two whys with unexamined contradicting evidence is a shallow stop — dig further before settling on one convenient cause.
+          </button>
+          <button class="pm-quiz-option" data-msg="Assigning blame by recency substitutes a guess for actually tracing which change caused the symptom.">
+            C) Blame whichever team changed the API most recently.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A researcher notices they're only pulling user quotes that support the "redesign the nav" idea already scoped.</p>
+        <div class="pm-quiz">
+          <p><strong>What's happening?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Skipping contradicting evidence isn't efficiency — it's building a case for a decision already made.">
+            A) Efficient research — no need to review contradicting quotes.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This validates a project already in motion rather than testing whether the real problem needs that solution at all.">
+            B) Confirmation bias — supporting evidence surfaces while contradicting signals get filtered out.
+          </button>
+          <button class="pm-quiz-option" data-msg="Confidence isn't evidence — confident teams are the ones most likely to fall into this trap.">
+            C) Normal, since the team is confident in the redesign.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A problem statement names a segment ("enterprise admins") but no evidence — just "I think they're frustrated."</p>
+        <div class="pm-quiz">
+          <p><strong>What's missing and why does it matter?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A segment without evidence is still a guess; it just sounds more specific than it is.">
+            A) Nothing is missing — a named segment is enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Evidence is what turns &quot;I think&quot; into something the team can trust and prioritize against other real problems.">
+            B) Evidence — without data, quotes, or tickets, the team can't tell if this is a real, sized problem or one hunch.
+          </button>
+          <button class="pm-quiz-option" data-msg="A deadline doesn't validate whether the problem is real — that's a prioritization detail, not a framing gap.">
+            C) A deadline for solving it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A team debates for an hour whether to build feature X or Y, with no written problem statement for either.</p>
+        <div class="pm-quiz">
+          <p><strong>What should happen first?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Voting between two solutions without an agreed problem risks picking the wrong one entirely, or picking well for the wrong reason.">
+            A) Vote on X vs Y to save time.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A shared problem statement gives the team a real yardstick to compare X and Y against, instead of arguing preferences.">
+            B) Pause and write a shared problem statement, then judge X and Y against how well each addresses it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Seniority doesn't substitute for a defined problem — it just moves the guessing to one person.">
+            C) Let whoever's most senior decide.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">Analytics shows a spike in a "problem" only three days old, and no one has checked whether it's a one-off event (a marketing blast) or a persistent pattern.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the framing risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Three days can easily be a blip from a known one-off cause; treating it as persistent risks solving something that isn't recurring.">
+            A) None — three days of data is plenty to declare a problem.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. An event isn't automatically a pattern. Confirm persistence before investing in a fix.">
+            B) Mistaking a short-lived spike for a persistent pattern — confirm it's a trend, not an event, before framing it as a problem.
+          </button>
+          <button class="pm-quiz-option" data-msg="Rolling back assumes the cause without checking — it might not even be related.">
+            C) Immediately roll back the marketing blast.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A doc lists fifteen different "problems," ranging from onboarding to pricing to support tone, with no ranking.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the issue with this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="An unprioritized list of fifteen problems gives the team no way to know where to focus first.">
+            A) None — more problems documented means more thoroughness.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Naming problems is only the first step; framing includes sizing them against each other.">
+            B) There's no prioritization or evidence weighting — size and rank these so effort goes where impact is biggest.
+          </button>
+          <button class="pm-quiz-option" data-msg="Renaming doesn't fix the underlying issue — the content is still an unprioritized dump either way.">
+            C) Rename the doc to "solutions" instead.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A junior PM says "the problem is clear, let's move to ideation" after a single Slack message from one user.</p>
+        <div class="pm-quiz">
+          <p><strong>Is that enough to move forward?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A single message is an anecdote, not evidence of scale — moving this fast risks solving a problem that barely exists.">
+            A) Yes, one clear complaint is sufficient evidence.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. One voice can point you somewhere worth looking, but framing needs corroborating evidence before real effort is committed.">
+            B) Not yet — check how many users share this pain and how it shows up in the data before treating it as validated.
+          </button>
+          <button class="pm-quiz-option" data-msg="Speed is only valuable if you're moving in the right direction; skipping validation risks a fast trip to the wrong destination.">
+            C) Yes, since speed matters more than certainty at this stage.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A problem statement says: "We're losing to Competitor X, so we need their feature set."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the framing flaw?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;We need their feature set&quot; is a solution copied from a competitor, not a diagnosis of what's causing users to prefer them.">
+            A) None — matching a competitor is a valid problem.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Maybe users prefer Competitor X's onboarding speed, not any specific feature — copying features could miss the cause entirely.">
+            B) It jumps to a solution without naming the actual user need or gap driving the loss.
+          </button>
+          <button class="pm-quiz-option" data-msg="Swapping one assumed solution for another still skips diagnosing why users actually choose the competitor.">
+            C) It should instead say "we need to be cheaper than Competitor X."
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">After a sharp, evidence-backed problem statement is written, a stakeholder still says: "Just build what I asked for originally."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the best response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Complying without addressing the framing work throws away exactly the clarity that might reveal a better, cheaper fix.">
+            A) Comply immediately to avoid conflict.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Framing isn't about blocking stakeholders — it's making sure the eventual choice is made with the real problem in view.">
+            B) Share the framed problem and evidence, and show how it opens options — possibly including their original idea — so the decision is informed.
+          </button>
+          <button class="pm-quiz-option" data-msg="Escalation over a process disagreement is disproportionate; bring them the evidence instead.">
+            C) Escalate to remove the stakeholder from the project.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Defining The Problem Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-magnifying-glass"></i> Anatomy of a Problem Statement</h3>
+        <p class="muted">Specific enough that two teams would picture the same problem.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Who</h4><p>The specific segment affected.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>What</h4><p>The observed friction — behavior, not a guessed cause.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Why it matters</h4><p>The cost to the user or the business.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Evidence</h4><p>Data, quotes, tickets — what makes it real.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-list-ol"></i> Root-Cause Digging</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-question"></i></span><div><h4>5 Whys</h4><p>Keep asking why until you hit something structural you can act on.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrow-right"></i></span><div><h4>Don't stop at one why</h4><p>The first "why" is usually a proximate cause, not the root.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Traps to Avoid</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-lightbulb"></i></span><div><h4>Solution-shaped problem</h4><p>"We need X" names a feature, not a pain.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-expand"></i></span><div><h4>Too broad to act on</h4><p>Narrow to a specific segment and moment.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-eye"></i></span><div><h4>Cherry-picked evidence</h4><p>Confirmation bias validates the fix you already wanted.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-code-branch"></i> Problem Space vs. Solution Space</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-magnifying-glass"></i></span><div><h4>Problem space</h4><p>What's broken and why — stay here as long as possible.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-hammer"></i></span><div><h4>Solution space</h4><p>How you'll fix it — enter only once the problem is sharp.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/defining-the-problem.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

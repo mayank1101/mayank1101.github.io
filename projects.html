@@ -1,0 +1,192 @@
+---
+layout: page
+title: Projects & Learning
+description: Side projects and learning initiatives from courses and programs in deep learning, NLP, data science, and analytics. Hands-on exploration and experimentation.
+---
+
+<div class="container hero fade-in">
+  <div class="proj-hero-content">
+    <div class="hero-text">
+      <h1>Side Projects & Learning</h1>
+      <p>
+        Learning projects and experiments from courses and programs. These
+        showcase my hands-on exploration across deep learning, NLP, data
+        science, and analytics.
+      </p>
+      {% comment %}
+      <p class="muted" style="margin-top: 1rem; font-size: 0.95rem">
+        <i class="fas fa-info-circle"></i> Looking for product case studies?
+        Check out my
+        <a
+          href="/case-studies.html"
+          style="color: var(--accent-cyan); text-decoration: underline"
+          >Case Studies</a
+        >
+        page to see real products I've built and outcomes achieved.
+      </p>
+      {% endcomment %}
+    </div>
+    <div class="proj-stats-grid">
+      <div class="card stat-card">
+        <div class="stat-icon cyan">
+          <i class="fas fa-cube"></i>
+        </div>
+        <span class="stat-value cyan">{{ site.data.projects | size }}</span>
+        <p class="muted">Projects</p>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-icon purple">
+          <i class="fas fa-satellite-dish"></i>
+        </div>
+        <span class="stat-value purple"
+          >{% assign live_count = site.data.projects | where: "type", "live" |
+          size %}{{ live_count }}</span
+        >
+        <p class="muted">Live Applications</p>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-icon pink">
+          <i class="fas fa-flask"></i>
+        </div>
+        <span class="stat-value pink"
+          >{% assign sandbox_count = site.data.projects | where: "type",
+          "sandbox" | size %}{{ sandbox_count }}</span
+        >
+        <p class="muted">Technical Sandbox</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container section proj-live-section scroll-animate">
+  <h2><i class="fas fa-rocket"></i> Live Applications</h2>
+  <p class="muted proj-section-sub">
+    Deployed, working products you can open and use right now.
+  </p>
+  {% assign live_projects = site.data.projects | where: "type", "live" %} {% if
+  live_projects.size > 0 %}
+  <div class="proj-cards-grid proj-live-grid">
+    {% for project in live_projects %}
+    <div
+      class="proj-card proj-card-live card card-{{ project.accent_color }} scroll-animate"
+    >
+      <span class="proj-live-badge"><i class="fas fa-circle"></i> Live</span>
+      <div class="proj-card-header">
+        <div class="proj-icon">
+          <i class="{{ project.icon }}"></i>
+        </div>
+        <span class="proj-status {{ project.status }}"
+          >{{ project.status | replace: "-", " " }}</span
+        >
+      </div>
+      <div class="proj-card-body">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <div class="proj-tags">
+          {% for tag in project.tags %}
+          <span class="proj-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="proj-card-footer">
+        <a
+          href="{{ project.live }}"
+          target="_blank"
+          class="proj-link proj-live"
+        >
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        <a
+          href="{{ project.github }}"
+          target="_blank"
+          class="proj-link proj-github"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card proj-empty-state">
+    <div class="empty-icon">
+      <i class="fas fa-inbox"></i>
+    </div>
+    <h3>No Live Applications Yet</h3>
+    <p class="muted">Deployed projects coming soon!</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="container section proj-sandbox-section scroll-animate">
+  <h2><i class="fas fa-flask"></i> Technical Sandbox</h2>
+  <p class="muted proj-section-sub">
+    Experimental work — model training, inference, finetuning, and analysis
+    notebooks in Jupyter.
+  </p>
+  {% assign sandbox_projects = site.data.projects | where: "type", "sandbox" %}
+  {% if sandbox_projects.size > 0 %}
+  <div class="proj-cards-grid proj-sandbox-grid">
+    {% for project in sandbox_projects %}
+    <div
+      class="proj-card proj-card-sandbox card card-{{ project.accent_color }} scroll-animate"
+    >
+      <div class="proj-card-header">
+        <div class="proj-icon">
+          <i class="{{ project.icon | default: 'fab fa-python' }}"></i>
+        </div>
+        <span class="proj-status {{ project.status }}"
+          >{{ project.status | replace: "-", " " }}</span
+        >
+      </div>
+      <div class="proj-card-body">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <div class="proj-tags">
+          {% for tag in project.tags %}
+          <span class="proj-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="proj-card-footer">
+        <a
+          href="{{ project.github }}"
+          target="_blank"
+          class="proj-link proj-github"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card proj-empty-state">
+    <div class="empty-icon">
+      <i class="fas fa-inbox"></i>
+    </div>
+    <h3>No Sandbox Projects Yet</h3>
+    <p class="muted">Experiments coming soon!</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="container section scroll-animate">
+  <div class="card cta-card proj-cta-card">
+    <div class="proj-cta-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h3>Interested in Collaborating?</h3>
+    <p>
+      Check out my GitHub profile to explore more projects, contribute, or
+      discuss ideas.
+    </p>
+    <a
+      href="https://github.com/mayank1101"
+      target="_blank"
+      class="cta cta-secondary"
+    >
+      <i class="fab fa-github"></i> Visit GitHub
+    </a>
+  </div>
+</div>

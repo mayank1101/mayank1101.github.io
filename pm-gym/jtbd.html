@@ -1,0 +1,841 @@
+---
+layout: pm-gym
+title: "Jobs-to-be-Done — PM Gym"
+description: "A beginner-friendly, interactive guide to the Jobs-to-be-Done framework: lessons, flashcards, practice scenarios, and a job statement builder."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Jobs-to-be-Done</h1>
+  <p class="lead">Why people really "hire" products — explained from zero</p>
+  <p class="muted">
+    New to product management? Start here. Jobs-to-be-Done (JTBD) is the single most useful
+    lens for understanding what users actually want. Learn it through stories, quick quizzes,
+    flashcards, and a hands-on statement builder.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Understand the JTBD Mindset</h2>
+      <p class="muted">No jargon, no prerequisites. Four short lessons with stories, examples, and a quick check after each one.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Core Idea</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Job Statements</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Three Dimensions</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. The Four Forces</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>The Milkshake Story &amp; the Core Idea</h3>
+      </div>
+
+      <p>
+        Here is the one idea everything else builds on:
+        <strong>people don't buy products — they "hire" them to make progress in their life.</strong>
+        Instead of asking "who is our customer?" (age, gender, income), ask
+        "what situation are they stuck in, and what progress are they trying to make?"
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the drill and the hole</h4>
+        <p>
+          There's a famous line: "People don't want a quarter-inch drill — they want a quarter-inch
+          hole." And really, they don't even want the hole. They want to hang a photo of their kids
+          so their living room feels like home. <strong>The drill is just something they "hired" to
+          make that progress.</strong> If someone invented a cleaner way to hang the photo, the
+          drill gets "fired." JTBD keeps your eyes on the progress people are chasing — because
+          that's what they're loyal to, not your product.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-mug-hot"></i> The famous milkshake study</h4>
+        <p>
+          A fast-food chain wanted to sell more milkshakes. They asked customers what flavors
+          they'd like. Nothing worked. Then researchers simply watched <em>when</em> people bought
+          milkshakes — and discovered half were sold before 8:30 AM, to commuters.
+        </p>
+        <p>
+          The commuters had a problem: a long, boring drive. Bananas were gone in a minute,
+          donuts made fingers sticky on the wheel, bagels were too dry. A thick milkshake lasted
+          25 minutes, fit the cupholder, and kept them full until lunch.
+        </p>
+        <p class="pm-key-line">
+          The "job" was: keep me occupied, clean, and full during my morning drive.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Imagine you work on <strong>Spotify</strong>. Which of these sounds like
+          Jobs-to-be-Done thinking, rather than standard marketing?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="That's classic demographic thinking — grouping people by age and price plan. JTBD asks what situation they're in, not who they are. Look for the option that starts with a situation.">
+            A) "Our key audience is 18–24 year old students looking for a discounted plan."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This starts from a situation (a heavy study session) and a desired outcome (staying in the zone). That's exactly how JTBD frames the world.">
+            B) "When I'm deep in a study session, I want background music without lyrics, so I can stay in the zone."
+          </button>
+          <button class="pm-quiz-option" data-msg="That's a builder's wish list — technology first, user second. JTBD starts from the user's situation, not from what we want to build.">
+            C) "We need to build an advanced streaming service with high-fidelity sound controls."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: Job Statements <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>The Anatomy of a Job Statement</h3>
+      </div>
+
+      <p>
+        Once you spot a job, you write it down in a specific format called a
+        <strong>job statement</strong>. It turns a vague complaint ("this app is annoying")
+        into something a team can actually build against. The format has three parts:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — three parts, one sentence</h4>
+        <p>
+          Think of telling a friend why you grabbed takeout: "<strong>When</strong> I got home late
+          and starving (situation), <strong>I wanted</strong> a hot meal with zero effort (motivation),
+          <strong>so I could</strong> just eat and collapse on the sofa (outcome)." Same three parts
+          every job statement uses: the situation you're in, the thing you want to do, and the
+          deeper reason behind it. The trick is that the <em>outcome</em> ("collapse and relax") is
+          the real target — the takeout is just one way to get there.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">When…</span>
+          <h4>The Situation</h4>
+          <p>The real-life trigger. Where is the person? What's happening around them?</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">I want to…</span>
+          <h4>The Motivation</h4>
+          <p>The immediate thing they're trying to do to deal with that situation.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">So I can…</span>
+          <h4>The Outcome</h4>
+          <p>The deeper reward — the convenience, relief, or feeling they're really after.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          You work on <strong>Netflix</strong> and you're writing a job statement for a tired parent:
+          <em>"When my kids are finally asleep on Friday night, I want to easily find a light, funny
+          movie, so I can [_____]."</em> Which option is the <strong>outcome</strong>?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Browsing 400 titles is an action — and honestly one that adds stress, not removes it. The outcome is the feeling the parent is really after at the end of a long week.">
+            A) "…browse through 400 different titles."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Relaxing and releasing stress is the true outcome — the reason behind everything else. Browsing is just an action along the way.">
+            B) "…relax and let go of the week's stress."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: Three Dimensions <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>The Three Dimensions of a Job</h3>
+      </div>
+
+      <p>
+        A job is never just about the practical task. Products people love work on
+        three layers at once:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — a luxury watch</h4>
+        <p>
+          Why pay thousands for a Rolex when a $20 watch tells time just as well? Because telling
+          time (the <strong>functional</strong> job) is the least of it. Wearing it makes you feel
+          successful and put-together (the <strong>emotional</strong> job), and it signals status to
+          everyone who notices it (the <strong>social</strong> job). The cheap watch wins on
+          function and loses everywhere else. Most products people love are quietly doing all three
+          jobs at once — and beginners see only the first.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">F</span>
+          <div>
+            <h4>Functional — the practical task</h4>
+            <p>The thing that literally needs doing: get from A to B, write a document, boil water.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">E</span>
+          <div>
+            <h4>Emotional — how they want to feel</h4>
+            <p>The feeling they want (or want to avoid) while doing it: safe, calm, in control.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">S</span>
+          <div>
+            <h4>Social — how they want to be seen</h4>
+            <p>What it says about them to others: professional, stylish, successful.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Someone buys premium headphones, wears them in an open office, and listens to…
+          nothing. They just want colleagues to think they're in deep-focus mode and leave them
+          alone. Which dimension are they "hiring" the headphones for?
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-msg="They're not even playing audio — the practical listening task isn't the point here. Think about who the headphones are really 'talking' to.">Functional</button>
+          <button class="pm-quiz-option" data-msg="Close — there's a feeling involved, but the headphones' main job is sending a message to other people, not managing an internal feeling.">Emotional</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. The headphones are a silent 'do not disturb' sign — a signal to other people. That's the social dimension at work.">Social</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: The Four Forces <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>The Four Forces of Progress</h3>
+      </div>
+
+      <p>
+        Why don't people switch to your product even when it's clearly better? Because
+        switching is a tug-of-war between four forces in their head. Two forces push them
+        toward you, two hold them back:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — switching gyms</h4>
+        <p>
+          Picture deciding whether to leave your gym for a new one.
+          <strong>Push:</strong> your current gym is always crowded and the showers are broken.
+          <strong>Pull:</strong> the new place has fancy equipment and a pool.
+          <strong>Anxiety:</strong> what if the new one is a hassle to get to, or I'm locked into a
+          contract? <strong>Habit:</strong> I know everyone at my old gym and my routine there.
+          Even when the new gym is clearly better, you only switch when push + pull beat anxiety +
+          habit. Great products don't just add pull — they actively shrink the anxiety and habit
+          holding people back (free trials, easy imports, "cancel anytime").
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Drives the switch</span>
+          <h4>1. Push of the present</h4>
+          <p>Frustration with what they use today. "My current tool keeps losing my edits!"</p>
+        </div>
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Drives the switch</span>
+          <h4>2. Pull of the new</h4>
+          <p>The appeal of your solution. "Wow, no downloads required!"</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Holds them back</span>
+          <h4>3. Anxiety of the new</h4>
+          <p>Fear of switching. "What if this app loses my old files during setup?"</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Holds them back</span>
+          <h4>4. Habit of the present</h4>
+          <p>Comfort with the current way. "But I already know all the shortcuts here…"</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          A riddle: <em>"I am the whisper of doubt right before someone clicks 'Sign Up.'
+          I make them ask 'Will this take too long to learn?' and 'What if it breaks my current
+          workflow?' I am the invisible anchor holding them back."</em> Which force am I?
+        </p>
+        <div class="pm-quiz-options pm-quiz-options-grid">
+          <button class="pm-quiz-option" data-msg="Push moves people *toward* a new product — it's frustration with the old one. This riddle describes something holding people back.">Push</button>
+          <button class="pm-quiz-option" data-msg="Pull is the attraction of the new product — it moves people toward switching. The riddle is about hesitation, not attraction.">Pull</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Anxiety is the invisible anchor — the worry about switching even when the current tool is frustrating. Great products shrink it with things like one-click imports and gentle onboarding.">Anxiety</button>
+          <button class="pm-quiz-option" data-msg="Habit is comfort with the existing routine ('my shortcuts live here'). The riddle describes worry about the *new* thing — that's a different blocker.">Habit</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>JTBD Flashcard Deck</h2>
+      <p class="muted">Six cards covering the essentials. Click a card to flip it and see the explanation with a real-world example.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Mindset</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">The Milkshake Rule</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 realistic product situations. Pick the answer a JTBD thinker would choose — every option gives instant feedback that explains the reasoning.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">You join a sleep-tech startup. Everyone hates their alarm clock, and you're asked to redesign the wake-up experience for busy professionals.</p>
+        <div class="pm-quiz">
+          <p><strong>What is your first move, thinking in Jobs-to-be-Done?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Feature-first thinking. JTBD starts one level deeper: nobody hires an alarm for its features — they hire it for the progress it enables. Find that progress first.">
+            A) List the features competitor alarm apps have that ours is missing.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. The job is not 'make noise at 7 AM'; it is 'transition me peacefully from sleep to a confident start'. Once the outcome is named, solutions like gradual sunrise light follow naturally.">
+            B) Identify the progress users want: moving from sleep to a productive day calmly and on time — then design toward that outcome.
+          </button>
+          <button class="pm-quiz-option" data-msg="The demographic trap. Age doesn't explain why someone hires an alarm clock — a 25-year-old nurse and a 55-year-old pilot may share the exact same job. Start from the situation, not the census.">
+            C) Survey which age group buys the most alarm clocks and target them.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">Peloton sells a stationary bike for several times the price of a normal one — and people happily pay it.</p>
+        <div class="pm-quiz">
+          <p><strong>Which explanation best captures the job Peloton is hired for?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Cheaper bikes exist everywhere — if the job were purely functional exercise, Peloton would lose on price instantly. The premium must live somewhere else.">
+            A) It's the most cost-effective way to exercise at home.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The functional job alone is worth a cheap bike; the emotional and social layers — leaderboards, live classes, the device as a status object — are what justify the premium price.">
+            B) It bundles all three job dimensions: exercise at home (functional), feeling accomplished (emotional), and status plus community (social).
+          </button>
+          <button class="pm-quiz-option" data-msg="Build quality supports the story but can't carry it — plenty of well-built bikes cost far less. People pay for how Peloton makes them feel and how it lets them be seen.">
+            C) The hardware build quality is simply better than other bikes.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A competitor just launched a free feature that overlaps with your paid product. Leadership is nervous and wants a response this week.</p>
+        <div class="pm-quiz">
+          <p><strong>What does the Four Forces model tell you to do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Panic-copying answers a pull force with a 'me too'. Users switch only when push + pull outweigh anxiety + habit — a lone pull rarely moves anyone. Check the full picture first.">
+            A) Copy the feature immediately so users have no reason to leave.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. The competitor's feature is only a pull. If our users have low push and strong habits, the pull fizzles. Strengthen what keeps them (habit, trusted data) and honestly fix any real frustrations.">
+            B) Analyze all four forces: is there real push (frustration with us)? Then deepen habit and raise switching friction while fixing any genuine push.
+          </button>
+          <button class="pm-quiz-option" data-msg="Price answers a question nobody asked. Discounts don't address why anyone would switch; they just shrink revenue while the four forces stay exactly where they were.">
+            C) Start a price war — undercut them before users notice the feature.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A user says: "I bought a $5 self-help book, but honestly I've never opened it. It just sits on my nightstand and I feel better having it there."</p>
+        <div class="pm-quiz">
+          <p><strong>What job did the book get hired for?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The functional job — actually reading and learning — clearly wasn't it; the book is unopened. JTBD warns you not to assume the obvious use is the real job. Look at what the purchase actually did for them.">
+            A) The functional job of learning the book's content.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The book was hired for an emotional job — the reassurance of 'I'm the kind of person who's working on myself,' and the comfort of intending to improve. Unopened, it still delivers that feeling. Products often get hired for emotional jobs that have nothing to do with their functional purpose.">
+            B) An emotional job — the comfort and reassurance of 'I'm working on myself,' delivered just by owning it.
+          </button>
+          <button class="pm-quiz-option" data-msg="'No real job' misses the point — they paid money and feel better for it, so a job is absolutely being done. It's just an emotional one, not the functional reading job you'd expect.">
+            C) No real job — it was just a wasted purchase.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">You run a note-taking app. In interviews you keep hearing: "I don't use fancy features — I just need to dump a thought before I forget it while walking between meetings."</p>
+        <div class="pm-quiz">
+          <p><strong>What should this steer your roadmap toward?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Piling on advanced features directly contradicts the job users described. They hired the app to capture a thought instantly; more features add friction to the very moment that matters. Building against the stated job is a classic feature-factory trap.">
+            A) Add more advanced features to compete with power-user tools.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The job is 'capture a fleeting thought before it's gone, with near-zero friction.' The roadmap should make opening the app and jotting a note instant — fast launch, one-tap capture, works one-handed while walking. Design toward the actual job, not toward feature parity nobody asked for.">
+            B) Make instant, frictionless capture the priority — fast open, one-tap note — because the job is 'save a thought before I lose it.'
+          </button>
+          <button class="pm-quiz-option" data-msg="A demographic pivot ('target students') ignores the job entirely. The insight here isn't about who the users are — it's about the specific progress they're hiring the app to make. Serve the job, whoever has it.">
+            C) Re-target the app at students since they take the most notes.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">You're the PM for a budgeting app. A competitor analysis lists only other budgeting apps. Your churn interviews reveal users quit because "I just went back to a spreadsheet / a notebook / not tracking at all."</p>
+        <div class="pm-quiz">
+          <p><strong>What JTBD lesson does this reveal?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Only other budgeting apps as competitors is exactly the blind spot. Users 'fired' you for a spreadsheet, a notebook, or nothing — none of which appear in a category-based competitor list. Your real rivals are whatever else does the job.">
+            A) Nothing — a spreadsheet isn't a real competitor.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Competitors are defined by the job, not the category. If users hire a spreadsheet, a notebook, or 'just winging it' to manage money, those ARE your competition. This reframes your job-to-be-done as 'help me feel in control of my money,' and your real benchmark becomes 'easier than a spreadsheet,' not 'more features than rival apps.'">
+            B) Competitors are anything hired for the same job — spreadsheets, notebooks, and 'nothing' are your real rivals, so beat them on simplicity, not app features.
+          </button>
+          <button class="pm-quiz-option" data-msg="Copying rival apps' features chases the wrong benchmark. Users didn't leave for another app — they left for a spreadsheet or nothing. Matching app-category features won't win back people who wanted something simpler.">
+            C) Add every feature your rival budgeting apps have.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">A teammate writes this job statement: "When users open our app, they want to use our new AI summary feature, so they can enjoy our product."</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It looks like the right format but it's product-centered, not user-centered. The 'situation' is just 'opens our app,' the 'motivation' is to use OUR feature, and the 'outcome' is to enjoy OUR product. A real job statement never mentions your product — it describes the user's world.">
+            A) Nothing — it follows the When/I want to/So I can format.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Every part references your product instead of the user's real life. A good statement is solution-agnostic: 'When I'm handed a 40-page report five minutes before a meeting, I want the key points fast, so I can speak confidently without reading it all.' The situation is real, and the outcome is the user's — not 'enjoy our product.'">
+            B) Every part points at your product, not the user's real situation and progress — a job statement should be solution-agnostic.
+          </button>
+          <button class="pm-quiz-option" data-msg="The AI feature being 'too advanced' isn't the issue. The problem is structural: the statement describes your product's usage instead of the user's underlying job. Even a simple feature phrased this way would be wrong.">
+            C) The AI feature is too advanced to include in a statement.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">Your onboarding is beautiful, but analytics show most new users abandon at the "import your existing data" step, even though importing would clearly help them.</p>
+        <div class="pm-quiz">
+          <p><strong>Which of the four forces is likely to blame?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A weak pull isn't the issue — they already signed up and started onboarding, so the attraction worked. Something is stopping them at a specific scary step, which points to a blocker, not a lack of appeal.">
+            A) Weak pull — the product just isn't appealing enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Import your existing data' triggers anxiety — 'what if this messes up or loses my data?' Even a helpful step can spike the fear of switching. The fix is to shrink that anxiety: show it's safe, make it reversible, let them skip and import later, or do it automatically. Reducing anxiety often unlocks more switching than adding pull.">
+            B) Anxiety — a risky-feeling 'import my data' step spikes the fear of losing or breaking things; reduce it (safe, reversible, skippable).
+          </button>
+          <button class="pm-quiz-option" data-msg="Habit is comfort with the old way, which shows up as not starting at all — not as dropping off mid-import. The drop happens at a specific fear-inducing step, which is the signature of anxiety, not habit.">
+            C) Habit — users are too comfortable with their old tool.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A luxury-handbag brand asks you to explain, in JTBD terms, why customers pay 20x more than a functionally identical bag.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the sharpest JTBD explanation?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="If the job were purely functional (carry my things), a $30 bag wins and the premium makes no sense. The functional job is the least of why anyone pays 20x — so this explanation can't be it.">
+            A) The luxury bag simply carries belongings better.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The functional job (carry things) is nearly identical, so it can't justify the price. The premium buys the emotional job (feeling successful, treating myself) and especially the social job (signaling taste and status to others). For status goods, the social and emotional dimensions ARE the product; the bag is just the carrier.">
+            B) The premium is paid for the emotional (feeling special) and social (signaling status/taste) jobs — the functional job is nearly identical, so it can't explain the price.
+          </button>
+          <button class="pm-quiz-option" data-msg="Calling customers irrational dodges the analysis. In JTBD terms they're perfectly rational — they're paying for real emotional and social jobs the cheap bag can't do. 'Irrational' is what people say when they've only considered the functional dimension.">
+            C) Customers are just being irrational with their money.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Two users both "hire" a food-delivery app, but for very different reasons: one is a busy parent with no time to cook; the other is showing off by ordering a trendy restaurant for friends.</p>
+        <div class="pm-quiz">
+          <p><strong>What does this tell a product team?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating them as one identical user erases a real difference. Same app, same demographic maybe — but two different jobs (a functional time-saver vs. a social status move) that call for different features and messaging.">
+            A) They're the same customer, so build one thing for both.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The same product can serve multiple distinct jobs, and each deserves its own design and messaging. The busy parent's job (fast, reliable, cheap, feed the family) differs sharply from the show-off's job (impressive restaurants, shareable, status). Recognizing the different jobs lets you segment by job — often far more useful than segmenting by age or income.">
+            B) The same product serves multiple jobs — segment by job (convenience vs. status) and tailor features and messaging to each.
+          </button>
+          <button class="pm-quiz-option" data-msg="Firing the show-off customer throws away a valuable job the app already serves. Both jobs are real and monetizable; the insight is to serve each well, not to pick one and discard the other.">
+            C) Drop the show-off user — only the practical job matters.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">In a churn interview, instead of asking "what features do you want?", a skilled PM asks: "Walk me through the day you decided to cancel — what happened right before?"</p>
+        <div class="pm-quiz">
+          <p><strong>Why is the second question more JTBD-aligned?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It's not just 'friendlier' — it's methodologically different. 'What features do you want?' invites users to invent solutions (which they're bad at). The story question uncovers the real situation and the forces at play, which is the actual data JTBD needs.">
+            A) It's just a warmer, more polite way to ask the same thing.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Asking users to name features makes them guess at solutions — outside their expertise. Asking them to narrate the moment of switching reveals the real situation, the push that built up, and the anxieties involved. JTBD research digs into the story of the struggle, not a wish list of features.">
+            B) It uncovers the real situation and forces behind the switch, instead of asking users to guess at features — which they're not equipped to do.
+          </button>
+          <button class="pm-quiz-option" data-msg="The story question isn't slower-but-equal — it produces fundamentally better data. Feature wish-lists are notoriously misleading; the narrative of the actual decision is where the true job and forces surface.">
+            C) It saves time by getting a quick feature list.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Your product is objectively better than the incumbent on every feature, yet enterprise customers won't switch. Interviews reveal: "Our whole team knows the old tool, and re-training 200 people terrifies us."</p>
+        <div class="pm-quiz">
+          <p><strong>Which forces are blocking the switch, and what's the play?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Adding still more features piles on pull, but pull was never the problem — you already win on features. Anxiety (re-training 200 people) and habit (the team knows the old tool) are the anchors, and more features don't touch either.">
+            A) Add even more features to strengthen the pull.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The blockers are anxiety (fear of a painful re-training) and habit (the team's ingrained familiarity). More pull won't help. The play is to shrink those: white-glove migration, in-product training, a UI that mirrors the old tool's mental model, and a low-risk pilot. Winning on features is wasted if you don't dismantle the anxiety and habit holding people in place.">
+            B) Anxiety and habit are the anchors — shrink them with white-glove migration, training, and a low-risk pilot, since more features (pull) won't move a switch blocked by fear and familiarity.
+          </button>
+          <button class="pm-quiz-option" data-msg="Concluding the product 'isn't actually better' contradicts the finding — it wins on every feature. The issue isn't product quality; it's that switching costs (anxiety + habit) outweigh the pull. Address the switch, not the product.">
+            C) Accept the product must not really be better after all.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A founder insists: "Our target market is women aged 30–45 with high income." When you interview them, their reasons for buying are wildly different from one another.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the JTBD critique of this targeting?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A precise demographic feels rigorous but predicts behavior poorly. Two women of the same age and income can hire your product for completely different jobs — and two very different people can share the exact same job. Demographics describe who people are, not what progress they're chasing.">
+            A) It's solid — a precise demographic is exactly what you need.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Demographics (age, income, gender) don't explain motivation — that's the milkshake lesson. The founder should segment by job-to-be-done: group customers by the progress they're trying to make, not by their census category. That's why the interviewed group's reasons vary so wildly — they share a demographic but not a job.">
+            B) Demographics don't explain why people buy — segment by the job they're hiring the product for, not by age, gender, and income.
+          </button>
+          <button class="pm-quiz-option" data-msg="Narrowing the age band (say 35–40) just makes a demographic segment more precise, not more predictive. People of identical age still have different jobs. The fix isn't a tighter demographic — it's switching to job-based segmentation.">
+            C) The age range is too wide; narrow it to 35–40.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">Slack famously described a big part of its job as "make my team feel less overwhelmed by email and more connected." A rival copies every Slack feature but users say it "feels cold and corporate."</p>
+        <div class="pm-quiz">
+          <p><strong>What did the rival miss?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Feature parity was clearly achieved — they copied everything — yet it still failed. That's the clue: the job wasn't only functional. Copying the visible features misses the emotional job the product was really hired for.">
+            A) Nothing — with identical features it should perform identically.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Slack's job had a strong emotional dimension — feeling connected, playful, less overwhelmed. That lived in tone, emoji, personality, and delightful details, not in the feature checklist. The rival copied the functional layer and ignored the emotional job, so it 'works' but feels cold. Emotional and social jobs are the hardest to copy and often the real moat.">
+            B) The emotional job — feeling connected and less overwhelmed — lived in tone and delight, not the feature list they copied.
+          </button>
+          <button class="pm-quiz-option" data-msg="The rival didn't need more features — they already matched every one. Adding more would deepen the same mistake: chasing the functional layer while missing the emotional job that made Slack feel human.">
+            C) The rival just needs to add even more features than Slack.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">You're tempted to add a flashy new capability because a competitor has it. Before committing, you apply JTBD.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right JTBD question to ask first?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Does the competitor have it?' is feature-parity thinking, the exact trap JTBD helps you escape. Matching a rival's feature list says nothing about whether it advances a job your users are actually trying to get done.">
+            A) "Does the competitor have it?" — if yes, we need it too.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The JTBD question is: 'What job would a user hire this capability for, and is that a real, important, underserved job for our users?' If it advances a job people genuinely struggle with, build it. If it's just feature-matching with no job behind it, skip it. JTBD turns 'do we have feature X?' into 'does this help users make progress they care about?'">
+            B) "What job would users hire this for, and is that job real, important, and underserved for our users?"
+          </button>
+          <button class="pm-quiz-option" data-msg="'Can our engineers build it?' is a feasibility question, useful later but not first. JTBD says the primary question is whether the capability serves a real user job — building something well that nobody hires for is still wasted effort.">
+            C) "Can our engineers build it quickly?" — feasibility decides it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>JTBD Quick Reference</h2>
+      <p class="muted">The whole framework on one screen — perfect for a two-minute refresher.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-gears"></i> The Four Forces</h3>
+        <p class="muted">People switch when the promoters outweigh the blockers. Amplify the first two, shrink the last two.</p>
+        <div class="pm-concept-grid">
+          <div class="pm-concept-item pm-good">
+            <span class="pm-chip">Promoter</span>
+            <h4>Push</h4>
+            <p>Pain with the current way. <em>"My workflow takes 4 hours."</em></p>
+          </div>
+          <div class="pm-concept-item pm-good">
+            <span class="pm-chip">Promoter</span>
+            <h4>Pull</h4>
+            <p>Appeal of the new solution. <em>"This claims to do it in 1 minute."</em></p>
+          </div>
+          <div class="pm-concept-item pm-bad">
+            <span class="pm-chip">Blocker</span>
+            <h4>Anxiety</h4>
+            <p>Fear of switching. <em>"What if my old files get lost?"</em></p>
+          </div>
+          <div class="pm-concept-item pm-bad">
+            <span class="pm-chip">Blocker</span>
+            <h4>Habit</h4>
+            <p>Comfort with today. <em>"I already know these shortcuts."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-cubes"></i> Three Dimensions of a Job</h3>
+        <p class="muted">Don't stop at functional. The emotional and social layers are where loyalty and word-of-mouth come from.</p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">F</span>
+            <div>
+              <h4>Functional</h4>
+              <p>The practical task. <em>"I want to boil water for cooking."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">E</span>
+            <div>
+              <h4>Emotional</h4>
+              <p>How they feel. <em>"I want to feel safe knowing the kettle switches itself off."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">S</span>
+            <div>
+              <h4>Social</h4>
+              <p>How they're seen. <em>"I want a designer kettle that impresses guests."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-file-signature"></i> The Job Statement Formula</h3>
+        <div class="pm-concept-grid">
+          <div class="pm-concept-item">
+            <span class="pm-chip">When…</span>
+            <h4>Situation</h4>
+            <p>The real-life trigger and context.</p>
+          </div>
+          <div class="pm-concept-item">
+            <span class="pm-chip">I want to…</span>
+            <h4>Motivation</h4>
+            <p>The immediate action or need.</p>
+          </div>
+          <div class="pm-concept-item">
+            <span class="pm-chip">So I can…</span>
+            <h4>Outcome</h4>
+            <p>The deeper progress they're after.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-lightbulb"></i> Rules of Thumb</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Hire &amp; fire</h4>
+              <p>Adopting your product means firing something else — find out what.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Competitors are surprising</h4>
+              <p>Netflix competes with wine and video games, not just other streaming apps.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Outcomes over outputs</h4>
+              <p>Talk about the progress users make, not the features you ship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-user-secret"></i> Finding the Job (Interviewing)</h3>
+        <p class="muted">Uncover jobs like a detective — chase the story, not a wish list.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-clock-rotate-left"></i></span><div><h4>Ask about the switch moment</h4><p>"Walk me through the day you decided to buy / quit. What happened right before?"</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-ban"></i></span><div><h4>Avoid "what features do you want?"</h4><p>Users guess at solutions badly. Ask about their situation and struggle instead.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-magnifying-glass"></i></span><div><h4>Find what they "fired"</h4><p>What were they using before, and why did it stop working?</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-layer-group"></i></span><div><h4>Dig past functional</h4><p>Ask "and why does that matter?" until you hit the emotional/social job.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/jtbd.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

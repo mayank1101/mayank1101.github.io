@@ -1,0 +1,903 @@
+---
+layout: pm-gym
+title: "5-Step User Research — PM Gym"
+description: "A beginner-friendly, interactive guide to conducting user research in five steps: objectives, methods, recruiting, conducting, and synthesis."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>The 5-Step User Research Process</h1>
+  <p class="lead">A repeatable recipe for learning from users — without a research degree</p>
+  <p class="muted">
+    Good research isn't about fancy labs; it's about asking a sharp question, putting it in front
+    of the right people the right way, and turning what you hear into decisions. Five steps,
+    every time.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>The Five Steps</h2>
+      <p class="muted">One lesson per step. The order matters: each step depends on the one before it.</p>
+    </div>
+
+    <div class="pm-lesson-nav pm-lesson-nav-5">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Define</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Choose Method</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Recruit</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Conduct</button>
+      <button class="pm-lesson-btn" data-lesson="5">5. Synthesize</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Define the Objective</h3>
+      </div>
+
+      <p>
+        Every good study starts with <strong>one sharp question plus the decision that hangs
+        on the answer</strong>. "Let's learn about our users" is a wish, not an objective.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — texting a friend for advice</h4>
+        <p>
+          When a friend texts "help me decide," the useful first question is: "what will you
+          actually <em>do</em> differently depending on my answer?" If they've already booked the
+          flights, your opinion on the destination is just chit-chat. Research is the same: before
+          you spend anyone's time, know the real decision waiting on the other end. "Understand our
+          users" leads to a nice chat and no change. "Find out why trials die in week one, so we
+          know whether to fix onboarding or the price" has a decision attached — so every finding
+          will actually land somewhere.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-bullseye"></i> The litmus test</h4>
+        <p>
+          Ask: <em>"What will we decide differently depending on the answer?"</em>
+          If nothing changes either way, the research is entertainment.
+        </p>
+        <p class="pm-key-line">
+          Weak: "Understand our dashboard users." Strong: "Find out why weekly dashboard usage
+          is flat, to decide between a redesign and better onboarding."
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is a strong research objective?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="This is a wish — no specific question, no decision attached. Any finding would be 'interesting' and none would change what you build next week.">
+            A) "Understand how customers feel about our brand."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="A specific question (why do trials die in week one?) tied to a decision (what to fix in onboarding). You can design a study around this, and the findings will land somewhere.">
+            B) "Find out why trial users stop logging in during week one, to decide which onboarding fixes to prioritize."
+          </button>
+          <button class="pm-quiz-option" data-msg="That's a method (a survey) chosen before any question exists. Method comes at step 2 — and only after the question makes clear what kind of tool it needs.">
+            C) "Send a satisfaction survey to everyone in the database."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: Choose the Method <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Choose the Method</h3>
+      </div>
+
+      <p>
+        The method follows from the <strong>type of question</strong> you're asking.
+        Four common question types, four families of methods:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the right tool for the job</h4>
+        <p>
+          You wouldn't use a hammer to tighten a screw. Research methods are the same — each fits a
+          different kind of question. Want to know <em>how many</em> people prefer tea over coffee?
+          Poll a big crowd (a <strong>survey</strong>). Want to know <em>why</em> your friend quit
+          coffee? Sit down and talk (an <strong>interview</strong>). Want to know if someone can
+          actually assemble your flat-pack chair? Hand them the box and <em>watch</em> (a
+          <strong>usability test</strong>). Want to know which of two menus sells more? Try both and
+          compare sales (an <strong>A/B test</strong>). Pick the tool that matches the question, not
+          the one you're most comfortable holding.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Why? How?</span>
+          <h4>Interviews &amp; field studies</h4>
+          <p>Understand motivations, workflows, and context. Small numbers, deep answers.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Can they use it?</span>
+          <h4>Usability tests</h4>
+          <p>Watch real people attempt real tasks. About five users finds most issues.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">How many?</span>
+          <h4>Surveys &amp; analytics</h4>
+          <p>Measure scale and frequency across the whole audience.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Which is better?</span>
+          <h4>A/B &amp; fake-door tests</h4>
+          <p>Compare options with behavioral evidence, not opinions.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Your question: <em>"Why do restaurant owners still manage bookings on paper instead
+          of using apps like ours?"</em> Best method?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A survey measures how many and how often — but this is a why question about deep habits and context. Paper-loyal restaurant owners are also the least likely group to answer an online survey.">
+            A) A large online survey with multiple-choice reasons.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="A why question about an ingrained workflow needs interviews — ideally in the restaurant, watching the paper system in action. Context reveals what no form ever captures: the notebook works during rush hour, never crashes, and the whole staff can read it.">
+            B) Visit a handful of restaurants and interview owners while watching how the paper system works.
+          </button>
+          <button class="pm-quiz-option" data-msg="An A/B test compares two versions of something people already use — it can't explain why non-users stay away. You need to meet the paper system on its own turf first.">
+            C) A/B test two different signup pages.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: Recruit <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Recruit the Right People</h3>
+      </div>
+
+      <p>
+        <strong>Five people from the right segment beat fifty from the wrong one.</strong>
+        Recruiting is where studies quietly go wrong — because the easiest people to reach
+        are rarely the ones you need.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — taste-testing kids' cereal</h4>
+        <p>
+          If you're designing a breakfast cereal for children, you test it on <em>kids</em>, not on
+          their parents — a parent guessing what a 7-year-old likes is worthless data. Same logic
+          everywhere: to learn why people quit your gym, talk to <em>ex-members</em>, not the
+          regulars still showing up happily. The easiest people to grab (your friends, your
+          teammates, your biggest fans) are almost never the right ones — and their politeness and
+          insider knowledge quietly poison the answers. Fish where the fish are: recruit the exact
+          people who did the thing you're studying.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Screen by behavior, not just demographics</h4>
+            <p>Studying churn? Recruit people who actually canceled. Studying invoicing? Recruit people who send invoices — not people who say they might.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Beware convenience samples</h4>
+            <p>Teammates, friends, and your biggest fans are the easiest to book and the least representative. Their answers are polluted by politeness and expertise.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Small incentives work</h4>
+            <p>A modest gift card recruits honest strangers. It costs less than one wrong feature.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          You're researching why users cancel subscriptions. Who do you recruit?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Happy current users can only speculate about why *other* people leave — and speculation about others is one of the least reliable data types there is. Go to the source.">
+            A) Current happy subscribers — they're easy to reach through the app.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The people who actually did the behavior you're studying. Their memories of the cancellation moment are the closest thing to ground truth you can interview.">
+            B) People who canceled within the last month or two.
+          </button>
+          <button class="pm-quiz-option" data-msg="Teammates know too much and have a stake in the answers — the definition of a biased sample. Fine for testing your interview script, useless as data.">
+            C) Teammates who can role-play as churned users.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: Conduct <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Conduct Without Contaminating</h3>
+      </div>
+
+      <p>
+        The way you ask determines what you get. Three rules keep the data clean:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — good reporter vs. bad reporter</h4>
+        <p>
+          A bad reporter asks, "You must have been furious about that, right?" — and gets back
+          whatever they suggested. A good reporter asks, "What happened next?" and then goes quiet,
+          letting the person fill the silence with the real story. In research you want to be the
+          good reporter: ask about what actually happened ("tell me about the last time you…"),
+          keep questions open, and resist the urge to jump in. The moment you hint at the answer
+          you're hoping for, polite people hand it right back to you — and your data is worthless.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Past behavior over future intent</h4>
+            <p>"Walk me through the last time you…" beats "would you ever…?" People are historians of their own lives and terrible fortune-tellers.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Open questions, then silence</h4>
+            <p>"What happened next?" — then wait. Silence is uncomfortable; users fill it with the good stuff.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Never pitch, never lead</h4>
+            <p>"Don't you think this is easier?" teaches participants the answer you want. In usability tests: give the task, then stay quiet while they struggle.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which interview question will produce the most trustworthy answer?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A future-intent question — invites polite fiction. Saying yes costs nothing and makes the interviewer smile. The say/do gap eats this data alive.">
+            A) "Would you use a budgeting feature if we built one?"
+          </button>
+          <button class="pm-quiz-option" data-msg="Leading and flattering — you've announced what you're proud of and asked them to agree. Most humans will oblige.">
+            B) "Our new design is much cleaner, don't you think?"
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Past behavior, open-ended, specific. It retrieves a real memory with real details — what they tried, what failed, what they did instead. This is the raw material insights are made of.">
+            C) "Tell me about the last time you tried to track your spending — what did you do?"
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="5">Next: Synthesize <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 5 -->
+    <article class="pm-lesson" data-lesson="5">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">5</span>
+        <h3>Synthesize and Share</h3>
+      </div>
+
+      <p>
+        Research that stays in a folder changed nothing. The last step converts raw sessions
+        into decisions:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the chef, not the grocery bag</h4>
+        <p>
+          A chef doesn't dump a bag of raw ingredients on your table — they cook and plate a dish
+          you can actually enjoy. Handing stakeholders raw transcripts is dumping the grocery bag:
+          you're making them do the cooking (and they won't). Your job is to synthesize the messy
+          sessions into a few clear, well-plated insights, and to <em>show</em> the evidence — a
+          30-second clip of a real user getting stuck beats a 30-page report every time. Bring the
+          dish, cooked and served, into the room where the decision gets made.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Cluster into themes</h4>
+            <p>Affinity-map the observations and let patterns emerge (the full technique lives in <a href="/pm-gym/user-insights.html">Driving User Insights</a>).</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Write insight statements</h4>
+            <p>[Observation], because [reason], which means [implication] — each tied back to the original research objective.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Share with evidence attached</h4>
+            <p>A 30-second clip of a real user failing beats a 30-page report. Bring quotes and clips into the room where the decision happens.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          You finished eight interviews and the findings challenge the roadmap. What's the most
+          effective way to share them?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Thorough — and unread. Long documents let busy stakeholders skim to the parts that confirm their plans. Findings that challenge a roadmap need to be impossible to skim past.">
+            A) Write a comprehensive 30-page report and email it to everyone.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Three sharp insight statements, each backed by a clip of a real user, delivered where the decision gets made. Evidence people can see beats evidence people are told about — especially when it's unwelcome.">
+            B) Present three insight statements at the roadmap meeting, each with a short video clip of a real user.
+          </button>
+          <button class="pm-quiz-option" data-msg="Raw transcripts outsource the synthesis to people who weren't there and don't have time. Synthesis is your job — that's the step that turns sessions into decisions.">
+            C) Share the full transcripts so people can draw their own conclusions.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="4"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>User Research Flashcards</h2>
+      <p class="muted">Six cards — the process plus one per step. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Process</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">The 5 Steps</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 research situations with realistic constraints — sharpening objectives, choosing methods, recruiting well, asking clean questions, and sharing findings. Pick the move a disciplined researcher makes, then read why the others miss.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">Your manager says: 'Go do some user research on our new dashboard.' Nothing more specific.</p>
+        <div class="pm-quiz">
+          <p><strong>What's your first move?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Interviews without a question produce pleasant conversations and vague notes. Method is step two — something has to come first.">
+            A) Book ten user interviews this week while calendars are open.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="'Go learn stuff' becomes 'find out why weekly dashboard usage is flat, to decide between redesign and onboarding'. Now the whole 5-step plan writes itself.">
+            B) Sharpen the objective with the manager: what question are we answering, and what decision hangs on it? Method, recruiting, and deliverable all follow from that.
+          </button>
+          <button class="pm-quiz-option" data-msg="A method chosen before the question exists — a hammer looking for nails. If the question turns out to be a 'why', the survey was the wrong tool anyway.">
+            C) Send a satisfaction survey to all dashboard users.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">You have one week and almost no budget to find out whether people can complete checkout in your new app.</p>
+        <div class="pm-quiz">
+          <p><strong>What do you do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Can they use it?' is answered by watching, not asking. Opinions about a design don't reveal where real fingers stumble on real tasks.">
+            A) Survey 500 people about what they think of the checkout design.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Five users find most serious usability issues, and two quick rounds beat one big one. A week and a handful of gift cards is genuinely enough.">
+            B) Run five moderated usability tests with a realistic purchase task, fix the two worst issues mid-week, then test five more users on the fixed version.
+          </button>
+          <button class="pm-quiz-option" data-msg="No month available — and an A/B test tells you which variant converts better, not *why* people fail. For diagnosis on a deadline, watch five humans try.">
+            C) Ship it and A/B test checkout variants in production for a month.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A teammate proposes validating a new feature idea by surveying your most engaged power users: 'They know the product best.'</p>
+        <div class="pm-quiz">
+          <p><strong>What's the problem?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="They give the most *expert* feedback — which is the bias. Power users crave advanced capability and love you already; both push the answer toward 'build it'.">
+            A) Nothing — expert users give the highest-quality feedback.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Recruit for the question, not for convenience. Asking your fans whether to build more is how feature bloat gets 'validated'.">
+            B) Sampling bias: power users aren't the target audience for most decisions. Recruit from the segment the feature is actually for, screened by behavior, and prefer behavioral tests over surveys.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more of the wrong respondents doesn't fix bias, it dilutes it at best. The fix is *who* you ask (the target segment) and *what* you trust (behavior over stated intent).">
+            C) The sample is too small — survey power users and everyone else too.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">Your question is "How many of our users would use a dark mode, and how strongly do they want it?" A researcher plans five in-depth interviews.</p>
+        <div class="pm-quiz">
+          <p><strong>Is the method a good fit?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Five interviews are great for 'why' and 'how,' but this is a 'how many / how strongly' question — a matter of scale across the whole base. Five people can't tell you what proportion of thousands want dark mode; you'd be answering a quantitative question with a qualitative tool.">
+            A) Yes — interviews are always the richest method.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Match the method to the question type. 'How many / how strongly' is a quantitative question, so use a survey or analytics to measure demand across the whole audience. Interviews would be the right tool for a 'why do people want dark mode' question — but not for sizing demand. Pick the survey here (optionally a few interviews first to word it well).">
+            B) No — 'how many / how strongly' is a quantitative question, so a survey or analytics fits; interviews answer 'why,' not scale.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more interviews (say 20) still can't reliably estimate what fraction of a large user base wants dark mode — and it's slow and expensive for a sizing question. The issue is method-question mismatch, not interview count.">
+            C) Almost — just do 20 interviews instead of five to estimate the percentage.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A usability test is scheduled with 50 participants to "be statistically valid," which will take a month to run and analyze.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the more efficient approach?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Usability testing isn't about statistical significance — it's about spotting problems. Around five users surface the large majority of serious usability issues; 50 mostly re-confirm the same problems at 10x the cost and time, delaying the fixes.">
+            A) Keep 50 — more participants always means more reliable results.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. For finding usability problems, about five users reveals most serious issues. The efficient pattern is small, fast rounds: test five, fix the worst problems, test five more on the improved version. You learn faster and ship fixes sooner than a single 50-person study that just documents the same issues repeatedly. Save large samples for quantitative questions (surveys, A/B tests), not usability discovery.">
+            B) Run about five users, fix the worst issues, then test five more — small iterative rounds find most usability problems far faster than one 50-person study.
+          </button>
+          <button class="pm-quiz-option" data-msg="Cutting to 25 still misunderstands the goal — usability testing finds problems, and ~5 users already catch most of them. Halving an oversized sample is better but still slower and costlier than iterative rounds of five.">
+            C) Cut it to 25 — that's a good statistical compromise.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">To study why users churn, a PM recruits from the list of users who are still actively subscribed, because "they're the easiest to contact through the app."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the recruiting error?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Current subscribers haven't churned, so they can only speculate about why others leave — and speculation about other people's behavior is among the weakest data there is. Convenience (easy to reach in-app) drove the choice, not fit to the question.">
+            A) Nothing — current users understand the product best.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. To study churn you must recruit people who actually churned — they hold the real memory of the cancellation moment and its cause. Current subscribers are a convenience sample that can't answer the question; they'd only guess about others. Recruit for the behavior you're studying (recent cancellers), even though they're harder to reach, and offer a small incentive to get honest strangers.">
+            B) They recruited the wrong segment — to study churn you must talk to people who actually canceled, not current subscribers who can only speculate.
+          </button>
+          <button class="pm-quiz-option" data-msg="The sample size isn't the core issue — even 100 current subscribers can't tell you why churned users left. The error is who was recruited (a convenient but wrong segment), not how many.">
+            C) The sample is just too small; add more current subscribers.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">In a usability test, the moderator says before each task: "This next part is really easy and intuitive, you'll love it."</p>
+        <div class="pm-quiz">
+          <p><strong>Why does this ruin the test?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Priming the participant that something is 'easy and intuitive' biases them: they'll blame themselves when they struggle and under-report problems to avoid contradicting the moderator. You've contaminated the very behavior you're trying to observe.">
+            A) It doesn't — reassuring participants keeps them comfortable.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Calling a task 'easy and intuitive' primes participants to expect success, so when they struggle they assume it's their fault and stay quiet — masking real usability problems. The moderator should give a neutral task ('purchase a pair of shoes') and then stay silent, letting the participant's genuine struggle show. Never signal the expected outcome or your own pride in the design.">
+            B) It primes participants to expect success, so they hide their struggles and blame themselves — masking the exact problems the test should reveal.
+          </button>
+          <button class="pm-quiz-option" data-msg="The issue isn't wasted time — it's that the reassurance actively biases the results. A neutrally-run test of the same length would produce trustworthy data; this one produces contaminated data at any length.">
+            C) It just wastes a few seconds before each task.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A stakeholder wants to run research to "prove that users want the feature we've already decided to build."</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with this framing?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Research framed to 'prove' a predetermined conclusion isn't research — it's a search for supporting evidence, guaranteed to find some. It has confirmation bias built into the objective, so its findings can't be trusted to guide the decision.">
+            A) Nothing — validating the decision with users is good practice.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A study designed to 'prove' a foregone conclusion bakes in confirmation bias — you'll cherry-pick questions, participants, and quotes that agree, and dismiss those that don't. Honest research asks an open question ('should we build this, and what do users actually need here?') and is genuinely willing to hear 'no.' Reframe the objective to be falsifiable — 'what would tell us this feature is the wrong bet?' — or the exercise is theater.">
+            B) It bakes in confirmation bias — research meant to 'prove' a decision will cherry-pick agreement; reframe it as an open, falsifiable question willing to hear 'no.'
+          </button>
+          <button class="pm-quiz-option" data-msg="The problem isn't the sample size or method — it's the objective itself. Any study aimed at proving a predetermined answer is compromised from the start, no matter how many people you talk to or how you talk to them.">
+            C) It just needs a bigger, more representative sample to be valid.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">During an interview, a user goes quiet for eight seconds after you ask about their last frustrating experience. The interviewer feels awkward and jumps in with "was it the loading speed?"</p>
+        <div class="pm-quiz">
+          <p><strong>What did the interviewer do wrong?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Filling the silence — especially with a specific guess ('was it the loading speed?') — both cut off the user's own answer and led them toward the interviewer's hypothesis. The best material often comes right after an uncomfortable pause; jumping in destroys it.">
+            A) Nothing — it's polite to help a struggling participant.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Two mistakes: breaking a productive silence, and leading with a specific guess. Silence is uncomfortable but powerful — people fill it with the real, unrehearsed answer if you let them. And 'was it the loading speed?' plants a candidate cause the user may just agree with. The move is to wait, then if needed prompt neutrally: 'take your time — what comes to mind?' Let them supply the answer.">
+            B) They broke a productive silence AND led with a specific guess — waiting quietly (or prompting neutrally) would have let the user surface the real answer themselves.
+          </button>
+          <button class="pm-quiz-option" data-msg="The interview wasn't 'moving too slowly' — the pause was working. Eight seconds of silence is normal and valuable in interviews; the error was interrupting it with a leading guess, not the pace.">
+            C) The interview was dragging; speeding it up was correct.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">You need to decide between two onboarding designs. You have live traffic and can measure which one leads to more completed setups.</p>
+        <div class="pm-quiz">
+          <p><strong>Which method best answers 'which is better?'</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Asking users which design they prefer measures stated opinion, which often diverges from real behavior. For a 'which performs better' question where you have live traffic, you can measure actual behavior instead of relying on preferences.">
+            A) Survey users on which design they prefer.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 'Which is better?' with live traffic is a textbook A/B test: randomly show each design to a slice of real users and compare the behavior that matters (completed setups). This gives behavioral evidence, sidestepping the say/do gap that plagues preference surveys. Interviews or usability tests would help you understand WHY one wins, but to decide WHICH performs better, measure it.">
+            B) Run an A/B test — split live traffic between the two and compare completed setups, giving behavioral proof instead of opinions.
+          </button>
+          <button class="pm-quiz-option" data-msg="Having a few colleagues pick 'looks better' is a tiny, biased opinion sample and measures aesthetics, not the outcome (completed setups). With live traffic available, you can get real behavioral data via an A/B test instead.">
+            C) Ask a few colleagues which one looks better and go with that.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">Leadership wants "big, statistically-significant research" before any decision, but you have a small user base and a one-week deadline for a design choice.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the pragmatic, honest approach?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Refusing to research at all because you can't hit statistical significance throws away the fast, cheap qualitative methods that are perfect for a one-week design decision. Some evidence beats none, and design choices rarely need statistical power.">
+            A) Do no research — without statistical significance it's worthless.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Match the rigor to the decision. A design choice usually needs directional evidence, not statistical significance — so run a handful of usability tests or interviews this week to catch the big problems, and be transparent that it's qualitative and directional. Reserve large, statistically-powered studies for high-stakes, quantitative questions (pricing, big bets). Small, fast, honest research now beats a rigorous study delivered after the deadline.">
+            B) Match rigor to the decision — run a few quick usability tests or interviews for directional evidence, and be clear it's qualitative; most design choices don't need statistical significance.
+          </button>
+          <button class="pm-quiz-option" data-msg="Faking a large sample or overstating confidence to satisfy leadership is dishonest and dangerous — it lends false authority to weak data. The right move is to run appropriate small-sample research and clearly frame what it can and can't tell you.">
+            C) Pad the numbers to make the sample look bigger than it is.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A researcher recruits participants for a study on a professional accounting tool by posting in a general "make money online" forum, because it was quick and free.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A general 'make money online' forum won't reliably contain professional accountants — the actual users of the tool. You'll get people who don't do the job, may fake qualifications for the incentive, and can't speak to the real workflow. Free and fast recruited the wrong people.">
+            A) No risk — more participants from anywhere is always helpful.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The channel determines the sample. A general money-making forum is unlikely to contain real professional accountants and may attract people who misrepresent themselves to earn the incentive. You'd get confident-sounding but irrelevant (or fabricated) input about a specialized workflow. Recruit through channels where the actual target users are (professional bodies, accounting communities) and screen by verified behavior, even if it's slower and costs more.">
+            B) The channel attracts the wrong people — a general forum won't yield real accountants, and some may fake qualifications for the incentive, so screen and recruit where actual users are.
+          </button>
+          <button class="pm-quiz-option" data-msg="Raising the incentive on a mis-targeted channel makes things worse — it attracts more people to misrepresent themselves to qualify. The problem is the channel and lack of screening, not the reward size.">
+            C) Just offer a bigger incentive to attract better participants there.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">After great interviews, a PM emails stakeholders a 40-page report with every transcript. Two weeks later, the roadmap decision ignored all of it.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the synthesis-and-share failure?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A 40-page transcript dump outsources synthesis to busy stakeholders who won't do it — so the research effectively didn't reach the decision. Thoroughness isn't the goal; influence on the decision is.">
+            A) Nothing — sending everything ensures full transparency.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Synthesis is the researcher's job, not the reader's. A wall of transcripts means no one extracts the insights, so the decision proceeds on gut. Instead, distill to a few sharp insight statements, back each with a short clip or quote, and present them live in the meeting where the roadmap is decided. Make the findings impossible to skim past — especially when they challenge the plan.">
+            B) Synthesis was skipped — dumping raw transcripts makes stakeholders do the work they won't; distill to a few insight statements with clips and present them in the decision meeting.
+          </button>
+          <button class="pm-quiz-option" data-msg="The report being 'too short' is the opposite of the problem — it was 40 pages. Adding more would bury the findings deeper. The failure is not synthesizing and not delivering the insights where the decision happens.">
+            C) The report was too brief; add more detail and resend it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">You want to understand the real workflow of warehouse pickers, but you plan to interview them over video calls during their lunch break.</p>
+        <div class="pm-quiz">
+          <p><strong>What might a better method capture that interviews miss?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A lunch-break video interview relies on pickers accurately recalling and describing a fast, physical, habitual workflow — which people are notoriously bad at. They'll skip the workarounds and friction they've stopped noticing. There's a method that captures what interviews miss here.">
+            A) Nothing — a video interview captures everything you need.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. For understanding an in-context physical workflow, a field study / contextual inquiry — observing pickers actually working in the warehouse — reveals the real behavior, the workarounds, and the environmental friction that people forget to mention in an interview. Watching beats asking for habitual, embodied tasks. Interviews away from the setting miss the tacit details; go see the work where it happens.">
+            B) A field study — observing pickers in the warehouse reveals real workflow, workarounds, and friction they'd never think to describe in an interview.
+          </button>
+          <button class="pm-quiz-option" data-msg="Sending a survey instead trades one away-from-context method for an even shallower one — a questionnaire can't capture a tacit physical workflow at all. The gap is the lack of observation, which a survey doesn't fix.">
+            C) Replace the interviews with a survey to reach more pickers.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A PM insists that talking to just five users can never be trusted and that no research is worth doing unless hundreds participate.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the balanced, correct view?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Nothing under hundreds counts' is wrong — it conflates two different kinds of research. Qualitative discovery (why, how, can-they-use-it) works well with small numbers; only quantitative claims (how many, which converts better) need large samples. Blanket-rejecting small studies throws away fast, cheap learning.">
+            A) The PM is right — only large samples ever produce valid research.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Sample size depends on the question. Qualitative research — understanding why users behave a certain way, or finding usability problems — yields strong signal from small numbers (about five users catch most usability issues). Quantitative questions — how many want X, which design converts better — do need larger samples for reliable estimates. So five users is perfect for the right question and inadequate for others. Match sample size to question type, rather than applying one rule to everything.">
+            B) It depends on the question — small samples are ideal for qualitative 'why' and usability questions; large samples are for quantitative 'how many / which is better' questions.
+          </button>
+          <button class="pm-quiz-option" data-msg="Flipping to 'five is always enough' is the opposite error. Five users can't tell you what proportion of your base wants a feature or which variant converts better — those need scale. The correct view is that the right sample size depends on the type of question.">
+            C) Actually, five users is always enough for any research question.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>User Research Quick Reference</h2>
+      <p class="muted">The five steps and the golden rules on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-list-ol"></i> The 5 Steps</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Define the objective</h4>
+              <p>One sharp question + the decision that hangs on it.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Choose the method</h4>
+              <p>Why → interviews. Can they → usability tests. How many → surveys/analytics. Which → A/B tests.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Recruit</h4>
+              <p>Screen by behavior; five right people beat fifty wrong ones.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">4</span>
+            <div>
+              <h4>Conduct</h4>
+              <p>Past behavior, open questions, silence. Never pitch.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">5</span>
+            <div>
+              <h4>Synthesize &amp; share</h4>
+              <p>Themes → insight statements → clips in the decision room.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-scale-balanced"></i> Golden Rules</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-clock-rotate-left"></i></span>
+            <div>
+              <h4>Behavior over intent</h4>
+              <p>"Tell me about the last time…" beats "would you…?" every time.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-user-slash"></i></span>
+            <div>
+              <h4>No convenience samples</h4>
+              <p>Teammates, friends, and superfans are biased by definition.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-5"></i></span>
+            <div>
+              <h4>Five users find most usability issues</h4>
+              <p>Small, fast rounds with fixes in between beat one giant study.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-ban"></i></span>
+            <div>
+              <h4>No decision, no research</h4>
+              <p>If no choice depends on the answer, save everyone the time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-screwdriver-wrench"></i> Which Method?</h3>
+        <p class="muted">Match the tool to the question you're asking.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comments"></i></span><div><h4>Why? How?</h4><p>Interviews — deep motivations and context, small numbers.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-eye"></i></span><div><h4>In their real setting?</h4><p>Field study / contextual inquiry — watch the work where it happens.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-hand-pointer"></i></span><div><h4>Can they use it?</h4><p>Usability test — ~5 users on a real task find most issues.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-chart-column"></i></span><div><h4>How many? How often?</h4><p>Survey or analytics — measure scale across the base.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-code-compare"></i></span><div><h4>Which is better?</h4><p>A/B or fake-door test — behavioral proof, not opinions.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Common Pitfalls</h3>
+        <p class="muted">Where studies quietly go wrong.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-magnet"></i></span><div><h4>Research to "prove" a decision</h4><p>Confirmation bias baked in. Ask an open, falsifiable question.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comment-dots"></i></span><div><h4>Leading / reassuring</h4><p>"This is easy, right?" plants the answer. Stay neutral and quiet.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-ruler-combined"></i></span><div><h4>Wrong sample size</h4><p>~5 for usability, large for quantitative. Match size to the question.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-box-archive"></i></span><div><h4>The unread report</h4><p>Distill to insights + clips; present in the decision room, don't email a PDF.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/user-research.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

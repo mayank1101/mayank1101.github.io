@@ -1,0 +1,648 @@
+---
+layout: pm-gym
+title: "Product Ideation Framework — PM Gym"
+description: "A beginner-friendly, interactive guide to a structured product ideation framework: turning insights into How Might We questions, generating ideas at product scale, and evaluating them on desirability, feasibility, and viability."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Product Ideation Framework</h1>
+  <p class="lead">A repeatable path from insight to a shortlist worth building</p>
+  <p class="muted">
+    Design-thinking ideation gives you the creative rules. A product ideation framework gives you the funnel: how a validated insight becomes a How Might We question, becomes a wide set of ideas, becomes a small set of concepts worth testing.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>From Insight to Shortlist</h2>
+      <p class="muted">Four short lessons: the ideation funnel, writing How Might We questions, generating ideas at product scale, and evaluating what you generate.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Funnel</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. How Might We</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Generating Ideas</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Evaluating Ideas</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>The Ideation Funnel</h3>
+      </div>
+
+      <p>
+        Product ideation works best as a funnel: it starts wide with evidence and narrows step by
+        step toward something you can actually build and test.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Insight</h4><p>A validated finding from research — the raw material everything else is built from.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">2</span><div><h4>How Might We question</h4><p>The insight reframed as an open, optimistic prompt.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Ideas</h4><p>A wide set generated from the HMW question — quantity over quality here.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Concepts</h4><p>The strongest few ideas, fleshed out enough to evaluate properly.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Shortlist</h4><p>Concepts ranked and ready for prototyping.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Where does a validated user insight belong in the ideation funnel?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Waiting until the end wastes the insight's real value — it should be fueling and focusing generation from the start.">A) At the very end, used to judge which ideas are best.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Insight feeds HMW, HMW feeds idea generation. Start anywhere else and ideation loses its grounding.">B) At the start — it's the raw material a How Might We question is built from, which then fuels idea generation.</button>
+          <button class="pm-quiz-option" data-msg="Treating them as unconnected disconnects ideation from evidence, risking ideas that don't answer any real, validated need.">C) It doesn't belong in the funnel; insights and ideation are separate workstreams.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">How Might We <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Writing How Might We Questions</h3>
+      </div>
+
+      <p>
+        A <strong>How Might We</strong> (HMW) question reframes an insight as an open,
+        solution-neutral prompt. Scope it carefully: too broad and it produces noise; too narrow
+        and it's already a solution in disguise.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Too broad</span>
+          <h4>"How might we improve retention?"</h4>
+          <p>Could point anywhere. Loses the specific insight it should be built from.</p>
+        </div>
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Well-scoped</span>
+          <h4>"How might we help new sellers price with confidence?"</h4>
+          <p>Grounded in a specific insight, open enough for many possible answers.</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Too narrow</span>
+          <h4>"How might we add a price-suggestion tooltip?"</h4>
+          <p>Already names a solution — forecloses other ways to solve the same need.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which is the best-scoped HMW question, given the insight "new sellers abandon listing at the pricing step because they don't know competitive prices"?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Far too broad — it could point ideation anywhere and loses the specific insight about pricing uncertainty.">A) "How might we improve the seller experience?"</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Grounded in the insight, open enough for many possible solutions to compete.">B) "How might we help new sellers set a competitive price with confidence?"</button>
+          <button class="pm-quiz-option" data-msg="Too narrow — it already names a specific solution, foreclosing other ways to solve the underlying need.">C) "How might we add a price-suggestion tooltip next to the price field?"</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Generating Ideas <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Generating Ideas at Product Scale</h3>
+      </div>
+
+      <p>
+        Beyond open brainstorming, a few sources reliably produce stronger product ideas by
+        pulling from outside the room or forcing a new angle.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-plane"></i></span><div><h4>Analogous inspiration</h4><p>Borrow a proven pattern from a different industry solving a structurally similar problem.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bolt"></i></span><div><h4>Constraint-based ideation</h4><p>"What if we had zero budget?" or "shipped in a day?" — artificial limits force unconventional ideas.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comment-dots"></i></span><div><h4>Mining customer language</h4><p>Read support tickets and reviews for recurring suggestions — then reframe as an HMW, not a literal build order.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team studying restaurant reservation apps for inspiration on their own healthcare booking flow is using which technique?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Constraint-based ideation means changing a limiting condition, not borrowing a pattern from an unrelated industry.">A) Constraint-based ideation.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Reservations and healthcare booking share the same underlying friction: time-slot selection under constraints.">B) Analogous inspiration — borrowing a proven pattern from a different domain solving a structurally similar problem.</button>
+          <button class="pm-quiz-option" data-msg="Mining customer language starts from direct feedback in your own product, not from studying an unrelated app.">C) Mining customer language, since it starts from what customers already asked for.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Evaluating Ideas <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Desirability, Feasibility, Viability</h3>
+      </div>
+
+      <p>
+        Once you have concepts, judge each on three lenses. A strong idea clears all three
+        reasonably well — acing just one isn't enough.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip"><i class="fas fa-heart"></i></span>
+          <h4>Desirability</h4>
+          <p>Do users actually want this? Grounded in research, not a hunch.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip"><i class="fas fa-gears"></i></span>
+          <h4>Feasibility</h4>
+          <p>Can we build it with the technology, skills, and time we have?</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip"><i class="fas fa-sack-dollar"></i></span>
+          <h4>Viability</h4>
+          <p>Does it make sense for the business — cost, revenue, strategic fit?</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A brilliant idea scores extremely high on desirability but the team has no way to build it with current technology or skills. What lens is failing?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Business-model fit isn't what's blocking this idea; the barrier is the team's ability to actually build it.">A) Viability — it wouldn't make business sense.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. High desirability doesn't compensate for a hard feasibility failure — all three lenses have to pass.">B) Feasibility — the idea can't currently be built, regardless of how much users would want it.</button>
+          <button class="pm-quiz-option" data-msg="A high desirability score is exactly what's stated in the scenario; the failing lens is a separate one.">C) Desirability — since it's rated highly there, it must actually be low.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Product Ideation Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Ideation Funnel</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can scope a How Might We question, pick the right ideation source, or spot which evaluation lens is failing.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A team skips writing a How Might We question and jumps straight from "users are confused at checkout" to brainstorming feature ideas.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Skipping HMW risks ideation drifting away from the specific insight, since there's no shared framing anchoring the team.">
+            A) None, brainstorming works fine without a formal HMW step.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. HMW is what keeps the wide idea set connected back to the actual insight.">
+            B) Without reframing the insight as an open question, ideation can drift into generic ideas that don't address the confusion.
+          </button>
+          <button class="pm-quiz-option" data-msg="Team size doesn't change whether an unanchored brainstorm drifts from the underlying insight.">
+            C) It only matters for large teams, not small ones.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">An HMW question reads: "How might we build a loyalty points system?"</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It already names a specific solution, foreclosing other ways to address the underlying need.">
+            A) Nothing, it's specific and actionable.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Something like &quot;how might we make repeat customers feel valued?&quot; leaves the solution open.">
+            B) It's pre-loaded with a solution rather than framing the underlying need.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding more solution detail makes the pre-loading problem worse, not better.">
+            C) It should be even more specific, like naming three loyalty tiers.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A fintech team studies how airlines handle overbooking and delay compensation while ideating a refund-dispute feature.</p>
+        <div class="pm-quiz">
+          <p><strong>What technique is this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Constraint-based ideation means adding an artificial limit, not studying an unrelated industry's pattern.">
+            A) Constraint-based ideation.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Overbooking compensation and refund disputes share a structural shape: fair resolution under a broken promise.">
+            B) Analogous inspiration — borrowing a pattern from a structurally similar problem in a different domain.
+          </button>
+          <button class="pm-quiz-option" data-msg="HMW reframing is about how a question is worded, not about researching outside industries.">
+            C) HMW reframing.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A team is stuck and someone proposes: "What if we had to ship this with zero engineers, just no-code tools, by Friday?"</p>
+        <div class="pm-quiz">
+          <p><strong>What technique is being used?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Analogous inspiration means looking outward at another domain, not adding an artificial internal limit.">
+            A) Analogous inspiration.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The made-up limit is the whole mechanism here.">
+            B) Constraint-based ideation — an artificial limit is deliberately introduced to force unconventional thinking.
+          </button>
+          <button class="pm-quiz-option" data-msg="Desirability testing checks whether users want an idea; this is a different step entirely.">
+            C) Desirability testing.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">An idea scores high on feasibility and viability, but user interviews consistently show nobody wants it.</p>
+        <div class="pm-quiz">
+          <p><strong>Which lens is failing?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Feasibility isn't the problem here; the scenario states it already scores high there.">
+            A) Feasibility is failing — rebuild it with better technology.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. All three lenses have to clear, not just two out of three.">
+            B) Desirability is failing — no matter how buildable or profitable, an idea nobody wants shouldn't move forward as-is.
+          </button>
+          <button class="pm-quiz-option" data-msg="Viability is stated as scoring high in the scenario; the failing lens is desirability.">
+            C) Viability is failing — the idea must not make business sense.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A concept clears desirability and feasibility easily, but the cost to build and maintain it exceeds any plausible revenue.</p>
+        <div class="pm-quiz">
+          <p><strong>Which lens is failing?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Cost exceeding revenue is a business-model problem, not a question of whether the team can technically build it.">
+            A) Feasibility — since cost is a technical concern.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is a textbook viability failure.">
+            B) Viability — the idea doesn't make business sense even though users want it and it's buildable.
+          </button>
+          <button class="pm-quiz-option" data-msg="Cost has no bearing on whether users want the idea; the two lenses are independent.">
+            C) Desirability — the high cost must mean users don't actually want it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">A PM mines support tickets and finds many customers requesting "please let us export to Excel."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the ideation-framework move?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building the literal request skips reframing it — the underlying need might be better served another way.">
+            A) Build an Excel export exactly as requested, since customers asked for it directly.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The literal request is a clue, not a spec — reframing keeps the solution space open.">
+            B) Reframe it as an insight and HMW question, like "how might we help customers get their data into tools they already use?"
+          </button>
+          <button class="pm-quiz-option" data-msg="Customer-suggested language is legitimate signal; dismissing it outright throws away real evidence.">
+            C) Ignore the requests since customer-suggested features are usually low-value.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A team writes an HMW so broad — "how might we make our product better?" — that the brainstorm produces unrelated ideas from everyone.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the fix?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More people brainstorming on an unfocused question just widens the spread of unrelated ideas.">
+            A) Run the brainstorm again with the same question but more people.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Naming the segment and the friction re-anchors the question to real evidence.">
+            B) Narrow the HMW question back toward the specific insight it should have come from.
+          </button>
+          <button class="pm-quiz-option" data-msg="Skipping the framing step removes the one thing meant to anchor ideation to a validated need.">
+            C) Skip HMW entirely and let people suggest random features.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A team has three concepts. One is highly desirable and feasible, but relies on giving the product away free — a model the company can't sustain.</p>
+        <div class="pm-quiz">
+          <p><strong>What should happen?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Two out of three lenses passing isn't enough; an unsustainable business model is a hard viability failure.">
+            A) Build it anyway since desirability and feasibility both check out.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. All three lenses have to clear reasonably well before a concept is worth pursuing.">
+            B) Flag the viability gap and either adapt the business model or set the concept aside.
+          </button>
+          <button class="pm-quiz-option" data-msg="Testing viability only after a full build is backwards — check business-model fit before committing to build.">
+            C) Only test viability at the very end, after building the full product.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A team generates fifty ideas from an HMW question but has no way to organize or evaluate them.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the next funnel step?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Building fifty simultaneous experiments isn't feasible and skips the funnel's purpose of narrowing first.">
+            A) Build all fifty as small experiments simultaneously.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. That's exactly the next stage of the funnel — from ideas to concepts.">
+            B) Develop the most promising handful into fuller concepts, then evaluate on desirability, feasibility, and viability.
+          </button>
+          <button class="pm-quiz-option" data-msg="The order ideas were generated has no bearing on quality.">
+            C) Pick the first five generated, since order reflects quality.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A team ideating a checkout improvement studies how video-game stores handle one-click, saved-payment purchases.</p>
+        <div class="pm-quiz">
+          <p><strong>What kind of ideation source is this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="No artificial limit was introduced here — this is looking outward at another domain's solution.">
+            A) Constraint-based ideation.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Same underlying shape (frictionless repeat purchase), different industry.">
+            B) Analogous inspiration — a structurally similar payment-friction problem, solved in a different product category.
+          </button>
+          <button class="pm-quiz-option" data-msg="This didn't come from mining the team's own customer feedback — it came from studying an external product.">
+            C) Customer-suggested ideas.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A stakeholder says an idea "feels desirable" based on their own personal preference, with no user research behind it.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Personal preference from one person isn't evidence of broad user desirability.">
+            A) None, stakeholder intuition is a valid substitute for desirability testing.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. &quot;Feels desirable&quot; to a stakeholder isn't the same as validated with real users.">
+            B) Desirability should be grounded in actual user evidence, not one person's untested preference.
+          </button>
+          <button class="pm-quiz-option" data-msg="The problem is the lack of evidence itself, regardless of whether the instinct happens to be right this time.">
+            C) The concern only matters if the stakeholder is wrong.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A team's ideation funnel has no insight feeding the top — ideas are generated from a leadership offsite with no research behind them.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Leadership perspective has value, but without a validated insight, the funnel is disconnected from real evidence.">
+            A) None, leadership perspective is valuable input regardless of source.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The funnel's strength comes from starting with evidence, not opinion.">
+            B) Ideas generated without a validated insight risk solving problems that don't actually exist for real users.
+          </button>
+          <button class="pm-quiz-option" data-msg="The funnel's need for a grounding insight applies regardless of product type.">
+            C) The risk only applies to consumer products, not B2B.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">Two concepts tie on desirability and feasibility. One is a much bigger strategic bet; the other a small, safe improvement.</p>
+        <div class="pm-quiz">
+          <p><strong>What should break the tie?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Defaulting to &quot;safe&quot; skips actually weighing viability and strategic fit.">
+            A) Always pick the safer, smaller option since it's lower risk.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. That's exactly the criterion meant to break a tie like this.">
+            B) Weigh viability and strategic fit explicitly — which better serves the business's goals and risk appetite right now.
+          </button>
+          <button class="pm-quiz-option" data-msg="A coin flip ignores relevant information that should actually inform the decision.">
+            C) Flip a coin, since both cleared the same bars.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A team develops a concept fully — mockups, spec, cost estimate — before ever writing a How Might We question or gathering an insight.</p>
+        <div class="pm-quiz">
+          <p><strong>What went wrong with their process?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Even a good outcome by luck doesn't validate skipping the funnel — the process risks solving the wrong problem most of the time.">
+            A) Nothing, as long as the final concept happens to be good.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The funnel exists so concepts trace back to real evidence, not the other way around.">
+            B) They inverted the funnel — building a full concept before establishing the insight and HMW question that should have grounded it.
+          </button>
+          <button class="pm-quiz-option" data-msg="The cost estimate isn't the core problem — skipping the insight and HMW steps at the start is.">
+            C) The mistake was only the cost estimate — it should have been done later.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Product Ideation Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-filter"></i> The Ideation Funnel</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Insight</h4><p>Validated finding from research.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>How Might We</h4><p>The insight, reframed as an open question.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Ideas</h4><p>A wide set, quantity over quality.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Concepts &amp; shortlist</h4><p>Fleshed out, evaluated, ranked.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-bullseye"></i> Writing a Good HMW</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-circle-check"></i></span><div><h4>Grounded in a real insight</h4><p>Not invented from thin air.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-expand"></i></span><div><h4>Not too broad</h4><p>"Improve retention" points nowhere specific.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-compress"></i></span><div><h4>Not too narrow</h4><p>Don't pre-load the solution into the question.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-lightbulb"></i> Sources for Ideas</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-plane"></i></span><div><h4>Analogous inspiration</h4><p>Borrow a pattern from another domain.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bolt"></i></span><div><h4>Constraint-based ideation</h4><p>Add an artificial limit to force new angles.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comment-dots"></i></span><div><h4>Mining customer language</h4><p>Reframe requests as insight, not literal specs.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-scale-balanced"></i> Evaluating Concepts</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-heart"></i></span><div><h4>Desirability</h4><p>Do users actually want it?</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-gears"></i></span><div><h4>Feasibility</h4><p>Can we build it?</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-sack-dollar"></i></span><div><h4>Viability</h4><p>Does it work for the business?</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/product-ideation-framework.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

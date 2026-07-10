@@ -1,0 +1,651 @@
+---
+layout: pm-gym
+title: "A/B Testing — PM Gym"
+description: "A beginner-friendly, interactive guide to A/B testing: designing a valid test, statistical significance basics, common pitfalls like peeking and novelty effects, and how to read results honestly."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>A/B Testing</h1>
+  <p class="lead">Let real users, not opinions, settle the debate</p>
+  <p class="muted">
+    An A/B test splits traffic between two versions and measures which one performs better on a metric you chose in advance. Simple in concept, easy to get wrong in practice — this guide covers how to design a test you can trust and read its results honestly.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Run a Test You Can Trust</h2>
+      <p class="muted">Four short lessons: what A/B testing is and when to use it, designing a valid test, statistical significance and common pitfalls, and reading results.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. What & When</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Designing a Valid Test</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Significance & Pitfalls</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Reading Results</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>What A/B Testing Is (and Isn't For)</h3>
+      </div>
+
+      <p>
+        An A/B test randomly splits traffic between a <strong>control</strong> (A, the current
+        version) and a <strong>variant</strong> (B, the change), then compares a metric chosen in
+        advance. It's a precise tool — and precise tools have a scope.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Good fit</span>
+          <h4>Isolated, well-defined change</h4>
+          <p>Enough traffic, a clear single metric — a button, a flow, a headline.</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Poor fit</span>
+          <h4>Big strategic bets, tiny traffic, "why" questions</h4>
+          <p>A/B testing tells you which option wins, not why, and needs real volume to work.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team wants to A/B test whether to pivot the entire company to a new business model. Is A/B testing the right tool?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A pivot of the entire business model isn't an isolated, measurable variable you can cleanly split traffic on.">A) Yes, A/B testing works for any decision as long as you split users randomly.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A/B testing shines on contained, measurable changes, not company-wide strategic bets.">B) No — a strategic pivot isn't an isolated, well-defined variable you can cleanly test with a metric; that scale of decision needs a different kind of validation.</button>
+          <button class="pm-quiz-option" data-msg="Duration doesn't fix the fundamental mismatch — a business-model pivot isn't the kind of contained change A/B testing is built for.">C) Yes, but only if the test runs for at least a year.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Designing a Valid Test <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Designing a Test You Can Trust</h3>
+      </div>
+
+      <p>
+        A trustworthy A/B test follows a short checklist, every time.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Hypothesis first</h4><p>What you expect to happen, and why, before you look at any result.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">2</span><div><h4>One variable changed</h4><p>Only the thing you're testing differs between control and variant.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Randomized split</h4><p>Users are assigned to A or B by chance, not by any pattern that could bias the groups.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Sample size &amp; duration set in advance</h4><p>Calculated before running, not eyeballed once results start coming in.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team changes both the headline and the button color in their "B" variant, versus the original "A." What's the design flaw?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Bundling two changes into one variant means you can't tell which one (or both, or neither) caused any observed difference.">A) None, testing two changes at once saves time.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Run two separate tests, or use a multi-variant design that isolates each change.">B) It changes more than one variable, so a result can't be attributed to either the headline or the button color specifically.</button>
+          <button class="pm-quiz-option" data-msg="The issue isn't which specific change is unworthy — it's that bundling them prevents attributing the result to either one.">C) The flaw is only that button color changes are usually not worth testing.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Significance & Pitfalls <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Statistical Significance and Common Pitfalls</h3>
+      </div>
+
+      <p>
+        <strong>Statistical significance</strong> is your confidence that an observed difference is
+        real rather than random noise — commonly using a threshold like p &lt; 0.05, which means
+        that if there were truly no difference, you'd see a gap this large less than 5% of the time
+        by chance. Three pitfalls quietly undermine it.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Pitfall</span>
+          <h4>Peeking</h4>
+          <p>Checking results early and often, stopping the moment it looks significant, inflates false positives.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Pitfall</span>
+          <h4>Novelty Effect</h4>
+          <p>Users react to anything new, temporarily — early lift can fade once the change stops feeling new.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Pitfall</span>
+          <h4>Sample Ratio Mismatch</h4>
+          <p>If the actual split isn't the intended 50/50, something in the setup is likely broken.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team checks their test results every morning and stops the test the moment it crosses statistical significance on day 3 of a planned 4-week test. What's the risk?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Checking repeatedly and stopping at the first significant-looking moment inflates the chance of a false positive.">A) None, stopping as soon as you have significance saves time and resources.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Decide the duration and sample size before you start, and stick to it.">B) Peeking — checking repeatedly and stopping early inflates the chance of declaring a false positive that would have reverted with more data.</button>
+          <button class="pm-quiz-option" data-msg="The statistical risk of peeking exists regardless of whether this particular result happens to hold up.">C) The risk only applies if the test later turns out to be wrong.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Reading Results <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Reading and Acting on Results</h3>
+      </div>
+
+      <p>
+        A finished test still needs careful reading — the top-line number rarely tells the whole
+        story.
+      </p>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-chart-line"></i> A lift that fades</h4>
+        <p>
+          A redesigned homepage shows a 15% signup lift in its first three days, then shrinks to
+          2% by week three. That's the novelty effect: users reacted to the new look, then
+          settled back to normal behavior. Run tests long enough to see past the spike, and
+          segment results — an aggregate win can hide a loss for a specific user group.
+        </p>
+        <p class="pm-key-line">
+          Statistical significance isn't the same as practical significance. A tiny but "real"
+          lift might not be worth the complexity of shipping it.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A test result is statistically significant with a 0.3% lift in conversion, but implementing the winning variant permanently would add real long-term maintenance complexity. What should the team weigh alongside statistical significance?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Statistical significance only tells you the effect is probably real, not that it's big enough to be worth the cost of shipping it.">A) Nothing else — statistical significance alone is sufficient to justify shipping.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A real effect and a worthwhile effect aren't automatically the same thing.">B) Practical significance — whether a 0.3% lift is actually big enough to justify the added complexity and maintenance cost of shipping it.</button>
+          <button class="pm-quiz-option" data-msg="Day-of-week timing isn't the deciding factor here — the core question is whether the effect size is meaningful enough to act on.">C) Whether the test ran on a weekday or weekend.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>A/B Testing Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">A/B Testing</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can design a valid A/B test, spot a statistical pitfall, or read a result honestly.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A team wants to test a new checkout flow but only gets 50 visitors a week to that page.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Extremely low traffic may make it impractically slow, or impossible, to reach a reliable sample size.">
+            A) None, any traffic is enough to run a valid test.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Not every question needs to be answered by A/B testing.">
+            B) Low traffic may make it impractically slow to reach a reliable sample size — consider a different validation method for this page.
+          </button>
+          <button class="pm-quiz-option" data-msg="Professionalism isn't the issue — the concern is statistical, an underpowered test can't reliably detect a real effect.">
+            C) The concern is only that the test will look unprofessional.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A team runs a test with three different variants (A, B, and C) simultaneously, splitting traffic three ways.</p>
+        <div class="pm-quiz">
+          <p><strong>Is this a valid design?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Multi-variant tests (sometimes called A/B/n) are a legitimate and common design.">
+            A) No, A/B tests can only ever have two variants, full stop.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The core rules (randomization, single tested element) still apply with more than two variants.">
+            B) Yes, this is a common valid pattern as long as the split is randomized and each variant changes the same single tested element.
+          </button>
+          <button class="pm-quiz-option" data-msg="It typically needs more traffic, but &quot;exactly three times&quot; isn't a fixed rule — it depends on effect size and desired confidence.">
+            C) No, because comparing three variants always requires exactly three times the traffic.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A test's control group gets the old checkout flow, and the variant group gets a new checkout flow that also happens to load on a faster server.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the design problem?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Random assignment doesn't fix the problem if the groups differ in more than one way.">
+            A) None, as long as both are randomly assigned.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Server speed is now bundled in as a second, uncontrolled variable.">
+            B) It changes two things at once (the flow and the server speed), so any lift can't be attributed to the flow design alone.
+          </button>
+          <button class="pm-quiz-option" data-msg="Faster servers aren't inherently unfair — the issue is that it's an uncontrolled extra variable.">
+            C) The problem is only that faster servers are always unfair to test with.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A team observes their test's traffic split is landing at 62/38 instead of the intended 50/50.</p>
+        <div class="pm-quiz">
+          <p><strong>What should they do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A meaningfully skewed split signals something is broken in randomization or tracking, and can invalidate the results.">
+            A) Proceed with analysis as normal, since a rough split is close enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A skewed split is a red flag that something upstream is broken.">
+            B) Investigate the sample ratio mismatch before trusting any result.
+          </button>
+          <button class="pm-quiz-option" data-msg="Manually forcing the numbers to look balanced doesn't fix the underlying bug that caused the mismatch.">
+            C) Just double the traffic to the smaller group to balance it out artificially.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A test reaches p < 0.05 after just 200 total visitors, far below the pre-calculated sample size of 5,000.</p>
+        <div class="pm-quiz">
+          <p><strong>Should the team trust this early result?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Reaching significance early with far too few visitors is a classic sign the result may be noise.">
+            A) Yes, since p < 0.05 means it's definitely a real effect regardless of sample size.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Early significant results are much more prone to reverting with more data.">
+            B) Be cautious — hitting significance far before the planned sample size is a sign the result might not be stable or trustworthy.
+          </button>
+          <button class="pm-quiz-option" data-msg="p-values are directly affected by sample size — a small-sample result is much less stable.">
+            C) It doesn't matter, since p-values are unaffected by sample size.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">A redesigned homepage shows a 15% lift in signups during its first three days, then the lift shrinks to 2% by week three.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the likely explanation?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A shrinking lift after a strong early spike is a classic sign of the novelty effect fading, not necessarily evidence the redesign is bad.">
+            A) The redesign is failing and should be reverted immediately.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. 2% may still be a real, worthwhile improvement once the spike settles.">
+            B) The novelty effect — users reacted strongly to the new look at first, and that initial spike faded as it stopped feeling new.
+          </button>
+          <button class="pm-quiz-option" data-msg="Nothing describes an uneven split; a fading early lift over time is the signature of a novelty effect.">
+            C) The test must have a sample ratio mismatch.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">A PM wants to know "why" users prefer variant B over variant A, not just which one performs better.</p>
+        <div class="pm-quiz">
+          <p><strong>What should supplement the A/B test?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A/B tests answer &quot;which&quot; performs better, not &quot;why&quot; — running it longer only strengthens confidence in the same &quot;which&quot; answer.">
+            A) Running the A/B test longer will eventually reveal the "why."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Quant tells you which won; qual tells you why.">
+            B) Qualitative research — user interviews or session recordings — to understand the reasoning behind the quantitative result.
+          </button>
+          <button class="pm-quiz-option" data-msg="A/B results show a measured difference, not the reasoning behind it.">
+            C) Nothing; A/B test results always make the underlying reason obvious.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A team pre-registers success criteria (95% confidence, minimum 3% lift) before running a test, then hits 95% confidence with only a 1% lift.</p>
+        <div class="pm-quiz">
+          <p><strong>What should they do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The pre-agreed bar also required a minimum 3% lift, which wasn't met — moving the goalposts undermines pre-registration.">
+            A) Ship it anyway, since 95% confidence was reached.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The point of pre-registering criteria is to honor them even when the result is disappointing.">
+            B) Treat it as not meeting the pre-agreed bar — the lift is real but too small to clear the success criteria set in advance.
+          </button>
+          <button class="pm-quiz-option" data-msg="Retroactively lowering the bar after seeing the result is exactly the goalpost-moving pre-registration prevents.">
+            C) Lower the required lift to 1% retroactively so the test counts as a win.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A test is stopped at the pre-planned sample size, but the result shows the variant performing worse than control, with high confidence.</p>
+        <div class="pm-quiz">
+          <p><strong>Is this test a failure?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A well-run test with a clear negative result is valuable — it prevented shipping something that would have hurt the metric.">
+            A) Yes, any test with a negative result was a waste of time and resources.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Success is about the process being trustworthy, not about the variant winning.">
+            B) No — a well-designed test that clearly shows the variant underperforms is a successful test.
+          </button>
+          <button class="pm-quiz-option" data-msg="Rerunning until you get the answer you wanted is a form of peeking, not legitimate validation.">
+            C) It's only a success if the team reruns it until the variant wins.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A team segments their test results and finds the variant won overall, but actually performed worse specifically for mobile users.</p>
+        <div class="pm-quiz">
+          <p><strong>What should the team do with this finding?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Ignoring a segment where the variant actively underperforms risks harming a meaningful subset of users.">
+            A) Ignore the segment-level data since the overall result was positive.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Segment-level results can reveal what the aggregate hides.">
+            B) Investigate further — the aggregate win might be masking a real harm to mobile users, worth understanding before a full rollout.
+          </button>
+          <button class="pm-quiz-option" data-msg="Excluding mobile without understanding why skips a chance to improve the design for everyone.">
+            C) Automatically ship the variant to everyone except mobile users, no further analysis needed.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A stakeholder wants to run a test on a page that gets huge traffic but insists on ending it after just 6 hours because "we already have enough data."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern, even with high traffic?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Even with high traffic, very short durations can miss day-of-week variation or catch a temporary blip.">
+            A) None, high traffic means results are always trustworthy almost immediately.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Duration matters independently of raw traffic volume.">
+            B) A short duration, even with high volume, may miss day-of-week or time-of-day variation and catch a temporary blip rather than a stable pattern.
+          </button>
+          <button class="pm-quiz-option" data-msg="Duration-related risks apply regardless of traffic volume.">
+            C) The concern is only relevant for low-traffic pages, never high-traffic ones.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A team's variant wins with statistical significance, and someone proposes immediately testing five more small tweaks on top of it before locking in the winner.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk with this plan?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Layering multiple new sequential tests before locking in the winner adds complexity and new chances for noise or confounded results.">
+            A) None, testing more tweaks is always additive and safe.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Lock in and ship the validated winner, then test the next change separately.">
+            B) Stacking more untested changes before locking in a validated winner reintroduces the single-variable discipline this whole test was built to protect.
+          </button>
+          <button class="pm-quiz-option" data-msg="Time cost is a minor concern next to compounding structural problems.">
+            C) The risk is only that it will take more calendar time.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A test's variant is a completely redesigned page with a new layout, new copy, new images, and a new checkout flow, all shipped as a single test.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the core design flaw here?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A valid comparison to control doesn't fix the deeper issue: no one can tell which bundled change drove the result.">
+            A) None — as long as the whole thing is compared against the original as control, it's a valid test.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is the classic multi-variable bundling problem, just at a larger scale.">
+            B) Too many variables changed at once — even if the variant wins, there's no way to know which specific element drove the improvement.
+          </button>
+          <button class="pm-quiz-option" data-msg="Testing redesigns is entirely valid — the flaw here is bundling many changes into one variant.">
+            C) The flaw is only that redesigns should never be tested, only shipped directly.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A team wants to declare victory on a test that reached significance, but they never decided in advance how long to run it or how large a sample they needed.</p>
+        <div class="pm-quiz">
+          <p><strong>What's missing from their process?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Without a pre-planned sample size or duration, there's a much higher risk the team is essentially peeking.">
+            A) Nothing — reaching significance is the only requirement to conclude a test.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is exactly the discipline that protects against peeking.">
+            B) A pre-registered sample size and test duration — without them, the team can't know if they stopped early on noise.
+          </button>
+          <button class="pm-quiz-option" data-msg="More approvers doesn't fix a structural gap in the test's statistical design.">
+            C) A larger team of stakeholders to approve the result.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A test shows a statistically significant result, and a PM says "ship it" without checking whether the lift is large enough to justify the engineering cost of maintaining two code paths going forward.</p>
+        <div class="pm-quiz">
+          <p><strong>What step did the PM skip?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Statistical significance says the effect is probably real; it says nothing about whether it's big enough to justify the ongoing cost.">
+            A) Nothing — statistical significance alone is sufficient grounds to ship.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is exactly the gap between statistical and practical significance.">
+            B) Weighing practical significance — whether the size of the effect justifies the real cost of implementing and maintaining the change.
+          </button>
+          <button class="pm-quiz-option" data-msg="Rerunning isn't the missing step — the gap is about weighing cost against effect size.">
+            C) Running the test for a second time to double-check.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>A/B Testing Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-scale-balanced"></i> When A/B Testing Fits</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-circle-check"></i></span><div><h4>Good fit</h4><p>Isolated change, enough traffic, one clear metric.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-circle-xmark"></i></span><div><h4>Poor fit</h4><p>Strategic bets, tiny traffic, or "why" questions.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-vial"></i> Designing a Valid Test</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Hypothesis first</h4><p>State the expected effect before you look.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>One variable</h4><p>Only the tested element differs.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Randomized split</h4><p>No bias in who lands in A or B.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Sample size &amp; duration set in advance</h4><p>Not eyeballed once results appear.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Statistics &amp; Pitfalls</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-percent"></i></span><div><h4>Statistical significance</h4><p>p &lt; 0.05 is a common threshold.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-eye"></i></span><div><h4>Peeking</h4><p>Stopping early inflates false positives.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-sparkles"></i></span><div><h4>Novelty effect</h4><p>Early lift can fade as things stop feeling new.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-scale-unbalanced"></i></span><div><h4>Sample ratio mismatch</h4><p>Uneven split signals a broken setup.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-magnifying-glass-chart"></i> Reading Results Honestly</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-clock"></i></span><div><h4>Run long enough</h4><p>See past the novelty spike.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-layer-group"></i></span><div><h4>Segment results</h4><p>An aggregate win can hide a real loss.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-scale-balanced"></i></span><div><h4>Practical vs. statistical</h4><p>Is the effect big enough to be worth it?</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/ab-testing.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

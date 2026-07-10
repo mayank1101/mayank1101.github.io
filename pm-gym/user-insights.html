@@ -1,0 +1,848 @@
+---
+layout: pm-gym
+title: "Driving User Insights — PM Gym"
+description: "A beginner-friendly, interactive guide to turning raw user data into insights: data vs. insight, synthesis, affinity mapping, and insight statements."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Driving User Insights</h1>
+  <p class="lead">Turn piles of data into "aha" moments your team can act on</p>
+  <p class="muted">
+    Every team drowns in data — dashboards, surveys, interview notes. Insight is what's rare:
+    the understanding of <em>why</em> users behave the way they do, sharp enough to change what
+    you build. This guide teaches the craft of getting from one to the other.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>From Data to Insight</h2>
+      <p class="muted">Four short lessons: what an insight actually is, where the raw material comes from, how to synthesize it, and the traps to dodge.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. Data vs. Insight</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. The Two Sources</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Synthesis</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Traps &amp; Biases</button>
+    </div>
+
+    <!-- Lesson 1 -->
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Data vs. Insight</h3>
+      </div>
+
+      <p>
+        The words get used interchangeably, but they're different animals.
+        <strong>Data is a fact. An insight is the why behind the fact, sharp enough to
+        suggest an action.</strong>
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the doctor's visit</h4>
+        <p>
+          "Your temperature is 39&deg;C" is <strong>data</strong> — a true fact, but on its own it
+          doesn't tell you what to do. "You have a throat infection, so take this antibiotic for a
+          week" is an <strong>insight</strong> — it explains <em>why</em> you have the fever and
+          points to an action. A thermometer full of readings is useless until someone works out
+          what's causing them. Product teams drown in the thermometer readings (dashboards) but
+          what they actually need is the diagnosis.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-arrow-trend-down"></i> An example ladder</h4>
+        <p><strong>Data:</strong> "40% of users abandon checkout at the payment step."</p>
+        <p><strong>Finding:</strong> "Abandonment spikes right after the order total updates."</p>
+        <p><strong>Insight:</strong> "Users abandon because the shipping fee appears only at the
+        last step — the total jumping 20% at payment feels like a trap."</p>
+        <p class="pm-key-line">
+          Data describes. Insights explain — and an explanation tells you what to try next.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is an actual <strong>insight</strong>, not just data?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A precise, useful fact — but still a fact. It says what happens, not why. No 'because', no action implied: data.">
+            A) "Daily active users dropped 12% in March."
+          </button>
+          <button class="pm-quiz-option" data-msg="This is a segmentation of the same fact — sharper data, still data. The why is missing. Keep digging until a 'because' appears.">
+            B) "The drop is concentrated among Android users on older devices."
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="This one explains the cause (the update broke performance on older hardware) and implies the action (fix performance, or stop shipping heavy updates to old devices). Observation + because + implication = insight.">
+            C) "Android users on older devices left because the March update made the app take 15+ seconds to open — startup speed is a dealbreaker on cheap hardware."
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Next: The Two Sources <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 2 -->
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>The Two Sources of Raw Material</h3>
+      </div>
+
+      <p>
+        Insights are refined from two very different ores — and you almost always need both:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — a detective on a case</h4>
+        <p>
+          A detective uses two kinds of evidence. The <strong>security camera</strong> counts how
+          many people came through the door and exactly when — that's the <strong>quantitative</strong>
+          side: precise, wide-reaching, tells you <em>what</em> happened and <em>how much</em>. But
+          the camera can't tell you <em>why</em> anyone did anything. For that, the detective
+          <strong>interviews witnesses</strong> — the <strong>qualitative</strong> side: rich,
+          explanatory, but only a few voices. Crack the case and you need both: the footage points
+          you to the right moment; the interviews reveal the motive. Numbers find the crime scene;
+          conversations find the culprit.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">The What</span>
+          <h4>Quantitative</h4>
+          <p>Analytics, funnels, A/B tests, large surveys. Tells you what is happening, to how many, and how often. Great at finding <em>where</em> to look.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">The Why</span>
+          <h4>Qualitative</h4>
+          <p>Interviews, session recordings, support tickets, reviews. Tells you why it's happening. Great at explaining <em>what you found</em>.</p>
+        </div>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-link"></i> They work as a pair</h4>
+        <p>
+          Analytics spot the 40% checkout drop (what). Five interviews reveal the surprise
+          shipping fee (why). Quant without qual leaves you guessing at causes; qual without
+          quant leaves you unsure if five loud voices represent five thousand quiet ones.
+        </p>
+        <p class="pm-key-line">
+          Numbers find the crime scene; conversations find the culprit.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Your funnel shows most sign-ups stall at the profile-photo step. You want to know
+          <strong>why</strong>. What's the best next move?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A bigger sample makes the *what* more precise — you already know the what. More quant can't answer a why question; you need to see or hear real users at that step.">
+            A) Re-run the funnel analysis on a bigger sample to confirm the number.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right — a why question needs qualitative evidence. Recordings and quick interviews will show whether it's privacy worry, upload failures, or having no good photo handy. Each cause means a totally different fix.">
+            B) Watch session recordings of that step and interview a handful of users who stalled.
+          </button>
+          <button class="pm-quiz-option" data-msg="That's a fix, chosen before knowing the cause. If the real issue is upload failures on slow connections, making the step skippable hides the bug instead of fixing it. Diagnose first.">
+            C) Make the photo step skippable and ship it.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Next: Synthesis <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 3 -->
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Synthesis: Finding the Pattern</h3>
+      </div>
+
+      <p>
+        After research you're left with a mess: transcripts, notes, numbers. <strong>Synthesis</strong>
+        is the craft of finding the patterns hiding in the mess. The workhorse technique is
+        <strong>affinity mapping</strong>:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — sorting a pile of laundry</h4>
+        <p>
+          Faced with a huge pile of clean laundry, you don't start by inventing labels. You pick up
+          items and start making piles as natural groups appear — socks here, shirts there, then a
+          "kids' clothes" pile you didn't plan for. <strong>Affinity mapping works the same way:</strong>
+          break your notes into individual scraps, then let the piles form from what's actually
+          there, and only name each pile once it exists. If you'd pre-decided the bins ("pricing,"
+          "speed," "design"), you'd just cram everything into those and never notice the surprising
+          new pile — the one that's usually the real insight.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key">1</span>
+          <div>
+            <h4>Atomize</h4>
+            <p>Split everything into single observations — one fact or quote per note. Ten interviews often yield 200+ notes.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">2</span>
+          <div>
+            <h4>Cluster</h4>
+            <p>Group similar notes together — without predefined categories. Let the groups emerge from the data.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">3</span>
+          <div>
+            <h4>Name the themes</h4>
+            <p>Once a cluster is solid, give it a name that captures the pattern ("distrust of automatic payments").</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key">4</span>
+          <div>
+            <h4>Write insight statements</h4>
+            <p>Convert the strongest themes into: <em>[observation], because [reason], which means [implication]</em>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Why cluster the notes first and name the themes <strong>after</strong>,
+          instead of starting with categories like "pricing", "UX", "performance"?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Speed isn't the reason — pre-made buckets are actually faster. The problem with them is what they do to your findings, not how long they take.">
+            A) It's faster than making categories upfront.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Pre-made categories just re-sort the data into what you already believed — every note lands in an expected bucket and nothing new can emerge. Letting clusters form first is how genuinely surprising themes get a chance to appear.">
+            B) Pre-made categories re-sort your assumptions; emergent clusters let unexpected patterns appear.
+          </button>
+          <button class="pm-quiz-option" data-msg="Note count doesn't change — you cluster the same 200 notes either way. What changes is whether the structure comes from the data or from your preconceptions.">
+            C) It produces more notes to work with.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Next: Traps &amp; Biases <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <!-- Lesson 4 -->
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>The Traps That Fake Insights</h3>
+      </div>
+
+      <p>
+        Bad insights are more dangerous than no insights — they carry the authority of "research"
+        while pointing the wrong way. Three traps cause most of them:
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — three traps in daily life</h4>
+        <p>
+          You already know these traps from outside work. <strong>Confirmation bias:</strong> only
+          reading news that agrees with what you already think, and feeling more sure as a result.
+          <strong>The say/do gap:</strong> everyone who swears they'll start the diet "on Monday"
+          — the intention is genuine, the behavior rarely follows. <strong>The loud minority:</strong>
+          judging a restaurant by the one furious online review while a hundred happy diners say
+          nothing. Research falls into the exact same traps, just dressed up in charts — which makes
+          a wrong conclusion feel authoritative. Naming the trap is how you catch it.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-magnet"></i></span>
+          <div>
+            <h4>Confirmation bias</h4>
+            <p>Noticing only evidence that supports what you already believe. Antidote: ask "what would prove me wrong?" and weight surprises more than confirmations.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-comments"></i></span>
+          <div>
+            <h4>The say/do gap</h4>
+            <p>People honestly misreport their own behavior. "I'd definitely use this" costs nothing to say. Antidote: prefer behavioral evidence — what people actually do.</p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-bullhorn"></i></span>
+          <div>
+            <h4>The loud minority</h4>
+            <p>Five passionate voices can sound like the whole market. Antidote: check every qualitative theme against quantitative scale before acting.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          In a survey, 80% of users say they would "definitely use" a proposed feature.
+          What does this actually tell you?
+        </p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="That's the trap. Saying yes to a hypothetical costs nothing; using a feature costs time and habit change. Stated intent routinely overshoots real usage by huge margins.">
+            A) The feature will be used by roughly 80% of users — greenlight it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right — it's a directional signal of interest, polluted by the say/do gap and by how easy it is to please a surveyor. Before committing engineering, get behavioral proof: a fake-door test or prototype in front of real tasks.">
+            B) There's some interest — now verify with behavioral evidence like a fake-door test before building.
+          </button>
+          <button class="pm-quiz-option" data-msg="Not worthless — it's a legitimate weak signal and helps prioritize what to test. It's just nowhere near sufficient on its own to justify building.">
+            C) Nothing at all — surveys are useless.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>User Insights Flashcards</h2>
+      <p class="muted">Five cards covering the definitions, methods, and traps. Click to flip.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Definition</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 5</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Data vs. Insight</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 5</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test insight discipline: separating data from insight, pairing quant with qual, synthesizing without bias, and dodging the traps. Pick the strongest move, then read why the others miss.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">Analytics show 40% of users abandon checkout at the payment step. Your CEO says: 'Obviously we need more payment methods.'</p>
+        <div class="pm-quiz">
+          <p><strong>What do you do?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The 40% is data; 'needs payment methods' is one guess at the why. If the real cause is a surprise shipping fee, new payment methods fix nothing — expensively.">
+            A) Add the payment methods — the CEO has seen this movie before.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The metric names the crime scene; qualitative work finds the culprit. Maybe it's shipping-fee shock, maybe card failures, maybe trust — each cause demands a different fix.">
+            B) Watch session recordings and interview a few abandoners to find the actual why; treat the CEO's theory as one hypothesis to test.
+          </button>
+          <button class="pm-quiz-option" data-msg="Testing surface tweaks before understanding the cause is optimization theater. A/B tests answer 'which is better?' — you don't yet know what 'better' should target.">
+            C) A/B test different button colors on the payment page.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">You've finished ten user interviews and have pages of messy notes. The team wants findings tomorrow.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the right synthesis move?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Memorable ≠ representative. Cherry-picked quotes launder your existing beliefs into 'findings' — the fast lane to confirmation bias.">
+            A) Pull out the five most memorable quotes and build a slide deck around them.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="The discipline matters: clusters formed from the data (not pre-made buckets) let unexpected patterns appear, and statements with quotes attached survive contact with stakeholders.">
+            B) Atomize the notes into single observations, affinity-map them into emergent clusters, name themes only after they form, then write insight statements with evidence attached.
+          </button>
+          <button class="pm-quiz-option" data-msg="Frequency counting misses meaning — ten users saying 'notifications' may mean five different problems. Clustering by meaning, not word, is what surfaces the real themes.">
+            C) Count how often each keyword appears across the transcripts.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A stakeholder shares a survey: 80% of users say they would 'definitely use' a proposed feature. They want it greenlit this week.</p>
+        <div class="pm-quiz">
+          <p><strong>What does this evidence actually support?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Saying yes to a hypothetical costs nothing; using a feature costs time and habit change. Stated intent routinely overshoots behavior by huge margins — the say/do gap.">
+            A) Greenlight it — 80% is an overwhelming majority.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="If 80% claim interest but 3% click the fake door, you just saved a quarter of engineering. Watch feet, not mouths.">
+            B) Treat it as a directional signal and get behavioral proof cheaply: a fake-door test or prototype with real tasks, before committing engineering.
+          </button>
+          <button class="pm-quiz-option" data-msg="A bigger sample measures the same thing more precisely — stated intent. The flaw isn't sample size; it's that words about future behavior are weak evidence, at any n.">
+            C) Re-run the survey with a larger sample to be sure.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A report states: "Users who use Feature X retain 3x better than users who don't." A VP concludes: "So let's push everyone to use Feature X and retention will triple."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the flaw in that reasoning?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The leap from '3x correlation' to 'cause retention to triple' assumes Feature X drives retention. But it may be that already-engaged (and thus retention-prone) users simply happen to find Feature X — the classic correlation-vs-causation trap.">
+            A) No flaw — the 3x number clearly proves Feature X causes retention.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This confuses correlation with causation. Heavy users may adopt Feature X because they're already engaged — the engagement causes both the feature use AND the retention. Forcing casual users into Feature X may do nothing. To find the real causal insight, run an experiment (randomly encourage some users to try it) or dig qualitatively into why engaged users adopt it. A correlation is a place to investigate, not a proven lever.">
+            B) It confuses correlation with causation — engaged users may adopt X because they're already loyal, so forcing X on casual users may not move retention. Test it causally first.
+          </button>
+          <button class="pm-quiz-option" data-msg="The problem isn't that 3x is 'too high to believe' — the number may be perfectly accurate. The flaw is interpreting a correlation as proof that pushing the feature will cause the retention, which doesn't follow.">
+            C) The 3x figure is probably a calculation error; recompute it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">During synthesis, you notice one interview flatly contradicts the neat theme forming from the other nine. You're tempted to set it aside as an outlier.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the disciplined move?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Discarding a contradicting case just to keep a clean story is textbook confirmation bias. The dissenting interview might reveal a distinct segment, a boundary condition, or a flaw in your emerging theme — exactly the kind of surprise worth weighting highly.">
+            A) Discard it — nine agreeing interviews beat one outlier.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Examine the contradiction before dismissing it. It may point to a different user segment, a condition where your theme breaks down, or an error in your reasoning. Insight discipline means weighting surprises highly and asking 'what would prove me wrong?' — not smoothing away inconvenient data to protect a tidy narrative. If it's genuinely a one-off, note why; if it reveals a boundary, your insight just got sharper.">
+            B) Dig into the contradiction — it may reveal a distinct segment or a limit of your theme; surprises deserve extra weight, not deletion.
+          </button>
+          <button class="pm-quiz-option" data-msg="Throwing out the nine-interview theme because of one dissenter overreacts the other way. The right move isn't to flip your conclusion — it's to investigate the contradiction and let it refine (or bound) the theme.">
+            C) Abandon the whole theme because of the single contradiction.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">Support tickets are full of complaints about a specific feature. A PM concludes "everyone hates this feature" and wants it removed.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the sampling trap here?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Support tickets are a self-selected, skewed sample — only people with problems write in. The silent majority who use the feature happily never file a ticket, so 'everyone hates it' over-reads a vocal, unrepresentative slice.">
+            A) No trap — tickets are direct user feedback, so they represent everyone.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Support tickets are a biased sample: only frustrated users file them, so they over-represent problems and under-represent satisfaction (survivorship / self-selection bias, cousin of the loud minority). Before removing the feature, check the quantitative scale — how many total users use it happily vs. complain? The tickets flag a real pain worth investigating, but they can't tell you how widespread it is on their own.">
+            B) Tickets are a self-selected sample of unhappy users — check the feature's usage and satisfaction across all users before concluding 'everyone' hates it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Reading more tickets deepens the same bias — you'd just gather more complaints from the same self-selected unhappy group. The fix is to weigh the tickets against quantitative usage data from all users, not to sample more of the complainers.">
+            C) Read even more tickets to confirm everyone hates it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">In an interview, a user says: "I'd pay $50 a month for this in a heartbeat." The PM writes down "users will pay $50/month" as an insight.</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with treating that as an insight?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A single enthusiastic quote about future spending is the say/do gap at its purest. What people claim they'll pay, with no money actually on the line, wildly overstates real willingness to pay — and one voice isn't a pattern.">
+            A) Nothing — a direct quote about price is strong evidence.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It's the say/do gap plus a sample of one. Hypothetical willingness-to-pay stated in an interview costs nothing and routinely far exceeds real behavior. A genuine insight about pricing needs behavioral proof — a pre-sale, a paid pilot, or at least many consistent signals — not one person's cost-free promise. Treat the quote as a hypothesis to test, not a finding.">
+            B) It's the say/do gap and a sample of one — hypothetical willingness-to-pay overstates reality, so verify with a pre-sale or paid pilot before calling it an insight.
+          </button>
+          <button class="pm-quiz-option" data-msg="The issue isn't that $50 is 'too specific' — it's that a hypothetical spending claim from one person, with no real money at stake, is weak evidence. A different number quoted the same way would be just as unreliable.">
+            C) The $50 figure is too specific to be believable.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">You write: "Users are frustrated with onboarding." A stakeholder asks, "So what should we actually do?" and you have no clear answer.</p>
+        <div class="pm-quiz">
+          <p><strong>Why does the statement fail as an insight?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Users are frustrated with onboarding' is really just a finding — it names a problem area but no cause and no direction. Because it lacks the 'why' and the 'so what,' no one can act on it, which is exactly what the stakeholder's question exposes.">
+            A) It's fine — naming the problem area is a complete insight.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A real insight follows the format: [observation], because [reason], which means [implication]. Your statement has only the observation. Sharpen it: 'Users abandon onboarding at the empty-dashboard step because they don't know what to do first, which means we should add a guided first action.' Now there's a why and a clear action. Without the 'because' and 'which means,' it's a finding, not an insight.">
+            B) It's missing the 'why' and the 'so what' — add the cause and implication (e.g., 'they stall at the empty dashboard because there's no first step, so add a guided action').
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding statistics to 'users are frustrated' makes it more precise data, but still doesn't supply the cause or the recommended action. Quantifying a vague finding doesn't turn it into an actionable insight.">
+            C) It just needs a percentage attached to sound more rigorous.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A PM runs five user interviews, all with people recruited from the company's most-active-users list, and generalizes the findings to the entire user base.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the sampling problem?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Interviewing only your power users gives you a biased sample. Their needs, tolerance for complexity, and reasons for staying differ sharply from casual users or churned users — so generalizing to 'everyone' imports the power-user perspective as if it were universal.">
+            A) No problem — talking to your most engaged users is ideal.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Recruiting only power users is selection bias: they're unrepresentative of casual, new, or churned users, who often have the most important (and different) pain points. If you want insights about the whole base — especially about churn or activation — you must talk to those other segments too. Match your sample to the question; a power-user-only sample answers 'why do power users stay,' not 'what does everyone need.'">
+            B) The sample is skewed to power users — their needs differ from casual and churned users, so match the sample to the question rather than generalizing from one segment.
+          </button>
+          <button class="pm-quiz-option" data-msg="The core issue isn't that five is too few (though more helps) — it's that all five come from one unrepresentative segment. Even 50 power-user interviews would still miss the casual and churned perspectives you're generalizing to.">
+            C) Five interviews is simply too small; 20 power users would fix it.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Quant shows a sudden 15% drop in weekly usage. You have no idea why. A colleague says "let's just wait a month and see if it recovers."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the insight-driven response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Waiting passively wastes the clearest signal you'll get. The quant told you WHERE and WHEN something broke; the whole point is to pair it with qualitative digging now, while the cause is fresh and users remember, rather than hoping it fixes itself.">
+            A) Wait a month — the data might recover on its own.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The quant found the crime scene (a 15% drop, and you can see exactly when it started). Now go find the culprit with qualitative work: what changed around that date (a release, an outage, a pricing change)? Interview or survey users who dropped off, watch recordings, read tickets from that window. Pairing the numbers with conversations turns a scary metric into a diagnosable cause — and a fix.">
+            B) Pair the quant with qual — investigate what changed around that date (releases, outages) and talk to users who dropped off, to find the actual cause.
+          </button>
+          <button class="pm-quiz-option" data-msg="Immediately shipping features to 'boost usage' treats the symptom before diagnosing the cause. If the drop came from a bug or a bad release, new features won't fix it — and might add noise that hides the real problem. Diagnose first.">
+            C) Immediately ship new features to boost usage back up.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A designer asks users, "Don't you think the current navigation is confusing?" Most agree. The designer reports "users find navigation confusing" as a key insight.</p>
+        <div class="pm-quiz">
+          <p><strong>What undermines this finding?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The question itself planted the answer. 'Don't you think X is confusing?' is a leading question — people tend to agree to be polite, so the 'finding' mostly reflects the designer's own premise, not independent user experience.">
+            A) Nothing — users agreed, so navigation is confusing.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The leading question biased the result — it invited agreement rather than eliciting genuine experience, so the 'insight' is contaminated by the designer's assumption (a form of confirmation bias baked into the method). A cleaner approach: give users a task ('find your billing history') and observe where they actually struggle, or ask open, neutral questions. Behavior and unprompted responses beat agreement with a loaded premise.">
+            B) The leading question ('don't you think it's confusing?') planted the answer — observe users doing a real task or ask neutral questions instead of inviting agreement.
+          </button>
+          <button class="pm-quiz-option" data-msg="The sample size isn't the core flaw — even 100 users answering a leading question would give a biased result. The problem is the method: a loaded question that steers people toward the conclusion the designer already held.">
+            C) The sample was too small; ask 100 users the same question.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Your analytics clearly show WHERE users drop off (a specific screen), and interviews clearly explain WHY (a confusing label). A stakeholder says "we only trust hard numbers, ignore the interviews."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the counter-argument?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dropping the qualitative side leaves you with a 'what' and no 'why.' The numbers show the drop-off but can't explain the confusing label — and without the cause, you can't design the right fix. Ignoring the interviews throws away the half of the picture that tells you what to actually do.">
+            A) Agree — only the quantitative drop-off number matters.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Quant and qual answer different questions and are strongest together. The analytics prove the problem is real and sized (where and how many); the interviews explain the cause (the confusing label) so you know what to change. Trusting only numbers gives you a precise measurement of a problem you can't diagnose. The insight — and the fix — comes from pairing them.">
+            B) Quant and qual answer different questions — the numbers prove the problem is real and sized, the interviews explain the cause so you can fix it; you need both.
+          </button>
+          <button class="pm-quiz-option" data-msg="Flipping to 'only trust the interviews' is the opposite error. Qual alone can't tell you how widespread the problem is. The right stance is that the two are complementary, not that one should replace the other.">
+            C) Counter that only the interviews matter and the numbers are noise.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">After synthesis, you have a strong qualitative theme from interviews: "users abandon because they don't trust the auto-payment." You're about to build a big fix.</p>
+        <div class="pm-quiz">
+          <p><strong>What should you check before committing?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A vivid interview theme feels compelling, but a handful of voices can't tell you how many users it affects. Building a big fix off qual alone risks solving a problem that's real for five people but rare across the base — the loud-minority trap.">
+            A) Nothing — the interviews were vivid and consistent, so build immediately.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Validate the qualitative theme against quantitative scale before a big investment. Do the numbers show meaningful drop-off at the auto-payment step? What share of users hit it? If the data confirms it's widespread, build with confidence; if only a small slice is affected, scope the fix accordingly. Qual explains the why; quant tells you how much it matters. Pair them before committing real resources.">
+            B) Confirm the theme's scale with quantitative data — check how many users actually hit that step, so you don't over-invest in a loud-minority issue.
+          </button>
+          <button class="pm-quiz-option" data-msg="Running more interviews deepens the qualitative 'why' but still can't tell you how widespread the problem is — that's a quantitative question. To size the theme before a big build, you need usage/funnel data, not more conversations.">
+            C) Run ten more interviews to make the qualitative theme even stronger.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A team presents "insights" that all happen to justify the feature the founder wanted to build all along. The data was real, but only supporting evidence was highlighted.</p>
+        <div class="pm-quiz">
+          <p><strong>What's happening, and how do you guard against it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Real data selectively presented is still confirmation bias — arguably the most dangerous kind, because the true-but-cherry-picked evidence lends false credibility. That every 'insight' conveniently backs the pre-existing plan is the tell.">
+            A) It's fine — the data is real, so the insights are valid.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is confirmation bias in action: real evidence, selectively surfaced to support a predetermined conclusion. Guard against it by deliberately seeking disconfirming evidence — assign someone to argue the opposite, ask 'what data would prove this feature wrong?', and present the full picture including contradictory findings. When every insight flatters the plan you already had, that's a warning sign, not validation.">
+            B) It's confirmation bias with real-but-cherry-picked data — counter it by actively seeking disconfirming evidence and asking 'what would prove this wrong?'
+          </button>
+          <button class="pm-quiz-option" data-msg="The problem isn't that the data is fake — it's genuine. That's what makes it insidious. Demanding 'more data' won't help if the team keeps filtering for only the supporting parts; you need a process that actively surfaces disconfirming evidence.">
+            C) Demand more data until the numbers look even stronger.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">You have a genuinely strong, well-validated insight. But it lives in a 40-slide research deck that no engineer or designer ever opens.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the failure, and the fix?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A correct insight nobody uses changes nothing. The research was sound, but insight only creates value when it reaches the people making product decisions and actually shifts what they build. A 40-slide deck no one opens is where good insight goes to die.">
+            A) The research just needs to be even more thorough and detailed.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The failure is communication and adoption, not rigor. An insight earns its keep only when it's shared in a form people actually consume and act on — a sharp one-line insight statement, a memorable story or quote, a poster near the team, a reference in the prioritization discussion. Package the insight for decisions, get it in front of engineers and designers where they work, and tie it to a specific recommendation. Distribution is part of the craft, not an afterthought.">
+            B) The insight isn't reaching decisions — package it as a sharp statement and story, put it where the team works, and tie it to a recommendation, not a buried deck.
+          </button>
+          <button class="pm-quiz-option" data-msg="Concluding that 'research isn't worth doing' misreads the problem — the research produced a real insight. What failed was getting it into the hands and decisions of the team. The fix is better communication, not abandoning research.">
+            C) Conclude that user research isn't worth the effort.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>User Insights Quick Reference</h2>
+      <p class="muted">The ladder, the pairing, and the traps on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-stairs"></i> The Insight Ladder</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Data</h4>
+              <p>A fact. <em>"40% abandon checkout."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Finding</h4>
+              <p>A pattern in the facts. <em>"The drop follows the total updating."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Insight</h4>
+              <p>The why plus what it means. <em>"Surprise shipping fee feels like a trap — show costs early."</em></p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-pen"></i></span>
+            <div>
+              <h4>The format</h4>
+              <p>[Observation], because [reason], which means [implication].</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Sources &amp; Traps</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">Q</span>
+            <div>
+              <h4>Quant + qual, always paired</h4>
+              <p>Numbers find where to look; conversations explain what you found.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Confirmation bias</h4>
+              <p>Hunt for what would prove you wrong; weight surprises highest.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Say/do gap</h4>
+              <p>Stated intent inflates; trust behavior (fake doors, prototypes, waitlists).</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Loud minority</h4>
+              <p>Check every qualitative theme against quantitative scale before acting.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">4</span>
+            <div>
+              <h4>Correlation ≠ causation</h4>
+              <p>"X users retain better" may be reverse causation. Test with an experiment.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">5</span>
+            <div>
+              <h4>Leading questions</h4>
+              <p>"Don't you find this confusing?" plants the answer. Ask neutral, observe tasks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-diagram-project"></i> Synthesis (Affinity Mapping)</h3>
+        <p class="muted">Turn a mess of notes into named themes.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Atomize</h4><p>One fact or quote per note. Ten interviews → 200+ notes.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Cluster</h4><p>Group similar notes with no pre-set categories — let piles form.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Name themes</h4><p>Label each cluster only after it exists.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Write statements</h4><p>[Observation], because [reason], which means [implication].</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">5</span><div><h4>Validate scale</h4><p>Check the strongest themes against quantitative data before building.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-share-nodes"></i> Make Insights Land</h3>
+        <p class="muted">A buried insight changes nothing.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-quote-right"></i></span><div><h4>One sharp line</h4><p>Lead with the insight statement, not a 40-slide deck.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-book"></i></span><div><h4>Tell the story</h4><p>A memorable quote or moment sticks where a chart doesn't.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-thumbtack"></i></span><div><h4>Put it where they work</h4><p>Reference it in prioritization; post it near the team.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrow-right"></i></span><div><h4>Tie to a recommendation</h4><p>End every insight with a concrete "so we should…".</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/user-insights.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

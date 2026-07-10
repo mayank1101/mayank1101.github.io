@@ -1,0 +1,649 @@
+---
+layout: pm-gym
+title: "Hypothesis Testing — PM Gym"
+description: "A beginner-friendly, interactive guide to hypothesis testing for product teams: writing falsifiable hypotheses, mapping risky assumptions, and designing a test before you build."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Hypothesis Testing</h1>
+  <p class="lead">Turn a guess into something you can prove wrong</p>
+  <p class="muted">
+    Every product decision rests on assumptions. Hypothesis testing makes those assumptions explicit, ranks which ones are riskiest, and designs the cheapest experiment that could prove you wrong — before you spend months building on a guess.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Test Before You Build</h2>
+      <p class="muted">Four short lessons: what a hypothesis is, how to write one well, finding your riskiest assumption, and designing a real test.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. What's a Hypothesis</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Writing One Well</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Riskiest Assumption</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Designing a Test</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>A Hypothesis Is a Bet You Can Lose</h3>
+      </div>
+
+      <p>
+        Every roadmap item is really a bet: "if we build this, users will do that." A
+        <strong>hypothesis</strong> makes that bet explicit and, crucially, <strong>falsifiable</strong>
+        — stated so a real result could prove it wrong.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the weather forecast</h4>
+        <p>
+          "It might rain" isn't falsifiable — any weather confirms it. "There's an 80% chance of
+          rain by 3pm" is: check the sky at 3pm and you know if the forecast held. A hypothesis
+          needs the same sharpness — a claim specific enough that reality can say yes or no.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is a genuine, falsifiable hypothesis?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;Might help somehow&quot; can't be proven wrong — any result could be spun as confirming it. That's not falsifiable.">A) "Adding a progress bar might help onboarding somehow."</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It names the change, the expected effect, a size, and a timeframe — a real result can clearly confirm or kill it.">B) "Adding a progress bar to onboarding will increase step-3 completion by at least 10%, measured over two weeks."</button>
+          <button class="pm-quiz-option" data-msg="A general belief, not a testable bet tied to a specific change and outcome — there's no experiment to run against it as written.">C) "Users like clear progress indicators."</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Writing One Well <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>The Anatomy of a Good Hypothesis</h3>
+      </div>
+
+      <p>
+        A reliable template keeps hypotheses sharp: <strong>"We believe that [doing X] for [this
+        group] will result in [this outcome]. We'll know we're right if we see [this measurable
+        signal]."</strong>
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bullseye"></i></span><div><h4>The change (X)</h4><p>Exactly what you're doing differently — one variable, not a bundle of changes.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>The group</h4><p>Who this applies to — all users, or a specific segment.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrow-trend-up"></i></span><div><h4>The expected outcome</h4><p>What you believe will happen, and roughly by how much.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-ruler"></i></span><div><h4>The measurable signal</h4><p>The exact metric and threshold that tells you the bet paid off.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team writes: "We believe redesigning the dashboard will make it better." What's missing?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;Make it better&quot; isn't measurable — better how, by how much? Without a signal, no result can confirm or refute it.">A) Nothing — it names the change and a positive belief.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Compare: &quot;Redesigning the dashboard will help new admins find reports faster, cutting time-to-first-report by 20% over 30 days.&quot; That version can actually be tested.">B) A specific group, a specific expected outcome, and a measurable signal that would prove the bet right or wrong.</button>
+          <button class="pm-quiz-option" data-msg="A ship date doesn't make the hypothesis testable — you could hit the deadline and still have no way to know if the belief held.">C) A deadline for shipping the redesign.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Riskiest Assumption <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Finding the Leap of Faith Assumption</h3>
+      </div>
+
+      <p>
+        Every hypothesis rests on several smaller assumptions. Some are safe bets; one or two are
+        the <strong>leap of faith assumptions</strong> — if those are wrong, the whole idea
+        collapses. Test those first.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Test first</span>
+          <h4>High risk + high uncertainty</h4>
+          <p>You're not sure, and being wrong would sink the idea. This is your leap of faith.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Note, don't test yet</span>
+          <h4>High risk, low uncertainty</h4>
+          <p>Matters a lot but you already have strong evidence. Don't waste a test here.</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Skip</span>
+          <h4>Low risk either way</h4>
+          <p>Wouldn't sink the idea even if wrong. Testing it burns time you don't need to spend.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A marketplace idea assumes: (1) sellers exist in this category, (2) sellers will pay a listing fee, (3) the checkout button should be blue. Which is the leap of faith to test first?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Easy to change doesn't mean risky. Button color is low-impact even if wrong — testing it first wastes your limited test budget.">A) (3) the button color — it's the easiest thing to change.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. It's both high-risk (the model depends on it) and high-uncertainty (you don't actually know yet) — that combination makes it the leap of faith.">B) (2) sellers will pay a listing fee — if false, the whole model fails, and it's genuinely uncertain.</button>
+          <button class="pm-quiz-option" data-msg="If you already have strong evidence here, uncertainty is low — it's a safe assumption, not the risky unknown worth a test.">C) (1) sellers exist in this category — that's probably already well established by market research.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Designing a Test <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Designing a Test You Can Trust</h3>
+      </div>
+
+      <p>
+        A good test is the cheapest, fastest thing that could actually prove the hypothesis
+        wrong — decided <em>before</em> you run it, not interpreted afterward to fit whatever
+        happened.
+      </p>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-flask"></i> Set the bar before you jump</h4>
+        <p>
+          A team runs a landing-page test for a feature idea and gets a 4% signup rate. Is that
+          good? Nobody decided in advance — so half the room calls it a win, half calls it a
+          flop, and the debate has nothing to do with data. Agree "we need 8% to justify
+          building this" beforehand, and the result answers itself.
+        </p>
+        <p class="pm-key-line">
+          Define success criteria before you run the test, not after you see the number.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Why should success criteria be set before running a test, not after?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Deciding after the fact invites the result to be reinterpreted to match whatever people already wanted to believe.">A) It doesn't matter, as long as the team eventually agrees on what the result means.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A threshold agreed upfront makes the test an honest referee. Agreed after, it's just a story people tell about a number.">B) Setting the bar first prevents the team from moving the goalposts to match whatever result they got.</button>
+          <button class="pm-quiz-option" data-msg="It's not procedural box-checking — it's what keeps the test from being gamed by hindsight.">C) It's mainly a matter of following a standard process template.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Hypothesis Testing Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Hypothesis</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can spot a vague hypothesis, find the riskiest assumption, or catch a test being read after the fact.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A team says: "Our hypothesis is that redesigning the app will improve things."</p>
+        <div class="pm-quiz">
+          <p><strong>What's wrong with this hypothesis?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;Improve things&quot; isn't falsifiable — any change in any metric could be claimed as proof, so it can never actually be wrong.">
+            A) Nothing, it's clear enough to start building.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Rewritten well: &quot;Redesigning checkout for mobile users will raise completion by 10% over 4 weeks&quot; — now a real result can say yes or no.">
+            B) It's not falsifiable — no specific outcome, group, or measurable signal is named.
+          </button>
+          <button class="pm-quiz-option" data-msg="A deadline doesn't add falsifiability; you could hit the date and still have no way to judge whether the belief held.">
+            C) It just needs a deadline attached.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A test shows a 3% lift and the team debates for a week whether that counts as a win — no threshold was set beforehand.</p>
+        <div class="pm-quiz">
+          <p><strong>What should have prevented this debate?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More time doesn't resolve an undefined threshold — you'd just have the same argument with a slightly different number.">
+            A) Running the test for longer.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A pre-set bar turns the same 3% result into an unambiguous answer instead of a week of debate.">
+            B) Agreeing on success criteria (e.g. "we need at least 5% lift") before the test ran.
+          </button>
+          <button class="pm-quiz-option" data-msg="Deciding the bar after seeing the number is exactly the trap — it lets the decision bend toward whatever people already wanted.">
+            C) Asking leadership to decide after seeing the result.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">An idea rests on: users have smartphones (very likely true), users will pay a $5/month fee (unknown), and onboarding uses blue buttons (trivial).</p>
+        <div class="pm-quiz">
+          <p><strong>Which should be tested first?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Easy-to-test isn't the criterion — it's low-risk regardless of the answer, so testing it first wastes a scarce test slot.">
+            A) The blue buttons, since it's the easiest to test.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. That's the leap of faith: uncertain and critical. Get that answer before investing further.">
+            B) Whether users will pay the fee — high uncertainty and the whole business model depends on it.
+          </button>
+          <button class="pm-quiz-option" data-msg="&quot;Foundational&quot; isn't the same as risky — this one is already well-supported, so it's not worth a test.">
+            C) Whether users have smartphones, since it's foundational to everything else.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A landing-page test hits the pre-agreed 8% signup bar. A stakeholder says: "Let's also check three other metrics we didn't originally care about, and if any looks good, call it a bigger win."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk here?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Searching extra metrics after the fact for something that &quot;looks good&quot; is how noise gets mistaken for signal.">
+            A) None — more data is always better.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. If those metrics mattered, they should've been named as success criteria before the test ran.">
+            B) Retroactively adding metrics after seeing results risks cherry-picking a flattering number.
+          </button>
+          <button class="pm-quiz-option" data-msg="Even a &quot;confirming&quot; metric found after the fact is suspect — the problem is the order, not just contradiction.">
+            C) It only matters if the extra metrics contradict the main result.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A hypothesis reads: "We believe adding SMS reminders for all users will raise 7-day retention by 15%, measured over 3 weeks."</p>
+        <div class="pm-quiz">
+          <p><strong>What makes this a strong hypothesis?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Brevity isn't the strength — plenty of short hypotheses are still vague.">
+            A) It's short.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. Every part of the template is filled in, so a real result can clearly confirm or kill it.">
+            B) It names the change, the group, the expected outcome with a number, and a timeframe — fully falsifiable.
+          </button>
+          <button class="pm-quiz-option" data-msg="The wording choice isn't what makes it strong — the specificity is.">
+            C) It uses the word "believe," which signals humility.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">Two teams ran the "same" experiment but got opposite results — one changed button copy and color at once, the other changed only color.</p>
+        <div class="pm-quiz">
+          <p><strong>What principle was violated?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Testing isn't invalidated by different designs, but changing two things at once in one test breaks the ability to know which caused the effect.">
+            A) None — both are valid ways to test a button.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Isolate one variable per test so the result actually tells you something.">
+            B) Testing one variable at a time — bundling copy and color means neither team can tell which change drove the result.
+          </button>
+          <button class="pm-quiz-option" data-msg="Duration isn't the issue — a long-running test that changes two variables at once still can't isolate which one mattered.">
+            C) The tests should have run longer.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">A PM says: "I already know push notifications will boost engagement, so let's skip testing and build the full feature."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the risk of skipping the test?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Intuition isn't evidence — treating a belief as certain skips the entire point of hypothesis testing.">
+            A) None, if the PM has strong intuition, that's enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Even confident beliefs deserve a cheap test before a big build, especially when reversing course later is expensive.">
+            B) Building the full feature on an untested belief risks months of work if the leap of faith assumption is false.
+          </button>
+          <button class="pm-quiz-option" data-msg="Checking after a full build is far more expensive than testing first, and creates sunk-cost pressure to call any result a win.">
+            C) It's fine as long as engagement is checked after launch.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">Success criteria said "10% lift required." The result comes in at 9.4%. A teammate says: "Close enough, let's call it a win."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Rounding a miss up to a &quot;win&quot; defeats the purpose of setting a bar.">
+            A) None, 9.4% is basically 10%.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. If the threshold flexes based on how close the result feels, it wasn't a real criterion.">
+            B) Moving the goalposts after seeing the number undermines the point of setting criteria in advance.
+          </button>
+          <button class="pm-quiz-option" data-msg="Raising the bar doesn't fix the willingness to move it after seeing the result — that temptation exists at any threshold.">
+            C) The team should raise the bar next time to prevent this argument.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">An assumption map shows one item in "high risk, high uncertainty" and five items in "low risk, low uncertainty."</p>
+        <div class="pm-quiz">
+          <p><strong>Where should the next test focus?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Spreading effort evenly ignores that five of the six can't meaningfully hurt the idea even if wrong.">
+            A) Spread test effort evenly across all six assumptions.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. One informative test on the risky unknown beats five uninformative tests on things never in doubt.">
+            B) The single high-risk, high-uncertainty item — it's the leap of faith and answers fastest whether the idea survives.
+          </button>
+          <button class="pm-quiz-option" data-msg="Cheapness is a tiebreaker, not the primary criterion.">
+            C) The item that's cheapest to test, regardless of quadrant.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">A hypothesis says a redesign will help "users." Data later shows it helped power users but hurt new users.</p>
+        <div class="pm-quiz">
+          <p><strong>What does this reveal about the original hypothesis?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="&quot;Some users helped&quot; isn't what the hypothesis claimed — it said &quot;users&quot; broadly, and the mixed result shows that framing was too coarse.">
+            A) The hypothesis was correct since some users were helped.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is exactly why a good hypothesis names a specific group — broad hypotheses produce muddy, hard-to-act-on results.">
+            B) The hypothesis should have named a specific group — "users" was too broad for a clean answer.
+          </button>
+          <button class="pm-quiz-option" data-msg="A mixed result by segment is valuable information, not a failed test.">
+            C) The test should be discarded since it produced a mixed result.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A founder wants to skip writing formal hypotheses because "we move too fast for that."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the best response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Writing a hypothesis takes minutes; skipping it usually costs far more time later, rebuilding after a wrong bet.">
+            A) Agree — speed and hypothesis writing are incompatible.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The template is lightweight by design. The real time cost is building the wrong thing, not writing the bet down first.">
+            B) Push back gently — a hypothesis can be one sentence, and it's what prevents an expensive rebuild after guessing wrong.
+          </button>
+          <button class="pm-quiz-option" data-msg="Risk doesn't scale purely with size — small features can rest on risky unproven assumptions too.">
+            C) Compromise by writing hypotheses only for large features.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A test's sample was 40 users, mostly from one referral source, and the team wants to greenlight a company-wide rollout.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the concern with the test design?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A biased, tiny sample can produce a positive result by chance or by not representing the whole user base.">
+            A) None, if the direction of the result is positive that's enough.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Testing on one referral source's users risks a result that doesn't hold once you roll out to everyone else.">
+            B) A small, non-representative sample may not generalize — validate against a broader slice before a full rollout.
+          </button>
+          <button class="pm-quiz-option" data-msg="Longer duration with the same narrow sample doesn't fix representativeness.">
+            C) The test should simply run twice as long with the same 40 users.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A pricing hypothesis is deemed "too risky and important to test cheaply," so the team plans a six-month rebuild to test it properly.</p>
+        <div class="pm-quiz">
+          <p><strong>Is that the right call?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Stakes justify rigor, not automatically the most expensive method — a fake-door pricing page can often answer the same question in days.">
+            A) Yes, high-stakes hypotheses always deserve the most expensive test available.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. High stakes are exactly why you want a fast, cheap answer first — a six-month build bets the whole budget on an unchecked assumption.">
+            B) Not necessarily — look for the cheapest test that could still meaningfully move the belief, before committing six months.
+          </button>
+          <button class="pm-quiz-option" data-msg="Skipping testing on the riskiest bets is backwards — those are precisely the ones most worth a cheap check.">
+            C) No, high-stakes hypotheses shouldn't be tested at all — just decide based on judgment.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">After a failed test, a PM says: "The hypothesis was wrong, so this whole idea is dead."</p>
+        <div class="pm-quiz">
+          <p><strong>Is that the right conclusion?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Disproving one specific hypothesis doesn't necessarily kill the broader idea — the approach may be wrong, not the underlying need.">
+            A) Yes, a failed hypothesis always means the idea should be abandoned entirely.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Maybe SMS reminders didn't lift retention, but the underlying need might still be solvable through a different mechanism.">
+            B) Not necessarily — a failed hypothesis kills that specific bet, but the underlying problem may still be worth solving differently.
+          </button>
+          <button class="pm-quiz-option" data-msg="Assuming the test was flawed just because the result was unwelcome is its own form of bias.">
+            C) The test must have been run incorrectly if the hypothesis failed.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A team wants to test a new pricing model but worries a public test could alienate existing customers if it's visible.</p>
+        <div class="pm-quiz">
+          <p><strong>What's a reasonable way to test with lower exposure?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Rolling out untested to the full base carries the exact exposure risk the team is worried about, at maximum scale.">
+            A) Skip testing and roll the new pricing out to everyone at once.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Scoping the test to a small, contained group lets you learn the answer while limiting the downside if it's wrong.">
+            B) Test with a small, limited segment, or a lower-risk method like concept interviews, before wider exposure.
+          </button>
+          <button class="pm-quiz-option" data-msg="Waiting for certainty defeats the purpose of testing — the whole point is to build the certainty you don't yet have, cheaply.">
+            C) Wait until the team is completely certain before testing anything.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Hypothesis Testing Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-flask"></i> The Hypothesis Template</h3>
+        <p class="muted">"We believe [X] for [group] will result in [outcome]. We'll know if [signal]."</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bullseye"></i></span><div><h4>Change</h4><p>One variable, not a bundle.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Group</h4><p>Who this applies to.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrow-trend-up"></i></span><div><h4>Outcome</h4><p>What you expect, roughly how much.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-ruler"></i></span><div><h4>Signal</h4><p>The exact metric and threshold.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-crosshairs"></i> Finding the Leap of Faith</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-fire"></i></span><div><h4>High risk + high uncertainty</h4><p>Test first — this is your leap of faith.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-note-sticky"></i></span><div><h4>High risk, low uncertainty</h4><p>Note it, don't waste a test on it.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-forward"></i></span><div><h4>Low risk either way</h4><p>Skip — wouldn't sink the idea if wrong.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-vial"></i> Designing a Trustworthy Test</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-1"></i></span><div><h4>One variable at a time</h4><p>Otherwise you can't tell what caused the result.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-flag"></i></span><div><h4>Success criteria set in advance</h4><p>Decide the bar before you see the number.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users-viewfinder"></i></span><div><h4>Representative sample</h4><p>Small or biased samples don't generalize.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Common Traps</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-cloud"></i></span><div><h4>Unfalsifiable wording</h4><p>"Might help somehow" can never be wrong.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrows-left-right"></i></span><div><h4>Moving the goalposts</h4><p>Changing the bar after seeing the result.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-eye"></i></span><div><h4>Confirmation bias</h4><p>Reading results the way you wanted them to go.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/hypothesis-testing.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

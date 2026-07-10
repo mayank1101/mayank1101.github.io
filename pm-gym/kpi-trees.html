@@ -1,0 +1,707 @@
+---
+layout: pm-gym
+title: "KPI Trees — PM Gym"
+description: "A beginner-friendly, interactive guide to KPI (metric) trees: decomposing a North Star metric into drivers, finding the best lever, and avoiding vanity metrics."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>KPI Trees</h1>
+  <p class="lead">Break a big goal metric into the levers you can actually pull</p>
+  <p class="muted">
+    A single top-line number like revenue is too blunt to act on. A <strong>KPI tree</strong> breaks it into the drivers that feed it — turning a vague goal into a map of specific levers, and showing exactly where a metric moved when it does.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Build &amp; Use a KPI Tree</h2>
+      <p class="muted">Four short lessons: what a KPI tree is, how to build one, how to find the best lever, and the pitfalls to dodge.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Idea</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Building the Tree</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Finding the Lever</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Pitfalls</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>What a KPI Tree Is</h3>
+      </div>
+
+      <p>
+        A KPI tree (or metric tree) takes one top-level goal metric and breaks it down into the
+        smaller metrics that mathematically combine to produce it. ("KPI" just means Key
+        Performance Indicator — a number you track to see how you're doing.) Suddenly a huge,
+        untouchable number becomes a set of pullable levers.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the household budget</h4>
+        <p>
+          "We're spending too much money" is impossible to act on — there's no single knob for
+          "spending." But break it apart: spending = rent + groceries + subscriptions +
+          transport + eating out. Now you can see the levers. Maybe rent is fixed, but three
+          forgotten subscriptions and daily takeout are the real drivers. A KPI tree does the same
+          thing to a business metric: it turns a vague worry into a short list of things you can
+          actually change.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-calculator"></i> Revenue, decomposed</h4>
+        <p>
+          "Grow revenue" is hard to act on. But:
+        </p>
+        <p class="pm-key-line">
+          Revenue = Active Users × Conversion Rate × Average Revenue Per User
+        </p>
+        <p>
+          Now you can see three distinct levers. A team can go after conversion while another
+          grows active users — and you can tell which one actually moved the top line.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>What is the main thing a KPI tree gives you that a single top-line number doesn't?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Presentation isn't the point. A KPI tree's value is analytical — it reveals the structure beneath a number, not just a nicer way to display the number itself.">A) A prettier dashboard for executives.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. 'Revenue' is one blunt number; 'users × conversion × ARPU' is three levers you can target and diagnose independently. Structure turns a goal into actions.">B) A breakdown of the top metric into specific, pullable levers, so you can see what drives it and where it moved.</button>
+          <button class="pm-quiz-option" data-msg="No tool guarantees a result. A KPI tree helps you find and choose levers, but you still have to move them — and reality still gets a vote.">C) A guarantee that the top metric will go up.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Building the Tree <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Building the Tree</h3>
+      </div>
+
+      <p>
+        You build a KPI tree top-down: start with the goal metric, then keep asking "what does
+        this break into?" — where each level's children combine (by × or +) to produce the parent.
+        The key discipline is keeping each split <strong>MECE</strong> — a fancy term for a simple
+        idea, explained just below.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — slicing a pizza (MECE)</h4>
+        <p>
+          <strong>MECE</strong> stands for "Mutually Exclusive, Collectively Exhaustive." In plain
+          words: cut the pizza so every bite belongs to exactly one slice (no overlaps), and the
+          slices together make up the whole pizza (no missing bits). "New users + returning users"
+          is a clean MECE cut of all active users — everyone is one or the other, and together
+          they're everybody. "Happy users + users on iPhone" is not: someone can be both (overlap)
+          and plenty are neither (gap). Good tree branches are always clean slices.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Start at the top</h4><p>The one metric that matters most right now — often the North Star.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Decompose one level</h4><p>Break it into the 2-4 inputs that mathematically produce it.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Repeat downward</h4><p>Break each input into its own drivers until you reach something a team can act on.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Keep branches clean</h4><p>Inputs at each level should be <strong>MECE</strong> — no overlaps, no gaps.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>You're decomposing "monthly active users." Which is a valid next level of the tree?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-result="correct" data-msg="Clean decomposition: the two inputs add up to the whole with no overlap and no gap — a MECE split. Each branch can then be broken down and worked on separately.">A) "New active users + Retained active users" (people who are new this month plus those who returned).</button>
+          <button class="pm-quiz-option" data-msg="These overlap and leave gaps — many users are neither, some are both — and they don't mathematically sum to active users. A KPI-tree branch must actually compose its parent.">B) "Happy users + Users who like the logo."</button>
+          <button class="pm-quiz-option" data-msg="Revenue sits above or beside active users in the tree, not beneath it — active users is an input to revenue, not the reverse. This branch points the wrong way.">C) "Revenue."</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Finding the Lever <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Finding the Best Lever</h3>
+      </div>
+
+      <p>
+        Once the tree is drawn, not every branch is worth chasing. The best lever scores high on
+        two things at once: how much it could move the top metric (<strong>impact</strong>), and
+        how realistically you can move it (<strong>feasibility</strong>).
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — fixing up a house</h4>
+        <p>
+          Say you want to raise your home's value. Repainting a doorknob is easy but changes almost
+          nothing (low impact). Adding a second floor would change a lot but is wildly expensive
+          and slow (low feasibility). Refreshing the kitchen is both meaningful and doable — that's
+          the sweet spot. In a KPI tree you're hunting for the "kitchen refresh" branch: a real
+          driver of the top number that you can actually move with the time and resources you have.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Chase this</span>
+          <h4>High impact + high feasibility</h4>
+          <p>A big driver of the top metric that you can realistically influence. Your prime target.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Maybe later</span>
+          <h4>High impact, low feasibility</h4>
+          <p>Matters a lot but hard to move (e.g., market-wide pricing). Note it; don't start here.</p>
+        </div>
+        <div class="pm-concept-item pm-bad">
+          <span class="pm-chip">Skip</span>
+          <h4>Low impact</h4>
+          <p>Even if easy, moving it barely nudges the top line. Easy wins that don't matter are still a waste.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Your tree shows two levers: (A) checkout conversion — a huge driver of revenue and clearly fixable, and (B) footer link clicks — easy to boost but a tiny driver. Where do you start?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Easy but low-impact is still low-impact. Boosting footer clicks barely touches revenue, so the effort buys almost nothing. Feasibility only matters when paired with impact.">A) B — it's the easiest to move.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The best lever scores on impact and feasibility together. Checkout conversion moves the top line meaningfully and you can act on it — that's where leverage lives.">B) A — high impact and feasible beats easy-but-trivial.</button>
+          <button class="pm-quiz-option" data-msg="Splitting effort onto a trivial lever dilutes the one that matters. The whole point of the tree is to concentrate on the branch with real leverage, not to spread thin.">C) Both equally, to be safe.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Pitfalls <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Vanity &amp; Broken Branches</h3>
+      </div>
+
+      <p>
+        KPI trees fail in predictable ways. Two traps do most of the damage: measuring things that
+        look good but mean nothing (<strong>vanity metrics</strong>), and branches that don't
+        actually add up.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — the odometer vs. the speedometer</h4>
+        <p>
+          A car's <strong>odometer</strong> (total miles ever driven) only climbs — it never tells
+          you how fast you're going right now or whether you're about to crash. The
+          <strong>speedometer</strong> moves both ways and reflects your current state. "Total
+          sign-ups ever" is an odometer: it always goes up, even while the product is falling
+          apart. "Weekly active users" is a speedometer — it can drop and warn you. Build your tree
+          from speedometers, not odometers.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4><i class="fas fa-triangle-exclamation"></i> The vanity trap</h4>
+        <p>
+          "Total registered users, all-time" only ever goes up and never goes down — it feels
+          great and tells you nothing about whether the product is healthy today. That's a
+          <strong>vanity metric</strong>.
+        </p>
+        <p class="pm-key-line">
+          Prefer <strong>actionable</strong> metrics: ones that a specific decision can move, and
+          that can go down as well as up. And check every branch actually composes its parent.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>Which of these is a <strong>vanity metric</strong> you should be wary of putting at the heart of a KPI tree?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="That's a healthy, actionable metric: it moves both ways and reflects whether people use the product now. Exactly the kind you want in the tree.">A) "Weekly active users" — can rise or fall, reflects current health.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Yes — a classic vanity metric. It rises forever regardless of churn, engagement, or a broken product, so it feels good while hiding reality. Keep it out of the core.">B) "Total sign-ups since launch" — only ever grows and can't reflect current problems.</button>
+          <button class="pm-quiz-option" data-msg="That's a strong actionable metric — a real lever you can target and that responds to your decisions. It belongs in the tree, not in the vanity bucket.">C) "Checkout conversion rate" — a clear, movable driver.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>KPI Trees Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Core</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">KPI Tree</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can build a clean tree, diagnose a metric move, pick the right lever, and spot vanity numbers. Choose the strongest move, then read why the others miss.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">Revenue is down 10% this quarter and leadership wants to know why. You have a KPI tree: Revenue = Active Users × Conversion × ARPU.</p>
+        <div class="pm-quiz">
+          <p><strong>How does the tree help you diagnose it?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Work harder on revenue' has no target. The tree exists precisely to turn the blunt drop into a diagnosis: check each input to find which one actually fell.">
+            A) It doesn't — you just need to work harder on revenue.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The tree lets you attribute the top-line move to a specific branch. Isolating the input that fell turns a vague 'revenue is down' into a fixable problem.">
+            B) Check each input — if active users and ARPU held steady but conversion dropped, you've located the cause.
+          </button>
+          <button class="pm-quiz-option" data-msg="Assuming instead of checking wastes the tree's whole advantage. Usually one branch moved most; spreading effort across all three dilutes the fix for the real cause.">
+            C) Assume all three inputs fell equally and address them all.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A teammate proposes making "total lifetime registered accounts" the team's headline metric because "it always goes up and looks great to investors."</p>
+        <div class="pm-quiz">
+          <p><strong>What's your response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Always-up is the warning sign, not the selling point. A metric that can't fall can't reflect churn, disengagement, or a broken product — it's a vanity metric that hides reality.">
+            A) Agree — a number that always rises is motivating.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Exactly. A headline metric should tell you the truth, including bad news. Actionable metrics move with real health; vanity metrics feel good while the product quietly declines.">
+            B) Push back — it's a vanity metric; pick an actionable one like weekly active users that can fall when things go wrong.
+          </button>
+          <button class="pm-quiz-option" data-msg="Even in a deck, a vanity metric misleads. And a team steers toward what it headlines — enshrining a number that can't fall invites everyone to ignore the health that can.">
+            C) Use it, but only in investor decks.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">You want to grow your North Star. Two levers sit in the tree: (A) improving activation — a major driver you can influence — and (B) adding more social-share icons, easy but a minor driver.</p>
+        <div class="pm-quiz">
+          <p><strong>Which do you prioritize, and why?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Low effort on a minor driver is a small effort for a smaller result. Feasibility only pays off when the lever actually moves the top metric — and this one barely does.">
+            A) B, because it's quick and low-effort.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Activation is a big driver you can influence, so moving it meaningfully shifts the North Star. That impact-plus-feasibility combination is exactly what the tree helps you find.">
+            B) A — the best lever combines high impact on the North Star with real feasibility.
+          </button>
+          <button class="pm-quiz-option" data-msg="Effortless-and-huge levers rarely exist; waiting for one means doing nothing. A strong, feasible driver like activation is precisely the realistic bet the tree points you toward.">
+            C) Neither — wait for a lever that's both huge and effortless.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A colleague draws a tree: "Revenue = Marketing spend + Number of features + Team happiness."</p>
+        <div class="pm-quiz">
+          <p><strong>What's fundamentally wrong with this tree?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Those things may influence revenue loosely, but they don't mathematically combine into it. A KPI tree's branches must actually compute the parent — you can't add 'features' and 'happiness' to get dollars.">
+            A) Nothing — those all affect revenue, so they belong.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The branches don't compose the parent. Revenue = Users × Conversion × ARPU is a real decomposition (the pieces multiply to the whole). 'Spend + features + happiness' are loosely-related drivers, not the math that builds revenue. A tree must decompose, not just list influences.">
+            B) The branches don't mathematically compose revenue — they're vaguely-related factors, not the inputs that actually calculate it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Adding a fourth branch to a broken structure doesn't fix it. The problem isn't that a branch is missing — it's that these branches don't multiply or add up to revenue at all.">
+            C) It just needs one more branch to be complete.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">You split "active users" into "users who log in via email" and "users who are happy with the product."</p>
+        <div class="pm-quiz">
+          <p><strong>Why does this split break MECE?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It's not just messy wording — the two categories genuinely overlap (a happy user often logs in via email) and leave gaps (an unhappy user who logs in fits neither cleanly). That double-fault is exactly what MECE forbids.">
+            A) It doesn't — both are types of active users.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The two overlap (someone can be both a happy user and an email login) and don't collectively cover everyone (where do unhappy non-email users go?). A MECE split puts every user in exactly one bucket, with all buckets together covering the whole. Split by something clean, like login method or new-vs-returning.">
+            B) The buckets overlap and leave gaps — a user can be in both or neither, so they don't cleanly sum to all active users.
+          </button>
+          <button class="pm-quiz-option" data-msg="'Too few buckets' isn't the issue — adding more overlapping, gappy categories makes it worse. The fix is to choose a single clean dimension to split on, not to add buckets.">
+            C) There simply aren't enough buckets; add a third.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">Revenue is flat, but your tree shows active users up 20% while conversion rate dropped 18%. Everyone is confused about whether things are good or bad.</p>
+        <div class="pm-quiz">
+          <p><strong>What does the tree tell you?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="'Flat revenue means nothing changed' misreads the tree. Underneath the calm top line, two big forces are pulling in opposite directions and roughly cancelling — a very different (and more urgent) situation than genuine stability.">
+            A) Nothing is happening — flat revenue means a stable business.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The flat top line hides two large offsetting moves: you're winning more users but converting a smaller share of them. That's the tree's superpower — it reveals compensating changes a single number masks. The question becomes: why did conversion fall as users grew? (Often: lower-quality traffic.)">
+            B) Two offsetting moves are hiding under a flat top line — more users but worse conversion. Investigate why conversion fell as users grew.
+          </button>
+          <button class="pm-quiz-option" data-msg="Celebrating the 20% user growth alone ignores that conversion fell almost as much, cancelling the gain. Reading one branch in isolation is exactly the mistake the whole tree is meant to prevent.">
+            C) Celebrate — user growth of 20% is clearly a win.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">Two levers have equal impact potential. Lever A requires a six-month platform rebuild; lever B is a copy-and-layout change your team can test next week.</p>
+        <div class="pm-quiz">
+          <p><strong>Which do you start with, all else equal?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="When impact is equal, feasibility is the tiebreaker — and a six-month rebuild is far less feasible than a one-week test. Starting with the hard one delays any learning by months.">
+            A) Lever A — bigger projects show more ambition.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. With impact tied, the more feasible lever wins: you learn faster, get results sooner, and can reinvest. B lets you test the hypothesis next week instead of betting six months blind. Feasibility is a real part of leverage, not a lesser concern.">
+            B) Lever B — equal impact but far more feasible, so you learn and gain sooner.
+          </button>
+          <button class="pm-quiz-option" data-msg="Running both at once splits a team across a quick test and a six-month rebuild, starving both. Sequence them: prove the cheap lever first, then decide if the expensive one is still worth it.">
+            C) Both at once, to cover your bases.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">Your team obsesses over "cumulative app installs," which is now 5 million and rising. Meanwhile monthly active users has quietly fallen for three straight months.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the diagnosis?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A rising install count with falling active users is the vanity trap in action. The headline metric can't go down, so it keeps everyone feeling successful while the metric that reflects real health is sliding.">
+            A) Healthy — 5 million installs proves strong momentum.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Cumulative installs is a vanity/odometer metric — it only ever rises and masks the truth. The falling monthly-active number is the real signal. Re-center the tree on an actionable metric that can fall, and go find why active use is dropping.">
+            B) The team is anchored to a vanity metric — cumulative installs can't fall, so it's hiding the real, declining health shown by monthly actives.
+          </button>
+          <button class="pm-quiz-option" data-msg="Setting an even bigger install goal doubles down on the misleading number. Installs aren't the problem to chase — the shrinking active base is, and more installs won't fix retention.">
+            C) Set a goal of 10 million installs to build more momentum.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A stakeholder wants the KPI tree taken down to twelve levels of depth "so we capture every possible sub-metric."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the practical caution?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More depth isn't automatically more insight. Past the point where a team can act on a branch, extra levels add complexity and noise without adding leverage — the tree becomes a wall no one uses.">
+            A) Agree — the more granular the tree, the more useful it is.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Decompose only until you reach metrics a team can actually act on — that's the stopping rule. Twelve levels usually buys false precision and an unreadable diagram. Depth should serve action, not completeness for its own sake.">
+            B) Stop decomposing once branches become actionable — excessive depth adds complexity and false precision without more leverage.
+          </button>
+          <button class="pm-quiz-option" data-msg="A hard cap like 'exactly three levels' is arbitrary too. The right depth depends on when branches become actionable — some need two levels, some five. Tie depth to actionability, not a fixed number.">
+            C) Cap every tree at exactly three levels, always.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">Your North Star is "weekly active teams." You decompose it as: New teams activated + Existing teams retained + Churned teams reactivated.</p>
+        <div class="pm-quiz">
+          <p><strong>How good is this decomposition?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="It's actually a strong split — but not because it's 'just a list.' These three sum to the whole active base with clean boundaries, which is precisely what makes it good, not incidental.">
+            A) Weak — it's just a random list of three things.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. New + retained + reactivated is a clean MECE breakdown of the active base — every active team came from exactly one of these paths, and together they cover all of them. Better still, each branch maps to a different team and playbook (acquisition, retention, win-back), so it's actionable.">
+            B) Strong — it's a MECE split (new, retained, reactivated) where each branch is actionable by a different playbook.
+          </button>
+          <button class="pm-quiz-option" data-msg="Collapsing to a single number throws away the whole benefit. The value of the tree is exactly that it separates acquisition, retention, and win-back so you can see and act on each. Don't merge them.">
+            C) Weak — you should collapse it to one number for simplicity.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">The exec team wants ONE North Star metric, but sales wants revenue, growth wants signups, and the CS team wants retention.</p>
+        <div class="pm-quiz">
+          <p><strong>How can a KPI tree resolve this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Declaring a winner by politics leaves the other teams feeling ignored and their metrics untracked. The tree offers a better answer than picking one and discarding the rest.">
+            A) Whoever argues loudest gets to pick the North Star.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A tree shows these aren't competing goals — they're related nodes. Pick one North Star at the top (say, active paying customers) and place signups, retention, and revenue as connected branches that feed it. Everyone sees how their metric contributes, and the org gets one shared frame.">
+            B) Put one North Star at the top and show signups, retention, and revenue as connected branches beneath it — so each team sees how its metric feeds the whole.
+          </button>
+          <button class="pm-quiz-option" data-msg="Four co-equal North Stars is the same as none — teams optimize their own and pull in different directions. The tree's job is to unify them under one apex, not to bless four separate ones.">
+            C) Give each team its own separate North Star and let them run.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">Conversion rate is your chosen lever. A designer suggests boosting it by auto-checking an "add premium add-on" box by default, which users often miss.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the systems-aware caution before celebrating a conversion bump?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A conversion lift that comes from tricking users tends to bounce back as refunds, chargebacks, and churn. Reading one node in isolation misses the damage showing up in retention and trust downstream.">
+            A) Great — any lift in your chosen lever is a win, ship it.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Moving one branch can hurt others in the tree (and the business). A dark-pattern conversion bump often raises refunds, support load, and churn, and erodes trust — so the top metric may not improve at all. Check the sibling and downstream branches, and weigh whether the tactic is even honest.">
+            B) Check downstream branches — a bump won through a dark pattern can raise refunds and churn, so the top metric may not improve and trust suffers.
+          </button>
+          <button class="pm-quiz-option" data-msg="Auto-checking more boxes multiplies the harm — more unwanted add-ons, more refunds, more angry users. Doubling a manipulative tactic isn't optimizing the tree, it's degrading the business the tree measures.">
+            C) Auto-check two more add-on boxes to lift conversion further.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">You need to raise "orders per month." The tree splits it into Traffic × Conversion × Repeat-purchase rate. Data shows traffic is huge, conversion is average, and repeat-purchase is far below industry benchmark.</p>
+        <div class="pm-quiz">
+          <p><strong>Where's the most promising lever?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Pouring more into traffic when traffic is already huge is spending on your strongest branch and ignoring your weakest. The tree is pointing elsewhere — to the input that's dragging the whole product down.">
+            A) Buy more traffic — more visitors always means more orders.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Repeat-purchase is far below benchmark, meaning there's the most headroom to gain — and lifting it multiplies through the whole equation. The tree's power here is comparing branches against their potential: attack the one with the biggest gap to where it should be.">
+            B) Repeat-purchase rate — it's furthest below its benchmark, so it has the most headroom and multiplies through the equation.
+          </button>
+          <button class="pm-quiz-option" data-msg="Conversion is 'average' — near where it should be — so squeezing it offers less headroom than the repeat-purchase branch that's far below benchmark. Target the biggest gap, not a middling one.">
+            C) Conversion — always focus on the middle branch.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">A teammate insists "average revenue per user" is meaningless because your users are wildly different — some pay nothing, a few pay thousands.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the sharpest response?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Dropping ARPU from the tree loses a real lever. The teammate has a point about averages hiding distribution — but the fix is to decompose further, not to discard the metric.">
+            A) They're right — delete ARPU from the tree entirely.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The teammate spotted a real issue: an average can hide a lopsided distribution. The KPI-tree answer is to decompose ARPU further — split users into segments (free, small, enterprise) and track revenue per user within each. That preserves the lever while fixing the blurring the average caused.">
+            B) They've spotted that an average hides the distribution — so decompose ARPU by segment (free / small / enterprise) rather than dropping it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Insisting the average is 'fine as-is' ignores a legitimate objection — a single ARPU really can mislead when the distribution is that skewed. Acknowledge it and split the branch instead of defending the blur.">
+            C) Ignore them — a single average is always good enough.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">Leadership asks you to prove that last quarter's onboarding project "worked." You have a full KPI tree in place.</p>
+        <div class="pm-quiz">
+          <p><strong>How does the tree let you answer cleanly?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Pointing at total revenue can't isolate the onboarding project — a dozen things move revenue at once. Without attributing the change to a specific branch, 'it worked' is just an assertion.">
+            A) Point at total revenue and say it went up, so the project worked.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Trace the specific branch the project targeted (say, activation rate), show it moved when you shipped, and follow how that flows up the tree toward revenue. The tree turns 'trust me' into a visible chain of cause and effect — which node moved, when, and how it propagates upward.">
+            B) Show the specific branch the project targeted (e.g., activation) moving right after launch, then trace how that node flows up the tree toward the top metric.
+          </button>
+          <button class="pm-quiz-option" data-msg="Saying it's 'impossible to attribute' gives up the tree's main benefit. A well-built tree is exactly the tool for isolating which node a project moved — you can and should trace it, even if the top-line effect lags.">
+            C) Say product impact can never really be attributed, so don't try.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>KPI Trees Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-sitemap"></i> Building the Tree</h3>
+        <p class="muted">Top-down, each level composing the one above.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key">1</span><div><h4>Start at the top</h4><p>The one metric that matters most — often the North Star.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">2</span><div><h4>Decompose</h4><p>Break it into the 2-4 inputs that produce it (× or +).</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">3</span><div><h4>Repeat down</h4><p>Until you reach a metric a team can act on.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key">4</span><div><h4>Keep it MECE</h4><p>No overlaps, no gaps at each level.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-crosshairs"></i> Choosing &amp; Checking</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-bolt"></i></span><div><h4>Best lever</h4><p>High impact on the top metric <em>and</em> feasible to move.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-magnifying-glass-chart"></i></span><div><h4>Diagnose moves</h4><p>When the top metric shifts, find which branch moved.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-eye-slash"></i></span><div><h4>Avoid vanity metrics</h4><p>Prefer actionable metrics that can fall as well as rise.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-eye-slash"></i> Vanity vs. Actionable</h3>
+        <p class="muted">The odometer-vs-speedometer test.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-circle-xmark"></i></span><div><h4>Vanity (odometer)</h4><p>Only ever rises: total sign-ups, cumulative installs, all-time revenue. Hides decline.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-circle-check"></i></span><div><h4>Actionable (speedometer)</h4><p>Moves both ways: weekly actives, conversion rate, retention. Reflects health now.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-scissors"></i></span><div><h4>Averages hide spread</h4><p>If an average blurs wildly different users, split it by segment.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrows-left-right"></i></span><div><h4>Watch offsetting moves</h4><p>A flat top line can hide two big branches cancelling out.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-circle-question"></i> Common Decompositions</h3>
+        <p class="muted">Starting formulas you can adapt.</p>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-sack-dollar"></i></span><div><h4>Revenue</h4><p>Active users &times; Conversion &times; Avg. revenue per user.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Active users</h4><p>New activated + Retained + Reactivated (a clean MECE split).</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-cart-shopping"></i></span><div><h4>Orders</h4><p>Traffic &times; Conversion &times; Repeat-purchase rate.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-hand-pointer"></i></span><div><h4>Stop rule</h4><p>Decompose only until a branch is something a team can act on.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/kpi-trees.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

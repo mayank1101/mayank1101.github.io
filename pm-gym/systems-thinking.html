@@ -1,0 +1,1318 @@
+---
+layout: pm-gym
+title: "Systems Thinking — PM Gym"
+description: "A beginner-friendly, interactive guide to systems thinking for product managers: the iceberg model, feedback loops, delays, and leverage points."
+---
+
+<div class="container hero fade-in">
+  <p>
+    <a href="/pm-gym.html" class="muted"
+      ><i class="fas fa-arrow-left"></i> PM Gym</a
+    >
+  </p>
+  <h1>Systems Thinking</h1>
+  <p class="lead">See the whole system, not just the event in front of you</p>
+  <p class="muted">
+    Products never live in isolation. They sit inside a web of users, teams,
+    incentives, and metrics that push back on every change. Systems thinking is
+    the habit of seeing those connections — so you fix root causes instead of
+    chasing symptoms.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn">
+      <i class="fas fa-book-open"></i> Learn
+    </button>
+    <button class="pm-tab-btn" data-tab="flashcards">
+      <i class="fas fa-layer-group"></i> Flashcards
+    </button>
+    <button class="pm-tab-btn" data-tab="practice">
+      <i class="fas fa-comments"></i> Practice
+    </button>
+    <button class="pm-tab-btn" data-tab="game">
+      <i class="fas fa-dice"></i> Vocab Game
+    </button>
+    <button class="pm-tab-btn" data-tab="cheatsheet">
+      <i class="fas fa-file-lines"></i> Quick Reference
+    </button>
+  </nav>
+</div>
+
+<div class="container section">
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>Think in Systems</h2>
+      <p class="muted">
+        Four short lessons: look beneath events, spot the loops, respect delays,
+        and find the leverage. No jargon — every idea comes with a
+        plain-language example.
+      </p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">
+        1. The Iceberg
+      </button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Feedback Loops</button>
+      <button class="pm-lesson-btn" data-lesson="3">
+        3. Stocks &amp; Delays
+      </button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Leverage Points</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>Events, Patterns &amp; Structure</h3>
+      </div>
+
+      <p>
+        <strong>What is a "system"?</strong> A system is just a set of parts
+        that affect each other — users, teams, features, metrics, incentives.
+        Change one part and the others react. Your product is a system, not a
+        to-do list.
+      </p>
+      <p>
+        When something goes wrong, our instinct is to react to the single
+        <strong>event</strong>
+        we can see and move on. Systems thinking asks you to look below the
+        waterline — because the same events keep coming back for reasons hidden
+        underneath.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example</h4>
+        <p>
+          Think of a doctor. A patient keeps getting headaches. A weak doctor
+          hands out a painkiller each visit (the <em>event</em>). A good doctor
+          asks why they keep coming back — bad posture? Skipping meals? — and
+          fixes <em>that</em> (the <em>structure</em>). One treats the symptom
+          forever; the other ends it. PMs face the same choice every week.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4>
+          <i class="fas fa-water"></i> The iceberg model — four levels to look
+          at
+        </h4>
+        <p>
+          <strong>1. Events</strong> — what just happened. "Checkout crashed
+          this morning." This is the tip of the iceberg, the only part you see
+          easily.
+        </p>
+        <p>
+          <strong>2. Patterns</strong> — the same event over time. "Checkout
+          crashes every Monday at peak hours." Spotting the pattern is the first
+          sign there's something deeper.
+        </p>
+        <p>
+          <strong>3. Structure</strong> — the setup that produces the pattern.
+          "We never sized our servers for the Monday traffic spike." This is
+          where lasting fixes live.
+        </p>
+        <p>
+          <strong>4. Mental models</strong> — the beliefs that built the
+          structure. "We assumed traffic is roughly flat all week." Change the
+          belief and you stop building broken structures.
+        </p>
+        <p class="pm-key-line">
+          React at the event level and you firefight forever. Change the
+          structure and the events simply stop happening.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          Users keep filing the same complaint: they can't find the export
+          button. The team keeps replying to each ticket individually. What's
+          the systems-thinking move?
+        </p>
+        <div class="pm-quiz-options">
+          <button
+            class="pm-quiz-option"
+            data-msg="That's staying at the event level: handling each occurrence without touching the cause. The tickets will keep coming forever."
+          >
+            A) Keep answering tickets faster — it's good customer service.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-result="correct"
+            data-msg="Right — a repeating pattern points to a structural cause. Fixing where the button lives stops the tickets at the source instead of one at a time."
+          >
+            B) Ask why the same complaint recurs, and fix the structure — the
+            button is hidden, so redesign its placement.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-msg="Blaming users ignores the pattern entirely. When many people hit the same wall, the wall is the problem, not the people."
+          >
+            C) Close the tickets as 'user error'.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">
+          Feedback Loops <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Reinforcing &amp; Balancing Loops</h3>
+      </div>
+
+      <p>
+        Systems are driven by <strong>feedback loops</strong> — where an effect
+        circles back to influence its own cause. In plain terms: the result of
+        something becomes the cause of more of it. There are only two kinds, and
+        telling them apart explains most product dynamics.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example</h4>
+        <p>
+          <strong>Reinforcing</strong> is a snowball rolling downhill — it grabs
+          more snow, gets bigger, so it grabs even more. It speeds up on its
+          own. <strong>Balancing</strong> is the thermostat in your home — when
+          the room gets too hot it turns off the heat, when it gets too cold it
+          turns it back on, always pulling back to one target. One accelerates;
+          the other steadies.
+        </p>
+      </div>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item pm-good">
+          <span class="pm-chip">Snowball</span>
+          <h4>Reinforcing loop</h4>
+          <p>
+            Growth feeds more growth (or decline feeds more decline). More users
+            → more content → more users. Great for virality, dangerous for death
+            spirals.
+          </p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Thermostat</span>
+          <h4>Balancing loop</h4>
+          <p>
+            The system pushes back toward a target. Rising load triggers
+            slowdowns that reduce load. It resists change and creates stability
+            — or stubborn plateaus.
+          </p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          On a social app, users who post get likes, which encourages them to
+          post more, which attracts more users who post. What kind of loop is
+          this?
+        </p>
+        <div class="pm-quiz-options">
+          <button
+            class="pm-quiz-option"
+            data-result="correct"
+            data-msg="Exactly — each turn amplifies the next (more posting → more engagement → more posting). That's the engine behind viral growth, and behind collapse if it ever runs in reverse."
+          >
+            A) A reinforcing loop.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-msg="A balancing loop would push back toward a set point. Here nothing is resisting — the effect feeds the cause and accelerates. That's reinforcing."
+          >
+            B) A balancing loop.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-msg="It's a textbook feedback loop: the output (engagement) circles back to boost the input (posting). Recognizing it lets you deliberately strengthen or protect it."
+          >
+            C) Neither — it's just marketing.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1">
+          <i class="fas fa-chevron-left"></i> Previous
+        </button>
+        <button class="cta pm-next" data-goto-lesson="3">
+          Stocks &amp; Delays <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>Stocks, Flows &amp; Delays</h3>
+      </div>
+
+      <p>
+        Cause and effect are often separated in time. Understanding
+        <strong>stocks</strong>, <strong>flows</strong>, and especially
+        <strong>delays</strong> stops you from overcorrecting — from slamming
+        the brakes before your last action has even landed.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example</h4>
+        <p>
+          Picture a bathtub. The water in it is the <strong>stock</strong> (say,
+          your active users). The tap pouring in and the drain leaking out are
+          the <strong>flows</strong>
+          (signups and churn). The level only rises if the tap runs faster than
+          the drain. And a
+          <strong>delay</strong>? That's a tap with a long pipe — you turn the
+          handle now, but the water shows up seconds later. Turn it more because
+          "nothing's happening" and you'll suddenly flood the room.
+        </p>
+      </div>
+
+      <div class="pm-row-list">
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-database"></i></span>
+          <div>
+            <h4>Stock — what accumulates</h4>
+            <p>
+              A level that builds up: active users, technical debt, trust, cash.
+              It changes slowly.
+            </p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-right-left"></i></span>
+          <div>
+            <h4>Flow — what changes the stock</h4>
+            <p>
+              The rates in and out: signups vs. churn, debt added vs. paid down.
+            </p>
+          </div>
+        </div>
+        <div class="pm-row">
+          <span class="pm-row-key"><i class="fas fa-hourglass-half"></i></span>
+          <div>
+            <h4>Delay — the lag between action and result</h4>
+            <p>
+              Effects arrive late. A price change may not hit churn for months —
+              so you can't judge it next week.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          You raise prices and churn doesn't move for six weeks — then it jumps.
+          What trap does this illustrate?
+        </p>
+        <div class="pm-quiz-options">
+          <button
+            class="pm-quiz-option"
+            data-msg="Assuming no effect because nothing happened immediately is exactly the delay trap. Contracts, habits, and billing cycles mean consequences arrive late — but they arrive."
+          >
+            A) The price change had no effect; the later jump is unrelated.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-result="correct"
+            data-msg="Right. Delays hide cause and effect. Judging the decision in week one would have been wrong; the system was still working through the lag."
+          >
+            B) A delay — consequences lag the action, so early 'no change' is
+            misleading.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-msg="That's overcorrecting inside a delay — acting again before the first action's effect lands. It's how systems get pushed into wild swings."
+          >
+            C) You should raise prices again immediately since churn was flat.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2">
+          <i class="fas fa-chevron-left"></i> Previous
+        </button>
+        <button class="cta pm-next" data-goto-lesson="4">
+          Leverage Points <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Leverage Points &amp; Side Effects</h3>
+      </div>
+
+      <p>
+        In any system, a few well-chosen changes move everything, while most
+        effort barely registers. Those high-impact spots are called
+        <strong>leverage points</strong>. And every change ripples — the
+        <strong>second-order effects</strong> (what happens <em>next</em>, after
+        the obvious result) often matter more than the first.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example</h4>
+        <p>
+          Weak leverage: nagging people to "use less water." Strong leverage:
+          putting a water meter on every home so the bill reflects use —
+          behavior changes on its own. Same effort, wildly different result. The
+          strongest leverage point of all is usually the
+          <strong>goal or the rule</strong> you set, not the day-to-day knobs
+          you fiddle with. As a PM, changing what a team is
+          <em>rewarded for</em> beats a hundred pep talks.
+        </p>
+      </div>
+
+      <div class="pm-story">
+        <h4>
+          <i class="fas fa-triangle-exclamation"></i> When a metric fights back
+        </h4>
+        <p>
+          A support team is measured on tickets closed per hour. Closures soar —
+          because agents now close tickets fast without truly solving them.
+          Customers re-open, re-contact, and overall load <em>rises</em>.
+        </p>
+        <p class="pm-key-line">
+          Optimizing one part in isolation (local optimization) can hurt the
+          whole. Always ask: "and then what happens?"
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>
+          A riddle: "I'm the consequence you didn't plan for — the ripple that
+          shows up a step later, often undoing the win you just celebrated."
+          What am I?
+        </p>
+        <div class="pm-quiz-options">
+          <button
+            class="pm-quiz-option"
+            data-msg="A reinforcing loop is a self-amplifying cycle. The riddle is about an unplanned knock-on effect of a single change — that's something more specific."
+          >
+            A) A reinforcing loop.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-result="correct"
+            data-msg="Exactly. First-order: tickets close faster. Second-order: unsolved issues bounce back and load rises. Great systems thinkers always trace one step further."
+          >
+            B) A second-order effect.
+          </button>
+          <button
+            class="pm-quiz-option"
+            data-msg="A stock is an accumulation (users, debt). The riddle describes a downstream consequence of an action, not a level that builds up."
+          >
+            C) A stock.
+          </button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3">
+          <i class="fas fa-chevron-left"></i> Previous
+        </button>
+        <button class="cta pm-next" data-goto-tab="flashcards">
+          Review with Flashcards <i class="fas fa-layer-group"></i>
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Systems Thinking Flashcards</h2>
+      <p class="muted">
+        6 cards covering the essentials. Click a card to flip it.
+      </p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Systems Thinking</h3>
+              <p class="pm-flip-hint">
+                <i class="fas fa-arrows-rotate"></i> Click to flip
+              </p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card">
+          <i class="fas fa-chevron-left"></i> Prev
+        </button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">
+          Next <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">
+        15 real situations where systems thinking beats firefighting. Read each
+        one, decide the strongest move, then check the reasoning. Wrong answers
+        explain <em>why</em> — that's where the learning is.
+      </p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">
+          Your team is rewarded purely on the number of features shipped per
+          quarter. Shipping is up, but user satisfaction is sliding.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What's the systems-thinking read?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Counting output ignores the second-order effect. The incentive structure rewards shipping regardless of value, so quality and satisfaction quietly erode."
+            >
+              A) Great — high output means high productivity; keep going.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — the falling satisfaction is a pattern, and the reward structure is its cause. Fix the structure (reward outcomes) and the behavior follows."
+            >
+              B) The incentive (features per quarter) is a structure driving a
+              bad pattern; change what you reward to outcomes, not output.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Exhortation rarely beats incentives. As long as the structure pays for features shipped, that's what you'll get. Change the rule, not the mood."
+            >
+              C) Tell the team to care more about quality.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">
+          A referral feature quietly took off: invited friends invite more
+          friends, and signups are compounding week over week.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>How should you treat this?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Ignoring a reinforcing loop risks it stalling or reversing. Loops that compound are your most valuable assets precisely because they deserve deliberate protection and fuel."
+            >
+              A) Leave it alone — organic growth needs no attention.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Exactly. A compounding loop is a leverage point. Small improvements to the invite flow multiply through every future turn of the cycle."
+            >
+              B) Recognize the reinforcing loop and deliberately strengthen and
+              protect it — reduce friction in the invite step.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Redirecting away from a working reinforcing loop wastes your strongest lever. Paid ads are linear; the loop is exponential — feed the loop first."
+            >
+              C) Immediately pour the whole budget into paid ads instead.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">
+          Two teams each optimize their own metric: the growth team maximizes
+          signups, the infra team minimizes server cost by capping capacity.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What does systems thinking predict?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="That's assuming local optimization sums to global good. It often doesn't — two locally 'optimal' choices can collide badly."
+            >
+              A) Both metrics improve, so the product improves.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. Each team wins its own metric while the system loses. Systems thinking looks at the interaction, not the isolated parts."
+            >
+              B) Local optimization can hurt the whole — capped capacity
+              throttles the very signups growth is driving, and the system
+              suffers.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Neither team is 'wrong' locally — that's the point. The problem is the structure that lets two sensible local goals conflict. Align them on a shared outcome."
+            >
+              C) The infra team is simply wrong and should be overruled.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">
+          Your onboarding funnel drops 20% one week. You add a bigger "Continue"
+          button on the step where people leave. Drop-off barely moves.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What did the button fix miss?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Maybe — but you jumped to a tweak before finding the real level. The iceberg says: the visible drop-off is the event; the cause could be a confusing prior step, a broken email, or the wrong users arriving. A bigger button treats the symptom."
+            >
+              A) The button just needs to be even bigger and brighter.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. You optimized the visible event without asking what structure produces the drop. Trace it up the iceberg — where users actually get confused, or which traffic source sends unqualified users — before touching pixels."
+            >
+              B) It stayed at the event level — you changed what you could see,
+              not the structure causing people to leave.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="A 20% drop in one week is a real signal, not noise to wait out. Ignoring it lets the underlying cause keep compounding. Investigate the structure now."
+            >
+              C) Nothing — a 20% weekly swing is normal noise; wait it out.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">
+          A marketplace: more buyers attract more sellers, which widens
+          selection, which attracts more buyers. Your CEO asks where one extra
+          engineer would create the most long-term value.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>Where does systems thinking point them?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Exactly. This is a reinforcing loop, and reinforcing loops compound. Removing friction from whichever side is the bottleneck makes every future turn of the loop stronger — that's the highest-leverage place to invest."
+            >
+              A) On reducing friction in the loop's weakest side — because a
+              reinforcing loop compounds every improvement over time.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Polishing an unrelated settings page is a low-leverage spot: it barely touches the loop that drives the whole business. Effort here 'barely registers,' as the leverage lesson warned."
+            >
+              B) On polishing the account-settings page, since it hasn't been
+              updated in a while.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="A one-off ad blast is linear — it adds buyers once. The loop is exponential. Feeding the loop beats a spike that fades, because the loop keeps paying off turn after turn."
+            >
+              C) On a one-time ad campaign to add a burst of buyers this month.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">
+          To hit an aggressive quarterly signup goal, the team leans hard on
+          deep discounts. Signups spike every quarter — but each quarter needs a
+          bigger discount to hit the same number, and margins are thinning.
+        </p>
+        <div class="pm-quiz">
+          <p>
+            <strong>Which systems pattern is this, and what's the risk?</strong>
+          </p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="It looks like healthy growth on the surface, but needing an ever-bigger discount for the same result is the warning sign. You're addicted to a quick fix while the real problem (weak underlying value) goes unaddressed."
+            >
+              A) Healthy growth — signups keep hitting target, so keep
+              discounting.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — this is 'shifting the burden.' The discount is a symptomatic fix that works short-term but atrophies the real capability (a product people pay full price for). Each round deepens the dependence. Invest in the fundamental fix: the value proposition."
+            >
+              B) 'Shifting the burden' — a quick fix (discounts) masks the real
+              problem (weak value), and dependence on the fix grows each cycle.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Doubling the discount treats the symptom harder — the classic trap. It buys one more quarter while making the dependence worse and margins thinner. The fix and the disease grow together."
+            >
+              C) Just double the discount next quarter to stay ahead of the
+              trend.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">
+          You ship infinite scroll. Average session time jumps 30% and everyone
+          celebrates. Three months later, weekly active users are quietly
+          falling.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What likely happened?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="The two facts are almost certainly linked — treating them as unrelated ignores the second-order effect. Longer sessions that leave users feeling drained or guilty can reduce how often they come back."
+            >
+              A) Coincidence — session time and weekly actives have nothing to
+              do with each other.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Celebrating harder doubles down on a first-order win while ignoring the downstream cost. 'And then what happens?' is the question you skipped."
+            >
+              B) Great news — push infinite scroll even harder to boost sessions
+              more.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. First-order: longer sessions. Second-order: users feel it's a time-sink and return less often. The metric you optimized (session time) traded against the one that matters (retention). Always trace one step past the obvious win."
+            >
+              C) A second-order effect — longer, less satisfying sessions
+              reduced how often people came back.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">
+          You set a team target: "cut average support-ticket resolution time by
+          40%." Resolution time drops beautifully. But repeat-contact rate and
+          refunds both climb.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What went wrong with the metric?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — this is Goodhart's Law: 'when a measure becomes a target, it stops being a good measure.' Agents close tickets fast to hit the number, even unresolved ones, which bounces back as repeat contacts. The metric was a proxy for 'happy customers,' and the proxy got gamed."
+            >
+              A) The metric became a target, so it got gamed — agents optimized
+              'fast close' over 'actually solved.'
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Punishing agents ignores the structure. They responded rationally to the incentive you set. Change the incentive (measure resolved-on-first-contact), don't blame people for following it."
+            >
+              B) The agents are lazy and should be disciplined for the refunds.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Tightening the same target to 50% pours fuel on the fire — it rewards even faster, shallower closes. You'd be optimizing harder for the wrong thing."
+            >
+              C) The target wasn't ambitious enough; tighten it to a 50% cut.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">
+          The app slows down under load. Each time, ops adds more servers and it
+          recovers — for a while. But it keeps happening, the bill keeps rising,
+          and nobody has looked at the code in months.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>Which archetype is this, and what's the move?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Adding servers has 'worked' every time, which is exactly why it's a trap. It relieves the symptom while the real fault (likely a memory leak or bad query) grows unchecked. The fix that keeps working is hiding the disease."
+            >
+              A) It's working fine — adding servers solves it each time, so
+              automate that.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — 'fixes that fail.' The quick fix (more servers) treats the symptom and even makes things worse long-term (cost, and the real bug hidden). Spend the effort on the root cause in the code, even though it's slower and less visible."
+            >
+              B) 'Fixes that fail' — the quick patch masks a root cause that
+              keeps growing; go profile and fix the actual bottleneck.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="A blanket rule against servers is a blunt overcorrection — sometimes you genuinely need capacity. The point isn't 'never scale,' it's 'stop using scaling to avoid diagnosing the root cause.'"
+            >
+              C) Ban adding servers entirely so the team is forced to suffer.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">
+          Your referral loop drove explosive growth for a year. Lately, invites
+          are flat no matter how much you optimize the invite flow. The core
+          audience is niche and mostly on the product already.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What does systems thinking say is happening?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Blaming execution misses the structure. When a reinforcing loop stalls despite good execution, a balancing force (a limit) has kicked in — here, a saturated market. More optimization can't beat a shrinking pool of new people to invite."
+            >
+              A) The growth team got lazy; the invite flow just needs harder
+              optimization.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — 'limits to growth.' Every reinforcing loop eventually hits a balancing constraint. You've saturated the niche, so the pool of new invitees is drying up. The lever isn't the invite flow anymore — it's expanding to an adjacent audience or removing the constraint."
+            >
+              B) 'Limits to growth' — the reinforcing loop hit a constraint (a
+              saturated niche); the lever is now the constraint, not the loop.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Doubling referral rewards fights the wrong thing. The problem isn't motivation, it's that there are few new people left to invite. Bigger rewards can't manufacture an audience that doesn't exist yet."
+            >
+              C) Double the referral reward to reignite the same loop.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">
+          A shared internal platform team supports every product squad. Each
+          squad, acting sensibly, files "just one urgent request." The platform
+          team is now permanently overloaded and slow for everyone.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>Which archetype, and how do you fix it?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="No single squad is misbehaving — each request is reasonable on its own. That's the essence of the trap: individually rational choices that collectively exhaust a shared resource. Blaming one squad won't fix the structure."
+            >
+              A) One greedy squad is abusing the system; find and stop them.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — 'tragedy of the commons.' A shared resource gets overused because each user only feels their own benefit, not the collective cost. Fix the structure: add explicit prioritization, quotas, or a cost signal so demand reflects the true shared limit."
+            >
+              B) 'Tragedy of the commons' — a shared resource with no governing
+              rule gets overused; add prioritization or capacity signals so
+              demand reflects real cost.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Telling everyone to file fewer requests is exhortation against an incentive — the balancing-loop lesson's weak move. As long as filing an urgent request is free and beneficial to each squad, they'll keep doing it. Change the rule, not the mood."
+            >
+              C) Send a memo asking everyone to please file fewer requests.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">
+          Trust in your brand took three years of consistent quality to build.
+          One botched data-breach response burned a big chunk of it in a week.
+          Signups are now sluggish despite unchanged marketing spend.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What stock-and-flow idea explains this?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. Trust is a stock — it accumulates slowly through many good experiences and can drain fast through one bad one. Because signups flow partly from that stock, refilling it (not just more ad spend) is what unblocks growth. Stocks change slowly on the way up and can lag your fixes."
+            >
+              A) Trust is a slow-filling stock — it took years to build and
+              drained fast; you must refill the stock, not just spend more on
+              ads.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Spending more on marketing pours water into a bathtub with the drain wide open. If the trust stock is depleted, new visitors bounce. Fix the drain (rebuild trust) before turning up the tap."
+            >
+              B) Just increase marketing spend to push signups back up.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Sluggish signups right after a trust event are almost certainly connected — dismissing it as unrelated ignores that signups flow from the trust stock you just depleted."
+            >
+              C) The breach and the slow signups are unrelated events.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">
+          A competitor adds a flashy feature. You rush to match it. They one-up
+          you. You one-up back. Six months later, both products are bloated,
+          neither of you gained share, and both teams are exhausted.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What trap are both companies caught in?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Each move felt necessary in the moment, but 'match every move' is exactly what keeps the spiral going. Reacting to the rival instead of your own strategy is the mechanism of the trap, not the escape from it."
+            >
+              A) Normal competition — you have to match every move a rival
+              makes.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right — 'escalation.' Two reinforcing loops locked together: each side's action threatens the other, triggering a bigger counter-action. Nobody wins and both burn out. The way out is to stop reacting to the rival and re-anchor on your own strategy and the outcomes your users actually care about."
+            >
+              B) 'Escalation' — two reinforcing loops feeding each other; break
+              out by re-anchoring on your own strategy, not the rival's moves.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Adding two more features to 'get ahead for good' is one more turn of the escalation spiral. It deepens the bloat and invites the next counter-move. More escalation can't end an escalation."
+            >
+              C) Add two more features at once to get decisively ahead.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">
+          A leader says: "Our activation problem is simple — the sign-up form is
+          too long. Cut the fields and activation will jump."
+        </p>
+        <div class="pm-quiz">
+          <p><strong>What's the systems-thinking caution here?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Accepting the single-cause story is the exact risk. Activation sits inside a system — traffic quality, first-run value, onboarding, follow-up emails all feed it. One visible knob is rarely the whole structure."
+            >
+              A) Agree — obviously fewer fields means more activation, so ship
+              it.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. 'Simple, single cause' claims deserve suspicion in a system. Form length is one visible factor, but activation is driven by a web of causes (who's arriving, whether they hit value quickly, follow-up). Test the hypothesis, but map the fuller structure before betting the quarter on one knob."
+            >
+              B) A single, obvious cause in a complex system is a red flag —
+              test it, but map the other drivers of activation before assuming
+              it's the whole story.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="Refusing to touch the form is the opposite over-reaction. Shortening it may well help — the caution isn't 'don't try it,' it's 'don't assume it's the entire cause and stop looking.'"
+            >
+              C) Refuse to change the form; form length never matters.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">
+          You're deciding how to lift retention. Option A: tweak the
+          push-notification copy. Option B: change the core onboarding so new
+          users reach their first real "win" in minute one instead of day three.
+        </p>
+        <div class="pm-quiz">
+          <p><strong>Which is the higher-leverage point, and why?</strong></p>
+          <div class="pm-quiz-options">
+            <button
+              class="pm-quiz-option"
+              data-msg="Notification copy is a shallow parameter — a small knob near the surface. It can nudge numbers slightly, but it doesn't change the fundamental reason people stay or leave. Most such tweaks 'barely register,' as the leverage lesson warned."
+            >
+              A) copy tweaks are cheap and safe, so they're the smart lever.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-result="correct"
+              data-msg="Right. Getting users to real value fast changes the structure that generates retention — it reshapes the whole experience, not a surface parameter. Higher-leverage points are usually about the goal, the structure, and the flows of value, not the wording of a notification."
+            >
+              B) reaching value faster changes the structure driving retention,
+              which is a far deeper leverage point than surface copy.
+            </button>
+            <button
+              class="pm-quiz-option"
+              data-msg="'Do both equally' ignores the core lesson: leverage is uneven. A few changes move everything while most barely register. Spreading effort evenly wastes your strongest lever on a weak one."
+            >
+              C) They're equal — spread effort evenly across both.
+            </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">
+        Read the clues and name the concept. The fewer clues you need, the more
+        points you score.
+      </p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button
+            class="cta pm-hidden"
+            data-pm-action="game-next"
+            id="pm-game-next"
+          >
+            Next term <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Systems Thinking Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-water"></i> The Iceberg</h3>
+        <p class="muted">
+          Most causes hide below the visible event. Go deeper to fix things for
+          good.
+        </p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Events</h4>
+              <p>What just happened. React here and you firefight forever.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>Patterns</h4>
+              <p>The trend over time. "This keeps happening every Monday."</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Structure</h4>
+              <p>What produces the pattern. Fix here for lasting change.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">4</span>
+            <div>
+              <h4>Mental models</h4>
+              <p>The beliefs that built the structure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-arrows-spin"></i> Loops &amp; Leverage</h3>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-snowflake"></i></span>
+            <div>
+              <h4>Reinforcing loop</h4>
+              <p>
+                Amplifies itself — growth feeds growth. Protect and fuel it.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"
+              ><i class="fas fa-scale-balanced"></i
+            ></span>
+            <div>
+              <h4>Balancing loop</h4>
+              <p>Pushes back to a target — creates stability and plateaus.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"
+              ><i class="fas fa-hourglass-half"></i
+            ></span>
+            <div>
+              <h4>Mind the delay</h4>
+              <p>
+                Effects lag actions. Don't judge (or overcorrect) too early.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-arrow-right"></i></span>
+            <div>
+              <h4>Ask "and then what?"</h4>
+              <p>Trace second-order effects before you act.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-repeat"></i> Patterns That Repeat (Archetypes)</h3>
+        <p class="muted">
+          The same traps show up in every product. Name one and you're half-way
+          to escaping it.
+        </p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-bandage"></i></span>
+            <div>
+              <h4>Fixes that fail</h4>
+              <p>
+                A quick patch relieves the symptom but the root cause grows.
+                (More servers vs. the real bug.)
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"
+              ><i class="fas fa-hand-holding-dollar"></i
+            ></span>
+            <div>
+              <h4>Shifting the burden</h4>
+              <p>
+                Leaning on a crutch (discounts) starves the real capability (a
+                product worth full price).
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"
+              ><i class="fas fa-arrow-up-right-dots"></i
+            ></span>
+            <div>
+              <h4>Limits to growth</h4>
+              <p>
+                A booming reinforcing loop hits a constraint. The lever becomes
+                the constraint, not the loop.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-users-slash"></i></span>
+            <div>
+              <h4>Tragedy of the commons</h4>
+              <p>
+                A shared resource with no rule gets overused. Add prioritization
+                or a cost signal.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"
+              ><i class="fas fa-arrows-up-to-line"></i
+            ></span>
+            <div>
+              <h4>Escalation</h4>
+              <p>
+                Two rivals one-up each other into exhaustion. Re-anchor on your
+                own strategy.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key"><i class="fas fa-bullseye"></i></span>
+            <div>
+              <h4>Goodhart's Law</h4>
+              <p>
+                When a measure becomes a target, it gets gamed and stops
+                measuring what you meant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-circle-question"></i> Ask Before You Act</h3>
+        <p class="muted">
+          Six questions that turn firefighting into systems thinking.
+        </p>
+        <div class="pm-row-list">
+          <div class="pm-row">
+            <span class="pm-row-key">1</span>
+            <div>
+              <h4>Is this an event or a pattern?</h4>
+              <p>
+                If it keeps happening, don't fix the instance — fix the
+                structure.
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">2</span>
+            <div>
+              <h4>And then what happens?</h4>
+              <p>Trace the second- and third-order effects before shipping.</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">3</span>
+            <div>
+              <h4>Where's the delay?</h4>
+              <p>
+                Have I given the last change time to land before judging or
+                acting again?
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">4</span>
+            <div>
+              <h4>What loop am I in?</h4>
+              <p>
+                Reinforcing (feed it) or balancing (find what it's defending)?
+              </p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">5</span>
+            <div>
+              <h4>Am I optimizing a part or the whole?</h4>
+              <p>Could this local win hurt the overall system?</p>
+            </div>
+          </div>
+          <div class="pm-row">
+            <span class="pm-row-key">6</span>
+            <div>
+              <h4>What's the real leverage point?</h4>
+              <p>
+                Usually the goal, rule, or incentive — not the surface knob.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"
+        ><i class="fas fa-info" id="pm-modal-icon"></i
+      ></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/pm-gym/systems-thinking.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

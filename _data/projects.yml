@@ -1,0 +1,34 @@
+- name: "PM Gym"
+  description: "Interactive product management learning platform I built from scratch — step-by-step lessons, quizzes, flashcards, and a vocab game across systems thinking, strategy, discovery, and user research. Still growing."
+  accent_color: "pink"
+  icon: "fas fa-dumbbell"
+  github: "https://github.com/mayank1101/mayank1101.github.io"
+  live: "/pm-gym.html"
+  tags: ["Product Management", "Interactive Learning", "JavaScript"]
+  status: "completed"
+  type: "live"
+
+- name: "The AI/ML Playbook: Small Models, Big Impacts"
+  description: "A compilation of Jupyter-based machine learning prototypes spanning Deep Learning, NLP, and Computer Vision."
+  accent_color: "purple"
+  github: "https://github.com/mayank1101/AI-Lab/tree/main/the-aiml-playbook"
+  # live: ""
+  tags: ["Python", "PyTorch", "Scikit-Learn", "Matplotlib"]
+  status: "completed"
+  type: "sandbox"
+
+- name: "The Analytics Mosaic: A Collection of Bitesize Data Stories"
+  description: "Compilation of interactive data analysis workflows focused on statistical modeling, exploratory data analysis (EDA), and data integrity."
+  accent_color: "cyan"
+  github: "https://github.com/mayank1101/AI-Lab/tree/main/the-analytics-mosaic"
+  # live: ""
+  tags: ["Python", "Pandas", "Numpy", "Data Science", "Matplotlib"]
+  status: "completed"
+  type: "sandbox"
+# - name: "VizWizardry: A Collection of SQL Data Stories"
+#   description: "Collection of various case-studies and hands on data analytics using SQL completed during NamasteSQL Program."
+#   accent_color: "green"
+#   github: "https://github.com/mayank1101/Mayank-AI-Analytics-Lab/tree/main/NamasteSQL/"
+#   # live: ""
+#   tags: ["MS SQL", "SQL", "SQL Server", "Analytics"]
+#   status: "completed"

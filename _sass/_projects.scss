@@ -82,59 +82,19 @@
   }
 }
 
-// Filter bar section
-.proj-filter-section {
-  margin: 3rem 0 2rem;
-  text-align: center;
-}
-
-.proj-filter-bar {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  overflow-x: auto;
-  padding: 0.5rem 0;
-
-  &::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 255, 0.3);
-    border-radius: 4px;
+// Section intros
+.proj-live-section,
+.proj-sandbox-section {
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 }
 
-.proj-filter-btn {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--card-border);
-  background: transparent;
-  color: var(--text-primary);
-  border-radius: 2rem;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-
-  &:hover {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
-  }
-
-  &.active {
-    background: var(--accent-cyan);
-    border-color: var(--accent-cyan);
-    color: #000;
-    font-weight: 600;
-  }
+.proj-section-sub {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 // Projects card grid
@@ -145,16 +105,70 @@
   margin-top: 2rem;
 }
 
+// Live Applications — emphasized, larger cards
+.proj-live-grid {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2.5rem;
+}
+
+.proj-card-live {
+  border-width: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 255, 255, 0.08), 0 20px 40px -20px rgba(0, 255, 255, 0.25);
+
+  .proj-card-body h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.proj-live-badge {
+  position: absolute;
+  top: -0.75rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background: #22c55e;
+  color: #000;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  i {
+    font-size: 0.5rem;
+  }
+}
+
+// Technical Sandbox — compact, lower visual weight
+.proj-sandbox-section {
+  opacity: 0.92;
+}
+
+.proj-sandbox-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.proj-card-sandbox {
+  border-style: dashed;
+
+  .proj-card-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .proj-card-body p {
+    font-size: 0.9rem;
+  }
+}
+
 .proj-card {
   display: flex;
   flex-direction: column;
   height: 100%;
   position: relative;
   transition: all 0.3s ease;
-
-  &.hidden {
-    display: none;
-  }
 
   &:hover {
     transform: translateY(-8px);
@@ -363,12 +377,9 @@
     gap: 1rem;
   }
 
-  .proj-filter-bar {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-
-  .proj-cards-grid {
+  .proj-cards-grid,
+  .proj-live-grid,
+  .proj-sandbox-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

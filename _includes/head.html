@@ -33,7 +33,7 @@
 <meta name="author" content="Mayank Sharma" />
 <meta
   name="keywords"
-  content="AI, ML, Machine Learning, Deep Learning, NLP, LLM, RAG, PyTorch, Data Science, Generative AI, GenAI, AgenticAI, AI Product Manager, AI Product Strategy"
+  content="{% if page.keywords %}{{ page.keywords }}{% else %}AI, ML, Machine Learning, Deep Learning, NLP, LLM, RAG, PyTorch, Data Science, Generative AI, GenAI, AgenticAI, AI Product Manager, AI Product Strategy{% endif %}"
 />
 
 <!-- Open Graph / Facebook -->
@@ -52,7 +52,7 @@
 />
 <meta
   property="og:image"
-  content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
+  content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% elsif page.series_image %}{{ page.series_image | absolute_url }}{% elsif page.layout == 'pm-gym' %}{{ '/assets/pm-gym-og.png' | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
 />
 <meta property="og:site_name" content="Mayank Sharma" />
 
@@ -70,7 +70,7 @@
 />
 <meta
   name="twitter:image"
-  content="{% if page.series_image %}{{ page.series_image | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
+  content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% elsif page.series_image %}{{ page.series_image | absolute_url }}{% elsif page.layout == 'pm-gym' %}{{ '/assets/pm-gym-og.png' | absolute_url }}{% else %}{{ '/assets/profile.jpeg' | absolute_url }}{% endif %}"
 />
 
 <!-- Canonical URL -->
@@ -90,6 +90,7 @@
 />
 
 <!-- Font Awesome -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"

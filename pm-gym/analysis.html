@@ -1,0 +1,645 @@
+---
+layout: pm-gym
+title: "Analysis — PM Gym"
+description: "A beginner-friendly, interactive guide to product analysis: the analysis mindset, quantitative vs. qualitative methods, frameworks like funnel and cohort analysis, and avoiding classic analysis biases."
+---
+
+<div class="container hero fade-in">
+  <p><a href="/pm-gym.html" class="muted"><i class="fas fa-arrow-left"></i> PM Gym</a></p>
+  <h1>Analysis</h1>
+  <p class="lead">Turn data into a decision, not just a chart</p>
+  <p class="muted">
+    Data doesn't speak for itself — someone has to ask it the right question. This guide covers how to approach analysis with a clear mindset, which method fits which question, a few frameworks worth knowing, and the biases that quietly wreck good analysis.
+  </p>
+
+  <nav class="pm-tabs" aria-label="Guide sections">
+    <button class="pm-tab-btn active" data-tab="learn"><i class="fas fa-book-open"></i> Learn</button>
+    <button class="pm-tab-btn" data-tab="flashcards"><i class="fas fa-layer-group"></i> Flashcards</button>
+    <button class="pm-tab-btn" data-tab="practice"><i class="fas fa-comments"></i> Practice</button>
+    <button class="pm-tab-btn" data-tab="game"><i class="fas fa-dice"></i> Vocab Game</button>
+    <button class="pm-tab-btn" data-tab="cheatsheet"><i class="fas fa-file-lines"></i> Quick Reference</button>
+  </nav>
+</div>
+
+<div class="container section">
+
+  <!-- ============ Learn ============ -->
+  <section class="pm-pane active" data-pane="learn">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Step-by-step lessons</span>
+      <h2>From Data to Decision</h2>
+      <p class="muted">Four short lessons: the analysis mindset, quantitative vs. qualitative, common frameworks, and avoiding bias.</p>
+    </div>
+
+    <div class="pm-lesson-nav">
+      <button class="pm-lesson-btn active" data-lesson="1">1. The Mindset</button>
+      <button class="pm-lesson-btn" data-lesson="2">2. Quant vs. Qual</button>
+      <button class="pm-lesson-btn" data-lesson="3">3. Frameworks</button>
+      <button class="pm-lesson-btn" data-lesson="4">4. Avoiding Bias</button>
+    </div>
+
+    <article class="pm-lesson active" data-lesson="1">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">1</span>
+        <h3>From Data to Decision</h3>
+      </div>
+
+      <p>
+        Analysis starts with a question, not a dashboard. Staring at numbers with no goal rarely
+        reveals anything; a specific question, tied to a decision, focuses the search.
+      </p>
+
+      <div class="pm-callout">
+        <h4><i class="fas fa-lightbulb"></i> Everyday example — how a doctor works</h4>
+        <p>
+          A doctor doesn't run every possible test on every patient. They form a hypothesis about
+          what might be wrong, then order the specific tests that would confirm or rule it out.
+          Good analysis works the same way: start with a question, then go find the data that
+          answers it.
+        </p>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A PM opens the analytics dashboard with no particular question in mind, just "to see what's there." What's the risk of this approach?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Undirected exploration can easily lead nowhere, or tempt the analyst into treating random noise as if it were meaningful.">A) None, exploring data without a goal always leads to useful discoveries.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A specific question keeps the search focused and makes the result easier to trust.">B) Without a guiding question, it's easy to wander, waste time, or mistake random noise in the data for a meaningful pattern.</button>
+          <button class="pm-quiz-option" data-msg="The temptation to read meaning into noise when browsing undirected isn't unique to experience level.">C) The risk only applies to junior analysts, not experienced ones.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta pm-next" data-goto-lesson="2">Quant vs. Qual <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="2">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">2</span>
+        <h3>Quantitative vs. Qualitative Analysis</h3>
+      </div>
+
+      <p>
+        The two main modes of analysis answer different questions, and the strongest work pairs
+        both.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">What &amp; how much</span>
+          <h4>Quantitative</h4>
+          <p>Numbers at scale. Strong at measuring size and trend, weak at explaining why.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Why</span>
+          <h4>Qualitative</h4>
+          <p>Interviews, recordings, open-ended feedback. Strong at reasoning, weak at telling you how many.</p>
+        </div>
+      </div>
+
+      <p class="pm-key-line">
+        Quant tells you where to look. Qual tells you why it's happening there.
+      </p>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A funnel shows a 40% drop-off at the payment step, but the team doesn't know why users are leaving. What should they add to the analysis?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More slicing can help narrow where the drop happens, but still won't explain the underlying reasoning.">A) More quantitative data, like breaking the 40% down by browser type.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The number tells you where; the qualitative work tells you why.">B) Qualitative research — session recordings or quick exit surveys at that step — to understand the reasoning behind the drop-off.</button>
+          <button class="pm-quiz-option" data-msg="The number tells you where the problem is, not what's causing it — acting without understanding the cause risks fixing the wrong thing.">C) Nothing further is needed; the 40% figure is enough to act on.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="1"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="3">Frameworks <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="3">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">3</span>
+        <h3>A Few Frameworks Worth Knowing</h3>
+      </div>
+
+      <p>
+        A handful of structured approaches cover most product analysis needs.
+      </p>
+
+      <div class="pm-row-list">
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-filter"></i></span><div><h4>Funnel Analysis</h4><p>Break a multi-step process into stages and find where the biggest drop-off happens.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Cohort Analysis</h4><p>Group users by a shared starting point (like signup week) and track how their behavior changes over time.</p></div></div>
+        <div class="pm-row"><span class="pm-row-key"><i class="fas fa-layer-group"></i></span><div><h4>Segmentation</h4><p>Slice a metric by a meaningful dimension to see if an aggregate number is hiding very different sub-stories.</p></div></div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A team's overall retention curve looks flat month over month, but they haven't checked whether newer signup cohorts are retaining better or worse than older ones. What analysis technique would reveal this?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Funnel analysis breaks down a single process into sequential steps — it doesn't compare how different starting groups behave over time.">A) Funnel analysis, since it's the standard tool for retention questions.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This would reveal whether things are actually improving or worsening for newer users, which the flat aggregate hides.">B) Cohort analysis — grouping users by signup period and tracking how each group's retention evolves over time.</button>
+          <button class="pm-quiz-option" data-msg="A/B testing evaluates a specific design change's effect — it doesn't answer whether different starting cohorts retain differently over time.">C) A/B testing the retention page's design.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="2"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-lesson="4">Avoiding Bias <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </article>
+
+    <article class="pm-lesson" data-lesson="4">
+      <div class="pm-lesson-title">
+        <span class="pm-step-number">4</span>
+        <h3>Avoiding Bias in Analysis</h3>
+      </div>
+
+      <p>
+        The same data can support very different, equally confident-sounding conclusions. Three
+        traps distort analysis most often.
+      </p>
+
+      <div class="pm-concept-grid">
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 1</span>
+          <h4>Correlation vs. Causation</h4>
+          <p>Two things moving together doesn't mean one causes the other — a hidden third factor might drive both.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 2</span>
+          <h4>Cherry-Picking</h4>
+          <p>Searching until you find the metric or time window that supports what you already believed.</p>
+        </div>
+        <div class="pm-concept-item">
+          <span class="pm-chip">Trap 3</span>
+          <h4>Simpson's Paradox</h4>
+          <p>A trend in several groups can reverse when the groups are combined, if their sizes differ enough.</p>
+        </div>
+      </div>
+
+      <div class="pm-quiz">
+        <h4><i class="fas fa-gamepad"></i> Quick check</h4>
+        <p>A report claims "ice cream sales cause more drownings" because both rise together every summer. What's the analytical error?</p>
+        <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A real correlation doesn't establish that one thing causes the other — this is exactly the correlation-vs-causation error.">A) None, the correlation is real, so the causal claim is valid.</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Hot weather increases both ice cream sales and swimming, which drives up drownings independently.">B) Correlation vs. causation — both are actually driven by a third factor (hot weather), not by one causing the other.</button>
+          <button class="pm-quiz-option" data-msg="Sample size isn't the issue here — even a huge sample wouldn't establish causation without ruling out the shared cause.">C) The error is only that the sample size is too small.</button>
+        </div>
+        <div class="pm-quiz-feedback"></div>
+      </div>
+
+      <div class="pm-lesson-footer">
+        <button class="cta-secondary" data-goto-lesson="3"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="cta pm-next" data-goto-tab="flashcards">Review with Flashcards <i class="fas fa-layer-group"></i></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Flashcards ============ -->
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">Review the concepts</span>
+      <h2>Analysis Flashcards</h2>
+      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
+              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
+            </div>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title">Analysis Mindset</h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice ============ -->
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">Apply what you learned</span>
+      <h2>Practice Scenarios</h2>
+      <p class="muted">15 situations that test whether you can pick the right analysis method, use a framework correctly, or catch a bias distorting a conclusion.</p>
+    </div>
+
+    <div class="pm-scenario-list">
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 1</span>
+        <p class="pm-scenario-text">A PM is asked "how is the product doing?" with no further detail, and immediately starts pulling every metric they can find into one giant report.</p>
+        <div class="pm-quiz">
+          <p><strong>What's a better first step?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Endlessly adding metrics without a guiding question produces a report that's comprehensive but unfocused.">
+            A) Keep pulling more metrics until the picture feels complete.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A specific question focuses the analysis and makes it actually useful.">
+            B) Clarify the actual question or decision behind the request, then pull the specific metrics that answer it.
+          </button>
+          <button class="pm-quiz-option" data-msg="Handing over a raw dashboard without framing skips the actual analytical work.">
+            C) Just share the raw dashboard link instead of doing any analysis.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 2</span>
+        <p class="pm-scenario-text">A funnel analysis shows the biggest drop-off is between "add to cart" and "enter shipping info," but the team doesn't know if it's a UX problem or a shipping-cost surprise.</p>
+        <div class="pm-quiz">
+          <p><strong>What should come next?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The funnel data shows where the problem is, not what's causing it — redesigning without knowing the cause risks fixing the wrong thing.">
+            A) Redesign the shipping info screen immediately based on the funnel data alone.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Quant located the step; qual explains the reason.">
+            B) Add qualitative research — session recordings or a quick survey at that step — to understand why users are dropping off.
+          </button>
+          <button class="pm-quiz-option" data-msg="The funnel step name tells you where users leave, not their reasoning.">
+            C) Nothing further; the funnel step itself is the whole explanation.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 3</span>
+        <p class="pm-scenario-text">A cohort analysis shows the March 2025 signup cohort retaining much better at 90 days than the January 2025 cohort.</p>
+        <div class="pm-quiz">
+          <p><strong>What's a reasonable next step?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Concluding nothing changed ignores the very cohort difference the analysis just surfaced.">
+            A) Conclude nothing changed and move on, since overall metrics look similar.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Onboarding, pricing, or acquisition channel changes are all worth checking.">
+            B) Investigate what changed between January and March that might explain the retention improvement.
+          </button>
+          <button class="pm-quiz-option" data-msg="Merging would erase the exact signal the cohort analysis was designed to reveal.">
+            C) Merge both cohorts together to get a cleaner, single retention number.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 4</span>
+        <p class="pm-scenario-text">A report says "users on our premium plan are happier, because premium-plan NPS is 20 points higher than free-plan NPS."</p>
+        <div class="pm-quiz">
+          <p><strong>What alternative explanation should the analyst consider?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A higher NPS score among premium users doesn't automatically mean the plan itself causes the happiness.">
+            A) None — a higher NPS score always means direct causation from being on that plan.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. This is a classic correlation-vs-causation trap.">
+            B) Premium users may already be more invested or successful with the product before upgrading — the plan itself may not be the cause.
+          </button>
+          <button class="pm-quiz-option" data-msg="A gap between segments isn't inherently a sign of a flawed survey method.">
+            C) The NPS methodology is definitely flawed if there's any gap between segments.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 5</span>
+        <p class="pm-scenario-text">A dashboard shows "conversion rate" as one aggregate number for both desktop and mobile combined, and it's been flat for months.</p>
+        <div class="pm-quiz">
+          <p><strong>What analysis technique might reveal something the aggregate is hiding?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Cohort analysis groups by starting time period, not by device type — it wouldn't reveal a desktop-vs-mobile difference specifically.">
+            A) Cohort analysis, since it's the standard technique for any flat metric.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Segmentation is exactly built to catch offsetting trends hidden in an aggregate.">
+            B) Segmentation — splitting the flat aggregate by device type might reveal one improving while the other declines, canceling out.
+          </button>
+          <button class="pm-quiz-option" data-msg="An unchanging aggregate can absolutely hide two offsetting trends underneath.">
+            C) Nothing; a flat aggregate number always means nothing is changing underneath.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 6</span>
+        <p class="pm-scenario-text">An analyst notices Hospital A has a higher survival rate than Hospital B for both mild AND severe cases individually, yet Hospital B has a higher overall survival rate.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the likely explanation?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="This exact pattern is a known, real phenomenon, not necessarily a sign of a data error.">
+            A) The data must be wrong, since this shouldn't be possible.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Combining groups with very different mixes can flip the overall picture.">
+            B) Simpson's Paradox — likely explained by the two hospitals treating very different proportions of mild vs. severe cases.
+          </button>
+          <button class="pm-quiz-option" data-msg="This conclusion ignores the paradox entirely — the overall number can flip due to uneven case-mix alone.">
+            C) Hospital B must simply have better doctors overall.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 7</span>
+        <p class="pm-scenario-text">An analyst keeps re-slicing a flat metric by different time windows until they find a 3-day period where it happened to spike, then reports "engagement is up."</p>
+        <div class="pm-quiz">
+          <p><strong>What's the analytical problem?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="The spike being real data doesn't mean it's representative — cherry-picking a favorable window is what makes the conclusion misleading.">
+            A) None, as long as the 3-day spike is real data.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The honest read is the whole trend, not the one window that looked good.">
+            B) Cherry-picking — searching many time windows until finding one that supports a desired story misrepresents what's happening overall.
+          </button>
+          <button class="pm-quiz-option" data-msg="Short windows aren't inherently invalid — the problem is selectively choosing one that &quot;worked&quot; out of many that didn't.">
+            C) The problem is only that 3 days is too short a period to ever report on.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 8</span>
+        <p class="pm-scenario-text">A PM wants to know why enterprise customers churn at a higher rate than small-business customers.</p>
+        <div class="pm-quiz">
+          <p><strong>What analysis approach best answers "why," beyond just confirming the rate difference?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="More decimal precision on the same quantitative number doesn't explain the underlying reasoning.">
+            A) Recompute the churn rate more precisely, to more decimal places.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The rate confirms a difference exists; interviews explain why.">
+            B) Qualitative research — interviews with recently churned enterprise customers — to understand their specific reasons for leaving.
+          </button>
+          <button class="pm-quiz-option" data-msg="A rate comparison confirms a difference exists, not the reasoning behind it.">
+            C) Nothing further, since the churn rate comparison already answers the "why."
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 9</span>
+        <p class="pm-scenario-text">A team segments a metric by acquisition channel and finds one channel's users convert twice as well as others, then immediately doubles that channel's budget.</p>
+        <div class="pm-quiz">
+          <p><strong>What should they check before doing this?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Acting without checking for confounding factors risks scaling a result explained by something else entirely.">
+            A) Nothing, a 2x difference is decisive enough on its own.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The channel might just be reaching a naturally higher-converting audience.">
+            B) Whether a confounding variable (like the type of audience that channel tends to reach) explains the difference, rather than the channel itself.
+          </button>
+          <button class="pm-quiz-option" data-msg="The channel's name has no bearing on the actual analysis.">
+            C) Whether the channel's name sounds more trustworthy than the others.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 10</span>
+        <p class="pm-scenario-text">An analyst reports "feature X caused a 10% revenue increase" based solely on revenue rising in the month after feature X launched.</p>
+        <div class="pm-quiz">
+          <p><strong>What's missing from this conclusion?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Timing alone doesn't rule out other factors that could explain the same rise, like seasonality or a pricing change.">
+            A) Nothing, timing alone is sufficient to establish causation.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. &quot;X happened, then Y happened&quot; isn't proof X caused Y.">
+            B) Ruling out other explanations (seasonality, a pricing change, a marketing campaign) that happened around the same time.
+          </button>
+          <button class="pm-quiz-option" data-msg="More data from the same single, uncontrolled month doesn't address ruling out other simultaneous causes.">
+            C) A bigger sample size of the same single month's data.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 11</span>
+        <p class="pm-scenario-text">A retention chart shows an overall improving trend, but a closer cohort breakdown shows every individual cohort is actually declining.</p>
+        <div class="pm-quiz">
+          <p><strong>What's happening?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="This is a recognizable pattern, not necessarily a data error — it fits the same shape as Simpson's Paradox.">
+            A) The overall chart must simply be wrong or mislabeled.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. More newer, naturally higher-retention users entering the mix can hide universal decline.">
+            B) A Simpson's-Paradox-like effect — a shifting mix of cohorts may be masking that every individual cohort is declining.
+          </button>
+          <button class="pm-quiz-option" data-msg="This combination is exactly the kind of pattern possible when the underlying group composition shifts.">
+            C) It's impossible for individual cohorts to decline while the aggregate improves, so one claim must be false.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 12</span>
+        <p class="pm-scenario-text">A team wants to understand both how many users are affected by a bug and why it's happening to them.</p>
+        <div class="pm-quiz">
+          <p><strong>What combination of methods fits best?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Running the same type of analysis twice doesn't add the missing dimension of &quot;why.&quot;">
+            A) Quantitative analysis alone, run twice for extra confidence.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Each method answers a different half of the question.">
+            B) Quantitative analysis to size how many users are affected, paired with qualitative analysis to understand why.
+          </button>
+          <button class="pm-quiz-option" data-msg="Qualitative analysis alone can explain reasoning for a few users but can't size the issue across the full base.">
+            C) Qualitative analysis alone, since it captures user experience most richly.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 13</span>
+        <p class="pm-scenario-text">A metric review meeting spends 90% of its time debating a metric that moved by 0.1%, within its normal week-to-week noise range.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the issue?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Treating normal noise as equally significant wastes analysis time on movements that aren't meaningfully different from usual variation.">
+            A) None, all metric movements deserve equal attention regardless of size.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Knowing a metric's normal noise range keeps debates focused on real movements.">
+            B) The team is treating normal noise as if it were a meaningful signal, wasting analysis time.
+          </button>
+          <button class="pm-quiz-option" data-msg="Meeting length is a symptom, not the core problem.">
+            C) The issue is only that the meeting ran too long.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 14</span>
+        <p class="pm-scenario-text">An analyst wants to compare this quarter's conversion rate to last quarter's, but pricing changed in between the two periods.</p>
+        <div class="pm-quiz">
+          <p><strong>What should the analysis account for?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="A confound like a mid-period pricing change means the two quarters aren't a clean apples-to-apples comparison by default.">
+            A) Nothing, quarter-over-quarter comparisons are always apples-to-apples by default.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Attributing the whole change to &quot;the quarter&quot; ignores a specific, known confound.">
+            B) The pricing change as a potential confounding variable that might explain the shift in conversion rate.
+          </button>
+          <button class="pm-quiz-option" data-msg="Calendar alignment alone doesn't address the actual confound.">
+            C) Only the exact calendar dates of the two quarters, nothing about what changed within them.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+
+      <div class="pm-panel pm-scenario-card">
+        <span class="pm-scenario-tag">Scenario 15</span>
+        <p class="pm-scenario-text">A team concludes "our new onboarding is a failure" based on one week of data, right after a major unrelated outage occurred during that same week.</p>
+        <div class="pm-quiz">
+          <p><strong>What's the analytical error?</strong></p>
+          <div class="pm-quiz-options">
+          <button class="pm-quiz-option" data-msg="Drawing a firm conclusion from a week that coincided with a major unrelated outage ignores an obvious confounding event.">
+            A) None, one week of real data is enough to draw a firm conclusion.
+          </button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The outage is a far more likely explanation that was never ruled out.">
+            B) Failing to account for a confounding event (the outage) that could fully explain the bad week, independent of the onboarding change.
+          </button>
+          <button class="pm-quiz-option" data-msg="The length of the window isn't the core problem — not accounting for the outage is.">
+            C) The error is only that a week isn't a round number of days.
+          </button>
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Vocab Game ============ -->
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">Lock it in</span>
+      <h2>Guess the Term</h2>
+      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>
+
+  <!-- ============ Quick Reference ============ -->
+  <section class="pm-pane" data-pane="cheatsheet">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-pink">Keep it handy</span>
+      <h2>Analysis Quick Reference</h2>
+      <p class="muted">The whole topic on one screen.</p>
+    </div>
+
+    <div class="pm-cheat-grid">
+      <div class="pm-panel">
+        <h3><i class="fas fa-magnifying-glass"></i> The Analysis Mindset</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-question"></i></span><div><h4>Start with a question</h4><p>Tied to a real decision, not idle curiosity.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-compass"></i></span><div><h4>Avoid undirected browsing</h4><p>It risks mistaking noise for signal.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-scale-balanced"></i> Quant vs. Qual</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-chart-bar"></i></span><div><h4>Quantitative</h4><p>What, and how much.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-comments"></i></span><div><h4>Qualitative</h4><p>Why.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-puzzle-piece"></i></span><div><h4>Pair them</h4><p>For the strongest, most trustworthy read.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-toolbox"></i> Frameworks Worth Knowing</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-filter"></i></span><div><h4>Funnel analysis</h4><p>Find the step with the biggest drop-off.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-users"></i></span><div><h4>Cohort analysis</h4><p>Track a starting group's behavior over time.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-layer-group"></i></span><div><h4>Segmentation</h4><p>Slice an aggregate to find hidden sub-stories.</p></div></div>
+        </div>
+      </div>
+
+      <div class="pm-panel">
+        <h3><i class="fas fa-triangle-exclamation"></i> Biases to Watch For</h3>
+        <div class="pm-row-list">
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-link"></i></span><div><h4>Correlation vs. causation</h4><p>Check for a hidden shared cause.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-hand-pointer"></i></span><div><h4>Cherry-picking</h4><p>Don't hunt for the window that agrees with you.</p></div></div>
+          <div class="pm-row"><span class="pm-row-key"><i class="fas fa-arrows-turn-to-dots"></i></span><div><h4>Simpson's Paradox</h4><p>Check sub-group trends, not just the aggregate.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="pm-modal" id="pm-modal">
+  <div class="pm-modal-box">
+    <div class="pm-modal-head">
+      <span class="pm-modal-icon"><i class="fas fa-info" id="pm-modal-icon"></i></span>
+      <h3 id="pm-modal-title">Notification</h3>
+    </div>
+    <p class="pm-modal-msg" id="pm-modal-msg"></p>
+    <div class="pm-modal-actions">
+      <button class="cta" data-pm-action="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="/assets/js/pm-gym/analysis.js"></script>
+<script src="/assets/js/pm-gym/pm-gym.js"></script>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %} {% include theme-script.html %}
+    <noscript>
+      <style>
+        /* Fallback: reveal all scroll/fade content when JS is disabled */
+        .scroll-animate,
+        .fade-in,
+        .slide-in-left,
+        .slide-in-right {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <a href="#pm-gym-main" class="skip-link">Skip to content</a>
+
+    <header class="gym-header">
+      <div class="gym-header-inner">
+        <a href="/pm-gym.html" class="gym-logo">
+          <i class="fas fa-dumbbell"></i> PM Gym
+        </a>
+        <!--<a href="/" class="gym-back">
+      <i class="fas fa-arrow-left"></i> Mayank Sharma's Portfolio
+    </a>-->
+      </div>
+    </header>
+
+    <main id="pm-gym-main">{{ content }}</main>
+
+    <footer class="gym-footer">
+      <div class="gym-footer-inner">
+        <p class="gym-footer-tag">
+          <i class="fas fa-dumbbell"></i> PM Gym — practice product management,
+          one framework at a time.
+        </p>
+        <p class="gym-footer-credit">
+          A project by <a href="/">Mayank Sharma</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/pm-gym/pm-gym-progress.js"></script>
+    <script src="/assets/animations.js"></script>
+    <script>
+      // Failsafe: if animations.js never initialized (load/parse failure),
+      // force-reveal scroll-animate content so the page is never left blank.
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (!window.__animationsInit) {
+            document
+              .querySelectorAll('.scroll-animate')
+              .forEach(function (el) {
+                el.classList.add('animate-in');
+              });
+          }
+        }, 800);
+      });
+    </script>
+  </body>
+</html>
