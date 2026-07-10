@@ -2,7 +2,7 @@
   description: "Interactive product management learning platform I built from scratch — step-by-step lessons, quizzes, flashcards, and a vocab game across systems thinking, strategy, discovery, and user research. Still growing."
   accent_color: "pink"
   icon: "fas fa-dumbbell"
-  github: "https://github.com/mayank1101/mayank1101.github.io"
+  github: "https://github.com/mayank1101/mayank1101.github.io/tree/main/pm-gym"
   live: "/pm-gym.html"
   tags: ["Product Management", "Interactive Learning", "JavaScript"]
   status: "completed"
