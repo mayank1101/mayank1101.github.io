@@ -10,6 +10,30 @@
 #   credential_id: "nlcert2gr09bz2a8s6b2a4"
 #   credential_url: "https://nextleap.app/certificates/verify/nlcert2gr09bz2a8s6b2a4"
 
+- name: "Evaluating and Debugging Generative AI"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "1e93077a-474e-4d91-add2-69e7a3878a02"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/1e93077a-474e-4d91-add2-69e7a3878a02"
+
+- name: "Understanding and Applying Text Embeddings"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "90f57c96-bb2d-400d-8f9e-e23165477120"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/90f57c96-bb2d-400d-8f9e-e23165477120"
+
+- name: "Attention in Transformers: Concepts and Code in PyTorch"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "bbb065ed-e924-404e-8b3b-fdc9a57696ac"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/bbb065ed-e924-404e-8b3b-fdc9a57696ac"
+
+- name: "Functions, Tools and Agents with LangChain"
+  organization: "DeepLearning.AI"
+  date: "October 2024"
+  credential_id: "48f2a88b-b94f-493d-9a61-462196133b71"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/48f2a88b-b94f-493d-9a61-462196133b71"
+
 - name: "AI Agents in LangGraph"
   organization: "DeepLearning.AI"
   date: "October 2024"
