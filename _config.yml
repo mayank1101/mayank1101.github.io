@@ -1,5 +1,5 @@
 title: Mayank Sharma
-description: Data Scientist transitioning into Product Management. 5+ years building AI systems — NLP, GenAI, healthcare AI. Moving into PM roles at data-driven companies.
+description: Senior Data Scientist / Applied AI Engineer. 5+ years building production AI systems — NLP, GenAI, RAG, healthcare AI — end to end, from data to deployed model.
 url: https://mayank1101.github.io
 baseurl: ""
 author: Mayank Sharma
@@ -28,7 +28,7 @@ kramdown:
 # Collections
 collections:
   case_studies:
-    output: true
+    output: false
     permalink: /case-studies/:name/
 
 # Exclude from build
@@ -38,3 +38,5 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - case-studies.html
+  - case-studies
