@@ -10,6 +10,12 @@
 #   credential_id: "nlcert2gr09bz2a8s6b2a4"
 #   credential_url: "https://nextleap.app/certificates/verify/nlcert2gr09bz2a8s6b2a4"
 
+- name: "Long-Term Agentic Memory With LangGraph"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
+
 - name: "Evaluating and Debugging Generative AI"
   organization: "DeepLearning.AI"
   date: "July 2026"
