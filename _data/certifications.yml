@@ -10,12 +10,6 @@
 #   credential_id: "nlcert2gr09bz2a8s6b2a4"
 #   credential_url: "https://nextleap.app/certificates/verify/nlcert2gr09bz2a8s6b2a4"
 
-- name: "Long-Term Agentic Memory With LangGraph"
-  organization: "DeepLearning.AI"
-  date: "July 2026"
-  credential_id: "5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
-  credential_url: "https://learn.deeplearning.ai/accomplishments/5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
-
 - name: "Evaluating and Debugging Generative AI"
   organization: "DeepLearning.AI"
   date: "July 2026"
@@ -33,6 +27,18 @@
   date: "July 2026"
   credential_id: "bbb065ed-e924-404e-8b3b-fdc9a57696ac"
   credential_url: "https://learn.deeplearning.ai/accomplishments/bbb065ed-e924-404e-8b3b-fdc9a57696ac"
+
+- name: "Pydantic for LLM Workflows"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "c3b91fa2-b902-4770-a090-ebc4323fc50d"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/c3b91fa2-b902-4770-a090-ebc4323fc50d"
+
+- name: "Long-Term Agentic Memory With LangGraph"
+  organization: "DeepLearning.AI"
+  date: "July 2026"
+  credential_id: "5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/5f8a036b-7a9f-4ea9-a93b-2fb8a6b28104"
 
 - name: "Functions, Tools and Agents with LangChain"
   organization: "DeepLearning.AI"
