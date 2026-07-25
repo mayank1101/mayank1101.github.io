@@ -11,7 +11,7 @@
 - name: "The AI/ML Playbook: Small Models, Big Impacts"
   description: "A compilation of Jupyter-based machine learning prototypes spanning Deep Learning, NLP, and Computer Vision."
   accent_color: "purple"
-  github: "https://github.com/mayank1101/AI-Lab/tree/main/the-aiml-playbook"
+  github: "https://github.com/mayank1101/AI-Analytics-Lab/tree/main/the-aiml-playbook"
   # live: ""
   tags: ["Python", "PyTorch", "Scikit-Learn", "Matplotlib"]
   status: "completed"
@@ -20,15 +20,15 @@
 - name: "The Analytics Mosaic: A Collection of Bitesize Data Stories"
   description: "Compilation of interactive data analysis workflows focused on statistical modeling, exploratory data analysis (EDA), and data integrity."
   accent_color: "cyan"
-  github: "https://github.com/mayank1101/AI-Lab/tree/main/the-analytics-mosaic"
+  github: "https://github.com/mayank1101/AI-Analytics-Lab/tree/main/the-analytics-mosaic"
   # live: ""
   tags: ["Python", "Pandas", "Numpy", "Data Science", "Matplotlib"]
   status: "completed"
   type: "sandbox"
 # - name: "VizWizardry: A Collection of SQL Data Stories"
-#   description: "Collection of various case-studies and hands on data analytics using SQL completed during NamasteSQL Program."
+#   description: "Collection of various case-studies and hands on data analytics using MSSQL completed during NamasteSQL Program."
 #   accent_color: "green"
 #   github: "https://github.com/mayank1101/Mayank-AI-Analytics-Lab/tree/main/NamasteSQL/"
 #   # live: ""
-#   tags: ["MS SQL", "SQL", "SQL Server", "Analytics"]
+#   tags: ["MSSQL", "SQL Server", "Data Analytics"]
 #   status: "completed"
