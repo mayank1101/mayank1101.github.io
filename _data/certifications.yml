@@ -10,6 +10,12 @@
 #   credential_id: "nlcert2gr09bz2a8s6b2a4"
 #   credential_url: "https://nextleap.app/certificates/verify/nlcert2gr09bz2a8s6b2a4"
 
+- name: "Safe and reliable AI via guardrails"
+  organization: "DeepLearning.AI"
+  date: "August 2026"
+  credential_id: "9b431a7d-f79d-466f-b839-6ceebdbdbbc1"
+  credential_url: "https://learn.deeplearning.ai/accomplishments/9b431a7d-f79d-466f-b839-6ceebdbdbbc1"
+
 - name: "Evaluating and Debugging Generative AI"
   organization: "DeepLearning.AI"
   date: "July 2026"

@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website showcasing my transition from Data & Analytics into Product Management. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting how technical depth and data-driven thinking inform better product decisions.
+A modern, responsive portfolio website showcasing my work as a Data Scientist / AI & Analytics Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting production data & AI pipeline work end to end.
 
 ## Live Website
 
@@ -12,22 +12,21 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Data & Analytics leader transitioning into Product Management. With 5+ years shipping products and analytics platforms that serve thousands of users, I'm making an intentional move into product leadership. My background in data and analytics helps me understand how to build products and systems that matter. I design metrics that matter, make decisions grounded in evidence, and speak credibly with data science and engineering teams. This rare combination of technical credibility and product thinking is what I bring to PM roles.
+I'm **Mayank Sharma**, a Senior Data Scientist / AI & Analytics Engineer with 4+ years building production data & AI pipelines that serve thousands of users. I own PoC validation, data pipeline design, AI pipeline architecture, and evaluation frameworks end to end — from ambiguous business problem to deployed, measurable system. I design metrics that reveal what's actually happening, not vanity numbers, and speak credibly across data science and engineering.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu
 - **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
-- **Product Scale**: Built products serving 10,000+ daily users
-- **Impact**: LamiOps (analytics platform), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
-- **Product Focus**: End-to-end ownership: discovery, strategy, roadmapping, execution, scaling
+- **Scale**: Built AI pipelines serving 10,000+ daily users
+- **Impact**: LamiOps (RAG-powered enterprise assistant), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
+- **Focus**: End-to-end ownership: PoC validation, data pipeline, AI pipeline, evaluation
 
-### Current Focus (Transitioning to PM)
-- Product Strategy & Roadmapping
-- User Discovery & Problem Definition
-- Metrics Design & Data-Driven Decisions
-- Cross-Functional Leadership & Execution
-- Building Products at Scale
-- Analytics as a Competitive Advantage in Product Management
+### Current Focus
+- Data Pipeline & AI Pipeline Architecture
+- RAG, NLP, and GenAI Systems
+- Evaluation Framework Design & Data-Driven Decisions
+- Healthcare AI & Clinical NLP
+- Analytics-Driven Engineering (SQL, PowerBI, PySpark, Azure Databricks)
 
 ## Tech Stack
 
@@ -159,4 +158,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Data & Analytics leader transitioning into Product Management. Shipping products grounded in user understanding and evidence-based decisions.*
+*Senior Data Scientist / AI & Analytics Engineer. Shipping production data & AI pipelines grounded in rigorous evaluation and evidence-based decisions.*
