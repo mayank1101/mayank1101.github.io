@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red)](https://jekyllrb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A modern, responsive portfolio website showcasing my work as a Data Scientist / AI & Analytics Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting production data & AI pipeline work end to end.
+A modern, responsive portfolio website showcasing my work as a Data Scientist & Analytics Engineer. Built with Jekyll and GitHub Pages, featuring a bold design with vibrant animations and a mobile-first approach. Highlighting production data, analytics & AI pipeline work end to end.
 
 ## Live Website
 
@@ -12,7 +12,7 @@ Visit: [https://hellomayank.in](https://hellomayank.in)
 
 ## About Me
 
-I'm **Mayank Sharma**, a Senior Data Scientist / AI & Analytics Engineer with 4+ years building production data & AI pipelines that serve thousands of users. I own PoC validation, data pipeline design, AI pipeline architecture, and evaluation frameworks end to end — from ambiguous business problem to deployed, measurable system. I design metrics that reveal what's actually happening, not vanity numbers, and speak credibly across data science and engineering.
+I'm **Mayank Sharma**, a Data Scientist & Analytics Engineer with 4+ years building production data, analytics & AI pipelines that serve thousands of users. I own PoC validation, data pipeline design, AI pipeline architecture, and evaluation frameworks end to end — from ambiguous business problem to deployed, measurable system. I design metrics that reveal what's actually happening, not vanity numbers, and speak credibly across data science and engineering.
 
 ### Highlights
 - **Education**: M.Tech in Data Science from IIT Jammu
@@ -84,8 +84,8 @@ mayank1101.github.io/
 │   │   └── main.scss             # Main SCSS entry point
 │   ├── animations.js             # Scroll animations, theme toggle
 │   └── profile.jpeg              # Profile photo
-├── index.html                    # Homepage
-├── about.html                    # About page
+├── index.html                    # Homepage (story, impact, skills)
+├── resume.html                   # Resume page
 ├── _config.yml                   # Jekyll configuration
 ├── .gitignore                    # Git ignore rules
 └── README.md                     # This file
@@ -158,4 +158,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built by Mayank Sharma**
-*Senior Data Scientist / AI & Analytics Engineer. Shipping production data & AI pipelines grounded in rigorous evaluation and evidence-based decisions.*
+*Data Scientist & Analytics Engineer. Shipping production data, analytics & AI pipelines grounded in rigorous evaluation and evidence-based decisions.*
