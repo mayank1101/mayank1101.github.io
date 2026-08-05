@@ -18,7 +18,7 @@ I'm **Mayank Sharma**, a Senior Data Scientist / AI & Analytics Engineer with 4+
 - **Education**: M.Tech in Data Science from IIT Jammu
 - **Research**: Co-author of AAAI 2024 (OpenMedLM, NEJM AI)
 - **Scale**: Built AI pipelines serving 10,000+ daily users
-- **Impact**: LamiOps (RAG-powered enterprise assistant), LamiTracker (regulatory intelligence across 200+ sources, 18+ countries)
+- **Impact**: Shipped a RAG-powered enterprise assistant and a regulatory intelligence platform monitoring 200+ sources across 18+ countries
 - **Focus**: End-to-end ownership: PoC validation, data pipeline, AI pipeline, evaluation
 
 ### Current Focus
