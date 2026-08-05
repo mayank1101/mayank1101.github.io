@@ -28,7 +28,7 @@
 <!-- SEO Meta Tags -->
 <meta
   name="description"
-  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Mayank Sharma - AI/ML Engineer & Researcher. AAAI 2024 co-author. Building trustworthy GenAI systems at the intersection of research and production.{% endif %}"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Mayank Sharma - Data Scientist & Analytics Engineer. AAAI 2024 co-author. Building production data, analytics & AI pipelines end to end.{% endif %}"
 />
 <meta name="author" content="Mayank Sharma" />
 <meta
@@ -44,11 +44,11 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
 <meta
   property="og:title"
-  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}"
+  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | Data Scientist & Analytics Engineer{% endif %}"
 />
 <meta
   property="og:description"
-  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Data Scientist & Analytics Engineer building production data, analytics & AI pipelines.{% endif %}"
 />
 <meta
   property="og:image"
@@ -62,11 +62,11 @@
 <meta name="twitter:creator" content="@sharma_mayank11" />
 <meta
   name="twitter:title"
-  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | AI Researcher & Engineer{% endif %}"
+  content="{% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma | Data Scientist & Analytics Engineer{% endif %}"
 />
 <meta
   name="twitter:description"
-  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}AI/ML Engineer & Researcher building trustworthy GenAI systems.{% endif %}"
+  content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 50 }}{% else %}Data Scientist & Analytics Engineer building production data, analytics & AI pipelines.{% endif %}"
 />
 <meta
   name="twitter:image"
@@ -78,7 +78,7 @@
 
 <title>
   {% if page.title %}{{ page.title }} | Mayank Sharma{% else %}Mayank Sharma |
-  AI Researcher & Engineer{% endif %}
+  Data Scientist & Analytics Engineer{% endif %}
 </title>
 
 <!-- Fonts - Consolidated Google Fonts request -->
