@@ -1,0 +1,29 @@
+{%- comment -%}
+Hands the topic's flashcard and vocab decks to the shared engine as JSON,
+replacing the old per-topic JavaScript files. pm-gym.js reads this element.
+{%- endcomment -%}
+{%- assign gym = site.data['pm-gym'] -%}
+{%- assign topic = gym[page.topic] -%}
+<script type="application/json" id="pm-data">
+{
+  "flashcards": [
+    {%- for c in topic.flashcards %}
+    {
+      "category": {{ c.category | jsonify }},
+      "title": {{ c.title | jsonify }},
+      "desc": {{ c.desc | jsonify }},
+      "application": {{ c.application | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "vocab": [
+    {%- for v in topic.vocab %}
+    {
+      "term": {{ v.term | jsonify }},
+      "define": {{ v.define | jsonify }},
+      "clues": {{ v.clues | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

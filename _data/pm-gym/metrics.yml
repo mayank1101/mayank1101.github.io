@@ -1,0 +1,425 @@
+# PM Gym — metrics. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot a bad metric, tell leading from lagging, or match a metric to the decision it needs to inform.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Metrics Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A team's dashboard headlines "total signups since launch," which has risen every month for three years, even during a period when the product was clearly declining.
+    question: |-
+      What kind of metric is this, and what's the risk?
+    difficulty: easy
+    options:
+      - text: |-
+          A leading indicator
+        msg: |-
+          It isn't predicting anything; it's a cumulative count that can't reflect current decline at all.
+      - text: |-
+          A vanity metric
+        msg: |-
+          Right. A number that can only go up can't tell you when things are actually going wrong. It always rises and can't reflect the real decline happening underneath it.
+        correct: true
+      - text: |-
+          A lagging indicator that's simply reported too infrequently
+        msg: |-
+          The issue isn't reporting frequency — even reported daily, a cumulative all-time count still can't fall.
+  - scenario: |-
+      A team wants a metric to catch problems early enough to react, not just confirm results after the fact.
+    question: |-
+      What type of metric should they prioritize?
+    difficulty: easy
+    options:
+      - text: |-
+          A lagging indicator
+        msg: |-
+          Lagging indicators arrive after the fact by definition — the opposite of &quot;early enough to react.&quot;
+      - text: |-
+          A leading indicator
+        msg: |-
+          Right. Leading indicators exist precisely to catch things early. It moves first and gives the team time to act before the lagging result confirms the outcome.
+        correct: true
+      - text: |-
+          A vanity metric
+        msg: |-
+          Ease of tracking has nothing to do with whether a metric predicts anything early.
+  - scenario: |-
+      A support team is evaluated purely on "tickets closed per hour," and closures soar while customer satisfaction quietly drops.
+    question: |-
+      Which of the 3 A's does this metric fail?
+    difficulty: easy
+    options:
+      - text: |-
+          Accessible — the team can't get the number
+        msg: |-
+          The scenario gives no indication the number is hard to access; the problem is what happens once the team optimizes for it.
+      - text: |-
+          It passes all three but is a gameable proxy
+        msg: |-
+          Right. The metric can be moved, but moving it doesn't mean the real goal (satisfied customers) improved. A gameable metric rather than one truly reflecting quality.
+        correct: true
+      - text: |-
+          Auditable — the closures are counted wrong
+        msg: |-
+          There's no indication of a miscount — the issue is that the number doesn't capture quality of resolution.
+  - scenario: |-
+      A PM proposes "employee happiness with the roadmap" as the company's North Star metric.
+    question: |-
+      What's the issue?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — employee sentiment belongs on the company dashboard
+        msg: |-
+          Worth tracking somewhere doesn't make it a valid North Star — a North Star needs to reflect customer value specifically.
+      - text: |-
+          A North Star must capture customer value, not internal mood
+        msg: |-
+          Right. Employee sentiment can be a useful internal metric, but a North Star has to reflect the value customers actually receive.
+        correct: true
+      - text: |-
+          The only problem is that sentiment is hard to measure precisely
+        msg: |-
+          Measurement difficulty isn't the core problem here.
+  - scenario: |-
+      A team wants to evaluate a pricing-page redesign and defaults to checking "monthly active users" a week later.
+    question: |-
+      What's the concern with this metric choice?
+    difficulty: easy
+    options:
+      - text: |-
+          None, MAU is always the right metric for any product change
+        msg: |-
+          MAU reflects overall usage, not pricing-page performance specifically — too indirect for this decision.
+      - text: |-
+          MAU is too indirect for a pricing-page change
+        msg: |-
+          Right. The closer the metric to the actual change, the more it tells you. A closer metric like checkout conversion would isolate the effect better.
+        correct: true
+      - text: |-
+          MAU should be checked over a longer period instead, like six months
+        msg: |-
+          A longer window doesn't fix the indirection problem.
+  - scenario: |-
+      A metric is described as: "the number our finance team can trace back to raw transaction records at any time, with a documented calculation method."
+    question: |-
+      Which of the 3 A's does this describe?
+    difficulty: medium
+    options:
+      - text: |-
+          Actionable — a decision can move it
+        msg: |-
+          Actionable is about whether a decision can move the metric, not about traceability.
+      - text: |-
+          Auditable — traceable to source data
+        msg: |-
+          Right. That's exactly what auditability means. Traceable to source data with a clear, trusted calculation method.
+        correct: true
+      - text: |-
+          Accessible — easy to retrieve quickly
+        msg: |-
+          Accessible is about ease of retrieval, not traceability to raw records.
+  - scenario: |-
+      A growth team reports "trial signups are up 30% this week" and predicts a strong revenue quarter.
+    question: |-
+      What kind of metric are they using to make that prediction?
+    difficulty: medium
+    options:
+      - text: |-
+          A lagging indicator
+        msg: |-
+          Trial signups aren't confirming a result that already happened; they're predicting one still ahead.
+      - text: |-
+          A leading indicator
+        msg: |-
+          Right. Leading and lagging often pair up like this. Signups move first and are being used to predict a future lagging result.
+        correct: true
+      - text: |-
+          A vanity metric
+        msg: |-
+          Being a raw count doesn't automatically make it vanity — this number is informing a real prediction.
+  - scenario: |-
+      Airbnb famously tracks "nights booked" rather than just "signups" as closer to its North Star.
+    question: |-
+      Why is "nights booked" the better choice?
+    difficulty: medium
+    options:
+      - text: |-
+          Because it's a bigger number
+        msg: |-
+          Raw size has nothing to do with what makes a North Star good.
+      - text: |-
+          Because it more directly reflects the core value being delivered
+        msg: |-
+          Right. Signups are just an early funnel step; a booked night is the real value moment. An actual stay happening.
+        correct: true
+      - text: |-
+          Because signups are too hard to measure accurately
+        msg: |-
+          Measurement difficulty isn't the issue with signups — the issue is what the number represents.
+  - scenario: |-
+      A team's "onboarding completion rate" has been flat for months, and they're debating whether it's a leading or lagging indicator of retention.
+    question: |-
+      What's the right way to think about it?
+    difficulty: medium
+    options:
+      - text: |-
+          Lagging — it's a rate, and rates always report the past
+        msg: |-
+          Being a rate versus a raw count has no bearing on whether a metric is leading or lagging.
+      - text: |-
+          Likely leading — it happens before, and predicts, retention
+        msg: |-
+          Right. Leading vs. lagging is about timing relative to the outcome, not the number's format.
+        correct: true
+      - text: |-
+          Neither — completion and retention aren't causally linked
+        msg: |-
+          The two are plausibly causally linked, so dismissing any relationship isn't well-founded.
+  - scenario: |-
+      A stakeholder asks for "one metric that tells us everything about how the product is doing."
+    question: |-
+      What's the realistic response?
+    difficulty: medium
+    options:
+      - text: |-
+          Provide the North Star metric alone
+        msg: |-
+          Even a well-chosen North Star is one signal among several a healthy product needs.
+      - text: |-
+          Explain that no single metric captures everything
+        msg: |-
+          Right. One number plus a few guardrails gives a fuller, more honest picture. Pair a North Star with a small set of supporting metrics.
+        correct: true
+      - text: |-
+          Combine ten metrics into one weighted formula and present that as the single number
+        msg: |-
+          A blended formula tends to obscure which underlying driver actually moved.
+  - scenario: |-
+      A metric named "engagement score" turns out to be calculated differently by two different teams, with no shared documentation.
+    question: |-
+      Which of the 3 A's is this failing?
+    difficulty: hard
+    options:
+      - text: |-
+          Actionable — teams can act on the score
+        msg: |-
+          Being plottable doesn't address whether the number can be trusted and traced.
+      - text: |-
+          Auditable — no shared calculation method
+        msg: |-
+          Right. Two teams computing it differently is exactly an auditability failure. Without a shared, documented calculation method, the number can't be trusted or consistently traced.
+        correct: true
+      - text: |-
+          Accessible — teams can't retrieve it
+        msg: |-
+          Having access to compute a number isn't the same as it being auditable.
+  - scenario: |-
+      A team is deciding between raising prices or improving retention, and someone suggests checking "daily app opens" to guide the choice.
+    question: |-
+      Is this the right metric for this decision?
+    difficulty: hard
+    options:
+      - text: |-
+          Yes — app opens is a universal metric that fits any decision
+        msg: |-
+          No single metric fits every decision — app opens doesn't isolate financial or retention effects specifically.
+      - text: |-
+          Probably not — it can't isolate revenue or retention effects
+        msg: |-
+          Right. Revenue per user or churn rate would answer the actual question. This decision needs financial and retention-specific metrics, not a general usage count.
+        correct: true
+      - text: |-
+          Yes, provided app opens is tracked over a full year first
+        msg: |-
+          A longer time window doesn't change the fundamental mismatch.
+  - scenario: |-
+      A team notices their North Star metric has been rising for six months, but customer support tickets about frustration have also been rising just as fast.
+    question: |-
+      What should the team do?
+    difficulty: hard
+    options:
+      - text: |-
+          Ignore the tickets — the North Star is the metric that counts
+        msg: |-
+          Ignoring a contradicting signal risks missing that the North Star may be an incomplete proxy for real value.
+      - text: |-
+          Investigate why the two signals point in opposite directions
+        msg: |-
+          Right. Contradicting signals deserve investigation, not dismissal. A rising North Star alongside rising frustration suggests the metric may not be fully capturing real value, or something is quietly breaking.
+        correct: true
+      - text: |-
+          Replace the North Star with 'support tickets closed' instead
+        msg: |-
+          Swapping metrics without investigating first just replaces one potentially flawed number with another.
+  - scenario: |-
+      A junior PM says "let's just track everything so we don't miss anything important."
+    question: |-
+      What's the issue with this instinct?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — more tracked metrics is always strictly better
+        msg: |-
+          Tracking everything produces enough noise that the team can't tell which numbers actually matter.
+      - text: |-
+          Metrics not tied to decisions become noise, not insight
+        msg: |-
+          Right. More metrics without decision-linkage is noise, not insight.
+        correct: true
+      - text: |-
+          The only downside is the added cost of dashboard tooling
+        msg: |-
+          Tooling cost is a minor concern compared to losing focus on which numbers actually drive decisions.
+  - scenario: |-
+      A team wants to A/B test a checkout redesign and picks "checkout completion rate" as the metric to judge success.
+    question: |-
+      Is this a good match?
+    difficulty: hard
+    options:
+      - text: |-
+          No — checkout completion is too narrow a metric to matter
+        msg: |-
+          Narrowness isn't a weakness here — a metric tightly scoped to the change being tested is what makes it a strong signal.
+      - text: |-
+          Yes — it's close to the change and directly affected by it
+        msg: |-
+          Right. The closer the metric to the change, the more trustworthy the read.
+        correct: true
+      - text: |-
+          No — only company-wide revenue can judge a test's success
+        msg: |-
+          Company-wide revenue is too indirect and influenced by too many other factors.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      The 3 A's
+    desc: |-
+      A good metric is Actionable (a decision can move it), Accessible (easy to get and understand), and Auditable (you can trace and trust how it's counted).
+    application: |-
+      Before adopting a new dashboard metric, check it against all three A's, not just whether it looks impressive.
+  - category: |-
+      Type
+    title: |-
+      Leading Indicator
+    desc: |-
+      A metric that moves first and predicts a future result — like trial signups predicting future revenue.
+    application: |-
+      Watch leading indicators to catch problems (or wins) early, before the lagging numbers confirm them weeks later.
+  - category: |-
+      Type
+    title: |-
+      Lagging Indicator
+    desc: |-
+      A metric that confirms a result after it has already happened, like quarterly revenue.
+    application: |-
+      Use lagging indicators to judge overall success, but don't expect them to help you react quickly.
+  - category: |-
+      Type
+    title: |-
+      North Star Metric
+    desc: |-
+      The single metric that best captures the core value delivered to customers, correlated with long-term business success.
+    application: |-
+      Choose one that reflects real value received, not just usage — "nights booked," not "app opens."
+  - category: |-
+      Discipline
+    title: |-
+      Vanity Metric
+    desc: |-
+      A metric that looks good and only ever rises, but doesn't reflect real health or a decision you could act on.
+    application: |-
+      Be suspicious of any all-time cumulative count proposed as a headline metric.
+  - category: |-
+      Discipline
+    title: |-
+      Metric-Decision Fit
+    desc: |-
+      The practice of choosing a metric based on the specific decision it needs to inform, rather than defaulting to one universal number.
+    application: |-
+      Before picking a metric, ask: what decision will this number actually help make?
+
+vocab:
+  - term: |-
+      Leading Indicator
+    define: |-
+      Leading Indicator: a metric that moves first and predicts a future result, giving you time to react before it's confirmed.
+    clues:
+      - |-
+          I move before the result I'm predicting.
+      - |-
+          I give you a chance to react early.
+      - |-
+          Trial signups predicting future revenue is an example of me.
+  - term: |-
+      Lagging Indicator
+    define: |-
+      Lagging Indicator: a metric that confirms a result after the fact, rather than predicting it in time to act.
+    clues:
+      - |-
+          I confirm what already happened.
+      - |-
+          By the time you see me, it's too late to change the outcome I'm reporting.
+      - |-
+          Quarterly revenue is a classic example of me.
+  - term: |-
+      North Star Metric
+    define: |-
+      North Star Metric: the single metric that best captures the core value a product delivers to customers, correlated with long-term success.
+    clues:
+      - |-
+          I'm the single metric capturing your product's core value.
+      - |-
+          I correlate with long-term business success.
+      - |-
+          "Nights booked" at Airbnb is a famous example of me.
+  - term: |-
+      Vanity Metric
+    define: |-
+      Vanity Metric: a metric that looks impressive and only ever rises, but doesn't reflect real health or guide a decision.
+    clues:
+      - |-
+          I always go up and make everyone feel good.
+      - |-
+          I don't reflect real health or inform a decision.
+      - |-
+          Cumulative all-time counts are usually me.
+  - term: |-
+      Actionable Metric
+    define: |-
+      Actionable Metric: a metric that a specific team decision can meaningfully move, as opposed to one that just sits there.
+    clues:
+      - |-
+          A specific decision can move me.
+      - |-
+          I'm one of the '3 A's' of a good metric.
+      - |-
+          I'm the opposite of a vanity metric in this respect.
+  - term: |-
+      Input Metric
+    define: |-
+      Input Metric: a metric the team directly controls (like features shipped), as opposed to the outcome those inputs are meant to produce.
+    clues:
+      - |-
+          I'm something the team directly controls.
+      - |-
+          Features shipped and onboarding steps simplified are examples of me.
+      - |-
+          I feed into an output or outcome metric.

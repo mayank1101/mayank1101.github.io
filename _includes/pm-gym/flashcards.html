@@ -1,0 +1,60 @@
+{%- comment -%}
+Flashcard pane for a PM Gym topic. The deck itself is data — see
+_includes/pm-gym/data.html, which hands it to the shared engine.
+{%- endcomment -%}
+{%- assign gym = site.data['pm-gym'] -%}
+{%- assign topic = gym[page.topic] -%}
+  <section class="pm-pane" data-pane="flashcards">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-purple">{{ topic.flashcards_badge }}</span>
+      <h2>{{ topic.flashcards_heading }}</h2>
+      <p class="muted">{{ topic.flashcards_blurb }}</p>
+    </div>
+
+    <div class="pm-flashcard-zone">
+      <div class="pm-flashcard" data-pm-action="flip-card">
+        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
+          <div class="pm-flashcard-front">
+            <div class="pm-flashcard-head">
+              <span class="pm-hub-tag" id="pm-card-category"></span>
+              <span class="muted" id="pm-card-progress"></span>
+            </div>
+            <p class="pm-card-due muted" id="pm-card-due"></p>
+            <div class="pm-flashcard-question">
+              <h3 id="pm-card-title"></h3>
+              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
+            </div>
+            <p class="muted">Tip: say the answer out loud before flipping.</p>
+          </div>
+          <div class="pm-flashcard-back">
+            <span class="pm-flashcard-label">Explanation</span>
+            <p id="pm-card-back-text"></p>
+            <div class="pm-flashcard-meta">
+              <span class="pm-flashcard-label">In practice</span>
+              <p id="pm-card-application"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-flashcard-controls">
+        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / {{ topic.flashcards | size }}</span>
+        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      {%- comment -%}
+      Leitner grading: a card you recall moves to a longer interval, one you
+      miss drops back to daily. Appears once the card has been flipped.
+      {%- endcomment -%}
+      <div class="pm-card-grade pm-hidden" id="pm-card-grade">
+        <span class="muted">Did you recall it?</span>
+        <button class="cta-secondary pm-grade-again" data-pm-action="card-again">
+          <i class="fas fa-rotate-left"></i> Not yet
+        </button>
+        <button class="cta pm-grade-good" data-pm-action="card-good">
+          <i class="fas fa-check"></i> Got it
+        </button>
+      </div>
+    </div>
+  </section>

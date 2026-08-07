@@ -1,0 +1,425 @@
+# PM Gym — vision-strategy. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can tell real strategy from ambition — and hold the line under pressure. Pick the strongest move, then read why the others fall short.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Vision &amp; Strategy Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Your VP hands you a one-line "strategy": "Become the #1 app in our category within a year."
+    question: |-
+      How should you respond?
+    difficulty: easy
+    options:
+      - text: |-
+          Accept it and start building against the goal
+        msg: |-
+          It's a goal, not a strategy. It says where to arrive but names no challenge and no chosen route, so any team can 'agree' while pulling in different directions.
+      - text: |-
+          Push for the kernel: challenge, approach, actions
+        msg: |-
+          Right. '#1 in a year' is the ambition; strategy is the diagnosis and route to get there. Adding the kernel turns a slogan into something a team can actually execute.
+        correct: true
+      - text: |-
+          Quietly ignore it and build what seems useful
+        msg: |-
+          Ignoring it leaves the real gap — no shared diagnosis or approach — unaddressed, and your work won't align with anyone else's. Surface the gap instead of working around it.
+  - scenario: |-
+      A competitor just shipped a feature you lack. Leadership wants it copied immediately, even though your strategy is to win on simplicity.
+    question: |-
+      What does strategic thinking say?
+    difficulty: easy
+    options:
+      - text: |-
+          Copy it fast
+        msg: |-
+          Feature parity is a trap when your strategy is simplicity. Every added feature erodes the exact advantage you chose to compete on. Reacting to rivals abandons your route.
+      - text: |-
+          Check it against the strategy first
+        msg: |-
+          Exactly. Strategy is trade-offs. Saying no to a feature that dilutes your chosen advantage is strategy working as intended, not a failure to keep up. If adding it undermines 'win on simplicity', declining is the strategic move.
+        correct: true
+      - text: |-
+          Add it, but bury it in a submenu
+        msg: |-
+          Hiding it still adds complexity, maintenance, and decision load — the costs land even if the button is buried. The strategic question is whether it belongs at all.
+  - scenario: |-
+      Your product strategy is "win enterprise buyers on security." A teammate proposes a big consumer-focused viral-sharing feature.
+    question: |-
+      How do you evaluate it?
+    difficulty: easy
+    options:
+      - text: |-
+          Build it — viral sharing helps everyone
+        msg: |-
+          Virality that targets consumers doesn't serve an enterprise-security strategy. Off-strategy growth pulls focus and resources away from the buyers you chose to win.
+      - text: |-
+          It doesn't cascade from the strategy
+        msg: |-
+          Right. The roadmap must serve the product strategy. A consumer viral feature may be clever, but it advances a different game than the one you've chosen to play. Enterprise-security work should come first; park the consumer idea unless it serves that goal.
+        correct: true
+      - text: |-
+          Build both the security work and the viral feature at full speed
+        msg: |-
+          Doing everything is the absence of strategy. Split focus means the enterprise buyers — your actual target — get a weaker product than a focused competitor offers.
+  - scenario: |-
+      A strategy doc opens with: "The market is huge and growing, our team is world-class, and we have great technology." Then it lists ten initiatives.
+    question: |-
+      What's the biggest weakness?
+    difficulty: easy
+    options:
+      - text: |-
+          It's fine — those are genuine strengths
+        msg: |-
+          Strong assets are nice, but they aren't a diagnosis. Listing your advantages skips the one question strategy exists to answer: what specific obstacle stands between us and winning?
+      - text: |-
+          It never diagnoses the real challenge
+        msg: |-
+          Right. There's no diagnosis — no honest naming of the core challenge to overcome. Without it, the ten initiatives are a wish list, not coherent actions aimed at a real obstacle. Every real strategy starts by naming the problem. It lists strengths and activities but no honest read of the core obstacle.
+        correct: true
+      - text: |-
+          It just has too many initiatives; cut it to five
+        msg: |-
+          Ten is a symptom, not the disease. Even three initiatives would be aimless without a diagnosis telling you which problem they're solving. Fix the missing diagnosis first.
+  - scenario: |-
+      A well-diagnosed strategy says the core challenge is "new users don't reach value fast enough." But the listed actions are: a rebrand, a new pricing page, and a partnerships program.
+    question: |-
+      What's off?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — the actions all support growth
+        msg: |-
+          A sharp diagnosis is worthless if the actions ignore it. None of these three touch the time-to-value problem the strategy just named — they're a disconnected wish list.
+      - text: |-
+          The actions don't cohere with the diagnosis
+        msg: |-
+          Right. The actions must be coherent — they should follow from and reinforce the diagnosis. If the challenge is time-to-value, the actions should attack onboarding and activation, not branding and partnerships. The kernel is broken between the diagnosis and the actions. None of them attack the 'time to value' problem the strategy identified.
+        correct: true
+      - text: |-
+          The rebrand should just be scheduled last
+        msg: |-
+          A rebrand can matter, but not as an answer to slow time-to-value. The issue isn't whether any single action is good in isolation — it's that none of them serve the named challenge.
+  - scenario: |-
+      Sales lost a big deal because you lacked a niche compliance certification. They demand you re-orient the whole roadmap around winning that one buyer's industry.
+    question: |-
+      How do you decide?
+    difficulty: medium
+    options:
+      - text: |-
+          Re-orient immediately
+        msg: |-
+          One lost deal isn't a strategy input by itself. Reshaping the roadmap around a single buyer is how products get pulled off-course by whoever shouts loudest, not by where they can actually win.
+      - text: |-
+          Weigh it against your chosen segments
+        msg: |-
+          Right. Test it against the strategy and the size of the opportunity: is that industry a segment you've chosen to win, or a one-off? Chasing every lost deal turns your roadmap into a reaction log. Focus is a choice you protect. One lost deal isn't a reason to abandon focus unless that industry is genuinely where you've decided to win.
+        correct: true
+      - text: |-
+          Refuse on principle
+        msg: |-
+          Reflexively refusing is as thoughtless as reflexively agreeing. Maybe that industry IS your beachhead. The point is to decide by strategy, not by who's loudest — in either direction.
+  - scenario: |-
+      A new CEO wants to "revisit the vision" every quarter based on the latest metrics, and rewrites the roadmap monthly to match.
+    question: |-
+      What's the concern?
+    difficulty: medium
+    options:
+      - text: |-
+          Good — staying data-driven means everything should change constantly
+        msg: |-
+          Roadmaps SHOULD flex with evidence — that part is healthy. The problem is treating the vision the same way. A vision that changes every quarter can't anchor anything; teams lose the fixed star they steer by.
+      - text: |-
+          Vision and roadmap change at different speeds
+        msg: |-
+          Right. The ladder has different rates of change: the roadmap is the most changeable layer, the vision the least. A vision rewritten every quarter is just a slogan; it can't provide the stability that lets a team commit and compound. The roadmap should flex with data, but a vision that moves quarterly gives the team no stable direction.
+        correct: true
+      - text: |-
+          The roadmap should be frozen for a year to match the vision
+        msg: |-
+          Freezing the roadmap too is the opposite error. Roadmaps are meant to adapt as you learn. The issue is specifically the churning vision, not responsiveness itself.
+  - scenario: |-
+      Every item on the roadmap is marked "P0 — highest priority." When you ask which to cut if the quarter runs short, the answer is "none, they're all critical."
+    question: |-
+      What does this reveal?
+    difficulty: medium
+    options:
+      - text: |-
+          A healthy, ambitious roadmap where everything matters
+        msg: |-
+          An all-critical list is the opposite of a healthy plan. If everything is top priority, nothing is — the team has dodged the actual choice, so reality will pick for them, badly.
+      - text: |-
+          A refusal to prioritize
+        msg: |-
+          Right. Strategy is choice, and 'everything is P0' means no choice has been made. Prioritization forces the trade-offs that make focus real. Rank them honestly so that when time runs short, the least-strategic work is what gives.
+        correct: true
+      - text: |-
+          A staffing problem
+        msg: |-
+          Adding people to protect an unprioritized list just scales the confusion. The problem isn't capacity, it's that no one has decided what matters most. More hands won't make that decision.
+  - scenario: |-
+      Your company's vision is: "To be the most innovative, customer-centric, world-class leader in our space."
+    question: |-
+      What's wrong with it as a vision?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — it sets an ambitious bar
+        msg: |-
+          It sounds impressive but paints no picture. 'Innovative, customer-centric, world-class' are words any company could paste in. A vision should describe a specific future you could actually recognize if you arrived.
+      - text: |-
+          It's generic boilerplate
+        msg: |-
+          Right. A good vision is concrete and specific enough to guide choices — it describes the changed world you're building. This one is interchangeable boilerplate; swap in any company name and it still 'works,' which means it guides nothing. It describes no specific future, so it can't guide a single real decision.
+        correct: true
+      - text: |-
+          It's too short; a vision should be a full page
+        msg: |-
+          Length isn't the issue — a one-word vision can be just as empty. The flaw is the absence of a concrete, distinctive picture of the future, not the word count.
+  - scenario: |-
+      You're a small startup. Your strategy debate is whether to go after enterprise, mid-market, and SMB all at once "to maximize the funnel."
+    question: |-
+      What's the strategic move for a small team?
+    difficulty: medium
+    options:
+      - text: |-
+          All three at once, to widen the funnel
+        msg: |-
+          Three segments at once splits a small team three ways. Each segment needs different sales, pricing, and features — you'd do all three poorly and lose to focused rivals in every one.
+      - text: |-
+          Pick one beachhead segment, win it, then expand
+        msg: |-
+          Right. Pick a beachhead: one segment you can dominate first, then expand from strength. Focus lets a small team win somewhere before spreading. 'Serve everyone' is exactly the trap that starves each bet of the effort it needs.
+        correct: true
+      - text: |-
+          Pick the largest total market, whatever the fit
+        msg: |-
+          Choosing the biggest market by revenue ignores where YOU can actually win first. A tiny team often beats larger rivals precisely by owning a niche the giants overlook, not by charging the biggest hill.
+  - scenario: |-
+      Leadership sets this year's objective as "ship the AI feature," and measures success by whether it launches on time.
+    question: |-
+      What's the flaw in how success is defined?
+    difficulty: hard
+    options:
+      - text: |-
+          It's fine — a launch date is measurable
+        msg: |-
+          'Did it launch' measures activity, not whether the strategy advanced. You can ship exactly on time and still move no business outcome. A shipped feature nobody adopts isn't a win.
+      - text: |-
+          It measures an output instead of an outcome
+        msg: |-
+          Right. The objective is an output (a feature shipped), not an outcome (a change in user or business behavior). Strategy should commit to the measurable change you want — adoption, retention, revenue — not merely to launching something. The real question is what user or business change the feature should cause.
+        correct: true
+      - text: |-
+          The ship date is too late — pull it earlier
+        msg: |-
+          Moving the date earlier or later doesn't fix the deeper issue: you're still measuring 'did we ship' rather than 'did it work.' The timing isn't the problem — the metric is.
+  - scenario: |-
+      A feature your team spent six months building doesn't fit the new strategy. A teammate argues: "We've invested too much to kill it now."
+    question: |-
+      What's the strategic response?
+    difficulty: hard
+    options:
+      - text: |-
+          Ship it anyway
+        msg: |-
+          'We've already spent so much' is the sunk-cost trap. Past effort is gone whether you ship or not. Keeping off-strategy work to justify the investment throws good focus after bad.
+      - text: |-
+          Judge it on future fit, not past spend
+        msg: |-
+          Right. The six months are a sunk cost — irrelevant to the decision now. The only question is whether continuing serves the strategy going forward. If it doesn't, cutting it frees resources for work that does. Strategy means saying no, even to your own past work.
+        correct: true
+      - text: |-
+          Ship a stripped-down version quietly, just to close it out
+        msg: |-
+          Shipping it 'quietly to be safe' still carries the ongoing costs of maintenance, complexity, and distraction. Half-committing to off-strategy work is the worst of both worlds.
+  - scenario: |-
+      Your biggest customer threatens to leave unless you build a highly custom feature that only they will ever use — and it cuts against your strategy of a simple, standardized product.
+    question: |-
+      How do you think about it?
+    difficulty: hard
+    options:
+      - text: |-
+          Build it — the account is too big to lose
+        msg: |-
+          Always saying yes to the biggest customer is how products slowly become custom-software shops. One bespoke feature invites the next, and your standardized-simplicity strategy dies by a thousand exceptions.
+      - text: |-
+          Treat it as a genuine trade-off
+        msg: |-
+          Right. This is a real trade-off, and strategy means weighing it honestly: the revenue at risk versus the long-term cost of bending your product for one account. Sometimes you build it as a paid, clearly-scoped exception; sometimes you let the account go. The point is to decide by strategy, not by fear.
+        correct: true
+      - text: |-
+          Refuse automatically
+        msg: |-
+          A blanket 'never customize' is as unstrategic as always saying yes. Occasionally a big account's need signals a broader market gap. The discipline is to evaluate, not to apply a reflex in either direction.
+  - scenario: |-
+      Two product teams each wrote a solid strategy. But team A is optimizing for growth-at-all-costs while team B is optimizing for profitability — and they share the same users.
+    question: |-
+      What's missing above them?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — two strong strategies is fine
+        msg: |-
+          Two good team strategies that contradict each other aren't 'fine' — they'll collide over shared users and resources. The problem sits one level up: there's no company strategy telling them which game to play.
+      - text: |-
+          A clear company strategy
+        msg: |-
+          Right. The cascade is broken at the top. Without a clear company strategy, team strategies can each be coherent yet pull against each other. Alignment has to flow down from a single company-level choice about how to win. Team strategies must cascade from one shared choice, or good local plans collide.
+        correct: true
+      - text: |-
+          Just merge the two teams into one big team
+        msg: |-
+          Merging the teams doesn't resolve the contradiction; it just puts it inside one team. The real fix is a company-level decision that both teams can align to, whatever the org chart looks like.
+  - scenario: |-
+      A stakeholder asks you to summarize your product strategy. You say: "We will delight users, move fast, and be data-driven."
+    question: |-
+      Why is this a weak strategy statement?
+    difficulty: hard
+    options:
+      - text: |-
+          It's strong — those are good principles
+        msg: |-
+          These are values or ways of working, not a strategy. 'Delight users, move fast, data-driven' are things almost every company claims — they say nothing about where you'll win or what you'll refuse to do.
+      - text: |-
+          It's agreeable values with no real choice in it
+        msg: |-
+          Right. A strategy has to make a choice that excludes something. This statement contains no diagnosis, no specific bet, and no trade-off — nobody could disagree with it, which is the tell. If the opposite of your strategy is obviously stupid ('ignore users, move slow'), it isn't a strategy. No diagnosis, no bet, nothing it rules out. A strategy must exclude something.
+        correct: true
+      - text: |-
+          It's too flat and should sound more inspiring
+        msg: |-
+          It's not too negative — if anything it's too agreeable. The weakness is that it commits to nothing specific and rules nothing out, not that it's harsh.
+
+flashcards:
+  - category: |-
+      Ladder
+    title: |-
+      Vision
+    desc: |-
+      The aspirational future you're working toward, usually years out. It inspires and points direction but doesn't say how to get there.
+    application: |-
+      "A world where anyone can learn any skill for free" — a destination, not a plan.
+  - category: |-
+      Ladder
+    title: |-
+      Mission
+    desc: |-
+      Why the organization exists and its role in reaching the vision. More grounded than a vision, broader than a strategy.
+    application: |-
+      "We make world-class courses free for everyone" — the org's job in service of the vision.
+  - category: |-
+      Ladder
+    title: |-
+      Strategy
+    desc: |-
+      The specific, hard choices about how you'll win: where to focus, what to sacrifice, and why that leads to success.
+    application: |-
+      Real strategy always includes trade-offs — the things you deliberately won't do.
+  - category: |-
+      Framework
+    title: |-
+      Rumelt's Kernel
+    desc: |-
+      Richard Rumelt's three parts of a real strategy: a diagnosis of the challenge, a guiding policy, and coherent actions that carry it out.
+    application: |-
+      If a 'strategy' skips the diagnosis and just states goals, it fails the kernel test.
+  - category: |-
+      Framework
+    title: |-
+      Guiding Policy
+    desc: |-
+      The overall chosen approach for overcoming the diagnosed challenge — the method, not the goal or the task list.
+    application: |-
+      "Win by being the simplest product in a bloated category" is a guiding policy.
+  - category: |-
+      Core Idea
+    title: |-
+      Trade-off
+    desc: |-
+      A deliberate sacrifice — choosing not to do or serve something so you can win where it counts. The essence of strategy.
+    application: |-
+      A budget airline's no-frills 'nos' are exactly what fund its low-fare 'yes'.
+
+vocab:
+  - term: |-
+      Vision
+    define: |-
+      Vision: the inspiring long-term future an organization is working toward.
+    clues:
+      - |-
+          I live at the top of the ladder.
+      - |-
+          I describe an aspirational future, years out.
+      - |-
+          "A world where anyone can send money instantly" is me.
+  - term: |-
+      Mission
+    define: |-
+      Mission: the organization's purpose and role in reaching the vision.
+    clues:
+      - |-
+          I sit just below the vision.
+      - |-
+          I state why the organization exists and its role.
+      - |-
+          "We build the rails for borderless payments" is me.
+  - term: |-
+      Strategy
+    define: |-
+      Strategy: the specific choices about how to win, including what you deliberately won't do.
+    clues:
+      - |-
+          I'm the route, not the destination.
+      - |-
+          I'm made of hard choices about how to win.
+      - |-
+          Without trade-offs, I'm just a wish list.
+  - term: |-
+      Diagnosis
+    define: |-
+      Diagnosis: an honest identification of the real challenge a strategy must overcome.
+    clues:
+      - |-
+          I'm the first part of a real strategy.
+      - |-
+          I name the core challenge honestly.
+      - |-
+          "Users churn because onboarding confuses them" is me.
+  - term: |-
+      Guiding Policy
+    define: |-
+      Guiding Policy: the chosen overall approach for tackling the diagnosed challenge.
+    clues:
+      - |-
+          I'm the second part of the strategy kernel.
+      - |-
+          I'm the overall approach, not the goal.
+      - |-
+          "Win by being the simplest tool in the category" is me.
+  - term: |-
+      Trade-off
+    define: |-
+      Trade-off: a deliberate 'no' that concentrates resources on where you choose to win.
+    clues:
+      - |-
+          I'm a deliberate sacrifice.
+      - |-
+          I'm what makes real focus possible.
+      - |-
+          A budget airline's 'no free meals' is me at work.

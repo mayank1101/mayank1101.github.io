@@ -1,0 +1,425 @@
+# PM Gym — design-thinking. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot the right stage, avoid the classic traps, and keep the loop alive. Choose the strongest move, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Design Thinking Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A stakeholder walks in and says: "Let's build a chatbot." No one has talked to users about their actual problem yet.
+    question: |-
+      Where should a design-thinking team start?
+    difficulty: easy
+    options:
+      - text: |-
+          Start prototyping the chatbot
+        msg: |-
+          Prototyping a predetermined solution skips Empathize and Define entirely. You'd be building for an assumed problem; the chatbot might solve something nobody struggles with.
+      - text: |-
+          Back up to Empathize and Define
+        msg: |-
+          Right. 'Build a chatbot' is a solution in search of a problem. Empathy and a sharp problem statement come first; the right solution — maybe a chatbot, maybe not — emerges after. Understand the real user problem before committing to any solution, chatbot or not.
+        correct: true
+      - text: |-
+          Poll the team on whether they like chatbots
+        msg: |-
+          Team preference isn't user need. Design thinking is human-centered — the answer comes from understanding the people with the problem, not from internal opinions about a solution.
+  - scenario: |-
+      In an ideation session, the group latches onto the first decent idea after five minutes and starts planning it in detail.
+    question: |-
+      What's the design-thinking concern?
+    difficulty: easy
+    options:
+      - text: |-
+          None — committing fast is efficient
+        msg: |-
+          Converging after five minutes skips real divergence. The first decent idea is rarely the best; you've narrowed before generating the range of options ideation exists to produce.
+      - text: |-
+          They converged too early
+        msg: |-
+          Exactly. The power of Ideate is quantity before judgment. Jumping to plan the first workable idea forecloses the wilder options that often lead somewhere much better. Ideate needs broad divergence first, or they'll miss stronger ideas the first one blocked.
+        correct: true
+      - text: |-
+          They should have skipped ideation and prototyped immediately
+        msg: |-
+          Skipping ideation entirely is the opposite fix and just as limiting — you'd prototype the single obvious idea. The point is to diverge widely first, then converge on the best.
+  - scenario: |-
+      Your team spent three weeks building a polished, near-final prototype. In testing, users clearly don't understand it — but the team resists changing anything.
+    question: |-
+      What went wrong, in design-thinking terms?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — polish makes feedback more reliable
+        msg: |-
+          If users need training to grasp it, the design failed the test — that's the signal to change, not to coach users. And 'nothing wrong' ignores the resistance that's now blocking learning.
+      - text: |-
+          The prototype was too polished
+        msg: |-
+          Right. Prototypes should be cheap and disposable precisely so you stay open to bad news. Three weeks of polish created sunk-cost attachment that's now overriding what testing revealed. Heavy investment made the team attached and unwilling to hear the feedback the test produced.
+        correct: true
+      - text: |-
+          They tested too early
+        msg: |-
+          They tested too <em>late</em>, if anything — after over-investing. Testing surfaced a real problem; the failure is the attachment blocking the loop-back, not the timing of the test.
+  - scenario: |-
+      During user interviews, a PM keeps asking: "Wouldn't you love a feature that does X? You'd use that, right?" Users nod along.
+    question: |-
+      What's wrong with this Empathize technique?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — users confirmed they want the feature
+        msg: |-
+          Getting agreement feels productive but proves little. These are leading questions that plant the answer — people nod to be polite. You've confirmed your own assumption, not learned the user's real world.
+      - text: |-
+          They're leading questions
+        msg: |-
+          Right. Leading questions ('wouldn't you love…') push users toward the answer you want and gather false validation. Good empathy work asks open, non-leading questions about actual past behavior — 'tell me about the last time you did this' — and watches what people do, not what they'll politely agree to. Asking users to endorse your idea gathers polite agreement, not genuine understanding of their real needs and behavior.
+        correct: true
+      - text: |-
+          The interviews were just too short; make them longer
+        msg: |-
+          The interviews weren't too short — they were pointed the wrong way. Even a long interview full of leading questions produces biased answers. Fix the questions, not the clock.
+  - scenario: |-
+      A team writes its problem statement as: "Users need our new AI dashboard because dashboards are the future."
+    question: |-
+      Why is this a poor Define output?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — the need and the trend are both stated
+        msg: |-
+          It reads like a problem statement but smuggles in the solution ('our AI dashboard') and a slogan for an insight ('dashboards are the future'). A real Define output names the user need and the evidence behind it, not a predetermined build.
+      - text: |-
+          It hides a chosen solution inside the stated need
+        msg: |-
+          Right. It bakes the solution into the problem ('need our AI dashboard') and props it up with a trend cliché instead of a real insight from users. A good statement is solution-agnostic: '[user] needs [need] because [insight we observed]' — leaving the solution open for Ideate. So it prejudges the answer.
+        correct: true
+      - text: |-
+          It's too short — a statement should be a paragraph
+        msg: |-
+          Length isn't the issue — a short statement can be excellent. The flaw is that it embeds the solution and lacks a genuine user insight, not that it needs more words.
+  - scenario: |-
+      Ideation has produced 40 ideas on the wall. The room falls silent — nobody knows what to do next.
+    question: |-
+      What stage-transition is needed?
+    difficulty: medium
+    options:
+      - text: |-
+          Keep diverging
+        msg: |-
+          Generating even more ideas when you already have 40 avoids the real next step. Divergence has done its job; endlessly diverging just grows an unmanageable pile.
+      - text: |-
+          Converge
+        msg: |-
+          Right. After diverging (opening up options), you converge — cluster similar ideas, then use a method like dot-voting or an impact/effort sort to narrow to the few worth prototyping. The pause is the natural signal to shift from generating to selecting.
+        correct: true
+      - text: |-
+          Have the most senior person just pick their favorite
+        msg: |-
+          Having a manager unilaterally pick throws away the group's divergence and the criteria that make convergence rigorous. Converge deliberately with the team, don't hand it to one gut call.
+  - scenario: |-
+      Engineering wants a fully functional, backend-connected prototype before showing anything to users, "so the test is realistic."
+    question: |-
+      What's the design-thinking counter-argument?
+    difficulty: medium
+    options:
+      - text: |-
+          Agree — only a fully working version gives a valid test
+        msg: |-
+          A fully-built prototype defeats the purpose: it's slow, expensive, and by the time it's done you're too invested to hear bad news. Prototypes exist to learn cheaply BEFORE that investment.
+      - text: |-
+          A prototype should be the cheapest thing that answers the question
+        msg: |-
+          Right. A prototype's job is to answer a question as cheaply as possible. A rough mockup can surface the biggest usability and value problems without a real backend — and keeps everyone unattached enough to change course. Save the full build for after the cheap prototype has de-risked the idea. A rough mockup reveals the big problems without a backend, and keeps the team open to changing it.
+        correct: true
+      - text: |-
+          Skip the prototype and just ship to production to see what happens
+        msg: |-
+          Skipping prototyping and shipping straight to production is the most expensive way to learn — the opposite lesson. The point is to prototype cheaply, not to bypass prototyping for the real thing.
+  - scenario: |-
+      In testing, a user struggles with the prototype. The PM immediately jumps in to explain how it's "supposed" to work, and the user then says "oh, that makes sense."
+    question: |-
+      What did the PM do wrong?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — helping the user keeps the test moving
+        msg: |-
+          Helping the user feels kind but destroys the test. In the real world you won't be standing next to every user to explain things. By coaching them, the PM erased the exact struggle they needed to observe.
+      - text: |-
+          They contaminated the test
+        msg: |-
+          Right. The struggle IS the data. By explaining, the PM contaminated the test and got a false 'that makes sense.' The right move is to stay quiet, watch where the user gets stuck, and ask 'what are you thinking here?' — because the product has to work without you in the room. The user's confusion was the finding, and by explaining it away the PM erased the real signal.
+        correct: true
+      - text: |-
+          The prototype was too hard, so the test was pointless
+        msg: |-
+          The prototype being 'too hard' isn't the lesson here — struggle is expected and useful. The mistake is the PM intervening and masking that struggle, not the difficulty itself.
+  - scenario: |-
+      A leader insists the five stages must be done strictly in order, once each, like a checklist — Empathize, then Define, then Ideate, then Prototype, then Test, then done.
+    question: |-
+      What misunderstanding is this?
+    difficulty: medium
+    options:
+      - text: |-
+          It's correct
+        msg: |-
+          Treating the stages as a one-pass checklist misses the core idea. Design thinking is a loop, not a line — testing routinely sends you back to redefine or re-empathize, sometimes many times.
+      - text: |-
+          The process is iterative, not a one-pass line
+        msg: |-
+          Right. Design thinking is iterative and non-linear. You loop back constantly: a test can send you to re-frame the problem (Define) or re-learn the user (Empathize), and you may prototype several times. The five stages are modes you move between, not a one-time checklist.
+        correct: true
+      - text: |-
+          The stages are listed in the wrong order
+        msg: |-
+          The order isn't 'wrong' — empathize-define-ideate-prototype-test is the usual starting flow. The misunderstanding is treating it as strictly once-through instead of a repeating loop.
+  - scenario: |-
+      Your team is designing a tool for warehouse workers but has only interviewed office managers who supervise them, never the workers themselves.
+    question: |-
+      What's the Empathize flaw?
+    difficulty: medium
+    options:
+      - text: |-
+          It's fine — supervisors know the work well
+        msg: |-
+          Managers can describe the work, but they're not the ones who'll use the tool or feel its friction. Designing from a proxy's secondhand account is how you build something that looks right on paper and fails on the floor.
+      - text: |-
+          They empathised with a proxy, not the end users
+        msg: |-
+          Right. Human-centered design means empathizing with the actual end users — the warehouse workers — not a proxy who supervises them. Managers have their own (often different) priorities and blind spots. Go observe and talk to the people who'll really use the tool in their real environment.
+        correct: true
+      - text: |-
+          They just need to interview more managers
+        msg: |-
+          More manager interviews deepen the wrong well. The gap isn't quantity — it's that they've never heard from the actual users. Adding managers can't fix the absence of workers.
+  - scenario: |-
+      A "How Might We" question is phrased: "How might we increase quarterly revenue by 20%?"
+    question: |-
+      Why doesn't this work as a design-thinking HMW?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — revenue is what the business cares about
+        msg: |-
+          It's a fine business goal but a poor HMW. It centers a company metric, not a human need, so it doesn't point ideation at a user problem — it just restates the target you want to hit.
+      - text: |-
+          It frames a business metric, not a human problem
+        msg: |-
+          Right. A design-thinking HMW should frame a human need drawn from empathy work, not a business KPI. 'Increase revenue 20%' is an outcome you want, not a user problem to solve creatively. Reframe around what users are struggling with — solving that is what drives the revenue. A good HMW centers a user need discovered in Empathize, so ideas target people, not a KPI.
+        correct: true
+      - text: |-
+          The 20% target is simply too ambitious
+        msg: |-
+          The 20% isn't the flaw — even a vaguer revenue target would fail the same way. The problem is that it's a business outcome, not a human-centered problem for ideation to open up.
+  - scenario: |-
+      Testing five prototypes with users reveals that the whole underlying assumption — that people want to plan meals a week ahead — is wrong. Most decide dinner an hour before.
+    question: |-
+      What's the right loop-back?
+    difficulty: hard
+    options:
+      - text: |-
+          Keep refining the prototype's buttons and colors
+        msg: |-
+          Tweaking the prototype's buttons can't fix a broken core assumption. The problem isn't the interface — it's that you framed the wrong problem. Polishing the prototype ignores what the test actually revealed.
+      - text: |-
+          Loop back to Define/Empathize
+        msg: |-
+          Right. A wrong core assumption is a signal to loop all the way back to Define (and maybe Empathize) — re-frame the problem around how people actually decide dinner ('help someone throw together a good meal from what's on hand right now'). That's the loop working: a cheap test saved you from building for a fictional user.
+        correct: true
+      - text: |-
+          Ignore it and build the week-ahead planner anyway
+        msg: |-
+          Pushing ahead because you've 'come this far' is sunk-cost thinking. Building on a disproven assumption guarantees a product for users who don't exist. The test just gave you the gift of finding out cheaply — use it.
+  - scenario: |-
+      During ideation, the quietest team member sketches a strange, seemingly impractical idea. The group chuckles and moves on.
+    question: |-
+      What does good ideation practice say?
+    difficulty: hard
+    options:
+      - text: |-
+          The group was right
+        msg: |-
+          Dismissing the odd idea with a laugh is exactly the judgment ideation asks you to defer. Wild, impractical ideas are often the seed of a breakthrough once someone builds on them.
+      - text: |-
+          Capture the wild idea and build on it ('yes, and…')
+        msg: |-
+          Right. Ideate values wild ideas and 'yes, and…' building. The strange idea might be reshaped into something brilliant, and dismissing quiet contributors teaches everyone to self-censor. Capture it, build on it, and defer judgment until the converge step. Deferring judgment protects the odd ideas that often spark the best solutions, and keeps quiet voices contributing.
+        correct: true
+      - text: |-
+          Only entertain practical ideas from senior members
+        msg: |-
+          Only pursuing practical ideas from senior people narrows the funnel to the safe and obvious — the opposite of what divergence is for. The best ideas often come from unexpected, unpolished sparks.
+  - scenario: |-
+      A PM says: "We already know our users perfectly, so let's skip Empathize and jump straight to Ideate."
+    question: |-
+      What's the risk of skipping Empathize?
+    difficulty: hard
+    options:
+      - text: |-
+          No risk
+        msg: |-
+          'We already know our users' is the phrase that precedes most product flops. Assumed knowledge is frozen and often outdated; skipping empathy means ideating for the users you imagine, not the ones who exist now.
+      - text: |-
+          Every later stage inherits unchecked assumptions
+        msg: |-
+          Right. Skipping Empathize means every idea rests on assumptions that may be stale or wrong, and the whole process inherits that error. Even a quick empathy check — a few real conversations — grounds ideation in current reality instead of memory. The confidence itself is the warning sign. Ideating without fresh empathy means solving for an imagined user, not the real, current one.
+        correct: true
+      - text: |-
+          Ideation is always a waste of time anyway
+        msg: |-
+          Ideation isn't 'always a waste of time' — it's essential. The problem is doing it on top of assumed rather than observed understanding, which points all that creative energy at the wrong problem.
+  - scenario: |-
+      Your prototype tests well with users, but a developer points out it would take two years and a full rewrite to build for real.
+    question: |-
+      How does design thinking handle this tension?
+    difficulty: hard
+    options:
+      - text: |-
+          Build it regardless
+        msg: |-
+          'Users loved it, so build it no matter the cost' ignores that a desirable idea still has to be buildable and worthwhile. Design thinking balances what people want with what's technically and practically viable.
+      - text: |-
+          Loop back and ideate a simpler version
+        msg: |-
+          Right. Design thinking aims for the overlap of desirable (users want it), feasible (we can build it), and viable (it makes sense for the business). A beloved but two-year prototype fails feasibility as-is — so loop back and ideate a simpler version that keeps the value users loved but can actually ship. Desirability alone isn't enough.
+        correct: true
+      - text: |-
+          Abandon the idea completely
+        msg: |-
+          Abandoning the whole thing throws away real validated desirability. A positive test is valuable evidence; the right move is to find a feasible way to deliver that value, not to discard the insight entirely.
+
+flashcards:
+  - category: |-
+      Overview
+    title: |-
+      Design Thinking
+    desc: |-
+      A five-stage, human-centered, iterative process for solving fuzzy problems: empathize, define, ideate, prototype, test — looping back as you learn.
+    application: |-
+      Use it when the problem is unclear and you need to explore, not just execute a known spec.
+  - category: |-
+      Stage 1
+    title: |-
+      Empathize
+    desc: |-
+      Understand the people you're designing for through observation and open conversation, setting your own assumptions aside.
+    application: |-
+      Watch a rushed parent actually cook dinner rather than asking what features they'd like.
+  - category: |-
+      Stage 2
+    title: |-
+      Define
+    desc: |-
+      Synthesize your research into one sharp problem statement — a point-of-view and a 'How Might We' question that opens up solutions.
+    application: |-
+      "How might we help a rushed parent cook healthily with zero planning?"
+  - category: |-
+      Stage 3
+    title: |-
+      Ideate
+    desc: |-
+      Generate a wide range of solution ideas. Diverge first (quantity, defer judgment), then converge on the few worth trying.
+    application: |-
+      Aim for many ideas, including wild ones, before filtering any of them.
+  - category: |-
+      Stage 4
+    title: |-
+      Prototype
+    desc: |-
+      Turn ideas into something cheap and tangible people can react to — a sketch or clickable mockup. A prototype is a question, not a product.
+    application: |-
+      Test a booking flow with a clickable mockup, not a finished coded feature.
+  - category: |-
+      Stage 5
+    title: |-
+      Test
+    desc: |-
+      Put prototypes in front of real users, observe, and learn — then loop back to refine the prototype, the problem, or your understanding.
+    application: |-
+      If users miss the core concept, return to Define or Empathize, don't just tweak the UI.
+
+vocab:
+  - term: |-
+      Empathize
+    define: |-
+      Empathize: deeply understanding the people you design for, through observation and open conversation.
+    clues:
+      - |-
+          I'm the first stage.
+      - |-
+          I'm about understanding people, not proposing ideas.
+      - |-
+          Watching and interviewing real users, assumptions aside, is me.
+  - term: |-
+      Define
+    define: |-
+      Define: synthesizing research into a clear problem statement and 'How Might We' question.
+    clues:
+      - |-
+          I come right after understanding people.
+      - |-
+          I turn research into one sharp problem statement.
+      - |-
+          A "How Might We…" question is my output.
+  - term: |-
+      Ideate
+    define: |-
+      Ideate: generating a wide range of solution ideas, diverging before converging.
+    clues:
+      - |-
+          I'm where quantity beats quality.
+      - |-
+          I diverge first and defer judgment.
+      - |-
+          Generating many wild ideas before filtering is me.
+  - term: |-
+      Prototype
+    define: |-
+      Prototype: a cheap, tangible version of an idea built to learn from, not to ship.
+    clues:
+      - |-
+          I'm cheap, fast, and disposable on purpose.
+      - |-
+          I'm a question, not a finished product.
+      - |-
+          A paper sketch or clickable mockup is me.
+  - term: |-
+      Test
+    define: |-
+      Test: putting prototypes in front of real users to learn, then looping back to refine.
+    clues:
+      - |-
+          I'm the fifth stage, but not the finish line.
+      - |-
+          I put the prototype in front of real users.
+      - |-
+          I loop you back to an earlier stage, smarter.
+  - term: |-
+      How Might We
+    define: |-
+      How Might We: a question that frames a user problem openly, inviting a range of solutions.
+    clues:
+      - |-
+          I'm a specific kind of question.
+      - |-
+          I frame a problem so it invites many solutions.
+      - |-
+          "...help a rushed parent cook healthily?" is me.

@@ -1,0 +1,58 @@
+{%- comment -%}
+Structured data for a PM Gym topic: a Course (so the page can surface as a
+learning resource) plus a Quiz describing the practice set. Emitted from the
+same data the page renders from, so counts never drift.
+{%- endcomment -%}
+{%- assign gym = site.data['pm-gym'] -%}
+{%- assign topic = gym[page.topic] -%}
+{%- if topic -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "educationalLevel": "Beginner",
+      "teaches": "Product management",
+      "provider": {
+        "@type": "Person",
+        "name": {{ site.author | jsonify }},
+        "url": {{ site.url | jsonify }}
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT30M"
+      }
+    },
+    {
+      "@type": "Quiz",
+      "name": {{ topic.practice_heading | append: " — " | append: page.title | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "educationalLevel": "Beginner",
+      "isAccessibleForFree": true,
+      "numberOfQuestions": {{ topic.practice | size }},
+      "about": { "@type": "Thing", "name": "Product management" },
+      "hasPart": [
+        {%- for s in topic.practice limit: 5 %}
+        {
+          "@type": "Question",
+          "name": {{ s.question | jsonify }},
+          "text": {{ s.scenario | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {%- for o in s.options -%}{%- if o.correct %} {{ o.text | jsonify }}{% endif %}{%- endfor %}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{%- endif -%}

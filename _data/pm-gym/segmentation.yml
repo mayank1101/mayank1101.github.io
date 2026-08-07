@@ -1,0 +1,417 @@
+# PM Gym — segmentation. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can slice an audience in ways that actually guide product decisions — user vs. customer, the right lens, MECE segments, and choosing a target. Pick the strongest move, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Segmentation Flashcards
+flashcards_blurb: |-
+  Five cards covering the vocabulary and quality checks. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      You're designing a wearable health tracker for senior citizens. The senior wears it; their adult child pays the subscription and monitors the dashboard.
+    question: |-
+      How should you classify them — and what follows from it?
+    difficulty: easy
+    options:
+      - text: |-
+          The senior is both user and customer here
+        msg: |-
+          The senior never sees the bill. If the paying child finds the dashboard confusing or the data untrustworthy, the subscription dies no matter how much the senior likes the device.
+      - text: |-
+          Senior is the user, adult child the customer
+        msg: |-
+          The user drives daily adoption, the customer drives renewal — and they want different things. Automatic syncing for the wearer, real-time emergency summaries for the payer.
+        correct: true
+      - text: |-
+          The adult child is the real user
+        msg: |-
+          Configuring occasionally isn't using. The senior interacts with the product all day — their experience decides whether the device stays on the wrist. The child is the buying decision-maker: the customer.
+  - scenario: |-
+      You manage a workplace tool like Slack and need to decide next quarter's feature priorities.
+    question: |-
+      Which segmentation will guide those decisions best?
+    difficulty: easy
+    options:
+      - text: |-
+          Demographics
+        msg: |-
+          A 24-year-old designer and a 54-year-old lawyer can use the product identically. Demographics help marketing size audiences; they rarely tell a product team what to build.
+      - text: |-
+          Behavioral
+        msg: |-
+          Actions don't lie: usage clusters point at what each group needs (channel organization for heavy users, SSO and compliance for buyers). Two dimensions, two clear feature tracks. Power collaborators vs. notification-only viewers — plus separating members (users) from IT buyers (customers).
+        correct: true
+      - text: |-
+          Geographic
+        msg: |-
+          Unless the product behavior differs by region (it rarely does for collaboration tools), geography won't change a single roadmap decision here.
+  - scenario: |-
+      A teammate proposes splitting your audience into two segments: 'young users' and 'power users'.
+    question: |-
+      What's wrong with this scheme?
+    difficulty: easy
+    options:
+      - text: |-
+          Two segments is too few to be useful
+        msg: |-
+          Segment count isn't the issue; two clean segments can be plenty. The problem is the relationship between these particular two.
+      - text: |-
+          They overlap, so they aren't mutually exclusive
+        msg: |-
+          Segments must be Mutually Exclusive, Collectively Exhaustive. A young power user lands in both buckets, so every analysis double-counts them — and users who are neither vanish entirely. Plenty of young users are power users — so the scheme isn't MECE: metrics double-count and targeting turns to mush.
+        correct: true
+      - text: |-
+          The names aren't descriptive enough for a deck
+        msg: |-
+          Naming is cosmetic. The structural flaw is the overlap (and the gap): one person in two buckets, and many people in none. That's what breaks the analysis.
+  - scenario: |-
+      You're a small startup with limited resources and five plausible customer segments, all somewhat attractive. Leadership wants to serve all five at once.
+    question: |-
+      What's the wiser segmentation-driven strategy?
+    difficulty: easy
+    options:
+      - text: |-
+          Serve all five and see which one lands
+        msg: |-
+          Serving five segments at once with limited resources means building a diluted, average product for all of them and a great one for none. A focused competitor will beat you in each segment you're only half-serving.
+      - text: |-
+          Pick one beachhead segment, win it, then expand
+        msg: |-
+          Right. Pick a beachhead: one segment you can dominate first, ideally where the pain is sharpest and you can win decisively. Own it, earn referrals and revenue, then expand to adjacent segments from a position of strength. Segmentation isn't just describing groups — it's choosing which to serve first.
+        correct: true
+      - text: |-
+          Pick the largest segment by headcount, whatever the fit
+        msg: |-
+          Choosing the biggest segment by raw size ignores fit and winnability. A smaller segment where your pain-solving is sharpest and competition is weakest is often the better beachhead than the largest but crowded one.
+  - scenario: |-
+      A survey says 80% of users "care deeply about privacy." But your usage logs show almost no one changes the default privacy settings or reads the policy.
+    question: |-
+      Which signal should a product team trust for segmentation, and why?
+    difficulty: easy
+    options:
+      - text: |-
+          Trust the survey
+        msg: |-
+          Taking the survey at face value ignores a well-known gap: what people SAY (stated attitude) often differs sharply from what they DO (revealed behavior). Segmenting on 'privacy-conscious' from the survey would create a group that doesn't act the part.
+      - text: |-
+          Trust the behavior
+        msg: |-
+          Right. Product teams favor behavioral data because actions don't lie the way stated attitudes do. The survey reflects what people think they value; the logs show what they actually do. If almost no one touches privacy settings, a 'privacy-first' segment built on the survey would mislead the roadmap. Segment on behavior, then use surveys to explain the 'why' behind it. Stated attitudes often diverge from actions, so the logs are a truer basis for a product segment than the survey.
+        correct: true
+      - text: |-
+          Average the two numbers to get the 'real' figure
+        msg: |-
+          Averaging a survey and behavioral data blends a reliable signal with an unreliable one. The point isn't to split the difference — it's that revealed behavior is the sounder foundation for product segments, with surveys used to interpret it, not to outvote it.
+  - scenario: |-
+      A B2B PM segments purely by company size (SMB, mid-market, enterprise) and assumes everyone within each tier wants the same thing.
+    question: |-
+      What's the limitation?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — company size predicts needs well
+        msg: |-
+          Company size is a useful firmographic cut, but it's still a 'who they are' label, not a 'what they need' one. Two enterprises can have completely different jobs — one wants security, another wants integrations — so size alone won't tell you what to build.
+      - text: |-
+          Size is a trait, not a need
+        msg: |-
+          Right. Firmographic size is a demographic-style trait, and like all trait-based cuts it can mask big differences in need within a tier. Two mid-market firms may want opposite things. Layer a needs-based or behavioral cut on top — e.g., 'compliance-driven buyers' vs. 'growth-driven buyers' — so the segment actually predicts what to build, not just how big the account is.
+        correct: true
+      - text: |-
+          Just add more size tiers until it works
+        msg: |-
+          Adding more size tiers (splitting mid-market into three) just makes a trait-based cut finer — it still doesn't capture what companies within a tier actually need. The fix is a different lens (needs/behavior), not more size buckets.
+  - scenario: |-
+      Your team defines a segment as "users who would benefit from our advanced analytics." When you try to build a campaign for them, no one can pull a list.
+    question: |-
+      Which segment-quality test does this fail?
+    difficulty: medium
+    options:
+      - text: |-
+          Substantial
+        msg: |-
+          The segment might well be substantial and even actionable in principle — the immediate wall is that you can't identify who's in it. 'Would benefit' is a judgment, not something you can query in your data.
+      - text: |-
+          Measurable
+        msg: |-
+          Right. It fails the Measurable test: you can't query your data to find these specific people, because 'would benefit' isn't a recorded attribute. Redefine it around observable signals — e.g., 'users who export data more than 5x a week' — so you can actually locate and reach them. A segment you can't identify can't be served.
+        correct: true
+      - text: |-
+          Actionable
+        msg: |-
+          Actionability is about whether you could build/market something for them — but you're blocked one step earlier: you can't even find them. The failing test here is Measurable, not Actionable.
+  - scenario: |-
+      Analysis reveals a genuinely distinct, well-defined segment with a unique need — but it contains only 40 users, and building for them would take months.
+    question: |-
+      Which test fails, and what does it mean?
+    difficulty: medium
+    options:
+      - text: |-
+          Measurable
+        msg: |-
+          The segment is clearly measurable (you found exactly 40) and actionable (you know their unique need). The problem is size: 40 users can't justify months of work, which is the Substantial test.
+      - text: |-
+          Substantial
+        msg: |-
+          Right. It fails the Substantial test: the segment is real and well-defined, but too small to justify the investment. Unless those 40 users are extraordinarily valuable (huge contracts, strategic logos) or a beachhead into a much larger group, the effort isn't worth it. A perfect segment that's tiny is still a poor place to spend months.
+        correct: true
+      - text: |-
+          Actionable
+        msg: |-
+          It doesn't fail Actionable — you know their unique need and could build for them. The blocker is that the group is too small to be worth it, which is the Substantial test, not Actionable.
+  - scenario: |-
+      A design team creates one 'average user' by blending all segments together: someone who is 38, uses the app 3x a week, and wants both simplicity and power features.
+    question: |-
+      What's the danger of designing for this 'average'?
+    difficulty: medium
+    options:
+      - text: |-
+          It's efficient
+        msg: |-
+          An averaged user feels efficient but is often a person who doesn't exist. Blending opposite needs (simplicity AND power) produces a compromise that fully satisfies no real segment — the classic 'design for everyone, delight no one' trap.
+      - text: |-
+          The 'average user' often doesn't exist
+        msg: |-
+          Right. The 'average user' is frequently a fiction — no real person wants both radical simplicity and deep power equally. Designing for the blended middle yields a mushy compromise that serves no actual segment well. The whole point of segmentation is to design deliberately for distinct real groups, not to average them into one imaginary person. Blending opposite needs yields a compromise that satisfies no real segment well.
+        correct: true
+      - text: |-
+          The age of 38 is simply wrong; recalculate it
+        msg: |-
+          The issue isn't the specific age (38) — it's the averaging itself. Even with a different age, merging conflicting needs into one persona produces a product optimized for nobody. Segment and design for real groups instead.
+  - scenario: |-
+      In a kids' education app, the child uses it, a parent pays, and a teacher recommends it to the whole class.
+    question: |-
+      How does segmentation handle three parties?
+    difficulty: medium
+    options:
+      - text: |-
+          Focus only on the child
+        msg: |-
+          Designing only for the child ignores the two parties who decide whether the app gets bought and recommended. A delightful kids' experience that parents won't pay for and teachers won't endorse still fails commercially.
+      - text: |-
+          Treat them as distinct roles
+        msg: |-
+          Right. This is a multi-sided situation: the child is the user (needs fun, simplicity), the parent is the customer/buyer (needs safety, progress reports, fair price), and the teacher is an influencer/recommender (needs curriculum fit, classroom tools). Each has distinct needs, and the product must serve all three to succeed. Map the user, the buyer, and the influencer separately.
+        correct: true
+      - text: |-
+          Merge all three into a single 'customer' persona
+        msg: |-
+          Rolling all three into one 'customer' erases exactly the differences that matter — the child, parent, and teacher want very different things. The strength of segmentation here is keeping the three roles and their needs separate.
+  - scenario: |-
+      Two behavioral segments emerge: 'power users' (daily, deep feature use) and 'dormant users' (signed up, barely return). A PM wants to build advanced features to please the power users.
+    question: |-
+      What should segmentation prompt you to consider first?
+    difficulty: hard
+    options:
+      - text: |-
+          Just build advanced features
+        msg: |-
+          Immediately building for power users may be right, but jumping there skips the strategic question. The dormant segment might be a larger untapped opportunity — or a churn problem quietly bleeding the business. Segmentation exists to weigh these, not to default to the loudest, happiest group.
+      - text: |-
+          Weigh the segments
+        msg: |-
+          Right. Segmentation should prompt a deliberate choice: which segment offers the most value to move? Deepening power-user features may increase retention among the already-loyal, but investigating why dormant users don't return could unlock a far bigger population — or stop a churn leak. Weigh the size, value, and winnability of each segment before defaulting to the happy one. Deepening power users vs. reactivating a larger dormant group — and choose based on size, value, and winnability, not just who's loudest.
+        correct: true
+      - text: |-
+          Ignore dormant users entirely
+        msg: |-
+          Deleting dormant users from the analysis discards a potentially huge opportunity (or an early warning of churn). Low current engagement doesn't mean low potential — segmentation is about deciding whether to invest in them, not erasing them.
+  - scenario: |-
+      A marketer proposes segments: "Millennials," "People who like coffee," and "Users in cold climates." Your PM instinct says something's off.
+    question: |-
+      What's structurally wrong with this set?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — all three describe real groups
+        msg: |-
+          It's not just that they're 'random' — the deeper problem is they mix different lenses (demographic, psychographic, geographic) and heavily overlap: a cold-climate millennial who likes coffee is in all three. Overlapping, mixed-lens buckets can't be analyzed cleanly.
+      - text: |-
+          It mixes lenses and overlaps, so it isn't MECE
+        msg: |-
+          Right. The set mixes three different segmentation lenses (demographic, psychographic, geographic) and the buckets massively overlap — one person can be in all three at once — so it isn't MECE. Useful segments come from one consistent lens with mutually exclusive, collectively exhaustive groups. Pick a single lens tied to a product decision and split cleanly within it.
+        correct: true
+      - text: |-
+          The segments are fine, they just need better names
+        msg: |-
+          These are more marketing-flavored than product-flavored, but that's not the core structural flaw. The real problem is that the buckets overlap and mix lenses, breaking MECE — which would matter for marketing too.
+  - scenario: |-
+      You discover a needs-based segment — "users who need to collaborate with clients outside their company" — that cuts across every age, region, and company size.
+    question: |-
+      Why is this often more valuable than a demographic segment?
+    difficulty: hard
+    options:
+      - text: |-
+          It's weaker than a demographic segment
+        msg: |-
+          A needs-based segment isn't weaker for spanning demographics — that's its strength. It groups people by a shared problem, which points directly at what to build, whereas a demographic label rarely does.
+      - text: |-
+          A shared need points straight at what to build
+        msg: |-
+          Right. A shared need points straight at a feature (external-collaboration tools) and at a real, underserved job — regardless of who has it. Demographics describe people; needs describe problems, and problems are what you build for. The milkshake lesson again: the opportunity appears when you group by need, not trait. Demographics rarely do either.
+        correct: true
+      - text: |-
+          It's only valid with an age range attached
+        msg: |-
+          It doesn't need to be paired with a demographic to be valid — cutting across all demographics is exactly why it's powerful. Forcing a demographic overlay onto a clean needs-based segment usually just muddies it.
+  - scenario: |-
+      A dating app's user (the single person swiping) and its 'customer' (also the single person, who pays for premium) are the same individual. A teammate says "so the user/customer split is useless here."
+    question: |-
+      Is that right?
+    difficulty: hard
+    options:
+      - text: |-
+          Yes — one person means the split adds nothing
+        msg: |-
+          Concluding the concept is 'useless' overgeneralizes from one case. Yes, here the user and customer are the same person — but the distinction still reminds you they wear two hats: the 'swiper' wants great matches, the 'buyer' weighs whether premium is worth the money. Those are different mindsets even in one head.
+      - text: |-
+          No — one person still holds two distinct mindsets
+        msg: |-
+          Right. Even when they're one person, the user and customer are two mindsets: as a user they want fun, good matches, ease; as a customer they weigh whether premium delivers enough value to pay. The product must satisfy both — a delightful free experience AND a clear reason to upgrade. The framework still guides you; it just collapses into one person here.
+        correct: true
+      - text: |-
+          Correct, and the distinction can be dropped
+        msg: |-
+          It's not that the split 'never applies to consumer apps' — plenty have separate payers (kids' apps, gifts). And even when payer and user coincide, the two mindsets still matter. The teammate's blanket conclusion is wrong on both counts.
+  - scenario: |-
+      Your team has clean, MECE, measurable segments. Leadership asks: "Great — so which one do we actually target first?"
+    question: |-
+      What factors should decide the target segment?
+    difficulty: hard
+    options:
+      - text: |-
+          Always target the single biggest segment by number of users
+        msg: |-
+          Picking the biggest segment by headcount alone ignores whether you can win it or whether it's profitable. A huge segment where competitors are entrenched and willingness-to-pay is low can be a worse first target than a smaller, winnable, high-value one.
+      - text: |-
+          Weigh size, value, fit with your strengths, and winnability together
+        msg: |-
+          Right. Segmentation describes the groups; targeting chooses among them. Weigh each segment on size, value (willingness to pay, lifetime value), how well you can serve their need (fit), and how winnable it is (competition, your strengths). The best first target — the beachhead — maximizes that combination, not raw headcount alone. Often it's a segment with intense, underserved pain you're uniquely suited to solve.
+        correct: true
+      - text: |-
+          Target all segments equally so no one feels left out
+        msg: |-
+          Targeting every segment equally is the opposite of choosing — it spreads a limited team so thin that no segment gets a product good enough to win. The question was which to target FIRST precisely because focus beats spreading.
+
+flashcards:
+  - category: |-
+      Terminology
+    title: |-
+      The User
+    desc: |-
+      The person who actually operates the product day to day — clicking, scrolling, getting things done. Users care about speed, low friction, and a predictable interface.
+    application: |-
+      In the Spotify Kids example: Leo, the six-year-old tapping through dinosaur stories on the iPad, is the user.
+  - category: |-
+      Terminology
+    title: |-
+      The Customer
+    desc: |-
+      The person or organization that pays. Customers care about price, security, compliance, and whether the purchase is worth it.
+    application: |-
+      Sarah, the parent entering her card details for the family plan, is the customer — even though she rarely opens the app herself.
+  - category: |-
+      Data Strategy
+    title: |-
+      Trust Behavior over Surveys
+    desc: |-
+      What people do in your product is more reliable than what they say in surveys. Product decisions should lean on real usage logs, not self-reported traits.
+    application: |-
+      Track which features people actually use daily rather than relying on what they claim in an intake form.
+  - category: |-
+      Frameworks
+    title: |-
+      Needs-Based Segmentation
+    desc: |-
+      Grouping people by the problem they share rather than by age, location, or income. Often reveals segments that demographics completely hide.
+    application: |-
+      The "morning commuters who need a clean, one-handed breakfast" segment — invisible if you slice by age or income.
+  - category: |-
+      Quality Check
+    title: |-
+      The MECE Rule
+    desc: |-
+      Mutually Exclusive, Collectively Exhaustive: segments should not overlap, and together they should cover everyone. Overlapping segments produce double-counted metrics and muddled strategy.
+    application: |-
+      "Active free users" vs. "active paying users" is MECE. "Young users" vs. "power users" is not — many people are both.
+
+vocab:
+  - term: |-
+      User
+    define: |-
+      The User: the person who actually operates the product day to day.
+    clues:
+      - |-
+          I'm one half of a classic split.
+      - |-
+          I use the product every day.
+      - |-
+          In Spotify Kids, six-year-old Leo tapping the app is me.
+  - term: |-
+      Customer
+    define: |-
+      The Customer: the person or organization that pays and decides to buy.
+    clues:
+      - |-
+          I'm the other half of that split.
+      - |-
+          I hold the budget and make the buying call.
+      - |-
+          Sarah entering her card for the family plan is me.
+  - term: |-
+      Demographics
+    define: |-
+      Demographic segmentation: grouping by fixed traits like age, income, or job title.
+    clues:
+      - |-
+          I slice people by fixed facts.
+      - |-
+          Age, income, job title, industry — that's my toolkit.
+      - |-
+          Great for sizing markets, weak for guiding features.
+  - term: |-
+      Behavioral
+    define: |-
+      Behavioral segmentation: grouping by observed actions like usage frequency and features used.
+    clues:
+      - |-
+          I slice by what people actually do.
+      - |-
+          Usage frequency, features touched, purchase patterns — my signals.
+      - |-
+          Product teams love me because actions don't lie.
+  - term: |-
+      Needs-Based
+    define: |-
+      Needs-based segmentation: grouping people by the shared problem they're trying to solve.
+    clues:
+      - |-
+          I ignore who people are and focus on their problem.
+      - |-
+          I group by a shared struggle, not shared traits.
+      - |-
+          "Commuters who need a clean one-handed breakfast" is my kind of group.
+  - term: |-
+      MECE
+    define: |-
+      MECE: segments that don't overlap (mutually exclusive) and together cover everyone (collectively exhaustive).
+    clues:
+      - |-
+          I'm a four-letter quality check for your groups.
+      - |-
+          No overlaps, no gaps.
+      - |-
+          Mutually Exclusive, Collectively Exhaustive — that's me.

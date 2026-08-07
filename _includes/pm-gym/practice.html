@@ -1,0 +1,43 @@
+{%- comment -%}
+Practice pane for a PM Gym topic. Content comes from _data/pm-gym/<page.topic>.yml,
+so adding or rewording a scenario is a data edit, not a markup edit.
+{%- endcomment -%}
+{%- assign gym = site.data['pm-gym'] -%}
+{%- assign topic = gym[page.topic] -%}
+  <section class="pm-pane" data-pane="practice">
+    <div class="pm-section-intro">
+      <span class="pm-badge pm-badge-green">{{ topic.practice_badge }}</span>
+      <h2>{{ topic.practice_heading }}</h2>
+      <p class="muted">{{ topic.practice_blurb }}</p>
+    </div>
+
+    <div class="pm-practice-controls">
+      <div class="pm-filter-group" role="group" aria-label="Filter by difficulty">
+        <button class="pm-filter active" data-difficulty="all">All</button>
+        <button class="pm-filter" data-difficulty="easy">Easy</button>
+        <button class="pm-filter" data-difficulty="medium">Medium</button>
+        <button class="pm-filter" data-difficulty="hard">Hard</button>
+      </div>
+      <button class="cta-secondary" data-pm-action="practice-sample">
+        <i class="fas fa-shuffle"></i> Random 8
+      </button>
+    </div>
+
+    <div class="pm-scenario-list">
+      {%- for s in topic.practice %}
+      <div class="pm-panel pm-scenario-card" data-difficulty="{{ s.difficulty | default: 'medium' }}">
+        <span class="pm-scenario-tag">Scenario {{ forloop.index }}<span class="pm-scenario-level pm-level-{{ s.difficulty | default: 'medium' }}">{{ s.difficulty | default: 'medium' }}</span></span>
+        <p class="pm-scenario-text">{{ s.scenario }}</p>
+        <div class="pm-quiz">
+          <p><strong>{{ s.question }}</strong></p>
+          <div class="pm-quiz-options">
+            {%- for o in s.options %}
+            <button class="pm-quiz-option"{% if o.correct %} data-result="correct"{% endif %} data-msg="{{ o.msg }}">{{ o.text }}</button>
+            {%- endfor %}
+          </div>
+          <div class="pm-quiz-feedback"></div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>

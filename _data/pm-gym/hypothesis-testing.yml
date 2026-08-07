@@ -1,0 +1,425 @@
+# PM Gym — hypothesis-testing. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot a vague hypothesis, find the riskiest assumption, or catch a test being read after the fact.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Hypothesis Testing Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A team says: "Our hypothesis is that redesigning the app will improve things."
+    question: |-
+      What's wrong with this hypothesis?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing, it's clear enough to start building
+        msg: |-
+          &quot;Improve things&quot; isn't falsifiable — any change in any metric could be claimed as proof, so it can never actually be wrong.
+      - text: |-
+          It's not falsifiable
+        msg: |-
+          Right. Rewritten well: &quot;Redesigning checkout for mobile users will raise completion by 10% over 4 weeks&quot; — now a real result can say yes or no. No specific outcome, group, or measurable signal is named.
+        correct: true
+      - text: |-
+          It just needs a deadline attached
+        msg: |-
+          A deadline doesn't add falsifiability; you could hit the date and still have no way to judge whether the belief held.
+  - scenario: |-
+      A test shows a 3% lift and the team debates for a week whether that counts as a win — no threshold was set beforehand.
+    question: |-
+      What should have prevented this debate?
+    difficulty: easy
+    options:
+      - text: |-
+          Running the test for considerably longer
+        msg: |-
+          More time doesn't resolve an undefined threshold — you'd just have the same argument with a slightly different number.
+      - text: |-
+          Agreeing on a success threshold before the test ran
+        msg: |-
+          Right. A pre-set bar turns the same 3% result into an unambiguous answer instead of a week of debate.
+        correct: true
+      - text: |-
+          Asking leadership to decide after seeing the result
+        msg: |-
+          Deciding the bar after seeing the number is exactly the trap — it lets the decision bend toward whatever people already wanted.
+  - scenario: |-
+      An idea rests on: users have smartphones (very likely true), users will pay a $5/month fee (unknown), and onboarding uses blue buttons (trivial).
+    question: |-
+      Which should be tested first?
+    difficulty: easy
+    options:
+      - text: |-
+          The blue buttons
+        msg: |-
+          Easy-to-test isn't the criterion — it's low-risk regardless of the answer, so testing it first wastes a scarce test slot.
+      - text: |-
+          Whether users will pay the fee
+        msg: |-
+          Right. That's the leap of faith: uncertain and critical. Get that answer before investing further. High uncertainty and the whole business model depends on it.
+        correct: true
+      - text: |-
+          Whether users have smartphones
+        msg: |-
+          &quot;Foundational&quot; isn't the same as risky — this one is already well-supported, so it's not worth a test.
+  - scenario: |-
+      A landing-page test hits the pre-agreed 8% signup bar. A stakeholder says: "Let's also check three other metrics we didn't originally care about, and if any looks good, call it a bigger win."
+    question: |-
+      What's the risk here?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — more data is always better than less
+        msg: |-
+          Searching extra metrics after the fact for something that &quot;looks good&quot; is how noise gets mistaken for signal.
+      - text: |-
+          Adding metrics after the fact invites cherry-picking
+        msg: |-
+          Right. If those metrics mattered, they should've been named as success criteria before the test ran.
+        correct: true
+      - text: |-
+          It matters only if the extras contradict the main result
+        msg: |-
+          Even a &quot;confirming&quot; metric found after the fact is suspect — the problem is the order, not just contradiction.
+  - scenario: |-
+      A hypothesis reads: "We believe adding SMS reminders for all users will raise 7-day retention by 15%, measured over 3 weeks."
+    question: |-
+      What makes this a strong hypothesis?
+    difficulty: easy
+    options:
+      - text: |-
+          It's short enough to fit on a single line
+        msg: |-
+          Brevity isn't the strength — plenty of short hypotheses are still vague.
+      - text: |-
+          It names change, group, expected number, and timeframe
+        msg: |-
+          Exactly. Every part of the template is filled in, so a real result can clearly confirm or kill it. Fully falsifiable.
+        correct: true
+      - text: |-
+          It uses the word "believe," which signals humility
+        msg: |-
+          The wording choice isn't what makes it strong — the specificity is.
+  - scenario: |-
+      Two teams ran the "same" experiment but got opposite results — one changed button copy and color at once, the other changed only color.
+    question: |-
+      What principle was violated?
+    difficulty: medium
+    options:
+      - text: |-
+          None — both are valid ways to test a button
+        msg: |-
+          Testing isn't invalidated by different designs, but changing two things at once in one test breaks the ability to know which caused the effect.
+      - text: |-
+          Testing one variable at a time
+        msg: |-
+          Right. Isolate one variable per test so the result actually tells you something. Bundling copy and color means neither team can tell which change drove the result.
+        correct: true
+      - text: |-
+          The tests should have run longer
+        msg: |-
+          Duration isn't the issue — a long-running test that changes two variables at once still can't isolate which one mattered.
+  - scenario: |-
+      A PM says: "I already know push notifications will boost engagement, so let's skip testing and build the full feature."
+    question: |-
+      What's the risk of skipping the test?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — strong PM intuition is enough to go on
+        msg: |-
+          Intuition isn't evidence — treating a belief as certain skips the entire point of hypothesis testing.
+      - text: |-
+          Months of work rest on an untested leap of faith
+        msg: |-
+          Right. Even confident beliefs deserve a cheap test before a big build, especially when reversing course later is expensive.
+        correct: true
+      - text: |-
+          It's fine as long as engagement is checked after launch
+        msg: |-
+          Checking after a full build is far more expensive than testing first, and creates sunk-cost pressure to call any result a win.
+  - scenario: |-
+      Success criteria said "10% lift required." The result comes in at 9.4%. A teammate says: "Close enough, let's call it a win."
+    question: |-
+      What's the concern?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — 9.4% is basically 10% either way
+        msg: |-
+          Rounding a miss up to a &quot;win&quot; defeats the purpose of setting a bar.
+      - text: |-
+          Moving the bar after the fact voids the whole exercise
+        msg: |-
+          Right. If the threshold flexes based on how close the result feels, it wasn't a real criterion.
+        correct: true
+      - text: |-
+          The team should raise the bar next time to avoid this
+        msg: |-
+          Raising the bar doesn't fix the willingness to move it after seeing the result — that temptation exists at any threshold.
+  - scenario: |-
+      An assumption map shows one item in "high risk, high uncertainty" and five items in "low risk, low uncertainty."
+    question: |-
+      Where should the next test focus?
+    difficulty: medium
+    options:
+      - text: |-
+          Spread test effort evenly across all six assumptions
+        msg: |-
+          Spreading effort evenly ignores that five of the six can't meaningfully hurt the idea even if wrong.
+      - text: |-
+          The single high-risk, high-uncertainty item
+        msg: |-
+          Right. One informative test on the risky unknown beats five uninformative tests on things never in doubt. It's the leap of faith and answers fastest whether the idea survives.
+        correct: true
+      - text: |-
+          The item that's cheapest to test, regardless of quadrant
+        msg: |-
+          Cheapness is a tiebreaker, not the primary criterion.
+  - scenario: |-
+      A hypothesis says a redesign will help "users." Data later shows it helped power users but hurt new users.
+    question: |-
+      What does this reveal about the original hypothesis?
+    difficulty: medium
+    options:
+      - text: |-
+          The hypothesis was correct since some users were helped
+        msg: |-
+          &quot;Some users helped&quot; isn't what the hypothesis claimed — it said &quot;users&quot; broadly, and the mixed result shows that framing was too coarse.
+      - text: |-
+          The hypothesis should have named a specific group
+        msg: |-
+          Right. This is exactly why a good hypothesis names a specific group — broad hypotheses produce muddy, hard-to-act-on results. &quot;users&quot; was too broad for a clean answer.
+        correct: true
+      - text: |-
+          The test should be discarded since it produced a mixed result
+        msg: |-
+          A mixed result by segment is valuable information, not a failed test.
+  - scenario: |-
+      A founder wants to skip writing formal hypotheses because "we move too fast for that."
+    question: |-
+      What's the best response?
+    difficulty: hard
+    options:
+      - text: |-
+          Agree — speed and hypothesis writing are incompatible
+        msg: |-
+          Writing a hypothesis takes minutes; skipping it usually costs far more time later, rebuilding after a wrong bet.
+      - text: |-
+          Push back — a hypothesis costs minutes, not days
+        msg: |-
+          Right. The template is lightweight by design. The real time cost is building the wrong thing, not writing the bet down first. A hypothesis can be one sentence, and it's what prevents an expensive rebuild after guessing wrong.
+        correct: true
+      - text: |-
+          Compromise by writing hypotheses for large features only
+        msg: |-
+          Risk doesn't scale purely with size — small features can rest on risky unproven assumptions too.
+  - scenario: |-
+      A test's sample was 40 users, mostly from one referral source, and the team wants to greenlight a company-wide rollout.
+    question: |-
+      What's the concern with the test design?
+    difficulty: hard
+    options:
+      - text: |-
+          None, if the direction of the result is positive that's enough
+        msg: |-
+          A biased, tiny sample can produce a positive result by chance or by not representing the whole user base.
+      - text: |-
+          A small, non-representative sample may not generalize
+        msg: |-
+          Right. Testing on one referral source's users risks a result that doesn't hold once you roll out to everyone else. Validate against a broader slice before a full rollout.
+        correct: true
+      - text: |-
+          The test should simply run twice as long with the same 40 users
+        msg: |-
+          Longer duration with the same narrow sample doesn't fix representativeness.
+  - scenario: |-
+      A pricing hypothesis is deemed "too risky and important to test cheaply," so the team plans a six-month rebuild to test it properly.
+    question: |-
+      Is that the right call?
+    difficulty: hard
+    options:
+      - text: |-
+          Yes — high-stakes bets deserve the most thorough test
+        msg: |-
+          Stakes justify rigor, not automatically the most expensive method — a fake-door pricing page can often answer the same question in days.
+      - text: |-
+          Not necessarily — cheaper tests can de-risk it first
+        msg: |-
+          Right. High stakes are exactly why you want a fast, cheap answer first — a six-month build bets the whole budget on an unchecked assumption. Look for the cheapest test that could still meaningfully move the belief, before committing six months.
+        correct: true
+      - text: |-
+          No — high-stakes hypotheses shouldn't be tested at all
+        msg: |-
+          Skipping testing on the riskiest bets is backwards — those are precisely the ones most worth a cheap check.
+  - scenario: |-
+      After a failed test, a PM says: "The hypothesis was wrong, so this whole idea is dead."
+    question: |-
+      Is that the right conclusion?
+    difficulty: hard
+    options:
+      - text: |-
+          Yes — a failed hypothesis means the idea is dead
+        msg: |-
+          Disproving one specific hypothesis doesn't necessarily kill the broader idea — the approach may be wrong, not the underlying need.
+      - text: |-
+          Not necessarily — only that specific bet is dead
+        msg: |-
+          Right. Maybe SMS reminders didn't lift retention, but the underlying need might still be solvable through a different mechanism. A failed hypothesis kills that specific bet, but the underlying problem may still be worth solving differently.
+        correct: true
+      - text: |-
+          The test must have been run incorrectly to fail
+        msg: |-
+          Assuming the test was flawed just because the result was unwelcome is its own form of bias.
+  - scenario: |-
+      A team wants to test a new pricing model but worries a public test could alienate existing customers if it's visible.
+    question: |-
+      What's a reasonable way to test with lower exposure?
+    difficulty: hard
+    options:
+      - text: |-
+          Skip testing and roll new pricing out to everyone at once
+        msg: |-
+          Rolling out untested to the full base carries the exact exposure risk the team is worried about, at maximum scale.
+      - text: |-
+          Test on a small segment, or with concept interviews first
+        msg: |-
+          Right. Scoping the test to a small, contained group lets you learn the answer while limiting the downside if it's wrong.
+        correct: true
+      - text: |-
+          Wait until the team is completely certain before testing
+        msg: |-
+          Waiting for certainty defeats the purpose of testing — the whole point is to build the certainty you don't yet have, cheaply.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Hypothesis
+    desc: |-
+      A falsifiable statement about what will happen if you make a specific change — precise enough that a real result could prove it wrong.
+    application: |-
+      Before building a feature, write the belief behind it as a hypothesis so you can actually check if it holds.
+  - category: |-
+      Anatomy
+    title: |-
+      Hypothesis Template
+    desc: |-
+      "We believe [X] for [group] will result in [outcome]. We'll know we're right if [measurable signal]."
+    application: |-
+      Use this template to force vague ideas ("this will help users") into something testable.
+  - category: |-
+      Risk
+    title: |-
+      Leap of Faith Assumption
+    desc: |-
+      The assumption underneath an idea that is both highly uncertain and, if wrong, would sink the whole idea.
+    application: |-
+      Test your leap of faith assumptions first — they tell you fastest whether an idea is worth pursuing further.
+  - category: |-
+      Discipline
+    title: |-
+      Success Criteria
+    desc: |-
+      The specific threshold, decided before a test runs, that determines whether the result counts as a pass or a fail.
+    application: |-
+      Agree "we need 8% conversion to proceed" before launching the test, not after seeing the result.
+  - category: |-
+      Bias
+    title: |-
+      Confirmation Bias
+    desc: |-
+      The tendency to notice and favor results that support what you already wanted to believe.
+    application: |-
+      Pre-registering success criteria is one of the best defenses against reading a test result the way you want to.
+  - category: |-
+      Concept
+    title: |-
+      Falsifiable
+    desc: |-
+      Able to be proven wrong by a real result — a hallmark of a genuine hypothesis as opposed to a vague hope.
+    application: |-
+      "This might help" isn't falsifiable; "this will raise completion by 10%" is.
+
+vocab:
+  - term: |-
+      Hypothesis
+    define: |-
+      A Hypothesis: a falsifiable statement about what will happen if you make a specific change.
+    clues:
+      - |-
+          I'm a bet you can lose.
+      - |-
+          A real result can prove me wrong — that's the whole point of me.
+      - |-
+          "We believe X will result in Y" is roughly my shape.
+  - term: |-
+      Leap of Faith Assumption
+    define: |-
+      Leap of Faith Assumption: the assumption that is both most uncertain and most critical to an idea's success — test it first.
+    clues:
+      - |-
+          I'm the riskiest belief underneath an idea.
+      - |-
+          If I'm wrong, the whole idea collapses.
+      - |-
+          Test me before anything safer.
+  - term: |-
+      Falsifiable
+    define: |-
+      Falsifiable: stated precisely enough that a real-world result could prove it wrong.
+    clues:
+      - |-
+          A real result can knock me down.
+      - |-
+          "Might help somehow" doesn't have me; a specific number does.
+      - |-
+          I'm what separates a hypothesis from a vague hope.
+  - term: |-
+      Success Criteria
+    define: |-
+      Success Criteria: the threshold, set in advance, that determines whether a test result counts as pass or fail.
+    clues:
+      - |-
+          I'm decided before the test runs, not after.
+      - |-
+          Without me, any result can be spun as a win.
+      - |-
+          "We need 8% to proceed" is an example of me.
+  - term: |-
+      Assumption Mapping
+    define: |-
+      Assumption Mapping: plotting the assumptions behind an idea by risk and uncertainty to find which to test first.
+    clues:
+      - |-
+          I sort assumptions by risk and uncertainty.
+      - |-
+          I help you find the leap of faith among many smaller bets.
+      - |-
+          I usually get drawn as a 2x2 grid.
+  - term: |-
+      Confirmation Bias
+    define: |-
+      Confirmation Bias: the tendency to favor evidence that confirms an existing belief, distorting how test results are read.
+    clues:
+      - |-
+          I make you see what you already believed.
+      - |-
+          I quietly discount evidence you don't like.
+      - |-
+          Pre-set success criteria help defend against me.

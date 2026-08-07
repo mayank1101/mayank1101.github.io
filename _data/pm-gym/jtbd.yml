@@ -1,0 +1,425 @@
+# PM Gym — jtbd. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 realistic product situations. Pick the answer a JTBD thinker would choose — every option gives instant feedback that explains the reasoning.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  JTBD Flashcard Deck
+flashcards_blurb: |-
+  Six cards covering the essentials. Click a card to flip it and see the explanation with a real-world example.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      You join a sleep-tech startup. Everyone hates their alarm clock, and you're asked to redesign the wake-up experience for busy professionals.
+    question: |-
+      What is your first move, thinking in Jobs-to-be-Done?
+    difficulty: easy
+    options:
+      - text: |-
+          List the features competitor alarm apps have that ours is missing
+        msg: |-
+          Feature-first thinking. JTBD starts one level deeper: nobody hires an alarm for its features — they hire it for the progress it enables. Find that progress first.
+      - text: |-
+          Identify the progress users want: moving from sleep to a productive day calmly and on time
+        msg: |-
+          Exactly. The job is not 'make noise at 7 AM'; it is 'transition me peacefully from sleep to a confident start'. Once the outcome is named, solutions like gradual sunrise light follow naturally. Then design toward that outcome.
+        correct: true
+      - text: |-
+          Survey which age group buys the most alarm clocks and target them
+        msg: |-
+          The demographic trap. Age doesn't explain why someone hires an alarm clock — a 25-year-old nurse and a 55-year-old pilot may share the exact same job. Start from the situation, not the census.
+  - scenario: |-
+      Peloton sells a stationary bike for several times the price of a normal one — and people happily pay it.
+    question: |-
+      Which explanation best captures the job Peloton is hired for?
+    difficulty: easy
+    options:
+      - text: |-
+          It's the cheapest way to exercise at home
+        msg: |-
+          Cheaper bikes exist everywhere — if the job were purely functional exercise, Peloton would lose on price instantly. The premium must live somewhere else.
+      - text: |-
+          It bundles the functional, emotional, and social jobs
+        msg: |-
+          Right. The functional job alone is worth a cheap bike; the emotional and social layers — leaderboards, live classes, the device as a status object — are what justify the premium price.
+        correct: true
+      - text: |-
+          The hardware is simply better built than rivals
+        msg: |-
+          Build quality supports the story but can't carry it — plenty of well-built bikes cost far less. People pay for how Peloton makes them feel and how it lets them be seen.
+  - scenario: |-
+      A competitor just launched a free feature that overlaps with your paid product. Leadership is nervous and wants a response this week.
+    question: |-
+      What does the Four Forces model tell you to do?
+    difficulty: easy
+    options:
+      - text: |-
+          Copy the feature so users have no reason to leave
+        msg: |-
+          Panic-copying answers a pull force with a 'me too'. Users switch only when push + pull outweigh anxiety + habit — a lone pull rarely moves anyone. Check the full picture first.
+      - text: |-
+          Check all four forces before reacting to the launch
+        msg: |-
+          Exactly. The competitor's feature is only a pull. If our users have low push and strong habits, the pull fizzles. Strengthen what keeps them (habit, trusted data) and honestly fix any real frustrations.
+        correct: true
+      - text: |-
+          Start a price war to hold the line
+        msg: |-
+          Price answers a question nobody asked. Discounts don't address why anyone would switch; they just shrink revenue while the four forces stay exactly where they were.
+  - scenario: |-
+      A user says: "I bought a $5 self-help book, but honestly I've never opened it. It just sits on my nightstand and I feel better having it there."
+    question: |-
+      What job did the book get hired for?
+    difficulty: easy
+    options:
+      - text: |-
+          The functional job of learning the book's content
+        msg: |-
+          The functional job — actually reading and learning — clearly wasn't it; the book is unopened. JTBD warns you not to assume the obvious use is the real job. Look at what the purchase actually did for them.
+      - text: |-
+          An emotional job
+        msg: |-
+          Right. The book was hired for an emotional job — the reassurance of 'I'm the kind of person who's working on myself,' and the comfort of intending to improve. Unopened, it still delivers that feeling. Products often get hired for emotional jobs that have nothing to do with their functional purpose. The comfort and reassurance of 'I'm working on myself,' delivered just by owning it.
+        correct: true
+      - text: |-
+          No real job
+        msg: |-
+          'No real job' misses the point — they paid money and feel better for it, so a job is absolutely being done. It's just an emotional one, not the functional reading job you'd expect.
+  - scenario: |-
+      You run a note-taking app. In interviews you keep hearing: "I don't use fancy features — I just need to dump a thought before I forget it while walking between meetings."
+    question: |-
+      What should this steer your roadmap toward?
+    difficulty: easy
+    options:
+      - text: |-
+          Add more advanced features to compete with power-user tools
+        msg: |-
+          Piling on advanced features directly contradicts the job users described. They hired the app to capture a thought instantly; more features add friction to the very moment that matters. Building against the stated job is a classic feature-factory trap.
+      - text: |-
+          Make instant, frictionless capture the priority
+        msg: |-
+          Right. The job is 'capture a fleeting thought before it's gone, with near-zero friction.' The roadmap should make opening the app and jotting a note instant — fast launch, one-tap capture, works one-handed while walking. Design toward the actual job, not toward feature parity nobody asked for. Fast open, one-tap note — because the job is 'save a thought before I lose it.'.
+        correct: true
+      - text: |-
+          Re-target the app at students since they take the most notes
+        msg: |-
+          A demographic pivot ('target students') ignores the job entirely. The insight here isn't about who the users are — it's about the specific progress they're hiring the app to make. Serve the job, whoever has it.
+  - scenario: |-
+      You're the PM for a budgeting app. A competitor analysis lists only other budgeting apps. Your churn interviews reveal users quit because "I just went back to a spreadsheet / a notebook / not tracking at all."
+    question: |-
+      What JTBD lesson does this reveal?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — competitors are other budgeting apps
+        msg: |-
+          Only other budgeting apps as competitors is exactly the blind spot. Users 'fired' you for a spreadsheet, a notebook, or nothing — none of which appear in a category-based competitor list. Your real rivals are whatever else does the job.
+      - text: |-
+          Competitors are anything hired for the same job
+        msg: |-
+          Right. Competitors are defined by the job, not the category. If users hire a spreadsheet, a notebook, or 'just winging it' to manage money, those ARE your competition. This reframes your job-to-be-done as 'help me feel in control of my money,' and your real benchmark becomes 'easier than a spreadsheet,' not 'more features than rival apps.'. Spreadsheets, notebooks, and 'nothing' are your real rivals, so beat them on simplicity, not app features.
+        correct: true
+      - text: |-
+          Add every feature your rival budgeting apps have
+        msg: |-
+          Copying rival apps' features chases the wrong benchmark. Users didn't leave for another app — they left for a spreadsheet or nothing. Matching app-category features won't win back people who wanted something simpler.
+  - scenario: |-
+      A teammate writes this job statement: "When users open our app, they want to use our new AI summary feature, so they can enjoy our product."
+    question: |-
+      What's wrong with it?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — it names a feature and a benefit
+        msg: |-
+          It looks like the right format but it's product-centered, not user-centered. The 'situation' is just 'opens our app,' the 'motivation' is to use OUR feature, and the 'outcome' is to enjoy OUR product. A real job statement never mentions your product — it describes the user's world.
+      - text: |-
+          Every part points at your product, not the user
+        msg: |-
+          Right. Every part references your product instead of the user's real life. A good statement is solution-agnostic: 'When I'm handed a 40-page report five minutes before a meeting, I want the key points fast, so I can speak confidently without reading it all.' The situation is real, and the outcome is the user's — not 'enjoy our product.'
+        correct: true
+      - text: |-
+          The AI feature is too advanced for a statement
+        msg: |-
+          The AI feature being 'too advanced' isn't the issue. The problem is structural: the statement describes your product's usage instead of the user's underlying job. Even a simple feature phrased this way would be wrong.
+  - scenario: |-
+      Your onboarding is beautiful, but analytics show most new users abandon at the "import your existing data" step, even though importing would clearly help them.
+    question: |-
+      Which of the four forces is likely to blame?
+    difficulty: medium
+    options:
+      - text: |-
+          Weak pull
+        msg: |-
+          A weak pull isn't the issue — they already signed up and started onboarding, so the attraction worked. Something is stopping them at a specific scary step, which points to a blocker, not a lack of appeal.
+      - text: |-
+          Anxiety
+        msg: |-
+          Right. 'Import your existing data' triggers anxiety — 'what if this messes up or loses my data?' Even a helpful step can spike the fear of switching. The fix is to shrink that anxiety: show it's safe, make it reversible, let them skip and import later, or do it automatically. Reducing anxiety often unlocks more switching than adding pull. A risky-feeling 'import my data' step spikes the fear of losing or breaking things; reduce it (safe, reversible, skippable).
+        correct: true
+      - text: |-
+          Habit — users are too comfortable with their old tool
+        msg: |-
+          Habit is comfort with the old way, which shows up as not starting at all — not as dropping off mid-import. The drop happens at a specific fear-inducing step, which is the signature of anxiety, not habit.
+  - scenario: |-
+      A luxury-handbag brand asks you to explain, in JTBD terms, why customers pay 20x more than a functionally identical bag.
+    question: |-
+      What's the sharpest JTBD explanation?
+    difficulty: medium
+    options:
+      - text: |-
+          The luxury bag simply carries belongings better
+        msg: |-
+          If the job were purely functional (carry my things), a $30 bag wins and the premium makes no sense. The functional job is the least of why anyone pays 20x — so this explanation can't be it.
+      - text: |-
+          The premium buys the emotional and social jobs
+        msg: |-
+          Right. The functional job (carry things) is nearly identical, so it can't justify the price. The premium buys the emotional job (feeling successful, treating myself) and especially the social job (signaling taste and status to others). For status goods, the social and emotional dimensions ARE the product; the bag is just the carrier.
+        correct: true
+      - text: |-
+          Customers are simply being irrational with money
+        msg: |-
+          Calling customers irrational dodges the analysis. In JTBD terms they're perfectly rational — they're paying for real emotional and social jobs the cheap bag can't do. 'Irrational' is what people say when they've only considered the functional dimension.
+  - scenario: |-
+      Two users both "hire" a food-delivery app, but for very different reasons: one is a busy parent with no time to cook; the other is showing off by ordering a trendy restaurant for friends.
+    question: |-
+      What does this tell a product team?
+    difficulty: medium
+    options:
+      - text: |-
+          They're the same customer, so build one thing for both
+        msg: |-
+          Treating them as one identical user erases a real difference. Same app, same demographic maybe — but two different jobs (a functional time-saver vs. a social status move) that call for different features and messaging.
+      - text: |-
+          The same product serves multiple jobs
+        msg: |-
+          Right. The same product can serve multiple distinct jobs, and each deserves its own design and messaging. The busy parent's job (fast, reliable, cheap, feed the family) differs sharply from the show-off's job (impressive restaurants, shareable, status). Recognizing the different jobs lets you segment by job — often far more useful than segmenting by age or income. Segment by job (convenience vs. status) and tailor features and messaging to each.
+        correct: true
+      - text: |-
+          Drop the show-off user
+        msg: |-
+          Firing the show-off customer throws away a valuable job the app already serves. Both jobs are real and monetizable; the insight is to serve each well, not to pick one and discard the other.
+  - scenario: |-
+      In a churn interview, instead of asking "what features do you want?", a skilled PM asks: "Walk me through the day you decided to cancel — what happened right before?"
+    question: |-
+      Why is the second question more JTBD-aligned?
+    difficulty: hard
+    options:
+      - text: |-
+          It's a warmer way to ask the same question
+        msg: |-
+          It's not just 'friendlier' — it's methodologically different. 'What features do you want?' invites users to invent solutions (which they're bad at). The story question uncovers the real situation and the forces at play, which is the actual data JTBD needs.
+      - text: |-
+          It surfaces the real forces behind the switch
+        msg: |-
+          Right. Asking users to name features makes them guess at solutions — outside their expertise. Asking them to narrate the moment of switching reveals the real situation, the push that built up, and the anxieties involved. JTBD research digs into the story of the struggle, not a wish list of features. Which they're not equipped to do.
+        correct: true
+      - text: |-
+          It saves time by getting a quick feature list
+        msg: |-
+          The story question isn't slower-but-equal — it produces fundamentally better data. Feature wish-lists are notoriously misleading; the narrative of the actual decision is where the true job and forces surface.
+  - scenario: |-
+      Your product is objectively better than the incumbent on every feature, yet enterprise customers won't switch. Interviews reveal: "Our whole team knows the old tool, and re-training 200 people terrifies us."
+    question: |-
+      Which forces are blocking the switch, and what's the play?
+    difficulty: hard
+    options:
+      - text: |-
+          Add even more features to strengthen the pull
+        msg: |-
+          Adding still more features piles on pull, but pull was never the problem — you already win on features. Anxiety (re-training 200 people) and habit (the team knows the old tool) are the anchors, and more features don't touch either.
+      - text: |-
+          Anxiety and habit are the anchors
+        msg: |-
+          Right. The blockers are anxiety (fear of a painful re-training) and habit (the team's ingrained familiarity). More pull won't help. The play is to shrink those: white-glove migration, in-product training, a UI that mirrors the old tool's mental model, and a low-risk pilot. Winning on features is wasted if you don't dismantle the anxiety and habit holding people in place.
+        correct: true
+      - text: |-
+          Accept the product must not really be better after all
+        msg: |-
+          Concluding the product 'isn't actually better' contradicts the finding — it wins on every feature. The issue isn't product quality; it's that switching costs (anxiety + habit) outweigh the pull. Address the switch, not the product.
+  - scenario: |-
+      A founder insists: "Our target market is women aged 30–45 with high income." When you interview them, their reasons for buying are wildly different from one another.
+    question: |-
+      What's the JTBD critique of this targeting?
+    difficulty: hard
+    options:
+      - text: |-
+          It's solid
+        msg: |-
+          A precise demographic feels rigorous but predicts behavior poorly. Two women of the same age and income can hire your product for completely different jobs — and two very different people can share the exact same job. Demographics describe who people are, not what progress they're chasing.
+      - text: |-
+          Demographics don't explain why people buy
+        msg: |-
+          Right. Demographics (age, income, gender) don't explain motivation — that's the milkshake lesson. The founder should segment by job-to-be-done: group customers by the progress they're trying to make, not by their census category. That's why the interviewed group's reasons vary so wildly — they share a demographic but not a job.
+        correct: true
+      - text: |-
+          The age range is too wide; narrow it to 35–40
+        msg: |-
+          Narrowing the age band (say 35–40) just makes a demographic segment more precise, not more predictive. People of identical age still have different jobs. The fix isn't a tighter demographic — it's switching to job-based segmentation.
+  - scenario: |-
+      Slack famously described a big part of its job as "make my team feel less overwhelmed by email and more connected." A rival copies every Slack feature but users say it "feels cold and corporate."
+    question: |-
+      What did the rival miss?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — the rival matched every feature
+        msg: |-
+          Feature parity was clearly achieved — they copied everything — yet it still failed. That's the clue: the job wasn't only functional. Copying the visible features misses the emotional job the product was really hired for.
+      - text: |-
+          The emotional job behind the features
+        msg: |-
+          Right. Slack's job had a strong emotional dimension — feeling connected, playful, less overwhelmed. That lived in tone, emoji, personality, and delightful details, not in the feature checklist. The rival copied the functional layer and ignored the emotional job, so it 'works' but feels cold. Emotional and social jobs are the hardest to copy and often the real moat.
+        correct: true
+      - text: |-
+          The rival needs even more features than Slack
+        msg: |-
+          The rival didn't need more features — they already matched every one. Adding more would deepen the same mistake: chasing the functional layer while missing the emotional job that made Slack feel human.
+  - scenario: |-
+      You're tempted to add a flashy new capability because a competitor has it. Before committing, you apply JTBD.
+    question: |-
+      What's the right JTBD question to ask first?
+    difficulty: hard
+    options:
+      - text: |-
+          "Does the competitor already have this?"
+        msg: |-
+          'Does the competitor have it?' is feature-parity thinking, the exact trap JTBD helps you escape. Matching a rival's feature list says nothing about whether it advances a job your users are actually trying to get done.
+      - text: |-
+          "What job would users hire this for, and is it real?"
+        msg: |-
+          Right. The JTBD question is: 'What job would a user hire this capability for, and is that a real, important, underserved job for our users?' If it advances a job people genuinely struggle with, build it. If it's just feature-matching with no job behind it, skip it. JTBD turns 'do we have feature X?' into 'does this help users make progress they care about?'
+        correct: true
+      - text: |-
+          "Can our engineers build it quickly?"
+        msg: |-
+          'Can our engineers build it?' is a feasibility question, useful later but not first. JTBD says the primary question is whether the capability serves a real user job — building something well that nobody hires for is still wasted effort.
+
+flashcards:
+  - category: |-
+      Mindset
+    title: |-
+      The Milkshake Rule
+    desc: |-
+      People don't buy a product for what it is — they "hire" it to solve a struggle in their life. A fast-food chain sold more milkshakes once it realized commuters were hiring them to make a boring drive easier, not to enjoy a dessert.
+    application: |-
+      Look for unexpected competitors. Netflix's real competition isn't only Disney+ — it's anything people use to unwind, like a glass of wine or a video game.
+  - category: |-
+      Building Blocks
+    title: |-
+      The Job Statement
+    desc: |-
+      A simple sentence that captures what a user really needs: "When [situation], I want to [motivation], so I can [outcome]." It turns vague complaints into something a team can act on.
+    application: |-
+      Situation: driving with one hand busy. Motivation: something clean and easy to consume. Outcome: stay full until lunch without making a mess.
+  - category: |-
+      Going Deeper
+    title: |-
+      Three Dimensions of a Job
+    desc: |-
+      Every job has three layers: Functional (the practical task), Emotional (how the person wants to feel), and Social (how they want to be seen by others).
+    application: |-
+      Peloton — Functional: exercise at home. Emotional: feel accomplished. Social: climb the leaderboard and show off a premium device.
+  - category: |-
+      Switching
+    title: |-
+      The Four Forces of Progress
+    desc: |-
+      What makes someone switch products: Push (frustration with the old) and Pull (appeal of the new) must together beat Anxiety (fear of the new) and Habit (comfort with the old).
+    application: |-
+      Launching a new tool? Reduce anxiety by letting people import their existing data with one click.
+  - category: |-
+      Switching
+    title: |-
+      "Firing" a Product
+    desc: |-
+      Before someone adopts your product, they have to "fire" whatever they use today — even if that is a spreadsheet, a notebook, or doing nothing. Adoption is a replacement, not an addition.
+    application: |-
+      Map what gets replaced. When a team hires Zoom, it fires meeting rooms and plane tickets.
+  - category: |-
+      Communication
+    title: |-
+      Outcomes over Outputs
+    desc: |-
+      Outputs are what you build (features, buttons, screens). Outcomes are what users gain (time saved, stress removed, progress made). Good product thinking always starts from outcomes.
+    application: |-
+      Asked "how do we improve signup?" — answer with the outcome: "remove the friction that stops people from getting their job done," not with a list of features.
+
+vocab:
+  - term: |-
+      Push
+    define: |-
+      The push of the present: frustration with the current solution that drives someone to seek something new.
+    clues:
+      - |-
+          I'm one of two forces that drive someone toward change.
+      - |-
+          I'm the frustration with the current way of doing things.
+      - |-
+          "My old software keeps losing my edits!" — that dissatisfaction is me.
+  - term: |-
+      Pull
+    define: |-
+      The pull of the new: the appeal and promise of a new solution that draws someone toward it.
+    clues:
+      - |-
+          Like my partner force, I move people toward switching.
+      - |-
+          I'm the attraction and promise of the new option.
+      - |-
+          "Wow, no download required!" — the appeal of the new product is me.
+  - term: |-
+      Anxiety
+    define: |-
+      Anxiety of the new: fear and uncertainty about switching that holds someone back, even from a better option.
+    clues:
+      - |-
+          I'm a force, but I hold people back.
+      - |-
+          I'm the fear and doubt about adopting something new.
+      - |-
+          "What if this app loses my files during setup?" — that worry is me.
+  - term: |-
+      Habit
+    define: |-
+      Habit of the present: the comfort and inertia of the existing way, one of the two forces blocking a switch.
+    clues:
+      - |-
+          I quietly keep people where they are.
+      - |-
+          I'm the comfort and inertia of the current routine.
+      - |-
+          "But I already know all the shortcuts here…" — that inertia is me.
+  - term: |-
+      Job Statement
+    define: |-
+      A Job Statement captures a need as: When [situation], I want to [motivation], so I can [outcome].
+    clues:
+      - |-
+          I turn a vague complaint into something a team can build for.
+      - |-
+          I follow a three-part formula: situation, motivation, outcome.
+      - |-
+          "When…, I want to…, so I can…" — that sentence is me.
+  - term: |-
+      Firing
+    define: |-
+      "Firing" a product: users must drop their current solution (even a spreadsheet or habit) to adopt a new one.
+    clues:
+      - |-
+          Adopting your product always involves doing this to something else.
+      - |-
+          I'm what a user does to their old tool or workaround when they switch.
+      - |-
+          When a team hires Zoom, they do this to meeting rooms and plane tickets.

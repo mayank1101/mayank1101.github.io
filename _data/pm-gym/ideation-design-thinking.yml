@@ -1,0 +1,425 @@
+# PM Gym — ideation-design-thinking. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot a broken brainstorm rule, pick the right technique, or catch premature or overdue convergence.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Ideation Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      In a brainstorm, a manager says "let's only write down ideas we could ship next sprint."
+    question: |-
+      What's the issue?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — keeping ideas realistic saves time later
+        msg: |-
+          Constraining to &quot;shippable next sprint&quot; during divergence quietly filters out bigger ideas before anyone even hears them.
+      - text: |-
+          Convergent criteria smuggled into the divergent phase
+        msg: |-
+          Right. Feasibility and timing belong in convergence, not while ideas are still being generated.
+        correct: true
+      - text: |-
+          It matters only if the team regrets it afterwards
+        msg: |-
+          The harm happens regardless of regret — the option space was already narrowed before exploration finished.
+  - scenario: |-
+      A remote team's ideation call is a free-for-all; three people talk the whole time and five stay silent.
+    question: |-
+      What would improve this?
+    difficulty: easy
+    options:
+      - text: |-
+          Extend the call so quieter folks eventually speak
+        msg: |-
+          More time in the same format doesn't fix the structural imbalance.
+      - text: |-
+          Switch to brainwriting so everyone contributes
+        msg: |-
+          Right. Writing first and sharing after specifically neutralizes a loud-voice imbalance. Have everyone submit ideas in a shared doc silently first, then discuss.
+        correct: true
+      - text: |-
+          Ask the quiet five to name an idea on the spot
+        msg: |-
+          Put on the spot live, quieter contributors often freeze or defer to what's already been said.
+  - scenario: |-
+      The team has 40 sticky notes and immediately picks the first 3 anyone reads aloud, to save time.
+    question: |-
+      What's wrong?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Picking by read-order ignores the other 37 ideas entirely, some of which may be stronger.
+      - text: |-
+          It skips convergence
+        msg: |-
+          Right. Convergence needs explicit criteria, not whichever note got read first. There's no criteria-based sort before picking, so the choice is essentially random.
+        correct: true
+      - text: |-
+          It should instead pick the 3 stickiest notes physically
+        msg: |-
+          Any arbitrary shortcut skips the actual work of evaluating ideas against real criteria.
+  - scenario: |-
+      A facilitator introduces Worst Possible Idea and the team is confused why they'd brainstorm bad ideas on purpose.
+    question: |-
+      What's the value of this technique?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — it wastes time before the real ideas
+        msg: |-
+          It's a deliberate warm-up, not wasted time — it has a specific unlocking effect on inhibited groups.
+      - text: |-
+          It loosens inhibition and flips into real insight
+        msg: |-
+          Right. The absurdity unlocks ideas the group was too cautious to say out loud otherwise.
+        correct: true
+      - text: |-
+          It identifies which ideas to explicitly avoid
+        msg: |-
+          The goal isn't a blocklist — it's using absurdity to unlock better ideas hiding behind it.
+  - scenario: |-
+      A junior PM keeps saying "yes, but" in response to teammates' ideas during a brainstorm.
+    question: |-
+      What's the fix?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — questioning ideas is healthy criticism
+        msg: |-
+          Critical evaluation has its place, but not mid-divergence — it shuts down the flow the exercise is trying to generate.
+      - text: |-
+          Redirect to "yes, and" to keep ideas building
+        msg: |-
+          Right. The fix is the phrasing habit, not silencing the contributor. Build on ideas during divergence, save critique for the separate convergence step.
+        correct: true
+      - text: |-
+          Ban the junior PM from speaking for the session
+        msg: |-
+          The problem is the habit, not the person — coaching the phrasing fixes it without silencing anyone.
+  - scenario: |-
+      A team runs SCAMPER on an existing subscription-box product and gets to "E: Eliminate."
+    question: |-
+      What should they ask?
+    difficulty: medium
+    options:
+      - text: |-
+          What can we add to make the box heavier?
+        msg: |-
+          That's closer to &quot;Combine&quot; or expansion, not &quot;Eliminate.&quot;
+      - text: |-
+          What could we remove entirely and still work?
+        msg: |-
+          Right — that's exactly what &quot;Eliminate&quot; prompts. Or work better?
+        correct: true
+      - text: |-
+          Who else uses a product like this one?
+        msg: |-
+          That's closer to &quot;Put to another use,&quot; a different SCAMPER prompt.
+  - scenario: |-
+      After a Crazy 8s round, one panel is illegible scribbles the sketcher can't even explain.
+    question: |-
+      What should the team do with it?
+    difficulty: medium
+    options:
+      - text: |-
+          Discard it immediately since it can't be understood
+        msg: |-
+          Discarding without a beat to explain risks losing whatever spark existed, even if the sketch was rushed.
+      - text: |-
+          Ask for a 10-second explanation before dropping it
+        msg: |-
+          Right. The point of Crazy 8s is speed, not polish — a quick clarifying question is cheap.
+        correct: true
+      - text: |-
+          Redo the entire Crazy 8s round from scratch
+        msg: |-
+          A full redo overreacts to one unclear panel out of eight.
+  - scenario: |-
+      A stakeholder insists ideation should only include ideas technically feasible at the outset.
+    question: |-
+      How does this affect divergence?
+    difficulty: medium
+    options:
+      - text: |-
+          It has no effect
+        msg: |-
+          Applying a feasibility filter during divergence silently kills bold options before they're even written down.
+      - text: |-
+          It collapses the idea space early
+        msg: |-
+          Right. Feasibility belongs in convergence, applied to a full idea set, not as a pre-filter. Many valuable ideas never get written down at all.
+        correct: true
+      - text: |-
+          It only matters for hardware products, not software
+        msg: |-
+          The mixing-modes problem applies regardless of product type.
+  - scenario: |-
+      A group converges on the very first idea proposed, five minutes into a planned 45-minute session.
+    question: |-
+      What's the concern?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing if the group is confident the idea is strong
+        msg: |-
+          Confidence in the first idea doesn't substitute for comparison against real alternatives.
+      - text: |-
+          Premature convergence on three early ideas
+        msg: |-
+          Right. Whether or not the first idea later succeeds, the team never learns if a stronger one existed. Anchoring on the first idea skips generating alternatives to compare against.
+        correct: true
+      - text: |-
+          The concern applies only if that idea later fails
+        msg: |-
+          The risk exists regardless of outcome.
+  - scenario: |-
+      A team spends 3 hours generating ideas and refuses to stop, worried they'll miss "the best one."
+    question: |-
+      What's the risk on the other side?
+    difficulty: medium
+    options:
+      - text: |-
+          None — more ideation time is always better
+        msg: |-
+          Unlimited divergence has a real cost: diminishing returns and delayed progress.
+      - text: |-
+          Analysis paralysis and diminishing returns
+        msg: |-
+          Right. Divergence needs a time-box just as much as it needs open rules. Extra ideas add little and delay real user feedback.
+        correct: true
+      - text: |-
+          The team should switch to Crazy 8s to make it faster, but keep going indefinitely
+        msg: |-
+          The issue isn't speed of generation — it's knowing when to stop.
+  - scenario: |-
+      A dot-voting session ends with three ideas tied: one ambitious, two safe and similar.
+    question: |-
+      How should the team break the tie?
+    difficulty: hard
+    options:
+      - text: |-
+          Pick the two safe ones — they feel lower-risk
+        msg: |-
+          Defaulting to &quot;safe&quot; without explicit criteria discards the ambitious option's actual merits.
+      - text: |-
+          Apply explicit criteria to break the tie
+        msg: |-
+          Right. A tie is exactly when explicit criteria matter most. Feasibility, desirability, impact — to the three tied ideas.
+        correct: true
+      - text: |-
+          Combine all three into a single mega-idea
+        msg: |-
+          Merging distinct concepts usually produces an incoherent idea that satisfies none of them well.
+  - scenario: |-
+      Someone proposes a wild, seemingly-impossible idea and the room goes quiet.
+    question: |-
+      What should the facilitator do?
+    difficulty: hard
+    options:
+      - text: |-
+          Move on quickly since no one responded
+        msg: |-
+          Silence after a bold idea isn't necessarily rejection — moving on can chill future wild ideas.
+      - text: |-
+          Explicitly welcome it and build on it
+        msg: |-
+          Right. The wild idea's job isn't to be built as-is — it's to open the space. Encouraging wild ideas is a core divergence rule, and it can seed a better idea later.
+        correct: true
+      - text: |-
+          Ask them to make the idea more realistic
+        msg: |-
+          Asking for immediate realism is convergent thinking creeping in too early, and can embarrass the contributor.
+  - scenario: |-
+      A team never captures ideas anywhere — they just talk, and by the end half the ideas are forgotten.
+    question: |-
+      What's the fix?
+    difficulty: hard
+    options:
+      - text: |-
+          Talk faster to cover more ideas in the time available
+        msg: |-
+          Speed doesn't fix the actual problem — ideas aren't being captured at all.
+      - text: |-
+          Write every idea down as it's said, so nothing generated is lost before convergence
+        msg: |-
+          Right. Capture is a basic mechanic divergence depends on.
+        correct: true
+      - text: |-
+          Limit the brainstorm to five ideas total so nothing gets forgotten
+        msg: |-
+          Capping idea count undercuts the entire point of divergent thinking.
+  - scenario: |-
+      A senior exec joins an ideation session and immediately says which idea they personally prefer.
+    question: |-
+      What's the risk?
+    difficulty: hard
+    options:
+      - text: |-
+          None — their preference is useful signal to guide the team
+        msg: |-
+          A senior voice stated during divergence tends to anchor the room, suppressing independent generation.
+      - text: |-
+          It anchors the group and can suppress independent idea generation
+        msg: |-
+          Right. Independent generation is exactly what an early strong opinion undermines. Save senior opinions for convergence, if at all.
+        correct: true
+      - text: |-
+          The risk only applies if the exec is wrong about which idea is best
+        msg: |-
+          The anchoring effect happens regardless of whether the exec's instinct turns out correct.
+  - scenario: |-
+      A team converges using a show-of-hands vote, and the two most senior people's votes visibly sway the room before others vote.
+    question: |-
+      What's a better convergence method?
+    difficulty: hard
+    options:
+      - text: |-
+          Keep the show of hands, but ask seniors to vote last
+        msg: |-
+          Voting last doesn't remove their influence if it's still visible in real time.
+      - text: |-
+          Use anonymous dot voting or a written ballot so each vote is independent
+        msg: |-
+          Right. A genuinely blind method removes the visible-sway problem entirely.
+        correct: true
+      - text: |-
+          Let the two seniors decide alone to save time
+        msg: |-
+          Handing the decision to two people defeats the purpose of a group convergence exercise.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Ideation
+    desc: |-
+      The design-thinking stage where a team generates a wide range of possible solutions to a defined problem, before narrowing to what to build.
+    application: |-
+      Run ideation between defining the problem and building a prototype — never skip straight from one to the other.
+  - category: |-
+      Mode
+    title: |-
+      Divergent Thinking
+    desc: |-
+      Deliberately generating many different ideas without judging them, to widen the option set.
+    application: |-
+      Use it at the start of ideation — defer judgment and go for quantity over quality.
+  - category: |-
+      Mode
+    title: |-
+      Convergent Thinking
+    desc: |-
+      Narrowing a wide set of ideas down to the few worth prototyping, using criteria like feasibility and impact.
+    application: |-
+      Switch into this mode only after divergence has run its course, not before.
+  - category: |-
+      Rule
+    title: |-
+      Defer Judgment
+    desc: |-
+      The brainstorming ground rule that evaluation and critique are postponed to a separate, later step.
+    application: |-
+      If someone critiques an idea mid-brainstorm, gently redirect: "let's capture it and evaluate later."
+  - category: |-
+      Technique
+    title: |-
+      Crazy 8s
+    desc: |-
+      A fast-sketch exercise: fold paper into 8 panels and sketch one idea per panel in about 8 minutes.
+    application: |-
+      Use it to break fixation on the first idea and force real quantity fast.
+  - category: |-
+      Technique
+    title: |-
+      SCAMPER
+    desc: |-
+      A checklist of seven prompts (Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, Reverse) for pushing an existing idea in new directions.
+    application: |-
+      Run an existing idea through each SCAMPER prompt when the group feels stuck.
+
+vocab:
+  - term: |-
+      Divergent Thinking
+    define: |-
+      Divergent Thinking: deliberately generating a wide range of ideas without evaluating them yet.
+    clues:
+      - |-
+          I come first in ideation.
+      - |-
+          I generate many ideas without judging any of them.
+      - |-
+          "Go for quantity" is one of my rules.
+  - term: |-
+      Convergent Thinking
+    define: |-
+      Convergent Thinking: narrowing a wide set of ideas down to the few worth pursuing, using clear criteria.
+    clues:
+      - |-
+          I come after divergent thinking, not before.
+      - |-
+          I narrow a big set of ideas down to a few.
+      - |-
+          Criteria like feasibility and impact guide me.
+  - term: |-
+      Crazy 8s
+    define: |-
+      Crazy 8s: a rapid-sketching technique — eight ideas in eight minutes — used to break fixation and force quantity.
+    clues:
+      - |-
+          I'm a fast-sketch exercise, not a slow one.
+      - |-
+          I use one folded sheet with eight panels.
+      - |-
+          I force one idea per panel in about eight minutes.
+  - term: |-
+      SCAMPER
+    define: |-
+      SCAMPER: a seven-prompt checklist (Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, Reverse) for generating variations on an idea.
+    clues:
+      - |-
+          I'm a checklist, not a single question.
+      - |-
+          My letters stand for seven different prompts.
+      - |-
+          I help you push an existing idea somewhere new.
+  - term: |-
+      Brainwriting
+    define: |-
+      Brainwriting: generating ideas silently and individually before sharing, to avoid groupthink and loud-voice bias.
+    clues:
+      - |-
+          I happen in silence, at least at first.
+      - |-
+          Everyone writes ideas before anyone speaks.
+      - |-
+          I exist to stop the loudest voice from dominating.
+  - term: |-
+      Premature Convergence
+    define: |-
+      Premature Convergence: cutting the idea-generation phase short before the option space has been genuinely explored.
+    clues:
+      - |-
+          I'm a risk, not a technique.
+      - |-
+          I happen when a group narrows down too soon.
+      - |-
+          I mean stopping the idea search before it's actually explored.

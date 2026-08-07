@@ -1,0 +1,425 @@
+# PM Gym — mind-maps. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot when a mind map fits, when it doesn't, and how to build one well.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Mind Maps Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A PM opens a blank spreadsheet to explore a fuzzy, not-yet-defined problem area.
+    question: |-
+      What's a better starting tool, and why?
+    difficulty: easy
+    options:
+      - text: |-
+          A Gantt chart
+        msg: |-
+          A Gantt chart requires defined tasks and timelines, neither of which exist yet for a fuzzy, undefined problem.
+      - text: |-
+          A mind map, which fits an undefined problem
+        msg: |-
+          Right. A spreadsheet imposes structure the exploration doesn't have yet. Its loose, associative structure fits exploring something undefined far better than a spreadsheet's rigid rows and columns.
+        correct: true
+      - text: |-
+          A spreadsheet is fine as long as enough columns are added
+        msg: |-
+          Adding columns imposes structure the exploration doesn't have yet.
+  - scenario: |-
+      A mind map's central node reads: "Improve our onboarding flow by adding a five-step wizard with progress indicators and skip options."
+    question: |-
+      What's wrong with this central node?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing, more detail helps orient the reader
+        msg: |-
+          A long, solution-loaded central node pre-commits the whole map to one answer before any branches are even drawn.
+      - text: |-
+          It's a full solution, not a short topic
+        msg: |-
+          Right. &quot;Onboarding&quot; as the center leaves room for the map to explore other solutions too. A good central node stays a few words so branches can explore freely.
+        correct: true
+      - text: |-
+          It should be even longer to include success metrics too
+        msg: |-
+          Making it longer moves further from a good central node's job of being a short, open anchor.
+  - scenario: |-
+      A branch on a team's mind map says: "Users seem to get confused around the third screen of onboarding when we ask for payment info before they've seen any value, which might be why..."
+    question: |-
+      What's the fix?
+    difficulty: easy
+    options:
+      - text: |-
+          Leave it — full sentences carry more context
+        msg: |-
+          A run-on sentence defeats the point of a scannable branch; the detail can live in a linked note instead.
+      - text: |-
+          Trim to "Payment ask too early" and link the detail
+        msg: |-
+          Right. Trimming preserves the insight while restoring scannability.
+        correct: true
+      - text: |-
+          Delete the branch entirely since it's too messy
+        msg: |-
+          Deleting loses a potentially important observation; trimming is the better fix.
+  - scenario: |-
+      A facilitator is running a brainstorm from the HMW question "how might we help sellers price with confidence?" and wants a tool to capture the session live.
+    question: |-
+      Would a mind map fit well here?
+    difficulty: easy
+    options:
+      - text: |-
+          No — mind maps can't capture live group brainstorms
+        msg: |-
+          Mind maps are commonly used exactly this way — the HMW question becomes the central node.
+      - text: |-
+          Yes — HMW is the centre, each idea a new branch
+        msg: |-
+          Right. This is one of the most common uses of a mind map.
+        correct: true
+      - text: |-
+          Only if the brainstorm is remote rather than in person
+        msg: |-
+          Mind maps work equally well on a physical whiteboard or in a shared digital tool.
+  - scenario: |-
+      A team wants to break "Revenue" into the exact multiplied inputs that produce it (Users x Conversion x ARPU).
+    question: |-
+      Is a mind map the right tool?
+    difficulty: easy
+    options:
+      - text: |-
+          Yes — mind maps can hold any kind of branch
+        msg: |-
+          A mind map's free-form branches don't enforce the mathematical relationship a metric decomposition needs.
+      - text: |-
+          No — multiplied inputs need a KPI tree, not a map
+        msg: |-
+          Right. The composing relationship is exactly what a KPI tree is built to show.
+        correct: true
+      - text: |-
+          Yes, if the branches are labelled with multiplication
+        msg: |-
+          Labeling alone doesn't give the same rigor as a purpose-built KPI tree.
+  - scenario: |-
+      A UX researcher has 200 individual sticky notes, one per user quote, and needs to find 5-6 recurring themes.
+    question: |-
+      Should they build a mind map from one central topic?
+    difficulty: medium
+    options:
+      - text: |-
+          Yes — radiating 200 quotes from one centre is standard
+        msg: |-
+          Radiating 200 individual items from a single center isn't how affinity clustering works.
+      - text: |-
+          No — bottom-up clustering is an affinity map's job
+        msg: |-
+          Right. The themes should emerge from the data, not be imposed from one node.
+        correct: true
+      - text: |-
+          Either tool works equally well at this volume
+        msg: |-
+          The tools solve differently shaped problems; a mind map assumes a starting topic.
+  - scenario: |-
+      A meeting note-taker uses a strict bulleted outline during a wide-ranging discussion and keeps having to backtrack and renumber items.
+    question: |-
+      What alternative would handle the messiness better?
+    difficulty: medium
+    options:
+      - text: |-
+          A stricter outline with more sub-bullet levels
+        msg: |-
+          Adding more rigid sub-levels doesn't fix the mismatch between a strict outline and a non-linear conversation.
+      - text: |-
+          A mind map, which absorbs ideas out of order
+        msg: |-
+          Right. The radial shape matches how the conversation is actually jumping around. Its radial structure lets topics branch and reconnect without forcing a strict order.
+        correct: true
+      - text: |-
+          Recording the meeting instead of taking notes
+        msg: |-
+          A recording solves nothing about structuring the ideas — it just delays the same organizing problem.
+  - scenario: |-
+      A product team's mind map for "Q3 Feature Ideas" has grown to 80 branches with no grouping or color-coding.
+    question: |-
+      What's the practical problem?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — a mind map can hold unlimited branches
+        msg: |-
+          Technically true, but an ungrouped 80-branch map has lost its main advantage: fast visual scanning.
+      - text: |-
+          Without grouping it loses its fast-scan advantage
+        msg: |-
+          Right. Grouping is what keeps a large map usable.
+        correct: true
+      - text: |-
+          The map should be converted to a spreadsheet
+        msg: |-
+          Converting doesn't fix a maintenance problem — grouping the existing branches is the more direct fix.
+  - scenario: |-
+      A new PM insists mind maps are "unprofessional" and refuses to bring one to a stakeholder review of a defined roadmap.
+    question: |-
+      Is that instinct right?
+    difficulty: medium
+    options:
+      - text: |-
+          Yes — mind maps suit personal brainstorming only
+        msg: |-
+          Mind maps are widely used professionally for exploration and workshops.
+      - text: |-
+          Partly — wrong tool here, but not unprofessional
+        msg: |-
+          Right. The format mismatch is real, but it's about the roadmap's needs, not professionalism. A defined roadmap needs a clearer, linear format; a mind map's strength is exploration, not presenting settled decisions.
+        correct: true
+      - text: |-
+          No — mind maps should replace roadmap timelines
+        msg: |-
+          A roadmap needs to communicate sequence and time clearly, which a mind map's shape doesn't do well.
+  - scenario: |-
+      A mind map for "Reasons Users Churn" has one branch labeled "Price" and another labeled "Too Expensive" right next to it, unconnected.
+    question: |-
+      What should happen?
+    difficulty: medium
+    options:
+      - text: |-
+          Leave both
+        msg: |-
+          Two branches capturing the same idea just add redundant clutter.
+      - text: |-
+          Merge or connect them
+        msg: |-
+          Right. Keeping them separate adds clutter rather than real breadth. They're likely the same underlying idea.
+        correct: true
+      - text: |-
+          Delete both and start the map over completely
+        msg: |-
+          A full restart is a drastic overreaction to one minor overlap.
+  - scenario: |-
+      A designer sketches a mind map with images and rough icons instead of text for every branch.
+    question: |-
+      Is this a valid approach?
+    difficulty: hard
+    options:
+      - text: |-
+          No — mind map branches must always be text-only
+        msg: |-
+          Mind maps are commonly built with images or icons — visual shorthand can be even faster to read.
+      - text: |-
+          Yes — icons are fine if they stay scannable
+        msg: |-
+          Right. The goal is fast recall, and icons often serve that just as well as words.
+        correct: true
+      - text: |-
+          Only if every branch also carries a full paragraph
+        msg: |-
+          Requiring a full paragraph alongside every icon defeats the speed advantage.
+  - scenario: |-
+      A team uses a mind map to plan a feature launch, including specific dates and a sequenced list of dependent tasks.
+    question: |-
+      What's the concern?
+    difficulty: hard
+    options:
+      - text: |-
+          None — a mind map can represent anything a team needs
+        msg: |-
+          A mind map's radial shape doesn't naturally represent sequence and dependency.
+      - text: |-
+          Sequenced, date-dependent planning is better served by a timeline or task list
+        msg: |-
+          Right. Order and dependency need a format built for exactly that.
+        correct: true
+      - text: |-
+          The mind map just needs numbered branches to fix this
+        msg: |-
+          Numbering branches fights the tool's natural shape rather than choosing a fitting format.
+  - scenario: |-
+      During a brainstorm, one participant keeps trying to evaluate and cross out branches as they're added to the shared mind map.
+    question: |-
+      What's the issue?
+    difficulty: hard
+    options:
+      - text: |-
+          None, cleaning up weak ideas as you go keeps the map focused
+        msg: |-
+          Evaluating live during idea capture discourages the free branching a mind-map brainstorm depends on.
+      - text: |-
+          It mixes divergent capture with convergent judgment too early
+        msg: |-
+          Right. Judgment belongs in a later, separate step. Let branches accumulate first, then evaluate separately.
+        correct: true
+      - text: |-
+          The participant should instead add their own competing mind map
+        msg: |-
+          A competing map doesn't address the actual issue of judging ideas prematurely.
+  - scenario: |-
+      A stakeholder reviews a mind map and asks "so what's the actual decision here?" after 45 minutes of branching.
+    question: |-
+      What does this reveal?
+    difficulty: hard
+    options:
+      - text: |-
+          The mind map failed and shouldn't have been used
+        msg: |-
+          The tool did its job — exploration; the missing piece is a follow-up convergence step.
+      - text: |-
+          Exploration worked; convergence hasn't happened yet
+        msg: |-
+          Right. Exploration and decision-making are two different steps.
+        correct: true
+      - text: |-
+          Mind maps should build the decision into a branch
+        msg: |-
+          Baking a decision into the map's structure skips the actual work of converging with real criteria.
+  - scenario: |-
+      A remote team wants to build a mind map together live, with people in four different time zones.
+    question: |-
+      What's a practical way to do this well?
+    difficulty: hard
+    options:
+      - text: |-
+          Skip it — mind maps need a physical whiteboard
+        msg: |-
+          Digital mind-mapping tools support real-time or asynchronous collaborative editing.
+      - text: |-
+          Use a shared tool that supports async editing
+        msg: |-
+          Right. Branches can be added as people are available, regardless of time zone.
+        correct: true
+      - text: |-
+          Have one person build it and present it later
+        msg: |-
+          A solo-built map loses the associative, many-perspectives value a group mind map is meant to capture.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Mind Map
+    desc: |-
+      A visual, non-linear diagram that starts from one central idea and radiates outward into branches and sub-branches, mirroring associative thinking.
+    application: |-
+      Use it to explore a fuzzy problem or brainstorm freely before forcing anything into a rigid structure.
+  - category: |-
+      Structure
+    title: |-
+      Central Node
+    desc: |-
+      The single topic or question at the center of a mind map that every branch connects back to.
+    application: |-
+      Keep it to a few words or a simple image so it stays a clear anchor for everything radiating from it.
+  - category: |-
+      Practice
+    title: |-
+      Keyword Branches
+    desc: |-
+      Branch labels kept to short keywords or phrases rather than full sentences, preserving fast associative scanning.
+    application: |-
+      If a branch is a full paragraph, split it into sub-branches of keywords instead.
+  - category: |-
+      Use Case
+    title: |-
+      Structuring a Fuzzy Problem
+    desc: |-
+      Using a mind map to explore an ill-defined problem area before it's sharp enough for a formal problem statement.
+    application: |-
+      Reach for a mind map first when a problem still feels like "something's off," not yet a testable statement.
+  - category: |-
+      Comparison
+    title: |-
+      Mind Map vs. KPI Tree
+    desc: |-
+      A mind map radiates freely from one topic; a KPI tree mathematically decomposes one defined metric into its drivers.
+    application: |-
+      Use a mind map for open exploration, a KPI tree once you have a specific metric to break down.
+  - category: |-
+      Comparison
+    title: |-
+      Mind Map vs. Affinity Map
+    desc: |-
+      A mind map starts from one central idea and branches top-down; an affinity map clusters many raw individual data points bottom-up into emergent themes.
+    application: |-
+      Use an affinity map to sort 200 loose interview quotes into themes — a mind map assumes one topic to start from.
+
+vocab:
+  - term: |-
+      Mind Map
+    define: |-
+      Mind Map: a non-linear diagram radiating from a central idea into branches and sub-branches, mirroring associative thinking.
+    clues:
+      - |-
+          I start from one center and radiate outward.
+      - |-
+          My branches mirror associative thinking, not a strict order.
+      - |-
+          I'm good for exploring something fuzzy, before it's sharp.
+  - term: |-
+      Central Node
+    define: |-
+      Central Node: the single topic or question at the center of a mind map that all branches connect back to.
+    clues:
+      - |-
+          I sit in the middle of every mind map.
+      - |-
+          Everything else connects back to me.
+      - |-
+          I should stay short — a few words, not a sentence.
+  - term: |-
+      Radial Structure
+    define: |-
+      Radial Structure: an outward-branching layout from a center point, as opposed to a top-to-bottom linear list.
+    clues:
+      - |-
+          I branch outward in all directions, not down a line.
+      - |-
+          I'm the opposite of a linear bulleted list.
+      - |-
+          I let related ideas sit near each other naturally.
+  - term: |-
+      Keyword Branch
+    define: |-
+      Keyword Branch: a mind-map branch label kept to a short word or phrase to preserve fast associative scanning.
+    clues:
+      - |-
+          I'm a branch label, and I should be short.
+      - |-
+          Full sentences defeat my purpose.
+      - |-
+          I exist so a map can be scanned fast.
+  - term: |-
+      Affinity Map
+    define: |-
+      Affinity Map: a technique for clustering many individual raw data points bottom-up into emergent themes (contrast with a mind map's top-down single center).
+    clues:
+      - |-
+          I cluster many raw data points, not one central idea.
+      - |-
+          I build themes from the bottom up.
+      - |-
+          200 loose interview quotes are exactly my kind of job.
+  - term: |-
+      Associative Thinking
+    define: |-
+      Associative Thinking: the way ideas naturally link to related ideas, rather than following one strict linear order — what a mind map's shape mirrors.
+    clues:
+      - |-
+          I'm how ideas naturally connect to each other in your head.
+      - |-
+          A radial structure mirrors me; a strict list doesn't.
+      - |-
+          Mind maps are built to match me.

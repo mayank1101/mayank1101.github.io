@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     {% include head.html %} {% include theme-script.html %}
+    {% if page.topic %}{% include pm-gym/schema.html %}{% endif %}
     <noscript>
       <style>
         /* Fallback: reveal all scroll/fade content when JS is disabled */

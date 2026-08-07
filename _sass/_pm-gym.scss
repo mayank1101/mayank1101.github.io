@@ -522,6 +522,181 @@
     border-color: var(--md-primary);
     background: var(--tint-blue);
   }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled:hover {
+    border-color: var(--border);
+    background: var(--card);
+  }
+
+  // Answered state: the picked-wrong option retires, the right one is marked.
+  &.pm-option-wrong,
+  &.pm-option-wrong:hover {
+    color: var(--muted);
+    background: var(--bg-secondary);
+    border-color: var(--border);
+    text-decoration: line-through;
+  }
+
+  &.pm-option-correct,
+  &.pm-option-correct:hover {
+    color: var(--md-on-green-container);
+    background: var(--md-green-container);
+    border-color: var(--md-green-container);
+  }
+}
+
+// Practice-tab progress meter
+.pm-practice-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
+  .pm-practice-track {
+    position: relative;
+    flex: 0 0 180px;
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: $md-shape-full;
+    overflow: hidden;
+  }
+
+  .pm-practice-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0;
+    height: 100%;
+    background: var(--gradient-primary, var(--accent-cyan));
+    border-radius: $md-shape-full;
+    transition: width 0.4s ease;
+  }
+
+  .pm-practice-label {
+    font-size: $md-label-large-size;
+    color: var(--muted);
+  }
+}
+
+// Difficulty filter + random-sample controls above the scenario list
+.pm-practice-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.pm-filter-group {
+  display: inline-flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.pm-filter {
+  padding: 0.35rem 0.9rem;
+  font-family: $font-primary;
+  font-size: $md-label-large-size;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: $md-shape-full;
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+
+  &:hover {
+    color: var(--text);
+    border-color: var(--md-primary);
+  }
+
+  &.active {
+    color: var(--md-on-primary, #fff);
+    background: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+  }
+}
+
+// Difficulty tag inside a scenario's label
+.pm-scenario-level {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  font-size: $md-label-small-size;
+  text-transform: capitalize;
+  border-radius: $md-shape-full;
+
+  &.pm-level-easy {
+    color: var(--md-on-green-container);
+    background: var(--md-green-container);
+  }
+
+  &.pm-level-medium {
+    color: var(--text);
+    background: var(--bg-secondary);
+  }
+
+  &.pm-level-hard {
+    color: var(--accent-pink);
+    background: var(--tint-pink, var(--bg-secondary));
+  }
+}
+
+// Leitner recall buttons under the flashcard
+.pm-card-grade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.pm-card-due {
+  margin: 0.3rem 0 0;
+  font-size: $md-label-small-size;
+}
+
+// "Worth revisiting" panel on the hub
+.pm-hub-weak {
+  margin: 0 0 2.5rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: $md-shape-lg;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.35rem;
+    font-size: $md-title-large-size;
+
+    i { color: var(--accent-pink); }
+  }
+
+  ul {
+    margin: 0.9rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0.4rem 0;
+    font-size: $md-body-medium-size;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+
+    a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover { color: var(--accent-cyan); }
+    }
+  }
 }
 
 .pm-quiz-feedback {
@@ -1156,7 +1331,9 @@ a.card {
   i { color: var(--accent-cyan); }
 }
 
-.pm-hub-reset {
+.pm-hub-reset,
+.pm-hub-export,
+.pm-hub-import {
   margin-left: 0.4rem;
   padding: 0.3rem 0.7rem;
   font-size: $md-label-small-size;
@@ -1171,6 +1348,12 @@ a.card {
     color: var(--accent-pink);
     border-color: var(--accent-pink);
   }
+}
+
+.pm-hub-export:hover,
+.pm-hub-import:hover {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
 }
 
 .pm-hub-tools {

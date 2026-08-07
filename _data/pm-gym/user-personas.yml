@@ -1,0 +1,398 @@
+# PM Gym — user-personas. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 team situations where a persona either earns its keep or gets misused. Pick the strongest move, then read why the others fall short.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Persona Flashcards
+flashcards_blurb: |-
+  Four cards covering the key techniques and traps. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Your engineering lead says personas are a waste of time: 'Let's just build for everyone and maximize the market.'
+    question: |-
+      What's the strongest counter?
+    difficulty: easy
+    options:
+      - text: |-
+          Agree — a bigger audience means more revenue
+        msg: |-
+          Building for everyone means averaging everyone's needs — and an average product delights no one. Big TAM with a generic product converts none of it.
+      - text: |-
+          Building for everyone yields a product nobody loves
+        msg: |-
+          The persona is a decision tool, not decoration: it filters scope creep, prevents bloat, and turns 'I think users want…' arguments into checks against a real person's pains and goals.
+        correct: true
+      - text: |-
+          Personas are required by the design process
+        msg: |-
+          Appealing to process convinces no engineer. The argument that lands is economic: focused targets waste fewer engineering hours and ship products people actually adopt.
+  - scenario: |-
+      A designer adds 'loves outdoor mountain biking' to your fintech persona, saying it makes the persona feel more human.
+    question: |-
+      How do you evaluate the addition?
+    difficulty: easy
+    options:
+      - text: |-
+          Keep it — it makes the persona feel human
+        msg: |-
+          Relatable is nice; actionable is the job. Details that never change a product decision are cosmetic bloat, and they dilute the details that do.
+      - text: |-
+          Test it for traceability to research and relevance
+        msg: |-
+          Every persona line should either trace to real evidence or leave the card. The working test: would a designer or engineer decide anything differently because of this line?
+        correct: true
+      - text: |-
+          Lean into it and add three more hobbies
+        msg: |-
+          Building features from an unverified decorative trait is the fiction trap at full speed: invent a detail, then invest engineering in it. Verify before anything else.
+  - scenario: |-
+      For 'Busy Rohan' (time-starved, decision-fatigued architect), the team is split: Feature A is a one-tap 'reorder my usual' button; Feature B is a bulk-discount calendar that saves 15% but needs a 10-minute setup.
+    question: |-
+      The persona says…?
+    difficulty: easy
+    options:
+      - text: |-
+          Feature B
+        msg: |-
+          'Everyone' isn't the persona. Rohan's scarcest resource is time; a 10-minute setup spends the exact thing he lacks to save a thing he lacks less.
+      - text: |-
+          Feature A
+        msg: |-
+          This is the empathy thread doing its job as a tiebreaker: goals must relieve the listed pains. One tap, zero decisions — precisely Rohan-shaped. It attacks Rohan's actual pains (time and decision load); B demands the very resource he doesn't have.
+        correct: true
+      - text: |-
+          Build both and let users choose
+        msg: |-
+          Building both dodges the decision the persona exists to settle — and doubles the cost. Roadmaps are choices; the persona just made this one easy.
+  - scenario: |-
+      A stakeholder builds a persona from scratch in a meeting, purely from imagination, without any user research: "I just know our users — they're 35, busy, and love automation."
+    question: |-
+      What's the core risk?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — experienced stakeholders can intuit users
+        msg: |-
+          A persona invented without research is a mirror of the stakeholder's assumptions, not the users. It feels authoritative but can be confidently wrong — and the whole team then builds on that false foundation.
+      - text: |-
+          It's a 'fictional darling' with no evidence behind it
+        msg: |-
+          Right. An imagined persona is a 'fictional darling' — it encodes the maker's biases and conveniently justifies whatever they already wanted to build. Because it looks like a real persona, it lends false confidence. Ground it in interviews and analytics, or at minimum label it a provisional/assumption persona to be validated, so no one mistakes a guess for evidence. An imagined persona encodes the maker's biases and gives false confidence; it must be grounded in real research or clearly marked as an unvalidated assumption.
+        correct: true
+      - text: |-
+          The age 35 is probably wrong — adjust it to 40
+        msg: |-
+          The specific age (35) isn't the problem — even correct-sounding details are worthless if they came from imagination rather than evidence. The flaw is the absence of any data behind the whole persona.
+  - scenario: |-
+      Your team has created 11 detailed personas to "cover all our users." In practice, nobody can remember them and they're never referenced in decisions.
+    question: |-
+      What's the problem, and the fix?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          More personas isn't more coverage in any useful sense — 11 is too many to hold in mind, so none actually guide decisions. Comprehensiveness that no one can use is worthless. The tool failed at its one job: focusing the team.
+      - text: |-
+          Too many to be usable
+        msg: |-
+          Right. Personas exist to focus the team, and 11 do the opposite — they're unmemorable and unused. Prioritize down to the 2–3 primary personas who matter most to the product's success and lead with those, keeping the rest as secondary references. A persona nobody remembers can't settle a single debate. Narrow to the 2–3 primary personas that matter most, since personas exist to focus the team, not to catalog everyone.
+        correct: true
+      - text: |-
+          Add a 12th persona to capture the remaining users
+        msg: |-
+          Adding a 12th persona for the leftover users deepens the exact problem. The issue is that 11 is already unusable; the fix is ruthless prioritization down to a few, not more coverage.
+  - scenario: |-
+      A persona lists the pain "gets overwhelmed by too many options" but also lists the goal "wants a fully customizable dashboard with 50 configurable widgets."
+    question: |-
+      What's wrong?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          These two lines fight each other: someone overwhelmed by options wouldn't crave 50 configurable widgets. The empathy thread is broken — the stated goal doesn't relieve the stated pain, it worsens it.
+      - text: |-
+          The empathy thread is broken
+        msg: |-
+          Right. A coherent persona has one unbroken thread: goals must relieve the listed pains. 'Overwhelmed by options' and 'wants 50 configurable widgets' directly contradict — the goal amplifies the pain. Either the research is being misread or one line is wrong. A real overwhelmed user's goal would be 'smart defaults, minimal choices.' Fix the contradiction before the team builds toward it. The goal (50 widgets) worsens the stated pain (option overwhelm) instead of relieving it.
+        correct: true
+      - text: |-
+          It just needs more demographic detail to feel complete
+        msg: |-
+          Adding more detail to a self-contradicting persona doesn't fix the contradiction — it buries it. The problem is a logic break between pain and goal, which needs resolving, not decorating.
+  - scenario: |-
+      Marketing built buyer personas focused on brand attitudes and media habits. Your product team wants to reuse them to prioritize features.
+    question: |-
+      Should you reuse them as-is?
+    difficulty: medium
+    options:
+      - text: |-
+          Yes — a persona is a persona, and reuse saves time
+        msg: |-
+          Marketing and product personas serve different jobs. Marketing personas emphasize messaging, channels, and brand attitudes; a product persona needs behaviors, workflows, pains, and goals that tell you what to build. Reusing a marketing persona wholesale often leaves out exactly the quadrants product decisions need.
+      - text: |-
+          Adapt them — they answer a different question
+        msg: |-
+          Right. They overlap but serve different purposes. Marketing personas focus on how to reach and persuade people; product personas focus on behaviors, workflows, pains, and goals that guide what to build. Borrow the shared research, but adapt the persona to include the behavioral and needs detail product decisions require — don't assume a messaging persona doubles as a build persona.
+        correct: true
+      - text: |-
+          Reject them entirely and start from a blank page
+        msg: |-
+          Discarding all of marketing's work is wasteful — there's usually shared underlying research worth reusing. The right move is to adapt their personas to product needs, not to start over from nothing.
+  - scenario: |-
+      The personas were built two years ago from research done before a major product pivot and a shift in your user base. The team still treats them as gospel.
+    question: |-
+      What's the concern?
+    difficulty: medium
+    options:
+      - text: |-
+          None — a well-made persona is valid forever
+        msg: |-
+          Personas aren't permanent artifacts. Built on two-year-old, pre-pivot research and an outdated user base, they may now describe people who've moved on — steering the team toward stale needs while they treat it as current truth.
+      - text: |-
+          They may be stale
+        msg: |-
+          Right. Personas reflect the users and research at the time they were made. After a pivot and a changed user base, they can quietly go stale — describing needs that no longer match reality while the team trusts them completely. Personas need periodic revalidation against fresh data, especially after big product or market shifts. Treat them as living documents, not gospel. A pivot and changed user base can outdate personas, so revalidate them against fresh research rather than trusting them as permanent truth.
+        correct: true
+      - text: |-
+          Abandon personas as a technique
+        msg: |-
+          Deleting personas and never using them again overcorrects — they're valuable when current. The fix is to refresh them with new research, not to abandon the tool because this set aged out.
+  - scenario: |-
+      A PM wants to add a photo and a real-sounding name ("Busy Rohan") to the persona. An engineer objects: "That's just fluff — give me a spreadsheet of attributes."
+    question: |-
+      What's the honest case for the name and photo?
+    difficulty: medium
+    options:
+      - text: |-
+          The engineer is right — a spreadsheet would do
+        msg: |-
+          Dropping the name and photo for a raw attribute table loses the very thing that makes a persona work: memorability and empathy. A spreadsheet of traits doesn't get referenced in heated debates the way a named, pictured person does.
+      - text: |-
+          A name and face make the persona memorable enough to use
+        msg: |-
+          Right. The name and photo aren't decoration for their own sake — they make the persona memorable and trigger empathy, so the team actually invokes it ('would Rohan do this?') instead of ignoring a spreadsheet. The key is that the vivid wrapper sits on top of real, traceable data. Keep the human presentation AND the evidence; the two together are what make a persona a decision tool. As long as the traits underneath are still traceable to real data.
+        correct: true
+      - text: |-
+          Add a full fictional life story to make it realer
+        msg: |-
+          Adding an elaborate fictional backstory to feel 'more real' is the opposite lesson — that's cosmetic bloat and invites the fictional-darling trap. A name and photo help; invented life stories with no data source hurt.
+  - scenario: |-
+      Your product genuinely serves two very different primary users — an admin who configures it and an end-user who uses it daily — with conflicting needs.
+    question: |-
+      What's the right persona approach?
+    difficulty: medium
+    options:
+      - text: |-
+          Blend them into one balanced persona for simplicity
+        msg: |-
+          Averaging two genuinely different primary users into one persona recreates the 'average user' fiction — a blended person whose contradictory needs describe nobody. When two distinct roles both matter, one persona can't hold them.
+      - text: |-
+          Create two distinct personas (admin and end-user) and design for each
+        msg: |-
+          Right. When a product has two genuinely distinct primary users with conflicting needs, create two separate personas and design deliberately for each (often with different flows or interfaces). Forcing them into one produces a mushy compromise. Two focused personas keep each role's needs sharp — while still limiting yourself to the few that truly matter. Their conflicting needs can't be honestly merged into one.
+        correct: true
+      - text: |-
+          Pick whichever is easier and ignore the other user entirely
+        msg: |-
+          Picking only one and ignoring the other abandons a real, important user. If both the admin and the end-user are essential to the product's success, both deserve a persona — dropping one guarantees you underserve it.
+  - scenario: |-
+      A designer proposes a feature and justifies it: "Rohan would love this." When you check the persona, nothing in Rohan's pains or goals relates to the feature.
+    question: |-
+      What's happening, and what do you do?
+    difficulty: hard
+    options:
+      - text: |-
+          Approve it
+        msg: |-
+          Accepting 'Rohan would love it' without a link to his documented pains or goals lets the persona be used as a rubber stamp for any idea. That's persona misuse — invoking the name to launder a preference that isn't actually supported.
+      - text: |-
+          It's rubber-stamping
+        msg: |-
+          Right. This is the persona being used as a rubber stamp — 'Rohan would love it' with no basis in his actual pains or goals. Push back kindly: which documented pain or goal does this serve? If none, the claim is projection, not evidence. The persona only settles debates when arguments tie back to what it actually says, not to its name.
+        correct: true
+      - text: |-
+          Edit Rohan's goals so the feature fits the persona
+        msg: |-
+          Rewriting Rohan's goals to fit the feature inverts the whole tool — you'd be bending the evidence to justify a predetermined idea. The persona should test the feature, not be edited to approve it.
+  - scenario: |-
+      Leadership asks: "What's the difference between a persona and a market segment? Aren't they the same thing?"
+    question: |-
+      What's the clearest distinction?
+    difficulty: hard
+    options:
+      - text: |-
+          They're identical, just different vocabulary
+        msg: |-
+          They're related but not the same. A segment is a group defined by shared characteristics or needs; a persona is a single, vivid, humanized representative of a segment used to build empathy and guide design. Treating them as identical loses the persona's distinct purpose.
+      - text: |-
+          A segment is a group; a persona represents one
+        msg: |-
+          Right. A segment is a group (a slice of the audience defined by shared traits or needs); a persona is one named, humanized character that represents a key segment, complete with pains, goals, and behaviors. Segmentation tells you which groups exist and which to target; the persona makes the chosen group feel like a real person the team can design for. They're complementary steps, not synonyms. Used to build empathy and guide design decisions.
+        correct: true
+      - text: |-
+          Personas are for marketing, segments for product
+        msg: |-
+          It's not that personas are 'for marketing' and segments 'for product' — both tools are used across both functions. The real distinction is group-vs-representative-individual, not which department owns them.
+  - scenario: |-
+      A persona's "behaviors" quadrant reads: "is a passionate, detail-oriented perfectionist who values quality." An engineer says this doesn't help them build anything.
+    question: |-
+      Why is the engineer right?
+    difficulty: hard
+    options:
+      - text: |-
+          The engineer is wrong — traits guide design fine
+        msg: |-
+          'Passionate perfectionist who values quality' describes a personality, not a behavior. It's vague and unobservable, so it can't tell an engineer what to build or test. The behaviors quadrant should list concrete, observed actions.
+      - text: |-
+          That's a personality label, not an observable behaviour
+        msg: |-
+          Right. The behaviors quadrant should contain concrete, observable actions that translate into product decisions — e.g., 'double-checks every entry before submitting,' 'exports data to review offline,' 'abandons flows with more than 3 steps.' 'Passionate perfectionist' is a vague personality label an engineer can't design against. Rewrite fuzzy traits as specific behaviors tied to evidence. The quadrant needs concrete actions (like 'double-checks entries before submitting') that guide what to build.
+        correct: true
+      - text: |-
+          Move the phrase to the demographics quadrant
+        msg: |-
+          Moving the phrase to the demographics quadrant doesn't fix it — it's still a vague trait that guides no decision anywhere. The fix is to replace it with concrete, observed behaviors, not to relocate the fluff.
+  - scenario: |-
+      A startup with no users yet and no budget for research insists on creating personas before their first launch.
+    question: |-
+      What's the honest, pragmatic guidance?
+    difficulty: hard
+    options:
+      - text: |-
+          Build confident personas from founder intuition
+        msg: |-
+          Building fully-confident personas with zero users invites the fictional-darling trap — you'd be dressing up guesses as facts. But refusing to think about users at all isn't right either; the answer is an explicitly provisional approach.
+      - text: |-
+          Label them provisional, then validate once users arrive
+        msg: |-
+          Right. With no data yet, create 'provisional' or 'proto-personas' — clearly labeled as assumptions built from the founders' best guesses and any indirect evidence (competitor reviews, forums, expert input). They give the team a shared starting hypothesis, but the whole point is to validate and rewrite them with real research as soon as the first users arrive. The honesty is in labeling them unproven, not in pretending they're facts.
+        correct: true
+      - text: |-
+          Forbid personas until you have thousands of users
+        msg: |-
+          Forbidding any persona until you have data leaves the team with no shared starting point at all. A provisional, clearly-flagged persona is more useful than nothing — as long as everyone knows it's a hypothesis to test, not established truth.
+  - scenario: |-
+      Your beautifully-made persona sits in a slide deck that no one has opened since the kickoff. Features keep shipping based on whoever argues hardest.
+    question: |-
+      What's the real failure, and the fix?
+    difficulty: hard
+    options:
+      - text: |-
+          The persona wasn't detailed enough — add attributes
+        msg: |-
+          The persona isn't failing because it's low quality — it's failing because it's not being used. A perfect persona buried in a deck changes no decisions. Its whole value is being invoked when the team makes calls.
+      - text: |-
+          The failure is adoption, not the persona itself
+        msg: |-
+          Right. A persona only earns its keep when it's actively used as a decision tool. The failure is adoption, not craft. Fix it by bringing the persona into the room where decisions happen: reference it in prioritization ('does this serve Rohan?'), post it where the team works, and make 'which persona, which pain?' a standard question in reviews. An unused persona is just art; a referenced one settles debates.
+        correct: true
+      - text: |-
+          Personas clearly don't work in practice
+        msg: |-
+          Concluding that personas 'just don't work' misreads the problem. It worked as an artifact but was never operationalized. The lesson is to embed it in the decision process, not to abandon the technique.
+
+flashcards:
+  - category: |-
+      Anatomy
+    title: |-
+      The Empathy Thread
+    desc: |-
+      The rule that a persona's parts must fit together logically: the goals should relieve the exact pains, and the behaviors should show the person already trying to cope with those pains.
+    application: |-
+      If Rohan's pain is a brutal work schedule, his goal must be about saving time — not about hunting bulk discounts.
+  - category: |-
+      Methodology
+    title: |-
+      The Traceability Audit
+    desc: |-
+      A quality check where every bullet on the persona is linked back to a real interview quote or usage metric. Anything without a source gets deleted.
+    application: |-
+      If no user ever mentioned visuals in interviews, remove the line claiming they "value high aesthetics."
+  - category: |-
+      Pitfalls
+    title: |-
+      The Fiction Trap
+    desc: |-
+      Inventing an idealized user who has no real struggles and conveniently loves every feature your team wants to build. A persona like this validates everything and guides nothing.
+    application: |-
+      Anchor every persona to real friction found in research — that is what stops the team from building generic features that delight no one.
+  - category: |-
+      Application
+    title: |-
+      The Roadmap Tiebreaker
+    desc: |-
+      Personas earn their keep in debates. When designers and engineers disagree on what to build next, check which option maps best to the persona's core pains and goals.
+    application: |-
+      For a time-starved professional: a one-tap reorder button beats a coupon scheduler with a 10-minute setup — every time.
+
+vocab:
+  - term: |-
+      Persona
+    define: |-
+      A Persona: a research-based profile of a target user — their identity, behaviors, pains, and goals.
+    clues:
+      - |-
+          I turn research data into someone you can picture.
+      - |-
+          I balance identity, behaviors, pains, and goals.
+      - |-
+          "Rohan, 34, time-starved architect" is me.
+  - term: |-
+      Empathy Thread
+    define: |-
+      The Empathy Thread: the logical consistency where a persona's goals relieve its stated pains.
+    clues:
+      - |-
+          I'm the logic that holds a persona together.
+      - |-
+          My rule: the goals must relieve the listed pains.
+      - |-
+          If Rohan's pain is no time but his goal is bargain-hunting, I'm broken.
+  - term: |-
+      Traceability Audit
+    define: |-
+      The Traceability Audit: linking every persona detail back to a real quote or metric, and cutting the rest.
+    clues:
+      - |-
+          I'm a quality check on every persona line.
+      - |-
+          I ask 'where's the evidence?' for each trait.
+      - |-
+          No source quote or metric? The line gets deleted — that's me.
+  - term: |-
+      Fiction Trap
+    define: |-
+      The Fiction Trap: inventing an idealized user with no real struggles who conveniently validates everything.
+    clues:
+      - |-
+          I'm a mistake, not a method.
+      - |-
+          I'm inventing a user with no real pains.
+      - |-
+          A made-up customer who loves every backlog idea is me at work.
+  - term: |-
+      Cosmetic Bloat
+    define: |-
+      Cosmetic Bloat: lifestyle details that make a persona vivid but never change a product decision.
+    clues:
+      - |-
+          I'm clutter on a persona card.
+      - |-
+          I'm a detail that changes no decision.
+      - |-
+          "Loves oat-milk lattes" on a fintech persona is me.

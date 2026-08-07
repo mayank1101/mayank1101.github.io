@@ -1,0 +1,425 @@
+# PM Gym — defining-the-problem. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot a fuzzy problem, a solution in disguise, or a root cause hiding beneath a symptom.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Defining The Problem Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A support lead says: "Problem: we need a live chat widget."
+    question: |-
+      What's your first move?
+    difficulty: easy
+    options:
+      - text: |-
+          Build the widget
+        msg: |-
+          Treating a request as a validated problem skips learning what pain the widget is meant to solve.
+      - text: |-
+          Ask what's driving the request
+        msg: |-
+          Right. Peeling back the solution reveals the real pain, which might point to live chat, or to something cheaper, like a better FAQ. Slow email response? unanswered pre-purchase questions? — and frame the actual problem first.
+        correct: true
+      - text: |-
+          Reject it outright since chat widgets are usually low-value
+        msg: |-
+          Dismissing without investigating is just as premature as building without investigating.
+  - scenario: |-
+      Two teammates argue hotly about button color while debating a signup problem nobody has actually defined yet.
+    question: |-
+      What should happen?
+    difficulty: easy
+    options:
+      - text: |-
+          Let design decide since it's their domain
+        msg: |-
+          The disagreement is a symptom of skipping problem framing, not a design-ownership question.
+      - text: |-
+          Pull the conversation back to the problem space
+        msg: |-
+          Exactly. Debating pixels before agreeing on the problem wastes energy on a decision that may not even matter once the problem is clear. Agree on the who/what/why of the signup issue before touching any UI detail.
+        correct: true
+      - text: |-
+          Let both variants ship as an A/B test immediately
+        msg: |-
+          Testing a design detail before framing the problem risks testing the wrong lever entirely.
+  - scenario: |-
+      A churn analysis concludes: "users leave because the product is bad."
+    question: |-
+      How do you improve this problem statement?
+    difficulty: easy
+    options:
+      - text: |-
+          Accept it — the churn data already says so
+        msg: |-
+          &quot;The product is bad&quot; is unfalsifiable and can't be acted on — it names a feeling, not a who/what/evidence.
+      - text: |-
+          Break it down by segment, lifecycle point, and trigger
+        msg: |-
+          Right. Slicing by segment and moment turns an unfalsifiable complaint into something a team can actually investigate. Until it's specific and testable.
+        correct: true
+      - text: |-
+          Survey users on whether they agree the product is bad
+        msg: |-
+          More votes on a vague statement just produces a bigger vague statement.
+  - scenario: |-
+      A PM's 5 Whys chain stops after one why — "Signups dropped. Why? The homepage changed." — and ships a full revert.
+    question: |-
+      What's the risk?
+    difficulty: easy
+    options:
+      - text: |-
+          None — reverting fixes the drop, so the job is done
+        msg: |-
+          It might resolve the symptom, but stopping at one why risks missing what actually hurt signups and reverting good changes along with the bad.
+      - text: |-
+          One why usually lands on a proximate cause, not the root
+        msg: |-
+          Right. Maybe the new homepage buried the signup CTA — the real fix might be re-adding the CTA, not reverting everything else that improved. Dig further before treating the revert as the fix.
+        correct: true
+      - text: |-
+          Run the same 5 Whys process on every metric to be thorough
+        msg: |-
+          The point isn't quantity of whys everywhere — it's depth on the specific problem at hand.
+  - scenario: |-
+      Leadership demands: "Problem: we don't have a mobile app."
+    question: |-
+      How do you reframe it?
+    difficulty: easy
+    options:
+      - text: |-
+          Start scoping the app — leadership has decided
+        msg: |-
+          Building from a solution-shaped directive skips validating the actual user need a mobile app would serve.
+      - text: |-
+          Ask which unserved user moment an app would address
+        msg: |-
+          Right. Maybe the real problem is &quot;commute-time users can't complete tasks on our slow mobile site&quot; — solvable without ever building a native app.
+        correct: true
+      - text: |-
+          Tell leadership no and move on
+        msg: |-
+          The goal isn't to refuse the input — it's to translate it into an underlying problem, which might still lead back to a mobile app.
+  - scenario: |-
+      A problem statement reads: "New users abandon onboarding (61%, last 30 days, from funnel analytics)."
+    question: |-
+      Why is this a strong statement?
+    difficulty: medium
+    options:
+      - text: |-
+          Because it's short and easy to remember
+        msg: |-
+          Brevity isn't the point; a short vague statement is still weak.
+      - text: |-
+          It names who, what, how big, when, and the evidence
+        msg: |-
+          Exactly — all four parts are present, which is what makes a problem statement actionable and falsifiable.
+        correct: true
+      - text: |-
+          Because it already implies the fix to make
+        msg: |-
+          A good problem statement stays in the problem space; implying a fix can bias the team toward one solution too early.
+  - scenario: |-
+      During a root-cause dig, someone says "let's stop, we all agree it's an API bug" after only two whys — while data shows three teams changed things that week.
+    question: |-
+      What's the caution?
+    difficulty: medium
+    options:
+      - text: |-
+          None, group agreement is enough validation
+        msg: |-
+          Quick consensus, next to unexamined contradicting evidence, is a sign the dig stopped too early.
+      - text: |-
+          Two whys with unexamined contradicting evidence is a shallow stop
+        msg: |-
+          Right. Three concurrent changes means several plausible causes exist; declaring victory this fast risks fixing the wrong one. Dig further before settling on one convenient cause.
+        correct: true
+      - text: |-
+          Blame whichever team changed the API most recently
+        msg: |-
+          Assigning blame by recency substitutes a guess for actually tracing which change caused the symptom.
+  - scenario: |-
+      A researcher notices they're only pulling user quotes that support the "redesign the nav" idea already scoped.
+    question: |-
+      What's happening?
+    difficulty: medium
+    options:
+      - text: |-
+          Efficient research
+        msg: |-
+          Skipping contradicting evidence isn't efficiency — it's building a case for a decision already made.
+      - text: |-
+          Confirmation bias
+        msg: |-
+          Right. This validates a project already in motion rather than testing whether the real problem needs that solution at all. Supporting evidence surfaces while contradicting signals get filtered out.
+        correct: true
+      - text: |-
+          Normal
+        msg: |-
+          Confidence isn't evidence — confident teams are the ones most likely to fall into this trap.
+  - scenario: |-
+      A problem statement names a segment ("enterprise admins") but no evidence — just "I think they're frustrated."
+    question: |-
+      What's missing and why does it matter?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing is missing
+        msg: |-
+          A segment without evidence is still a guess; it just sounds more specific than it is.
+      - text: |-
+          Evidence
+        msg: |-
+          Right. Evidence is what turns &quot;I think&quot; into something the team can trust and prioritize against other real problems. Without data, quotes, or tickets, the team can't tell if this is a real, sized problem or one hunch.
+        correct: true
+      - text: |-
+          A deadline for solving it
+        msg: |-
+          A deadline doesn't validate whether the problem is real — that's a prioritization detail, not a framing gap.
+  - scenario: |-
+      A team debates for an hour whether to build feature X or Y, with no written problem statement for either.
+    question: |-
+      What should happen first?
+    difficulty: medium
+    options:
+      - text: |-
+          Vote on X versus Y to save the hour
+        msg: |-
+          Voting between two solutions without an agreed problem risks picking the wrong one entirely, or picking well for the wrong reason.
+      - text: |-
+          Write the problem statement, then judge X and Y on it
+        msg: |-
+          Right. A shared problem statement gives the team a real yardstick to compare X and Y against, instead of arguing preferences.
+        correct: true
+      - text: |-
+          Let whoever is most senior decide it
+        msg: |-
+          Seniority doesn't substitute for a defined problem — it just moves the guessing to one person.
+  - scenario: |-
+      Analytics shows a spike in a "problem" only three days old, and no one has checked whether it's a one-off event (a marketing blast) or a persistent pattern.
+    question: |-
+      What's the framing risk?
+    difficulty: hard
+    options:
+      - text: |-
+          None — three days of data is plenty to declare a problem
+        msg: |-
+          Three days can easily be a blip from a known one-off cause; treating it as persistent risks solving something that isn't recurring.
+      - text: |-
+          Mistaking a short-lived spike for a persistent pattern
+        msg: |-
+          Right. An event isn't automatically a pattern. Confirm persistence before investing in a fix. Confirm it's a trend, not an event, before framing it as a problem.
+        correct: true
+      - text: |-
+          Immediately roll back the marketing blast
+        msg: |-
+          Rolling back assumes the cause without checking — it might not even be related.
+  - scenario: |-
+      A doc lists fifteen different "problems," ranging from onboarding to pricing to support tone, with no ranking.
+    question: |-
+      What's the issue with this?
+    difficulty: hard
+    options:
+      - text: |-
+          None — more problems documented means more thoroughness
+        msg: |-
+          An unprioritized list of fifteen problems gives the team no way to know where to focus first.
+      - text: |-
+          There's no prioritization or evidence weighting
+        msg: |-
+          Right. Naming problems is only the first step; framing includes sizing them against each other. Size and rank these so effort goes where impact is biggest.
+        correct: true
+      - text: |-
+          Rename the doc to "solutions" instead
+        msg: |-
+          Renaming doesn't fix the underlying issue — the content is still an unprioritized dump either way.
+  - scenario: |-
+      A junior PM says "the problem is clear, let's move to ideation" after a single Slack message from one user.
+    question: |-
+      Is that enough to move forward?
+    difficulty: hard
+    options:
+      - text: |-
+          Yes — one clear complaint is sufficient evidence
+        msg: |-
+          A single message is an anecdote, not evidence of scale — moving this fast risks solving a problem that barely exists.
+      - text: |-
+          Not yet — one message isn't evidence of a pattern
+        msg: |-
+          Right. One voice can point you somewhere worth looking, but framing needs corroborating evidence before real effort is committed. Check how many users share this pain and how it shows up in the data before treating it as validated.
+        correct: true
+      - text: |-
+          Yes — speed matters more than certainty here
+        msg: |-
+          Speed is only valuable if you're moving in the right direction; skipping validation risks a fast trip to the wrong destination.
+  - scenario: |-
+      A problem statement says: "We're losing to Competitor X, so we need their feature set."
+    question: |-
+      What's the framing flaw?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — matching a competitor is a valid problem
+        msg: |-
+          &quot;We need their feature set&quot; is a solution copied from a competitor, not a diagnosis of what's causing users to prefer them.
+      - text: |-
+          It jumps to a solution without naming the user gap
+        msg: |-
+          Right. Maybe users prefer Competitor X's onboarding speed, not any specific feature — copying features could miss the cause entirely.
+        correct: true
+      - text: |-
+          It should say "we need to be cheaper than X" instead
+        msg: |-
+          Swapping one assumed solution for another still skips diagnosing why users actually choose the competitor.
+  - scenario: |-
+      After a sharp, evidence-backed problem statement is written, a stakeholder still says: "Just build what I asked for originally."
+    question: |-
+      What's the best response?
+    difficulty: hard
+    options:
+      - text: |-
+          Comply immediately to avoid conflict
+        msg: |-
+          Complying without addressing the framing work throws away exactly the clarity that might reveal a better, cheaper fix.
+      - text: |-
+          Share the framed problem and evidence, and show how it opens options
+        msg: |-
+          Right. Framing isn't about blocking stakeholders — it's making sure the eventual choice is made with the real problem in view. Possibly including their original idea — so the decision is informed.
+        correct: true
+      - text: |-
+          Escalate to remove the stakeholder from the project
+        msg: |-
+          Escalation over a process disagreement is disproportionate; bring them the evidence instead.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Problem Framing
+    desc: |-
+      The discipline of precisely defining what's broken, for whom, and why it matters — before touching a solution.
+    application: |-
+      Do this before any ideation session; a sharp problem statement keeps the whole team pointed at the same target.
+  - category: |-
+      Anatomy
+    title: |-
+      Problem Statement
+    desc: |-
+      A specific description with four parts: who is affected, what's observed, why it matters, and the evidence behind it.
+    application: |-
+      Replace "users are unhappy" with "new sellers abandon the pricing step (38%), our top activation leak."
+  - category: |-
+      Technique
+    title: |-
+      5 Whys
+    desc: |-
+      Asking "why" repeatedly (commonly five times) on a problem to move past the first symptom and reach a root, actionable cause.
+    application: |-
+      Use it when a fix keeps not sticking — the real cause is usually structural, not the first thing you noticed.
+  - category: |-
+      Trap
+    title: |-
+      Solution-Shaped Problem
+    desc: |-
+      A problem statement that secretly names a feature ("we need a chatbot") instead of the pain that feature might solve.
+    application: |-
+      Whenever a "problem" statement contains a noun like "app" or "feature," rewrite it around the underlying pain.
+  - category: |-
+      Concept
+    title: |-
+      Problem Space vs. Solution Space
+    desc: |-
+      The problem space is what's broken and why; the solution space is how you'll fix it. Framing should stay in the problem space as long as possible.
+    application: |-
+      If the team starts debating UI details before agreeing what's broken, pull the conversation back to the problem space.
+  - category: |-
+      Discipline
+    title: |-
+      Root Cause
+    desc: |-
+      The underlying structural reason a problem keeps happening, as opposed to its surface symptom.
+    application: |-
+      Fixing a symptom (add servers) without the root cause (no capacity planning) means the problem returns.
+
+vocab:
+  - term: |-
+      Problem Statement
+    define: |-
+      A Problem Statement: a specific description of who is affected, what's observed, and why it matters — the target the rest of the process aims at.
+    clues:
+      - |-
+          I name who's affected, what's happening, and why it matters.
+      - |-
+          I should be specific enough that two teams picture the same problem.
+      - |-
+          "Users are unhappy" is not a good version of me.
+  - term: |-
+      5 Whys
+    define: |-
+      The 5 Whys: a technique of repeatedly asking "why" to move past a symptom and reach an actionable root cause.
+    clues:
+      - |-
+          I'm a technique, not a single question.
+      - |-
+          I ask the same short word, repeatedly, usually five times.
+      - |-
+          I take you from a symptom down to a root cause.
+  - term: |-
+      Root Cause
+    define: |-
+      Root Cause: the underlying structural reason a problem recurs, as distinct from its visible symptom.
+    clues:
+      - |-
+          I'm the structural reason a problem keeps happening.
+      - |-
+          Fix a symptom instead of me, and the problem comes back.
+      - |-
+          I'm usually found at the bottom of a 5 Whys chain.
+  - term: |-
+      Solution-Shaped Problem
+    define: |-
+      A Solution-Shaped Problem: a "problem" statement that actually names a solution, hiding the real underlying need.
+    clues:
+      - |-
+          I look like a problem statement but I'm secretly a feature request.
+      - |-
+          "We need a chatbot" is a classic example of me.
+      - |-
+          Rewriting me means asking what pain the feature was meant to fix.
+  - term: |-
+      Problem Space
+    define: |-
+      Problem Space: the territory of what's broken and why, explored before moving into how to fix it (the solution space).
+    clues:
+      - |-
+          I come before the solution space.
+      - |-
+          I'm about what's broken and why, not how to fix it.
+      - |-
+          Teams that skip me end up debating features before agreeing on the pain.
+  - term: |-
+      Confirmation Bias
+    define: |-
+      Confirmation Bias: the tendency to seek and favor evidence that confirms what you already believe, distorting problem framing.
+    clues:
+      - |-
+          I make you notice evidence that agrees with you.
+      - |-
+          I quietly ignore evidence that doesn't.
+      - |-
+          I'm dangerous during problem framing because I can validate the wrong problem.

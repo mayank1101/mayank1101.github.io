@@ -1,0 +1,409 @@
+# PM Gym — opportunity-analysis. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can stay in the problem space, size opportunities, and prioritize with RICE. Pick the strongest move, then read why the others fall short.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Opportunity Analysis Flashcards
+flashcards_blurb: |-
+  Four cards covering the vocabulary, the tree, and the two scoring formulas. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A high-value enterprise customer threatens to churn unless you build a custom 'PDF Export' feature that isn't on your roadmap.
+    question: |-
+      What is your first step?
+    difficulty: easy
+    options:
+      - text: |-
+          Build it — the account is too big to lose
+        msg: |-
+          Maybe — but you'd be prescribing the patient's self-diagnosed pill. Custom one-off features pile up into an unmaintainable product. First find out what job the PDF is actually doing.
+      - text: |-
+          Dig behind the request for the workflow problem
+        msg: |-
+          The doctor's move: diagnose before prescribing. If the real need is proving ROI to their boss, live dashboards might solve it for every customer — not just this one.
+        correct: true
+      - text: |-
+          Refuse — it isn't on the roadmap
+        msg: |-
+          Refusing the solution without exploring the opportunity throws away both the account and the learning. The request is a symptom worth investigating, even if the feature never gets built.
+  - scenario: |-
+      Food-delivery users complain their food arrives cold because drivers get lost inside large apartment complexes. You start an Opportunity Solution Tree with the outcome 'raise delivery satisfaction to 95%'.
+    question: |-
+      Where does 'drivers lose time in the final 100 meters' belong on the tree?
+    difficulty: easy
+    options:
+      - text: |-
+          It's the outcome
+        msg: |-
+          The outcome is the measurable business target already at the root (satisfaction to 95%). Getting lost is what stands between users and that outcome — one level down.
+      - text: |-
+          It's an opportunity
+        msg: |-
+          Correct placement. Under this opportunity you'd branch multiple solutions (text directions, drop-pins, entrance photos) and then cheap experiments to pick the winner. A user pain blocking the outcome, under which several solutions can branch.
+        correct: true
+      - text: |-
+          It's an experiment
+        msg: |-
+          Experiments are the tests you run on candidate solutions (like A/B testing text directions). The lost-driver problem is the pain those solutions target — the opportunity node.
+  - scenario: |-
+      A stakeholder proposes a Bluetooth smart-water-bottle integration to boost activity logging in your fitness app.
+    question: |-
+      What does a RICE evaluation most likely reveal?
+    difficulty: easy
+    options:
+      - text: |-
+          High reach across the whole user base
+        msg: |-
+          Everyone drinks water; almost nobody owns a smart bottle. Real reach is tiny, and reach is only one of four factors — effort and confidence are where this idea truly collapses.
+      - text: |-
+          High effort and low confidence crush the score
+        msg: |-
+          Hardware integration = huge effort; unknown smart-bottle ownership = low confidence. The underlying opportunity (effortless logging) has cheaper, higher-scoring solutions. RICE lets you say no with numbers.
+        correct: true
+      - text: |-
+          Confidence is high — the stakeholder feels strongly
+        msg: |-
+          Confidence measures evidence quality, not enthusiasm. Scoring passion as confidence is exactly the failure mode RICE exists to prevent.
+  - scenario: |-
+      You must choose between two opportunities. Opportunity A: importance 8, satisfaction 7. Opportunity B: importance 7, satisfaction 2.
+    question: |-
+      Which scores higher, and why?
+    difficulty: easy
+    options:
+      - text: |-
+          A — it has the higher importance score
+        msg: |-
+          A looks more important (8 vs 7), but the opportunity score rewards the GAP between importance and satisfaction, not importance alone. A's gap is nearly closed (8−7=1); B's is wide open (7−2=5).
+      - text: |-
+          B — score 12 vs 9
+        msg: |-
+          Right. Score = Importance + Max(Importance − Satisfaction, 0). A = 8 + Max(8−7,0) = 8 + 1 = 9. B = 7 + Max(7−2,0) = 7 + 5 = 12. B wins because it's important AND poorly served today — a real unmet need. A is important but already satisfied, so there's little room to add value. Its need is important AND badly served today (a wide satisfaction gap), where A's need is already mostly met.
+        correct: true
+      - text: |-
+          They're roughly equal, so pick either
+        msg: |-
+          They're not equal — plug in the formula. A = 9, B = 12. The whole point of the opportunity score is that a big unmet gap (B) beats a slightly-higher-importance need that's already satisfied (A).
+  - scenario: |-
+      Two features have similar Reach, Impact, and Effort. But one is backed by solid usage data and interviews; the other is a hunch from a single loud meeting.
+    question: |-
+      How does RICE separate them?
+    difficulty: easy
+    options:
+      - text: |-
+          They tie
+        msg: |-
+          If R, I, and E are similar, RICE isn't a tie — the Confidence factor breaks it. The evidence-backed feature earns a high confidence multiplier; the hunch gets a low one, which cuts its score.
+      - text: |-
+          Confidence breaks the tie
+        msg: |-
+          Right. Confidence is the honesty gate. The data-backed feature might score 90–100% confidence; the hunch maybe 50%. Since RICE multiplies by confidence, the hunch's score is roughly halved. This is exactly how RICE protects teams from confident-sounding but unevidenced bets. The evidence-backed feature keeps its score; the hunch gets a low confidence multiplier that roughly halves it.
+        correct: true
+      - text: |-
+          Boost the hunch's Impact score so it can compete
+        msg: |-
+          You can't just raise the hunch's Impact to compensate — that would be fabricating a number to win an argument, the precise behavior RICE is designed to expose. Score Impact honestly and let low Confidence reflect the weak evidence.
+  - scenario: |-
+      A PM writes this "opportunity" on the tree: "Build an AI recommendation engine."
+    question: |-
+      What's wrong with it as an opportunity?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          It's phrased as a thing to build — that's a solution, not an opportunity. Opportunities describe a user pain or unmet need, never a feature. Putting a solution in the opportunity slot skips the whole 'what problem are we solving?' question.
+      - text: |-
+          It's a solution in the opportunity slot
+        msg: |-
+          Right. 'Build an AI recommendation engine' is a solution masquerading as an opportunity. The opportunity is the user pain beneath it — e.g., 'users can't find relevant content and give up browsing.' Stated that way, the AI engine becomes one candidate solution among several (better search, curated lists, filters), which you can then compare.
+        correct: true
+      - text: |-
+          AI is too hard to build, so it can't be an opportunity
+        msg: |-
+          AI being 'too hard to build' is a feasibility concern for the solution layer, not why this fails as an opportunity. The core problem is that it's a solution, not a user need — it belongs one level down the tree.
+  - scenario: |-
+      Your team found a real, painful problem that only affects about 0.5% of users — but for those few it's a total blocker.
+    question: |-
+      How should you weigh it?
+    difficulty: medium
+    options:
+      - text: |-
+          Build a full solution immediately
+        msg: |-
+          Severity alone isn't enough to justify a big investment — RICE deliberately combines it with Reach. A total blocker for 0.5% of users has real pain but tiny reach, so its score is usually modest unless those users are disproportionately valuable.
+      - text: |-
+          Weigh severity against reach
+        msg: |-
+          Right. Sizing means weighing severity AND reach together. High pain but 0.5% reach usually yields a low RICE score — unless that segment is strategically vital (e.g., high-paying enterprise accounts), which would raise its effective impact/value. Check who those users are before deciding; don't let vividness of the pain override the small reach.
+        correct: true
+      - text: |-
+          Ignore it
+        msg: |-
+          Dismissing it outright is too hasty. A tiny segment can still be worth serving if it's high-value or a strategic beachhead. Size it properly (reach × impact × confidence ÷ effort, plus who they are) rather than ignoring real pain by reflex.
+  - scenario: |-
+      A stakeholder games the RICE scores: they quietly inflate Reach and Impact and lowball Effort for their pet feature so it tops the list.
+    question: |-
+      What's the right way to protect the process?
+    difficulty: medium
+    options:
+      - text: |-
+          Accept the scores and move on
+        msg: |-
+          Trusting whatever numbers get entered defeats RICE. The framework is only as honest as its inputs — if anyone can dial the numbers to a predetermined answer, the ranking is theater, not analysis.
+      - text: |-
+          Require evidence per estimate and score as a team
+        msg: |-
+          Right. RICE removes bias only when the inputs are grounded in evidence and reviewed openly. Require a source for each Reach and Impact estimate, score Confidence to reflect how solid that evidence is, and review scores as a group. Transparency and evidence — not the formula alone — are what keep it honest.
+        correct: true
+      - text: |-
+          Drop RICE and go with everyone's gut instead
+        msg: |-
+          Abandoning RICE for pure gut feeling removes the one thing that makes bias visible. The fix isn't to drop the framework — it's to enforce evidence and open review so gamed inputs can't hide.
+  - scenario: |-
+      During research you uncover 15 distinct user pains for one outcome. Leadership wants you to tackle all 15 this quarter.
+    question: |-
+      What does the Opportunity Solution Tree encourage instead?
+    difficulty: medium
+    options:
+      - text: |-
+          Attack all 15 in parallel this quarter
+        msg: |-
+          Attacking all 15 spreads the team so thin that none get solved well. The tree isn't a checklist of every pain — it's a map you use to pick the few opportunities most likely to move the outcome.
+      - text: |-
+          Compare them and pursue the two or three best
+        msg: |-
+          Right. The tree helps you focus: compare the opportunities, pick the two or three with the highest importance-low-satisfaction gap and the clearest link to the outcome, and pursue those first. You leave the rest visible on the tree for later. Discovery is about choosing where to dig, not digging everywhere.
+        correct: true
+      - text: |-
+          Pick three at random to keep things simple
+        msg: |-
+          Picking randomly wastes the analysis you just did. The tree exists precisely so you can rank opportunities by size and link to the outcome, then choose deliberately — not draw straws.
+  - scenario: |-
+      You have a promising opportunity and three candidate solutions. A teammate wants to fully build the most exciting one right away.
+    question: |-
+      What does the tree's 'experiments' layer suggest?
+    difficulty: medium
+    options:
+      - text: |-
+          Build the most exciting solution
+        msg: |-
+          Fully building the most exciting solution skips the experiment layer entirely. Excitement isn't evidence — the flashy option may not be the one that actually moves the outcome, and you'd only find out after an expensive build.
+      - text: |-
+          Run cheap experiments on the candidates first
+        msg: |-
+          Right. Before committing to a full build, run cheap experiments (A/B tests, prototypes, interviews) to see which of the three solutions actually resolves the opportunity and moves the outcome. The experiments layer exists so evidence, not excitement, picks the winner — and so you invest heavily only in what's been validated.
+        correct: true
+      - text: |-
+          Fully build all three and keep whichever performs best
+        msg: |-
+          Building all three fully is the most expensive path and unnecessary — the point of experiments is to learn which one works cheaply, then invest in that single winner, not to fully build every candidate.
+  - scenario: |-
+      Sales relays that "customers keep asking for a dark mode." You investigate and find the underlying complaint is eye strain during long night shifts.
+    question: |-
+      Why does distinguishing these matter?
+    difficulty: hard
+    options:
+      - text: |-
+          It doesn't — the request is clear enough
+        msg: |-
+          Treating 'dark mode' as the whole story locks you into one solution and might miss better ones. The stated request is a solution; the eye strain during night shifts is the opportunity, and it may have several fixes worth comparing.
+      - text: |-
+          Dark mode is a solution; eye strain is the opportunity
+        msg: |-
+          Right. 'Dark mode' is the customer's proposed solution; the opportunity is 'reduce eye strain during long night shifts.' Framing it as the opportunity opens up more options (adjustable brightness, warm-color schedules, larger text, dark mode) and lets you pick the one with the best RICE — dark mode might still win, but now it's a choice, not an assumption. Dark mode being just one.
+        correct: true
+      - text: |-
+          The eye-strain detail is irrelevant to the request
+        msg: |-
+          The eye-strain finding isn't irrelevant — it's the actual opportunity. Ignoring it and shipping dark mode by reflex is exactly the solution-first trap this whole topic warns against.
+  - scenario: |-
+      An opportunity scores high on importance and low on satisfaction — a jackpot. But when you size the effort, any real solution would take 18 months and a new team.
+    question: |-
+      How should this affect your decision?
+    difficulty: hard
+    options:
+      - text: |-
+          Start the 18-month build immediately
+        msg: |-
+          A high opportunity score alone doesn't justify commitment — you still divide by effort. An 18-month, new-team build is enormous effort that can sink even a jackpot opportunity's RICE score relative to cheaper wins available now.
+      - text: |-
+          Weigh the prize against the effort
+        msg: |-
+          Right. Opportunity size tells you the prize is real; RICE's Effort term tells you the cost of claiming it. A huge effort can make even a jackpot opportunity a poor near-term bet versus cheaper, high-scoring options. Look for a smaller first slice you can ship to test the opportunity, or sequence the big bet deliberately rather than diving in blind.
+        correct: true
+      - text: |-
+          Abandon it
+        msg: |-
+          Abandoning a genuine jackpot opportunity just because it's expensive is too hasty — it may be worth a phased investment or a strategic bet. The right move is to weigh prize against effort and look for a cheaper entry point, not to discard real value.
+  - scenario: |-
+      A leader says: "RICE scores are just made-up numbers — they give false precision. Let's not bother."
+    question: |-
+      What's the balanced defense of RICE?
+    difficulty: hard
+    options:
+      - text: |-
+          Insist the scores are precise and always correct
+        msg: |-
+          Claiming RICE is perfectly objective overstates it — the leader is partly right that the numbers are estimates. Defending it as flawless invites easy dismissal the first time an estimate proves off.
+      - text: |-
+          Agree they're estimates; the value is consistency
+        msg: |-
+          Right. Concede the point partly: the numbers are estimates, not truth. But RICE's value isn't precision — it's forcing a consistent, transparent conversation about reach, impact, evidence, and cost, so decisions are comparable and biases are visible. Use it as a structured discussion tool and tiebreaker, not a magic oracle. That honest framing wins skeptics.
+        correct: true
+      - text: |-
+          Agree, and let the most senior person decide
+        msg: |-
+          Dropping all frameworks in favor of pure seniority-driven gut calls is exactly what RICE guards against — it re-opens the door to the loudest voice winning. The answer is to use RICE honestly as a structured aid, not to abandon structure.
+  - scenario: |-
+      You're comparing two features. Feature X: Reach 1000, Impact 1, Confidence 100%, Effort 2. Feature Y: Reach 500, Impact 3, Confidence 80%, Effort 5.
+    question: |-
+      Which has the higher RICE score?
+    difficulty: hard
+    options:
+      - text: |-
+          X — score 500 vs Y's 240
+        msg: |-
+          Right. X = (1000 × 1 × 1.0) ÷ 2 = 500. Y = (500 × 3 × 0.8) ÷ 5 = 1200 ÷ 5 = 240. X wins, 500 vs 240 — mostly because its effort is low and its confidence is certain. This is the lesson: a modest-impact feature that's cheap and well-evidenced can beat a flashier high-impact one that's expensive and less certain.
+        correct: true
+      - text: |-
+          Y — its Impact of 3 is the highest single factor
+        msg: |-
+          Impact 3 looks impressive, but run the math: Y = (500 × 3 × 0.8) ÷ 5 = 240, while X = (1000 × 1 × 1.0) ÷ 2 = 500. Y's high impact is dragged down by its higher effort and lower confidence. Impact alone doesn't win.
+      - text: |-
+          They're basically tied
+        msg: |-
+          They're not close — 500 vs 240 is a 2x gap. Compute (Reach × Impact × Confidence) ÷ Effort for each; effort and confidence swing the result decisively toward X.
+  - scenario: |-
+      Your opportunity tree has an outcome ("increase retention 10%") but a teammate keeps adding opportunities like "users on Android" and "enterprise customers."
+    question: |-
+      What's the confusion, and how do you fix the tree?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          'Users on Android' and 'enterprise customers' are groups of people, not unmet needs. Opportunities on the tree must be pains or needs ('X is frustrating / slow / confusing'), not user segments. Mixing the two muddles the tree.
+      - text: |-
+          They're user segments, not needs
+        msg: |-
+          Right. Those are user segments, not opportunities. Opportunities are unmet needs phrased as pains — 'Android users lose their session on app switch' or 'enterprise admins can't bulk-manage seats.' Segments can help organize the tree, but each opportunity node must be a specific problem you could solve. Rewrite them as needs, and the tree becomes actionable again.
+        correct: true
+      - text: |-
+          Scrap the tree
+        msg: |-
+          Deleting the tree overreacts to a fixable slip. The tree structure is fine; only the opportunity nodes are mislabeled as segments. Reframe them as needs rather than starting over.
+
+flashcards:
+  - category: |-
+      Terminology
+    title: |-
+      Opportunities vs. Solutions
+    desc: |-
+      An opportunity is a customer pain point, friction, or desire. A solution is the concrete feature designed to fix it. Beginners fall in love with solutions; good product thinking starts with opportunities.
+    application: |-
+      Don't fall in love with features — fall in love with the user's problem.
+  - category: |-
+      Frameworks
+    title: |-
+      The Opportunity Solution Tree
+    desc: |-
+      A visual map by Teresa Torres that flows top-down: Desired Outcome → Opportunities → Solutions → Experiments. It keeps every feature idea tied to a measurable goal.
+    application: |-
+      When a stakeholder pitches an idea, place it on the tree — does it connect to a verified user pain that serves the outcome?
+  - category: |-
+      Sizing
+    title: |-
+      The Opportunity Score
+    desc: |-
+      Score = Importance + Max(Importance − Satisfaction, 0). It surfaces needs that matter a lot to users but are badly served today.
+    application: |-
+      The sweet spot: high importance, low satisfaction. If users are already happy with existing options, the score collapses back to plain importance.
+  - category: |-
+      Prioritization
+    title: |-
+      The RICE Framework
+    desc: |-
+      RICE = (Reach × Impact × Confidence) ÷ Effort. Reach: how many people. Impact: how much each gains. Confidence: how sure you are. Effort: how long it takes.
+    application: |-
+      High RICE scores point to features that help many people a lot, with solid evidence, at low cost.
+
+vocab:
+  - term: |-
+      Opportunity
+    define: |-
+      An Opportunity: an unmet user pain or need — the problem, not the feature that fixes it.
+    clues:
+      - |-
+          I live in the problem space.
+      - |-
+          I'm an unmet user pain, need, or desire.
+      - |-
+          "Users forget to track their hydration" is me — no feature named yet.
+  - term: |-
+      Solution
+    define: |-
+      A Solution: a concrete feature or implementation designed to address an opportunity.
+    clues:
+      - |-
+          I live in the solution space.
+      - |-
+          I'm a specific way to fix a pain.
+      - |-
+          "A Bluetooth water-bottle widget" is me — a concrete build.
+  - term: |-
+      Opportunity Solution Tree
+    define: |-
+      The Opportunity Solution Tree: a map linking a desired outcome down through opportunities, solutions, and experiments.
+    clues:
+      - |-
+          I'm a visual map from Teresa Torres.
+      - |-
+          I flow top-down through four levels.
+      - |-
+          Outcome, opportunities, solutions, experiments — that's me.
+  - term: |-
+      RICE
+    define: |-
+      RICE: a priority score = (Reach x Impact x Confidence) / Effort.
+    clues:
+      - |-
+          I'm a four-letter prioritization formula.
+      - |-
+          I divide three multiplied factors by a fourth.
+      - |-
+          (Reach x Impact x Confidence) / Effort — that's me.
+  - term: |-
+      Confidence
+    define: |-
+      Confidence (in RICE): how much evidence backs your estimates — the check against wishful thinking.
+    clues:
+      - |-
+          I'm one factor in a famous scoring formula.
+      - |-
+          I'm the honesty gate against gut-feel estimates.
+      - |-
+          Scoring me at 50% halves a hyped feature's priority score.
+  - term: |-
+      Opportunity Score
+    define: |-
+      Opportunity Score = Importance + Max(Importance - Satisfaction, 0); it surfaces important, poorly-served needs.
+    clues:
+      - |-
+          I rank problems, not features.
+      - |-
+          I reward high importance paired with low satisfaction.
+      - |-
+          Importance + Max(Importance - Satisfaction, 0) is my formula.

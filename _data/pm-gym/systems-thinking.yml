@@ -1,0 +1,425 @@
+# PM Gym — systems-thinking. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 real situations where systems thinking beats firefighting. Read each one, decide the strongest move, then check the reasoning. Wrong answers explain <em>why</em> — that's where the learning is.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Systems Thinking Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Your team is rewarded purely on the number of features shipped per quarter. Shipping is up, but user satisfaction is sliding.
+    question: |-
+      What's the systems-thinking read?
+    difficulty: easy
+    options:
+      - text: |-
+          Great — high output means high productivity
+        msg: |-
+          Counting output ignores the second-order effect. The incentive structure rewards shipping regardless of value, so quality and satisfaction quietly erode.
+      - text: |-
+          The incentive structure is driving the bad pattern
+        msg: |-
+          Right — the falling satisfaction is a pattern, and the reward structure is its cause. Fix the structure (reward outcomes) and the behavior follows.
+        correct: true
+      - text: |-
+          Tell the team to care more about quality
+        msg: |-
+          Exhortation rarely beats incentives. As long as the structure pays for features shipped, that's what you'll get. Change the rule, not the mood.
+  - scenario: |-
+      A referral feature quietly took off: invited friends invite more friends, and signups are compounding week over week.
+    question: |-
+      How should you treat this?
+    difficulty: easy
+    options:
+      - text: |-
+          Leave it alone so it isn't disturbed
+        msg: |-
+          Ignoring a reinforcing loop risks it stalling or reversing. Loops that compound are your most valuable assets precisely because they deserve deliberate protection and fuel.
+      - text: |-
+          Recognise the reinforcing loop and protect it
+        msg: |-
+          Exactly. A compounding loop is a leverage point. Small improvements to the invite flow multiply through every future turn of the cycle. Reduce friction in the invite step.
+        correct: true
+      - text: |-
+          Pour the whole budget into paid ads instead
+        msg: |-
+          Redirecting away from a working reinforcing loop wastes your strongest lever. Paid ads are linear; the loop is exponential — feed the loop first.
+  - scenario: |-
+      Two teams each optimize their own metric: the growth team maximizes signups, the infra team minimizes server cost by capping capacity.
+    question: |-
+      What does systems thinking predict?
+    difficulty: easy
+    options:
+      - text: |-
+          Both metrics improve, so the product improves
+        msg: |-
+          That's assuming local optimization sums to global good. It often doesn't — two locally 'optimal' choices can collide badly.
+      - text: |-
+          Local optimization can hurt the whole
+        msg: |-
+          Right. Each team wins its own metric while the system loses. Systems thinking looks at the interaction, not the isolated parts. Capped capacity throttles the very signups growth is driving, and the system suffers.
+        correct: true
+      - text: |-
+          The infra team is simply wrong and should be overruled
+        msg: |-
+          Neither team is 'wrong' locally — that's the point. The problem is the structure that lets two sensible local goals conflict. Align them on a shared outcome.
+  - scenario: |-
+      Your onboarding funnel drops 20% one week. You add a bigger "Continue" button on the step where people leave. Drop-off barely moves.
+    question: |-
+      What did the button fix miss?
+    difficulty: easy
+    options:
+      - text: |-
+          The button just needs to be even bigger and brighter
+        msg: |-
+          Maybe — but you jumped to a tweak before finding the real level. The iceberg says: the visible drop-off is the event; the cause could be a confusing prior step, a broken email, or the wrong users arriving. A bigger button treats the symptom.
+      - text: |-
+          It stayed at the event level
+        msg: |-
+          Right. You optimized the visible event without asking what structure produces the drop. Trace it up the iceberg — where users actually get confused, or which traffic source sends unqualified users — before touching pixels. You changed what you could see, not the structure causing people to leave.
+        correct: true
+      - text: |-
+          Nothing
+        msg: |-
+          A 20% drop in one week is a real signal, not noise to wait out. Ignoring it lets the underlying cause keep compounding. Investigate the structure now.
+  - scenario: |-
+      A marketplace: more buyers attract more sellers, which widens selection, which attracts more buyers. Your CEO asks where one extra engineer would create the most long-term value.
+    question: |-
+      Where does systems thinking point them?
+    difficulty: easy
+    options:
+      - text: |-
+          On reducing friction in the loop's weakest side
+        msg: |-
+          Exactly. This is a reinforcing loop, and reinforcing loops compound. Removing friction from whichever side is the bottleneck makes every future turn of the loop stronger — that's the highest-leverage place to invest. Because a reinforcing loop compounds every improvement over time.
+        correct: true
+      - text: |-
+          On polishing the account-settings page
+        msg: |-
+          Polishing an unrelated settings page is a low-leverage spot: it barely touches the loop that drives the whole business. Effort here 'barely registers,' as the leverage lesson warned.
+      - text: |-
+          On a one-time ad campaign to add a burst of buyers this month
+        msg: |-
+          A one-off ad blast is linear — it adds buyers once. The loop is exponential. Feeding the loop beats a spike that fades, because the loop keeps paying off turn after turn.
+  - scenario: |-
+      To hit an aggressive quarterly signup goal, the team leans hard on deep discounts. Signups spike every quarter — but each quarter needs a bigger discount to hit the same number, and margins are thinning.
+    question: |-
+      Which systems pattern is this, and what's the risk?
+    difficulty: medium
+    options:
+      - text: |-
+          Healthy growth
+        msg: |-
+          It looks like healthy growth on the surface, but needing an ever-bigger discount for the same result is the warning sign. You're addicted to a quick fix while the real problem (weak underlying value) goes unaddressed.
+      - text: |-
+          'Shifting the burden'
+        msg: |-
+          Right — this is 'shifting the burden.' The discount is a symptomatic fix that works short-term but atrophies the real capability (a product people pay full price for). Each round deepens the dependence. Invest in the fundamental fix: the value proposition. A quick fix (discounts) masks the real problem (weak value), and dependence on the fix grows each cycle.
+        correct: true
+      - text: |-
+          Just double the discount next quarter to stay ahead of the trend
+        msg: |-
+          Doubling the discount treats the symptom harder — the classic trap. It buys one more quarter while making the dependence worse and margins thinner. The fix and the disease grow together.
+  - scenario: |-
+      You ship infinite scroll. Average session time jumps 30% and everyone celebrates. Three months later, weekly active users are quietly falling.
+    question: |-
+      What likely happened?
+    difficulty: medium
+    options:
+      - text: |-
+          Coincidence
+        msg: |-
+          The two facts are almost certainly linked — treating them as unrelated ignores the second-order effect. Longer sessions that leave users feeling drained or guilty can reduce how often they come back.
+      - text: |-
+          Great news
+        msg: |-
+          Celebrating harder doubles down on a first-order win while ignoring the downstream cost. 'And then what happens?' is the question you skipped.
+      - text: |-
+          A second-order effect
+        msg: |-
+          Right. First-order: longer sessions. Second-order: users feel it's a time-sink and return less often. The metric you optimized (session time) traded against the one that matters (retention). Always trace one step past the obvious win. Longer, less satisfying sessions reduced how often people came back.
+        correct: true
+  - scenario: |-
+      You set a team target: "cut average support-ticket resolution time by 40%." Resolution time drops beautifully. But repeat-contact rate and refunds both climb.
+    question: |-
+      What went wrong with the metric?
+    difficulty: medium
+    options:
+      - text: |-
+          The metric became a target, so it got gamed
+        msg: |-
+          Right — this is Goodhart's Law: 'when a measure becomes a target, it stops being a good measure.' Agents close tickets fast to hit the number, even unresolved ones, which bounces back as repeat contacts. The metric was a proxy for 'happy customers,' and the proxy got gamed. Agents optimized 'fast close' over 'actually solved.'.
+        correct: true
+      - text: |-
+          The agents are lazy and should be disciplined for the refunds
+        msg: |-
+          Punishing agents ignores the structure. They responded rationally to the incentive you set. Change the incentive (measure resolved-on-first-contact), don't blame people for following it.
+      - text: |-
+          The target wasn't ambitious enough; tighten it to a 50% cut
+        msg: |-
+          Tightening the same target to 50% pours fuel on the fire — it rewards even faster, shallower closes. You'd be optimizing harder for the wrong thing.
+  - scenario: |-
+      The app slows down under load. Each time, ops adds more servers and it recovers — for a while. But it keeps happening, the bill keeps rising, and nobody has looked at the code in months.
+    question: |-
+      Which archetype is this, and what's the move?
+    difficulty: medium
+    options:
+      - text: |-
+          It's working fine
+        msg: |-
+          Adding servers has 'worked' every time, which is exactly why it's a trap. It relieves the symptom while the real fault (likely a memory leak or bad query) grows unchecked. The fix that keeps working is hiding the disease.
+      - text: |-
+          'Fixes that fail'
+        msg: |-
+          Right — 'fixes that fail.' The quick fix (more servers) treats the symptom and even makes things worse long-term (cost, and the real bug hidden). Spend the effort on the root cause in the code, even though it's slower and less visible. The quick patch masks a root cause that keeps growing; go profile and fix the actual bottleneck.
+        correct: true
+      - text: |-
+          Ban adding servers entirely so the team is forced to suffer
+        msg: |-
+          A blanket rule against servers is a blunt overcorrection — sometimes you genuinely need capacity. The point isn't 'never scale,' it's 'stop using scaling to avoid diagnosing the root cause.'
+  - scenario: |-
+      Your referral loop drove explosive growth for a year. Lately, invites are flat no matter how much you optimize the invite flow. The core audience is niche and mostly on the product already.
+    question: |-
+      What does systems thinking say is happening?
+    difficulty: medium
+    options:
+      - text: |-
+          The growth team got lazy — optimise harder
+        msg: |-
+          Blaming execution misses the structure. When a reinforcing loop stalls despite good execution, a balancing force (a limit) has kicked in — here, a saturated market. More optimization can't beat a shrinking pool of new people to invite.
+      - text: |-
+          'Limits to growth' — the niche is saturated
+        msg: |-
+          Right — 'limits to growth.' Every reinforcing loop eventually hits a balancing constraint. You've saturated the niche, so the pool of new invitees is drying up. The lever isn't the invite flow anymore — it's expanding to an adjacent audience or removing the constraint.
+        correct: true
+      - text: |-
+          Double the referral reward to reignite the loop
+        msg: |-
+          Doubling referral rewards fights the wrong thing. The problem isn't motivation, it's that there are few new people left to invite. Bigger rewards can't manufacture an audience that doesn't exist yet.
+  - scenario: |-
+      A shared internal platform team supports every product squad. Each squad, acting sensibly, files "just one urgent request." The platform team is now permanently overloaded and slow for everyone.
+    question: |-
+      Which archetype, and how do you fix it?
+    difficulty: hard
+    options:
+      - text: |-
+          One greedy squad is abusing it — find and stop them
+        msg: |-
+          No single squad is misbehaving — each request is reasonable on its own. That's the essence of the trap: individually rational choices that collectively exhaust a shared resource. Blaming one squad won't fix the structure.
+      - text: |-
+          'Tragedy of the commons' on a shared resource
+        msg: |-
+          Right — 'tragedy of the commons.' A shared resource gets overused because each user only feels their own benefit, not the collective cost. Fix the structure: add explicit prioritization, quotas, or a cost signal so demand reflects the true shared limit. A shared resource with no governing rule gets overused; add prioritization or capacity signals so demand reflects real cost.
+        correct: true
+      - text: |-
+          Send a memo asking everyone to file fewer requests
+        msg: |-
+          Telling everyone to file fewer requests is exhortation against an incentive — the balancing-loop lesson's weak move. As long as filing an urgent request is free and beneficial to each squad, they'll keep doing it. Change the rule, not the mood.
+  - scenario: |-
+      Trust in your brand took three years of consistent quality to build. One botched data-breach response burned a big chunk of it in a week. Signups are now sluggish despite unchanged marketing spend.
+    question: |-
+      What stock-and-flow idea explains this?
+    difficulty: hard
+    options:
+      - text: |-
+          Trust is a slow-filling stock
+        msg: |-
+          Right. Trust is a stock — it accumulates slowly through many good experiences and can drain fast through one bad one. Because signups flow partly from that stock, refilling it (not just more ad spend) is what unblocks growth. Stocks change slowly on the way up and can lag your fixes. It took years to build and drained fast; you must refill the stock, not just spend more on ads.
+        correct: true
+      - text: |-
+          Just increase marketing spend to push signups back up
+        msg: |-
+          Spending more on marketing pours water into a bathtub with the drain wide open. If the trust stock is depleted, new visitors bounce. Fix the drain (rebuild trust) before turning up the tap.
+      - text: |-
+          The breach and the slow signups are unrelated events
+        msg: |-
+          Sluggish signups right after a trust event are almost certainly connected — dismissing it as unrelated ignores that signups flow from the trust stock you just depleted.
+  - scenario: |-
+      A competitor adds a flashy feature. You rush to match it. They one-up you. You one-up back. Six months later, both products are bloated, neither of you gained share, and both teams are exhausted.
+    question: |-
+      What trap are both companies caught in?
+    difficulty: hard
+    options:
+      - text: |-
+          Normal competition
+        msg: |-
+          Each move felt necessary in the moment, but 'match every move' is exactly what keeps the spiral going. Reacting to the rival instead of your own strategy is the mechanism of the trap, not the escape from it.
+      - text: |-
+          'Escalation'
+        msg: |-
+          Right — 'escalation.' Two reinforcing loops locked together: each side's action threatens the other, triggering a bigger counter-action. Nobody wins and both burn out. The way out is to stop reacting to the rival and re-anchor on your own strategy and the outcomes your users actually care about.
+        correct: true
+      - text: |-
+          Add two more features at once to get decisively ahead
+        msg: |-
+          Adding two more features to 'get ahead for good' is one more turn of the escalation spiral. It deepens the bloat and invites the next counter-move. More escalation can't end an escalation.
+  - scenario: |-
+      A leader says: "Our activation problem is simple — the sign-up form is too long. Cut the fields and activation will jump."
+    question: |-
+      What's the systems-thinking caution here?
+    difficulty: hard
+    options:
+      - text: |-
+          Agree — obviously fewer fields means more activation, so ship it
+        msg: |-
+          Accepting the single-cause story is the exact risk. Activation sits inside a system — traffic quality, first-run value, onboarding, follow-up emails all feed it. One visible knob is rarely the whole structure.
+      - text: |-
+          A single, obvious cause in a complex system is a red flag
+        msg: |-
+          Right. 'Simple, single cause' claims deserve suspicion in a system. Form length is one visible factor, but activation is driven by a web of causes (who's arriving, whether they hit value quickly, follow-up). Test the hypothesis, but map the fuller structure before betting the quarter on one knob. Test it, but map the other drivers of activation before assuming it's the whole story.
+        correct: true
+      - text: |-
+          Refuse to change the form; form length never matters
+        msg: |-
+          Refusing to touch the form is the opposite over-reaction. Shortening it may well help — the caution isn't 'don't try it,' it's 'don't assume it's the entire cause and stop looking.'
+  - scenario: |-
+      You're deciding how to lift retention. Option A: tweak the push-notification copy. Option B: change the core onboarding so new users reach their first real "win" in minute one instead of day three.
+    question: |-
+      Which is the higher-leverage point, and why?
+    difficulty: hard
+    options:
+      - text: |-
+          A — copy tweaks are cheap, safe, and quick to ship
+        msg: |-
+          Notification copy is a shallow parameter — a small knob near the surface. It can nudge numbers slightly, but it doesn't change the fundamental reason people stay or leave. Most such tweaks 'barely register,' as the leverage lesson warned.
+      - text: |-
+          B — reaching value faster changes the structure
+        msg: |-
+          Right. Getting users to real value fast changes the structure that generates retention — it reshapes the whole experience, not a surface parameter. Higher-leverage points are usually about the goal, the structure, and the flows of value, not the wording of a notification.
+        correct: true
+      - text: |-
+          They're equal leverage points in practice
+        msg: |-
+          'Do both equally' ignores the core lesson: leverage is uneven. A few changes move everything while most barely register. Spreading effort evenly wastes your strongest lever on a weak one.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Systems Thinking
+    desc: |-
+      Seeing a product as a web of interconnected parts and feedback loops, rather than a list of isolated events — so you address causes, not symptoms.
+    application: |-
+      When the same problem keeps recurring, look for the structure producing it instead of handling each instance.
+  - category: |-
+      Model
+    title: |-
+      The Iceberg Model
+    desc: |-
+      Four levels beneath any event: events (what happened), patterns (the trend), structure (what causes the pattern), and mental models (the beliefs behind the structure).
+    application: |-
+      Repeated Monday crashes aren't an event problem — they're a structure problem (no capacity planning).
+  - category: |-
+      Loops
+    title: |-
+      Reinforcing Loop
+    desc: |-
+      A feedback loop where an effect amplifies its own cause — growth feeds growth, or decline feeds decline. The engine of virality and of death spirals.
+    application: |-
+      More reviews → better ranking → more buyers → more reviews. Protect these loops; they compound.
+  - category: |-
+      Loops
+    title: |-
+      Balancing Loop
+    desc: |-
+      A feedback loop that pushes the system back toward a target, resisting change. It creates stability — and stubborn plateaus.
+    application: |-
+      As a queue grows, response slows and new requests drop off, keeping the queue near a fixed size.
+  - category: |-
+      Action
+    title: |-
+      Leverage Point
+    desc: |-
+      A place in a system where a small, well-chosen change produces a large effect — usually by shifting structure or rules, not by pushing harder on symptoms.
+    application: |-
+      Changing the default option often moves behavior more than any amount of persuasion.
+  - category: |-
+      Caution
+    title: |-
+      Second-Order Effect
+    desc: |-
+      The downstream consequence of a change — the ripple that follows the first, immediate result and often matters more.
+    application: |-
+      First-order: close tickets faster. Second-order: unsolved issues re-open and total load rises.
+
+vocab:
+  - term: |-
+      Reinforcing Loop
+    define: |-
+      A Reinforcing Loop: feedback that amplifies itself, so growth feeds growth (or decline feeds decline).
+    clues:
+      - |-
+          I'm one of only two kinds of feedback loop.
+      - |-
+          I amplify — an effect feeds back to grow its own cause.
+      - |-
+          Viral growth and death spirals are both me at work.
+  - term: |-
+      Balancing Loop
+    define: |-
+      A Balancing Loop: feedback that pushes a system back toward a target, creating stability and plateaus.
+    clues:
+      - |-
+          I'm the other kind of feedback loop.
+      - |-
+          I resist change and push toward a target.
+      - |-
+          Like a thermostat, I keep a system near a set point.
+  - term: |-
+      Iceberg Model
+    define: |-
+      The Iceberg Model: events sit atop patterns, structure, and mental models — fix the deeper layers to stop the events.
+    clues:
+      - |-
+          I have four levels, and most of me is hidden.
+      - |-
+          My layers go events, patterns, structure, mental models.
+      - |-
+          I remind you the visible event is only my tip.
+  - term: |-
+      Leverage Point
+    define: |-
+      A Leverage Point: a spot where a small, well-placed change produces outsized effects.
+    clues:
+      - |-
+          I'm a place to push, but most aren't me.
+      - |-
+          A small change at me moves the whole system.
+      - |-
+          I usually live in a system's structure or rules, not its symptoms.
+  - term: |-
+      Second-Order Effect
+    define: |-
+      A Second-Order Effect: the downstream consequence of a change, beyond its immediate first result.
+    clues:
+      - |-
+          I show up a step after the obvious result.
+      - |-
+          I'm the ripple that often undoes the first win.
+      - |-
+          "Close tickets faster" then "issues re-open" — the second part is me.
+  - term: |-
+      Delay
+    define: |-
+      A Delay: the lag between an action and its effect, which hides causes and tempts overcorrection.
+    clues:
+      - |-
+          I sit between an action and its result.
+      - |-
+          I make cause and effect look unrelated.
+      - |-
+          A price change not hitting churn for months is me at work.

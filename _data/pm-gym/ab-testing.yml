@@ -1,0 +1,425 @@
+# PM Gym — ab-testing. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can design a valid A/B test, spot a statistical pitfall, or read a result honestly.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  A/B Testing Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A team wants to test a new checkout flow but only gets 50 visitors a week to that page.
+    question: |-
+      What's the concern?
+    difficulty: easy
+    options:
+      - text: |-
+          None, any traffic is enough to run a valid test
+        msg: |-
+          Extremely low traffic may make it impractically slow, or impossible, to reach a reliable sample size.
+      - text: |-
+          Low traffic may make it impractically slow to reach a reliable sample size
+        msg: |-
+          Right. Not every question needs to be answered by A/B testing. Consider a different validation method for this page.
+        correct: true
+      - text: |-
+          The concern is only that the test will look unprofessional
+        msg: |-
+          Professionalism isn't the issue — the concern is statistical, an underpowered test can't reliably detect a real effect.
+  - scenario: |-
+      A team runs a test with three different variants (A, B, and C) simultaneously, splitting traffic three ways.
+    question: |-
+      Is this a valid design?
+    difficulty: easy
+    options:
+      - text: |-
+          No — an A/B test can only ever have two variants
+        msg: |-
+          Multi-variant tests (sometimes called A/B/n) are a legitimate and common design.
+      - text: |-
+          Yes — valid if each variant changes the same single element
+        msg: |-
+          Right. The core rules (randomization, single tested element) still apply with more than two variants.
+        correct: true
+      - text: |-
+          No — three variants need exactly three times the traffic
+        msg: |-
+          It typically needs more traffic, but &quot;exactly three times&quot; isn't a fixed rule — it depends on effect size and desired confidence.
+  - scenario: |-
+      A test's control group gets the old checkout flow, and the variant group gets a new checkout flow that also happens to load on a faster server.
+    question: |-
+      What's the design problem?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — both groups are randomly assigned
+        msg: |-
+          Random assignment doesn't fix the problem if the groups differ in more than one way.
+      - text: |-
+          Flow and server speed both changed, so neither is isolated
+        msg: |-
+          Right. Server speed is now bundled in as a second, uncontrolled variable.
+        correct: true
+      - text: |-
+          The only problem is that faster servers are unfair to test
+        msg: |-
+          Faster servers aren't inherently unfair — the issue is that it's an uncontrolled extra variable.
+  - scenario: |-
+      A team observes their test's traffic split is landing at 62/38 instead of the intended 50/50.
+    question: |-
+      What should they do?
+    difficulty: easy
+    options:
+      - text: |-
+          Proceed with analysis as normal
+        msg: |-
+          A meaningfully skewed split signals something is broken in randomization or tracking, and can invalidate the results.
+      - text: |-
+          Investigate the sample ratio mismatch before trusting any result
+        msg: |-
+          Right. A skewed split is a red flag that something upstream is broken.
+        correct: true
+      - text: |-
+          Just double the traffic to the smaller group to balance it out artificially
+        msg: |-
+          Manually forcing the numbers to look balanced doesn't fix the underlying bug that caused the mismatch.
+  - scenario: |-
+      A test reaches p < 0.05 after just 200 total visitors, far below the pre-calculated sample size of 5,000.
+    question: |-
+      Should the team trust this early result?
+    difficulty: easy
+    options:
+      - text: |-
+          Yes — significance means the effect is real, whatever the size
+        msg: |-
+          Reaching significance early with far too few visitors is a classic sign the result may be noise.
+      - text: |-
+          Be cautious — significance on thin data is fragile
+        msg: |-
+          Right. Early significant results are much more prone to reverting with more data. Hitting significance far before the planned sample size is a sign the result might not be stable or trustworthy.
+        correct: true
+      - text: |-
+          It doesn't matter either way at this sample size
+        msg: |-
+          p-values are directly affected by sample size — a small-sample result is much less stable.
+  - scenario: |-
+      A redesigned homepage shows a 15% lift in signups during its first three days, then the lift shrinks to 2% by week three.
+    question: |-
+      What's the likely explanation?
+    difficulty: medium
+    options:
+      - text: |-
+          The redesign is failing and should be reverted now
+        msg: |-
+          A shrinking lift after a strong early spike is a classic sign of the novelty effect fading, not necessarily evidence the redesign is bad.
+      - text: |-
+          The novelty effect wearing off as users adjust
+        msg: |-
+          Right. 2% may still be a real, worthwhile improvement once the spike settles. Users reacted strongly to the new look at first, and that initial spike faded as it stopped feeling new.
+        correct: true
+      - text: |-
+          The test must have a sample ratio mismatch
+        msg: |-
+          Nothing describes an uneven split; a fading early lift over time is the signature of a novelty effect.
+  - scenario: |-
+      A PM wants to know "why" users prefer variant B over variant A, not just which one performs better.
+    question: |-
+      What should supplement the A/B test?
+    difficulty: medium
+    options:
+      - text: |-
+          Running the same test longer will reveal the why
+        msg: |-
+          A/B tests answer &quot;which&quot; performs better, not &quot;why&quot; — running it longer only strengthens confidence in the same &quot;which&quot; answer.
+      - text: |-
+          Qualitative research with users who chose variant B
+        msg: |-
+          Right. Quant tells you which won; qual tells you why. User interviews or session recordings — to understand the reasoning behind the quantitative result.
+        correct: true
+      - text: |-
+          Nothing — test results make the reason obvious already
+        msg: |-
+          A/B results show a measured difference, not the reasoning behind it.
+  - scenario: |-
+      A team pre-registers success criteria (95% confidence, minimum 3% lift) before running a test, then hits 95% confidence with only a 1% lift.
+    question: |-
+      What should they do?
+    difficulty: medium
+    options:
+      - text: |-
+          Ship it anyway
+        msg: |-
+          The pre-agreed bar also required a minimum 3% lift, which wasn't met — moving the goalposts undermines pre-registration.
+      - text: |-
+          Treat it as not meeting the pre-agreed bar
+        msg: |-
+          Right. The point of pre-registering criteria is to honor them even when the result is disappointing. The lift is real but too small to clear the success criteria set in advance.
+        correct: true
+      - text: |-
+          Lower the required lift to 1% retroactively so the test counts as a win
+        msg: |-
+          Retroactively lowering the bar after seeing the result is exactly the goalpost-moving pre-registration prevents.
+  - scenario: |-
+      A test is stopped at the pre-planned sample size, but the result shows the variant performing worse than control, with high confidence.
+    question: |-
+      Is this test a failure?
+    difficulty: medium
+    options:
+      - text: |-
+          Yes, any test with a negative result was a waste of time and resources
+        msg: |-
+          A well-run test with a clear negative result is valuable — it prevented shipping something that would have hurt the metric.
+      - text: |-
+          No — a well-designed test that clearly shows the variant underperforms is a successful test
+        msg: |-
+          Right. Success is about the process being trustworthy, not about the variant winning.
+        correct: true
+      - text: |-
+          It's only a success if the team reruns it until the variant wins
+        msg: |-
+          Rerunning until you get the answer you wanted is a form of peeking, not legitimate validation.
+  - scenario: |-
+      A team segments their test results and finds the variant won overall, but actually performed worse specifically for mobile users.
+    question: |-
+      What should the team do with this finding?
+    difficulty: medium
+    options:
+      - text: |-
+          Ignore the segment data — the overall result was positive
+        msg: |-
+          Ignoring a segment where the variant actively underperforms risks harming a meaningful subset of users.
+      - text: |-
+          Investigate why mobile behaves differently before shipping
+        msg: |-
+          Right. Segment-level results can reveal what the aggregate hides. The aggregate win might be masking a real harm to mobile users, worth understanding before a full rollout.
+        correct: true
+      - text: |-
+          Ship to everyone except mobile, with no further analysis
+        msg: |-
+          Excluding mobile without understanding why skips a chance to improve the design for everyone.
+  - scenario: |-
+      A stakeholder wants to run a test on a page that gets huge traffic but insists on ending it after just 6 hours because "we already have enough data."
+    question: |-
+      What's the concern, even with high traffic?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — high traffic makes results trustworthy immediately
+        msg: |-
+          Even with high traffic, very short durations can miss day-of-week variation or catch a temporary blip.
+      - text: |-
+          Six hours misses day-of-week and time-of-day variation
+        msg: |-
+          Right. Duration matters independently of raw traffic volume.
+        correct: true
+      - text: |-
+          The concern applies only to low-traffic pages
+        msg: |-
+          Duration-related risks apply regardless of traffic volume.
+  - scenario: |-
+      A team's variant wins with statistical significance, and someone proposes immediately testing five more small tweaks on top of it before locking in the winner.
+    question: |-
+      What's the risk with this plan?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — stacking more tweaks is additive and safe
+        msg: |-
+          Layering multiple new sequential tests before locking in the winner adds complexity and new chances for noise or confounded results.
+      - text: |-
+          Stacking untested changes destroys the single-variable read
+        msg: |-
+          Right. Lock in and ship the validated winner, then test the next change separately.
+        correct: true
+      - text: |-
+          The only risk is that it takes more calendar time
+        msg: |-
+          Time cost is a minor concern next to compounding structural problems.
+  - scenario: |-
+      A test's variant is a completely redesigned page with a new layout, new copy, new images, and a new checkout flow, all shipped as a single test.
+    question: |-
+      What's the core design flaw here?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — it's still compared against the original control
+        msg: |-
+          A valid comparison to control doesn't fix the deeper issue: no one can tell which bundled change drove the result.
+      - text: |-
+          Too many variables changed to learn what worked
+        msg: |-
+          Right. This is the classic multi-variable bundling problem, just at a larger scale. Even if the variant wins, there's no way to know which specific element drove the improvement.
+        correct: true
+      - text: |-
+          The only flaw is that redesigns should be shipped, not tested
+        msg: |-
+          Testing redesigns is entirely valid — the flaw here is bundling many changes into one variant.
+  - scenario: |-
+      A team wants to declare victory on a test that reached significance, but they never decided in advance how long to run it or how large a sample they needed.
+    question: |-
+      What's missing from their process?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Without a pre-planned sample size or duration, there's a much higher risk the team is essentially peeking.
+      - text: |-
+          A pre-registered sample size and test duration
+        msg: |-
+          Right. This is exactly the discipline that protects against peeking. Without them, the team can't know if they stopped early on noise.
+        correct: true
+      - text: |-
+          A larger team of stakeholders to approve the result
+        msg: |-
+          More approvers doesn't fix a structural gap in the test's statistical design.
+  - scenario: |-
+      A test shows a statistically significant result, and a PM says "ship it" without checking whether the lift is large enough to justify the engineering cost of maintaining two code paths going forward.
+    question: |-
+      What step did the PM skip?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Statistical significance says the effect is probably real; it says nothing about whether it's big enough to justify the ongoing cost.
+      - text: |-
+          Weighing practical significance
+        msg: |-
+          Right. This is exactly the gap between statistical and practical significance. Whether the size of the effect justifies the real cost of implementing and maintaining the change.
+        correct: true
+      - text: |-
+          Running the test for a second time to double-check
+        msg: |-
+          Rerunning isn't the missing step — the gap is about weighing cost against effect size.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      A/B Testing
+    desc: |-
+      Randomly splitting traffic between a control (A) and a variant (B) to compare their effect on a chosen metric.
+    application: |-
+      Use it for isolated, well-defined changes with enough traffic to reach a reliable result.
+  - category: |-
+      Design
+    title: |-
+      Control Group
+    desc: |-
+      The unchanged version (A) that a variant is compared against, so any difference can be attributed to the change.
+    application: |-
+      Always keep a control group — without one, you can't tell if a result reflects the change or just normal variation over time.
+  - category: |-
+      Design
+    title: |-
+      Single Variable
+    desc: |-
+      Changing exactly one thing between control and variant, so any observed difference can be attributed to that one change.
+    application: |-
+      If you want to test a headline and a button color, run two separate tests, not one combined test.
+  - category: |-
+      Statistics
+    title: |-
+      Statistical Significance
+    desc: |-
+      Your confidence that an observed difference is real rather than random noise.
+    application: |-
+      A common threshold is p < 0.05: if there were truly no difference, you'd see a gap this big under 5% of the time by chance.
+  - category: |-
+      Pitfall
+    title: |-
+      Peeking
+    desc: |-
+      Checking a test's results early and repeatedly, then stopping as soon as it looks significant, which inflates false positives.
+    application: |-
+      Decide the sample size and duration in advance, and don't stop the test the moment it first looks like a win.
+  - category: |-
+      Pitfall
+    title: |-
+      Novelty Effect
+    desc: |-
+      A temporary lift caused by users reacting to anything new, which fades once the change stops feeling new.
+    application: |-
+      Run tests long enough to see past the initial spike before declaring a permanent winner.
+
+vocab:
+  - term: |-
+      Control Group
+    define: |-
+      Control Group: the unchanged version (A) in an A/B test that a variant is compared against.
+    clues:
+      - |-
+          I'm the unchanged version in a test.
+      - |-
+          The variant gets compared against me.
+      - |-
+          Without me, you can't tell if a result is real.
+  - term: |-
+      Statistical Significance
+    define: |-
+      Statistical Significance: a measure of how likely an observed difference reflects a real effect rather than random chance.
+    clues:
+      - |-
+          I tell you how likely a result is due to chance.
+      - |-
+          p < 0.05 is a common threshold for me.
+      - |-
+          I don't tell you if an effect is big enough to matter.
+  - term: |-
+      Peeking
+    define: |-
+      Peeking: checking a test's results early and repeatedly, then stopping as soon as it appears significant — which inflates false positives.
+    clues:
+      - |-
+          I happen when you check results too often.
+      - |-
+          Stopping a test the moment I look good inflates false positives.
+      - |-
+          Avoiding me means committing to a sample size and duration in advance.
+  - term: |-
+      Novelty Effect
+    define: |-
+      Novelty Effect: a temporary lift caused by users reacting to anything new, which fades as the change stops feeling new.
+    clues:
+      - |-
+          I make any new thing look good, briefly.
+      - |-
+          I fade once something stops feeling new.
+      - |-
+          I can trick a team into declaring an early, temporary winner.
+  - term: |-
+      Sample Ratio Mismatch
+    define: |-
+      Sample Ratio Mismatch: when the actual traffic split between variants doesn't match what was intended, signaling a broken test setup.
+    clues:
+      - |-
+          I show up when the split isn't actually what it was supposed to be.
+      - |-
+          50/50 planned but 60/40 observed is a sign of me.
+      - |-
+          I mean something in the test setup is broken.
+  - term: |-
+      Practical Significance
+    define: |-
+      Practical Significance: whether an effect, even if statistically real, is large enough to be worth the cost of acting on.
+    clues:
+      - |-
+          I'm not the same thing as statistical significance.
+      - |-
+          I ask if an effect is big enough to be worth acting on.
+      - |-
+          A 'significant' result can still fail me if the effect is tiny.

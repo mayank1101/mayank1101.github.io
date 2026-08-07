@@ -1,0 +1,425 @@
+# PM Gym — decoding-growth. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can see past a vanity growth number to the retention, activation, and sustainability underneath.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Decoding Growth Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A dashboard proudly shows "cumulative registered users" crossing 5 million, and leadership calls it proof of strong growth.
+    question: |-
+      What should you check before agreeing?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Cumulative registrations only ever rise and say nothing about how many of those users are still active. It can climb while the product is quietly dying.
+      - text: |-
+          How many of those users are still active
+        msg: |-
+          Right. Growth is about the living, active base, not an all-time count that can't fall. Check active users and retention behind the headline number. Cumulative registrations can rise even as the active base shrinks.
+        correct: true
+      - text: |-
+          Whether the number should be even higher by now
+        msg: |-
+          Debating the target ignores the real issue: the metric itself can't tell you whether growth is healthy.
+  - scenario: |-
+      Signups are up 40% this quarter, but 6-month retention dropped from 30% to 18% over the same period.
+    question: |-
+      How should you read this together?
+    difficulty: easy
+    options:
+      - text: |-
+          A great quarter — signups are what count
+        msg: |-
+          Rising signups next to falling retention is a leaky bucket getting leakier. You're acquiring more users into a product that keeps fewer of them.
+      - text: |-
+          A warning — the bucket is leaking faster
+        msg: |-
+          Right. The two numbers pull in opposite directions. Without fixing retention, the extra acquisition mostly leaks back out. Acquisition is masking worsening retention; more users are arriving but a smaller share stays.
+        correct: true
+      - text: |-
+          Retention doesn't matter while acquisition outpaces it
+        msg: |-
+          Out-acquiring churn temporarily hides the leak, but it's expensive and fragile — the moment acquisition slows, the shrinking base is exposed.
+  - scenario: |-
+      Analysis shows most new users sign up but never complete the one setup step that unlocks the product's core value.
+    question: |-
+      Which AARRR stage needs the most attention?
+    difficulty: easy
+    options:
+      - text: |-
+          Acquisition
+        msg: |-
+          Acquisition is working; users are signing up. Pouring more people into a step where they get stuck just wastes more acquisition.
+      - text: |-
+          Activation
+        msg: |-
+          Right. The drop is between signup and first value — a classic activation problem. That's where the leverage is. Users arrive but never reach the first value moment, so fix the path to that &quot;aha.&quot;.
+        correct: true
+      - text: |-
+          Revenue
+        msg: |-
+          Charging users who haven't even reached value yet will worsen the drop-off, not fix it.
+  - scenario: |-
+      A PM argues: "Retention is a nice-to-have; our real job is filling the top of the funnel."
+    question: |-
+      What's the strongest counter?
+    difficulty: easy
+    options:
+      - text: |-
+          Agree — top-of-funnel volume is the real lever
+        msg: |-
+          Treating retention as optional is the treadmill trap: without it, every user you acquire eventually leaks out and must be re-acquired.
+      - text: |-
+          Retention is the engine, not the nice-to-have
+        msg: |-
+          Right. Retention is what lets new cohorts stack instead of replace. Neglect it and the funnel top has to work harder every quarter just to hold steady. Without it, acquisition never accumulates, so you pay forever just to stay flat.
+        correct: true
+      - text: |-
+          Both matter equally — split effort 50/50
+        msg: |-
+          A fixed split ignores where the actual leak is. If retention is the bottleneck, that's where disproportionate effort belongs.
+  - scenario: |-
+      Two cohorts: January's retention curve flattens at 22%; June's keeps sliding toward zero.
+    question: |-
+      What does this comparison tell you?
+    difficulty: easy
+    options:
+      - text: |-
+          June is fine
+        msg: |-
+          A curve heading to zero doesn't spontaneously flatten with time; something changed for June's users that's driving them all out.
+      - text: |-
+          Something worsened for June's cohort
+        msg: |-
+          Right. Comparing cohort curves reveals whether recent changes helped or hurt the core retention that growth depends on. June needs investigation. A flattening curve (January) signals a durable base, a curve to zero (June) doesn't.
+        correct: true
+      - text: |-
+          Nothing meaningful
+        msg: |-
+          The difference between flattening and sliding-to-zero is exactly the signal cohort analysis exists to surface; it's far from noise.
+  - scenario: |-
+      A startup grows 20% month over month, entirely from paid ads, with CAC creeping up and retention low.
+    question: |-
+      What's the risk in this growth?
+    difficulty: medium
+    options:
+      - text: |-
+          None — 20% monthly growth is excellent by any standard
+        msg: |-
+          The rate looks great, but it's entirely rented: pause spend and it stops. Rising CAC plus low retention means the economics are quietly deteriorating.
+      - text: |-
+          It's bought growth on a leaky bucket
+        msg: |-
+          Right. Growth with no earned engine and worsening unit economics is fragile; it can look healthy right up until the cash or the CAC math runs out. It stops if spend stops, and rising CAC with low retention can make each customer unprofitable.
+        correct: true
+      - text: |-
+          The only issue is not advertising on enough channels
+        msg: |-
+          Adding channels scales the dependency and the burn; it doesn't create the retention or earned loop the business is missing.
+  - scenario: |-
+      A team wants to boost referral (the second R) but users churn within a week of signing up.
+    question: |-
+      What should come first?
+    difficulty: medium
+    options:
+      - text: |-
+          Push referral hard now
+        msg: |-
+          Users who churn in a week won't refer anyone, and any they do drag in will churn too. You'd be amplifying a leak.
+      - text: |-
+          Fix retention and activation first
+        msg: |-
+          Right. Referral compounds a product people love; it can't rescue one they leave. Earlier AARRR stages have to work before the later ones pay off. Users who don't stick won't refer, and referrals of a leaky product just leak too.
+        correct: true
+      - text: |-
+          Referral and retention are unrelated, so work on referral in isolation
+        msg: |-
+          They're tightly linked — referrals come from retained, satisfied users. A referral push on top of bad retention wastes effort.
+  - scenario: |-
+      Leadership celebrates that revenue doubled, but it came from doubling discount-driven signups who mostly cancel after the first month.
+    question: |-
+      What's the concern?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — doubled revenue is a clear win
+        msg: |-
+          One-month discount-driven revenue that then cancels is a spike, not durable growth. It can flatter a quarter while the retained base barely moves.
+      - text: |-
+          The revenue isn't durable past month one
+        msg: |-
+          Right. Revenue from users who immediately leave is closer to a one-time promotion than to growth. Check retained revenue, not just the headline spike. Discount-acquired users who churn fast inflate a short-term number without building a retained base.
+        correct: true
+      - text: |-
+          Double the discount again next quarter to repeat it
+        msg: |-
+          Repeating the discount repeats the churn and trains users to wait for deals, eroding both margin and durable retention.
+  - scenario: |-
+      A PM says the "aha moment" for their note-taking app is "a user creates their third note."
+    question: |-
+      Why is identifying this moment useful for growth?
+    difficulty: medium
+    options:
+      - text: |-
+          It isn't
+        msg: |-
+          The activation/aha moment is highly practical: it's the concrete milestone that predicts whether a user sticks, which makes it a design target.
+      - text: |-
+          It defines a concrete activation target
+        msg: |-
+          Right. Once you know the behavior that predicts retention, you can redesign onboarding to get users to it faster, directly improving activation and downstream retention. Getting more new users to reach that moment quickly should lift retention.
+        correct: true
+      - text: |-
+          It only matters for marketing copy, not the product
+        msg: |-
+          It's primarily a product and onboarding target — the whole point is steering new users toward that value moment inside the product.
+  - scenario: |-
+      A growth team optimizes a signup-page button color for weeks and gets a 2% signup lift, while activation and retention go untouched.
+    question: |-
+      What's the strategic critique?
+    difficulty: medium
+    options:
+      - text: |-
+          None — any signup lift is good use of time
+        msg: |-
+          A small top-of-funnel tweak while the leaky middle is ignored is local optimization; the extra signups mostly leak out at activation and retention anyway.
+      - text: |-
+          They're polishing the top of a leaky bucket
+        msg: |-
+          Right. The biggest leverage is where the biggest leak is. A 2% signup gain feeding a bucket that loses most users is a small return on weeks of effort. Effort would compound more by fixing activation or retention, where users are actually lost.
+        correct: true
+      - text: |-
+          Button color is the single most important growth lever there is
+        msg: |-
+          Micro-optimizations can matter at scale, but treating one as the top lever while ignoring activation and retention misreads where growth is won or lost.
+  - scenario: |-
+      A subscription app has healthy retention but almost no new users are arriving.
+    question: |-
+      Which part of the growth system is the bottleneck here?
+    difficulty: hard
+    options:
+      - text: |-
+          Retention
+        msg: |-
+          Retention is explicitly healthy in this scenario; inventing a hidden retention problem ignores the stated facts.
+      - text: |-
+          Acquisition
+        msg: |-
+          Right. A well-retaining product with no inflow starves. Here the leak is fixed but the tap is barely on — acquisition is the constraint. The product keeps users well, but too few are entering the top of the system.
+        correct: true
+      - text: |-
+          Revenue
+        msg: |-
+          Pricing doesn't bring new users to the top of the funnel; if anything, raising prices narrows acquisition further.
+  - scenario: |-
+      A founder equates "growth" strictly with "month-over-month new user count."
+    question: |-
+      How would you broaden this definition usefully?
+    difficulty: hard
+    options:
+      - text: |-
+          Keep it as-is
+        msg: |-
+          New-user count alone is exactly the acquisition-only trap; it can rise while the active, paying, retained base shrinks.
+      - text: |-
+          Frame growth as the net system
+        msg: |-
+          Right. A fuller definition (the AARRR system) captures whether users actually stay and pay, which new-user count alone hides. Acquisition, activation, retention, referral, and revenue together — not just new users.
+        correct: true
+      - text: |-
+          Redefine growth as revenue only, ignoring users entirely
+        msg: |-
+          Swapping one single-number definition for another just moves the blind spot; revenue alone can also be inflated by unsustainable, churning sources.
+  - scenario: |-
+      A team considers pouring its entire budget into a viral referral campaign for a product with a weak, confusing first-time experience.
+    question: |-
+      What's the flaw?
+    difficulty: hard
+    options:
+      - text: |-
+          None — virality is the fastest path to growth for any product
+        msg: |-
+          Virality amplifies whatever exists. On a product with a weak first experience, it amplifies churn — invited users bounce at activation just like organic ones.
+      - text: |-
+          A referral push amplifies a broken activation experience
+        msg: |-
+          Right. Loops and referrals multiply a working product; they multiply the leak in a broken one. Fix the first-time experience before amplifying it. You'd invite more users into a product that fails them at first touch.
+        correct: true
+      - text: |-
+          Referral campaigns never work, so the budget is wasted regardless
+        msg: |-
+          Referral can be powerful — but only on a product people already have a good first experience with. The flaw is sequencing, not referral itself.
+  - scenario: |-
+      Growth has been flat for two quarters. Acquisition and activation both look strong in the data.
+    question: |-
+      Where should you look next?
+    difficulty: hard
+    options:
+      - text: |-
+          Add more acquisition channels
+        msg: |-
+          Acquisition already looks strong; piling on more inflow into a system leaking further down just spends more to stay flat.
+      - text: |-
+          Retention and churn
+        msg: |-
+          Right. When the top of the system is healthy but net growth isn't, the leak is downstream. Follow the cohort retention curves to find where users drop. If inflow and activation are strong but growth is flat, users are likely leaking out later in their lifecycle.
+        correct: true
+      - text: |-
+          Conclude growth is simply impossible for this product
+        msg: |-
+          Flat growth with strong acquisition and activation points to a fixable retention leak, not an impossible product.
+  - scenario: |-
+      A PM proposes judging the growth team purely on "new signups this month."
+    question: |-
+      What behavior might this incentive accidentally encourage?
+    difficulty: hard
+    options:
+      - text: |-
+          None — signups is a perfectly safe metric to be judged on
+        msg: |-
+          Rewarding signups alone invites gaming the top of the funnel — chasing low-quality, low-intent, or discount-driven users who inflate the number and then churn.
+      - text: |-
+          Chasing low-quality signups that inflate the number but churn fast
+        msg: |-
+          Right. Incentives shape behavior; a signup-only target rewards volume over value and can actively worsen retention. Pair it with activation and retention goals. Optimizing the metric while net growth stalls.
+        correct: true
+      - text: |-
+          It would guarantee the healthiest possible growth
+        msg: |-
+          A single top-of-funnel target is one of the easiest metrics to game at the expense of the durable growth you actually want.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Growth
+    desc: |-
+      The net effect of users coming in (acquisition) and users leaving (churn) — not just the count of new signups.
+    application: |-
+      When a growth number looks good, always ask what's happening to retention underneath it.
+  - category: |-
+      Model
+    title: |-
+      The Leaky Bucket
+    desc: |-
+      A metaphor: acquisition pours users into a bucket while churn leaks them out. If the holes are big, pouring faster barely raises the level.
+    application: |-
+      Before spending more on acquisition, check whether you're pouring into a leaky bucket — patch retention first.
+  - category: |-
+      Framework
+    title: |-
+      AARRR (Pirate Metrics)
+    desc: |-
+      Five growth stages: Acquisition, Activation, Retention, Referral, Revenue — each a place to measure and improve.
+    application: |-
+      Diagnose where growth breaks by finding which AARRR stage has the biggest drop-off.
+  - category: |-
+      Stage
+    title: |-
+      Activation
+    desc: |-
+      The user's first real value moment — the "aha" where the product clicks — distinct from merely signing up.
+    application: |-
+      A big gap between signups and activated users means people arrive but the product never clicks; fix the first-value experience.
+  - category: |-
+      Engine
+    title: |-
+      Retention
+    desc: |-
+      Whether users keep coming back over time. A flattening retention curve is a strong product-market-fit signal and the engine that makes growth compound.
+    application: |-
+      Plot retention by cohort; a curve that flattens (vs. sliding to zero) means each new cohort stacks onto a durable base.
+  - category: |-
+      Discipline
+    title: |-
+      Earned vs. Bought Growth
+    desc: |-
+      Earned growth (retention, referral, loops) keeps working after you stop pushing; bought growth (paid ads) stops the moment spend stops.
+    application: |-
+      Treat paid acquisition as fuel, not the engine — and only run it while a customer is worth more than they cost to acquire.
+
+vocab:
+  - term: |-
+      Leaky Bucket
+    define: |-
+      The Leaky Bucket: a metaphor where acquisition pours users in while churn leaks them out, so growth stalls unless retention holds them.
+    clues:
+      - |-
+          I'm a metaphor about pouring water and losing it.
+      - |-
+          My holes are churn; my inflow is acquisition.
+      - |-
+          Pour faster into me and the level barely rises.
+  - term: |-
+      AARRR
+    define: |-
+      AARRR (Pirate Metrics): five growth stages — Acquisition, Activation, Retention, Referral, Revenue — each a place to measure and improve.
+    clues:
+      - |-
+          My nickname involves pirates.
+      - |-
+          My five letters are stages of growth.
+      - |-
+          Acquisition and Activation are my first two.
+  - term: |-
+      Activation
+    define: |-
+      Activation: the user's first real value moment, distinct from simply signing up or arriving.
+    clues:
+      - |-
+          I'm a first, not a repeat.
+      - |-
+          I'm the "aha" moment where the product clicks.
+      - |-
+          Signing up isn't me — reaching real value is.
+  - term: |-
+      Retention Curve
+    define: |-
+      Retention Curve: the percentage of a signup cohort still active over time — a flattening curve signals a durable base and product-market fit.
+    clues:
+      - |-
+          I'm a line that falls over time.
+      - |-
+          If I flatten, you have a durable base; if I hit zero, you don't.
+      - |-
+          My flattening is a product-market-fit signal.
+  - term: |-
+      Sustainable Growth
+    define: |-
+      Sustainable (Earned) Growth: growth driven by the product itself — retention, referral, loops — that persists after active spending stops.
+    clues:
+      - |-
+          I keep working after you stop pushing.
+      - |-
+          I come from retention, referral, and loops, not paid ads alone.
+      - |-
+          I'm earned, not rented.
+  - term: |-
+      Churn
+    define: |-
+      Churn: the rate at which users stop using a product — the outflow that acquisition has to outrun for growth to happen.
+    clues:
+      - |-
+          I'm the outflow, not the inflow.
+      - |-
+          I'm the holes in the leaky bucket.
+      - |-
+          Lower me and the same acquisition fills the bucket faster.

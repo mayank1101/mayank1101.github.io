@@ -1,0 +1,425 @@
+# PM Gym — user-research. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 research situations with realistic constraints — sharpening objectives, choosing methods, recruiting well, asking clean questions, and sharing findings. Pick the move a disciplined researcher makes, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  User Research Flashcards
+flashcards_blurb: |-
+  Six cards — the process plus one per step. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Your manager says: 'Go do some user research on our new dashboard.' Nothing more specific.
+    question: |-
+      What's your first move?
+    difficulty: easy
+    options:
+      - text: |-
+          Book ten user interviews while calendars are open
+        msg: |-
+          Interviews without a question produce pleasant conversations and vague notes. Method is step two — something has to come first.
+      - text: |-
+          Sharpen the objective: what decision hangs on this?
+        msg: |-
+          'Go learn stuff' becomes 'find out why weekly dashboard usage is flat, to decide between redesign and onboarding'. Now the whole 5-step plan writes itself.
+        correct: true
+      - text: |-
+          Send a satisfaction survey to all dashboard users
+        msg: |-
+          A method chosen before the question exists — a hammer looking for nails. If the question turns out to be a 'why', the survey was the wrong tool anyway.
+  - scenario: |-
+      You have one week and almost no budget to find out whether people can complete checkout in your new app.
+    question: |-
+      What do you do?
+    difficulty: easy
+    options:
+      - text: |-
+          Survey 500 people about the new checkout design
+        msg: |-
+          'Can they use it?' is answered by watching, not asking. Opinions about a design don't reveal where real fingers stumble on real tasks.
+      - text: |-
+          Five usability tests, fix, then five more on the fix
+        msg: |-
+          Five users find most serious usability issues, and two quick rounds beat one big one. A week and a handful of gift cards is genuinely enough.
+        correct: true
+      - text: |-
+          Ship it and A/B test variants in production
+        msg: |-
+          No month available — and an A/B test tells you which variant converts better, not *why* people fail. For diagnosis on a deadline, watch five humans try.
+  - scenario: |-
+      A teammate proposes validating a new feature idea by surveying your most engaged power users: 'They know the product best.'
+    question: |-
+      What's the problem?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — power users know the product best
+        msg: |-
+          They give the most *expert* feedback — which is the bias. Power users crave advanced capability and love you already; both push the answer toward 'build it'.
+      - text: |-
+          Sampling bias — power users aren't the target segment
+        msg: |-
+          Recruit for the question, not for convenience. Asking your fans whether to build more is how feature bloat gets 'validated'.
+        correct: true
+      - text: |-
+          The sample is too small to draw conclusions
+        msg: |-
+          Adding more of the wrong respondents doesn't fix bias, it dilutes it at best. The fix is *who* you ask (the target segment) and *what* you trust (behavior over stated intent).
+  - scenario: |-
+      Your question is "How many of our users would use a dark mode, and how strongly do they want it?" A researcher plans five in-depth interviews.
+    question: |-
+      Is the method a good fit?
+    difficulty: easy
+    options:
+      - text: |-
+          Yes — interviews are always the richest method
+        msg: |-
+          Five interviews are great for 'why' and 'how,' but this is a 'how many / how strongly' question — a matter of scale across the whole base. Five people can't tell you what proportion of thousands want dark mode; you'd be answering a quantitative question with a qualitative tool.
+      - text: |-
+          No — scale questions need a survey or analytics
+        msg: |-
+          Right. Match the method to the question type. 'How many / how strongly' is a quantitative question, so use a survey or analytics to measure demand across the whole audience. Interviews would be the right tool for a 'why do people want dark mode' question — but not for sizing demand. Pick the survey here (optionally a few interviews first to word it well).
+        correct: true
+      - text: |-
+          Almost — five interviews just needs more depth
+        msg: |-
+          Adding more interviews (say 20) still can't reliably estimate what fraction of a large user base wants dark mode — and it's slow and expensive for a sizing question. The issue is method-question mismatch, not interview count.
+  - scenario: |-
+      A usability test is scheduled with 50 participants to "be statistically valid," which will take a month to run and analyze.
+    question: |-
+      What's the more efficient approach?
+    difficulty: easy
+    options:
+      - text: |-
+          Keep all 50 for statistical validity
+        msg: |-
+          Usability testing isn't about statistical significance — it's about spotting problems. Around five users surface the large majority of serious usability issues; 50 mostly re-confirm the same problems at 10x the cost and time, delaying the fixes.
+      - text: |-
+          Run five users, fix, then test five more
+        msg: |-
+          Right. For finding usability problems, about five users reveals most serious issues. The efficient pattern is small, fast rounds: test five, fix the worst problems, test five more on the improved version. You learn faster and ship fixes sooner than a single 50-person study that just documents the same issues repeatedly. Save large samples for quantitative questions (surveys, A/B tests), not usability discovery.
+        correct: true
+      - text: |-
+          Cut it to 25 to halve the timeline
+        msg: |-
+          Cutting to 25 still misunderstands the goal — usability testing finds problems, and ~5 users already catch most of them. Halving an oversized sample is better but still slower and costlier than iterative rounds of five.
+  - scenario: |-
+      To study why users churn, a PM recruits from the list of users who are still actively subscribed, because "they're the easiest to contact through the app."
+    question: |-
+      What's the recruiting error?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — active users can explain churn well enough
+        msg: |-
+          Current subscribers haven't churned, so they can only speculate about why others leave — and speculation about other people's behavior is among the weakest data there is. Convenience (easy to reach in-app) drove the choice, not fit to the question.
+      - text: |-
+          They recruited the wrong segment
+        msg: |-
+          Right. To study churn you must recruit people who actually churned — they hold the real memory of the cancellation moment and its cause. Current subscribers are a convenience sample that can't answer the question; they'd only guess about others. Recruit for the behavior you're studying (recent cancellers), even though they're harder to reach, and offer a small incentive to get honest strangers.
+        correct: true
+      - text: |-
+          The sample is just too small; add more current subscribers
+        msg: |-
+          The sample size isn't the core issue — even 100 current subscribers can't tell you why churned users left. The error is who was recruited (a convenient but wrong segment), not how many.
+  - scenario: |-
+      In a usability test, the moderator says before each task: "This next part is really easy and intuitive, you'll love it."
+    question: |-
+      Why does this ruin the test?
+    difficulty: medium
+    options:
+      - text: |-
+          It doesn't — it just relaxes the participant
+        msg: |-
+          Priming the participant that something is 'easy and intuitive' biases them: they'll blame themselves when they struggle and under-report problems to avoid contradicting the moderator. You've contaminated the very behavior you're trying to observe.
+      - text: |-
+          It primes success, so struggles get hidden
+        msg: |-
+          Right. Calling a task 'easy and intuitive' primes participants to expect success, so when they struggle they assume it's their fault and stay quiet — masking real usability problems. The moderator should give a neutral task ('purchase a pair of shoes') and then stay silent, letting the participant's genuine struggle show. Never signal the expected outcome or your own pride in the design. Masking the exact problems the test should reveal.
+        correct: true
+      - text: |-
+          It wastes a few seconds before each task
+        msg: |-
+          The issue isn't wasted time — it's that the reassurance actively biases the results. A neutrally-run test of the same length would produce trustworthy data; this one produces contaminated data at any length.
+  - scenario: |-
+      A stakeholder wants to run research to "prove that users want the feature we've already decided to build."
+    question: |-
+      What's wrong with this framing?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — research should confirm the team's direction
+        msg: |-
+          Research framed to 'prove' a predetermined conclusion isn't research — it's a search for supporting evidence, guaranteed to find some. It has confirmation bias built into the objective, so its findings can't be trusted to guide the decision.
+      - text: |-
+          It bakes confirmation bias into the objective
+        msg: |-
+          Right. A study designed to 'prove' a foregone conclusion bakes in confirmation bias — you'll cherry-pick questions, participants, and quotes that agree, and dismiss those that don't. Honest research asks an open question ('should we build this, and what do users actually need here?') and is genuinely willing to hear 'no.' Reframe the objective to be falsifiable — 'what would tell us this feature is the wrong bet?' — or the exercise is theater.
+        correct: true
+      - text: |-
+          It just needs a bigger, more representative sample
+        msg: |-
+          The problem isn't the sample size or method — it's the objective itself. Any study aimed at proving a predetermined answer is compromised from the start, no matter how many people you talk to or how you talk to them.
+  - scenario: |-
+      During an interview, a user goes quiet for eight seconds after you ask about their last frustrating experience. The interviewer feels awkward and jumps in with "was it the loading speed?"
+    question: |-
+      What did the interviewer do wrong?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — the pause needed filling
+        msg: |-
+          Filling the silence — especially with a specific guess ('was it the loading speed?') — both cut off the user's own answer and led them toward the interviewer's hypothesis. The best material often comes right after an uncomfortable pause; jumping in destroys it.
+      - text: |-
+          Broke a productive silence and led with a guess
+        msg: |-
+          Right. Two mistakes: breaking a productive silence, and leading with a specific guess. Silence is uncomfortable but powerful — people fill it with the real, unrehearsed answer if you let them. And 'was it the loading speed?' plants a candidate cause the user may just agree with. The move is to wait, then if needed prompt neutrally: 'take your time — what comes to mind?' Let them supply the answer. Waiting quietly (or prompting neutrally) would have let the user surface the real answer themselves.
+        correct: true
+      - text: |-
+          The interview was dragging; speeding it up was right
+        msg: |-
+          The interview wasn't 'moving too slowly' — the pause was working. Eight seconds of silence is normal and valuable in interviews; the error was interrupting it with a leading guess, not the pace.
+  - scenario: |-
+      You need to decide between two onboarding designs. You have live traffic and can measure which one leads to more completed setups.
+    question: |-
+      Which method best answers 'which is better?'
+    difficulty: medium
+    options:
+      - text: |-
+          Survey users on which design they prefer
+        msg: |-
+          Asking users which design they prefer measures stated opinion, which often diverges from real behavior. For a 'which performs better' question where you have live traffic, you can measure actual behavior instead of relying on preferences.
+      - text: |-
+          Run an A/B test on the live traffic
+        msg: |-
+          Right. 'Which is better?' with live traffic is a textbook A/B test: randomly show each design to a slice of real users and compare the behavior that matters (completed setups). This gives behavioral evidence, sidestepping the say/do gap that plagues preference surveys. Interviews or usability tests would help you understand WHY one wins, but to decide WHICH performs better, measure it. Split live traffic between the two and compare completed setups, giving behavioral proof instead of opinions.
+        correct: true
+      - text: |-
+          Ask colleagues which one looks better
+        msg: |-
+          Having a few colleagues pick 'looks better' is a tiny, biased opinion sample and measures aesthetics, not the outcome (completed setups). With live traffic available, you can get real behavioral data via an A/B test instead.
+  - scenario: |-
+      Leadership wants "big, statistically-significant research" before any decision, but you have a small user base and a one-week deadline for a design choice.
+    question: |-
+      What's the pragmatic, honest approach?
+    difficulty: hard
+    options:
+      - text: |-
+          Do no research
+        msg: |-
+          Refusing to research at all because you can't hit statistical significance throws away the fast, cheap qualitative methods that are perfect for a one-week design decision. Some evidence beats none, and design choices rarely need statistical power.
+      - text: |-
+          Match rigor to the decision
+        msg: |-
+          Right. Match the rigor to the decision. A design choice usually needs directional evidence, not statistical significance — so run a handful of usability tests or interviews this week to catch the big problems, and be transparent that it's qualitative and directional. Reserve large, statistically-powered studies for high-stakes, quantitative questions (pricing, big bets). Small, fast, honest research now beats a rigorous study delivered after the deadline.
+        correct: true
+      - text: |-
+          Pad the numbers to make the sample look bigger than it is
+        msg: |-
+          Faking a large sample or overstating confidence to satisfy leadership is dishonest and dangerous — it lends false authority to weak data. The right move is to run appropriate small-sample research and clearly frame what it can and can't tell you.
+  - scenario: |-
+      A researcher recruits participants for a study on a professional accounting tool by posting in a general "make money online" forum, because it was quick and free.
+    question: |-
+      What's the risk?
+    difficulty: hard
+    options:
+      - text: |-
+          No risk
+        msg: |-
+          A general 'make money online' forum won't reliably contain professional accountants — the actual users of the tool. You'll get people who don't do the job, may fake qualifications for the incentive, and can't speak to the real workflow. Free and fast recruited the wrong people.
+      - text: |-
+          The channel attracts the wrong people
+        msg: |-
+          Right. The channel determines the sample. A general money-making forum is unlikely to contain real professional accountants and may attract people who misrepresent themselves to earn the incentive. You'd get confident-sounding but irrelevant (or fabricated) input about a specialized workflow. Recruit through channels where the actual target users are (professional bodies, accounting communities) and screen by verified behavior, even if it's slower and costs more.
+        correct: true
+      - text: |-
+          Just offer a bigger incentive to attract better participants there
+        msg: |-
+          Raising the incentive on a mis-targeted channel makes things worse — it attracts more people to misrepresent themselves to qualify. The problem is the channel and lack of screening, not the reward size.
+  - scenario: |-
+      After great interviews, a PM emails stakeholders a 40-page report with every transcript. Two weeks later, the roadmap decision ignored all of it.
+    question: |-
+      What's the synthesis-and-share failure?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — thoroughness is what stakeholders want
+        msg: |-
+          A 40-page transcript dump outsources synthesis to busy stakeholders who won't do it — so the research effectively didn't reach the decision. Thoroughness isn't the goal; influence on the decision is.
+      - text: |-
+          Synthesis was skipped and outsourced to readers
+        msg: |-
+          Right. Synthesis is the researcher's job, not the reader's. A wall of transcripts means no one extracts the insights, so the decision proceeds on gut. Instead, distill to a few sharp insight statements, back each with a short clip or quote, and present them live in the meeting where the roadmap is decided. Make the findings impossible to skim past — especially when they challenge the plan.
+        correct: true
+      - text: |-
+          The report was too brief — add detail and resend
+        msg: |-
+          The report being 'too short' is the opposite of the problem — it was 40 pages. Adding more would bury the findings deeper. The failure is not synthesizing and not delivering the insights where the decision happens.
+  - scenario: |-
+      You want to understand the real workflow of warehouse pickers, but you plan to interview them over video calls during their lunch break.
+    question: |-
+      What might a better method capture that interviews miss?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — a video interview captures the workflow fine
+        msg: |-
+          A lunch-break video interview relies on pickers accurately recalling and describing a fast, physical, habitual workflow — which people are notoriously bad at. They'll skip the workarounds and friction they've stopped noticing. There's a method that captures what interviews miss here.
+      - text: |-
+          A field study on the warehouse floor
+        msg: |-
+          Right. For understanding an in-context physical workflow, a field study / contextual inquiry — observing pickers actually working in the warehouse — reveals the real behavior, the workarounds, and the environmental friction that people forget to mention in an interview. Watching beats asking for habitual, embodied tasks. Interviews away from the setting miss the tacit details; go see the work where it happens.
+        correct: true
+      - text: |-
+          Swap the interviews for a survey to reach more pickers
+        msg: |-
+          Sending a survey instead trades one away-from-context method for an even shallower one — a questionnaire can't capture a tacit physical workflow at all. The gap is the lack of observation, which a survey doesn't fix.
+  - scenario: |-
+      A PM insists that talking to just five users can never be trusted and that no research is worth doing unless hundreds participate.
+    question: |-
+      What's the balanced, correct view?
+    difficulty: hard
+    options:
+      - text: |-
+          The PM is right
+        msg: |-
+          'Nothing under hundreds counts' is wrong — it conflates two different kinds of research. Qualitative discovery (why, how, can-they-use-it) works well with small numbers; only quantitative claims (how many, which converts better) need large samples. Blanket-rejecting small studies throws away fast, cheap learning.
+      - text: |-
+          It depends on the question
+        msg: |-
+          Right. Sample size depends on the question. Qualitative research — understanding why users behave a certain way, or finding usability problems — yields strong signal from small numbers (about five users catch most usability issues). Quantitative questions — how many want X, which design converts better — do need larger samples for reliable estimates. So five users is perfect for the right question and inadequate for others. Match sample size to question type, rather than applying one rule to everything.
+        correct: true
+      - text: |-
+          Actually, five users is always enough for any research question
+        msg: |-
+          Flipping to 'five is always enough' is the opposite error. Five users can't tell you what proportion of your base wants a feature or which variant converts better — those need scale. The correct view is that the right sample size depends on the type of question.
+
+flashcards:
+  - category: |-
+      Process
+    title: |-
+      The 5 Steps
+    desc: |-
+      Define objectives → Choose the method → Recruit participants → Conduct the research → Synthesize and share. Skipping a step usually means redoing it later, more expensively.
+    application: |-
+      The order matters: the method depends on the objective, recruitment depends on the method, and synthesis is planned before the first session.
+  - category: |-
+      Step 1
+    title: |-
+      Research Objective
+    desc: |-
+      One sharp question the research must answer, plus the decision that hangs on it. "Learn about users" is not an objective; "find out why trial users don't convert, to decide what onboarding fixes" is.
+    application: |-
+      Test an objective by asking: what will we decide differently based on the answer? No decision, no research.
+  - category: |-
+      Step 2
+    title: |-
+      Matching Method to Question
+    desc: |-
+      Why/how questions → interviews and field studies. Can-they-use-it questions → usability tests. How-many questions → surveys and analytics. Which-is-better questions → A/B tests.
+    application: |-
+      A method chosen before the question is a hammer looking for nails. Write the question first, then pick the tool it needs.
+  - category: |-
+      Step 3
+    title: |-
+      Recruiting the Right People
+    desc: |-
+      Five users from your actual target segment beat fifty random people. Screen for the behavior you're studying, not just demographics — and never test only on teammates or friends.
+    application: |-
+      For a study on churned users, recruit people who actually canceled — not current happy users guessing why others left.
+  - category: |-
+      Step 4
+    title: |-
+      Asking Without Leading
+    desc: |-
+      Ask about past behavior, not future intent ("walk me through the last time you…"). Ask open questions. Never ask "would you use this?" — the answer is polite noise.
+    application: |-
+      Replace "would you pay for this feature?" with "tell me about the last time you paid for a tool — what convinced you?"
+  - category: |-
+      Step 5
+    title: |-
+      Synthesize and Share
+    desc: |-
+      Research that stays in a folder changed nothing. Cluster observations into themes, write insight statements, and share them with the evidence (quotes, clips) attached.
+    application: |-
+      A 30-second clip of a real user failing at checkout persuades a room faster than a 30-page report.
+
+vocab:
+  - term: |-
+      Research Objective
+    define: |-
+      A Research Objective: one clear question plus the decision that depends on its answer.
+    clues:
+      - |-
+          I'm step one of the process.
+      - |-
+          I pair a sharp question with a decision.
+      - |-
+          "Why do trials cancel, to decide onboarding fixes" is me.
+  - term: |-
+      Usability Test
+    define: |-
+      A Usability Test: watching real users attempt real tasks to find where they struggle.
+    clues:
+      - |-
+          I'm a method for one kind of question.
+      - |-
+          I answer 'can people actually do it?'
+      - |-
+          About five users on a real task finds most of my issues.
+  - term: |-
+      Convenience Sample
+    define: |-
+      A Convenience Sample: participants chosen for ease of access, not fit — and usually biased.
+    clues:
+      - |-
+          I'm a recruiting trap.
+      - |-
+          I'm made of whoever is easiest to reach.
+      - |-
+          Teammates, friends, and superfans are me — biased by definition.
+  - term: |-
+      Leading Question
+    define: |-
+      A Leading Question: one phrased to nudge the participant toward a particular answer.
+    clues:
+      - |-
+          I quietly ruin interview data.
+      - |-
+          I hint at the answer I want.
+      - |-
+          "Don't you think this is easier?" is me.
+  - term: |-
+      Screening
+    define: |-
+      Screening: filtering recruits so participants actually match the behavior you're studying.
+    clues:
+      - |-
+          I happen before the session.
+      - |-
+          I make sure participants fit the study.
+      - |-
+          I filter by real behavior, not just demographics.
+  - term: |-
+      Synthesis
+    define: |-
+      Synthesis: turning raw research into themes, insight statements, and shareable findings.
+    clues:
+      - |-
+          I'm the final step of research.
+      - |-
+          I turn raw sessions into themes and decisions.
+      - |-
+          Cluster, write insight statements, share with clips — that's me.

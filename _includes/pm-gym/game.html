@@ -1,0 +1,31 @@
+{%- comment -%}
+Vocab game pane. Markup is identical for every topic; the deck of terms and
+clues comes from _data/pm-gym/<page.topic>.yml.
+{%- endcomment -%}
+{%- assign gym = site.data['pm-gym'] -%}
+{%- assign topic = gym[page.topic] -%}
+  <section class="pm-pane" data-pane="game">
+    <div class="pm-section-intro">
+      <span class="pm-badge">{{ topic.game_badge }}</span>
+      <h2>{{ topic.game_heading }}</h2>
+      <p class="muted">{{ topic.game_blurb }}</p>
+    </div>
+
+    <div class="pm-game">
+      <div class="pm-game-bar">
+        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
+        <span class="pm-game-score" id="pm-game-score">Score 0</span>
+      </div>
+
+      <div class="pm-game-card" id="pm-game-card">
+        <div class="pm-game-clues" id="pm-game-clues"></div>
+        <div class="pm-game-options" id="pm-game-options"></div>
+        <div class="pm-game-reveal" id="pm-game-reveal"></div>
+        <div class="pm-game-actions">
+          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
+    </div>
+  </section>

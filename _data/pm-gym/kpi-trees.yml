@@ -1,0 +1,425 @@
+# PM Gym — kpi-trees. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can build a clean tree, diagnose a metric move, pick the right lever, and spot vanity numbers. Choose the strongest move, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  KPI Trees Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Revenue is down 10% this quarter and leadership wants to know why. You have a KPI tree: Revenue = Active Users × Conversion × ARPU.
+    question: |-
+      How does the tree help you diagnose it?
+    difficulty: easy
+    options:
+      - text: |-
+          It doesn't
+        msg: |-
+          'Work harder on revenue' has no target. The tree exists precisely to turn the blunt drop into a diagnosis: check each input to find which one actually fell.
+      - text: |-
+          Check each input
+        msg: |-
+          Right. The tree lets you attribute the top-line move to a specific branch. Isolating the input that fell turns a vague 'revenue is down' into a fixable problem. If active users and ARPU held steady but conversion dropped, you've located the cause.
+        correct: true
+      - text: |-
+          Assume all three inputs fell equally and address them all
+        msg: |-
+          Assuming instead of checking wastes the tree's whole advantage. Usually one branch moved most; spreading effort across all three dilutes the fix for the real cause.
+  - scenario: |-
+      A teammate proposes making "total lifetime registered accounts" the team's headline metric because "it always goes up and looks great to investors."
+    question: |-
+      What's your response?
+    difficulty: easy
+    options:
+      - text: |-
+          Agree — a number that always rises is motivating
+        msg: |-
+          Always-up is the warning sign, not the selling point. A metric that can't fall can't reflect churn, disengagement, or a broken product — it's a vanity metric that hides reality.
+      - text: |-
+          Push back — it can't fall, so it can't inform
+        msg: |-
+          Exactly. A headline metric should tell you the truth, including bad news. Actionable metrics move with real health; vanity metrics feel good while the product quietly declines. It's a vanity metric; pick an actionable one like weekly active users that can fall when things go wrong.
+        correct: true
+      - text: |-
+          Use it, but only in investor decks
+        msg: |-
+          Even in a deck, a vanity metric misleads. And a team steers toward what it headlines — enshrining a number that can't fall invites everyone to ignore the health that can.
+  - scenario: |-
+      You want to grow your North Star. Two levers sit in the tree: (A) improving activation — a major driver you can influence — and (B) adding more social-share icons, easy but a minor driver.
+    question: |-
+      Which do you prioritize, and why?
+    difficulty: easy
+    options:
+      - text: |-
+          B — it's quick and low-effort to ship
+        msg: |-
+          Low effort on a minor driver is a small effort for a smaller result. Feasibility only pays off when the lever actually moves the top metric — and this one barely does.
+      - text: |-
+          A — high impact on the North Star and feasible
+        msg: |-
+          Right. Activation is a big driver you can influence, so moving it meaningfully shifts the North Star. That impact-plus-feasibility combination is exactly what the tree helps you find.
+        correct: true
+      - text: |-
+          Neither — both are too small to matter
+        msg: |-
+          Effortless-and-huge levers rarely exist; waiting for one means doing nothing. A strong, feasible driver like activation is precisely the realistic bet the tree points you toward.
+  - scenario: |-
+      A colleague draws a tree: "Revenue = Marketing spend + Number of features + Team happiness."
+    question: |-
+      What's fundamentally wrong with this tree?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Those things may influence revenue loosely, but they don't mathematically combine into it. A KPI tree's branches must actually compute the parent — you can't add 'features' and 'happiness' to get dollars.
+      - text: |-
+          The branches don't mathematically compose revenue
+        msg: |-
+          Right. The branches don't compose the parent. Revenue = Users × Conversion × ARPU is a real decomposition (the pieces multiply to the whole). 'Spend + features + happiness' are loosely-related drivers, not the math that builds revenue. A tree must decompose, not just list influences. They're vaguely-related factors, not the inputs that actually calculate it.
+        correct: true
+      - text: |-
+          It just needs one more branch to be complete
+        msg: |-
+          Adding a fourth branch to a broken structure doesn't fix it. The problem isn't that a branch is missing — it's that these branches don't multiply or add up to revenue at all.
+  - scenario: |-
+      You split "active users" into "users who log in via email" and "users who are happy with the product."
+    question: |-
+      Why does this split break MECE?
+    difficulty: easy
+    options:
+      - text: |-
+          It doesn't
+        msg: |-
+          It's not just messy wording — the two categories genuinely overlap (a happy user often logs in via email) and leave gaps (an unhappy user who logs in fits neither cleanly). That double-fault is exactly what MECE forbids.
+      - text: |-
+          The buckets overlap and leave gaps
+        msg: |-
+          Right. The two overlap (someone can be both a happy user and an email login) and don't collectively cover everyone (where do unhappy non-email users go?). A MECE split puts every user in exactly one bucket, with all buckets together covering the whole. Split by something clean, like login method or new-vs-returning. A user can be in both or neither, so they don't cleanly sum to all active users.
+        correct: true
+      - text: |-
+          There simply aren't enough buckets; add a third
+        msg: |-
+          'Too few buckets' isn't the issue — adding more overlapping, gappy categories makes it worse. The fix is to choose a single clean dimension to split on, not to add buckets.
+  - scenario: |-
+      Revenue is flat, but your tree shows active users up 20% while conversion rate dropped 18%. Everyone is confused about whether things are good or bad.
+    question: |-
+      What does the tree tell you?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing is happening underneath the flat line
+        msg: |-
+          'Flat revenue means nothing changed' misreads the tree. Underneath the calm top line, two big forces are pulling in opposite directions and roughly cancelling — a very different (and more urgent) situation than genuine stability.
+      - text: |-
+          Two offsetting moves hide under a flat top line
+        msg: |-
+          Right. The flat top line hides two large offsetting moves: you're winning more users but converting a smaller share of them. That's the tree's superpower — it reveals compensating changes a single number masks. The question becomes: why did conversion fall as users grew? (Often: lower-quality traffic.). More users but worse conversion. Investigate why conversion fell as users grew.
+        correct: true
+      - text: |-
+          Celebrate — 20% user growth is the real story
+        msg: |-
+          Celebrating the 20% user growth alone ignores that conversion fell almost as much, cancelling the gain. Reading one branch in isolation is exactly the mistake the whole tree is meant to prevent.
+  - scenario: |-
+      Two levers have equal impact potential. Lever A requires a six-month platform rebuild; lever B is a copy-and-layout change your team can test next week.
+    question: |-
+      Which do you start with, all else equal?
+    difficulty: medium
+    options:
+      - text: |-
+          Lever A
+        msg: |-
+          When impact is equal, feasibility is the tiebreaker — and a six-month rebuild is far less feasible than a one-week test. Starting with the hard one delays any learning by months.
+      - text: |-
+          Lever B
+        msg: |-
+          Right. With impact tied, the more feasible lever wins: you learn faster, get results sooner, and can reinvest. B lets you test the hypothesis next week instead of betting six months blind. Feasibility is a real part of leverage, not a lesser concern.
+        correct: true
+      - text: |-
+          Both at once, to cover your bases
+        msg: |-
+          Running both at once splits a team across a quick test and a six-month rebuild, starving both. Sequence them: prove the cheap lever first, then decide if the expensive one is still worth it.
+  - scenario: |-
+      Your team obsesses over "cumulative app installs," which is now 5 million and rising. Meanwhile monthly active users has quietly fallen for three straight months.
+    question: |-
+      What's the diagnosis?
+    difficulty: medium
+    options:
+      - text: |-
+          Healthy
+        msg: |-
+          A rising install count with falling active users is the vanity trap in action. The headline metric can't go down, so it keeps everyone feeling successful while the metric that reflects real health is sliding.
+      - text: |-
+          The team is anchored to a vanity metric
+        msg: |-
+          Right. Cumulative installs is a vanity/odometer metric — it only ever rises and masks the truth. The falling monthly-active number is the real signal. Re-center the tree on an actionable metric that can fall, and go find why active use is dropping. Cumulative installs can't fall, so it's hiding the real, declining health shown by monthly actives.
+        correct: true
+      - text: |-
+          Set a goal of 10 million installs to build more momentum
+        msg: |-
+          Setting an even bigger install goal doubles down on the misleading number. Installs aren't the problem to chase — the shrinking active base is, and more installs won't fix retention.
+  - scenario: |-
+      A stakeholder wants the KPI tree taken down to twelve levels of depth "so we capture every possible sub-metric."
+    question: |-
+      What's the practical caution?
+    difficulty: medium
+    options:
+      - text: |-
+          Agree — the more granular the tree, the more useful it is
+        msg: |-
+          More depth isn't automatically more insight. Past the point where a team can act on a branch, extra levels add complexity and noise without adding leverage — the tree becomes a wall no one uses.
+      - text: |-
+          Stop decomposing once branches become actionable
+        msg: |-
+          Right. Decompose only until you reach metrics a team can actually act on — that's the stopping rule. Twelve levels usually buys false precision and an unreadable diagram. Depth should serve action, not completeness for its own sake. Excessive depth adds complexity and false precision without more leverage.
+        correct: true
+      - text: |-
+          Cap every tree at exactly three levels, always
+        msg: |-
+          A hard cap like 'exactly three levels' is arbitrary too. The right depth depends on when branches become actionable — some need two levels, some five. Tie depth to actionability, not a fixed number.
+  - scenario: |-
+      Your North Star is "weekly active teams." You decompose it as: New teams activated + Existing teams retained + Churned teams reactivated.
+    question: |-
+      How good is this decomposition?
+    difficulty: medium
+    options:
+      - text: |-
+          Weak — it's a random list of three things
+        msg: |-
+          It's actually a strong split — but not because it's 'just a list.' These three sum to the whole active base with clean boundaries, which is precisely what makes it good, not incidental.
+      - text: |-
+          Strong — the three parts are MECE
+        msg: |-
+          Right. New + retained + reactivated is a clean MECE breakdown of the active base — every active team came from exactly one of these paths, and together they cover all of them. Better still, each branch maps to a different team and playbook (acquisition, retention, win-back), so it's actionable.
+        correct: true
+      - text: |-
+          Weak — collapse it to one number for simplicity
+        msg: |-
+          Collapsing to a single number throws away the whole benefit. The value of the tree is exactly that it separates acquisition, retention, and win-back so you can see and act on each. Don't merge them.
+  - scenario: |-
+      The exec team wants ONE North Star metric, but sales wants revenue, growth wants signups, and the CS team wants retention.
+    question: |-
+      How can a KPI tree resolve this?
+    difficulty: hard
+    options:
+      - text: |-
+          Whoever argues loudest picks the North Star
+        msg: |-
+          Declaring a winner by politics leaves the other teams feeling ignored and their metrics untracked. The tree offers a better answer than picking one and discarding the rest.
+      - text: |-
+          One North Star on top, each team's metric a branch
+        msg: |-
+          Right. A tree shows these aren't competing goals — they're related nodes. Pick one North Star at the top (say, active paying customers) and place signups, retention, and revenue as connected branches that feed it. Everyone sees how their metric contributes, and the org gets one shared frame. So each team sees how its metric feeds the whole.
+        correct: true
+      - text: |-
+          Give each team its own separate North Star
+        msg: |-
+          Four co-equal North Stars is the same as none — teams optimize their own and pull in different directions. The tree's job is to unify them under one apex, not to bless four separate ones.
+  - scenario: |-
+      Conversion rate is your chosen lever. A designer suggests boosting it by auto-checking an "add premium add-on" box by default, which users often miss.
+    question: |-
+      What's the systems-aware caution before celebrating a conversion bump?
+    difficulty: hard
+    options:
+      - text: |-
+          Great — any lift in the chosen lever is a win
+        msg: |-
+          A conversion lift that comes from tricking users tends to bounce back as refunds, chargebacks, and churn. Reading one node in isolation misses the damage showing up in retention and trust downstream.
+      - text: |-
+          Check downstream branches for refunds and churn
+        msg: |-
+          Right. Moving one branch can hurt others in the tree (and the business). A dark-pattern conversion bump often raises refunds, support load, and churn, and erodes trust — so the top metric may not improve at all. Check the sibling and downstream branches, and weigh whether the tactic is even honest.
+        correct: true
+      - text: |-
+          Auto-check two more boxes to lift it further
+        msg: |-
+          Auto-checking more boxes multiplies the harm — more unwanted add-ons, more refunds, more angry users. Doubling a manipulative tactic isn't optimizing the tree, it's degrading the business the tree measures.
+  - scenario: |-
+      You need to raise "orders per month." The tree splits it into Traffic × Conversion × Repeat-purchase rate. Data shows traffic is huge, conversion is average, and repeat-purchase is far below industry benchmark.
+    question: |-
+      Where's the most promising lever?
+    difficulty: hard
+    options:
+      - text: |-
+          Buy more traffic
+        msg: |-
+          Pouring more into traffic when traffic is already huge is spending on your strongest branch and ignoring your weakest. The tree is pointing elsewhere — to the input that's dragging the whole product down.
+      - text: |-
+          Repeat-purchase rate
+        msg: |-
+          Right. Repeat-purchase is far below benchmark, meaning there's the most headroom to gain — and lifting it multiplies through the whole equation. The tree's power here is comparing branches against their potential: attack the one with the biggest gap to where it should be.
+        correct: true
+      - text: |-
+          Conversion
+        msg: |-
+          Conversion is 'average' — near where it should be — so squeezing it offers less headroom than the repeat-purchase branch that's far below benchmark. Target the biggest gap, not a middling one.
+  - scenario: |-
+      A teammate insists "average revenue per user" is meaningless because your users are wildly different — some pay nothing, a few pay thousands.
+    question: |-
+      What's the sharpest response?
+    difficulty: hard
+    options:
+      - text: |-
+          They're right — drop the metric entirely
+        msg: |-
+          Dropping ARPU from the tree loses a real lever. The teammate has a point about averages hiding distribution — but the fix is to decompose further, not to discard the metric.
+      - text: |-
+          They've spotted that an average hides the spread
+        msg: |-
+          Right. The teammate spotted a real issue: an average can hide a lopsided distribution. The KPI-tree answer is to decompose ARPU further — split users into segments (free, small, enterprise) and track revenue per user within each. That preserves the lever while fixing the blurring the average caused. So decompose ARPU by segment (free / small / enterprise) rather than dropping it.
+        correct: true
+      - text: |-
+          Ignore them — averages are standard practice
+        msg: |-
+          Insisting the average is 'fine as-is' ignores a legitimate objection — a single ARPU really can mislead when the distribution is that skewed. Acknowledge it and split the branch instead of defending the blur.
+  - scenario: |-
+      Leadership asks you to prove that last quarter's onboarding project "worked." You have a full KPI tree in place.
+    question: |-
+      How does the tree let you answer cleanly?
+    difficulty: hard
+    options:
+      - text: |-
+          Point at total revenue and say it went up
+        msg: |-
+          Pointing at total revenue can't isolate the onboarding project — a dozen things move revenue at once. Without attributing the change to a specific branch, 'it worked' is just an assertion.
+      - text: |-
+          Show the targeted branch moving, then trace it upward
+        msg: |-
+          Right. Trace the specific branch the project targeted (say, activation rate), show it moved when you shipped, and follow how that flows up the tree toward revenue. The tree turns 'trust me' into a visible chain of cause and effect — which node moved, when, and how it propagates upward.
+        correct: true
+      - text: |-
+          Say product impact can never really be attributed
+        msg: |-
+          Saying it's 'impossible to attribute' gives up the tree's main benefit. A well-built tree is exactly the tool for isolating which node a project moved — you can and should trace it, even if the top-line effect lags.
+
+flashcards:
+  - category: |-
+      Core
+    title: |-
+      KPI Tree
+    desc: |-
+      A breakdown of one top-level goal metric into the sub-metrics that mathematically combine to produce it — turning a blunt number into a map of pullable levers.
+    application: |-
+      Revenue = Active Users × Conversion × ARPU splits one goal into three targetable drivers.
+  - category: |-
+      Top
+    title: |-
+      North Star Metric
+    desc: |-
+      The single metric that best captures the value your product delivers — usually the root of the KPI tree that everything else feeds.
+    application: |-
+      For a messaging app, 'messages sent between connected users' might be the North Star.
+  - category: |-
+      Branch
+    title: |-
+      Input Metric (Driver)
+    desc: |-
+      A sub-metric that feeds a metric above it in the tree. Inputs are the levers teams actually work on.
+    application: |-
+      Conversion rate is an input metric that drives revenue at the level above.
+  - category: |-
+      Branch
+    title: |-
+      Output Metric
+    desc: |-
+      A higher-level result produced by its input metrics — the parent in a branch. You move it only by moving its inputs.
+    application: |-
+      Revenue is an output metric; you don't move it directly, you move its inputs.
+  - category: |-
+      Caution
+    title: |-
+      Vanity Metric
+    desc: |-
+      A number that looks impressive and tends to only go up (like all-time sign-ups), but doesn't reflect current health or respond to decisions.
+    application: |-
+      'Total downloads ever' rises forever even as a product dies — avoid it as a core KPI.
+  - category: |-
+      Quality
+    title: |-
+      Actionable Metric
+    desc: |-
+      A metric a specific decision can move and that can go down as well as up — the kind worth putting in a KPI tree.
+    application: |-
+      Weekly active users falls when the product slips and rises when it improves — actionable.
+
+vocab:
+  - term: |-
+      KPI Tree
+    define: |-
+      A KPI Tree: a top-down breakdown of a goal metric into the sub-metrics that mathematically produce it.
+    clues:
+      - |-
+          I turn one blunt number into many levers.
+      - |-
+          I break a goal metric into the drivers that compose it.
+      - |-
+          "Revenue = Users × Conversion × ARPU" is me in action.
+  - term: |-
+      North Star Metric
+    define: |-
+      A North Star Metric: the single metric that best captures your product's value, at the top of the tree.
+    clues:
+      - |-
+          I usually sit at the root of the tree.
+      - |-
+          I capture the core value the product delivers.
+      - |-
+          Everything else in the tree feeds me.
+  - term: |-
+      Input Metric
+    define: |-
+      An Input Metric (driver): a sub-metric that feeds a higher metric — the lever teams actually work.
+    clues:
+      - |-
+          I'm a lever, not a result.
+      - |-
+          I feed a metric above me in the tree.
+      - |-
+          Conversion rate driving revenue is me.
+  - term: |-
+      Vanity Metric
+    define: |-
+      A Vanity Metric: an impressive-looking number that only rises and doesn't reflect real health.
+    clues:
+      - |-
+          I look great in a slide.
+      - |-
+          I tend to only ever go up.
+      - |-
+          "Total sign-ups since launch" is me — I hide the truth.
+  - term: |-
+      Actionable Metric
+    define: |-
+      An Actionable Metric: one a decision can move and that can fall as well as rise — worth tracking.
+    clues:
+      - |-
+          I respond to your decisions.
+      - |-
+          I can go down as well as up.
+      - |-
+          Weekly active users falling when the product slips is me.
+  - term: |-
+      MECE
+    define: |-
+      MECE: branch inputs that don't overlap and leave no gap, so they truly compose their parent.
+    clues:
+      - |-
+          I'm a four-letter test for clean branches.
+      - |-
+          No overlaps, no gaps.
+      - |-
+          Mutually Exclusive, Collectively Exhaustive — that's me.

@@ -1,7 +1,9 @@
 ---
 layout: pm-gym
+topic: "decoding-growth"
 title: "Decoding Growth — PM Gym"
 description: "A beginner-friendly, interactive guide to product growth: the leaky bucket, the AARRR pirate-metrics funnel, why retention is the engine, and the difference between earned and bought growth."
+keywords: "Decoding Growth, product management, PM frameworks, product management for beginners, PM interview prep, Leaky Bucket, AARRR, Activation, Retention Curve, Sustainable Growth, Churn, Growth, The Leaky Bucket, AARRR (Pirate Metrics), Retention, Earned vs. Bought Growth"
 ---
 
 <div class="container hero fade-in">
@@ -64,9 +66,9 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
         <h4><i class="fas fa-gamepad"></i> Quick check</h4>
         <p>A team triples its ad spend and monthly signups double, yet total monthly active users stay flat. What's most likely happening?</p>
         <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="The ads clearly work — signups doubled. The problem is downstream: new users are leaking out as fast as they arrive, so the active base doesn't grow.">A) The ads are broken — doubling signups should always grow the active base.</button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Growth is inflow minus outflow. Pouring in faster does nothing if the holes are just as big — fix retention before spending more on acquisition.">B) A leaky bucket — acquisition rose, but weak retention lets users leak out as fast as they come in, so net growth stays flat.</button>
-          <button class="pm-quiz-option" data-msg="Signups without retention is exactly the trap. Active users reflects real, sustained value; a flat active base despite rising signups is the warning sign, not the wrong metric.">C) Monthly active users is the wrong metric; only signups matter for growth.</button>
+          <button class="pm-quiz-option" data-msg="The ads clearly work — signups doubled. The problem is downstream: new users are leaking out as fast as they arrive, so the active base doesn't grow.">The ad campaigns must be broken</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Growth is inflow minus outflow. Pouring in faster does nothing if the holes are just as big — fix retention before spending more on acquisition. Acquisition rose, but weak retention lets users leak out as fast as they come in, so net growth stays flat.">A leaky bucket — churn cancels acquisition</button>
+          <button class="pm-quiz-option" data-msg="Signups without retention is exactly the trap. Active users reflects real, sustained value; a flat active base despite rising signups is the warning sign, not the wrong metric.">Monthly actives is wrong — only signups matter</button>
         </div>
         <div class="pm-quiz-feedback"></div>
       </div>
@@ -100,9 +102,9 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
         <h4><i class="fas fa-gamepad"></i> Quick check</h4>
         <p>A user downloads the app (they arrived fine) but never finishes setup and never reaches the first value moment. Which AARRR stage is failing?</p>
         <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="They did arrive — the download is acquisition working. The breakdown happens after arrival, before value.">A) Acquisition — they never really arrived.</button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Activation is the leap from &quot;downloaded&quot; to &quot;got real value.&quot; A big activation drop means people show up but the product never clicks for them.">B) Activation — they arrived but never hit the first "aha" value moment, so they never truly started.</button>
-          <button class="pm-quiz-option" data-msg="Retention is about coming back after activation. You can't retain a user who never activated in the first place — the failure is one stage earlier.">C) Retention — they didn't come back.</button>
+          <button class="pm-quiz-option" data-msg="They did arrive — the download is acquisition working. The breakdown happens after arrival, before value.">Acquisition</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Activation is the leap from &quot;downloaded&quot; to &quot;got real value.&quot; A big activation drop means people show up but the product never clicks for them. They arrived but never hit the first &quot;aha&quot; value moment, so they never truly started.">Activation</button>
+          <button class="pm-quiz-option" data-msg="Retention is about coming back after activation. You can't retain a user who never activated in the first place — the failure is one stage earlier.">Retention</button>
         </div>
         <div class="pm-quiz-feedback"></div>
       </div>
@@ -143,9 +145,9 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
         <h4><i class="fas fa-gamepad"></i> Quick check</h4>
         <p>Product A retains 25% of each signup group at 6 months and the curve flattens there. Product B's retention curve keeps sliding toward 0%. Which has the healthier growth foundation?</p>
         <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="A curve heading to zero means users leave and don't stay; there's no stable base to build on. &quot;Room to win back&quot; is a hope, not a foundation.">A) B — a declining curve leaves room to win those users back later.</button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. When retention flattens, every new cohort adds to a stable core instead of replacing users who left. That's the engine that makes acquisition actually accumulate.">B) A — a flattening curve means a durable base of users each new group stacks onto, so growth compounds.</button>
-          <button class="pm-quiz-option" data-msg="This is the core misunderstanding. Acquisition without retention is a treadmill; the two products have completely different futures despite similar top-of-funnel numbers.">C) They're equivalent — both acquire users, and acquisition is what growth means.</button>
+          <button class="pm-quiz-option" data-msg="A curve heading to zero means users leave and don't stay; there's no stable base to build on. &quot;Room to win back&quot; is a hope, not a foundation.">B — a declining curve leaves room to win users back</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. When retention flattens, every new cohort adds to a stable core instead of replacing users who left. That's the engine that makes acquisition actually accumulate.">A — a flattening curve means growth compounds</button>
+          <button class="pm-quiz-option" data-msg="This is the core misunderstanding. Acquisition without retention is a treadmill; the two products have completely different futures despite similar top-of-funnel numbers.">They're equivalent over a long enough horizon</button>
         </div>
         <div class="pm-quiz-feedback"></div>
       </div>
@@ -186,9 +188,9 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
         <h4><i class="fas fa-gamepad"></i> Quick check</h4>
         <p>A startup's growth comes entirely from paid ads; the instant it pauses spending, growth stops cold. What's the concern?</p>
         <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Paid acquisition is a legitimate tool, but growth that fully collapses the moment spend pauses is rented, not owned. There's no self-sustaining engine underneath.">A) None — paying for growth is normal, so this is perfectly healthy.</button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Paid channels are fine as fuel, but a business with no earned engine (retention, referral, loops) must keep paying forever, and dies if CAC ever exceeds what a customer is worth.">B) The growth is rented, not owned — nothing compounds on its own, and it only works while each customer is worth more than they cost to acquire.</button>
-          <button class="pm-quiz-option" data-msg="Spending more magnifies the dependency, not fixes it. Without retention or an earned loop, faster paid growth just burns cash faster into a leaky bucket.">C) The only problem is that they should spend even more to grow faster.</button>
+          <button class="pm-quiz-option" data-msg="Paid acquisition is a legitimate tool, but growth that fully collapses the moment spend pauses is rented, not owned. There's no self-sustaining engine underneath.">Nothing — paying for growth is perfectly normal</button>
+          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Paid channels are fine as fuel, but a business with no earned engine (retention, referral, loops) must keep paying forever, and dies if CAC ever exceeds what a customer is worth. Nothing compounds on its own, and it only works while each customer is worth more than they cost to acquire.">The growth is rented, not owned</button>
+          <button class="pm-quiz-option" data-msg="Spending more magnifies the dependency, not fixes it. Without retention or an earned loop, faster paid growth just burns cash faster into a leaky bucket.">They should simply spend more to grow faster</button>
         </div>
         <div class="pm-quiz-feedback"></div>
       </div>
@@ -201,383 +203,13 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
   </section>
 
   <!-- ============ Flashcards ============ -->
-  <section class="pm-pane" data-pane="flashcards">
-    <div class="pm-section-intro">
-      <span class="pm-badge pm-badge-purple">Review the concepts</span>
-      <h2>Decoding Growth Flashcards</h2>
-      <p class="muted">6 cards covering the essentials. Click a card to flip it.</p>
-    </div>
-
-    <div class="pm-flashcard-zone">
-      <div class="pm-flashcard" data-pm-action="flip-card">
-        <div class="pm-flashcard-inner" id="pm-flashcard-inner">
-          <div class="pm-flashcard-front">
-            <div class="pm-flashcard-head">
-              <span class="pm-hub-tag" id="pm-card-category">Foundation</span>
-              <span class="muted" id="pm-card-progress">Card 1 of 6</span>
-            </div>
-            <div class="pm-flashcard-question">
-              <h3 id="pm-card-title">Growth</h3>
-              <p class="pm-flip-hint"><i class="fas fa-arrows-rotate"></i> Click to flip</p>
-            </div>
-            <p class="muted">Tip: say the answer out loud before flipping.</p>
-          </div>
-          <div class="pm-flashcard-back">
-            <span class="pm-flashcard-label">Explanation</span>
-            <p id="pm-card-back-text"></p>
-            <div class="pm-flashcard-meta">
-              <span class="pm-flashcard-label">In practice</span>
-              <p id="pm-card-application"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pm-flashcard-controls">
-        <button class="cta-secondary" data-pm-action="prev-card"><i class="fas fa-chevron-left"></i> Prev</button>
-        <span class="pm-deck-tracker" id="pm-deck-tracker">1 / 6</span>
-        <button class="cta-secondary" data-pm-action="next-card">Next <i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
+  {% include pm-gym/flashcards.html %}
 
   <!-- ============ Practice ============ -->
-  <section class="pm-pane" data-pane="practice">
-    <div class="pm-section-intro">
-      <span class="pm-badge pm-badge-green">Apply what you learned</span>
-      <h2>Practice Scenarios</h2>
-      <p class="muted">15 situations that test whether you can see past a vanity growth number to the retention, activation, and sustainability underneath.</p>
-    </div>
-
-    <div class="pm-scenario-list">
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 1</span>
-        <p class="pm-scenario-text">A dashboard proudly shows "cumulative registered users" crossing 5 million, and leadership calls it proof of strong growth.</p>
-        <div class="pm-quiz">
-          <p><strong>What should you check before agreeing?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Cumulative registrations only ever rise and say nothing about how many of those users are still active. It can climb while the product is quietly dying.">
-            A) Nothing — 5 million registrations is unambiguous proof of growth.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Growth is about the living, active base, not an all-time count that can't fall. Check active users and retention behind the headline number.">
-            B) How many of those users are still active — cumulative registrations can rise even as the active base shrinks.
-          </button>
-          <button class="pm-quiz-option" data-msg="Debating the target ignores the real issue: the metric itself can't tell you whether growth is healthy.">
-            C) Whether the number should be even higher by now.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 2</span>
-        <p class="pm-scenario-text">Signups are up 40% this quarter, but 6-month retention dropped from 30% to 18% over the same period.</p>
-        <div class="pm-quiz">
-          <p><strong>How should you read this together?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Rising signups next to falling retention is a leaky bucket getting leakier. You're acquiring more users into a product that keeps fewer of them.">
-            A) Great quarter — more signups is what matters most.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The two numbers pull in opposite directions. Without fixing retention, the extra acquisition mostly leaks back out.">
-            B) A warning — acquisition is masking worsening retention; more users are arriving but a smaller share stays.
-          </button>
-          <button class="pm-quiz-option" data-msg="Out-acquiring churn temporarily hides the leak, but it's expensive and fragile — the moment acquisition slows, the shrinking base is exposed.">
-            C) Retention doesn't matter as long as acquisition outpaces it.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 3</span>
-        <p class="pm-scenario-text">Analysis shows most new users sign up but never complete the one setup step that unlocks the product's core value.</p>
-        <div class="pm-quiz">
-          <p><strong>Which AARRR stage needs the most attention?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Acquisition is working; users are signing up. Pouring more people into a step where they get stuck just wastes more acquisition.">
-            A) Acquisition — get even more users to sign up.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The drop is between signup and first value — a classic activation problem. That's where the leverage is.">
-            B) Activation — users arrive but never reach the first value moment, so fix the path to that "aha."
-          </button>
-          <button class="pm-quiz-option" data-msg="Charging users who haven't even reached value yet will worsen the drop-off, not fix it.">
-            C) Revenue — start charging them sooner to force commitment.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 4</span>
-        <p class="pm-scenario-text">A PM argues: "Retention is a nice-to-have; our real job is filling the top of the funnel."</p>
-        <div class="pm-quiz">
-          <p><strong>What's the strongest counter?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Treating retention as optional is the treadmill trap: without it, every user you acquire eventually leaks out and must be re-acquired.">
-            A) Agree — top-of-funnel volume is the only real growth lever.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Retention is what lets new cohorts stack instead of replace. Neglect it and the funnel top has to work harder every quarter just to hold steady.">
-            B) Retention is the engine — without it, acquisition never accumulates, so you pay forever just to stay flat.
-          </button>
-          <button class="pm-quiz-option" data-msg="A fixed split ignores where the actual leak is. If retention is the bottleneck, that's where disproportionate effort belongs.">
-            C) Both matter equally, so split effort 50/50 regardless of the data.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 5</span>
-        <p class="pm-scenario-text">Two cohorts: January's retention curve flattens at 22%; June's keeps sliding toward zero.</p>
-        <div class="pm-quiz">
-          <p><strong>What does this comparison tell you?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="A curve heading to zero doesn't spontaneously flatten with time; something changed for June's users that's driving them all out.">
-            A) June is fine — it just needs more time to flatten on its own.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Comparing cohort curves reveals whether recent changes helped or hurt the core retention that growth depends on. June needs investigation.">
-            B) Something worsened for June's cohort — a flattening curve (January) signals a durable base, a curve to zero (June) doesn't.
-          </button>
-          <button class="pm-quiz-option" data-msg="The difference between flattening and sliding-to-zero is exactly the signal cohort analysis exists to surface; it's far from noise.">
-            C) Nothing meaningful — cohort curves always look different.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 6</span>
-        <p class="pm-scenario-text">A startup grows 20% month over month, entirely from paid ads, with CAC creeping up and retention low.</p>
-        <div class="pm-quiz">
-          <p><strong>What's the risk in this growth?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="The rate looks great, but it's entirely rented: pause spend and it stops. Rising CAC plus low retention means the economics are quietly deteriorating.">
-            A) None — 20% monthly growth is excellent by any standard.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Growth with no earned engine and worsening unit economics is fragile; it can look healthy right up until the cash or the CAC math runs out.">
-            B) It's bought growth on a leaky bucket — it stops if spend stops, and rising CAC with low retention can make each customer unprofitable.
-          </button>
-          <button class="pm-quiz-option" data-msg="Adding channels scales the dependency and the burn; it doesn't create the retention or earned loop the business is missing.">
-            C) The only issue is not advertising on enough channels.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 7</span>
-        <p class="pm-scenario-text">A team wants to boost referral (the second R) but users churn within a week of signing up.</p>
-        <div class="pm-quiz">
-          <p><strong>What should come first?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Users who churn in a week won't refer anyone, and any they do drag in will churn too. You'd be amplifying a leak.">
-            A) Push referral hard now — more invites always help growth.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Referral compounds a product people love; it can't rescue one they leave. Earlier AARRR stages have to work before the later ones pay off.">
-            B) Fix retention and activation first — users who don't stick won't refer, and referrals of a leaky product just leak too.
-          </button>
-          <button class="pm-quiz-option" data-msg="They're tightly linked — referrals come from retained, satisfied users. A referral push on top of bad retention wastes effort.">
-            C) Referral and retention are unrelated, so work on referral in isolation.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 8</span>
-        <p class="pm-scenario-text">Leadership celebrates that revenue doubled, but it came from doubling discount-driven signups who mostly cancel after the first month.</p>
-        <div class="pm-quiz">
-          <p><strong>What's the concern?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="One-month discount-driven revenue that then cancels is a spike, not durable growth. It can flatter a quarter while the retained base barely moves.">
-            A) None — doubled revenue is a clear win regardless of source.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Revenue from users who immediately leave is closer to a one-time promotion than to growth. Check retained revenue, not just the headline spike.">
-            B) The revenue isn't durable — discount-acquired users who churn fast inflate a short-term number without building a retained base.
-          </button>
-          <button class="pm-quiz-option" data-msg="Repeating the discount repeats the churn and trains users to wait for deals, eroding both margin and durable retention.">
-            C) They should double the discount again next quarter to repeat it.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 9</span>
-        <p class="pm-scenario-text">A PM says the "aha moment" for their note-taking app is "a user creates their third note."</p>
-        <div class="pm-quiz">
-          <p><strong>Why is identifying this moment useful for growth?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="The activation/aha moment is highly practical: it's the concrete milestone that predicts whether a user sticks, which makes it a design target.">
-            A) It isn't — the aha moment is a vanity concept with no practical use.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Once you know the behavior that predicts retention, you can redesign onboarding to get users to it faster, directly improving activation and downstream retention.">
-            B) It defines a concrete activation target — getting more new users to reach that moment quickly should lift retention.
-          </button>
-          <button class="pm-quiz-option" data-msg="It's primarily a product and onboarding target — the whole point is steering new users toward that value moment inside the product.">
-            C) It only matters for marketing copy, not the product.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 10</span>
-        <p class="pm-scenario-text">A growth team optimizes a signup-page button color for weeks and gets a 2% signup lift, while activation and retention go untouched.</p>
-        <div class="pm-quiz">
-          <p><strong>What's the strategic critique?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="A small top-of-funnel tweak while the leaky middle is ignored is local optimization; the extra signups mostly leak out at activation and retention anyway.">
-            A) None — any signup lift is good use of time.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. The biggest leverage is where the biggest leak is. A 2% signup gain feeding a bucket that loses most users is a small return on weeks of effort.">
-            B) They're polishing the top of a leaky bucket — effort would compound more by fixing activation or retention, where users are actually lost.
-          </button>
-          <button class="pm-quiz-option" data-msg="Micro-optimizations can matter at scale, but treating one as the top lever while ignoring activation and retention misreads where growth is won or lost.">
-            C) Button color is the single most important growth lever there is.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 11</span>
-        <p class="pm-scenario-text">A subscription app has healthy retention but almost no new users are arriving.</p>
-        <div class="pm-quiz">
-          <p><strong>Which part of the growth system is the bottleneck here?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Retention is explicitly healthy in this scenario; inventing a hidden retention problem ignores the stated facts.">
-            A) Retention — it must secretly be worse than it looks.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A well-retaining product with no inflow starves. Here the leak is fixed but the tap is barely on — acquisition is the constraint.">
-            B) Acquisition — the product keeps users well, but too few are entering the top of the system.
-          </button>
-          <button class="pm-quiz-option" data-msg="Pricing doesn't bring new users to the top of the funnel; if anything, raising prices narrows acquisition further.">
-            C) Revenue — charging more would bring in new users.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 12</span>
-        <p class="pm-scenario-text">A founder equates "growth" strictly with "month-over-month new user count."</p>
-        <div class="pm-quiz">
-          <p><strong>How would you broaden this definition usefully?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="New-user count alone is exactly the acquisition-only trap; it can rise while the active, paying, retained base shrinks.">
-            A) Keep it as-is — new user count is the cleanest single definition of growth.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. A fuller definition (the AARRR system) captures whether users actually stay and pay, which new-user count alone hides.">
-            B) Frame growth as the net system — acquisition, activation, retention, referral, and revenue together — not just new users.
-          </button>
-          <button class="pm-quiz-option" data-msg="Swapping one single-number definition for another just moves the blind spot; revenue alone can also be inflated by unsustainable, churning sources.">
-            C) Redefine growth as revenue only, ignoring users entirely.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 13</span>
-        <p class="pm-scenario-text">A team considers pouring its entire budget into a viral referral campaign for a product with a weak, confusing first-time experience.</p>
-        <div class="pm-quiz">
-          <p><strong>What's the flaw?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Virality amplifies whatever exists. On a product with a weak first experience, it amplifies churn — invited users bounce at activation just like organic ones.">
-            A) None — virality is the fastest path to growth for any product.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Loops and referrals multiply a working product; they multiply the leak in a broken one. Fix the first-time experience before amplifying it.">
-            B) A referral push amplifies a broken activation experience — you'd invite more users into a product that fails them at first touch.
-          </button>
-          <button class="pm-quiz-option" data-msg="Referral can be powerful — but only on a product people already have a good first experience with. The flaw is sequencing, not referral itself.">
-            C) Referral campaigns never work, so the budget is wasted regardless.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 14</span>
-        <p class="pm-scenario-text">Growth has been flat for two quarters. Acquisition and activation both look strong in the data.</p>
-        <div class="pm-quiz">
-          <p><strong>Where should you look next?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Acquisition already looks strong; piling on more inflow into a system leaking further down just spends more to stay flat.">
-            A) Add more acquisition channels — more inflow must be the answer.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. When the top of the system is healthy but net growth isn't, the leak is downstream. Follow the cohort retention curves to find where users drop.">
-            B) Retention and churn — if inflow and activation are strong but growth is flat, users are likely leaking out later in their lifecycle.
-          </button>
-          <button class="pm-quiz-option" data-msg="Flat growth with strong acquisition and activation points to a fixable retention leak, not an impossible product.">
-            C) Conclude growth is simply impossible for this product.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-
-      <div class="pm-panel pm-scenario-card">
-        <span class="pm-scenario-tag">Scenario 15</span>
-        <p class="pm-scenario-text">A PM proposes judging the growth team purely on "new signups this month."</p>
-        <div class="pm-quiz">
-          <p><strong>What behavior might this incentive accidentally encourage?</strong></p>
-          <div class="pm-quiz-options">
-          <button class="pm-quiz-option" data-msg="Rewarding signups alone invites gaming the top of the funnel — chasing low-quality, low-intent, or discount-driven users who inflate the number and then churn.">
-            A) None — signups is a perfectly safe metric to be judged on.
-          </button>
-          <button class="pm-quiz-option" data-result="correct" data-msg="Right. Incentives shape behavior; a signup-only target rewards volume over value and can actively worsen retention. Pair it with activation and retention goals.">
-            B) Chasing low-quality signups that inflate the number but churn fast — optimizing the metric while net growth stalls.
-          </button>
-          <button class="pm-quiz-option" data-msg="A single top-of-funnel target is one of the easiest metrics to game at the expense of the durable growth you actually want.">
-            C) It would guarantee the healthiest possible growth.
-          </button>
-          </div>
-          <div class="pm-quiz-feedback"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include pm-gym/practice.html %}
 
   <!-- ============ Vocab Game ============ -->
-  <section class="pm-pane" data-pane="game">
-    <div class="pm-section-intro">
-      <span class="pm-badge">Lock it in</span>
-      <h2>Guess the Term</h2>
-      <p class="muted">Read the clues and name the concept. The fewer clues you need, the more points you score.</p>
-    </div>
-
-    <div class="pm-game">
-      <div class="pm-game-bar">
-        <span class="pm-game-progress" id="pm-game-progress">Round 1</span>
-        <span class="pm-game-score" id="pm-game-score">Score 0</span>
-      </div>
-
-      <div class="pm-game-card" id="pm-game-card">
-        <div class="pm-game-clues" id="pm-game-clues"></div>
-        <div class="pm-game-options" id="pm-game-options"></div>
-        <div class="pm-game-reveal" id="pm-game-reveal"></div>
-        <div class="pm-game-actions">
-          <button class="cta pm-hidden" data-pm-action="game-next" id="pm-game-next">Next term <i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-
-      <div class="pm-game-end pm-hidden" id="pm-game-end"></div>
-    </div>
-  </section>
+  {% include pm-gym/game.html %}
 
   <!-- ============ Quick Reference ============ -->
   <section class="pm-pane" data-pane="cheatsheet">
@@ -644,5 +276,5 @@ description: "A beginner-friendly, interactive guide to product growth: the leak
 </div>
 
 
-<script src="/assets/js/pm-gym/decoding-growth.js"></script>
+{% include pm-gym/data.html %}
 <script src="/assets/js/pm-gym/pm-gym.js"></script>

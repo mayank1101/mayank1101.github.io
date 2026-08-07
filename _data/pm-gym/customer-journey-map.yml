@@ -1,0 +1,406 @@
+# PM Gym — customer-journey-map. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations where a journey map earns its keep — reading emotion curves, spotting moments of truth, scoping fixes, and avoiding fantasy maps. Pick the strongest move, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Journey Map Flashcards
+flashcards_blurb: |-
+  Five cards covering the structure and the key concepts. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Sign-ups for your meal-kit service are healthy, but most customers cancel within the first month.
+    question: |-
+      How does a journey map help?
+    difficulty: easy
+    options:
+      - text: |-
+          It doesn't — cancellations are a pricing problem
+        msg: |-
+          Sign-ups are healthy; the wound is later. Redesigning a working stage is effort spent where the map would show no dip.
+      - text: |-
+          Map the first month, find the dips, then fix each
+        msg: |-
+          Churn shows up at cancellation but is born earlier — maybe when the first '30-minute' recipe takes 50. The map traces the symptom back to the stage that caused it.
+        correct: true
+      - text: |-
+          Offer a second-month discount to stop cancellations
+        msg: |-
+          A bribe delays the exit without fixing the reason for it. If the first-cook experience disappoints, month two churns just the same — now at lower margin.
+  - scenario: |-
+      Your team wants to 'redesign the whole onboarding flow' — six screens, full quarter of work.
+    question: |-
+      What does journey-map thinking suggest?
+    difficulty: easy
+    options:
+      - text: |-
+          Go ahead — all six screens need the work
+        msg: |-
+          Important ≠ everything is broken. Full redesigns spend a quarter fixing four screens that work to reach the two that don't.
+      - text: |-
+          Map the stages first — one or two carry the loss
+        msg: |-
+          The map is a scoping weapon: 'redesign onboarding' becomes 'fix the empty-dashboard moment where 60% stall'. Smaller bet, faster result, measurable claim. Scope the redesign there.
+        correct: true
+      - text: |-
+          Copy the onboarding flow of the market leader
+        msg: |-
+          Their flow solves their journey's dips — you'd import solutions to problems you may not have while leaving your actual dips untouched.
+  - scenario: |-
+      A customer's very first order on your platform fails to deliver. Support can see it happened but has no special protocol for it.
+    question: |-
+      Why does the journey map say this deserves special investment?
+    difficulty: easy
+    options:
+      - text: |-
+          It doesn't — one failed order is just bad luck
+        msg: |-
+          This isn't an average moment. First experiences are where the customer decides whether there will be a second one — the cost of failure here is the entire relationship.
+      - text: |-
+          It's a moment of truth — recovery decides the relationship
+        msg: |-
+          Exactly. Moments of truth get outsized weight on the map precisely so teams build recovery protocols for them instead of treating them as ordinary tickets.
+        correct: true
+      - text: |-
+          Every stage of the journey deserves equal investment
+        msg: |-
+          Equal investment is how peak moments get ignored and dips stay dips. The map exists to make investment *unequal* — concentrated where the relationship is decided.
+  - scenario: |-
+      A PM maps a single journey but tries to represent both a first-time casual buyer and a returning power user on the same emotion curve. The curve looks confusingly flat and contradictory.
+    question: |-
+      What's the fix?
+    difficulty: easy
+    options:
+      - text: |-
+          Keep one map
+        msg: |-
+          A flat, contradictory curve is the symptom of averaging two very different travelers. A first-timer and a power user feel completely different things at the same stage, so blending them cancels out the real highs and lows.
+      - text: |-
+          Split into one map per persona
+        msg: |-
+          Right. One persona per map. A first-time buyer and a returning power user travel genuinely different journeys with different emotions at each stage; forcing them onto one curve averages their feelings into meaningless mush. Make a separate map for each key persona so the dips and peaks stay sharp and actionable. Different personas travel different journeys, and blending them flattens the real emotional highs and lows.
+        correct: true
+      - text: |-
+          Add more emotion rows to capture both at once
+        msg: |-
+          Adding more emotion rows doesn't fix the core problem: two different people's feelings are being averaged into one line. The fix is separate maps per persona, not more rows on a blended one.
+  - scenario: |-
+      Your journey map's emotion curve is high everywhere inside the app, but churn is high. Then someone notes the map only covers on-screen steps — nothing about the 3-day shipping wait or the confusing return process.
+    question: |-
+      What's the gap?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          If the in-app curve is all high yet people churn, the pain must be happening somewhere the map doesn't look — off-screen. A map limited to your own screens misses shipping, support, and returns, which are often where the relationship actually breaks.
+      - text: |-
+          The map ignores off-product moments
+        msg: |-
+          Right. Much of the journey happens off your product — waiting for delivery, contacting support, returning an item, hearing from friends. A map that stops at your app's edges hides the real dips. Extend the map to include off-product moments, and the shipping wait and return hassle will likely show up as the true churn drivers. Shipping, returns, and support are part of the journey and are probably where the real dips (and churn) live.
+        correct: true
+      - text: |-
+          Add more delightful animations to the in-app screens
+        msg: |-
+          Adding celebratory in-app animations decorates the part that's already working. The problem is the invisible off-screen pain; polishing the on-screen peaks won't touch it.
+  - scenario: |-
+      Two pain points show up on the map. Pain A: a mildly clunky settings page, hit by 90% of users. Pain B: a checkout crash, hit by 3% of users but it completely blocks purchase.
+    question: |-
+      How do you decide which to fix first?
+    difficulty: medium
+    options:
+      - text: |-
+          Always fix Pain A
+        msg: |-
+          Reach alone (90% vs 3%) doesn't decide it — you have to weigh severity too. A mild annoyance for many can matter less than a total purchase blocker for a few, especially since B directly kills revenue for everyone it hits.
+      - text: |-
+          Weigh reach against severity and business cost
+        msg: |-
+          Right. Rank pain points by reach AND severity together (opportunity analysis applied to the map). B blocks purchase entirely — near-maximal severity and direct revenue loss — which likely outweighs a mild annoyance even at 90% reach. Estimate the impact of each (users × severity × business cost) rather than defaulting to whichever has bigger reach. A total purchase-blocker (B) may outrank a mild annoyance (A) despite lower reach; estimate the real impact of each.
+        correct: true
+      - text: |-
+          Fix whichever one is technically easier, regardless of impact
+        msg: |-
+          Fixing whichever is easier to build ignores impact entirely. Effort matters for prioritization, but you first have to know which pain actually costs more — and a checkout crash blocking purchases is a strong candidate regardless of ease.
+  - scenario: |-
+      Leadership wants to jump straight to designing the "ideal future" journey without mapping how the journey works today.
+    question: |-
+      What's the risk of skipping the current-state map?
+    difficulty: medium
+    options:
+      - text: |-
+          No risk — the ideal journey is what matters
+        msg: |-
+          Designing the dream journey first feels visionary but skips the diagnosis. Without knowing where customers actually struggle today, the 'ideal' map fixes imagined problems and misses the real dips that are driving people away.
+      - text: |-
+          Without today's map, the ideal fixes imagined problems
+        msg: |-
+          Right. Current-state before future-state. The current-state map, built from real research and analytics, tells you where the actual pain is. Jump straight to a future-state map and you'll design elegant fixes for problems customers may not have, while the genuine dips go untouched. Diagnose reality first, then design the ideal to close the specific gaps you found.
+        correct: true
+      - text: |-
+          Future-state maps are always a waste of time
+        msg: |-
+          A future-state map isn't useless — it's valuable once you know the real gaps. The error is doing it FIRST, before mapping current reality. Both maps have a place; the order matters.
+  - scenario: |-
+      The map shows a big emotion peak right after users hit their "first real value" moment. A teammate says "peaks are fine, ignore them — only fix dips."
+    question: |-
+      Is ignoring peaks the right call?
+    difficulty: medium
+    options:
+      - text: |-
+          Yes — peaks are already good, so leave them alone
+        msg: |-
+          Dips deserve attention, but peaks aren't nothing. A high point right after first value is a moment of truth worth protecting and even amplifying — it's when delight and word-of-mouth are born. Ignoring peaks entirely leaves value on the table.
+      - text: |-
+          No — a peak after first value is where referrals start
+        msg: |-
+          Right. Fixing dips is priority one, but peaks matter too: they show what customers love, which you should protect from regressions and consider amplifying (e.g., prompt a review or referral right at the high). A peak at 'first value' is a prime moment to deepen loyalty. Read the whole curve — dips to fix, peaks to protect and leverage.
+        correct: true
+      - text: |-
+          Reverse it — work on peaks and ignore the dips
+        msg: |-
+          Flipping to 'only work on peaks' overcorrects the other way. The point isn't to abandon dips — those are where you're losing people. It's that peaks also deserve some attention (protect and leverage them), alongside prioritizing the dips.
+  - scenario: |-
+      Your map's "opportunities" row is full of vague sticky notes like "improve onboarding" and "make it less confusing."
+    question: |-
+      What turns these into something actionable?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          'Improve onboarding' is a wish, not a plan — no one can build or measure it. Vague opportunities are how a map ends up as wall art. Each needs to become a specific, testable hypothesis tied to a metric.
+      - text: |-
+          Rewrite each as a testable hypothesis
+        msg: |-
+          Right. Convert each vague opportunity into a testable hypothesis with a specific change and expected effect: 'If we add a 3-step guided setup at the empty-dashboard dip, activation rises from 40% to 55%.' Now it's buildable, measurable, and falsifiable — the map has produced a real experiment instead of a sticky note.
+        correct: true
+      - text: |-
+          Add even more sticky notes to cover every possible idea
+        msg: |-
+          Adding more vague notes multiplies the problem. The issue isn't too few ideas — it's that the ideas aren't specific or testable. Sharpen the ones you have into hypotheses instead of piling on more.
+  - scenario: |-
+      A B2B PM realizes their product's journey involves an evaluator, an approver, and an end-user — each with a totally different experience of the same purchase.
+    question: |-
+      How should the journey mapping handle this?
+    difficulty: medium
+    options:
+      - text: |-
+          Force all three onto one journey to keep it simple
+        msg: |-
+          Squeezing three very different roles onto one journey averages their distinct experiences into a blur. The evaluator's demo journey, the approver's budget-approval journey, and the end-user's daily-use journey are genuinely different arcs.
+      - text: |-
+          Map each role's journey separately
+        msg: |-
+          Right. In complex B2B buying, different roles travel different journeys. Map each key role's journey separately (evaluator, approver, end-user), because each has distinct actions, thoughts, pains, and moments of truth. You can then see, for example, that the approver's dip (unclear ROI) is a separate problem from the end-user's dip (clunky daily workflow) — and address each where it lives.
+        correct: true
+      - text: |-
+          Only map the end-user
+        msg: |-
+          Mapping only the end-user ignores the evaluator and approver, who often decide whether the purchase happens at all. In B2B, the buying journey involves multiple roles; leaving two of them off the map hides the pains that block deals.
+  - scenario: |-
+      Analytics show a huge drop-off at one specific step, but the journey map's emotion row for that step just says "neutral." The two don't match.
+    question: |-
+      What should you do?
+    difficulty: hard
+    options:
+      - text: |-
+          Trust the map — the emotion row is researched
+        msg: |-
+          Trusting the 'neutral' label over a huge measured drop-off ignores hard evidence. A big behavioral exit almost always signals a real dip the map has mislabeled — probably because that emotion was guessed, not researched.
+      - text: |-
+          Investigate the step with recordings and exit surveys
+        msg: |-
+          Right. A large drop-off with a 'neutral' emotion is a red flag that the map's emotion was assumed rather than researched. Go investigate that step directly — session recordings, exit surveys, interviews — to learn what people actually feel and why they leave. Then correct the map. Behavioral data and the emotion curve should reconcile; when they don't, the guessed layer (usually emotion) is the one to re-check.
+        correct: true
+      - text: |-
+          Delete the analytics — the tracking is broken
+        msg: |-
+          Deleting the analytics because they contradict the map is backwards — the hard behavioral data is more trustworthy than a possibly-assumed emotion label. Reconcile by fixing the map, not by discarding the evidence.
+  - scenario: |-
+      Your product has a smooth, high-emotion journey — except for one severe dip: the moment a user's free trial ends and they hit a hard paywall with no warning.
+    question: |-
+      Why is this dip especially worth attention?
+    difficulty: hard
+    options:
+      - text: |-
+          It's one dip in a good journey, so it's negligible
+        msg: |-
+          A single dip in an otherwise-smooth journey isn't 'negligible' — it's exactly where you're likely losing conversions. And this one sits at a decision point (trial-to-paid) that directly determines revenue, making it high-stakes, not minor.
+      - text: |-
+          Trial-to-paid is a moment of truth that costs conversions
+        msg: |-
+          Right. This dip sits at a moment of truth — the trial-to-paid decision — where a bad experience (an abrupt paywall with no warning) can undo all the goodwill built earlier and directly costs conversions. It's a prime candidate for a designed recovery: warn users before the trial ends, remind them of the value they've gotten, and ease the transition. Severe dips at revenue-deciding moments deserve outsized attention. A prime spot to design a smoother, warned transition.
+        correct: true
+      - text: |-
+          Remove the paywall entirely so the dip disappears
+        msg: |-
+          Removing the paywall to erase the dip 'fixes' the emotion by giving the product away — not a viable business move. The goal is to smooth the transition (warnings, value reminders, easing in), not to eliminate monetization.
+  - scenario: |-
+      A stakeholder wants the journey map to include every possible edge case and micro-step, producing a 40-column monster nobody can read.
+    question: |-
+      What's the journey-mapping principle here?
+    difficulty: hard
+    options:
+      - text: |-
+          More detail is always better
+        msg: |-
+          A 40-column map that no one can read fails the map's purpose: to give the team a shared, at-a-glance view of the experience and its worst moments. Exhaustive detail buries the signal you actually need.
+      - text: |-
+          A map must stay legible and focused
+        msg: |-
+          Right. A journey map is a communication and prioritization tool — it works when it's legible at a glance and highlights the moments that matter most. Focus on the main path and its key dips and moments of truth for the chosen persona; capture rare edge cases elsewhere if needed. Readability and focus beat exhaustive completeness. Cover the main path and key moments for one persona; exhaustive detail defeats its purpose as a shared, at-a-glance tool.
+        correct: true
+      - text: |-
+          Expand it to 100 columns to be truly thorough
+        msg: |-
+          Making it even bigger (100 columns) worsens the exact problem. The fix is to trim to the meaningful stages and dips, not to keep adding until it's truly unusable.
+  - scenario: |-
+      Six months after building a journey map that drove several fixes, the team never looks at it again — even though the product and onboarding have changed a lot since.
+    question: |-
+      What's the issue?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          A journey map isn't a one-time deliverable. As the product, flows, and customers change, the old map drifts out of date — its dips may already be fixed and new ones may have appeared that no one has captured.
+      - text: |-
+          The map is a living document
+        msg: |-
+          Right. A journey map is a living document. After significant product or onboarding changes, revisit and update it — old dips may be resolved, and new pain points (or moments of truth) may have emerged. Periodically re-grounding the map in fresh data keeps it a reliable guide rather than a snapshot of a product that no longer exists.
+        correct: true
+      - text: |-
+          The original map must have been wrong, so discard the whole approach
+        msg: |-
+          The map wasn't 'wrong from the start' — it drove real fixes. The issue is that it wasn't kept current as things changed. The lesson is to maintain it, not to distrust the original.
+  - scenario: |-
+      Your journey map clearly shows the deepest dip is during a slow, anxious delivery-wait — but the delivery is handled by a third-party logistics company you don't control.
+    question: |-
+      Does the map still help, even though you don't own that step?
+    difficulty: hard
+    options:
+      - text: |-
+          No — you don't control the step, so the map can't help
+        msg: |-
+          Dismissing the dip because you don't own the delivery gives up too easily. Even when you can't control a step directly, you almost always control how you communicate around it — and the map just told you exactly where to focus that effort.
+      - text: |-
+          Yes — you control the communication, if not the wait
+        msg: |-
+          Right. The map's value is identifying WHERE the customer suffers, not just where you have direct control. You can't speed up the third-party truck, but you can attack the anxiety: honest ETAs, proactive status updates, reassuring messaging, or setting expectations up front. Often the emotion at a step is driven more by uncertainty than by the wait itself — and communication is fully within your control. The map points you to the highest-leverage place to improve the experience, owned or not.
+        correct: true
+      - text: |-
+          Remove the delivery step — it's out of your scope
+        msg: |-
+          Cutting the delivery step off the map hides your single deepest dip — the exact thing you most need to see. The step belongs on the map precisely because it's where customers suffer most, even if a partner handles the logistics.
+
+flashcards:
+  - category: |-
+      Definition
+    title: |-
+      What Is a Customer Journey Map?
+    desc: |-
+      A visual timeline of everything a customer does, thinks, and feels while trying to accomplish a goal with your product — from first hearing about it to becoming (or not becoming) a loyal user.
+    application: |-
+      One shared map keeps design, engineering, and marketing arguing about the same reality instead of five different imagined ones.
+  - category: |-
+      Anatomy
+    title: |-
+      Stages and Swimlanes
+    desc: |-
+      Columns are the journey stages (awareness → consideration → purchase → onboarding → usage → loyalty). Rows are swimlanes: actions, thoughts, emotions, pain points, and opportunities at each stage.
+    application: |-
+      Reading down a column tells you everything about one moment; reading across a row shows how one dimension (like emotion) evolves.
+  - category: |-
+      Key Concept
+    title: |-
+      The Emotion Curve
+    desc: |-
+      A line across the map tracking how the customer feels at each stage. The deepest dips mark the moments most likely to lose the customer — and the biggest opportunities.
+    application: |-
+      A food-delivery emotion curve often dips hardest at "waiting with no updates" — which is why live order tracking became standard.
+  - category: |-
+      Key Concept
+    title: |-
+      Moments of Truth
+    desc: |-
+      The handful of make-or-break interactions where the customer decides to continue or abandon: first impression, first purchase, first failure, first support contact.
+    application: |-
+      Prioritize fixes at moments of truth over average moments — a great recovery from a first failure creates more loyalty than ten smooth ordinary sessions.
+  - category: |-
+      Method
+    title: |-
+      Map Reality, Not Hope
+    desc: |-
+      A journey map must describe the journey as it actually is (backed by research and analytics), not the ideal journey you wish users had. Fantasy maps produce fantasy roadmaps.
+    application: |-
+      Build the "current state" map first from real data; only then draw a separate "future state" map as the target.
+
+vocab:
+  - term: |-
+      Journey Map
+    define: |-
+      A Customer Journey Map: a timeline of what a customer does, thinks, and feels across the whole experience.
+    clues:
+      - |-
+          I show a product from the outside, over time.
+      - |-
+          I lay out what a customer does, thinks, and feels.
+      - |-
+          Stages across the top, swimlanes down the side — that's me.
+  - term: |-
+      Stage
+    define: |-
+      A Stage: one phase of the journey (awareness, purchase, onboarding…), shown as a column.
+    clues:
+      - |-
+          I'm a column on the map.
+      - |-
+          I'm one phase of the journey in time order.
+      - |-
+          Awareness, onboarding, loyalty — each is one of me.
+  - term: |-
+      Swimlane
+    define: |-
+      A Swimlane: a row tracking one dimension (actions, thoughts, emotions, pains) across all stages.
+    clues:
+      - |-
+          I'm a row on the map.
+      - |-
+          I track one dimension across every stage.
+      - |-
+          Actions, thoughts, emotions, pains — each is one of me.
+  - term: |-
+      Emotion Curve
+    define: |-
+      The Emotion Curve: how the customer feels across the journey; the dips flag where you lose them.
+    clues:
+      - |-
+          I'm the most valuable line on the map.
+      - |-
+          I rise and fall with how the customer feels.
+      - |-
+          My deepest dip is where customers quietly leave.
+  - term: |-
+      Moment of Truth
+    define: |-
+      A Moment of Truth: a decisive interaction (first value, first failure…) that makes or breaks loyalty.
+    clues:
+      - |-
+          I'm a make-or-break interaction.
+      - |-
+          I decide whether the relationship continues.
+      - |-
+          First impression, first failure, first support contact — each is one of me.

@@ -1,0 +1,417 @@
+# PM Gym — user-insights. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test insight discipline: separating data from insight, pairing quant with qual, synthesizing without bias, and dodging the traps. Pick the strongest move, then read why the others miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  User Insights Flashcards
+flashcards_blurb: |-
+  Five cards covering the definitions, methods, and traps. Click to flip.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      Analytics show 40% of users abandon checkout at the payment step. Your CEO says: 'Obviously we need more payment methods.'
+    question: |-
+      What do you do?
+    difficulty: easy
+    options:
+      - text: |-
+          Add the payment methods the CEO asked for
+        msg: |-
+          The 40% is data; 'needs payment methods' is one guess at the why. If the real cause is a surprise shipping fee, new payment methods fix nothing — expensively.
+      - text: |-
+          Treat the CEO's theory as one hypothesis and check it
+        msg: |-
+          The metric names the crime scene; qualitative work finds the culprit. Maybe it's shipping-fee shock, maybe card failures, maybe trust — each cause demands a different fix.
+        correct: true
+      - text: |-
+          A/B test button colours on the payment page
+        msg: |-
+          Testing surface tweaks before understanding the cause is optimization theater. A/B tests answer 'which is better?' — you don't yet know what 'better' should target.
+  - scenario: |-
+      You've finished ten user interviews and have pages of messy notes. The team wants findings tomorrow.
+    question: |-
+      What's the right synthesis move?
+    difficulty: easy
+    options:
+      - text: |-
+          Build a deck around the five best quotes
+        msg: |-
+          Memorable ≠ representative. Cherry-picked quotes launder your existing beliefs into 'findings' — the fast lane to confirmation bias.
+      - text: |-
+          Atomise, cluster, then name the themes that emerge
+        msg: |-
+          The discipline matters: clusters formed from the data (not pre-made buckets) let unexpected patterns appear, and statements with quotes attached survive contact with stakeholders.
+        correct: true
+      - text: |-
+          Count keyword frequency across the transcripts
+        msg: |-
+          Frequency counting misses meaning — ten users saying 'notifications' may mean five different problems. Clustering by meaning, not word, is what surfaces the real themes.
+  - scenario: |-
+      A stakeholder shares a survey: 80% of users say they would 'definitely use' a proposed feature. They want it greenlit this week.
+    question: |-
+      What does this evidence actually support?
+    difficulty: easy
+    options:
+      - text: |-
+          Greenlight it — 80% is a clear mandate
+        msg: |-
+          Saying yes to a hypothetical costs nothing; using a feature costs time and habit change. Stated intent routinely overshoots behavior by huge margins — the say/do gap.
+      - text: |-
+          Treat it as directional and get behavioural proof
+        msg: |-
+          If 80% claim interest but 3% click the fake door, you just saved a quarter of engineering. Watch feet, not mouths.
+        correct: true
+      - text: |-
+          Re-run the survey with a larger sample to be sure
+        msg: |-
+          A bigger sample measures the same thing more precisely — stated intent. The flaw isn't sample size; it's that words about future behavior are weak evidence, at any n.
+  - scenario: |-
+      A report states: "Users who use Feature X retain 3x better than users who don't." A VP concludes: "So let's push everyone to use Feature X and retention will triple."
+    question: |-
+      What's the flaw in that reasoning?
+    difficulty: easy
+    options:
+      - text: |-
+          No flaw
+        msg: |-
+          The leap from '3x correlation' to 'cause retention to triple' assumes Feature X drives retention. But it may be that already-engaged (and thus retention-prone) users simply happen to find Feature X — the classic correlation-vs-causation trap.
+      - text: |-
+          It confuses correlation with causation
+        msg: |-
+          Right. This confuses correlation with causation. Heavy users may adopt Feature X because they're already engaged — the engagement causes both the feature use AND the retention. Forcing casual users into Feature X may do nothing. To find the real causal insight, run an experiment (randomly encourage some users to try it) or dig qualitatively into why engaged users adopt it. A correlation is a place to investigate, not a proven lever.
+        correct: true
+      - text: |-
+          The 3x figure is probably a calculation error; recompute it
+        msg: |-
+          The problem isn't that 3x is 'too high to believe' — the number may be perfectly accurate. The flaw is interpreting a correlation as proof that pushing the feature will cause the retention, which doesn't follow.
+  - scenario: |-
+      During synthesis, you notice one interview flatly contradicts the neat theme forming from the other nine. You're tempted to set it aside as an outlier.
+    question: |-
+      What's the disciplined move?
+    difficulty: easy
+    options:
+      - text: |-
+          Discard it
+        msg: |-
+          Discarding a contradicting case just to keep a clean story is textbook confirmation bias. The dissenting interview might reveal a distinct segment, a boundary condition, or a flaw in your emerging theme — exactly the kind of surprise worth weighting highly.
+      - text: |-
+          Dig into the contradiction
+        msg: |-
+          Right. Examine the contradiction before dismissing it. It may point to a different user segment, a condition where your theme breaks down, or an error in your reasoning. Insight discipline means weighting surprises highly and asking 'what would prove me wrong?' — not smoothing away inconvenient data to protect a tidy narrative. If it's genuinely a one-off, note why; if it reveals a boundary, your insight just got sharper. It may reveal a distinct segment or a limit of your theme; surprises deserve extra weight, not deletion.
+        correct: true
+      - text: |-
+          Abandon the whole theme because of the single contradiction
+        msg: |-
+          Throwing out the nine-interview theme because of one dissenter overreacts the other way. The right move isn't to flip your conclusion — it's to investigate the contradiction and let it refine (or bound) the theme.
+  - scenario: |-
+      Support tickets are full of complaints about a specific feature. A PM concludes "everyone hates this feature" and wants it removed.
+    question: |-
+      What's the sampling trap here?
+    difficulty: medium
+    options:
+      - text: |-
+          No trap
+        msg: |-
+          Support tickets are a self-selected, skewed sample — only people with problems write in. The silent majority who use the feature happily never file a ticket, so 'everyone hates it' over-reads a vocal, unrepresentative slice.
+      - text: |-
+          Tickets are a self-selected sample of unhappy users
+        msg: |-
+          Right. Support tickets are a biased sample: only frustrated users file them, so they over-represent problems and under-represent satisfaction (survivorship / self-selection bias, cousin of the loud minority). Before removing the feature, check the quantitative scale — how many total users use it happily vs. complain? The tickets flag a real pain worth investigating, but they can't tell you how widespread it is on their own. Check the feature's usage and satisfaction across all users before concluding 'everyone' hates it.
+        correct: true
+      - text: |-
+          Read even more tickets to confirm everyone hates it
+        msg: |-
+          Reading more tickets deepens the same bias — you'd just gather more complaints from the same self-selected unhappy group. The fix is to weigh the tickets against quantitative usage data from all users, not to sample more of the complainers.
+  - scenario: |-
+      In an interview, a user says: "I'd pay $50 a month for this in a heartbeat." The PM writes down "users will pay $50/month" as an insight.
+    question: |-
+      What's wrong with treating that as an insight?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — the user stated a price plainly
+        msg: |-
+          A single enthusiastic quote about future spending is the say/do gap at its purest. What people claim they'll pay, with no money actually on the line, wildly overstates real willingness to pay — and one voice isn't a pattern.
+      - text: |-
+          It's the say/do gap and a sample of one
+        msg: |-
+          Right. It's the say/do gap plus a sample of one. Hypothetical willingness-to-pay stated in an interview costs nothing and routinely far exceeds real behavior. A genuine insight about pricing needs behavioral proof — a pre-sale, a paid pilot, or at least many consistent signals — not one person's cost-free promise. Treat the quote as a hypothesis to test, not a finding. Hypothetical willingness-to-pay overstates reality, so verify with a pre-sale or paid pilot before calling it an insight.
+        correct: true
+      - text: |-
+          The $50 figure is too specific to be believable
+        msg: |-
+          The issue isn't that $50 is 'too specific' — it's that a hypothetical spending claim from one person, with no real money at stake, is weak evidence. A different number quoted the same way would be just as unreliable.
+  - scenario: |-
+      You write: "Users are frustrated with onboarding." A stakeholder asks, "So what should we actually do?" and you have no clear answer.
+    question: |-
+      Why does the statement fail as an insight?
+    difficulty: medium
+    options:
+      - text: |-
+          It's fine
+        msg: |-
+          'Users are frustrated with onboarding' is really just a finding — it names a problem area but no cause and no direction. Because it lacks the 'why' and the 'so what,' no one can act on it, which is exactly what the stakeholder's question exposes.
+      - text: |-
+          It's missing the 'why' and the 'so what'
+        msg: |-
+          Right. A real insight follows the format: [observation], because [reason], which means [implication]. Your statement has only the observation. Sharpen it: 'Users abandon onboarding at the empty-dashboard step because they don't know what to do first, which means we should add a guided first action.' Now there's a why and a clear action. Without the 'because' and 'which means,' it's a finding, not an insight.
+        correct: true
+      - text: |-
+          It just needs a percentage attached to sound more rigorous
+        msg: |-
+          Adding statistics to 'users are frustrated' makes it more precise data, but still doesn't supply the cause or the recommended action. Quantifying a vague finding doesn't turn it into an actionable insight.
+  - scenario: |-
+      A PM runs five user interviews, all with people recruited from the company's most-active-users list, and generalizes the findings to the entire user base.
+    question: |-
+      What's the sampling problem?
+    difficulty: medium
+    options:
+      - text: |-
+          No problem
+        msg: |-
+          Interviewing only your power users gives you a biased sample. Their needs, tolerance for complexity, and reasons for staying differ sharply from casual users or churned users — so generalizing to 'everyone' imports the power-user perspective as if it were universal.
+      - text: |-
+          The sample is skewed to power users
+        msg: |-
+          Right. Recruiting only power users is selection bias: they're unrepresentative of casual, new, or churned users, who often have the most important (and different) pain points. If you want insights about the whole base — especially about churn or activation — you must talk to those other segments too. Match your sample to the question; a power-user-only sample answers 'why do power users stay,' not 'what does everyone need.'. Their needs differ from casual and churned users, so match the sample to the question rather than generalizing from one segment.
+        correct: true
+      - text: |-
+          Five interviews is simply too small; 20 power users would fix it
+        msg: |-
+          The core issue isn't that five is too few (though more helps) — it's that all five come from one unrepresentative segment. Even 50 power-user interviews would still miss the casual and churned perspectives you're generalizing to.
+  - scenario: |-
+      Quant shows a sudden 15% drop in weekly usage. You have no idea why. A colleague says "let's just wait a month and see if it recovers."
+    question: |-
+      What's the insight-driven response?
+    difficulty: medium
+    options:
+      - text: |-
+          Wait a month
+        msg: |-
+          Waiting passively wastes the clearest signal you'll get. The quant told you WHERE and WHEN something broke; the whole point is to pair it with qualitative digging now, while the cause is fresh and users remember, rather than hoping it fixes itself.
+      - text: |-
+          Pair the quant with qual
+        msg: |-
+          Right. The quant found the crime scene (a 15% drop, and you can see exactly when it started). Now go find the culprit with qualitative work: what changed around that date (a release, an outage, a pricing change)? Interview or survey users who dropped off, watch recordings, read tickets from that window. Pairing the numbers with conversations turns a scary metric into a diagnosable cause — and a fix.
+        correct: true
+      - text: |-
+          Immediately ship new features to boost usage back up
+        msg: |-
+          Immediately shipping features to 'boost usage' treats the symptom before diagnosing the cause. If the drop came from a bug or a bad release, new features won't fix it — and might add noise that hides the real problem. Diagnose first.
+  - scenario: |-
+      A designer asks users, "Don't you think the current navigation is confusing?" Most agree. The designer reports "users find navigation confusing" as a key insight.
+    question: |-
+      What undermines this finding?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — most users agreed, so it holds
+        msg: |-
+          The question itself planted the answer. 'Don't you think X is confusing?' is a leading question — people tend to agree to be polite, so the 'finding' mostly reflects the designer's own premise, not independent user experience.
+      - text: |-
+          The leading question planted the answer
+        msg: |-
+          Right. The leading question biased the result — it invited agreement rather than eliciting genuine experience, so the 'insight' is contaminated by the designer's assumption (a form of confirmation bias baked into the method). A cleaner approach: give users a task ('find your billing history') and observe where they actually struggle, or ask open, neutral questions. Behavior and unprompted responses beat agreement with a loaded premise. Observe users doing a real task or ask neutral questions instead of inviting agreement.
+        correct: true
+      - text: |-
+          The sample was too small — ask 100 users instead
+        msg: |-
+          The sample size isn't the core flaw — even 100 users answering a leading question would give a biased result. The problem is the method: a loaded question that steers people toward the conclusion the designer already held.
+  - scenario: |-
+      Your analytics clearly show WHERE users drop off (a specific screen), and interviews clearly explain WHY (a confusing label). A stakeholder says "we only trust hard numbers, ignore the interviews."
+    question: |-
+      What's the counter-argument?
+    difficulty: hard
+    options:
+      - text: |-
+          Agree — only the quantitative drop-off number matters
+        msg: |-
+          Dropping the qualitative side leaves you with a 'what' and no 'why.' The numbers show the drop-off but can't explain the confusing label — and without the cause, you can't design the right fix. Ignoring the interviews throws away the half of the picture that tells you what to actually do.
+      - text: |-
+          Quant and qual answer different questions
+        msg: |-
+          Right. Quant and qual answer different questions and are strongest together. The analytics prove the problem is real and sized (where and how many); the interviews explain the cause (the confusing label) so you know what to change. Trusting only numbers gives you a precise measurement of a problem you can't diagnose. The insight — and the fix — comes from pairing them.
+        correct: true
+      - text: |-
+          Counter that only the interviews matter and the numbers are noise
+        msg: |-
+          Flipping to 'only trust the interviews' is the opposite error. Qual alone can't tell you how widespread the problem is. The right stance is that the two are complementary, not that one should replace the other.
+  - scenario: |-
+      After synthesis, you have a strong qualitative theme from interviews: "users abandon because they don't trust the auto-payment." You're about to build a big fix.
+    question: |-
+      What should you check before committing?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — a strong theme is enough to act on
+        msg: |-
+          A vivid interview theme feels compelling, but a handful of voices can't tell you how many users it affects. Building a big fix off qual alone risks solving a problem that's real for five people but rare across the base — the loud-minority trap.
+      - text: |-
+          Confirm the theme's scale with quantitative data
+        msg: |-
+          Right. Validate the qualitative theme against quantitative scale before a big investment. Do the numbers show meaningful drop-off at the auto-payment step? What share of users hit it? If the data confirms it's widespread, build with confidence; if only a small slice is affected, scope the fix accordingly. Qual explains the why; quant tells you how much it matters. Pair them before committing real resources. Check how many users actually hit that step, so you don't over-invest in a loud-minority issue.
+        correct: true
+      - text: |-
+          Run ten more interviews to make the qualitative theme even stronger
+        msg: |-
+          Running more interviews deepens the qualitative 'why' but still can't tell you how widespread the problem is — that's a quantitative question. To size the theme before a big build, you need usage/funnel data, not more conversations.
+  - scenario: |-
+      A team presents "insights" that all happen to justify the feature the founder wanted to build all along. The data was real, but only supporting evidence was highlighted.
+    question: |-
+      What's happening, and how do you guard against it?
+    difficulty: hard
+    options:
+      - text: |-
+          It's fine
+        msg: |-
+          Real data selectively presented is still confirmation bias — arguably the most dangerous kind, because the true-but-cherry-picked evidence lends false credibility. That every 'insight' conveniently backs the pre-existing plan is the tell.
+      - text: |-
+          It's confirmation bias with real-but-cherry-picked data
+        msg: |-
+          Right. This is confirmation bias in action: real evidence, selectively surfaced to support a predetermined conclusion. Guard against it by deliberately seeking disconfirming evidence — assign someone to argue the opposite, ask 'what data would prove this feature wrong?', and present the full picture including contradictory findings. When every insight flatters the plan you already had, that's a warning sign, not validation.
+        correct: true
+      - text: |-
+          Demand more data until the numbers look even stronger
+        msg: |-
+          The problem isn't that the data is fake — it's genuine. That's what makes it insidious. Demanding 'more data' won't help if the team keeps filtering for only the supporting parts; you need a process that actively surfaces disconfirming evidence.
+  - scenario: |-
+      You have a genuinely strong, well-validated insight. But it lives in a 40-slide research deck that no engineer or designer ever opens.
+    question: |-
+      What's the failure, and the fix?
+    difficulty: hard
+    options:
+      - text: |-
+          The research just needs to be even more thorough and detailed
+        msg: |-
+          A correct insight nobody uses changes nothing. The research was sound, but insight only creates value when it reaches the people making product decisions and actually shifts what they build. A 40-slide deck no one opens is where good insight goes to die.
+      - text: |-
+          The insight isn't reaching decisions
+        msg: |-
+          Right. The failure is communication and adoption, not rigor. An insight earns its keep only when it's shared in a form people actually consume and act on — a sharp one-line insight statement, a memorable story or quote, a poster near the team, a reference in the prioritization discussion. Package the insight for decisions, get it in front of engineers and designers where they work, and tie it to a specific recommendation. Distribution is part of the craft, not an afterthought.
+        correct: true
+      - text: |-
+          Conclude that user research isn't worth the effort
+        msg: |-
+          Concluding that 'research isn't worth doing' misreads the problem — the research produced a real insight. What failed was getting it into the hands and decisions of the team. The fix is better communication, not abandoning research.
+
+flashcards:
+  - category: |-
+      Definition
+    title: |-
+      Data vs. Insight
+    desc: |-
+      Data is a fact ("40% of users abandon checkout"). An insight explains the why behind the fact and points at what to do ("users abandon because the shipping cost appears only at the last step, feeling like a trap").
+    application: |-
+      Test any claimed "insight": does it explain a cause and suggest an action? If it just restates a number, it's still data.
+  - category: |-
+      Sources
+    title: |-
+      Quantitative + Qualitative
+    desc: |-
+      Quantitative data (analytics, funnels, surveys at scale) tells you WHAT is happening and how much. Qualitative data (interviews, session recordings, support tickets) tells you WHY.
+    application: |-
+      Analytics show 40% drop at checkout; five user interviews reveal the surprise shipping fee. Neither alone is enough — pair them.
+  - category: |-
+      Method
+    title: |-
+      Affinity Mapping
+    desc: |-
+      A synthesis technique: write every observation on a separate note, then cluster similar notes into groups. The clusters that emerge are your candidate themes.
+    application: |-
+      After ten interviews, cluster 200 sticky notes; if 30 notes land in a "distrust of automatic payments" cluster, you found a theme worth digging into.
+  - category: |-
+      Format
+    title: |-
+      The Insight Statement
+    desc: |-
+      "[User group] does/feels [observation], because [underlying reason], which means [implication for the product]." Observation + cause + consequence, in one sentence.
+    application: |-
+      "New users skip the tutorial because it delays their first real task, which means the tutorial should teach through the task instead of before it."
+  - category: |-
+      Pitfalls
+    title: |-
+      Confirmation Bias
+    desc: |-
+      The strongest gravitational pull in research: noticing only the evidence that supports what you already believe. Insights born this way just launder opinions into "findings."
+    application: |-
+      Actively hunt for disconfirming evidence — ask "what would prove me wrong?" and weight surprises more heavily than confirmations.
+
+vocab:
+  - term: |-
+      Data
+    define: |-
+      Data: a fact or measurement that describes what happened, without explaining why.
+    clues:
+      - |-
+          I'm just a fact on my own.
+      - |-
+          I describe what happened, not why.
+      - |-
+          "40% abandon checkout" is me — no explanation attached.
+  - term: |-
+      Insight
+    define: |-
+      An Insight: an explanation of why something happens, sharp enough to suggest what to do.
+    clues:
+      - |-
+          I go deeper than a fact.
+      - |-
+          I explain the why and point to an action.
+      - |-
+          "They abandon because the shipping fee feels like a trap" is me.
+  - term: |-
+      Quantitative
+    define: |-
+      Quantitative research: analytics and surveys that measure what is happening and at what scale.
+    clues:
+      - |-
+          I'm one of two research flavors.
+      - |-
+          I measure what and how many.
+      - |-
+          Analytics, funnels, and big surveys are my tools.
+  - term: |-
+      Qualitative
+    define: |-
+      Qualitative research: interviews and observation that explain why users behave as they do.
+    clues:
+      - |-
+          I'm the other research flavor.
+      - |-
+          I explain the why behind the numbers.
+      - |-
+          Interviews, session recordings, and support tickets are my tools.
+  - term: |-
+      Affinity Mapping
+    define: |-
+      Affinity Mapping: clustering individual observations into emergent themes during synthesis.
+    clues:
+      - |-
+          I'm a synthesis technique.
+      - |-
+          I turn scattered notes into themes.
+      - |-
+          Cluster similar notes, then name the group after it forms — that's me.
+  - term: |-
+      Say/Do Gap
+    define: |-
+      The Say/Do Gap: stated intentions routinely overstate what people will actually do.
+    clues:
+      - |-
+          I'm the reason surveys mislead.
+      - |-
+          I'm the space between stated intent and real behavior.
+      - |-
+          "I'd definitely use this" — then never clicking — is me.

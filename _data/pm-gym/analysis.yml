@@ -1,0 +1,425 @@
+# PM Gym — analysis. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can pick the right analysis method, use a framework correctly, or catch a bias distorting a conclusion.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Analysis Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A PM is asked "how is the product doing?" with no further detail, and immediately starts pulling every metric they can find into one giant report.
+    question: |-
+      What's a better first step?
+    difficulty: easy
+    options:
+      - text: |-
+          Keep pulling metrics until the picture feels complete
+        msg: |-
+          Endlessly adding metrics without a guiding question produces a report that's comprehensive but unfocused.
+      - text: |-
+          Clarify the decision behind the request, then pull that data
+        msg: |-
+          Right. A specific question focuses the analysis and makes it actually useful.
+        correct: true
+      - text: |-
+          Share the raw dashboard link instead of doing any analysis
+        msg: |-
+          Handing over a raw dashboard without framing skips the actual analytical work.
+  - scenario: |-
+      A funnel analysis shows the biggest drop-off is between "add to cart" and "enter shipping info," but the team doesn't know if it's a UX problem or a shipping-cost surprise.
+    question: |-
+      What should come next?
+    difficulty: easy
+    options:
+      - text: |-
+          Redesign the shipping screen straight from the funnel data
+        msg: |-
+          The funnel data shows where the problem is, not what's causing it — redesigning without knowing the cause risks fixing the wrong thing.
+      - text: |-
+          Add qualitative research to learn why users stop there
+        msg: |-
+          Right. Quant located the step; qual explains the reason. Session recordings or a quick survey at that step — to understand why users are dropping off.
+        correct: true
+      - text: |-
+          Nothing further — the funnel step is the whole explanation
+        msg: |-
+          The funnel step name tells you where users leave, not their reasoning.
+  - scenario: |-
+      A cohort analysis shows the March 2025 signup cohort retaining much better at 90 days than the January 2025 cohort.
+    question: |-
+      What's a reasonable next step?
+    difficulty: easy
+    options:
+      - text: |-
+          Conclude nothing changed and move on to another metric
+        msg: |-
+          Concluding nothing changed ignores the very cohort difference the analysis just surfaced.
+      - text: |-
+          Investigate what changed between January and March
+        msg: |-
+          Right. Onboarding, pricing, or acquisition channel changes are all worth checking.
+        correct: true
+      - text: |-
+          Merge both cohorts into one cleaner retention number
+        msg: |-
+          Merging would erase the exact signal the cohort analysis was designed to reveal.
+  - scenario: |-
+      A report says "users on our premium plan are happier, because premium-plan NPS is 20 points higher than free-plan NPS."
+    question: |-
+      What alternative explanation should the analyst consider?
+    difficulty: easy
+    options:
+      - text: |-
+          None — a higher NPS score always means direct causation from being on that plan
+        msg: |-
+          A higher NPS score among premium users doesn't automatically mean the plan itself causes the happiness.
+      - text: |-
+          Premium users may already be more invested or successful with the product before upgrading
+        msg: |-
+          Right. This is a classic correlation-vs-causation trap. The plan itself may not be the cause.
+        correct: true
+      - text: |-
+          The NPS methodology is definitely flawed if there's any gap between segments
+        msg: |-
+          A gap between segments isn't inherently a sign of a flawed survey method.
+  - scenario: |-
+      A dashboard shows "conversion rate" as one aggregate number for both desktop and mobile combined, and it's been flat for months.
+    question: |-
+      What analysis technique might reveal something the aggregate is hiding?
+    difficulty: easy
+    options:
+      - text: |-
+          Cohort analysis by signup month
+        msg: |-
+          Cohort analysis groups by starting time period, not by device type — it wouldn't reveal a desktop-vs-mobile difference specifically.
+      - text: |-
+          Segmentation — split desktop and mobile apart
+        msg: |-
+          Right. Segmentation is exactly built to catch offsetting trends hidden in an aggregate. Splitting the flat aggregate by device type might reveal one improving while the other declines, canceling out.
+        correct: true
+      - text: |-
+          Nothing — a flat aggregate means nothing is changing
+        msg: |-
+          An unchanging aggregate can absolutely hide two offsetting trends underneath.
+  - scenario: |-
+      An analyst notices Hospital A has a higher survival rate than Hospital B for both mild AND severe cases individually, yet Hospital B has a higher overall survival rate.
+    question: |-
+      What's the likely explanation?
+    difficulty: medium
+    options:
+      - text: |-
+          The data must be wrong
+        msg: |-
+          This exact pattern is a known, real phenomenon, not necessarily a sign of a data error.
+      - text: |-
+          Simpson's Paradox
+        msg: |-
+          Right. Combining groups with very different mixes can flip the overall picture. Likely explained by the two hospitals treating very different proportions of mild vs. severe cases.
+        correct: true
+      - text: |-
+          Hospital B must simply have better doctors overall
+        msg: |-
+          This conclusion ignores the paradox entirely — the overall number can flip due to uneven case-mix alone.
+  - scenario: |-
+      An analyst keeps re-slicing a flat metric by different time windows until they find a 3-day period where it happened to spike, then reports "engagement is up."
+    question: |-
+      What's the analytical problem?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing wrong — the 3-day spike is real data after all
+        msg: |-
+          The spike being real data doesn't mean it's representative — cherry-picking a favorable window is what makes the conclusion misleading.
+      - text: |-
+          Cherry-picking a window that flatters the result
+        msg: |-
+          Right. The honest read is the whole trend, not the one window that looked good. Searching many time windows until finding one that supports a desired story misrepresents what's happening overall.
+        correct: true
+      - text: |-
+          The only problem is that 3 days is too short to report
+        msg: |-
+          Short windows aren't inherently invalid — the problem is selectively choosing one that &quot;worked&quot; out of many that didn't.
+  - scenario: |-
+      A PM wants to know why enterprise customers churn at a higher rate than small-business customers.
+    question: |-
+      What analysis approach best answers "why," beyond just confirming the rate difference?
+    difficulty: medium
+    options:
+      - text: |-
+          Recompute the churn rate more precisely, to more decimal places
+        msg: |-
+          More decimal precision on the same quantitative number doesn't explain the underlying reasoning.
+      - text: |-
+          Qualitative interviews with churned enterprise buyers
+        msg: |-
+          Right. The rate confirms a difference exists; interviews explain why. Interviews with recently churned enterprise customers — to understand their specific reasons for leaving.
+        correct: true
+      - text: |-
+          Nothing further
+        msg: |-
+          A rate comparison confirms a difference exists, not the reasoning behind it.
+  - scenario: |-
+      A team segments a metric by acquisition channel and finds one channel's users convert twice as well as others, then immediately doubles that channel's budget.
+    question: |-
+      What should they check before doing this?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — a 2x difference is decisive enough on its own
+        msg: |-
+          Acting without checking for confounding factors risks scaling a result explained by something else entirely.
+      - text: |-
+          Whether a confounding audience difference drives the gap
+        msg: |-
+          Right. The channel might just be reaching a naturally higher-converting audience.
+        correct: true
+      - text: |-
+          Whether that channel's name sounds more trustworthy
+        msg: |-
+          The channel's name has no bearing on the actual analysis.
+  - scenario: |-
+      An analyst reports "feature X caused a 10% revenue increase" based solely on revenue rising in the month after feature X launched.
+    question: |-
+      What's missing from this conclusion?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — timing alone is enough to establish causation
+        msg: |-
+          Timing alone doesn't rule out other factors that could explain the same rise, like seasonality or a pricing change.
+      - text: |-
+          Ruling out seasonality, pricing, and campaign effects
+        msg: |-
+          Right. &quot;X happened, then Y happened&quot; isn't proof X caused Y.
+        correct: true
+      - text: |-
+          A bigger sample of that same single month's data
+        msg: |-
+          More data from the same single, uncontrolled month doesn't address ruling out other simultaneous causes.
+  - scenario: |-
+      A retention chart shows an overall improving trend, but a closer cohort breakdown shows every individual cohort is actually declining.
+    question: |-
+      What's happening?
+    difficulty: hard
+    options:
+      - text: |-
+          The overall chart must be wrong or mislabeled
+        msg: |-
+          This is a recognizable pattern, not necessarily a data error — it fits the same shape as Simpson's Paradox.
+      - text: |-
+          A Simpson's-Paradox-like mix shift between cohorts
+        msg: |-
+          Right. More newer, naturally higher-retention users entering the mix can hide universal decline. A shifting mix of cohorts may be masking that every individual cohort is declining.
+        correct: true
+      - text: |-
+          Impossible — one of the two claims has to be false
+        msg: |-
+          This combination is exactly the kind of pattern possible when the underlying group composition shifts.
+  - scenario: |-
+      A team wants to understand both how many users are affected by a bug and why it's happening to them.
+    question: |-
+      What combination of methods fits best?
+    difficulty: hard
+    options:
+      - text: |-
+          Quantitative analysis alone, run twice for confidence
+        msg: |-
+          Running the same type of analysis twice doesn't add the missing dimension of &quot;why.&quot;
+      - text: |-
+          Quantitative to size it, qualitative to explain it
+        msg: |-
+          Right. Each method answers a different half of the question.
+        correct: true
+      - text: |-
+          Qualitative analysis alone, with a larger sample
+        msg: |-
+          Qualitative analysis alone can explain reasoning for a few users but can't size the issue across the full base.
+  - scenario: |-
+      A metric review meeting spends 90% of its time debating a metric that moved by 0.1%, within its normal week-to-week noise range.
+    question: |-
+      What's the issue?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — every metric movement deserves equal attention
+        msg: |-
+          Treating normal noise as equally significant wastes analysis time on movements that aren't meaningfully different from usual variation.
+      - text: |-
+          The team is treating normal noise as a real signal
+        msg: |-
+          Right. Knowing a metric's normal noise range keeps debates focused on real movements.
+        correct: true
+      - text: |-
+          The only issue is that the meeting ran too long
+        msg: |-
+          Meeting length is a symptom, not the core problem.
+  - scenario: |-
+      An analyst wants to compare this quarter's conversion rate to last quarter's, but pricing changed in between the two periods.
+    question: |-
+      What should the analysis account for?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing, quarter-over-quarter comparisons are always apples-to-apples by default
+        msg: |-
+          A confound like a mid-period pricing change means the two quarters aren't a clean apples-to-apples comparison by default.
+      - text: |-
+          The pricing change as a potential confounding variable that might explain the shift in conversion rate
+        msg: |-
+          Right. Attributing the whole change to &quot;the quarter&quot; ignores a specific, known confound.
+        correct: true
+      - text: |-
+          Only the exact calendar dates of the two quarters, nothing about what changed within them
+        msg: |-
+          Calendar alignment alone doesn't address the actual confound.
+  - scenario: |-
+      A team concludes "our new onboarding is a failure" based on one week of data, right after a major unrelated outage occurred during that same week.
+    question: |-
+      What's the analytical error?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — one week of real data supports a firm call
+        msg: |-
+          Drawing a firm conclusion from a week that coincided with a major unrelated outage ignores an obvious confounding event.
+      - text: |-
+          A confounding outage could fully explain the bad week
+        msg: |-
+          Right. The outage is a far more likely explanation that was never ruled out.
+        correct: true
+      - text: |-
+          The only error is that a week isn't a round number of days
+        msg: |-
+          The length of the window isn't the core problem — not accounting for the outage is.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Analysis Mindset
+    desc: |-
+      Starting from a specific question tied to a decision, rather than browsing data with no particular goal.
+    application: |-
+      Before opening a dashboard, write down the exact question you're trying to answer.
+  - category: |-
+      Method
+    title: |-
+      Quantitative Analysis
+    desc: |-
+      Analyzing numbers at scale to measure what's happening and how much — strong on size and trend, weak on explaining why.
+    application: |-
+      Use it to find where a problem is, like a 40% drop-off at a specific funnel step.
+  - category: |-
+      Method
+    title: |-
+      Qualitative Analysis
+    desc: |-
+      Analyzing open-ended data like interviews or session recordings to understand why something is happening.
+    application: |-
+      Pair it with quantitative findings to explain the reasoning behind a number you've already found.
+  - category: |-
+      Framework
+    title: |-
+      Cohort Analysis
+    desc: |-
+      Grouping users by a shared starting point (like signup week) and tracking how their behavior changes over time.
+    application: |-
+      Use it to check whether retention is actually improving for newer users, which an overall flat average can hide.
+  - category: |-
+      Framework
+    title: |-
+      Funnel Analysis
+    desc: |-
+      Breaking a multi-step process into stages to find exactly where the biggest drop-off happens.
+    application: |-
+      Use it to locate the step in checkout or onboarding losing the most users, before digging into why.
+  - category: |-
+      Bias
+    title: |-
+      Correlation vs. Causation
+    desc: |-
+      Two things moving together doesn't mean one causes the other — both might be driven by a separate, shared factor.
+    application: |-
+      Before claiming X causes Y, check whether a third factor could be driving both.
+
+vocab:
+  - term: |-
+      Cohort Analysis
+    define: |-
+      Cohort Analysis: grouping users by a shared starting point (like signup week) and tracking how their behavior changes over time.
+    clues:
+      - |-
+          I group people by when they started, not by who they are.
+      - |-
+          I track a group's behavior over time from that shared starting point.
+      - |-
+          I reveal whether newer users retain better than older ones.
+  - term: |-
+      Funnel Analysis
+    define: |-
+      Funnel Analysis: breaking a multi-step process into stages to locate where the largest drop-off occurs.
+    clues:
+      - |-
+          I break a process into sequential steps.
+      - |-
+          I find exactly where the biggest drop-off happens.
+      - |-
+          Checkout and onboarding are classic places to find me.
+  - term: |-
+      Correlation vs. Causation
+    define: |-
+      Correlation vs. Causation: the principle that two variables moving together doesn't prove one causes the other — a shared third factor might explain both.
+    clues:
+      - |-
+          Two things moving together doesn't mean one of us causes the other.
+      - |-
+          A hidden third factor can drive us both.
+      - |-
+          Ice cream sales and drownings are my classic textbook example.
+  - term: |-
+      Confounding Variable
+    define: |-
+      Confounding Variable: a hidden third factor that influences two other variables, making them appear related when neither directly causes the other.
+    clues:
+      - |-
+          I'm the hidden third factor.
+      - |-
+          I make two unrelated things look connected.
+      - |-
+          Hot weather driving both ice cream sales and drownings — I'm the weather.
+  - term: |-
+      Simpson's Paradox
+    define: |-
+      Simpson's Paradox: a trend that appears in several separate groups can reverse or disappear when those groups are combined, usually due to uneven group sizes.
+    clues:
+      - |-
+          A trend can flip when you combine groups that had it individually.
+      - |-
+          Uneven group sizes are usually behind me.
+      - |-
+          I'm a warning to check the aggregate against the sub-groups.
+  - term: |-
+      Segmentation (in Analysis)
+    define: |-
+      Segmentation (in Analysis): slicing a metric by a meaningful dimension to check whether an aggregate number is hiding different sub-stories.
+    clues:
+      - |-
+          I slice a metric by a meaningful dimension.
+      - |-
+          Plan type, channel, or device are common ways to find me.
+      - |-
+          I reveal when an aggregate number hides very different sub-stories.

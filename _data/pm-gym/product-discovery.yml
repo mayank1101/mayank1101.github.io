@@ -1,0 +1,425 @@
+# PM Gym — product-discovery. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can spot the right risk, pick the riskiest assumption, choose a cheap test, and keep discovery alive. Choose the strongest move, then read why the rest miss.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Discovery Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A stakeholder is certain a new AI assistant feature will be a hit and wants engineering to start a three-month build tomorrow.
+    question: |-
+      What's the discovery-minded response?
+    difficulty: easy
+    options:
+      - text: |-
+          Start building — the stakeholder is confident
+        msg: |-
+          Confidence isn't evidence. Committing three months on a hunch is exactly the expensive failure discovery prevents. De-risk cheaply first, then build with conviction.
+      - text: |-
+          Identify the riskiest assumption and test it cheaply
+        msg: |-
+          Right. A few days of discovery can confirm or kill the idea for a fraction of the cost. If it survives the cheap test, you build with real evidence, not just optimism. A prototype or fake-door — before committing three months of engineering.
+        correct: true
+      - text: |-
+          Refuse the idea outright as unproven
+        msg: |-
+          Flat refusal is as unevidenced as blind building. Discovery doesn't prejudge; it tests. Run a cheap experiment and let the users, not opinions, decide the idea's fate.
+  - scenario: |-
+      Your proposed feature scores well on value (users want it) and usability (easy to use), but legal flags that it may violate data-privacy rules in your biggest market.
+    question: |-
+      Which risk is unresolved, and what does it mean?
+    difficulty: easy
+    options:
+      - text: |-
+          Value risk
+        msg: |-
+          Value is already proven — users want it. Piling on more user interviews investigates a risk you've retired while ignoring the legal problem that actually threatens the feature.
+      - text: |-
+          Viability risk
+        msg: |-
+          Exactly. Viability covers legal, cost, and business fit. A feature can clear value and usability and still be a non-starter — the privacy question must be settled first. Even a wanted, usable feature can't ship if it's illegal or off-strategy; resolve the legal question before building.
+        correct: true
+      - text: |-
+          Feasibility risk
+        msg: |-
+          Careful engineering doesn't make an illegal feature legal. This is a business/legal (viability) issue, not a question of whether the code can be built.
+  - scenario: |-
+      Your team ran a thorough discovery phase before the project and hasn't spoken to a user in the four months of building since.
+    question: |-
+      What should change?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Up-front discovery freezes your understanding at month zero. Four months on, assumptions may already be wrong, and the team won't find out until an expensive launch.
+      - text: |-
+          Make discovery continuous
+        msg: |-
+          Right. Discovery isn't a gate you pass once; it's an ongoing habit. Dual-track work keeps validating what's next while delivery proceeds, catching mistakes early. Run it in parallel (dual-track) with weekly user contact, so wrong assumptions surface while they're still cheap to fix.
+        correct: true
+      - text: |-
+          Stop building and restart discovery from scratch
+        msg: |-
+          A full stop-and-restart overcorrects and wastes validated work. The fix is to weave discovery back in alongside delivery, not to halt everything and begin again.
+  - scenario: |-
+      Your riskiest assumption is "small businesses will pay $50/month for this." To test it, a teammate proposes fully building the product, then launching to see if anyone subscribes.
+    question: |-
+      What's wrong with that test?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          'Just build it and see' is the most expensive possible test. It answers the question only after you've spent everything — the exact failure discovery exists to avoid. There are far cheaper ways to learn if people will pay.
+      - text: |-
+          It's the most expensive possible test
+        msg: |-
+          Right. The point of testing the riskiest assumption is to learn BEFORE building, cheaply. A fake-door landing page with a real price and a 'Buy' button, a pre-sale, or a few sales conversations can test willingness-to-pay in days for near-zero cost. Building first inverts the whole method.
+        correct: true
+      - text: |-
+          Just give it away free first, then charge later and hope they stay
+        msg: |-
+          Free trials sidestep the actual question. Your assumption is that people will PAY $50 — giving it away for free tests interest, not willingness to pay, and leaves the real risk untested.
+  - scenario: |-
+      In a usability test, five of five users can't find the "share" button, even though every one of them said they wanted a share feature.
+    question: |-
+      Which risk did this surface, and which did it clear?
+    difficulty: easy
+    options:
+      - text: |-
+          Value failed — they don't want sharing
+        msg: |-
+          It's not a value failure — users clearly want to share (they said so). The problem is they can't operate the feature, which is a usability issue. Mixing up the two leads you to solve the wrong thing.
+      - text: |-
+          Usability failed, but the value is intact
+        msg: |-
+          Right. Value looks fine (they want the capability), but usability failed (they can't find/use it). The fix is design — surface the button — not scrapping the feature. Naming the right risk points you at the right fix. So the fix is a design change, not abandoning the feature.
+        correct: true
+      - text: |-
+          Feasibility failed — it can't be built well
+        msg: |-
+          Feasibility is about whether you can build it — but you already built it; it exists, users just can't find it. This is a usability finding, not a feasibility one.
+  - scenario: |-
+      A feature depends on three assumptions: (1) users want it, (2) it can be built in our current stack, (3) the button should be top-right. You have time to test only one this week.
+    question: |-
+      Which do you test first?
+    difficulty: medium
+    options:
+      - text: |-
+          The button position
+        msg: |-
+          Button placement is low-risk and easy to change later — it's neither uncertain nor fatal. Testing it first spends your one slot on the assumption that matters least.
+      - text: |-
+          Whether users actually want it
+        msg: |-
+          Right. 'Users want it' is usually both the most uncertain and the most fatal if false — if nobody wants it, feasibility and layout don't matter. Test the assumption that's most likely wrong AND most damaging first. That's the riskiest-assumption rule.
+        correct: true
+      - text: |-
+          Whether it can be built
+        msg: |-
+          Feasibility can matter, but here it's often the more knowable one (engineers can usually estimate it quickly), and it's moot if nobody wants the feature. Test the scary, fatal unknown before the technical detail.
+  - scenario: |-
+      To gauge demand for a feature that doesn't exist yet, a PM adds a button for it in the live app. Clicking it shows "Coming soon — want this? Leave your email." They measure click-through.
+    question: |-
+      What is this technique, and what's the one caution?
+    difficulty: medium
+    options:
+      - text: |-
+          It's a fake-door test and it's completely risk-free
+        msg: |-
+          It's not dishonest by nature, but it's also not 'nothing to worry about.' A fake-door test does briefly promise something that isn't there, so you must handle the let-down gracefully and not overuse it.
+      - text: |-
+          A fake-door test
+        msg: |-
+          Right. It's a fake-door (or painted-door) test — a cheap way to measure real demand through clicks before building. The caution: you're briefly showing users something that isn't real, so keep the 'coming soon' honest, follow up, and don't erode trust by doing it constantly. Used well, it's one of the cheapest value tests there is. Cheap real-demand signal; the caution is you're briefly promising something that doesn't exist, so handle the let-down honestly and sparingly.
+        correct: true
+      - text: |-
+          It's worthless
+        msg: |-
+          Clicks aren't 'meaningless' — a click on a clearly-labeled feature button is a genuine, if imperfect, signal of intent. Dismissing it entirely throws away one of the cheapest demand tests available.
+  - scenario: |-
+      Engineering says a proposed feature is technically impossible with the current architecture and would need a year-long rebuild. Users, however, love the concept.
+    question: |-
+      Which risk is the blocker, and what's the discovery move?
+    difficulty: medium
+    options:
+      - text: |-
+          Value risk
+        msg: |-
+          Value is already strong — users love it. Running more value tests investigates a risk you've largely cleared while ignoring the feasibility wall that's actually blocking you.
+      - text: |-
+          Feasibility risk
+        msg: |-
+          Right. Feasibility is the blocker. The discovery move is a technical spike or prototype — a small, time-boxed engineering experiment to see if there's a cheaper path than a full rebuild, or to confirm the constraint is real. You de-risk the feasibility unknown before committing (or killing) the idea.
+        correct: true
+      - text: |-
+          Overrule engineering and demand they build it anyway
+        msg: |-
+          Overruling engineering doesn't make the architecture cooperate. Feasibility is a real risk to investigate, not a veto to steamroll — the answer is a technical experiment, not authority.
+  - scenario: |-
+      A PM runs a survey: "Would you use a feature that saves you time?" 92% say yes. They cite this as proof the feature will succeed.
+    question: |-
+      Why is this weak discovery evidence?
+    difficulty: medium
+    options:
+      - text: |-
+          It's strong — 92% is a clear signal
+        msg: |-
+          A 92% 'yes' feels strong but is nearly meaningless. Almost everyone says yes to a leading, hypothetical, cost-free question. What people SAY they'll do and what they actually DO often diverge sharply.
+      - text: |-
+          Hypothetical 'would you' questions are cheap to agree to
+        msg: |-
+          Right. It's a leading, hypothetical question with no cost to say yes — so 'yes' proves little. Stronger discovery watches real behavior or asks people to commit something (money, time, an email). 'Would you use...' answers are notoriously unreliable predictors. Real evidence comes from observed behavior or a real commitment (a pre-order, an email, actual usage).
+        correct: true
+      - text: |-
+          The sample was too small — survey 10,000 instead
+        msg: |-
+          A bigger sample of the same flawed question just gives you a more precise wrong answer. The problem isn't the sample size — it's that hypothetical intent doesn't predict real behavior.
+  - scenario: |-
+      A designer wants to test a new checkout flow. She proposes building a clickable prototype in a design tool and watching five users attempt to buy, rather than shipping code first.
+    question: |-
+      Is this good discovery practice?
+    difficulty: medium
+    options:
+      - text: |-
+          No — only a fully coded, live version counts
+        msg: |-
+          A prototype isn't 'not real testing' — it's one of the core discovery tools. It surfaces usability problems for a fraction of the cost of shipping code, which is exactly the point of discovery.
+      - text: |-
+          Yes — five users on a prototype surfaces the issues
+        msg: |-
+          Right. A clickable prototype tested with a handful of users is textbook discovery: it exposes usability and even value issues cheaply, before any engineering. Five users typically reveal the majority of serious usability problems. Learn on the prototype, then build with confidence.
+        correct: true
+      - text: |-
+          No — any valid test needs hundreds of users
+        msg: |-
+          Waiting for a big representative sample is the wrong bar for a usability test. Usability testing works with small numbers — five users catch most serious problems. Demanding hundreds delays cheap learning for no gain.
+  - scenario: |-
+      Leadership treats "discovery" as a two-week phase on the Gantt chart, after which the design is frozen and cannot change no matter what building reveals.
+    question: |-
+      What's the flawed assumption?
+    difficulty: hard
+    options:
+      - text: |-
+          It's fine
+        msg: |-
+          Treating discovery as a box you tick and freeze is the whole problem. Learning doesn't stop when building starts — freezing the design means ignoring everything you discover after week two.
+      - text: |-
+          That learning stops after week two
+        msg: |-
+          Right. Discovery isn't a phase with a finish line; it's continuous. Freezing the design assumes you learned everything up front, which never happens. Dual-track keeps discovery and delivery running together so new evidence can still change course while it's cheap. But discovery is continuous, and freezing the design ignores everything you learn during building.
+        correct: true
+      - text: |-
+          Two weeks is too short; make the frozen discovery phase four weeks
+        msg: |-
+          A longer frozen phase (four weeks instead of two) has the same flaw — it still assumes learning ends at a fixed date. The issue is the freeze itself, not its length.
+  - scenario: |-
+      A feature clears value, usability, and feasibility — but shipping it would cannibalize your highest-margin existing product and confuse the sales team's pitch.
+    question: |-
+      Which risk is unresolved?
+    difficulty: hard
+    options:
+      - text: |-
+          Usability risk
+        msg: |-
+          Usability is already cleared — people can use it fine. The problem is strategic and financial: it hurts your own margins and muddles sales. That's a business-fit question, not a usability one.
+      - text: |-
+          Viability risk
+        msg: |-
+          Right. Viability is broader than 'is it legal' — it includes strategy, margin, sales, and brand. A feature can be wanted, usable, and buildable yet still bad for the business because it cannibalizes a better product or breaks the go-to-market story. That trade-off must be resolved deliberately, not ignored. It damages margins and the sales story, so it may not work for the business even though users want it.
+        correct: true
+      - text: |-
+          No risk remains
+        msg: |-
+          There's no unresolved risk only if you ignore the business impact — but cannibalizing your best margin and confusing sales is a real viability problem. 'Ship it anyway' skips the exact question discovery is asking.
+  - scenario: |-
+      You have three feature ideas and limited discovery time. One is a tiny tweak everyone agrees on; one is a bold bet the whole roadmap depends on; one is a nice-to-have.
+    question: |-
+      Where should discovery effort concentrate?
+    difficulty: hard
+    options:
+      - text: |-
+          The tiny tweak
+        msg: |-
+          The tiny agreed-on tweak has little uncertainty and little at stake — discovery there buys almost nothing. Spending scarce discovery time on low-risk, low-impact work is effort wasted.
+      - text: |-
+          The bold, roadmap-defining bet
+        msg: |-
+          Right. Discovery is about reducing risk where risk is highest. The bold bet the roadmap depends on carries the most uncertainty and the biggest consequences if wrong — that's exactly where cheap testing pays off most. Match discovery effort to risk, not to convenience.
+        correct: true
+      - text: |-
+          Split time equally across all three ideas
+        msg: |-
+          Spreading discovery evenly across all three ignores that they carry very different risk. The nice-to-have and the agreed tweak barely need validating; the roadmap-defining bet needs most of your effort.
+  - scenario: |-
+      A test of your riskiest assumption comes back negative: users clearly won't do the key behavior the feature depends on. The team is disappointed and wants to ignore the result and build anyway.
+    question: |-
+      What's the right framing?
+    difficulty: hard
+    options:
+      - text: |-
+          Build it anyway
+        msg: |-
+          Overriding a clear negative test to protect the team's feelings defeats the entire purpose of discovery. You ran the test precisely so its answer would guide the decision — ignoring it means you never really did discovery.
+      - text: |-
+          The negative result is a cheap win
+        msg: |-
+          Right. A negative result is discovery WORKING — it just saved you a full build on a doomed idea. That's a cheap win, not a failure. Either pivot the idea to remove the broken assumption, or drop it and move on. The whole point was to fail on paper instead of in code.
+        correct: true
+      - text: |-
+          Blame the team and reassign everyone for wasting time
+        msg: |-
+          Disbanding the team over one honest negative result punishes exactly the behavior you want. Killing bad ideas cheaply is the job; they did it well. The lesson is to celebrate cheap failures, not penalize them.
+  - scenario: |-
+      Your CEO says: "We already know what customers want — we've been in this industry 20 years. Discovery is just slowing us down."
+    question: |-
+      What's the strongest, respectful reframe?
+    difficulty: hard
+    options:
+      - text: |-
+          Agree and drop discovery
+        msg: |-
+          Abandoning discovery because a senior leader is confident is how experienced companies ship confident failures. Deep experience builds strong intuitions — and also strong blind spots when the market shifts. Confidence isn't the same as current evidence.
+      - text: |-
+          Reframe discovery as a speed-up
+        msg: |-
+          Right. Reframe discovery as speed, not drag: a few days of cheap testing prevents months of building the wrong thing, so it makes the company faster overall. Honor the CEO's experience as a source of hypotheses, then let quick, low-cost tests confirm which ones still hold as the market changes.
+        correct: true
+      - text: |-
+          Tell the CEO their experience is worthless in today's market
+        msg: |-
+          Telling the CEO they're simply out of touch is both disrespectful and unpersuasive — and it's not even accurate, since experience is genuinely valuable for forming hypotheses. Win the point by reframing discovery as faster, not by dismissing their expertise.
+
+flashcards:
+  - category: |-
+      Core
+    title: |-
+      Product Discovery
+    desc: |-
+      The work of reducing uncertainty about what to build — using fast, cheap research and experiments to decide whether an idea is worth building before committing to it.
+    application: |-
+      A day of prototype tests can kill a bad idea that would have cost six months to build.
+  - category: |-
+      Core
+    title: |-
+      Delivery
+    desc: |-
+      The work of building the chosen thing well — engineering, quality, and shipping. Expensive and slow, which is why discovery should de-risk ideas first.
+    application: |-
+      Flawless delivery of something nobody wants is still a failure.
+  - category: |-
+      Risk
+    title: |-
+      Value Risk
+    desc: |-
+      The risk that users won't want or need the thing enough to use or pay for it. The most common reason features fail.
+    application: |-
+      Test value with a fake-door or a landing page before building the real feature.
+  - category: |-
+      Risk
+    title: |-
+      Usability Risk
+    desc: |-
+      The risk that people can't figure out how to use the product without help. Uncovered by watching real users attempt real tasks.
+    application: |-
+      A prototype test reveals usability problems long before code exists.
+  - category: |-
+      Risk
+    title: |-
+      Feasibility Risk
+    desc: |-
+      The risk that engineering can't build it with the available technology, time, or skills. Best surfaced by involving engineers in discovery early.
+    application: |-
+      A quick technical spike can reveal feasibility problems before commitment.
+  - category: |-
+      Risk
+    title: |-
+      Riskiest Assumption
+    desc: |-
+      The single assumption behind an idea that is both most uncertain and most damaging if false — the one to identify and test before anything else.
+    application: |-
+      If a feature dies unless users share bank details, test that willingness first.
+
+vocab:
+  - term: |-
+      Product Discovery
+    define: |-
+      Product Discovery: reducing uncertainty about what to build, through cheap research and experiments, before committing.
+    clues:
+      - |-
+          I answer 'are we building the right thing?'
+      - |-
+          I reduce uncertainty before the expensive part.
+      - |-
+          Fast, cheap experiments to validate an idea are me.
+  - term: |-
+      Value Risk
+    define: |-
+      Value Risk: the risk that users won't want or need the product enough to use or pay for it.
+    clues:
+      - |-
+          I'm the most common feature-killer.
+      - |-
+          I ask whether users actually want it.
+      - |-
+          "Will anyone use or pay for this?" is me.
+  - term: |-
+      Usability Risk
+    define: |-
+      Usability Risk: the risk that people can't work out how to use the product successfully.
+    clues:
+      - |-
+          I'm about whether people can figure it out.
+      - |-
+          I'm found by watching users try real tasks.
+      - |-
+          "Can they use it without a manual?" is me.
+  - term: |-
+      Feasibility Risk
+    define: |-
+      Feasibility Risk: the risk that engineering can't deliver the idea with available tech, time, or skills.
+    clues:
+      - |-
+          I live on the engineering side.
+      - |-
+          I ask whether we can actually build it.
+      - |-
+          Tech, time, and skills limits are all me.
+  - term: |-
+      Viability Risk
+    define: |-
+      Viability Risk: the risk that a feature doesn't work for the business — cost, legal, sales, brand, or strategy.
+    clues:
+      - |-
+          I'm about the business, not the user.
+      - |-
+          A feature users love can still fail me.
+      - |-
+          Cost, legal, sales, and strategy are all me.
+  - term: |-
+      Dual-Track
+    define: |-
+      Dual-Track: running continuous discovery in parallel with delivery, rather than as separate phases.
+    clues:
+      - |-
+          I run two things at once.
+      - |-
+          I keep discovery and delivery going in parallel.
+      - |-
+          While engineers build validated work, the team keeps testing what's next — that's me.

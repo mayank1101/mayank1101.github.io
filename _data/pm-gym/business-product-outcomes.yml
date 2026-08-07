@@ -1,0 +1,425 @@
+# PM Gym — business-product-outcomes. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can separate output from outcome, pick the right target, and read the signals. Choose the strongest move, then read why the rest fall short.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Outcomes Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      At your quarterly review, your team proudly reports it shipped 14 features. No one mentions whether any metric moved.
+    question: |-
+      What's the problem with this report?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — 14 features is a strong quarter
+        msg: |-
+          Counting features is measuring output. Without any outcome, there's no evidence the 14 features helped users or the business — that's the feature-factory trap.
+      - text: |-
+          It reports output with no proof any value was created
+        msg: |-
+          Right. Shipping is the cost, not the result. A healthy review pairs what was shipped with what changed — the behavior or business metrics that moved because of it.
+        correct: true
+      - text: |-
+          Fourteen is too few features for a quarter
+        msg: |-
+          The count is beside the point. Ten features that move a key metric beat fifty that move nothing. The gap here is the missing outcome, not the volume.
+  - scenario: |-
+      Leadership sets your team's sole objective as "increase gross revenue by 15% this year."
+    question: |-
+      How should you reframe it for your team?
+    difficulty: easy
+    options:
+      - text: |-
+          Accept it as-is; revenue is the clearest possible goal
+        msg: |-
+          Clear as a destination, useless as a steering wheel. Revenue is a lagging business outcome your team can't move directly — designers and engineers can't 'do' revenue.
+      - text: |-
+          Translate it into a product outcome the team can move
+        msg: |-
+          Exactly. Own the behavior you can influence (a leading product outcome), let it feed the business outcome, and use revenue to confirm the link — not to steer day to day. E.g., raise the activation rate that drives revenue — and track revenue as the lagging confirmation.
+        correct: true
+      - text: |-
+          Ignore revenue and just build good features
+        msg: |-
+          Revenue is why the work exists — you can't ignore it. The move is to connect to it through a product outcome you control, not to disconnect from it entirely.
+  - scenario: |-
+      Your redesigned onboarding is live. Signups look flat, but the share of new users who finish setup jumped from 20% to 45% this week.
+    question: |-
+      How do you read this?
+    difficulty: easy
+    options:
+      - text: |-
+          The redesign failed
+        msg: |-
+          Signups are an upstream, lagging number the onboarding redesign wasn't meant to change. Judging the redesign by them measures the wrong link in the chain.
+      - text: |-
+          A leading product outcome (setup completion) moved sharply
+        msg: |-
+          Right. The redesign's job was to change setup behavior, and it did — dramatically. That leading indicator predicts better retention before the lagging metric can confirm it. A promising early signal that should feed retention downstream.
+        correct: true
+      - text: |-
+          Wait a year for retention numbers before drawing any conclusion
+        msg: |-
+          Waiting a year wastes the early signal you already have. The leading indicator exists so you can act now; setup completion doubling is strong evidence to build on today.
+  - scenario: |-
+      Your roadmap for next quarter is a list: "Build dark mode, build SSO, build a new dashboard, build export-to-PDF." A stakeholder asks, "What will be true for users that isn't true today?"
+    question: |-
+      What does that question expose?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — a build list is a normal roadmap
+        msg: |-
+          A list of things to build is all outputs. The stakeholder's question — what will change for users — is asking for outcomes, and the roadmap has none. That's the feature-factory tell.
+      - text: |-
+          The roadmap is all outputs and no outcomes
+        msg: |-
+          Right. The roadmap is a pile of outputs with no stated outcomes. A stronger roadmap leads with the change you want ('more teams collaborate weekly') and treats features as bets on getting there. Reframe each item around the behavior it should move. It says what you'll build but not what should change for users as a result.
+        correct: true
+      - text: |-
+          It just needs delivery dates next to each item
+        msg: |-
+          Adding dates makes it a more precise output list, but it's still output-only. A deadline on 'build dark mode' still doesn't say what user behavior should change. Dates aren't the missing piece — outcomes are.
+  - scenario: |-
+      A designer proposes tracking "number of buttons clicked" as the team's success metric for a new feature.
+    question: |-
+      What's the risk with this metric?
+    difficulty: easy
+    options:
+      - text: |-
+          None — more clicks clearly means more engagement
+        msg: |-
+          Clicks are easy to count, but counting isn't the same as measuring value. A confusing UI can generate lots of clicks precisely because users are lost — high numbers, worse experience.
+      - text: |-
+          Clicks measure activity, not success
+        msg: |-
+          Right. Clicks are an activity count that can rise for bad reasons (confusion, misclicks) as easily as good ones. A real product outcome measures whether users accomplished something — a task completed, a job done — not raw interaction volume. They can climb because users are confused. Track whether users actually completed the underlying job.
+        correct: true
+      - text: |-
+          It's fine, just switch it to page views instead
+        msg: |-
+          Switching to page views trades one shallow activity count for another. The issue isn't which surface-level action you count — it's that none of them capture whether the user got value.
+  - scenario: |-
+      Your team's product outcome — "weekly active teams" — is climbing nicely. But revenue is flat and the CFO is unhappy.
+    question: |-
+      What's the most likely explanation to investigate first?
+    difficulty: medium
+    options:
+      - text: |-
+          The product metric must be fake; ignore it
+        msg: |-
+          Assuming the product metric is fake gives up too early. More likely, the link between this behavior and revenue is weaker or slower than assumed — that's a chain problem to diagnose, not proof of fraud.
+      - text: |-
+          The link between this behavior and revenue may be weak or lagged
+        msg: |-
+          Right. Either the product outcome isn't the one that actually drives revenue (a broken link in the chain), or there's a lag before it shows up. Test the assumed connection: do more active teams actually convert, upgrade, or retain? If not, you're moving the wrong product outcome. Verify whether 'weekly active teams' truly drives revenue, or pick a product outcome that does.
+        correct: true
+      - text: |-
+          Abandon product outcomes and just chase revenue directly
+        msg: |-
+          Dropping outcome thinking to chase revenue directly puts you back where you started — with a metric the team can't act on. The fix is to find the RIGHT product outcome, not to abandon product outcomes.
+  - scenario: |-
+      To hit a "daily active users" target, a growth team adds a daily push notification that pulls people in for a two-second glance. DAU rises 25%. Retention and satisfaction don't budge.
+    question: |-
+      What happened to the metric?
+    difficulty: medium
+    options:
+      - text: |-
+          A genuine win
+        msg: |-
+          A 25% DAU jump looks like a win but nothing downstream moved — a sign the metric was gamed rather than genuinely improved. A two-second glance isn't the engagement DAU was meant to represent.
+      - text: |-
+          The proxy got optimized instead of the real goal
+        msg: |-
+          Right. DAU was a proxy for 'people getting value daily.' Optimizing the proxy directly (notification-driven glances) inflated the number without the value it was supposed to represent. When retention and satisfaction stay flat, the outcome was gamed, not achieved. DAU rose without the value it was meant to represent, since nothing downstream improved.
+        correct: true
+      - text: |-
+          Send even more notifications to push DAU higher
+        msg: |-
+          Sending more notifications doubles down on gaming the proxy. It might push DAU higher still, but it moves you further from the actual goal of users getting value. More of the trick isn't the fix.
+  - scenario: |-
+      Two teams pitch their quarterly targets. Team A: "Ship the mobile app." Team B: "Raise the share of users active on mobile from 10% to 30%."
+    question: |-
+      Which target is stronger and why?
+    difficulty: medium
+    options:
+      - text: |-
+          Team A
+        msg: |-
+          'Ship the mobile app' is an output — it's done the moment it launches, whether or not anyone uses it. You could hit it perfectly and still fail to move the business.
+      - text: |-
+          Team B
+        msg: |-
+          Right. Team B names a behavior change with a number they can influence — a real product outcome. It keeps the team honest about whether the mobile app actually mattered, not just whether it shipped. Shipping is a means; the behavior shift is the target.
+        correct: true
+      - text: |-
+          They're equally valid
+        msg: |-
+          They aren't equally valid. One measures whether work got done; the other measures whether it worked. Those are different questions, and only the second tells you if you created value.
+  - scenario: |-
+      An executive says: "I don't want to hear about 'activation rate.' Just tell me the revenue impact of every feature, every sprint."
+    question: |-
+      What's the reasonable pushback?
+    difficulty: medium
+    options:
+      - text: |-
+          Agree and report a precise revenue figure for each feature weekly
+        msg: |-
+          Reporting a per-feature revenue number every sprint means inventing figures. Revenue is a lagging outcome shaped by many features, pricing, and the market at once — it can't be cleanly attributed to one feature in one sprint.
+      - text: |-
+          Explain that revenue is a lagging, multi-cause metric
+        msg: |-
+          Right. Revenue is lagging and multi-causal — it can't be honestly split per feature per sprint. Leading product outcomes (like activation) are what move early and can be attributed to specific work; they're the evidence that predicts the revenue the exec wants. Explain the chain, then report both. You steer with leading product outcomes now and confirm with revenue over time, so you'll report both.
+        correct: true
+      - text: |-
+          Say nothing and quietly keep tracking activation on your own
+        msg: |-
+          Silently ignoring the exec breaks trust and leaves the real misunderstanding — how product work connects to revenue — unaddressed. Better to make the chain visible than to work around them.
+  - scenario: |-
+      Your team target is "improve user satisfaction." Six weeks in, no one can agree on whether you're making progress.
+    question: |-
+      What test does this target fail?
+    difficulty: medium
+    options:
+      - text: |-
+          The team just isn't working hard enough on it
+        msg: |-
+          Effort isn't the issue — you can work hard toward a target nobody can measure and still have no idea if you're winning. The disagreement is a symptom of the target itself, not the team.
+      - text: |-
+          It's not measurable, so progress can't be judged
+        msg: |-
+          Right. A good product outcome must be measurable. 'Satisfaction' with no defined metric fails that test — there's nothing concrete to check progress against. Pin it to something countable (a survey score, repeat-usage rate) so progress is unambiguous. With no defined metric, 'satisfaction' can't tell you whether you're improving.
+        correct: true
+      - text: |-
+          Satisfaction is the wrong thing to care about
+        msg: |-
+          Satisfaction is a fine thing to care about — the flaw isn't the topic, it's that the target was never made measurable. Define the metric and the target becomes usable.
+  - scenario: |-
+      A PM sets the target: "Reduce world hunger through our food-delivery app." The team feels inspired but paralyzed.
+    question: |-
+      What test does this fail?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — ambitious targets inspire teams
+        msg: |-
+          Inspiration isn't the problem. The target fails the influence test: a single delivery app can't move world hunger, so the team has no lever to pull, which is why they're paralyzed.
+      - text: |-
+          It fails the influence test
+        msg: |-
+          Right. A product outcome must be within the team's influence. World hunger is vastly outside what one app can move, so there's no actionable lever. Scope it to something they can actually affect — e.g., 'raise the share of orders that redistribute surplus restaurant food.'
+        correct: true
+      - text: |-
+          It fails only because world hunger can't be measured
+        msg: |-
+          It IS measurable in principle (hunger statistics exist). The real failure is influence: even if you could measure it, this team has no realistic way to change it. Measurability isn't the missing piece here.
+  - scenario: |-
+      Marketing celebrates: "We got 100,000 app downloads this month!" But weekly active users barely moved.
+    question: |-
+      How do you interpret the download number?
+    difficulty: hard
+    options:
+      - text: |-
+          A huge success
+        msg: |-
+          Downloads feel like a big result, but a download is closer to an output/vanity metric — it counts an action, not sustained value. If active use didn't rise, most of those installs never became real users.
+      - text: |-
+          Downloads are a shallow activity count
+        msg: |-
+          Right. Downloads are an early-funnel activity count, not an outcome — and here a misleading one, since active use didn't follow. The real product outcome is retained, active usage. Downloads only matter if they convert into it; otherwise they're a vanity metric.
+        correct: true
+      - text: |-
+          Double the marketing budget to get 200k downloads next month
+        msg: |-
+          Doubling the download budget pours more into the top of a leaky funnel. If installs aren't turning into active users, more installs won't either — you'd be scaling the vanity metric, not the value.
+  - scenario: |-
+      Your team hit its product outcome (activation up 15 points) but leadership asks: "So what? Prove it mattered to the business."
+    question: |-
+      What's the right way to answer?
+    difficulty: hard
+    options:
+      - text: |-
+          Insist activation matters — it's the metric you own
+        msg: |-
+          Insisting activation matters 'because it's our metric' is circular. Leadership is rightly asking you to close the chain — to show activation connects to a business outcome they care about.
+      - text: |-
+          Connect the chain from activation up to revenue
+        msg: |-
+          Right. Show the chain: activated users retain and pay at a higher rate than non-activated ones, so a 15-point lift plausibly drives X in retention/revenue over time. You connect the product outcome you moved to the business outcome they care about, using the leading→lagging link — and note the lag before it fully lands. Show that activated users retain and monetize better, so the activation lift should feed retention and revenue as the lagging metrics catch up.
+        correct: true
+      - text: |-
+          Concede it was probably a vanity metric
+        msg: |-
+          Admitting it was 'just a vanity metric' undersells real work — activation usually IS a meaningful leading indicator. The task isn't to disown it, it's to demonstrate its link to business results.
+  - scenario: |-
+      A leader wants the team held accountable to annual net revenue retention as its only quarterly goal — a metric that won't visibly move for many months.
+    question: |-
+      What's the practical problem?
+    difficulty: hard
+    options:
+      - text: |-
+          NRR is a bad metric and shouldn't be tracked at all
+        msg: |-
+          It's not that the metric is unimportant — NRR is a great business outcome. The problem is using a slow-moving lagging metric as your only quarterly steering signal: you'd get no feedback in time to adjust.
+      - text: |-
+          A lagging metric can't steer a quarter
+        msg: |-
+          Right. A lagging metric can't guide a quarter — by the time it moves, the quarter is over and you couldn't course-correct. Keep NRR as the north-star business outcome, but steer the quarter with leading product outcomes that predict it (expansion usage, activation, feature adoption among paying accounts).
+        correct: true
+      - text: |-
+          Just measure NRR weekly so it feels faster
+        msg: |-
+          Measuring NRR weekly doesn't help if it genuinely takes months of customer behavior to move — you'd just be re-reading noise. The fix is to steer by leading indicators, not to sample the lagging one more often.
+  - scenario: |-
+      Your team keeps a scoreboard of "story points completed per sprint" and treats rising points as the main sign of success.
+    question: |-
+      What trap is the team in?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — more points per sprint means a faster team
+        msg: |-
+          More story points just means more work coded, not more value delivered. A team can raise its points every sprint while users get nothing better — the definition of a feature factory.
+      - text: |-
+          The feature-factory trap, measuring only output
+        msg: |-
+          Right. Story points are an internal output/effort measure. Making them the success metric is the feature-factory trap: you optimize for volume of work shipped rather than change created for users. Pair (or replace) points with the product outcomes the work is supposed to move.
+        correct: true
+      - text: |-
+          Switch the scoreboard to 'features shipped' instead
+        msg: |-
+          Switching to 'features shipped per sprint' swaps one output count for another. Both measure how much you produce, neither measures whether it worked. The trap is measuring output at all as your definition of success.
+
+flashcards:
+  - category: |-
+      Core
+    title: |-
+      Output
+    desc: |-
+      What a team builds and ships — a feature, screen, or release. Easy to count, but no evidence on its own that anything improved.
+    application: |-
+      "We launched a redesign" is an output; whether it helped is a separate question.
+  - category: |-
+      Core
+    title: |-
+      Outcome
+    desc: |-
+      A measurable change in behavior or results created by the work — the thing that actually matters, as opposed to the work itself.
+    application: |-
+      "Setup completion rose 30%" is an outcome the redesign is meant to produce.
+  - category: |-
+      Type
+    title: |-
+      Business Outcome
+    desc: |-
+      A company-level result: revenue, retention rate, cost, market share. What the business ultimately cares about, but rarely movable directly by a product team.
+    application: |-
+      Annual revenue and churn rate are business outcomes — lagging and shaped by many forces.
+  - category: |-
+      Type
+    title: |-
+      Product Outcome
+    desc: |-
+      A change in user behavior that drives a business outcome: activation, weekly active use, tasks completed. The thing a product team can actually influence and should own.
+    application: |-
+      "More users reach first value in week one" is a product outcome that feeds retention.
+  - category: |-
+      Signal
+    title: |-
+      Leading Indicator
+    desc: |-
+      A metric that moves early and predicts a later result. Product outcomes are usually leading indicators — you steer by them.
+    application: |-
+      Rising weekly active use this month hints at higher retention next year.
+  - category: |-
+      Signal
+    title: |-
+      Lagging Indicator
+    desc: |-
+      A metric that confirms results after the fact, too late to act on directly. Business outcomes are usually lagging.
+    application: |-
+      Annual retention tells you what already happened — you can't steer by it in real time.
+
+vocab:
+  - term: |-
+      Output
+    define: |-
+      Output: the work a team produces — features and releases — regardless of whether it changed anything.
+    clues:
+      - |-
+          I'm what a team ships, not what changes.
+      - |-
+          I'm a feature, a screen, a release.
+      - |-
+          "We launched a referral program" is me.
+  - term: |-
+      Business Outcome
+    define: |-
+      Business Outcome: a company-level result like revenue or retention — usually lagging and hard to move directly.
+    clues:
+      - |-
+          I'm what the company ultimately cares about.
+      - |-
+          Revenue, retention, cost, market share — I'm one of these.
+      - |-
+          Teams rarely move me directly.
+  - term: |-
+      Product Outcome
+    define: |-
+      Product Outcome: a change in user behavior that a product team can influence and that drives business results.
+    clues:
+      - |-
+          I'm a change in what users do.
+      - |-
+          I'm the behavior shift that drives the business result.
+      - |-
+          Activation rate and weekly active use are me.
+  - term: |-
+      Leading Indicator
+    define: |-
+      Leading Indicator: a metric that moves early and predicts a later outcome, so you can steer by it.
+    clues:
+      - |-
+          I move early.
+      - |-
+          I predict a result before it fully arrives.
+      - |-
+          Rising weekly active use hinting at future retention is me.
+  - term: |-
+      Lagging Indicator
+    define: |-
+      Lagging Indicator: a metric that confirms a result after it has happened, too late to steer by.
+    clues:
+      - |-
+          I confirm things after the fact.
+      - |-
+          I arrive too late to act on directly.
+      - |-
+          Annual retention measured at year-end is me.
+  - term: |-
+      Feature Factory
+    define: |-
+      Feature Factory: a team that measures itself by output shipped rather than by outcomes achieved.
+    clues:
+      - |-
+          I'm a team stuck in a bad habit.
+      - |-
+          I measure success by shipping, not by impact.
+      - |-
+          I ship endlessly and learn nothing about whether it helped.

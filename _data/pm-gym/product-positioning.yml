@@ -1,0 +1,425 @@
+# PM Gym — product-positioning. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can tell positioning from messaging, choose the right frame of reference, and spot a positioning trap.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Positioning Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A team responds to "nobody understands what our product does" by hiring a copywriter to rewrite the homepage headline.
+    question: |-
+      What might they be missing?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          New words on top of unclear positioning just restate the confusion more elegantly. If the underlying what/who/why isn't decided, copy can't rescue it.
+      - text: |-
+          The confusion may be a positioning problem
+        msg: |-
+          Right. Messaging expresses positioning; it can't substitute for it. Fix the positioning first, then the copywriter has something clear to express. If the strategic what/who/why isn't clear, new copy just re-expresses the same fog.
+        correct: true
+      - text: |-
+          They should change the logo and color scheme instead
+        msg: |-
+          Branding, like messaging, sits on top of positioning. Restyling a product nobody understands doesn't make it understandable.
+  - scenario: |-
+      A PM starts a positioning exercise by listing all of their product's features first.
+    question: |-
+      What's a better starting point?
+    difficulty: easy
+    options:
+      - text: |-
+          Features first is correct
+        msg: |-
+          Features listed in a vacuum can't tell you what's differentiating. &quot;Unique&quot; is meaningless until you know what customers compare you against.
+      - text: |-
+          Start with competitive alternatives
+        msg: |-
+          Right. Alternatives set the comparison. Only against them can you tell which attributes genuinely stand out and matter. What customers would use instead — since that defines which features are actually unique.
+        correct: true
+      - text: |-
+          Start by choosing a tagline and work backward
+        msg: |-
+          A tagline is an output of positioning, not an input. Starting there bakes in assumptions you haven't validated.
+  - scenario: |-
+      A security-first product positions itself as "the low-cost alternative" and keeps losing deals on price.
+    question: |-
+      What's the likely positioning error?
+    difficulty: easy
+    options:
+      - text: |-
+          It should cut prices further to win on price
+        msg: |-
+          Racing to the bottom on price abandons its real strength (security) and fights on the exact dimension the frame set it up to lose.
+      - text: |-
+          Wrong frame of reference for a security product
+        msg: |-
+          Right. The category you claim sets the buying criteria. Reframe into a security-led category and customers judge it on the dimension it wins. The &quot;low-cost&quot; category invites a price comparison and hides its actual differentiator, security.
+        correct: true
+      - text: |-
+          It has too many security features and should trim
+        msg: |-
+          Its strength isn't the problem; the frame that hides that strength is. Removing security would erase the very thing worth positioning around.
+  - scenario: |-
+      A startup insists its product is "for everyone who wants to be more organized."
+    question: |-
+      Why is this a positioning weakness?
+    difficulty: easy
+    options:
+      - text: |-
+          It isn't
+        msg: |-
+          &quot;Everyone&quot; gives customers no signal that the product is for them specifically, so it resonates with no one intensely.
+      - text: |-
+          Positioning for everyone resonates with no one
+        msg: |-
+          Right. Sharp positioning names the segment that cares most. &quot;Everyone&quot; dilutes the value into vague generality. Without best-fit customers, the value never lands sharply for anyone.
+        correct: true
+      - text: |-
+          The only fix is to literally serve fewer customers by turning some away
+        msg: |-
+          Positioning for a best-fit segment doesn't mean refusing others' money — it means aiming your message and value at who cares most, so it actually lands.
+  - scenario: |-
+      A PM writes: "For solo freelance designers who lose hours to invoicing, BillFast is billing software that auto-generates invoices from tracked time. Unlike general accounting tools, it needs zero setup."
+    question: |-
+      What makes this strong?
+    difficulty: easy
+    options:
+      - text: |-
+          It's memorable and would look great on a billboard
+        msg: |-
+          Billboard-readiness is a messaging concern. This is strong as positioning for a different reason — every strategic bracket is filled.
+      - text: |-
+          It names target, category, benefit, and differentiator
+        msg: |-
+          Right. Target, need, category, benefit, differentiator — all present and crisp. That's a complete positioning statement.
+        correct: true
+      - text: |-
+          It lists plenty of impressive-sounding features
+        msg: |-
+          It actually names very few features — its strength is the clear who/category/value/differentiator, not a feature pile.
+  - scenario: |-
+      A product markets itself with a beautiful brand and clever taglines, but positioning (who it's for, why it's better) was never decided.
+    question: |-
+      What's the risk?
+    difficulty: medium
+    options:
+      - text: |-
+          None — strong branding makes positioning unnecessary
+        msg: |-
+          Branding sits on top of positioning; it can't replace the strategic decisions about audience and differentiation underneath.
+      - text: |-
+          Polished expression sits on an undecided strategy
+        msg: |-
+          Right. Beautiful messaging over undecided positioning is a well-dressed blur. The strategic layer has to exist for the surface to communicate anything real. The brand may look great while customers still can't tell what it is or why to choose it.
+        correct: true
+      - text: |-
+          The brand is too strong and should be toned down
+        msg: |-
+          The brand isn't the problem; the missing positioning underneath it is. Weakening the brand wouldn't add the missing strategy.
+  - scenario: |-
+      A B2B tool could be framed either as a "project management tool" (crowded, feature-compared) or a "client-handoff tool" (a category it uniquely owns).
+    question: |-
+      How should category choice be reasoned?
+    difficulty: medium
+    options:
+      - text: |-
+          Always pick the biggest, most familiar category for maximum search traffic
+        msg: |-
+          The biggest category is often the most crowded, where you're compared feature-by-feature against entrenched incumbents on their terms.
+      - text: |-
+          Pick the frame where your strengths are the buying criteria
+        msg: |-
+          Right. The right frame of reference makes your differentiator the thing customers evaluate. A category you uniquely fit can beat a bigger one you're lost in. A category you can own beats a crowded one where you're judged on others' terms.
+        correct: true
+      - text: |-
+          Category choice is cosmetic and doesn't affect how customers judge you
+        msg: |-
+          Category is one of the most consequential positioning decisions — it sets the entire comparison set and criteria.
+  - scenario: |-
+      A landing page lists 20 features in a grid with no statement of what they let customers achieve.
+    question: |-
+      What positioning trap is this?
+    difficulty: medium
+    options:
+      - text: |-
+          Positioning for everyone
+        msg: |-
+          The issue here isn't audience breadth; it's that features are presented without the value they deliver.
+      - text: |-
+          Leading with features, not value
+        msg: |-
+          Right. Attributes without articulated value force the customer to do the translation. Most won't bother; state the value the features unlock. Customers are left to connect attributes to benefits themselves, and usually won't.
+        correct: true
+      - text: |-
+          Wrong frame of reference for the category
+        msg: |-
+          No category confusion is described — the problem is a raw feature dump with no value attached, a different trap.
+  - scenario: |-
+      A PM argues the positioning statement should be published verbatim as the hero headline on the website.
+    question: |-
+      What's the misunderstanding?
+    difficulty: medium
+    options:
+      - text: |-
+          Nothing — it's designed to be the public tagline
+        msg: |-
+          The positioning statement is an internal alignment tool. It's deliberately explicit and un-catchy; it's the source for messaging, not the messaging itself.
+      - text: |-
+          It's an internal tool; public copy is derived from it
+        msg: |-
+          Right. The statement aligns the team on strategy; marketing then crafts customer-facing copy from it. Publishing the raw template verbatim confuses the two layers.
+        correct: true
+      - text: |-
+          Positioning statements shouldn't be written down
+        msg: |-
+          They absolutely should be written — just used internally to drive messaging, not pasted directly onto the homepage.
+  - scenario: |-
+      Two competitors have near-identical features, but one clearly "owns" a specific customer segment in buyers' minds.
+    question: |-
+      What likely explains the difference?
+    difficulty: medium
+    options:
+      - text: |-
+          The winner has more features hidden somewhere
+        msg: |-
+          The scenario states features are near-identical; the difference is in perception and fit, not a secret feature advantage.
+      - text: |-
+          Stronger positioning in buyers' minds
+        msg: |-
+          Right. When products are similar, positioning is often the deciding edge: the one that clearly speaks to a segment's needs wins that segment's mind. Clearer best-fit customers and differentiation make it the obvious choice for that segment despite similar features.
+        correct: true
+      - text: |-
+          With similar features it must simply be luck
+        msg: |-
+          Similar features is exactly when positioning matters most — it's frequently the tiebreaker that decides who owns a segment.
+  - scenario: |-
+      A team can't crisply fill the "Unlike [alternative], [product] [differentiator]" part of their positioning statement.
+    question: |-
+      What does this reveal?
+    difficulty: hard
+    options:
+      - text: |-
+          The template is flawed and that line should be dropped
+        msg: |-
+          The empty bracket is a signal, not a template defect. A differentiator you can't state is one you haven't established.
+      - text: |-
+          They haven't actually established a clear differentiator yet
+        msg: |-
+          Right. The value of the template is exactly this: a bracket you can't fill crisply points to a positioning decision still to be made. The blank bracket exposes an unmade strategic decision.
+        correct: true
+      - text: |-
+          They should copy a competitor's differentiator to fill the blank
+        msg: |-
+          Borrowing a rival's differentiator makes you a worse version of them. The blank calls for finding your own genuine point of difference.
+  - scenario: |-
+      A PM wants to reposition into a trendy category the product doesn't actually fit, purely to ride hype.
+    question: |-
+      What's the danger?
+    difficulty: hard
+    options:
+      - text: |-
+          None — riding a hot category is always smart positioning
+        msg: |-
+          Claiming a category you don't fit sets customer expectations you can't meet, leading to confusion and disappointment when the product doesn't deliver on that frame.
+      - text: |-
+          A category you don't fit sets false expectations
+        msg: |-
+          Right. The frame of reference makes a promise. Choosing one for hype rather than fit invites exactly the wrong comparison and erodes trust. Customers judge you by that category's criteria and feel misled when you don't deliver.
+        correct: true
+      - text: |-
+          The only risk is that the trend might fade eventually
+        msg: |-
+          The immediate and larger risk is the mismatch itself — being judged by criteria you don't meet — not just the trend's shelf life.
+  - scenario: |-
+      Sales and marketing describe the product's target customer completely differently in every deck.
+    question: |-
+      How can positioning help?
+    difficulty: hard
+    options:
+      - text: |-
+          It can't — that's a sales enablement problem
+        msg: |-
+          Inconsistent target descriptions are often a symptom of positioning that was never decided and written down for everyone to share.
+      - text: |-
+          One shared statement ends the per-deck freelancing
+        msg: |-
+          Right. Positioning's internal job is exactly this: one agreed strategic foundation so sales, marketing, and product all describe the same thing.
+        correct: true
+      - text: |-
+          Let each team keep its own version for flexibility
+        msg: |-
+          Divergent stories confuse the market and dilute the value. Alignment on one positioning is the point.
+  - scenario: |-
+      A founder says positioning doesn't matter because "a great product sells itself."
+    question: |-
+      What's the counter?
+    difficulty: hard
+    options:
+      - text: |-
+          Agree — quality alone guarantees customers understand and choose you
+        msg: |-
+          Plenty of great products fail because buyers never grasp what they are or why they're better. Quality doesn't communicate itself automatically.
+      - text: |-
+          Even great products lose when buyers can't tell what they are or why they're better
+        msg: |-
+          Right. Positioning is how a product's real value becomes obvious to the right people. Without it, quality goes unrecognized in a noisy market. Positioning is what makes the quality legible.
+        correct: true
+      - text: |-
+          True, so they should stop all marketing entirely
+        msg: |-
+          &quot;Sells itself&quot; is a myth; cutting the very thing that helps customers understand the product would make discovery and choice harder, not easier.
+  - scenario: |-
+      A product first built for solo freelancers is now mostly bought by 10-person agencies, but its positioning still targets solo freelancers.
+    question: |-
+      What should the team consider?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing
+        msg: |-
+          Positioning isn't permanent. When the best-fit customer shifts, positioning aimed at the old segment can misrepresent the product to the people actually buying it.
+      - text: |-
+          Revisit positioning for the new best-fit segment
+        msg: |-
+          Right. As best-fit customers change, so do their alternatives and the value they weigh. Positioning should be re-examined to match who now cares most. The alternatives, value, and category that matter to agencies may differ from those for solo freelancers.
+        correct: true
+      - text: |-
+          Keep the freelancer positioning but raise prices for agencies
+        msg: |-
+          Pricing doesn't fix a positioning-to-audience mismatch. Agencies compare against different alternatives and value different things; the framing itself needs to reflect them.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Positioning
+    desc: |-
+      The deliberate context you place a product in — what it is, who it's for, why it's better — so the right customers immediately understand its value.
+    application: |-
+      When prospects say "I don't get what this is," treat it as a positioning problem, not a messaging or feature one.
+  - category: |-
+      Distinction
+    title: |-
+      Positioning vs. Messaging
+    desc: |-
+      Positioning is the strategic decision (market, audience, differentiation); messaging is the words expressing it. Messaging can't fix bad positioning.
+    application: |-
+      Before rewriting copy, check the positioning underneath it is actually clear and deliberate.
+  - category: |-
+      Block
+    title: |-
+      Competitive Alternatives
+    desc: |-
+      What customers would use instead of you — including doing nothing or a spreadsheet. They define what "unique" even means.
+    application: |-
+      Start positioning by naming the real alternatives, then find what you offer that they don't.
+  - category: |-
+      Block
+    title: |-
+      Frame of Reference (Market Category)
+    desc: |-
+      The category you place yourself in, which sets the criteria customers judge you by.
+    application: |-
+      Choose a category where your strengths are the buying criteria — the wrong frame makes customers judge you on dimensions you lose.
+  - category: |-
+      Tool
+    title: |-
+      Positioning Statement
+    desc: |-
+      An internal template: For [target] who [need], [product] is a [category] that [benefit]. Unlike [alternative], [product] [differentiator].
+    application: |-
+      Use it to align the team; a bracket you can't fill crisply is a decision you haven't made.
+  - category: |-
+      Trap
+    title: |-
+      Positioning for Everyone
+    desc: |-
+      Aiming at all customers so the value resonates with none; best-fit customers are what make positioning land.
+    application: |-
+      Pick the segment that cares most intensely about your value and position for them, not the whole market.
+
+vocab:
+  - term: |-
+      Positioning
+    define: |-
+      Positioning: the deliberate context that makes a product's value obvious to the right customers, relative to their alternatives.
+    clues:
+      - |-
+          I'm context, not copy.
+      - |-
+          I answer what you are, who you're for, and why you're better.
+      - |-
+          Get me wrong and even a great product looks confusing.
+  - term: |-
+      Competitive Alternatives
+    define: |-
+      Competitive Alternatives: what customers would use instead of your product — the baseline that determines what counts as differentiated.
+    clues:
+      - |-
+          I'm what customers would use instead of you.
+      - |-
+          I include doing nothing and a humble spreadsheet.
+      - |-
+          I define what 'unique' even means for you.
+  - term: |-
+      Frame of Reference
+    define: |-
+      Frame of Reference (Market Category): the category you position within, which sets the criteria customers use to judge you.
+    clues:
+      - |-
+          I'm the category you claim.
+      - |-
+          I set the criteria customers judge you by.
+      - |-
+          Pick me wrong and you get compared on dimensions you lose.
+  - term: |-
+      Positioning Statement
+    define: |-
+      Positioning Statement: a structured internal template capturing target customer, category, key benefit, and differentiator.
+    clues:
+      - |-
+          I'm an internal tool, not a tagline.
+      - |-
+          I have brackets for target, category, benefit, and differentiator.
+      - |-
+          A bracket you can't fill is a decision you haven't made.
+  - term: |-
+      Differentiation
+    define: |-
+      Differentiation: the unique attributes and value a product offers over its competitive alternatives.
+    clues:
+      - |-
+          I'm what you have that the alternatives don't.
+      - |-
+          I only matter if I map to value someone cares about.
+      - |-
+          Without me, you're just another option in the category.
+  - term: |-
+      Messaging
+    define: |-
+      Messaging: the specific words used to communicate positioning — an expression of it, not a substitute for it.
+    clues:
+      - |-
+          I'm the words, not the strategy underneath them.
+      - |-
+          I express positioning; I can't fix it.
+      - |-
+          Prettier me won't save unclear positioning.

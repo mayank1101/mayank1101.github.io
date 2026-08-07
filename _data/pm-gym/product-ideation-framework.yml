@@ -1,0 +1,425 @@
+# PM Gym — product-ideation-framework. Generated from the original page markup;
+# edit here to add or reword questions, cards and clues.
+practice_badge: |-
+  Apply what you learned
+practice_heading: |-
+  Practice Scenarios
+practice_blurb: |-
+  15 situations that test whether you can scope a How Might We question, pick the right ideation source, or spot which evaluation lens is failing.
+flashcards_badge: |-
+  Review the concepts
+flashcards_heading: |-
+  Product Ideation Flashcards
+flashcards_blurb: |-
+  6 cards covering the essentials. Click a card to flip it.
+game_badge: |-
+  Lock it in
+game_heading: |-
+  Guess the Term
+game_blurb: |-
+  Read the clues and name the concept. The fewer clues you need, the more points you score.
+
+practice:
+  - scenario: |-
+      A team skips writing a How Might We question and jumps straight from "users are confused at checkout" to brainstorming feature ideas.
+    question: |-
+      What's the risk?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing — brainstorming works without a formal HMW
+        msg: |-
+          Skipping HMW risks ideation drifting away from the specific insight, since there's no shared framing anchoring the team.
+      - text: |-
+          Without reframing, ideation drifts into generic ideas
+        msg: |-
+          Right. HMW is what keeps the wide idea set connected back to the actual insight.
+        correct: true
+      - text: |-
+          It only matters for large teams, not small ones
+        msg: |-
+          Team size doesn't change whether an unanchored brainstorm drifts from the underlying insight.
+  - scenario: |-
+      An HMW question reads: "How might we build a loyalty points system?"
+    question: |-
+      What's wrong with it?
+    difficulty: easy
+    options:
+      - text: |-
+          Nothing, it's specific and actionable
+        msg: |-
+          It already names a specific solution, foreclosing other ways to address the underlying need.
+      - text: |-
+          It's pre-loaded with a solution rather than framing the underlying need
+        msg: |-
+          Right. Something like &quot;how might we make repeat customers feel valued?&quot; leaves the solution open.
+        correct: true
+      - text: |-
+          It should be even more specific, like naming three loyalty tiers
+        msg: |-
+          Adding more solution detail makes the pre-loading problem worse, not better.
+  - scenario: |-
+      A fintech team studies how airlines handle overbooking and delay compensation while ideating a refund-dispute feature.
+    question: |-
+      What technique is this?
+    difficulty: easy
+    options:
+      - text: |-
+          Constraint-based ideation
+        msg: |-
+          Constraint-based ideation means adding an artificial limit, not studying an unrelated industry's pattern.
+      - text: |-
+          Analogous inspiration
+        msg: |-
+          Right. Overbooking compensation and refund disputes share a structural shape: fair resolution under a broken promise. Borrowing a pattern from a structurally similar problem in a different domain.
+        correct: true
+      - text: |-
+          HMW reframing
+        msg: |-
+          HMW reframing is about how a question is worded, not about researching outside industries.
+  - scenario: |-
+      A team is stuck and someone proposes: "What if we had to ship this with zero engineers, just no-code tools, by Friday?"
+    question: |-
+      What technique is being used?
+    difficulty: easy
+    options:
+      - text: |-
+          Analogous inspiration
+        msg: |-
+          Analogous inspiration means looking outward at another domain, not adding an artificial internal limit.
+      - text: |-
+          Constraint-based ideation
+        msg: |-
+          Right. The made-up limit is the whole mechanism here. An artificial limit is deliberately introduced to force unconventional thinking.
+        correct: true
+      - text: |-
+          Desirability testing
+        msg: |-
+          Desirability testing checks whether users want an idea; this is a different step entirely.
+  - scenario: |-
+      An idea scores high on feasibility and viability, but user interviews consistently show nobody wants it.
+    question: |-
+      Which lens is failing?
+    difficulty: easy
+    options:
+      - text: |-
+          Feasibility is failing
+        msg: |-
+          Feasibility isn't the problem here; the scenario states it already scores high there.
+      - text: |-
+          Desirability is failing
+        msg: |-
+          Right. All three lenses have to clear, not just two out of three. No matter how buildable or profitable, an idea nobody wants shouldn't move forward as-is.
+        correct: true
+      - text: |-
+          Viability is failing
+        msg: |-
+          Viability is stated as scoring high in the scenario; the failing lens is desirability.
+  - scenario: |-
+      A concept clears desirability and feasibility easily, but the cost to build and maintain it exceeds any plausible revenue.
+    question: |-
+      Which lens is failing?
+    difficulty: medium
+    options:
+      - text: |-
+          Feasibility
+        msg: |-
+          Cost exceeding revenue is a business-model problem, not a question of whether the team can technically build it.
+      - text: |-
+          Viability
+        msg: |-
+          Right. This is a textbook viability failure. The idea doesn't make business sense even though users want it and it's buildable.
+        correct: true
+      - text: |-
+          Desirability
+        msg: |-
+          Cost has no bearing on whether users want the idea; the two lenses are independent.
+  - scenario: |-
+      A PM mines support tickets and finds many customers requesting "please let us export to Excel."
+    question: |-
+      What's the ideation-framework move?
+    difficulty: medium
+    options:
+      - text: |-
+          Build an Excel export exactly as requested
+        msg: |-
+          Building the literal request skips reframing it — the underlying need might be better served another way.
+      - text: |-
+          Reframe it as an HMW about getting data into their tools
+        msg: |-
+          Right. The literal request is a clue, not a spec — reframing keeps the solution space open.
+        correct: true
+      - text: |-
+          Ignore them — customer-suggested features are weak
+        msg: |-
+          Customer-suggested language is legitimate signal; dismissing it outright throws away real evidence.
+  - scenario: |-
+      A team writes an HMW so broad — "how might we make our product better?" — that the brainstorm produces unrelated ideas from everyone.
+    question: |-
+      What's the fix?
+    difficulty: medium
+    options:
+      - text: |-
+          Run the brainstorm again with the same question but more people
+        msg: |-
+          More people brainstorming on an unfocused question just widens the spread of unrelated ideas.
+      - text: |-
+          Narrow the HMW question back toward the specific insight it should have come from
+        msg: |-
+          Right. Naming the segment and the friction re-anchors the question to real evidence.
+        correct: true
+      - text: |-
+          Skip HMW entirely and let people suggest random features
+        msg: |-
+          Skipping the framing step removes the one thing meant to anchor ideation to a validated need.
+  - scenario: |-
+      A team has three concepts. One is highly desirable and feasible, but relies on giving the product away free — a model the company can't sustain.
+    question: |-
+      What should happen?
+    difficulty: medium
+    options:
+      - text: |-
+          Build it anyway since desirability and feasibility both check out
+        msg: |-
+          Two out of three lenses passing isn't enough; an unsustainable business model is a hard viability failure.
+      - text: |-
+          Flag the viability gap and either adapt the business model or set the concept aside
+        msg: |-
+          Right. All three lenses have to clear reasonably well before a concept is worth pursuing.
+        correct: true
+      - text: |-
+          Only test viability at the very end, after building the full product
+        msg: |-
+          Testing viability only after a full build is backwards — check business-model fit before committing to build.
+  - scenario: |-
+      A team generates fifty ideas from an HMW question but has no way to organize or evaluate them.
+    question: |-
+      What's the next funnel step?
+    difficulty: medium
+    options:
+      - text: |-
+          Build all fifty as small parallel experiments
+        msg: |-
+          Building fifty simultaneous experiments isn't feasible and skips the funnel's purpose of narrowing first.
+      - text: |-
+          Develop a handful into concepts, then evaluate them
+        msg: |-
+          Right. That's exactly the next stage of the funnel — from ideas to concepts.
+        correct: true
+      - text: |-
+          Pick the first five that were generated
+        msg: |-
+          The order ideas were generated has no bearing on quality.
+  - scenario: |-
+      A team ideating a checkout improvement studies how video-game stores handle one-click, saved-payment purchases.
+    question: |-
+      What kind of ideation source is this?
+    difficulty: hard
+    options:
+      - text: |-
+          Constraint-based ideation
+        msg: |-
+          No artificial limit was introduced here — this is looking outward at another domain's solution.
+      - text: |-
+          Analogous inspiration
+        msg: |-
+          Right. Same underlying shape (frictionless repeat purchase), different industry. A structurally similar payment-friction problem, solved in a different product category.
+        correct: true
+      - text: |-
+          Customer-suggested ideas
+        msg: |-
+          This didn't come from mining the team's own customer feedback — it came from studying an external product.
+  - scenario: |-
+      A stakeholder says an idea "feels desirable" based on their own personal preference, with no user research behind it.
+    question: |-
+      What's the concern?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — intuition can substitute for testing
+        msg: |-
+          Personal preference from one person isn't evidence of broad user desirability.
+      - text: |-
+          Desirability needs user evidence, not one preference
+        msg: |-
+          Right. &quot;Feels desirable&quot; to a stakeholder isn't the same as validated with real users.
+        correct: true
+      - text: |-
+          The concern only matters if the stakeholder is wrong
+        msg: |-
+          The problem is the lack of evidence itself, regardless of whether the instinct happens to be right this time.
+  - scenario: |-
+      A team's ideation funnel has no insight feeding the top — ideas are generated from a leadership offsite with no research behind them.
+    question: |-
+      What's the risk?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing — leadership perspective is valuable input
+        msg: |-
+          Leadership perspective has value, but without a validated insight, the funnel is disconnected from real evidence.
+      - text: |-
+          Ideas with no insight behind them solve fake problems
+        msg: |-
+          Right. The funnel's strength comes from starting with evidence, not opinion.
+        correct: true
+      - text: |-
+          The risk only applies to consumer products, not B2B
+        msg: |-
+          The funnel's need for a grounding insight applies regardless of product type.
+  - scenario: |-
+      Two concepts tie on desirability and feasibility. One is a much bigger strategic bet; the other a small, safe improvement.
+    question: |-
+      What should break the tie?
+    difficulty: hard
+    options:
+      - text: |-
+          Always pick the safer, smaller option since it's lower risk
+        msg: |-
+          Defaulting to &quot;safe&quot; skips actually weighing viability and strategic fit.
+      - text: |-
+          Weigh viability and strategic fit explicitly
+        msg: |-
+          Right. That's exactly the criterion meant to break a tie like this. Which better serves the business's goals and risk appetite right now.
+        correct: true
+      - text: |-
+          Flip a coin
+        msg: |-
+          A coin flip ignores relevant information that should actually inform the decision.
+  - scenario: |-
+      A team develops a concept fully — mockups, spec, cost estimate — before ever writing a How Might We question or gathering an insight.
+    question: |-
+      What went wrong with their process?
+    difficulty: hard
+    options:
+      - text: |-
+          Nothing, as long as the final concept happens to be good
+        msg: |-
+          Even a good outcome by luck doesn't validate skipping the funnel — the process risks solving the wrong problem most of the time.
+      - text: |-
+          They inverted the funnel
+        msg: |-
+          Right. The funnel exists so concepts trace back to real evidence, not the other way around. Building a full concept before establishing the insight and HMW question that should have grounded it.
+        correct: true
+      - text: |-
+          The mistake was only the cost estimate
+        msg: |-
+          The cost estimate isn't the core problem — skipping the insight and HMW steps at the start is.
+
+flashcards:
+  - category: |-
+      Foundation
+    title: |-
+      Ideation Funnel
+    desc: |-
+      The structured path from a validated insight through a How Might We question, wide idea generation, and concept development, down to a prioritized shortlist.
+    application: |-
+      Use the funnel to keep ideation traceable back to real evidence, instead of generating ideas in a vacuum.
+  - category: |-
+      Framing
+    title: |-
+      How Might We (HMW)
+    desc: |-
+      A question format that reframes a problem or insight as an open, optimistic prompt for ideation — not too broad, not pre-loaded with a solution.
+    application: |-
+      Turn "sellers don't know competitive prices" into "How might we help sellers price with confidence?" before brainstorming.
+  - category: |-
+      Technique
+    title: |-
+      Analogous Inspiration
+    desc: |-
+      Looking at how a different industry or product solved a structurally similar underlying problem, then adapting the pattern.
+    application: |-
+      Study how food-delivery apps handle real-time tracking when ideating a logistics feature.
+  - category: |-
+      Technique
+    title: |-
+      Constraint-Based Ideation
+    desc: |-
+      Deliberately adding an artificial limit (zero budget, one day, no engineers) to force unconventional ideas.
+    application: |-
+      Ask "what would we build if we had to ship this in 24 hours?" to break out of default thinking.
+  - category: |-
+      Evaluation
+    title: |-
+      Desirability, Feasibility, Viability
+    desc: |-
+      Three lenses for judging an idea: do users want it (desirability), can we build it (feasibility), does it work for the business (viability).
+    application: |-
+      Score each idea on all three — a strong idea needs to clear all three bars reasonably well, not ace just one.
+  - category: |-
+      Discipline
+    title: |-
+      Concept
+    desc: |-
+      A fleshed-out idea — more developed than a raw brainstorm item, ready to be evaluated and potentially prototyped.
+    application: |-
+      Not every brainstormed idea becomes a concept; only the ones surviving initial evaluation get developed further.
+
+vocab:
+  - term: |-
+      How Might We
+    define: |-
+      How Might We (HMW): a question format that reframes an insight as an open, solution-neutral prompt for ideation.
+    clues:
+      - |-
+          I turn a problem into an open question.
+      - |-
+          I'm optimistic in tone, not a complaint.
+      - |-
+          I shouldn't already contain the solution.
+  - term: |-
+      Ideation Funnel
+    define: |-
+      Ideation Funnel: the structured path from insight, through HMW and idea generation, down to a prioritized shortlist of concepts.
+    clues:
+      - |-
+          I start wide with insight and narrow toward a shortlist.
+      - |-
+          How Might We sits near my top.
+      - |-
+          Concepts sit near my bottom.
+  - term: |-
+      Analogous Inspiration
+    define: |-
+      Analogous Inspiration: drawing ideas from how a different domain solved a structurally similar problem.
+    clues:
+      - |-
+          I borrow a pattern from somewhere else entirely.
+      - |-
+          A different industry solved a similar underlying problem — I study how.
+      - |-
+          Food-delivery tracking inspiring a logistics feature is me.
+  - term: |-
+      Desirability
+    define: |-
+      Desirability: whether users genuinely want the idea — one of three lenses (with feasibility and viability) for evaluating it.
+    clues:
+      - |-
+          I ask if users actually want this.
+      - |-
+          I'm one of three evaluation lenses.
+      - |-
+          I can be high even if the idea can't be built yet.
+  - term: |-
+      Feasibility
+    define: |-
+      Feasibility: whether an idea can actually be built with current technology, skills, and resources.
+    clues:
+      - |-
+          I ask if you can actually build it.
+      - |-
+          Technology and skill limits are my domain.
+      - |-
+          A desirable idea still fails if I say no.
+  - term: |-
+      Viability
+    define: |-
+      Viability: whether an idea makes sense for the business — cost, revenue, and strategic fit.
+    clues:
+      - |-
+          I ask if it works for the business.
+      - |-
+          Cost, revenue, and strategy fit are my concern.
+      - |-
+          I'm the third lens, alongside desirability and feasibility.

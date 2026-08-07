@@ -9,6 +9,10 @@ markdown: kramdown
 highlighter: rouge
 theme: null
 
+# Plugins (jekyll-sitemap is supported natively by GitHub Pages)
+plugins:
+  - jekyll-sitemap
+
 # Sass settings
 sass:
   sass_dir: _sass
